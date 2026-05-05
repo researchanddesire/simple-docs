@@ -11,6 +11,7 @@ Use the script for your operating system:
 - Linux: `./start-docs.sh`
 
 When the preview is ready, open <http://localhost:8000>.
+If Docker is installed but not running yet, the script will try to start it for you.
 
 ## Edit a page
 

@@ -19,6 +19,7 @@ Use the script that matches your operating system:
 - Linux: `./start-docs.sh`
 
 On macOS and Windows, you can double-click the script if that feels easier.
+If Docker is installed but not open yet, the script will try to start it and wait for it to be ready.
 
 When the preview is ready, open <http://localhost:8000>.
 

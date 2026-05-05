@@ -29,6 +29,7 @@ Linux:
 ```
 
 On macOS and Windows, you can also double-click the start script instead of running it from a terminal.
+If Docker is installed but not open yet, the script will try to start it for you and wait for it to be ready.
 
 4. Open <http://localhost:8000>.
 5. Edit files in `docs/` and refresh the browser to see your changes.
@@ -56,6 +57,7 @@ Linux:
 ```
 
 On macOS and Windows, you can also double-click the check script.
+If Docker is closed, the script will try to open it before running the build check.
 
 ## Helpful files
 

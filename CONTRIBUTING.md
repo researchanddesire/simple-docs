@@ -13,6 +13,7 @@ Use Docker so everyone gets the same setup on macOS, Linux, and Windows.
 - Linux: run `./start-docs.sh`
 
 When the preview starts, open <http://localhost:8000>.
+If Docker is installed but not running yet, the script will try to start it and wait for it.
 
 Keep that terminal window open while you work.
 
@@ -45,6 +46,7 @@ Run the docs check script for your operating system.
 - Linux: `./check-docs.sh`
 
 This makes sure the site still builds cleanly.
+If Docker is closed, the check script will try to start it first.
 
 ## Writing tips
 
