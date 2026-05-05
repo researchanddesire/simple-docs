@@ -1,0 +1,26 @@
+{
+  "name": "simple-docs",
+  "dockerComposeFile": "../compose.yml",
+  "service": "docs",
+  "workspaceFolder": "/workspace",
+  "shutdownAction": "stopCompose",
+  "forwardPorts": [
+    8000
+  ],
+  "portsAttributes": {
+    "8000": {
+      "label": "MkDocs Preview",
+      "onAutoForward": "openBrowser"
+    }
+  },
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "ms-python.python",
+        "ms-azuretools.vscode-docker",
+        "DavidAnson.vscode-markdownlint",
+        "yzhang.markdown-all-in-one"
+      ]
+    }
+  }
+}
