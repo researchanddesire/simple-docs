@@ -10,6 +10,26 @@ This guide is for contributors who want to help with documentation and do not wa
 
 VS Code is a good choice if you want a simple editor with a file list and Markdown support.
 
+## Install Python if needed
+
+If Python 3 is not already installed on your machine:
+
+- macOS: install it from [python.org](https://www.python.org/downloads/) or with Homebrew using `brew install python`
+- Windows: install it from [python.org](https://www.python.org/downloads/) and make sure Python is added to your `PATH`
+- Linux: install `python3` and `python3-venv` with your package manager
+
+You can verify the install with:
+
+```bash
+python3 --version
+```
+
+Windows PowerShell:
+
+```powershell
+py -3 --version
+```
+
 ## Start the preview
 
 Use the script that matches your operating system:

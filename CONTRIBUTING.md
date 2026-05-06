@@ -17,6 +17,26 @@ The first run will create the local environment and install the docs tools for y
 
 Keep that terminal window open while you work.
 
+## Installing Python if needed
+
+If Python 3 is not already installed:
+
+- macOS: install it from [python.org](https://www.python.org/downloads/) or with Homebrew using `brew install python`
+- Windows: install it from [python.org](https://www.python.org/downloads/) and enable the option to add Python to your `PATH`
+- Linux: install `python3` and `python3-venv` with your package manager
+
+Quick check:
+
+```bash
+python3 --version
+```
+
+Windows PowerShell:
+
+```powershell
+py -3 --version
+```
+
 ## What to edit
 
 - Most changes happen in the `docs/` folder.

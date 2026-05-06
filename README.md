@@ -34,6 +34,26 @@ The script will create the local docs environment for you the first time you run
 4. Open <http://localhost:8000>.
 5. Edit files in `docs/` and refresh the browser to see your changes.
 
+## Install Python
+
+If `python3` or `py` is not already available on your machine:
+
+- macOS: install Python 3 from [python.org](https://www.python.org/downloads/) or with Homebrew using `brew install python`
+- Windows: install Python 3 from [python.org](https://www.python.org/downloads/) and make sure the installer adds Python to your `PATH`
+- Linux: install Python 3 with your package manager, for example `sudo apt install python3 python3-venv` on Ubuntu or Debian
+
+You can check whether Python is ready with one of these commands:
+
+```bash
+python3 --version
+```
+
+Windows PowerShell:
+
+```powershell
+py -3 --version
+```
+
 ## Before you share your work
 
 Run the docs check:
