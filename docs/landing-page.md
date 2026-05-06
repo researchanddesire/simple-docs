@@ -1,0 +1,1 @@
+![](../Desktop/Docs/OSSM/Images/Ready_to_Play_Unmarked.png)

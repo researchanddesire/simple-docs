@@ -19,7 +19,11 @@ markdown_extensions:
       permalink: true
 
 nav:
-  - Home: index.md
-  - Getting Started: getting-started.md
-  - Writing Guide: writing-guide.md
-  - Contributing: contributing.md
+  - Landing Page: landing-page.md
+  - OSSM Specs: ossm-specs.md
+  - OSSM BOM: ossm-bom.md
+  - How to Use: how-to-use.md
+  - Writer's Guide: index.md
+    - Getting Started: getting-started.md
+    - Writing Guide: writing-guide.md
+    - Contributing: contributing.md
