@@ -2,11 +2,11 @@
 
 This repo is set up so docs contributors can start helping quickly, even if they do not usually write code.
 
-You do not need to know Python, Docker internals, or MkDocs configuration to edit pages here.
+You do not need to know Python internals, virtual environments, or MkDocs configuration to edit pages here.
 
 ## Fastest path for writers
 
-1. Install Docker Desktop if you are on macOS or Windows, or Docker Engine if you are on Linux.
+1. Install Python 3 if you do not already have it.
 2. Download or clone this repo.
 3. Start the docs preview:
 
@@ -29,7 +29,7 @@ Linux:
 ```
 
 On macOS and Windows, you can also double-click the start script instead of running it from a terminal.
-If Docker is installed but not open yet, the script will try to start it for you and wait for it to be ready.
+The script will create the local docs environment for you the first time you run it.
 
 4. Open <http://localhost:8000>.
 5. Edit files in `docs/` and refresh the browser to see your changes.
@@ -57,7 +57,7 @@ Linux:
 ```
 
 On macOS and Windows, you can also double-click the check script.
-If Docker is closed, the script will try to open it before running the build check.
+The check script uses the same local Python environment as the preview.
 
 ## Helpful files
 
@@ -67,4 +67,4 @@ If Docker is closed, the script will try to open it before running the build che
 
 ## Advanced options
 
-If you prefer a more developer-oriented workflow, this repo also supports VS Code Dev Containers and a local Python virtual environment. Those options are documented in [CONTRIBUTING.md](CONTRIBUTING.md).
+If you prefer container-based tooling, this repo still includes Docker and Dev Container files. The recommended contributor path is now the local Python setup because it has been more reliable in practice.

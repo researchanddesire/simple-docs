@@ -24,7 +24,7 @@ nav:
   - OSSM Specs: ossm-specs.md
   - OSSM BOM: ossm-bom.md
   - How to Use: how-to-use.md
-  - Overview: index.md
-  - MKDocsGetting Started: getting-started.md
+  - MK Docs Overview: index.md
+  - MKDocs Getting Started: getting-started.md
   - MKDocs Writing Guide: writing-guide.md
   - MKDocs Contributing: contributing.md

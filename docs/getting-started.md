@@ -5,7 +5,7 @@ This guide is for contributors who want to help with documentation and do not wa
 ## What you need
 
 - A copy of this repository on your computer
-- Docker Desktop on macOS or Windows, or Docker Engine on Linux
+- Python 3
 - Any text editor you like
 
 VS Code is a good choice if you want a simple editor with a file list and Markdown support.
@@ -19,7 +19,7 @@ Use the script that matches your operating system:
 - Linux: `./start-docs.sh`
 
 On macOS and Windows, you can double-click the script if that feels easier.
-If Docker is installed but not open yet, the script will try to start it and wait for it to be ready.
+The first run will create the local environment and install the docs tools for you.
 
 When the preview is ready, open <http://localhost:8000>.
 

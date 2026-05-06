@@ -6,14 +6,14 @@ If you can edit a text file, you can contribute here.
 
 ## The easy path
 
-Use Docker so everyone gets the same setup on macOS, Linux, and Windows.
+Use the local Python scripts so you can start writing with the least friction.
 
 - macOS: run `./start-docs.command`
 - Windows: run `.\start-docs.bat`
 - Linux: run `./start-docs.sh`
 
 When the preview starts, open <http://localhost:8000>.
-If Docker is installed but not running yet, the script will try to start it and wait for it.
+The first run will create the local environment and install the docs tools for you.
 
 Keep that terminal window open while you work.
 
@@ -46,7 +46,6 @@ Run the docs check script for your operating system.
 - Linux: `./check-docs.sh`
 
 This makes sure the site still builds cleanly.
-If Docker is closed, the check script will try to start it first.
 
 ## Writing tips
 
@@ -55,9 +54,9 @@ If Docker is closed, the check script will try to start it first.
 - Write what the reader should do, not just what the system does.
 - If a sentence feels complicated, it usually gets better when shortened.
 
-## If Docker is not an option
+## Manual local workflow
 
-There is also a local Python workflow:
+If you want to run the steps yourself instead of using the top-level shortcuts:
 
 ### macOS and Linux
 
@@ -72,6 +71,10 @@ There is also a local Python workflow:
 .\scripts\bootstrap.ps1
 .\scripts\serve-local.ps1
 ```
+
+## Optional Docker workflow
+
+Docker and Dev Containers are still available for people who prefer them, but they are no longer the main contributor path.
 
 ## Optional editor setup
 

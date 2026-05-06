@@ -18,7 +18,7 @@ To connect your Wired Remote to the OSSM, first connect the Remote to your OSSM 
 
 The Wired Remote has two knobs - the right knob scrolls the menu and when pressed acts as a selection button. During play (Simple Penetration and Stroke Engine modes), the right knob adjusts stroke length while the left knob adjusts stroke speed. You can hold the right knob during play to stop the machine and return to the Remote's main menu.
 
-![](Images/Wired_Remote_Marked.png)
+_Wired remote reference image coming soon._
 
 When not in Simple Penetration or Stroke Engine mode, the right knob button acts as a back button to return you to the main menu.
 
@@ -29,7 +29,7 @@ When in Stroke Engine mode, you double-click the right knob to access pattern se
 
 Let's start with some orientation. In comparison to the Wired Remote, the Wireless Remote has more buttons (for fun physical interactivity!) In this doc we'll be directing you to press certain buttons. Take a second to review the photo below to orient yourself with the device's physical controls and how we refer to them.
 
-![](Images/Wireless_Remote_Marked.png)
+_Wireless remote reference image coming soon._
 
 The Wireless Remote connects to your OSSM via Bluetooth. To connect your Wireless Remote to your OSSM, first connect your machine to power and allow it to home. Then, flick the Wireless Remote's power switch. This purple switch can be located to the top left of the Remote screen. 
 
@@ -49,7 +49,7 @@ Note: The Sensation selection only affects how Pattern selections function. When
 
 ### Web Controller
 
-The Web Controller allows you to control your OSSM without a physical remote. This remote method requires that your OSSM is connected to WiFi. For instructions on connecting your OSSM to WiFi using the Web Controller, [click this link.](#wifi-setup-option-#1)
+The Web Controller allows you to control your OSSM without a physical remote. This remote method requires that your OSSM is connected to WiFi. For instructions on connecting your OSSM to WiFi using the Web Controller, [click this link.](#wifi-setup-option-1)
 
 ### Stroke Engine and Patterns
 

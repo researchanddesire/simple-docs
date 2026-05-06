@@ -11,7 +11,7 @@ Use the script for your operating system:
 - Linux: `./start-docs.sh`
 
 When the preview is ready, open <http://localhost:8000>.
-If Docker is installed but not running yet, the script will try to start it for you.
+The first run will create the local environment and install the docs tools for you.
 
 ## Edit a page
 
@@ -35,9 +35,9 @@ Use the script for your operating system:
 - Windows: `.\check-docs.bat`
 - Linux: `./check-docs.sh`
 
-## If you prefer local Python
+## If you prefer the manual steps
 
-There is also a local workflow:
+There is also a manual local workflow:
 
 ### macOS and Linux
 
