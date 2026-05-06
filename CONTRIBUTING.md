@@ -72,10 +72,6 @@ If you want to run the steps yourself instead of using the top-level shortcuts:
 .\scripts\serve-local.ps1
 ```
 
-## Optional Docker workflow
-
-Docker and Dev Containers are still available for people who prefer them, but they are no longer the main contributor path.
-
 ## Optional editor setup
 
-VS Code works especially well for non-technical contributors because it has a simple file browser and good Markdown support. If you use VS Code, opening the repo in a Dev Container is also supported.
+VS Code works especially well for non-technical contributors because it has a simple file browser and good Markdown support.

@@ -1,7 +1,6 @@
 {
   "recommendations": [
     "ms-python.python",
-    "ms-azuretools.vscode-docker",
     "DavidAnson.vscode-markdownlint",
     "yzhang.markdown-all-in-one"
   ]

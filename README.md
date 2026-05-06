@@ -67,4 +67,4 @@ The check script uses the same local Python environment as the preview.
 
 ## Advanced options
 
-If you prefer container-based tooling, this repo still includes Docker and Dev Container files. The recommended contributor path is now the local Python setup because it has been more reliable in practice.
+If you prefer to manage the environment manually, the scripts in `scripts/` are a good next step. Most contributors should be able to stick with the top-level start and check scripts.
