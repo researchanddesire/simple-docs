@@ -6,9 +6,9 @@ So you've built your OSSM and you're wondering how to put it to good use! Let's 
 
 You can control your OSSM using one of three different remote types:
 
-1) Wired Remote
-2) Wireless Remote (RADR)
-3) Web Controller
+  1. Wired Remote
+  2. Wireless Remote (RADR)
+  3. Web Controller
 
 Please note that the OSSM will "home" (the rail slowly slides back and forth for a short period of time) when you select Simple Penetration or Stroke Engine modes. The machine does this to accurately gauge the distance between both end points of the rail.
 
@@ -18,20 +18,19 @@ To connect your Wired Remote to the OSSM, first connect the Remote to your OSSM 
 
 The Wired Remote has two knobs - the right knob scrolls the menu and when pressed acts as a selection button. During play (Simple Penetration and Stroke Engine modes), the right knob adjusts stroke length while the left knob adjusts stroke speed. You can hold the right knob during play to stop the machine and return to the Remote's main menu.
 
-_Wired remote reference image coming soon._
+![](img/Wired_Remote_Marked.png)
 
 When not in Simple Penetration or Stroke Engine mode, the right knob button acts as a back button to return you to the main menu.
 
 When in Stroke Engine mode, you double-click the right knob to access pattern selection.
 
-
 ### Wireless Remote
 
 Let's start with some orientation. In comparison to the Wired Remote, the Wireless Remote has more buttons (for fun physical interactivity!) In this doc we'll be directing you to press certain buttons. Take a second to review the photo below to orient yourself with the device's physical controls and how we refer to them.
 
-_Wireless remote reference image coming soon._
+![](img/Wireless_Remote_Marked.png)
 
-The Wireless Remote connects to your OSSM via Bluetooth. To connect your Wireless Remote to your OSSM, first connect your machine to power and allow it to home. Then, flick the Wireless Remote's power switch. This purple switch can be located to the top left of the Remote screen. 
+The Wireless Remote connects to your OSSM via Bluetooth. To connect your Wireless Remote to your OSSM, first connect your machine to power and allow it to home. Then, flick the Wireless Remote's power switch. This purple switch can be located to the top left of the Remote screen.
 
 The Remote will detect your OSSM and it will pop up on your Remote screen as a selection option under the name "OSSM". Use the rightmost button to select your machine. The Remote will then connect to your OSSM and proceed to the Simple Stroke screen.
 
@@ -43,13 +42,20 @@ To explore play patterns, click the rightmost button and select whichever patter
 
 Note: The Sensation selection only affects how Pattern selections function. When you hover over a Pattern option, a small blurb will appear below that Pattern text that explains how Sensation adjustments affect the pattern's activity.
 
-#### Connectivity indicators
+#### Status indicators
 
+The Wireless Remote has two connectivity indicators and a battery life indicator. You can find them displayed at the top centre of the device screen.
+
+![](img/bt-wifi-battery-indicators.png)
 
 
 ### Web Controller
 
-The Web Controller allows you to control your OSSM without a physical remote. This remote method requires that your OSSM is connected to WiFi. For instructions on connecting your OSSM to WiFi using the Web Controller, [click this link.](#wifi-setup-option-1)
+The Web Controller allows you to control your OSSM without a physical remote. This remote method requires that your OSSM is connected to WiFi. For instructions on connecting your OSSM to WiFi using the Web Controller, [click this link.](#wifi-setup-option-#1) The interface for the Web Controller looks like this:
+
+![](img/web_controller_play_interface.png)
+
+
 
 ### Stroke Engine and Patterns
 
@@ -59,11 +65,13 @@ On the Wired Remote you access patterns through the "Stroke Engine" selection.
 
 On the Wireless Remote, you access patterns through the "Patterns" selection.
 
+On the Web Controller, you access patterns through the "Pattern" dropdown.
+
 Below is a list of the patterns that come with the device and a description of what they do:
 
 - Simple Stroke - Moves in and out smoothly according to your speed and depth settings. Sensation has no effect.
-- Teasing or Pounding -
-- Robo Stroke - 
+- Teasing or Pounding - The machine either thrusts in very slowly and out quickly, or in very quickly and out slowly, as determined by Sensation.
+- Robo Stroke - Adjusts how quickly the device accelerates. Sensation determines acceleration speed.
 - Half'n'Half - Every second stroke is half your selected depth. Sensation affects whether the in our out movement is the faster movement.
 - Deeper - Starts with shallow thrusts and gradually increases to full length thrusts. Sensation affects how short or long the device takes to reach max thrust depth.
 - Stop'n'Go -A series of strokes with intermittent pauses. Sensation controls the length of the pause.
@@ -81,16 +89,17 @@ Some notes before we begin:
 
 ### WiFi Setup Option #1
 
+- Connect your OSSM to power and let it home
 - Navigate to the [Web Controller URL](https://docs.researchanddesire.com/ossm/tools/web-controller)
-- Click "Connect" and select your OSSM
-- Click on the "WiFi Settings" tab at the top of the Web Controller interface
+- Click "Connect" and select your OSSM, then click "Pair" ![](img/Gemini_Generated_Image_y0j71y0j71y0j71y.png)
+- Once paired, click on the "WiFi Settings" tab at the top of the Web Controller interface![](img/web_controller_wifi.png)
 - Enter your WiFi network's name and password
 - Click "Save & Connect" and you're all set!
 
 ### WiFi Setup Option #2 (For use with Wireless Remote)
 
 - Connect your OSSM to power and let it home
-- Turn on your Wireless Remote and select "Wifi Setup" on your device's menu
+- Turn on your Wireless Remote and select "Wifi Settings" on your device's menu
 - Using your phone camera, scan the QR code that appears on the device screen
 - On your phone or computer, connect to the WiFi network named "OSSM Setup"
 - Select your WiFi network, enter your password, and save
