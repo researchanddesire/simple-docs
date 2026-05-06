@@ -18,7 +18,7 @@ To connect your Wired Remote to the OSSM, first connect the Remote to your OSSM 
 
 The Wired Remote has two knobs - the right knob scrolls the menu and when pressed acts as a selection button. During play (Simple Penetration and Stroke Engine modes), the right knob adjusts stroke length while the left knob adjusts stroke speed. You can hold the right knob during play to stop the machine and return to the Remote's main menu.
 
-![](img/Wired_Remote_Marked.png)
+  ![](img/wired-remote-annotated.png)
 
 When not in Simple Penetration or Stroke Engine mode, the right knob button acts as a back button to return you to the main menu.
 
@@ -28,7 +28,7 @@ When in Stroke Engine mode, you double-click the right knob to access pattern se
 
 Let's start with some orientation. In comparison to the Wired Remote, the Wireless Remote has more buttons (for fun physical interactivity!) In this doc we'll be directing you to press certain buttons. Take a second to review the photo below to orient yourself with the device's physical controls and how we refer to them.
 
-![](img/Wireless_Remote_Marked.png)
+  ![](img/wireless-remote-annotated.png)
 
 The Wireless Remote connects to your OSSM via Bluetooth. To connect your Wireless Remote to your OSSM, first connect your machine to power and allow it to home. Then, flick the Wireless Remote's power switch. This purple switch can be located to the top left of the Remote screen.
 
@@ -46,15 +46,14 @@ Note: The Sensation selection only affects how Pattern selections function. When
 
 The Wireless Remote has two connectivity indicators and a battery life indicator. You can find them displayed at the top centre of the device screen.
 
-![](img/bt-wifi-battery-indicators.png)
+  ![](img/bt-wifi-battery-indicators.png)
 
 
 ### Web Controller
 
 The Web Controller allows you to control your OSSM without a physical remote. This remote method requires that your OSSM is connected to WiFi. For instructions on connecting your OSSM to WiFi using the Web Controller, [click this link.](#wifi-setup-option-#1) The interface for the Web Controller looks like this:
 
-![](img/web_controller_play_interface.png)
-
+  ![](img/web-controller-play-interface.png)
 
 
 ### Stroke Engine and Patterns
@@ -91,8 +90,10 @@ Some notes before we begin:
 
 - Connect your OSSM to power and let it home
 - Navigate to the [Web Controller URL](https://docs.researchanddesire.com/ossm/tools/web-controller)
-- Click "Connect" and select your OSSM, then click "Pair" ![](img/Gemini_Generated_Image_y0j71y0j71y0j71y.png)
-- Once paired, click on the "WiFi Settings" tab at the top of the Web Controller interface![](img/web_controller_wifi.png)
+- Click "Connect" and select your OSSM, then click "Pair"
+    ![](img/Gemini_Generated_Image_y0j71y0j71y0j71y.png)
+- Once paired, click on the "WiFi Settings" tab at the top of the Web Controller interface
+    ![](img/web-controller-wifi.png)
 - Enter your WiFi network's name and password
 - Click "Save & Connect" and you're all set!
 
