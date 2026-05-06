@@ -1,5 +1,6 @@
-site_name: Simple Docs
-site_description: Contributor-friendly MkDocs starter
+site_name: Research and Desire Product Documentation
+site_description: Quick-start guide and reference for Research and Desire products.
+site_url: https://docs.researchanddesire.com
 
 theme:
   name: material
@@ -23,8 +24,7 @@ nav:
   - OSSM Specs: ossm-specs.md
   - OSSM BOM: ossm-bom.md
   - How to Use: how-to-use.md
-  - Writer's Guide:
-      - Overview: index.md
-      - Getting Started: getting-started.md
-      - Writing Guide: writing-guide.md
-      - Contributing: contributing.md
+  - Overview: index.md
+  - MKDocsGetting Started: getting-started.md
+  - MKDocs Writing Guide: writing-guide.md
+  - MKDocs Contributing: contributing.md
