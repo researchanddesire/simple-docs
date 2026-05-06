@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
+docker_info_output() {
+  docker info 2>&1 || true
+}
+
 docker_is_ready() {
   docker info >/dev/null 2>&1
 }
@@ -18,15 +22,28 @@ wait_for_docker() {
       return 0
     fi
 
+    if (( attempt == 1 || attempt % 5 == 0 )); then
+      echo "Still waiting for Docker... (${attempt}/${attempts})"
+    fi
+
     sleep "$delay_seconds"
   done
 
   return 1
 }
 
+docker_desktop_is_open_on_macos() {
+  pgrep -f "Docker Desktop|Docker.app" >/dev/null 2>&1
+}
+
 start_docker_on_macos() {
   if ! command -v open >/dev/null 2>&1; then
     return 1
+  fi
+
+  if docker_desktop_is_open_on_macos; then
+    echo "Docker Desktop is already open. Waiting for it to finish starting..."
+    return 0
   fi
 
   open -a Docker >/dev/null 2>&1 || open /Applications/Docker.app >/dev/null 2>&1
@@ -109,6 +126,9 @@ ensure_docker_running() {
   fi
 
   echo "Docker did not finish starting automatically." >&2
+  echo "Last Docker status message:" >&2
+  docker_info_output >&2
   echo "Open Docker Desktop or start the Docker service, wait for it to be ready, then try again." >&2
+  echo "If Docker Desktop looks stuck, quit it completely and reopen it." >&2
   return 1
 }

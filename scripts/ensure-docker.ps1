@@ -1,5 +1,14 @@
 $ErrorActionPreference = "Stop"
 
+function Get-DockerInfoOutput {
+    try {
+        return (docker info 2>&1 | Out-String).Trim()
+    }
+    catch {
+        return $_.Exception.Message
+    }
+}
+
 function Test-DockerReady {
     try {
         docker info *> $null
@@ -24,6 +33,10 @@ function Get-DockerDesktopPath {
     }
 
     return $null
+}
+
+function Test-DockerDesktopRunning {
+    return @(Get-Process -Name "Docker Desktop" -ErrorAction SilentlyContinue).Count -gt 0
 }
 
 if (-not (Get-Command docker -ErrorAction SilentlyContinue)) {
@@ -52,13 +65,18 @@ if (-not $dockerDesktop) {
     exit 1
 }
 
-try {
-    Start-Process -FilePath $dockerDesktop | Out-Null
+if (Test-DockerDesktopRunning) {
+    Write-Host "Docker Desktop is already open. Waiting for it to finish starting..."
 }
-catch {
-    Write-Host "Docker Desktop could not be started automatically."
-    Write-Host "Start Docker manually, then try again."
-    exit 1
+else {
+    try {
+        Start-Process -FilePath $dockerDesktop | Out-Null
+    }
+    catch {
+        Write-Host "Docker Desktop could not be started automatically."
+        Write-Host "Start Docker manually, then try again."
+        exit 1
+    }
 }
 
 Write-Host "Waiting for Docker to finish starting..."
@@ -69,9 +87,16 @@ for ($attempt = 1; $attempt -le 45; $attempt++) {
         exit 0
     }
 
+    if ($attempt -eq 1 -or $attempt % 5 -eq 0) {
+        Write-Host "Still waiting for Docker... ($attempt/45)"
+    }
+
     Start-Sleep -Seconds 2
 }
 
 Write-Host "Docker did not finish starting automatically."
+Write-Host "Last Docker status message:"
+Write-Host (Get-DockerInfoOutput)
 Write-Host "Open Docker Desktop, wait for it to say it is running, then try again."
+Write-Host "If Docker Desktop looks stuck, quit it completely and reopen it."
 exit 1

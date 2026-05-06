@@ -11,4 +11,8 @@ echo "Starting the docs preview..."
 echo "Open http://localhost:8000 when the server is ready."
 echo "Keep this terminal open while you are writing."
 
-docker compose up --build
+if ! docker compose up --build; then
+  echo "The docs preview did not start." >&2
+  echo "If Docker just restarted, wait a few seconds and run the script again." >&2
+  exit 1
+fi
