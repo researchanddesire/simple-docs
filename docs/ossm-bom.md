@@ -1,12 +1,9 @@
 
-# OSSM Bill of materials
+# OSSM Bill of Materials
 
-Below you'll find a list of everything you need to build your OSSM Ready-to-Play! 
+Below you'll find a list of everything you need to build your OSSM Ready-to-Play! Hover over a component name with your cursor to view a photo of it. Please note that the bracketed numbers denote quantity.
 
-Please note that the bracketed numbers denote quantity.
-
-
-**Fasteners + Hardware**
+**Fasteners & Hardware**
 
 Electronics board + related:
 
@@ -17,29 +14,34 @@ Electronics board + related:
 - Wireless Remote (1)
 - USB-C charging cable for Wireless Remote (1)
 
+!!! info "The Ethernet cable and M4x8mm buttonhead screws come with the Wired Remote, while the USB-C charging cable comes with the Wireless Remote."
+
 M3:
-* M3x8mm screw (18)
-* M3x20mm screw (3)
-* M3 nut (10)
+
+- M3x8mm screw (18)
+- M3x20mm screw (3)
+- M3 nut (10)
 
 M4:
-* M4x25mm screw (2)
-* M4 nut (3)
+
+- M4x25mm screw (2)
+- M4 nut (3)
 
 M5:
-* M5x20 mm screw (6)
-* M5x35mm screw (4)
-* M5 nut (8)
+
+- M5x20 mm screw (6)
+- M5x35mm screw (4)
+- M5 nut (8)
 
 M6:
 
- - M6x12mm screw (14)
- - M6x16mm screw (2)
- - M6x25mm screw (6)
- - M6x25mm clamping lever (2)
- - M6 washer (16)
- - M6 T-nut (26)
- 
+- M6x12mm screw (14)
+- M6x16mm screw (2)
+- M6x25mm screw (6)
+- M6x25mm clamping lever (2)
+- M6 washer (16)
+- M6 T-nut (26)
+
 Other hardware:
 
 - Base brackets (4)

@@ -4,10 +4,10 @@ Here you'll find an overview of the OSSM's device specifications.
 
 ## Performance
 
- - Maximum linear speed - 1m/s
- - Maximum strokes per minute - 165
- - Maximum push force - 20kg
- - Maximum toy weight - 1.1kg
+- Maximum linear speed - 1m/s
+- Maximum strokes per minute - 165
+- Maximum push force - 20kg
+- Maximum toy weight - 1.1kg
 
 ## Dimensions
 
@@ -23,6 +23,7 @@ Here you'll find an overview of the OSSM's device specifications.
 - Idle power - 1-5W
 - Average power - 30W
 - Peak power - 95W
+!!! warning "We caution against using third party power supplies as their use may short the OSSM board, thus rendering the OSSM unusable, or provide insufficient operating power."
 
 ## Motor
 
