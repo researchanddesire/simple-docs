@@ -28,4 +28,8 @@ nav:
   - MKDocs Getting Started: getting-started.md
   - MKDocs Writing Guide: writing-guide.md
   - MKDocs Contributing: contributing.md
+<<<<<<< Updated upstream
   - Open Source Info: open-source-info
+=======
+  - Accessories: accessories.md
+>>>>>>> Stashed changes
