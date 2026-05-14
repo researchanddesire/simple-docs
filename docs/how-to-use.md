@@ -129,3 +129,6 @@ Connecting your OSSM to WiFi enables it to receive firmware updates as they are 
 - Select your WiFi network, enter your password, and save
 
 !!! success "Yay! You're ready to play."
+
+# Using the OSSM safely
+
