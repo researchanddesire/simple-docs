@@ -21,7 +21,7 @@ Please find the OSSM's CERN OHL license category below:
 
 CERN-OHL-S-v2
 
-!!! info "If you'd like to read more about OSHWA or CERN OHL, check out the [OSHWA](https://oshwa.org/) and [CERN](https://cern-ohl.web.cern.ch/) websites.
+!!! info "If you'd like to read more about OSHWA or CERN OHL, check out the [OSHWA](https://oshwa.org/) and [CERN](https://cern-ohl.web.cern.ch/) websites."
 
 ## What this means for contributors
 
@@ -34,6 +34,6 @@ When you contribute to the [OSSM GitHub repository](https://github.com/KinkyMake
 Open source means contributions can come from anyone, anywhere. Before contributing, we advise that you do the following:
 
 1. Take time to thoroughly read the [CERN-OHL-S-v2 license terms](https://gitlab.com/ohwr/project/cernohl/-/wikis/uploads/819d71bea3458f71fba6cf4fb0f2de6b/cern_ohl_s_v2.txt) to understand how the license functions
-2. Review our safety guidelines
+2. Review our [Pre-play Safety Checklist](how-to-use.md)
 
 !!! success "You're ready to contribute!"

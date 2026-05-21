@@ -118,7 +118,7 @@ Connecting your OSSM to WiFi enables it to receive firmware updates as they are 
 5. Enter your WiFi network's name and password
 6. Click "Save & Connect"
 
-!!! success "Yay! You're ready to play."
+!!! success "Yay! Your OSSM is connected to WiFi."
 
 ### WiFi Setup Option #2 (Wireless Remote)
 
@@ -128,7 +128,20 @@ Connecting your OSSM to WiFi enables it to receive firmware updates as they are 
 - On your phone or computer, connect to the WiFi network named "OSSM Setup"
 - Select your WiFi network, enter your password, and save
 
-!!! success "Yay! You're ready to play."
+!!! success "Yay! Your OSSM is connected to WiFi."
 
-# Using the OSSM safely
+# Pre-play Safety Checklist
 
+The OSSM is a powerful device and we want to make sure you have the tools to use it safely!
+
+Before you use your OSSM for play, make sure to follow these steps:
+
+1. Erect your OSSM and place it in a position that will be comfortable for you during play
+2. Place a filled sandbag over the base of the machine for stability
+3. If using a Wired Remote, connect the remote to the machine via Ethernet cable
+4. Attach your suction cup or Vac-u-Lock toy
+5. Connect your OSSM to a power source
+6. Set all Remote settings (Depth, Sensation, Stroke) to zero
+7. Get comfortable and slowly adjust settings until you feel confident using the device
+
+!!! success "You have completed the OSSM Pre-play Safety Checklist!"
