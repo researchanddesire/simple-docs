@@ -1,21 +1,42 @@
-# Page title
+# Flashing your OSSM PCBA or Wireless Remote
 
-Use this opening paragraph to explain what the page helps the reader do.
+All R+D products that include a PCBA arrive to you pre-flashed, but there may be some instances that require you to flash your device at home. We've created an easy flashing tool for this purpose!
 
-## Before you begin
+!!! warning "Flash your device only when instructed to by support@researchanddesire.com"
 
-List anything the reader needs before starting.
+## Before you flash
 
-## Steps
+In order to flash your OSSM PCBA or Wireless Remote, you'll need the following tools:
 
-1. Add the first step.
-2. Add the next step.
-3. Keep each step focused on one action.
+1. A computer with a USB-C or USB-A port
+2. A USB-C to C or USB-C to A cable
+3. This driver --->
+4. Your OSSM PCBA or Wireless Remote
 
-## Example
+!!! success "Once you have all four, you're ready to flash!"
 
-Add an example, screenshot, or sample output if it would help.
+## Flashing your OSSM PCBA
 
-## Troubleshooting
+1. Log in to your dashboard account at dashboard.researchanddesire.com
+2. Select the Web Flasher under the "Tools" tab on the lefthand side of the dashboard
+3. Select OSSM from the leftmost dropdown
+4. Select Production (Stable) from the rightmost dropdown
+5. Click "Connect & Flash"
+6. Connect the OSSM PCBA to your computer via USB cable
+7. Select the appropriate serial port
+8. Click "Connect"
 
-- Add common mistakes or questions here.
+!!! info "If you are having trouble finding the correct serial port, disconnect and reconnect your device using the USB cable while the port selection screen remains open. This will make the device's serial port connection disappear and then reappear, so you can easily tell which port to select!"
+
+## Flashing your Wireless Remote
+
+1. Log in to your dashboard account at dashboard.researchanddesire.com
+2. Select the Web Flasher under the "Tools" tab on the lefthand side of the dashboard
+3. Select RAD Remote from the leftmost dropdown
+4. Select Production (Stable) from the rightmost dropdown
+5. Click "Connect"
+6. Connect the Wireless Remote to your computer via USB cable
+7. Select the appropriate serial port
+8. Click "Connect
+
+!!! info "If you are having trouble finding the correct serial port, disconnect and reconnect your device using the USB cable while the port selection screen remains open. This will make the device's serial port connection disappear and then reappear, so you can easily tell which port to select!"
