@@ -1,6 +1,6 @@
 # Flashing your OSSM PCBA or Wireless Remote
 
-All R+D products that include a PCBA arrive to you pre-flashed, but there may be some instances that require you to flash your device at home. We've created an easy flashing tool for this purpose!
+All R+D PCBAs are shipped pre-flashed, but there may be some instances that require you to flash your device at home. We've created an easy flashing tool for this purpose!
 
 !!! warning "Flash your device only when instructed to by support@researchanddesire.com"
 
@@ -25,6 +25,11 @@ In order to flash your OSSM PCBA or Wireless Remote, you'll need the following t
 6. Connect the OSSM PCBA to your computer via USB cable
 7. Select the appropriate serial port
 8. Click "Connect"
+9. Click "Install"
+10. Confirm the install
+11. Let the flashing process run
+
+!!! success "Your device is now flashed."
 
 !!! info "If you are having trouble finding the correct serial port, disconnect and reconnect your device using the USB cable while the port selection screen remains open. This will make the device's serial port connection disappear and then reappear, so you can easily tell which port to select!"
 
@@ -37,6 +42,11 @@ In order to flash your OSSM PCBA or Wireless Remote, you'll need the following t
 5. Click "Connect"
 6. Connect the Wireless Remote to your computer via USB cable
 7. Select the appropriate serial port
-8. Click "Connect
+8. Click "Connect"
+9. Click "Install"
+10. Confirm the install
+11. Let the flashing process run
+
+!!! success "Your device is now flashed."
 
 !!! info "If you are having trouble finding the correct serial port, disconnect and reconnect your device using the USB cable while the port selection screen remains open. This will make the device's serial port connection disappear and then reappear, so you can easily tell which port to select!"
