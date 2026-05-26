@@ -11,8 +11,9 @@ Here's how to connect your OSSM to power:
 1. Plug the socket plug of the power supply cord into a wall socket
 ![](img/power-supply-annotated.png)
 2. Plug the barrel jack end of the power supply into the barrel jack port on your OSSM board
-![](img/enclosed-osssm-pcb-annotated1.png)
+![](img/enclosed-ossm-pcb-annotated1.png)
 1. Check that the board's LED lights up, and let the device home
+![](img/enclosed-ossm-pcb-annotated2.png)
 
 !!! success "Your OSSM is receiving power!"
 
@@ -36,23 +37,50 @@ Please note that the OSSM will home when:
 
 ### Wired Remote
 
-To connect your Wired Remote to the OSSM, first connect the Remote to your OSSM board via Ethernet cable. Then, connect your OSSM to a power source. The Remote screen will flash the R+D logo and present you with an on-screen menu.
+#### Connecting your Wired Remote to the OSSM
 
-The Wired Remote has two knobs - the right knob scrolls the menu and when pressed acts as a selection button. During play (Simple Penetration and Stroke Engine modes), the right knob adjusts stroke length while the left knob adjusts stroke speed. You can press and hold the right knob button during play to stop the machine and return to the Remote's main menu.
+To connect your Wired Remote to the OSSM:
+
+1. Connect the Remote to your OSSM board via Ethernet cable
+2. Connect your OSSM to a power source
+!!! success "The Remote screen will flash the R+D logo and present you with an on-screen menu!"
+
+#### Using the Wired Remote
+
+The Wired Remote has a left and a right knob.
+
+**Right knob**
+
+- Scrolls the menu
+- Adjusts stroke length.  You can press and hold the right knob button during play to stop the machine and return to the Remote's main menu
+- Acts as a menu selection button
+- Acts as a back button outside of Simple Penetration and Stroke Engine modes
+
+!!! info "When in Stroke Engine mode double-click the right knob to access pattern selection."
+
+**Left knob**
+
+- Adjusts stroke speed
   ![](img/wired-remote-annotated.png)
 
-When not in Simple Penetration or Stroke Engine mode, the right knob button acts as a back button to return you to the main menu.
 
-When in Stroke Engine mode, you double-click the right knob to access pattern selection.
 
 ### Wireless Remote
 
 Let's start with some orientation. In comparison to the Wired Remote, the Wireless Remote has more buttons (for fun physical interactivity!) In this doc we'll be directing you to press certain buttons. Take a second to review the photo below to orient yourself with the device's physical controls and how we refer to them.
-  ![](img/wireless-remote-annotated.png)
+![](img/wireless-remote-annotated.png)
 
-The Wireless Remote connects to your OSSM via Bluetooth. To connect your Wireless Remote to your OSSM, first connect your machine to power and allow it to home. Then, flick the Wireless Remote's power switch. This purple switch can be located to the top left of the Remote screen.
+#### Connecting your Wireless Remote to the OSSM
 
-The Remote will detect your OSSM and it will pop up on your Remote screen as a selection option under the name "OSSM". Use the rightmost button to select your machine. The Remote will then connect to your OSSM and proceed to the Simple Stroke screen.
+The Wireless Remote connects to your OSSM via Bluetooth. To connect your Wireless Remote to your OSSM:
+
+1. Connect your OSSM to power and allow it to home
+2. Turn on the Wireless Remote via the power switch
+3. The Wireless Remote will detect your OSSM. Use the right button to select your OSSM ![](img/wireless-remote2-annotated.png)
+
+!!! success "You are now at the Simple Stroke screen and can start controlling your OSSM with the Wireless Remote!"
+
+#### Using your Wireless Remote
 
 Here you can use the right knob to adjust depth (stroke length) and the left to adjust speed. You can press the middle button to pause the device instantaneously during play.
 
@@ -122,11 +150,12 @@ Connecting your OSSM to WiFi enables it to receive firmware updates as they are 
 
 ### WiFi Setup Option #2 (Wireless Remote)
 
-- Connect your OSSM to power and let it home
-- Turn on your Wireless Remote and select "Wifi Settings" on your device's menu
-- Using your phone camera, scan the QR code that appears on the device screen
-- On your phone or computer, connect to the WiFi network named "OSSM Setup"
-- Select your WiFi network, enter your password, and save
+1. Connect your OSSM to power and let it home
+2. Connect your Wireless Remote to your OSSM
+3. Turn on your Wireless Remote and select "Wifi Settings" on your device's menu
+4. Using your phone camera, scan the QR code that appears on the device screen
+5. On your phone or computer, connect to the WiFi network named "OSSM Setup"
+6. Select your WiFi network, enter your password, and save
 
 !!! success "Yay! Your OSSM is connected to WiFi."
 

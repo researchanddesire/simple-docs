@@ -17,7 +17,7 @@ In order to flash your OSSM PCBA or Wireless Remote, you'll need the following t
 
 ## Flashing your OSSM PCBA
 
-1. Log in to your dashboard account at dashboard.researchanddesire.com
+1. Log in to your [dashboard](dashboard.researchanddesire.com) account
 2. Select the Web Flasher under the "Tools" tab on the lefthand side of the dashboard
 3. Select OSSM from the leftmost dropdown
 4. Select Production (Stable) from the rightmost dropdown
@@ -35,7 +35,7 @@ In order to flash your OSSM PCBA or Wireless Remote, you'll need the following t
 
 ## Flashing your Wireless Remote
 
-1. Log in to your dashboard account at dashboard.researchanddesire.com
+1. Log in to your [dashboard](dashboard.researchanddesire.com) account
 2. Select the Web Flasher under the "Tools" tab on the lefthand side of the dashboard
 3. Select RAD Remote from the leftmost dropdown
 4. Select Production (Stable) from the rightmost dropdown
