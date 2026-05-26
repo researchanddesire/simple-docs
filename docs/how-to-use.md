@@ -105,6 +105,8 @@ The Web Controller allows you to control your OSSM without a physical remote. Th
 
   ![](img/web-controller-play-interface.png)
 
+!!! warning "The Web Controller is not supported on iOS devices, nor is it supported on Firefox or Safari browsers."
+
 ### Stroke Engine, Patterns, & Sensation
 
 Patterns provide you with a more exciting, spontaneous way to play with your OSSM. Each pattern has unique, pre-set motion parameters that govern how the OSSM interacts with you during use.
@@ -139,12 +141,11 @@ Connecting your OSSM to WiFi enables it to receive firmware updates as they are 
 
 1. Connect your OSSM to power and let it home
 2. Navigate to the [Web Controller URL](https://docs.researchanddesire.com/ossm/tools/web-controller)
-3. Click "Connect" and select your OSSM, then click "Pair"
-    ![](img/Gemini_Generated_Image_y0j71y0j71y0j71y.png)
-4. Once paired, click on the "WiFi Settings" tab at the top of the Web Controller interface
-    ![](img/web-controller-wifi.png)
-5. Enter your WiFi network's name and password
-6. Click "Save & Connect"
+3. Click "Connect" and select your OSSM, then click "Pair" ![](img/web-controller-connect-annotated.png)
+4. Select your OSSM and click "Pair" ![](img/web-controller-pair-annotated.png)
+5. Once paired, click on the "WiFi Settings" tab at the top of the Web Controller interface ![](img/web-controller-wifisettings-annotated.png)
+6. Enter your WiFi network's name and password ![](img/web-controller-wifisettings2-annotated.png)
+7. Click "Save & Connect"
 
 !!! success "Yay! Your OSSM is connected to WiFi."
 
@@ -152,10 +153,12 @@ Connecting your OSSM to WiFi enables it to receive firmware updates as they are 
 
 1. Connect your OSSM to power and let it home
 2. Connect your Wireless Remote to your OSSM
-3. Turn on your Wireless Remote and select "Wifi Settings" on your device's menu
-4. Using your phone camera, scan the QR code that appears on the device screen
-5. On your phone or computer, connect to the WiFi network named "OSSM Setup"
-6. Select your WiFi network, enter your password, and save
+3. Navigate to the Wireless Remote menu using the left button
+4. Select "Settings"
+5. Select "Wifi Settings"
+6. Using your phone camera, scan the QR code that appears on the device screen
+7. On your phone or computer, connect to the WiFi network named "OSSM Setup"
+8. Select your WiFi network, enter your password, and save
 
 !!! success "Yay! Your OSSM is connected to WiFi."
 
