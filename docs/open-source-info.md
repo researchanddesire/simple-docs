@@ -21,7 +21,7 @@ Please find the OSSM's CERN OHL license category below:
 
 CERN-OHL-S-v2
 
-!!! info "If you'd like to read more about OSHWA or CERN OHL, check out the [OSHWA](https://oshwa.org/) and [CERN](https://cern-ohl.web.cern.ch/) websites."
+!!! info "If you'd like to read more about OSHWA or CERN OHL, check out the [OSHWA](https://oshwa.org/) and [CERN OHL](https://cern-ohl.web.cern.ch/) websites."
 
 ## What this means for contributors
 
