@@ -2,6 +2,8 @@
 
 All R+D PCBAs are shipped pre-flashed, but there may be some instances that require you to flash your device at home. We've created an easy flashing tool for this purpose!
 
+!!! info "You must use Google Chrome or Microsoft Edge to flash your device."
+
 !!! warning "Flash your device only when instructed to by support@researchanddesire.com"
 
 ## Before you flash
@@ -9,7 +11,7 @@ All R+D PCBAs are shipped pre-flashed, but there may be some instances that requ
 In order to flash your OSSM PCBA or Wireless Remote, you'll need the following tools:
 
 1. A computer with a USB-C or USB-A port
-2. A USB-C to C or USB-C to A cable
+2. A USB-C to C or USB-C to A cable that can transfer data
 3. This driver --->
 4. Your OSSM PCBA or Wireless Remote
 
