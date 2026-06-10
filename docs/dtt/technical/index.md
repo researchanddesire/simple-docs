@@ -3,50 +3,44 @@
 This section provides technical resources for understanding how your Deepthroat Trainer works under the hood. Find detailed explanations of device behavior, sensor specifications, and troubleshooting guides.
 
 ## Device operation
-**[Device States & Screens](./device-states)**
 
-Understand all the screens and states your trainer displays during operation.
+- **[Device States & Screens](/dtt/technical/device-states/)**  
+  Understand all the screens and states your trainer displays during operation.
 
-**[Button Controls](./button-controls)**
+- **[Button Controls](/dtt/technical/button-controls/)**  
+  Learn how to use the front button to navigate and control your trainer.
 
-Learn how to use the front button to navigate and control your trainer.
+- **[LED Feedback System](/dtt/technical/led-feedback/)**  
+  Understand what the LED colors mean during training sessions.
 
-**[LED Feedback System](./led-feedback)**
-
-Understand what the LED colors mean during training sessions.
-
-**[Calibration](./calibration)**
-
-How to calibrate your trainer for accurate position tracking.
+- **[Calibration](/dtt/technical/calibration/)**  
+  How to calibrate your trainer for accurate position tracking.
 
 ## Specifications
-**[Sensor Specifications](./sensor-limits)**
 
-Technical limits and capabilities of the distance sensor.
+- **[Sensor Specifications](/dtt/technical/sensor-limits/)**  
+  Technical limits and capabilities of the distance sensor.
 
-**[Offline Mode](./offline-mode)**
+- **[Offline Mode](/dtt/technical/offline-mode/)**  
+  Using your trainer without an internet connection.
 
-Using your trainer without an internet connection.
+- **[Firmware Updates](/dtt/technical/firmware-updates/)**  
+  How your trainer receives and installs software updates.
 
-**[Firmware Updates](./firmware-updates)**
-
-How your trainer receives and installs software updates.
-
-**[Error Codes](./error-codes)**
-
-All error messages and how to resolve them.
+- **[Error Codes](/dtt/technical/error-codes/)**  
+  All error messages and how to resolve them.
 
 ## Software updates
-**[Software 2.0 Preview](/dtt/software-2.0-preview)**
 
-Explore new firmware capabilities and upcoming features.
+- **[Software 2.0 Preview](/dtt/software-2.0-preview/)**  
+  Explore new firmware capabilities and upcoming features.
 
 ## Troubleshooting
 
 When your Trainer encounters an issue, it displays an error code on screen:
-**[E-DTT-1: No Internet](../errors/e-dtt-1)**
 
-Your device connected to Wi-Fi but cannot reach the server. Learn how to adjust firewall and router settings.
+- **[E-DTT-1: No Internet](/dtt/errors/e-dtt-1/)**  
+  Your device connected to Wi-Fi but cannot reach the server. Learn how to adjust firewall and router settings.
 
 For a complete list of error codes and messages, see the <a href="./error-codes">Error Codes</a> guide.
 
