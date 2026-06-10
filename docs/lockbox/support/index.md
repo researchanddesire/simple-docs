@@ -1,0 +1,47 @@
+# Lockbox Help Center
+
+Use this page when something is not working or you are not sure which guide to open first.
+
+!!! tip
+    If you have a general product question, start with the [Lockbox FAQs](/lockbox/faqs/). If you are actively troubleshooting, use the sections below.
+
+## Connection and Sync Problems
+
+**[Check Online Status](/lockbox/support/online-status/)**
+
+Confirm whether the dashboard and the Lockbox agree that the device is online. Start here if you are not sure whether the device is connected.
+
+**[Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting/)**
+
+Use this when the dashboard says offline but the device shows connected, lock commands are not syncing, a session is stuck, or alpha firmware may be causing sync issues.
+
+## Firmware and Updates
+
+**[Firmware Flashing](/lockbox/support/flashing/)**
+
+Reinstall firmware when support tells you to, or when freezing, boot loops, or persistent software glitches remain after a hard reset.
+
+**[Alpha Updates](/lockbox/support/alpha-updates/)**
+
+Enroll in alpha updates, leave the alpha program, or troubleshoot issues that started while using alpha firmware.
+
+## Emergency Access and Replacement Parts
+
+**[Emergency Unlock: Break the Backplate](/lockbox/support/emergency-backplate/)**
+
+Use this only as a destructive last resort when software emergency unlock is unavailable and you urgently need access to your key.
+
+!!! warning
+    Always try the software emergency unlock first. The hardware backplate method breaks the backplate and requires a replacement part.
+
+## Contact Support
+
+If these guides do not resolve your issue, email **support@researchanddesire.com**.
+
+Include:
+
+- The email address on your dashboard account
+- Your order number, if the issue is hardware or replacement related
+- What happened
+- What you have already tried
+- Whether the device is detected by your computer, if USB or flashing is involved

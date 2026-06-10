@@ -1,32 +1,209 @@
 site_name: Research and Desire Product Documentation
 site_description: Quick-start guide and reference for Research and Desire products.
 site_url: https://docs.researchanddesire.com
+use_directory_urls: true
+
+extra_css:
+  - stylesheets/extra.css
+
+extra_javascript:
+  - javascripts/missing-images.js
+  - javascripts/product-footer-navigation.js
 
 theme:
   name: material
+  font:
+    text: Figtree
   features:
-    - navigation.sections
-    - navigation.expand
+    - navigation.tracking
+    - navigation.footer
+    - toc.integrate
+    - toc.follow
+    - content.tabs.link
     - content.code.copy
+  palette:
+    - media: "(prefers-color-scheme: light)"
+      scheme: default
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    - media: "(prefers-color-scheme: dark)"
+      scheme: slate
+      primary: custom
+      accent: custom
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
 
 plugins:
+  - glightbox:
+      draggable: false
+  - mkdocs-breadcrumbs-plugin:
+      delimiter: " / "
+      exclude_paths:
+        - "**"
+      generate_home_index: false
+      home_text: Home
+      log_level: WARNING
+      use_page_titles: true
   - search
 
 markdown_extensions:
   - admonition
   - attr_list
+  - def_list
+  - footnotes
+  - md_in_html
+  - meta
+  - neoteroi.cards
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+  - pymdownx.tabbed:
+      alternate_style: true
   - tables
   - toc:
       permalink: true
 
 nav:
-  - Landing Page: landing-page.md
-  - OSSM Specs: ossm-specs.md
-  - OSSM BOM: ossm-bom.md
-  - How to Use: how-to-use.md
-  - MK Docs Overview: index.md
-  - MKDocs Getting Started: getting-started.md
-  - MKDocs Writing Guide: writing-guide.md
-  - MKDocs Contributing: contributing.md
-  - Open Source Info: open-source-info.md
-  - Tools: tools.md
+  - Home: index.md
+  - OSSM:
+      - Overview: ossm/index.md
+      - How to Use: ossm/how-to-use.md
+      - Specs: ossm/specs.md
+      - Bill of Materials: ossm/bom.md
+      - Open Source Info: ossm/open-source-info.md
+      - Tools: ossm/tools.md
+  - Chastity Lockbox:
+      - Quick Start:
+          - Quick Start: lockbox/index.md
+          - Connect to Wi-Fi: lockbox/quick-start/wifi-setup.md
+          - Pairing: lockbox/quick-start/pairing.md
+          - Bluetooth Pairing: lockbox/quick-start/ble-pairing.md
+          - Start a Lock: lockbox/quick-start/start-a-lock.md
+          - Keyholder Guide: lockbox/quick-start/keyholder-guide.md
+      - Common Tasks:
+          - Overview: lockbox/using/index.md
+          - Status Symbols: lockbox/using/symbols.md
+          - Emergency Unlock: lockbox/using/emergency-unlock.md
+          - Take a Break: lockbox/using/take-a-break.md
+          - Hiding Time: lockbox/using/hiding-time.md
+          - Public Voting: lockbox/using/public-voting.md
+      - Get Help:
+          - FAQs: lockbox/faqs.md
+          - Help Center: lockbox/support/index.md
+          - Check Online Status: lockbox/support/online-status.md
+          - Connectivity Troubleshooting: lockbox/support/connectivity-troubleshooting.md
+          - Firmware Flashing: lockbox/support/flashing.md
+          - Alpha Updates: lockbox/support/alpha-updates.md
+          - Emergency Backplate: lockbox/support/emergency-backplate.md
+      - Reference:
+          - Device States:
+              - Overview: lockbox/device-states/index.md
+              - Calibration: lockbox/device-states/calibration.md
+              - Sleep Mode: lockbox/device-states/sleep-mode.md
+              - Take a Break: lockbox/device-states/take-a-break.md
+              - Permalock: lockbox/device-states/permalock.md
+              - Emergency Unlock: lockbox/device-states/emergency-unlock.md
+              - Restarting: lockbox/device-states/restarting.md
+          - Errors:
+              - Overview: lockbox/errors/index.md
+              - "E-LOCK-1: Could Not Lock": lockbox/errors/e-lock-1.md
+              - "E-LOCK-2: Could Not Unlock": lockbox/errors/e-lock-2.md
+              - "E-LOCK-3: No Backplate": lockbox/errors/e-lock-3.md
+              - "E-LOCK-10: Could Not Connect to Wi-Fi": lockbox/errors/e-lock-10.md
+              - "E-LOCK-20: Emergency Unlock Used": lockbox/errors/e-lock-20.md
+          - Technical:
+              - Overview: lockbox/technical/index.md
+              - Button Controls: lockbox/technical/button-controls.md
+              - Menu Structure: lockbox/technical/menu-structure.md
+              - Timer Duration Limits: lockbox/technical/timer-duration-limits.md
+              - Idle and Power States: lockbox/technical/idle-and-power-states.md
+              - Offline Mode: lockbox/technical/offline-mode.md
+              - Sensor System: lockbox/technical/sensor-system.md
+          - Changelog:
+              - Overview: lockbox/changelog/index.md
+              - Version 0.0.0: lockbox/changelog/v0.0.0.md
+  - Deep Throat Trainer:
+      - Overview: dtt/index.md
+      - Quick Start:
+          - Overview: dtt/quick-start/index.md
+          - Getting Started: dtt/quick-start/getting-started.md
+          - Assign Your Default Toy: dtt/quick-start/using-toys.md
+          - Checking Your Results: dtt/quick-start/checking-results.md
+          - Shareable Templates: dtt/quick-start/templates.md
+          - Pairing:
+              - Overview: dtt/quick-start/pairing/index.md
+              - Pairing Guide: dtt/quick-start/pairing/pairing-guide.md
+              - Wi-Fi Setup: dtt/quick-start/pairing/wifi-setup.md
+      - Training Modes:
+          - Overview: dtt/training-modes/index.md
+          - Repetition Mode: dtt/training-modes/repetition.md
+          - Endurance Mode: dtt/training-modes/endurance.md
+          - Freeform Mode: dtt/training-modes/freeform.md
+          - Bounce Mode: dtt/training-modes/bounce.md
+      - Specs:
+          - Overview: dtt/specs/index.md
+          - Accessory Port: dtt/specs/accessory-port.md
+          - Charging: dtt/specs/charging.md
+      - Technical:
+          - Overview: dtt/technical/index.md
+          - Button Controls: dtt/technical/button-controls.md
+          - Calibration: dtt/technical/calibration.md
+          - Device States: dtt/technical/device-states.md
+          - Error Codes: dtt/technical/error-codes.md
+          - Firmware Updates: dtt/technical/firmware-updates.md
+          - LED Feedback: dtt/technical/led-feedback.md
+          - Offline Mode: dtt/technical/offline-mode.md
+          - Sensor Limits: dtt/technical/sensor-limits.md
+      - Errors:
+          - "E-DTT-1: No Internet": dtt/errors/e-dtt-1.md
+      - FAQs: dtt/faqs.md
+      - Software 2.0 Preview: dtt/software-2.0-preview.md
+      - Changelog:
+          - Overview: dtt/changelog/index.md
+          - Version 0.0.0: dtt/changelog/v0.0.0.md
+  - RADR:
+      - Quick Start: radr/index.md
+      - User Guide:
+          - Detailed User Guide: radr/guides/user-guide/index.md
+          - Navigation and Controls: radr/guides/user-guide/navigation-and-controls.md
+          - OSSM Controls: radr/guides/user-guide/ossm-controls.md
+          - Stroke Patterns: radr/guides/user-guide/stroke-patterns.md
+          - Lovense Controls: radr/guides/user-guide/lovense-controls.md
+          - Device Scanning: radr/guides/user-guide/device-scanning.md
+          - Settings and Wi-Fi: radr/guides/user-guide/settings-and-wifi.md
+          - Connecting to Wi-Fi: radr/guides/user-guide/connecting-to-wifi.md
+          - Updating Your Device: radr/guides/user-guide/updating-your-device.md
+      - Hardware:
+          - Getting Started: radr/Hardware/getting-started/index.md
+          - PCB: radr/Hardware/PCB/index.md
+          - Printed Parts:
+              - Overview: radr/Hardware/printed-parts/index.md
+              - Remote Top: radr/Hardware/printed-parts/part-by-part/remote-top.md
+              - Remote Bottom: radr/Hardware/printed-parts/part-by-part/remote-bottom.md
+              - Remote Knob: radr/Hardware/printed-parts/part-by-part/remote-knob.md
+              - Buttons: radr/Hardware/printed-parts/part-by-part/buttons.md
+              - Power Switch: radr/Hardware/printed-parts/part-by-part/power-switch.md
+              - OSSM Remote Clip: radr/Hardware/printed-parts/part-by-part/ossm-remote-clip.md
+          - Specifications:
+              - Battery and Power: radr/Hardware/specifications/battery-and-power.md
+              - Feedback and Indicators: radr/Hardware/specifications/feedback-and-indicators.md
+      - Reference:
+          - Device Support: radr/guides/reference/device-support.md
+          - Open Source:
+              - Overview: radr/guides/housekeeping/open-source/index.md
+              - Licence: radr/guides/housekeeping/open-source/licence.md
+          - Web Flasher: radr/tools/web-flasher.md
+      - FAQs: radr/faqs.md
+      - Changelog:
+          - Overview: radr/guides/changelog/index.md
+          - Version 0.0.0: radr/guides/changelog/v0.0.0.md
+  - Documentation Guide:
+      - Getting Started: meta/getting-started.md
+      - Writing Guide: meta/writing-guide.md
+      - Contributing: meta/contributing.md

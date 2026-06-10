@@ -1,0 +1,71 @@
+# RADR Quick Start
+
+RADR is the wireless remote for OSSM and supported Bluetooth toys. This page gets you from powered off to connected as quickly as possible.
+
+<iframe
+  src="https://www.youtube.com/embed/SqUHOGLTgAE"
+  title="RADR Quick Start Video"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+
+## Before You Begin
+
+- Charge RADR with a USB-C cable.
+- Power on the device you want to control.
+- If you are using OSSM, make sure it is running firmware 2.0.0 or later.
+- Close any phone apps that may already be connected to your Bluetooth toy.
+
+!!! note
+    RADR only connects to supported devices. See [Device Support](/radr/guides/reference/device-support/) for the current compatibility list.
+
+## Step 1: Learn the Controls
+
+<img src="/radr/img/image (1).webp" alt="RADR remote layout: screen, three buttons, left/right knobs, and bumpers" />
+
+- Left knob: speed
+- Right knob: depth, sensation, or stroke depending on the active mode
+- Left and right bumpers: switch modes
+- Left button: home or back
+- Middle button: pause or stop
+- Right button: menu or OK
+
+## Step 2: Power on RADR
+
+Flip the power switch to the right, toward the USB-C port. RADR scans for nearby supported Bluetooth devices when it starts.
+
+!!! info
+    You can also start a manual scan later from the main menu by selecting **Device Search**.
+
+## Step 3: Prepare Your Device
+
+For OSSM, power it on and let it finish homing. For Lovense or other Bluetooth devices, power on the toy and make sure no phone app is connected.
+
+!!! warning
+    A Bluetooth device can usually only have one active controller at a time. Close vendor apps before pairing with RADR.
+
+## Step 4: Select Your Device
+
+When RADR shows discovered devices, use the right knob to scroll and press the right button to connect.
+
+!!! success
+    You should see connection messages such as "Connecting...", "Connected! Setting up device...", and "Device ready!"
+
+## Step 5: Start Playing
+
+Once connected, RADR opens the play controls screen and the middle LED turns white.
+
+<img src="/radr/img/image (2).webp" alt="Play Controls screen with speed and adjustment indicators" />
+
+From here you can adjust speed with the left knob, switch modes with the bumpers, and adjust the active mode with the right knob.
+
+## Pattern Mode
+
+Press the right button to open Pattern Mode and select built-in OSSM motion patterns.
+
+<img src="/radr/img/image (3).webp" alt="Pattern Mode screen with a library of motion patterns" />
+
+## What To Read Next
+
+Ready for the full controls reference? Go to the [Detailed User Guide](/radr/guides/user-guide/).

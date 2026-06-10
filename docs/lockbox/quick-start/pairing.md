@@ -1,0 +1,123 @@
+# Pairing Your Chastity Lockbox
+
+There are two ways to pair your Lockbox. **Automatic pairing** uses Bluetooth and is the fastest option — no WiFi setup required. **Manual pairing** uses a six-digit code displayed on the device and works in any browser.
+
+!!! info
+    Not sure which to use? Try automatic pairing first. If your browser doesn't support it, fall back to the manual method.
+
+---
+
+## Option 1: Automatic pairing (Bluetooth) — Recommended
+
+Automatic pairing uses Web Bluetooth to connect your Lockbox directly to your browser. It handles WiFi setup and account linking in one step — no need to configure WiFi separately first.
+
+!!! warning
+    Web Bluetooth requires **Google Chrome** or **Microsoft Edge**. It is not supported in Firefox, Safari, or most mobile browsers.
+
+### Prerequisites
+
+- Your Lockbox is powered on and **not yet paired** to any account
+- You're using Chrome or Edge on a desktop or laptop
+- You have a 2.4 GHz WiFi network nearby (unless your Lockbox is already connected to WiFi)
+
+### Steps
+
+### Step 1: Open the pairing dialog
+
+  In the dashboard, go to **Settings → Devices** and click **Pair Lockbox**.
+
+  The dialog will open to the **Automatic** tab by default.
+
+### Step 2: Scan for your Lockbox
+
+  Click **Scan for Lockbox**. Your browser will show a device picker — select **LKBX** from the list and click **Connect**.
+
+  !!! note
+If your Lockbox doesn't appear in the picker, make sure it's powered on and hasn't been paired to another account. The device only advertises via Bluetooth when unpaired.
+  
+
+### Step 3: Provide WiFi credentials (if needed)
+
+  Once connected, the dashboard reads your device's current state:
+
+  - **If your Lockbox is already connected to WiFi** — pairing completes automatically. No further action needed.
+  - **If your Lockbox is not on WiFi** — you'll be prompted to select a saved WiFi network or enter credentials manually.
+
+  !!! tip
+You can save WiFi networks to your account for faster pairing in the future. Check the **Save this network** box when entering credentials manually.
+  
+
+### Step 4: Wait for confirmation
+
+  The dashboard links your account to the device and (if needed) sends your WiFi credentials directly to the Lockbox over Bluetooth. The device connects to WiFi on its own.
+
+  !!! success
+Once you see the confirmation message, your Lockbox is paired and ready to use. Click **Continue**.
+  
+
+---
+
+## Option 2: Manual pairing (pairing code)
+
+Use this method if you're on Firefox, Safari, or any browser that doesn't support Web Bluetooth. Your Lockbox must already be connected to WiFi before you begin.
+**[Connect to WiFi first](/lockbox/quick-start/wifi-setup)**
+
+If your Lockbox isn't on WiFi yet, complete Wi-Fi setup before continuing.
+
+### Prerequisites
+
+- Your Lockbox is powered on and connected to WiFi
+- You have access to the dashboard on any browser
+
+### Steps
+
+### Step 5: Find the pairing code on your device
+
+  On your Lockbox, navigate to **Settings → Pairing**.
+
+  At the top of the screen you'll see a six-digit alphanumeric pairing code. You can:
+  - **Scan the QR code** on screen — this opens the dashboard with the code pre-filled
+  - **Note the code manually** and type it in yourself
+
+  !!! note
+The pairing code changes every time the device restarts. Use the code currently shown on screen.
+  
+
+### Step 6: Enter the code in the dashboard
+
+  Go to **Settings → Devices** in the dashboard. Click **Pair Lockbox**, then select the **Enter Code** tab.
+
+  Type your six-digit pairing code and click **Pair**.
+
+### Step 7: Confirm pairing
+
+  Once paired, your Lockbox appears in your account and you can configure it from the dashboard.
+
+  !!! success
+Your Chastity Lockbox is now paired and ready to use.
+!!! note "Video walkthrough (manual pairing)"
+    **0:00** Hey there! Today I'm going to show you how to find your pairing code on your Chastity Lockbox. To continue, you're going to need, obviously, a Chastity Lockbox, and less obviously, you'll need to make sure it's connected to Wi-Fi. You can see that in the indicator in the top right.
+
+    **0:11** Once you have your box, you can turn it on and scroll in the main menu down to Settings, and open Pairing.
+
+    **0:24** When the device boots up, it will always have a new pairing code here, so on restart you should expect that to change, but at the top you'll see this six-digit pairing code, which includes letters and numbers.
+
+    **0:34** You can either memorize this and take it to the dashboard, or you can scan the QR code present over here, which will automatically bring you to the dashboard, and, if possible, pair your device.
+
+    **0:45** So now that you have your pairing code from the device, you want to navigate to the dashboard, and move over to Settings, Devices.
+
+    **0:54** If you scan the QR code on the screen, it will automatically take you here and attempt to pair your device immediately. But you can also do this manually.
+
+    **0:59** Right now, I'm gonna manually go to this page, and I'm gonna enter the pairing code on my device. Because it's visible on my desk, I'm just gonna copy it over, bit by bit. Perfect.
+
+    **1:06** And when I click Pair, it will be added to my account, and I'll now see settings associated with the lockbox.
+
+    **1:22** There we are. The device is now paired to your account.
+
+## Next Steps
+
+Once your Lockbox appears in **Settings > Devices**, move forward from setup:
+
+- [Start a lock from the dashboard](start-a-lock.md) — confirm the device can receive lock settings.
+- [Keyholder Guide](keyholder-guide.md) — invite a partner and learn how keyholder access works.
+- [Status Symbols](../using/symbols.md) — confirm the Wi-Fi and dashboard indicators are healthy.

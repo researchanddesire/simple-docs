@@ -1,24 +1,45 @@
-# Welcome
+# Research and Desire — User Documentation
 
-This site is set up so docs contributors can get productive quickly.
+Open-hardware guides for Research and Desire products.
 
-You do not need to know how the tooling works behind the scenes to help write better documentation.
+## Products
 
-## Start here
+<div class="grid cards" markdown>
 
-1. Launch the docs preview for your operating system.
-2. Open the site in your browser.
-3. Edit Markdown files in `docs/`.
-4. Refresh the page to see your changes.
+-   **[OSSM](ossm/index.md)**
 
-## Good first contributions
+    Open Source Sex Machine setup, usage, specs, parts, and firmware tools.
 
-- Fix typos or confusing wording.
-- Add examples that help a reader complete a task.
-- Break long sections into shorter headings and steps.
-- Add missing troubleshooting notes.
+-   **[Chastity Lockbox](lockbox/index.md)**
 
-## Next pages
+    Smart key-holding setup, pairing, locking, safety, support, and technical reference.
 
-- Read the getting started guide.
-- Use the writing guide when you want help structuring a page.
+-   **[Deep Throat Trainer](dtt/index.md)**
+
+    Trainer setup, Wi-Fi pairing, training modes, device states, specs, and troubleshooting.
+
+-   **[RADR](radr/index.md)**
+
+    Wireless remote quick start, user guide, hardware docs, flashing, and device support.
+
+</div>
+
+## Quick Paths
+
+<div class="grid cards" markdown>
+
+-   **[New contributor?](meta/getting-started.md)**
+
+    Set up the docs locally and learn where to make changes.
+
+-   **[Writing guide](meta/writing-guide.md)**
+
+    Keep pages clear, consistent, and useful for product docs readers.
+
+-   **[Contributing](meta/contributing.md)**
+
+    Check your changes and share them back with the team.
+
+</div>
+
+Developer documentation lives at [dev.researchanddesire.com](https://dev.researchanddesire.com).

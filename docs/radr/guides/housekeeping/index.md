@@ -1,0 +1,7 @@
+# RADR Housekeeping
+
+Administrative and reference material for RADR.
+
+- [Open Source Information](/radr/guides/housekeeping/open-source/)
+
+- [open-source](/radr/guides/housekeeping/open-source/)

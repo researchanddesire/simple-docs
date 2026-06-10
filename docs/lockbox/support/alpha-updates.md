@@ -1,0 +1,99 @@
+# How to Get Alpha Updates
+
+Alpha updates give you early access to new features before they reach general availability. This includes experimental functionality and upcoming production features that have been tested but benefit from real-world feedback.
+
+!!! warning
+    You must have version 1.17.9 or later installed on your device to enroll in the alpha program.
+
+## Video walkthrough
+
+<iframe
+  
+  src="https://www.loom.com/embed/27db878e44304b768f4ffc6f96a81141"
+  title="How to enroll in alpha updates"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+
+!!! note "Video transcript"
+    **0:00** Today, I'm going to show you how to enroll your device in Alpha, so that you start receiving code before anyone else.
+
+    **0:06** This may include features that are both experimental or going to be in the next production release. They'll work, of course, in the production environment, and you should expect everything that's in a release candidate or an Alpha release to be functional inside of the dashboard and on-device.
+
+    **0:23** That said, it is all experimental, so if you hit any bugs, definitely please reach us at support@researchanddesire.com and let us know before this goes to production that something's amiss.
+
+    **0:34** Okay. So, first things first, I have a lockbox here that's connected to Wi-Fi and fully charged, and I'm going to go down to settings and I'm going to scroll to the new option, enroll in alpha.
+
+    **0:47** As a quick comment, you must be version 1.17.9 or greater to use this feature. If you don't see it, you'll have to update your device first by using the update device option.
+
+    **1:02** Okay. So I'm going to click on enroll in alpha. I'll see a brief and I'll link to these documents, and I'll click enroll.
+
+    **1:09** This will reboot my device. Perfect. You can now see alpha in the version code and at the top. This will not upload or update to alpha until it connects to the internet.
+
+    **1:23** It is now checking against the alpha endpoint to see if there's new alpha updates. And in this case, it did not find one.
+
+    **1:31** So I will go manually check for an update, just to make sure I'm on that latest code. Yeah, up to date.
+
+    **1:37** Perfect. Well, there we are. You now have access to alpha, and you should expect to receive alpha code as we make new releases.
+
+## How to enroll in alpha
+
+### Step 1: Ensure your device is ready
+
+Connect your Chastity Lockbox to Wi-Fi and ensure it's charged. Verify you're running version 1.17.9 or later.
+
+### Step 2: Navigate to settings
+
+On your device, go to **Settings** and scroll down to find the **Enroll in Alpha** option.
+
+!!! note
+    If you don't see this option, update your device first using **Settings > Update Device**.
+
+### Step 3: Complete enrollment
+
+Select **Enroll in Alpha**, review the information, and tap **Enroll**. Your device will reboot to apply the changes.
+
+### Step 4: Verify enrollment
+
+After reboot, you'll see "alpha" displayed in the version code at the top of your screen. The device will automatically check for alpha updates when connected to the internet.
+
+## What to expect
+
+- **Early access**: Receive new features before the general release
+- **Tested functionality**: All alpha releases are functional and tested, though they may contain minor issues
+- **Automatic updates**: Your device will check for alpha updates automatically when connected to Wi-Fi
+
+!!! info
+    If you encounter any bugs or issues with an alpha release, please contact us at support@researchanddesire.com so we can address them before the production release.
+
+## Leaving the alpha program
+
+If you want to return to stable firmware releases, use the web flasher to reinstall the production firmware.
+
+### Step 5: Connect your device
+
+Plug your Lockbox into your computer using a USB-C data cable.
+
+### Step 6: Open the web flasher
+
+Navigate to [the web flasher](https://dashboard.researchanddesire.com/app/tools/web-flasher) in Chrome or another Chromium-based browser.
+
+### Step 7: Flash stable firmware
+
+Click **Connect**, select your device, and complete the flash process. Do not check "Erase device" to preserve your settings.
+
+!!! note
+    The web flasher always installs the latest stable release, which removes your device from the alpha program.
+
+### Step 8: Verify the change
+
+After the flash completes, your device restarts. The version displayed on the screen will no longer show "alpha" in the version code.
+
+## Troubleshooting alpha issues
+
+If you experience unusual behavior while on alpha firmware — such as the dashboard showing your device as offline when it appears connected, or lock sessions stuck in a pending state — see the connectivity troubleshooting guide for step-by-step instructions.
+
+**[Connectivity Troubleshooting](./connectivity-troubleshooting#alpha-firmware-sync-issues)**
+
+Diagnose and resolve sync issues related to alpha firmware.

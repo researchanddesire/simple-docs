@@ -1,0 +1,104 @@
+# Connect Your Deepthroat Trainer to Wi-Fi
+
+<iframe
+  
+  src="https://www.loom.com/embed/c1e2179b7102479b89546e2366d4a7d8"
+  title="Deepthroat Trainer Wi-Fi Setup"
+  frameborder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen
+></iframe>
+
+!!! note "Video transcript"
+    0:00 All right, now we're going to take you through the process step by step of connecting your Deepthroat Trainer to Wi-Fi.
+
+    0:07 This is required so that you can upload results and download trainer settings. On the right, I have a Deepthroat Trainer which has booted up, and I'm at the point where it says press button to start or hold to launch settings page.
+
+    0:19 I'm going to hold this button here to launch the settings page. This is starting. I've started a local Wi-Fi network called Trainer Setup.
+
+    0:27 On my phone, I'm going to connect to the network. going to connect to that network called Trainer Setup, which will launch a captive Wi-Fi portal, similar to what you'd experience at a library or coffee shop.
+
+    0:46 I'll hit Configure Wi-Fi, and then I'll choose a 2.4 GHz network as my default network. Here, I'm going to choose my network, Treehouse4G, and I will enter a password, so excuse me while I do that.
+
+    0:59 Perfect. Perfect. Now I'll hit Save. The Deepthroat Trainer will now attempt to connect using these credentials, and if it works, it will restart.
+
+    1:07 There it is. to the internet, and will download settings. Perfect. You're all done.
+
+## Getting your trainer online
+
+Your Deepthroat Trainer needs a Wi-Fi connection to upload your training results and download new settings. This guide walks you through the setup process.
+
+!!! warning
+    Your trainer only supports **2.4 GHz Wi-Fi networks**. Make sure you connect to a 2.4 GHz network, not a 5 GHz network. Many routers broadcast both—look for networks without "5G" in the name.
+
+### Step 1: Power on and enter Wi-Fi setup
+
+  Turn on your Deepthroat Trainer. When you see the screen displaying "press button to start or hold to launch settings page," **hold the button** to enter Wi-Fi setup mode.
+  
+  !!! note
+The "settings page" on the device refers specifically to Wi-Fi configuration. Training settings (templates, modes, etc.) are managed through your dashboard, not on the device.
+  
+
+### Step 2: Connect to the trainer's setup network
+
+  Your trainer creates a temporary Wi-Fi hotspot called **Trainer Setup**. On your phone or computer, open Wi-Fi settings and connect to this network.
+
+  !!! warning
+Your phone will warn you there's "no internet" on this network—this is expected. When prompted, tap **Stay connected** or **Connect anyway**. Do not disconnect when you see this warning.
+  
+!!! note
+    This is a local network created by your trainer—it won't provide internet access. You're connecting directly to the trainer to configure it.
+
+  
+
+### Step 3: Open the setup portal
+
+  After connecting, a captive portal page should open automatically. If it doesn't appear within a few seconds, open any web browser and go to:
+  
+  ```
+  http://192.168.4.1
+  ```
+
+  !!! tip
+This works similarly to Wi-Fi login pages at coffee shops or hotels. If you have mobile data enabled, try disabling it temporarily—some phones prioritize mobile data and won't load the portal.
+  
+
+### Step 4: Configure your Wi-Fi network
+
+  Tap **Configure Wi-Fi** to see a list of available networks. Select your home Wi-Fi network from the list.
+
+  Remember to choose a **2.4 GHz network** if your router broadcasts multiple frequencies.
+
+### Step 5: Enter your Wi-Fi password
+
+  Enter your network password when prompted. Double-check for typos—incorrect passwords are the most common cause of connection issues.
+
+### Step 6: Save and connect
+
+  Tap **Save** to store your credentials. Your trainer will attempt to connect to your network. If successful, it will automatically restart.
+
+### Step 7: Verify the connection
+
+  Once your trainer restarts, it will connect to the internet and download any available settings or updates.
+
+  !!! success
+Your Deepthroat Trainer is now online and ready to sync your training data.
+!!! note "Troubleshooting: Can't see the setup portal"
+    If the captive portal doesn't appear automatically after connecting to the Trainer Setup network:
+
+    1. **Ignore the "no internet" warning** — Your phone may show warnings like "Connected without internet" or "This network has no internet access." This is expected. Tap **Stay connected** or **Connect anyway**.
+
+    2. **Open the portal manually** — Open any web browser and go to `http://192.168.4.1`
+
+    3. **Disable mobile data** — If the portal still won't load, turn off mobile data (cellular) on your phone. Some phones prioritize mobile data and won't route traffic through the Trainer Setup network.
+
+    4. **Try a different device** — If your phone still won't show the portal, try using a laptop or tablet instead.
+
+    !!! warning
+        Do not disconnect from the Trainer Setup network when your phone warns about no internet. This warning is normal—the trainer's network is only for configuration, not internet access.
+
+!!! note "Troubleshooting: Connection fails after entering password"
+    - Verify you selected a **2.4 GHz network**, not 5 GHz
+    - Double-check your password for typos
+    - Move the trainer closer to your router
+    - Restart the setup process by holding the button again
