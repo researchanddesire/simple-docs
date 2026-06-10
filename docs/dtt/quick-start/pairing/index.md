@@ -8,12 +8,11 @@
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
   allowfullscreen
 ></iframe>
+
 !!! note "Video transcript"
     Pairing your Deepthroat Trainer is entirely optional, but there are some amazing features on the dashboard that you'll want to check out.
 
     To get started, go to [dashboard.researchanddesire.com](https://dashboard.researchanddesire.com/) and create an account.
-
-    {/* TODO: Video describes connecting to Wi-Fi first, then seeing Trainer ID. Verify actual device behavior—current quick guide shows Trainer ID on boot before Wi-Fi setup. */}
 
     Once you've done that, turn your device on. You'll see "Hold to Launch Settings" on the screen. Push and hold the button until it displays the Wi-Fi setup instructions.
 
@@ -37,19 +36,19 @@ Turn on your device. During startup, the screen briefly displays your Trainer ID
 ### Step 2: Enter the code in your dashboard
 
 Sign in to the dashboard at [dashboard.researchanddesire.com](https://dashboard.researchanddesire.com) and go to **Settings → Devices**. Enter your Trainer ID in the "Deepthroat Trainer ID" field and save.
-**[Detailed pairing guide](./pairing-guide)**
 
-Step-by-step instructions with screenshots for pairing your trainer.
-**[Create an account](https://dashboard.researchanddesire.com)**
+- **[Detailed pairing guide](/dtt/quick-start/pairing/pairing-guide/)**  
+  Step-by-step instructions with screenshots for pairing your trainer.
 
-New to the platform? Set up your dashboard account first.
+- **[Create an account](https://dashboard.researchanddesire.com)**  
+  New to the platform? Set up your dashboard account first.
 
 ### Step 3: Connect to Wi-Fi (optional)
 
 Wi-Fi enables your trainer to upload results and download settings from your partner. Pairing works without Wi-Fi, but you won't have access to syncing or remote features.
-**[Wi-Fi connection guide](./wifi-setup)**
 
-Complete instructions for connecting your trainer to your Wi-Fi network.
+- **[Wi-Fi connection guide](/dtt/quick-start/pairing/wifi-setup/)**  
+  Complete instructions for connecting your trainer to your Wi-Fi network.
 
 !!! success
     Once paired, your trainer is linked to your account. Connect to Wi-Fi to enable result uploads and remote settings.

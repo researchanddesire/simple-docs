@@ -129,9 +129,8 @@ nav:
               - Overview: lockbox/changelog/index.md
               - Version 0.0.0: lockbox/changelog/v0.0.0.md
   - Deep Throat Trainer:
-      - Overview: dtt/index.md
-      - Quick Start:
-          - Overview: dtt/quick-start/index.md
+      - Quick Start: dtt/index.md
+      - Setup Guides:
           - Getting Started: dtt/quick-start/getting-started.md
           - Assign Your Default Toy: dtt/quick-start/using-toys.md
           - Checking Your Results: dtt/quick-start/checking-results.md
@@ -146,27 +145,28 @@ nav:
           - Endurance Mode: dtt/training-modes/endurance.md
           - Freeform Mode: dtt/training-modes/freeform.md
           - Bounce Mode: dtt/training-modes/bounce.md
-      - Specs:
-          - Overview: dtt/specs/index.md
-          - Accessory Port: dtt/specs/accessory-port.md
-          - Charging: dtt/specs/charging.md
-      - Technical:
-          - Overview: dtt/technical/index.md
-          - Button Controls: dtt/technical/button-controls.md
-          - Calibration: dtt/technical/calibration.md
-          - Device States: dtt/technical/device-states.md
-          - Error Codes: dtt/technical/error-codes.md
-          - Firmware Updates: dtt/technical/firmware-updates.md
-          - LED Feedback: dtt/technical/led-feedback.md
-          - Offline Mode: dtt/technical/offline-mode.md
-          - Sensor Limits: dtt/technical/sensor-limits.md
-      - Errors:
+      - Get Help:
+          - FAQs: dtt/faqs.md
           - "E-DTT-1: No Internet": dtt/errors/e-dtt-1.md
-      - FAQs: dtt/faqs.md
-      - Software 2.0 Preview: dtt/software-2.0-preview.md
-      - Changelog:
-          - Overview: dtt/changelog/index.md
-          - Version 0.0.0: dtt/changelog/v0.0.0.md
+      - Reference:
+          - Specs:
+              - Overview: dtt/specs/index.md
+              - Accessory Port: dtt/specs/accessory-port.md
+              - Charging: dtt/specs/charging.md
+          - Technical:
+              - Overview: dtt/technical/index.md
+              - Button Controls: dtt/technical/button-controls.md
+              - Calibration: dtt/technical/calibration.md
+              - Device States: dtt/technical/device-states.md
+              - Error Codes: dtt/technical/error-codes.md
+              - Firmware Updates: dtt/technical/firmware-updates.md
+              - LED Feedback: dtt/technical/led-feedback.md
+              - Offline Mode: dtt/technical/offline-mode.md
+              - Sensor Limits: dtt/technical/sensor-limits.md
+          - Software 2.0 Preview: dtt/software-2.0-preview.md
+          - Changelog:
+              - Overview: dtt/changelog/index.md
+              - Version 0.0.0: dtt/changelog/v0.0.0.md
   - RADR:
       - Quick Start: radr/index.md
       - User Guide:

@@ -85,6 +85,7 @@ End your session from the device when done. Your results upload to the dashboard
 - Depth ladders: Stay slow but progressively deepen every few reps.
 - Interval play: 60 seconds fast, 60 seconds slow; repeat.
 - Recovery blocks: Insert 30–60 second low‑RPM blocks to maintain form.
+
 !!! note "Video walkthrough summary"
     - Freeform is designed for long‑form, playful practice.
     - You set an average RPM target; speed, depth, and rhythm can vary.
@@ -95,17 +96,20 @@ End your session from the device when done. Your results upload to the dashboard
     - **Can’t hold target RPM**: Lower the target by 10–15% or shorten the session by 5 minutes. Focus on smooth rhythm before adding speed or depth.
     - **No haptic feedback**: Confirm the device is paired and the attachment is connected. Start a short Repetition segment to verify calibration, then return to Freeform.
     - **Data didn’t upload**: Connect to Wi‑Fi and power‑cycle the device. The device replays the last downloaded settings offline; your next online session will sync results.
-    !!! warning
-        Listen to your body. Stop if you feel pain, dizziness, or nausea. Take frequent breaks, hydrate, and never “push through” discomfort. Longer sessions demand more recovery time.
-        **[Repetition Mode](/dtt/training-modes/repetition)**
 
-    Build timing and accuracy with structured reps.
-    **[Endurance Mode](/dtt/training-modes/endurance)**
+!!! warning
+    Listen to your body. Stop if you feel pain, dizziness, or nausea. Take frequent breaks, hydrate, and never “push through” discomfort. Longer sessions demand more recovery time.
 
-    Focus on sustained depth and pacing over time.
-    **[Shareable Templates](/dtt/quick-start/templates)**
+## What To Read Next
 
-    Explore community templates and import your favorites (Ultra).
-    **[Beta Preview](/dtt/software-2.0-preview)**
+- **[Repetition Mode](/dtt/training-modes/repetition/)**  
+  Build timing and accuracy with structured reps.
 
-    Learn what’s new in the latest firmware and dashboard updates.
+- **[Endurance Mode](/dtt/training-modes/endurance/)**  
+  Focus on sustained depth and pacing over time.
+
+- **[Shareable Templates](/dtt/quick-start/templates/)**  
+  Explore community templates and import your favorites (Ultra).
+
+- **[Beta Preview](/dtt/software-2.0-preview/)**  
+  Learn what’s new in the latest firmware and dashboard updates.
