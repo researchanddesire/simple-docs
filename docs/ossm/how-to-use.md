@@ -1,0 +1,215 @@
+---
+title: How to Use
+---
+
+# How to Use
+
+So you've built your OSSM and you're wondering how to put it to good use! Let's dive into this below.
+
+## Connecting Your Device to Power
+
+The OSSM comes with bespoke a 24V 4A DC power supply - this is what will power your machine during play.
+
+Here's how to connect your OSSM to power:
+
+1. Plug the socket plug of the power supply cord into a wall socket
+![](img/power-supply-annotated.png)
+2. Plug the barrel jack end of the power supply into the barrel jack port on your OSSM board
+![](img/enclosed-ossm-pcb-annotated1.png)
+1. Check that the board's LED lights up, and let the device home
+![](img/enclosed-ossm-pcb-annotated2.png)
+
+:::success
+Your OSSM is receiving power!
+:::
+
+:::info
+Homing is the process by which your OSSM gauges the distance between both end points of the linear rail. To home, the device slowly moves the rail back and forth for a short period of time.
+:::
+
+:::warning
+We caution against using third party power supplies as their use may short the OSSM board, thus rendering the OSSM unusable, or provide insufficient operating power.
+:::
+
+
+## Controlling Your OSSM
+
+You can control your OSSM using one of three different remote types:
+
+  1. Wired Remote
+  2. Wireless Remote (RADR)
+  3. Web Controller
+
+Please note that the OSSM will home when:
+
+1. You connect your OSSM to power
+2. You select Simple Penetration or Stroke Engine modes
+
+### Wired Remote
+
+#### Connecting your Wired Remote to the OSSM
+
+To connect your Wired Remote to the OSSM:
+
+1. Connect the Remote to your OSSM board via Ethernet cable
+2. Connect your OSSM to a power source
+
+:::success
+The Remote screen will flash the R+D logo and present you with an on-screen menu!
+:::
+
+#### Using the Wired Remote
+
+The Wired Remote has a left and a right knob.
+
+**Right knob**
+
+- Scrolls the menu
+- Adjusts stroke length.  You can press and hold the right knob button during play to stop the machine and return to the Remote's main menu
+- Acts as a menu selection button
+- Acts as a back button outside of Simple Penetration and Stroke Engine modes
+
+:::info
+When in Stroke Engine mode double-click the right knob to access pattern selection.
+:::
+
+**Left knob**
+
+- Adjusts stroke speed
+  ![](img/wired-remote-annotated.png)
+
+
+
+### Wireless Remote
+
+Let's start with some orientation. In comparison to the Wired Remote, the Wireless Remote has more buttons (for fun physical interactivity!) In this doc we'll be directing you to press certain buttons. Take a second to review the photo below to orient yourself with the device's physical controls and how we refer to them.
+![](img/wireless-remote-annotated.png)
+
+#### Connecting your Wireless Remote to the OSSM
+
+The Wireless Remote connects to your OSSM via Bluetooth. To connect your Wireless Remote to your OSSM:
+
+1. Connect your OSSM to power and allow it to home
+2. Turn on the Wireless Remote via the power switch
+3. The Wireless Remote will detect your OSSM. Use the right button to select your OSSM ![](img/wireless-remote2-annotated.png)
+
+:::success
+You are now at the Simple Stroke screen and can start controlling your OSSM with the Wireless Remote!
+:::
+
+#### Using your Wireless Remote
+
+Here you can use the right knob to adjust depth (stroke length) and the left to adjust speed. You can press the middle button to pause the device instantaneously during play.
+
+The right button acts as a selection button, while the left button acts as a back button.
+
+To explore play patterns, click the rightmost button and select whichever pattern suits your fancy. As with Simple Stroke, you can adjust your Speed, Depth, Sensation, and Stroke settings during play. To alternate between Depth, Sensation, and Stroke selections use the left and right bumpers.
+
+:::info
+Sensation affects how Patterns function. When you hover over a Pattern option, a small blurb will appear below that Pattern text that explains how Sensation adjustments affect the pattern's activity.
+:::
+
+#### Status Indicators
+
+The Wireless Remote has a Bluetooth connectivity indicator, a WiFi connectivity indicator, and a battery life indicator. You can find them displayed at the top centre of the device screen.
+
+  ![](img/bt-wifi-battery-indicators.png)
+
+:::error
+If you are unable to connect your Wireless Remote to your OSSM, see our troubleshooting guide here.
+:::
+
+:::error
+If you are unable to connect your Wireless Remote to WiFi, see our troubleshooting guide here.
+:::
+
+### Web Controller
+
+The Web Controller allows you to control your OSSM without a physical remote. This remote method requires that your OSSM is connected to WiFi. For instructions on connecting your OSSM to WiFi using the Web Controller, [click this link.](#wifi-setup-option-#1) The interface for the Web Controller looks like this:
+
+  ![](img/web-controller-play-interface.png)
+
+:::warning
+The Web Controller is not supported on iOS devices, nor is it supported on Firefox or Safari browsers.
+:::
+
+### Stroke Engine, Patterns, & Sensation
+
+Patterns provide you with a more exciting, spontaneous way to play with your OSSM. Each pattern has unique, pre-set motion parameters that govern how the OSSM interacts with you during use.
+
+- Wired Remote accesses patterns through the "Stroke Engine" selection
+
+- Wireless Remote accesses patterns through the "Patterns" selection
+
+- Web Controller accesses patterns through the "Pattern" dropdown
+
+Below is a list of the patterns that come with the device and a description of what they do:
+
+:::info
+The "X" factor of each pattern is determined by your Sensation settings. Sensation settings can be adjusted via the Wireless Remote and the Web Controller, but cannot be adjusted via the Wired Remote.
+:::
+
+1. Simple Stroke - Moves in and out smoothly according to your speed and depth settings. Sensation has no effect.
+2. Teasing or Pounding - The machine either thrusts in very slowly and out quickly, or in very quickly and out slowly, as determined by Sensation.
+3. Robo Stroke - Adjusts how quickly the device accelerates. Sensation determines acceleration speed.
+4. Half'n'Half - Every second stroke is half your selected depth. Sensation affects whether the in our out movement is the faster movement.
+5. Deeper - Starts with shallow thrusts and gradually increases to full length thrusts. Sensation affects how short or long the device takes to reach max thrust depth.
+6. Stop'n'Go -A series of strokes with intermittent pauses. Sensation controls the length of the pause.
+7. Insist - Tiny rapid pulses. Sensation affects whether the feeling of stroke thrust comes from the base or tip of the rail.
+
+
+## Connecting Your Device to WiFi
+
+Connecting your OSSM to WiFi enables it to receive firmware updates as they are released. This ensures your device is always up to date!
+
+:::warning
+The OSSM is compatible only with a 2.4GHz network.
+:::
+
+
+### WiFi Setup Option #1
+
+1. Connect your OSSM to power and let it home
+2. Navigate to the [Web Controller URL](https://docs.researchanddesire.com/ossm/tools/web-controller)
+3. Click "Connect" and select your OSSM, then click "Pair" ![](img/web-controller-connect-annotated.png)
+4. Select your OSSM and click "Pair" ![](img/web-controller-pair-annotated.png)
+5. Once paired, click on the "WiFi Settings" tab at the top of the Web Controller interface ![](img/web-controller-wifisettings-annotated.png)
+6. Enter your WiFi network's name and password ![](img/web-controller-wifisettings2-annotated.png)
+7. Click "Save & Connect"
+
+:::success
+Yay! Your OSSM is connected to WiFi.
+:::
+
+### WiFi Setup Option #2 (Wireless Remote)
+
+1. Connect your OSSM to power and let it home
+2. Connect your Wireless Remote to your OSSM
+3. Navigate to the Wireless Remote menu using the left button
+4. Select "Settings"
+5. Select "Wifi Settings"
+6. Using your phone camera, scan the QR code that appears on the device screen
+7. On your phone or computer, connect to the WiFi network named "OSSM Setup"
+8. Select your WiFi network, enter your password, and save
+
+:::success
+Yay! Your OSSM is connected to WiFi.
+:::
+
+# Pre-play Safety Checklist
+
+The OSSM is a powerful device and we want to make sure you have the tools to use it safely!
+
+Before you use your OSSM for play, make sure to follow these steps:
+
+1. Erect your OSSM and place it in a position that will be comfortable for you during play
+2. Place a filled sandbag over the base of the machine for stability
+3. If using a Wired Remote, connect the remote to the machine via Ethernet cable
+4. Attach your suction cup or Vac-u-Lock toy
+5. Connect your OSSM to a power source
+6. Set all Remote settings (Depth, Sensation, Stroke) to zero
+7. Get comfortable and slowly adjust settings until you feel confident using the device
+
+:::success
+You have completed the OSSM Pre-play Safety Checklist!
+:::

@@ -1,0 +1,38 @@
+---
+title: Writing Guide
+---
+
+# Writing Guide
+
+This project values clear, helpful writing over fancy wording.
+
+## Good docs habits
+
+- Start with what the reader is trying to do.
+- Put the most important step near the top.
+- Keep paragraphs short.
+- Use headings that say something specific.
+- Show examples when they remove ambiguity.
+
+## A simple page shape
+
+Most pages work well with this order:
+
+1. A short introduction
+2. The main steps
+3. Examples or screenshots
+4. Troubleshooting or common questions
+
+## Make tasks easy to follow
+
+- Use numbered steps when order matters.
+- Use bullets for options or quick reference items.
+- Keep each step focused on one action.
+- Name buttons, menus, and files exactly as readers will see them.
+
+## Common improvements
+
+- Replace vague words like "simply" or "just" with the real step.
+- Break long instructions into smaller sections.
+- Add a concrete example after an abstract explanation.
+- Call out prerequisites before the reader hits them halfway through a task.

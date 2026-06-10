@@ -3,7 +3,7 @@ setlocal
 
 cd /d "%~dp0"
 
-if not exist ".\.venv\Scripts\python.exe" (
+if not exist ".\node_modules" (
   echo Local docs environment not found yet.
   powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0scripts\bootstrap.ps1"
   if errorlevel 1 (

@@ -1,0 +1,6 @@
+{
+  "title": "Documentation Guide",
+  "defaultOpen": false,
+  "collapsible": true,
+  "pages": ["getting-started", "writing-guide", "contributing"]
+}

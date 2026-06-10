@@ -1,6 +1,6 @@
 {
   "recommendations": [
-    "ms-python.python",
+    "unifiedjs.vscode-mdx",
     "DavidAnson.vscode-markdownlint",
     "yzhang.markdown-all-in-one"
   ]

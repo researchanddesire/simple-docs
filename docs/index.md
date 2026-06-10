@@ -1,24 +1,20 @@
-# Welcome
+---
+title: RAD Open Hardware Docs
+---
 
-This site is set up so docs contributors can get productive quickly.
+# Research and Desire — User Documentation
 
-You do not need to know how the tooling works behind the scenes to help write better documentation.
+Open-hardware guides for RAD products.
 
-## Start here
+## Products
 
-1. Launch the docs preview for your operating system.
-2. Open the site in your browser.
-3. Edit Markdown files in `docs/`.
-4. Refresh the page to see your changes.
+- **[OSSM](ossm/)** — open-source stroker machine
+- **[Chastity Lockbox](lockbox/)** — smart chastity lock
+- **[Deep Throat Trainer](dtt/)** — training device
+- **[RADR](radr/)** — wireless remote for OSSM and supported toys
 
-## Good first contributions
+Developer documentation lives at [dev.researchanddesire.com](https://dev.researchanddesire.com).
 
-- Fix typos or confusing wording.
-- Add examples that help a reader complete a task.
-- Break long sections into shorter headings and steps.
-- Add missing troubleshooting notes.
+## Contributing
 
-## Next pages
-
-- Read the getting started guide.
-- Use the writing guide when you want help structuring a page.
+See the [Documentation Guide](meta/getting-started) to edit these pages.

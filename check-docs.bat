@@ -3,7 +3,7 @@ setlocal
 
 cd /d "%~dp0"
 
-if not exist ".\.venv\Scripts\python.exe" (
+if not exist ".\node_modules" (
   echo Local docs environment not found yet.
   powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0scripts\bootstrap.ps1"
   if errorlevel 1 (
@@ -12,7 +12,7 @@ if not exist ".\.venv\Scripts\python.exe" (
 )
 
 echo Checking the docs site...
-powershell -NoProfile -ExecutionPolicy Bypass -Command "& { Set-Location '%~dp0'; .\.venv\Scripts\python.exe -m mkdocs build --clean --strict }"
+powershell -NoProfile -ExecutionPolicy Bypass -Command "& { Set-Location '%~dp0'; npm run build }"
 if errorlevel 1 (
   echo.
   echo The docs check did not complete.

@@ -1,0 +1,136 @@
+---
+title: "Button Controls"
+description: "How to use the front button to navigate and control your trainer"
+---
+
+Your Deepthroat Trainer has a single front button that handles all device interactions. Different press types trigger different actions depending on the current screen.
+
+## Button press types
+
+| Press Type | How To |
+|------------|--------|
+| **Short Press** | Quick tap and release |
+| **Long Press** | Press and hold for 1-2 seconds |
+
+## Button actions by screen
+
+### Startup & Navigation
+
+| Screen | Short Press | Long Press |
+|--------|-------------|------------|
+| **Welcome** | Start preflight checks | Enter Wi-Fi setup mode |
+| **Preflight** | — | — |
+| **Pairing** | Skip pairing, continue offline | — |
+
+!!! tip
+Long-press during the welcome screen to enter Wi-Fi configuration mode. This is useful if you need to change networks.
+
+!!! note
+The device screen may display "hold to launch settings page"—this refers specifically to Wi-Fi settings. There is no general settings menu on the device itself. Training configuration (templates, modes, toys) is managed through your [dashboard](https://dashboard.researchanddesire.com).
+
+### Pre-Training Screens
+
+| Screen | Short Press | Long Press |
+|--------|-------------|------------|
+| **Fetch/Load Settings** | Continue when ready | Skip to training |
+| **Calibration Min** | Capture minimum position | — |
+| **Calibration Max** | Capture maximum position | — |
+| **Session Details** | Next screen | Skip to training |
+| **Toy Details** | Next screen | Skip to training |
+| **Segment Details** | Start the segment | Skip to training |
+
+!!! note
+Long-press on detail screens lets you skip directly to training. Useful if you've already reviewed the session info.
+
+### During Training
+
+| Screen | Short Press | Long Press |
+|--------|-------------|------------|
+| **Countdown** | — | — |
+| **Active Training** | — | Skip segment (dev mode only) |
+| **Grade** | Continue to next segment | — |
+
+During active training, the button is generally inactive to prevent accidental interruptions.
+
+### Pass/Fail Screens
+
+| Screen | Short Press | Long Press |
+|--------|-------------|------------|
+| **Failed** | Retry the segment | — |
+| **Three Strikes** | Restart session | — |
+
+### Session Complete
+
+| Screen | Short Press | Long Press |
+|--------|-------------|------------|
+| **Final Page** | Start a new session | — |
+
+## Hands-Free Mode
+
+When Hands-Free Mode is enabled in your template (Ultra subscription), many screens advance automatically without button presses:
+
+- Detail screens timeout and advance automatically
+- Segments progress without manual confirmation
+- Grade screens advance after the timeout period
+
+!!! info
+Hands-Free Mode is ideal for longer sessions where you don't want to interrupt training to press buttons.
+
+## Wi-Fi Setup Mode
+
+In Wi-Fi setup mode:
+- The device creates a "Trainer Setup" network
+- Connect to this network from your phone/computer
+- Follow the captive portal to enter your Wi-Fi credentials
+
+| Action | Result |
+|--------|--------|
+| **Short Press** | Restart device (exits Wi-Fi setup) |
+| **Timeout (400s)** | Auto-restart device |
+
+## Special behaviors
+
+### Charging restriction
+In production firmware, the device won't start a training session while charging. Unplug the charger to begin training.
+
+### Button disabled states
+The button is intentionally disabled during:
+- Active training (to prevent accidental stops)
+- System operations (updates, provisioning)
+- Countdown sequences
+
+## Troubleshooting
+
+<AccordionGroup>
+??? note "Button doesn't respond"
+
+- Check if you're on a screen where the button is disabled
+- Try a longer press (some actions require long-press)
+- Power cycle the device if completely unresponsive
+
+??? note "Wrong action triggered"
+
+- Ensure you're using the correct press type (short vs. long)
+- Wait for the screen to fully load before pressing
+- Some screens have different timeout behaviors
+
+??? note "Can't enter Wi-Fi setup"
+
+You must be on the welcome screen to enter Wi-Fi setup. If you've already passed the welcome screen:
+1. Power cycle the device
+2. Wait for the welcome screen to appear
+3. Long-press before it times out
+
+</AccordionGroup>
+
+## Related guides
+
+<CardGroup cols={2}>
+<Card title="Device States" icon="display" href="/dtt/technical/device-states">
+Understanding all screens and states.
+</Card>
+
+<Card title="Getting Started" icon="play" href="/dtt/quick-start/getting-started">
+Complete setup walkthrough.
+</Card>
+</CardGroup>

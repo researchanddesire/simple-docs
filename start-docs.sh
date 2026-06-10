@@ -4,7 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
-if [ ! -x "./.venv/bin/python" ]; then
+if [ ! -d "./node_modules" ]; then
   echo "Local docs environment not found yet."
   ./scripts/bootstrap.sh
 fi

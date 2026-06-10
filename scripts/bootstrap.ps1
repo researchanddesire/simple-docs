@@ -2,24 +2,18 @@ $ErrorActionPreference = "Stop"
 
 Set-Location (Join-Path $PSScriptRoot "..")
 
-$pythonCmd = $null
-$pythonArgs = @()
-if (Get-Command py -ErrorAction SilentlyContinue) {
-    $pythonCmd = "py"
-    $pythonArgs = @("-3")
-} elseif (Get-Command python -ErrorAction SilentlyContinue) {
-    $pythonCmd = "python"
-}
-
-if (-not $pythonCmd) {
-    Write-Host "Python was not found."
-    Write-Host "Install Python 3, then run this script again."
+if (-not (Get-Command node -ErrorAction SilentlyContinue)) {
+    Write-Host "Node.js was not found."
+    Write-Host "Install Node.js LTS, then run this script again."
     exit 1
 }
 
-Write-Host "Creating the local docs environment..."
-& $pythonCmd @pythonArgs -m venv .venv
+if (-not (Get-Command npm -ErrorAction SilentlyContinue)) {
+    Write-Host "npm was not found."
+    Write-Host "Install Node.js LTS, then run this script again."
+    exit 1
+}
+
 Write-Host "Installing docs dependencies..."
-.\.venv\Scripts\python.exe -m pip install --upgrade pip
-.\.venv\Scripts\python.exe -m pip install -r requirements.txt
+npm install
 Write-Host "Local docs environment is ready."

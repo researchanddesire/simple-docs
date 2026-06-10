@@ -2,6 +2,8 @@
 
 Use this opening paragraph to explain what the page helps the reader do.
 
+If this is a brand-new page, remember to add it to `docs/meta.json` so it appears in the sidebar.
+
 ## Before you begin
 
 List anything the reader needs before starting.

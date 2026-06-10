@@ -5,15 +5,18 @@ SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 PROJECT_DIR="$(cd "$SCRIPT_DIR/.." && pwd)"
 cd "$PROJECT_DIR"
 
-if ! command -v python3 >/dev/null 2>&1; then
-  echo "Python 3 was not found." >&2
-  echo "Install Python 3, then run this script again." >&2
+if ! command -v node >/dev/null 2>&1; then
+  echo "Node.js was not found." >&2
+  echo "Install Node.js LTS, then run this script again." >&2
   exit 1
 fi
 
-echo "Creating the local docs environment..."
-python3 -m venv .venv
+if ! command -v npm >/dev/null 2>&1; then
+  echo "npm was not found." >&2
+  echo "Install Node.js LTS, then run this script again." >&2
+  exit 1
+fi
+
 echo "Installing docs dependencies..."
-./.venv/bin/python -m pip install --upgrade pip
-./.venv/bin/python -m pip install -r requirements.txt
+npm install
 echo "Local docs environment is ready."

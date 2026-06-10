@@ -6,35 +6,30 @@ If you can edit a text file, you can contribute here.
 
 ## The easy path
 
-Use the local Python scripts so you can start writing with the least friction.
+Use the local scripts so you can start writing with the least friction.
 
 - macOS: run `./start-docs.command`
 - Windows: run `.\start-docs.bat`
 - Linux: run `./start-docs.sh`
 
 When the preview starts, open <http://localhost:8000>.
-The first run will create the local environment and install the docs tools for you.
+The first run will install the docs tools for you.
 
 Keep that terminal window open while you work.
 
-## Installing Python if needed
+## Installing Node.js if needed
 
-If Python 3 is not already installed:
+If Node.js LTS is not already installed:
 
-- macOS: install it from [python.org](https://www.python.org/downloads/) or with Homebrew using `brew install python`
-- Windows: install it from [python.org](https://www.python.org/downloads/) and enable the option to add Python to your `PATH`
-- Linux: install `python3` and `python3-venv` with your package manager
+- macOS: install it from [nodejs.org](https://nodejs.org/) or with Homebrew using `brew install node`
+- Windows: install it from [nodejs.org](https://nodejs.org/)
+- Linux: install it with your package manager or from [nodejs.org](https://nodejs.org/)
 
 Quick check:
 
 ```bash
-python3 --version
-```
-
-Windows PowerShell:
-
-```powershell
-py -3 --version
+node --version
+npm --version
 ```
 
 ## What to edit
@@ -48,13 +43,13 @@ py -3 --version
 1. Open the `docs/` folder.
 2. Pick the page you want to improve.
 3. Edit the text.
-4. Refresh the browser preview.
+4. Save your file and review the live preview.
 
 ## Creating a new page
 
 1. Copy [templates/page-template.md](templates/page-template.md).
 2. Save it in `docs/` with a clear file name like `troubleshooting-login.md`.
-3. Add the new page to the `nav` section in `mkdocs.yml`.
+3. Add the new page to the `pages` list in `docs/meta.json`.
 4. Refresh the preview and confirm the page appears in the sidebar.
 
 ## Before you submit

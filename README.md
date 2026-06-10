@@ -2,11 +2,11 @@
 
 This repo is set up so docs contributors can start helping quickly, even if they do not usually write code.
 
-You do not need to know Python internals, virtual environments, or MkDocs configuration to edit pages here.
+You do not need to know React, Next.js, or Fumadocs internals to edit pages here.
 
 ## Fastest path for writers
 
-1. Install Python 3 if you do not already have it.
+1. Install Node.js LTS if you do not already have it.
 2. Download or clone this repo.
 3. Start the docs preview:
 
@@ -29,29 +29,24 @@ Linux:
 ```
 
 On macOS and Windows, you can also double-click the start script instead of running it from a terminal.
-The script will create the local docs environment for you the first time you run it.
+The script will install what it needs the first time you run it.
 
 4. Open <http://localhost:8000>.
-5. Edit files in `docs/` and refresh the browser to see your changes.
+5. Edit files in `docs/` and save your changes. The browser preview should update automatically.
 
-## Install Python
+## Install Node.js
 
-If `python3` or `py` is not already available on your machine:
+If `node` or `npm` is not already available on your machine:
 
-- macOS: install Python 3 from [python.org](https://www.python.org/downloads/) or with Homebrew using `brew install python`
-- Windows: install Python 3 from [python.org](https://www.python.org/downloads/) and make sure the installer adds Python to your `PATH`
-- Linux: install Python 3 with your package manager, for example `sudo apt install python3 python3-venv` on Ubuntu or Debian
+- macOS: install Node.js LTS from [nodejs.org](https://nodejs.org/) or with Homebrew using `brew install node`
+- Windows: install Node.js LTS from [nodejs.org](https://nodejs.org/)
+- Linux: install Node.js LTS with your package manager or from [nodejs.org](https://nodejs.org/)
 
-You can check whether Python is ready with one of these commands:
+You can check whether Node.js is ready with these commands:
 
 ```bash
-python3 --version
-```
-
-Windows PowerShell:
-
-```powershell
-py -3 --version
+node --version
+npm --version
 ```
 
 ## Before you share your work
@@ -77,13 +72,13 @@ Linux:
 ```
 
 On macOS and Windows, you can also double-click the check script.
-The check script uses the same local Python environment as the preview.
+The check script uses the same local Node.js setup as the preview.
 
 ## Helpful files
 
 - [CONTRIBUTING.md](CONTRIBUTING.md) explains the writing workflow in plain language.
 - [templates/page-template.md](templates/page-template.md) gives you a starting point for new pages.
-- [docs/getting-started.md](docs/getting-started.md) is the contributor guide inside the docs site itself.
+- [docs/contributors/getting-started.md](docs/contributors/getting-started.md) is the contributor guide inside the docs site itself.
 
 ## Advanced options
 
