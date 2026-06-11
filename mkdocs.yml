@@ -17,6 +17,7 @@ theme:
   features:
     - navigation.tracking
     - navigation.footer
+    - navigation.path
     - toc.integrate
     - toc.follow
     - content.tabs.link
@@ -40,14 +41,6 @@ theme:
 plugins:
   - glightbox:
       draggable: false
-  - mkdocs-breadcrumbs-plugin:
-      delimiter: " / "
-      exclude_paths:
-        - "**"
-      generate_home_index: false
-      home_text: Home
-      log_level: WARNING
-      use_page_titles: true
   - search
 
 markdown_extensions:

@@ -148,7 +148,7 @@ The lock icon in the status bar reflects sensor state:
 | Unlocked | Paddle in unlock position | Green | Backplate detected |
 | Unlocked | Paddle in unlock position | Yellow | Backplate not detected |
 
-See [Status Symbols](../using/symbols) for detailed icon descriptions.
+See [Status Symbols](../using/symbols.md) for detailed icon descriptions.
 
 ## Troubleshooting sensor issues
 !!! note "E-LOCK-1: Could Not Lock"
@@ -199,12 +199,12 @@ See [Status Symbols](../using/symbols) for detailed icon descriptions.
 | Monitoring period | During motor operations |
 
 ## Related guides
-**[Device Errors](../errors/)**
+**[Device Errors](../errors/index.md)**
 
 Troubleshooting error codes.
-**[Status Symbols](../using/symbols)**
+**[Status Symbols](../using/symbols.md)**
 
 Understanding lock and backplate indicators.
-**[Calibration](../device-states/calibration)**
+**[Calibration](../device-states/calibration.md)**
 
 How calibration configures sensors.

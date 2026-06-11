@@ -2,7 +2,7 @@
 
 Hardware docs cover printable parts, the PCB, power behavior, and physical feedback.
 
-- [Hardware Getting Started](/radr/Hardware/getting-started/)
-- [PCB Overview](/radr/Hardware/PCB/)
-- [Printed Parts](/radr/Hardware/printed-parts/)
-- [Specifications](/radr/Hardware/specifications/)
+- [Hardware Getting Started](getting-started/index.md)
+- [PCB Overview](PCB/index.md)
+- [Printed Parts](printed-parts/index.md)
+- [Specifications](specifications/index.md)

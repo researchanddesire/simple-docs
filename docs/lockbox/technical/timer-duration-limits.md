@@ -133,15 +133,15 @@ When using the dashboard to create locks:
     Locks created from the dashboard are received by your device and display the remaining time using the same format.
 
 ## Related guides
-**[Quick Start](../quick-start/)**
+**[Quick Start](../quick-start/index.md)**
 
 Learn how to start your first lock.
-**[Permalock Mode](../device-states/permalock)**
+**[Permalock Mode](../device-states/permalock.md)**
 
 Indefinite locks without time limits.
-**[Button Controls](./button-controls)**
+**[Button Controls](button-controls.md)**
 
 How to use the encoder for timer selection.
-**[Hiding Time](../using/hiding-time)**
+**[Hiding Time](../using/hiding-time.md)**
 
 Hide the remaining time for added mystery.

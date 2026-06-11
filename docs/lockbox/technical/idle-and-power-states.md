@@ -155,12 +155,12 @@ Deep sleep:   0   (off)
 ```
 
 ## Related guides
-**[Sleep Mode](../device-states/sleep-mode)**
+**[Sleep Mode](../device-states/sleep-mode.md)**
 
 User-friendly guide to automatic and manual sleep modes.
-**[Button Controls](./button-controls)**
+**[Button Controls](button-controls.md)**
 
 How button presses wake the device and their functions.
-**[Offline Mode](./offline-mode)**
+**[Offline Mode](offline-mode.md)**
 
 What happens when deep sleep disconnects WiFi.

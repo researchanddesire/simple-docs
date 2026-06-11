@@ -2,6 +2,6 @@
 
 Administrative and reference material for RADR.
 
-- [Open Source Information](/radr/guides/housekeeping/open-source/)
+- [Open Source Information](open-source/index.md)
 
-- [open-source](/radr/guides/housekeeping/open-source/)
+- [open-source](open-source/index.md)

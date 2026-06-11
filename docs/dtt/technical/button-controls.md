@@ -114,9 +114,9 @@ The button is intentionally disabled during:
     3. Long-press before it times out
 
 ## Related guides
-**[Device States](/dtt/technical/device-states)**
+**[Device States](device-states.md)**
 
 Understanding all screens and states.
-**[Getting Started](/dtt/quick-start/getting-started)**
+**[Getting Started](../quick-start/getting-started.md)**
 
 Complete setup walkthrough.

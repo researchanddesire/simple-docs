@@ -24,11 +24,11 @@ The main menu appears when your device is unlocked and ready for use.
 
 ### Lock
 
-Opens the timer configuration screen where you can set a duration from 30 seconds to 1000 years. See [Timer Duration Limits](./timer-duration-limits) for details.
+Opens the timer configuration screen where you can set a duration from 30 seconds to 1000 years. See [Timer Duration Limits](timer-duration-limits.md) for details.
 
 ### Lock Forever
 
-Displays a confirmation screen before engaging permalock mode. The device locks indefinitely until your keyholder unlocks it or you use emergency unlock. See [Permalock Mode](../device-states/permalock).
+Displays a confirmation screen before engaging permalock mode. The device locks indefinitely until your keyholder unlocks it or you use emergency unlock. See [Permalock Mode](../device-states/permalock.md).
 
 ### Settings
 
@@ -158,7 +158,7 @@ Error screens display with a QR code linking to troubleshooting documentation:
 | E-LOCK-10 | Could Not Connect | Return to menu |
 | E-LOCK-20 | Emergency Unlocked | WiFi Setup |
 
-See [Device Errors](../errors/) for detailed troubleshooting.
+See [Device Errors](../errors/index.md) for detailed troubleshooting.
 
 ## Navigation flow
 
@@ -196,15 +196,15 @@ See [Device Errors](../errors/) for detailed troubleshooting.
 ```
 
 ## Related guides
-**[Button Controls](./button-controls)**
+**[Button Controls](button-controls.md)**
 
 Detailed button and encoder functions.
-**[Quick Start](../quick-start/)**
+**[Quick Start](../quick-start/index.md)**
 
 Getting started with your Lockbox.
-**[Device States](../device-states/)**
+**[Device States](../device-states/index.md)**
 
 Understanding device operational modes.
-**[Device Errors](../errors/)**
+**[Device Errors](../errors/index.md)**
 
 Troubleshooting error screens.

@@ -57,15 +57,15 @@ If your device is unresponsive, press and hold the <strong>Enter/Lock</strong> b
 If you experience issues during or after a restart, email <a href="mailto:support@researchanddesire.com">support@researchanddesire.com</a>.
 
 ## Related
-**[Sleep Mode](/lockbox/device-states/sleep-mode)**
+**[Sleep Mode](sleep-mode.md)**
 
 Understand automatic vs. deep sleep and when to use each.
-**[Calibration](/lockbox/device-states/calibration)**
+**[Calibration](calibration.md)**
 
 What calibration does and how to complete it if prompted after updates.
-**[Quick Start](/lockbox/quick-start/)**
+**[Quick Start](../quick-start/index.md)**
 
 Wi‑Fi setup (2.4 GHz), locking basics, and key safety reminders.
-**[Emergency Unlock](/lockbox/device-states/emergency-unlock)**
+**[Emergency Unlock](emergency-unlock.md)**
 
 Use only for genuine emergencies; know the consequences before proceeding.

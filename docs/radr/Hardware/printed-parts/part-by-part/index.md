@@ -2,9 +2,9 @@
 
 Choose the part you are printing or troubleshooting.
 
-- [Remote Top](/radr/Hardware/printed-parts/part-by-part/remote-top/)
-- [Remote Bottom](/radr/Hardware/printed-parts/part-by-part/remote-bottom/)
-- [Remote Knob](/radr/Hardware/printed-parts/part-by-part/remote-knob/)
-- [Buttons](/radr/Hardware/printed-parts/part-by-part/buttons/)
-- [Power Switch](/radr/Hardware/printed-parts/part-by-part/power-switch/)
-- [OSSM Remote Clip](/radr/Hardware/printed-parts/part-by-part/ossm-remote-clip/)
+- [Remote Top](remote-top.md)
+- [Remote Bottom](remote-bottom.md)
+- [Remote Knob](remote-knob.md)
+- [Buttons](buttons.md)
+- [Power Switch](power-switch.md)
+- [OSSM Remote Clip](ossm-remote-clip.md)

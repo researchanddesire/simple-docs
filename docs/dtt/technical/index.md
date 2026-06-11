@@ -4,42 +4,42 @@ This section provides technical resources for understanding how your Deepthroat 
 
 ## Device operation
 
-- **[Device States & Screens](/dtt/technical/device-states/)**  
+- **[Device States & Screens](device-states.md)**  
   Understand all the screens and states your trainer displays during operation.
 
-- **[Button Controls](/dtt/technical/button-controls/)**  
+- **[Button Controls](button-controls.md)**  
   Learn how to use the front button to navigate and control your trainer.
 
-- **[LED Feedback System](/dtt/technical/led-feedback/)**  
+- **[LED Feedback System](led-feedback.md)**  
   Understand what the LED colors mean during training sessions.
 
-- **[Calibration](/dtt/technical/calibration/)**  
+- **[Calibration](calibration.md)**  
   How to calibrate your trainer for accurate position tracking.
 
 ## Specifications
 
-- **[Sensor Specifications](/dtt/technical/sensor-limits/)**  
+- **[Sensor Specifications](sensor-limits.md)**  
   Technical limits and capabilities of the distance sensor.
 
-- **[Offline Mode](/dtt/technical/offline-mode/)**  
+- **[Offline Mode](offline-mode.md)**  
   Using your trainer without an internet connection.
 
-- **[Firmware Updates](/dtt/technical/firmware-updates/)**  
+- **[Firmware Updates](firmware-updates.md)**  
   How your trainer receives and installs software updates.
 
-- **[Error Codes](/dtt/technical/error-codes/)**  
+- **[Error Codes](error-codes.md)**  
   All error messages and how to resolve them.
 
 ## Software updates
 
-- **[Software 2.0 Preview](/dtt/software-2.0-preview/)**  
+- **[Software 2.0 Preview](../software-2.0-preview.md)**  
   Explore new firmware capabilities and upcoming features.
 
 ## Troubleshooting
 
 When your Trainer encounters an issue, it displays an error code on screen:
 
-- **[E-DTT-1: No Internet](/dtt/errors/e-dtt-1/)**  
+- **[E-DTT-1: No Internet](../errors/e-dtt-1.md)**  
   Your device connected to Wi-Fi but cannot reach the server. Learn how to adjust firewall and router settings.
 
 For a complete list of error codes and messages, see the <a href="./error-codes">Error Codes</a> guide.

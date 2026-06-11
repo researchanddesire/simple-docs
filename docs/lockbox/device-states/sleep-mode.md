@@ -85,7 +85,7 @@ Manual deep sleep is appropriate for specific situations where power conservatio
 | Pseudo-sleep | 0 (off) | ~20-30mA |
 | Deep sleep | 0 (off) | ~0.5-2mA |
 
-For more technical details, see [Idle and Power States](../technical/idle-and-power-states).
+For more technical details, see [Idle and Power States](../technical/idle-and-power-states.md).
 
 ## Best practices
 !!! note "Maximize battery life"

@@ -94,6 +94,6 @@ After the flash completes, your device restarts. The version displayed on the sc
 
 If you experience unusual behavior while on alpha firmware — such as the dashboard showing your device as offline when it appears connected, or lock sessions stuck in a pending state — see the connectivity troubleshooting guide for step-by-step instructions.
 
-**[Connectivity Troubleshooting](./connectivity-troubleshooting#alpha-firmware-sync-issues)**
+**[Connectivity Troubleshooting](connectivity-troubleshooting.md#alpha-firmware-sync-issues)**
 
 Diagnose and resolve sync issues related to alpha firmware.

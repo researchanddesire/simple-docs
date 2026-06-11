@@ -11,7 +11,7 @@ Before starting a lock, ensure:
 - You have at least one lock template created
 
 !!! tip
-    You can verify your device is online by checking the indicator in the top right corner of the lockbox display. A **green, stable dot** means you're ready to receive settings. If the dot is **yellow and blinking**, your device is not ready—check the [WiFi setup guide](/lockbox/quick-start/wifi-setup) for help.
+    You can verify your device is online by checking the indicator in the top right corner of the lockbox display. A **green, stable dot** means you're ready to receive settings. If the dot is **yellow and blinking**, your device is not ready—check the [WiFi setup guide](wifi-setup.md) for help.
 
 ## Instantly start a 24-hour lock
 

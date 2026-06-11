@@ -18,7 +18,7 @@ RADR is the wireless remote for OSSM and supported Bluetooth toys. This page get
 - Close any phone apps that may already be connected to your Bluetooth toy.
 
 !!! note
-    RADR only connects to supported devices. See [Device Support](/radr/guides/reference/device-support/) for the current compatibility list.
+    RADR only connects to supported devices. See [Device Support](guides/reference/device-support.md) for the current compatibility list.
 
 ## Step 1: Learn the Controls
 
@@ -68,4 +68,4 @@ Press the right button to open Pattern Mode and select built-in OSSM motion patt
 
 ## What To Read Next
 
-Ready for the full controls reference? Go to the [Detailed User Guide](/radr/guides/user-guide/).
+Ready for the full controls reference? Go to the [Detailed User Guide](guides/user-guide/index.md).

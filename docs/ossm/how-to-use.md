@@ -100,7 +100,7 @@ The Wireless Remote has a Bluetooth connectivity indicator, a WiFi connectivity 
 
 ### Web Controller
 
-The Web Controller allows you to control your OSSM without a physical remote. This remote method requires that your OSSM is connected to WiFi. For instructions on connecting your OSSM to WiFi using the Web Controller, [click this link.](#wifi-setup-option-#1) The interface for the Web Controller looks like this:
+The Web Controller allows you to control your OSSM without a physical remote. This remote method requires that your OSSM is connected to WiFi. For instructions on connecting your OSSM to WiFi using the Web Controller, [click this link.](#wifi-setup-option-1) The interface for the Web Controller looks like this:
 
   ![](../img/web-controller-play-interface.png)
 

@@ -51,7 +51,7 @@ To avoid triggering E-Lock-20:
 
 - Always communicate with your Keyholder for unlocks when possible
 - Reserve the emergency unlock feature for true emergencies only
-- Familiarize yourself with our [Emergency Unlock Guide](../device-states/emergency-unlock) so you understand when and how to use this feature appropriately
+- Familiarize yourself with our [Emergency Unlock Guide](../device-states/emergency-unlock.md) so you understand when and how to use this feature appropriately
 
 !!! warning
     Emergency unlocks are logged and visible to your Keyholder. Using this feature unnecessarily may affect your dynamic with them.

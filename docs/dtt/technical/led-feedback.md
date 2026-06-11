@@ -87,9 +87,9 @@ Since Bounce requires controlled movement in both directions, watch for the LED 
     - Try recalibrating from the settings
 
 ## Related guides
-**[Training Modes](/dtt/training-modes/)**
+**[Training Modes](../training-modes/index.md)**
 
 Learn how each training mode uses position feedback.
-**[Sensor Limits](/dtt/technical/sensor-limits)**
+**[Sensor Limits](sensor-limits.md)**
 
 Technical specifications for the distance sensor.

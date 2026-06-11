@@ -83,6 +83,6 @@ Understand how each training mode awards points.
 **[Settings](https://dashboard.researchanddesire.com/settings/introduction)**
 
 Control privacy, profile visibility, and account preferences.
-**[Trainer FAQs](/dtt/faqs)**
+**[Trainer FAQs](../faqs.md)**
 
 Connectivity, scoring, subscriptions, and more.

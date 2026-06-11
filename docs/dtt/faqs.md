@@ -18,7 +18,7 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
 ## Setup & Mounting
 !!! note "Can I use the Trainer handheld instead of wall-mounted?"
     The Deepthroat Trainer is designed for surface-mounting only. The backboard with suction cups attaches to smooth surfaces like glass, acrylic, or glazed tile. There are no official handheld or wearable accessories.
-    **[Mounting Guide](/dtt/quick-start/getting-started)**
+    **[Mounting Guide](quick-start/getting-started.md)**
 
     Step-by-step instructions for mounting your Trainer.
 
@@ -47,7 +47,7 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
     - **Vibrating wands** — Pro and Basic versions
 
     The Trainer is also compatible with any suction cup toy up to 3" (8 cm) in diameter.
-    **[Using Different Toys](/dtt/quick-start/using-toys)**
+    **[Using Different Toys](quick-start/using-toys.md)**
 
     How to set your default toy, add your own, and assign toys to templates.
 
@@ -58,7 +58,7 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
 
     !!! warning
         Using multiple accessories drains the battery faster. With both accessories connected, expect approximately 2–3 hours of battery life instead of the standard 4 hours.
-        **[Accessory Port](/dtt/specs/accessory-port)**
+        **[Accessory Port](specs/accessory-port.md)**
 
     Technical details about connecting accessories.
 
@@ -86,7 +86,7 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
 
 !!! note "Can I use my own dildo with the Deepthroat Trainer?"
     Yes. The Trainer works with most standard dildos so you can use toys you already own. For accurate scoring, set the toy you’re using in your Toybox.
-    **[Add or select your toy](/dtt/quick-start/using-toys)**
+    **[Add or select your toy](quick-start/using-toys.md)**
 
     Step‑by‑step Toybox instructions.
 
@@ -102,7 +102,7 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
 ## Calibration
 !!! note "How do I recalibrate my toy's depth setting?"
     You can reset calibration from the dashboard and recalibrate on your next session. Go to **Toybox**, select your toy, and click **Reset Calibration**.
-    **[Calibration Guide](/dtt/technical/calibration#how-to-reset-calibration-for-a-toy)**
+    **[Calibration Guide](technical/calibration.md#how-to-reset-calibration-for-a-toy)**
 
     Step-by-step reset and recalibration instructions.
 
@@ -120,7 +120,7 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
 
 !!! note "Training requires depths that are physically impossible to reach"
     If your Trainer is asking you to go deeper than you can physically reach, your calibration minimum position is likely set too close to the sensor. Adjust the minimum to **5 cm** or further in your Toybox to keep targets achievable and outside the sensor's 1.7 cm dead zone.
-    **[Calibration Troubleshooting](/dtt/technical/calibration#training-requires-depths-i-cant-physically-reach)**
+    **[Calibration Troubleshooting](technical/calibration.md#training-requires-depths-i-cant-physically-reach)**
 
     Full explanation and step-by-step fix.
 
@@ -135,7 +135,7 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
     - **Grade** — overall performance score for the session
 
     When connected to Wi-Fi, session data uploads automatically to your dashboard where you can review detailed metrics and track progress over time.
-    **[Checking Your Results](/dtt/quick-start/checking-results)**
+    **[Checking Your Results](quick-start/checking-results.md)**
 
     See how to review your session data on the dashboard.
 
@@ -256,7 +256,7 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
     - Your new network may have stricter firewall settings than your previous one
     - Check your router's access control, MAC filtering, or IoT device settings
     - Some ISP-provided routers have aggressive security defaults that block unknown devices
-    **[Error E-DTT-1 Troubleshooting](/dtt/errors/e-dtt-1)**
+    **[Error E-DTT-1 Troubleshooting](errors/e-dtt-1.md)**
 
     Detailed steps for router and firewall configuration.
 
@@ -288,9 +288,9 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
 
     Occasionally, an OTA firmware update may not complete successfully, leaving the device in a state where it cannot communicate with the server. If you've tried all the above steps including a mobile hotspot and the device is still stuck:
 
-    1. **Try manual USB flashing** — Use the [Web Flasher](https://dashboard.researchanddesire.com/app/tools/web-flasher) to reinstall firmware. See the [Firmware Updates](/dtt/technical/firmware-updates) guide for instructions.
+    1. **Try manual USB flashing** — Use the [Web Flasher](https://dashboard.researchanddesire.com/app/tools/web-flasher) to reinstall firmware. See the [Firmware Updates](technical/firmware-updates.md) guide for instructions.
     2. **Contact support if flashing isn't possible** — Trainers purchased before July 1st, 2025 cannot be manually flashed via USB. If you see a message in the webflasher indicating your device isn't flashable, or if the webflasher cannot detect your device, contact [support@researchanddesire.com](mailto:support@researchanddesire.com) with your order number. A replacement may be necessary.
-    **[Error E-DTT-1 Troubleshooting](/dtt/errors/e-dtt-1)**
+    **[Error E-DTT-1 Troubleshooting](errors/e-dtt-1.md)**
 
     Detailed steps for network connectivity issues.
 
@@ -308,11 +308,11 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
     1. Check the Wi‑Fi status on the startup screen
     2. Follow the Wi‑Fi setup process to connect to a 2.4 GHz network
     3. Once online, select a template in your dashboard and start a session to download settings
-    **[Wi‑Fi Troubleshooting](/dtt/quick-start/pairing/wifi-setup)**
+    **[Wi‑Fi Troubleshooting](quick-start/pairing/wifi-setup.md)**
 
     Fix common connection issues.
 
-    **[Offline Mode](/dtt/technical/offline-mode)**
+    **[Offline Mode](technical/offline-mode.md)**
 
     How to prepare for offline training.
 
@@ -331,7 +331,7 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
 
     !!! note
         Firmware 2.0.0 (Beta) adds offline playback of the last downloaded training settings. Offline session syncing is planned, but until it’s released, offline work won’t earn or upload points.
-        **[Software 2.0.0 Beta Preview](/dtt/software-2.0-preview)**
+        **[Software 2.0.0 Beta Preview](software-2.0-preview.md)**
 
     What’s new now and what’s coming next.
 
@@ -341,7 +341,7 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
     **If you don't see an update screen during startup, your Trainer is already running the latest firmware for your stream.**
 
     Your current firmware version displays briefly during the startup sequence. Note this information if you need to contact support.
-    **[Firmware Updates](/dtt/technical/firmware-updates)**
+    **[Firmware Updates](technical/firmware-updates.md)**
 
     Learn more about how updates work and troubleshoot update issues.
 
@@ -349,23 +349,23 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
     Yes. All Deepthroat Trainers receive firmware updates over‑the‑air (OTA) when connected to Wi‑Fi, regardless of when you purchased your device. There's no hardware limitation that prevents older devices from receiving new firmware versions, including major updates like 2.0.0.
 
     Keep your Trainer connected to Wi‑Fi, and it will automatically download and install updates as they become available.
-    **[Wi‑Fi Setup](/dtt/quick-start/pairing/wifi-setup)**
+    **[Wi‑Fi Setup](quick-start/pairing/wifi-setup.md)**
 
     Connect your Trainer to receive updates.
 
 !!! note "How do I connect my Deepthroat Trainer to Wi‑Fi?"
     Follow the quick start to get online in minutes.
-    **[Getting Started](/dtt/quick-start/getting-started)**
+    **[Getting Started](quick-start/getting-started.md)**
 
     Complete setup, including Wi‑Fi configuration.
 
-    **[Wi‑Fi Troubleshooting](/dtt/quick-start/pairing/wifi-setup)**
+    **[Wi‑Fi Troubleshooting](quick-start/pairing/wifi-setup.md)**
 
     Fix common connection issues (2.4 GHz networks, captive portal tips, more).
 
     !!! info
         Prefer a step‑by‑step? Use the Wi‑Fi pairing walkthrough.
-        **[Step‑by‑step Wi‑Fi guide](/dtt/quick-start/pairing/wifi-setup)**
+        **[Step‑by‑step Wi‑Fi guide](quick-start/pairing/wifi-setup.md)**
 
     Screen‑by‑screen instructions.
 
@@ -625,11 +625,11 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
     - **Short press** on the welcome screen starts preflight checks and begins training
     - **Long press** on the welcome screen opens Wi-Fi setup (not a general settings menu)
     - After Wi-Fi is already configured, you typically just short press to start training
-    **[Button Controls](/dtt/technical/button-controls)**
+    **[Button Controls](technical/button-controls.md)**
 
     Complete guide to button actions by screen.
 
-    **[Templates](/dtt/training-modes/)**
+    **[Templates](training-modes/index.md)**
 
     Learn how to create and manage training templates.
 
@@ -658,7 +658,7 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
     3. **Verify the power switch position** — ensure it's fully in the "on" position
 
     If the device still won't power on after charging, contact [support@researchanddesire.com](mailto:support@researchanddesire.com) with your order number.
-    **[Charging Guide](/dtt/specs/charging)**
+    **[Charging Guide](specs/charging.md)**
 
     Detailed charging instructions and troubleshooting.
 
@@ -703,7 +703,7 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
 
     !!! warning
         Do not attempt to open the device or repair the port yourself—this will void any warranty coverage.
-        **[Accessory Port Specs](/dtt/specs/accessory-port)**
+        **[Accessory Port Specs](specs/accessory-port.md)**
 
     Technical specifications for the accessory port.
 
@@ -741,7 +741,7 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
     If your Trainer ID displays corrupted characters (such as ".t", "U]t", or random symbols) instead of a normal 5–6 character code, the device's provisioning data was likely erased.
 
     This typically happens when using the web flasher with "Erase device" enabled. Contact [support@researchanddesire.com](mailto:support@researchanddesire.com) with your order number—support can re-provision your device with a new Trainer ID.
-    **[Firmware Updates](/dtt/technical/firmware-updates)**
+    **[Firmware Updates](technical/firmware-updates.md)**
 
     More details on firmware updates and troubleshooting.
 

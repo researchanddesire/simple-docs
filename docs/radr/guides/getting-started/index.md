@@ -6,7 +6,7 @@ RADR is designed to connect quickly to supported devices, including OSSM and com
 
 ## Recommended First Step
 
-[Open the Quick Start](/radr/guides/getting-started/quick-start/)
+[Open the Quick Start](quick-start.md)
 
 ## Before You Begin
 
@@ -17,6 +17,6 @@ RADR is designed to connect quickly to supported devices, including OSSM and com
 
 ## Useful Next Pages
 
-- [Device Support](/radr/guides/reference/device-support/)
-- [Navigation and Controls](/radr/guides/user-guide/navigation-and-controls/)
-- [Settings and Wi-Fi](/radr/guides/user-guide/settings-and-wifi/)
+- [Device Support](../reference/device-support.md)
+- [Navigation and Controls](../user-guide/navigation-and-controls.md)
+- [Settings and Wi-Fi](../user-guide/settings-and-wifi.md)

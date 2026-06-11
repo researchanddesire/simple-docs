@@ -102,14 +102,14 @@ End your session from the device when done. Your results upload to the dashboard
 
 ## What To Read Next
 
-- **[Repetition Mode](/dtt/training-modes/repetition/)**  
+- **[Repetition Mode](repetition.md)**  
   Build timing and accuracy with structured reps.
 
-- **[Endurance Mode](/dtt/training-modes/endurance/)**  
+- **[Endurance Mode](endurance.md)**  
   Focus on sustained depth and pacing over time.
 
-- **[Shareable Templates](/dtt/quick-start/templates/)**  
+- **[Shareable Templates](../quick-start/templates.md)**  
   Explore community templates and import your favorites (Ultra).
 
-- **[Beta Preview](/dtt/software-2.0-preview/)**  
+- **[Beta Preview](../software-2.0-preview.md)**  
   Learn what’s new in the latest firmware and dashboard updates.

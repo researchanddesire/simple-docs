@@ -3,7 +3,7 @@
 Bounce Mode builds on the fundamentals of Repetition Mode with an added challenge: you control the pace in both directions. While Repetition emphasizes gradual insertion with quick withdrawals, Bounce requires steady, controlled rhythm for both downward and upward movements.
 
 !!! info
-    Bounce Mode is excellent for building coordination and muscle memory. If you're just getting started, master [Repetition Mode](/dtt/training-modes/repetition) first.
+    Bounce Mode is excellent for building coordination and muscle memory. If you're just getting started, master [Repetition Mode](repetition.md) first.
 
 ## Prerequisites
 
@@ -40,7 +40,7 @@ During training, the LED strip provides real-time feedback on your position:
 
 ### Step 1: Choose or create a template
 
-From the dashboard, open a training template configured for Bounce Mode. You can also browse community templates under [Shareable Templates](/dtt/quick-start/templates).
+From the dashboard, open a training template configured for Bounce Mode. You can also browse community templates under [Shareable Templates](../quick-start/templates.md).
   
 ### Step 2: Set targets (speed, depth, reps)
 
@@ -60,7 +60,7 @@ Begin the session. Move down to the indicated depth following the on-screen targ
 
 ### Step 5: Finish and review your results
 
-When you complete the set, your grade and points upload to the dashboard. See [Checking Your Results](/dtt/quick-start/checking-results) to review trends and leaderboard placement.
+When you complete the set, your grade and points upload to the dashboard. See [Checking Your Results](../quick-start/checking-results.md) to review trends and leaderboard placement.
   
 ## Scoring and points
 
@@ -116,20 +116,20 @@ Bounce Mode uses a scoring system similar to Repetition, but evaluates both dire
     Direction changes are the hardest part. Practice smooth turnarounds without pausing or jerking. The transition should be fluid.
 
 !!! note "Results aren't appearing on the dashboard"
-    - Confirm the trainer is connected to Wi‑Fi. See [Connect to Wi‑Fi](/dtt/quick-start/pairing/wifi-setup).
+    - Confirm the trainer is connected to Wi‑Fi. See [Connect to Wi‑Fi](../quick-start/pairing/wifi-setup.md).
     - Power‑cycle the trainer, then run a short test set.
-    - Check [Checking Your Results](/dtt/quick-start/checking-results) for where to find uploads.
+    - Check [Checking Your Results](../quick-start/checking-results.md) for where to find uploads.
 
 ## Related guides
-**[Repetition Mode](/dtt/training-modes/repetition)**
+**[Repetition Mode](repetition.md)**
 
 Master the basics before progressing to Bounce.
-**[LED Feedback](/dtt/technical/led-feedback)**
+**[LED Feedback](../technical/led-feedback.md)**
 
 Understand what the LED colors mean.
 **[Points and leaderboards](https://docs.researchanddesire.com/dashboard/leaderboards/introduction)**
 
 How points are calculated across modes.
-**[Shareable Templates](/dtt/quick-start/templates)**
+**[Shareable Templates](../quick-start/templates.md)**
 
 Find community templates optimized for Bounce training.

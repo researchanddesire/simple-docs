@@ -5,27 +5,27 @@ When your Chastity Lockbox encounters an issue, it displays an error code to hel
 ## Hardware errors
 
 These errors indicate physical issues with the lock mechanism or device components.
-**[E-LOCK-1: Could Not Lock](./e-lock-1)**
+**[E-LOCK-1: Could Not Lock](e-lock-1.md)**
 
 The device failed to engage the locking mechanism. Usually caused by obstruction or alignment issues.
-**[E-LOCK-2: Could Not Unlock](./e-lock-2)**
+**[E-LOCK-2: Could Not Unlock](e-lock-2.md)**
 
 The device failed to disengage the locking mechanism. May require manual intervention.
-**[E-LOCK-3: No Backplate Detected](./e-lock-3)**
+**[E-LOCK-3: No Backplate Detected](e-lock-3.md)**
 
 The device cannot detect the backplate connection. Check mounting and cable connections.
 
 ## Network errors
 
 These errors relate to Wi-Fi connectivity and network communication issues.
-**[E-LOCK-10: Could Not Connect to Wi-Fi](./e-lock-10)**
+**[E-LOCK-10: Could Not Connect to Wi-Fi](e-lock-10.md)**
 
 The device failed to establish a Wi-Fi connection. Verify network credentials and signal strength.
 
 ## Emergency unlock
 
 These codes appear when emergency features are activated.
-**[E-LOCK-20: Emergency Unlock Used](./e-lock-20)**
+**[E-LOCK-20: Emergency Unlock Used](e-lock-20.md)**
 
 An emergency unlock was triggered. Review this guide to understand implications and next steps.
 

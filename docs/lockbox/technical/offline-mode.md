@@ -181,15 +181,15 @@ When online, your device periodically syncs with the dashboard:
     Go to Settings → WiFi Settings to manually reconnect. Your lock state is unaffected.
 
 ## Related guides
-**[WiFi Setup](../quick-start/wifi-setup)**
+**[WiFi Setup](../quick-start/wifi-setup.md)**
 
 How to connect your device to WiFi.
-**[Sleep Mode](../device-states/sleep-mode)**
+**[Sleep Mode](../device-states/sleep-mode.md)**
 
 How sleep affects WiFi connectivity.
-**[Status Symbols](../using/symbols)**
+**[Status Symbols](../using/symbols.md)**
 
 Understanding the WiFi status indicator.
-**[Online Status](../support/online-status)**
+**[Online Status](../support/online-status.md)**
 
 How to verify your device is online.

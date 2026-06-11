@@ -37,7 +37,7 @@ Turn on your device. During startup, the screen briefly displays your Trainer ID
 
 Sign in to the dashboard at [dashboard.researchanddesire.com](https://dashboard.researchanddesire.com) and go to **Settings → Devices**. Enter your Trainer ID in the "Deepthroat Trainer ID" field and save.
 
-- **[Detailed pairing guide](/dtt/quick-start/pairing/pairing-guide/)**  
+- **[Detailed pairing guide](pairing-guide.md)**  
   Step-by-step instructions with screenshots for pairing your trainer.
 
 - **[Create an account](https://dashboard.researchanddesire.com)**  
@@ -47,7 +47,7 @@ Sign in to the dashboard at [dashboard.researchanddesire.com](https://dashboard.
 
 Wi-Fi enables your trainer to upload results and download settings from your partner. Pairing works without Wi-Fi, but you won't have access to syncing or remote features.
 
-- **[Wi-Fi connection guide](/dtt/quick-start/pairing/wifi-setup/)**  
+- **[Wi-Fi connection guide](wifi-setup.md)**  
   Complete instructions for connecting your trainer to your Wi-Fi network.
 
 !!! success

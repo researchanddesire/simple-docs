@@ -39,7 +39,7 @@ After your partner accepts the invitation, you can manage their devices from you
   - View their current session and stats on the **Chastity Lockbox** > **Home** page
   - Create new lock sessions using the **Chastity Lockbox** > **Templates** page
   
-  See [How to start a lock from the dashboard](./start-a-lock) for detailed instructions.
+  See [How to start a lock from the dashboard](start-a-lock.md) for detailed instructions.
 
 <Frame caption="Click the dropdown in the top-left menu to switch between your account and your partner's account">
   <img src="/lockbox/img/image (4).webp" alt="Account switcher dropdown showing how to switch between your account and your partner's account" />

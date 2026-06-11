@@ -109,6 +109,6 @@ Every repetition contributes to your score. When you maintain high accuracy, you
 **[Points and leaderboards](https://dashboard.researchanddesire.com/leaderboards/points)**
 
 Understand how points are calculated across modes and how to climb.
-**[Pair and connect your trainer](/dtt/quick-start/pairing/pairing-guide)**
+**[Pair and connect your trainer](../quick-start/pairing/pairing-guide.md)**
 
 Get connected so results upload automatically after each set.

@@ -18,7 +18,7 @@ Updates bring:
 ### Step 1: Connect to WiFi
 
 Updates are downloaded over WiFi. If you haven't connected your RADR to WiFi yet, do that first.
-**[Connecting to WiFi](/radr/guides/user-guide/connecting-to-wifi/)**
+**[Connecting to WiFi](connecting-to-wifi.md)**
 
 Follow our WiFi setup guide.
 
@@ -77,7 +77,7 @@ The Web Flasher lets you update your RADR directly from your computer using a US
 - WiFi updates aren't working
 - You want to install a specific firmware version
 - Your RADR isn't responding normally
-**[Web Flasher](/radr/tools/web-flasher)**
+**[Web Flasher](../../tools/web-flasher.md)**
 
 Flash firmware directly from your browser — no software installation required.
 
@@ -89,7 +89,7 @@ Use a USB-C cable to connect your RADR to your computer.
 
 ### Step 8: Open the Web Flasher
 
-Go to the [RADR Web Flasher](/radr/tools/web-flasher) in Chrome, Edge, or another compatible browser.
+Go to the [RADR Web Flasher](../../tools/web-flasher.md) in Chrome, Edge, or another compatible browser.
 
 !!! warning
     Safari is not supported. Use Chrome, Edge, or another Chromium-based browser.
@@ -104,34 +104,34 @@ The Web Flasher will guide you through selecting your device and installing the 
     - Move closer to your router
     - Ensure RADR has sufficient battery (50%+)
     - Try restarting RADR and attempting the update again
-    - If updates consistently fail, use the [Web Flasher](/radr/tools/web-flasher)
+    - If updates consistently fail, use the [Web Flasher](../../tools/web-flasher.md)
 
 !!! note "RADR won't turn on after update"
     If your RADR becomes unresponsive after an update attempt:
 
     1. Connect it to power via USB-C
     2. Try the power switch (flip it off and on)
-    3. Use the [Web Flasher](/radr/tools/web-flasher) to reinstall firmware
+    3. Use the [Web Flasher](../../tools/web-flasher.md) to reinstall firmware
 
 !!! note "New device still not recognized after update"
     - Make sure the update completed successfully
     - Restart both your RADR and the Bluetooth device
-    - Check the [Device Support](/radr/guides/reference/device-support) page to confirm compatibility
+    - Check the [Device Support](../reference/device-support.md) page to confirm compatibility
     - Close any phone apps that might be connected to the Bluetooth device
 
 !!! note "How do I know what version I'm running?"
     The firmware version is displayed briefly on the startup screen when you power on your RADR.
 
 ## Related Guides
-**[Connecting to WiFi](/radr/guides/user-guide/connecting-to-wifi/)**
+**[Connecting to WiFi](connecting-to-wifi.md)**
 
 Set up WiFi to enable over-the-air updates.
-**[Device Support](/radr/guides/reference/device-support/)**
+**[Device Support](../reference/device-support.md)**
 
 See which Bluetooth devices are compatible with RADR.
-**[Web Flasher](/radr/tools/web-flasher)**
+**[Web Flasher](../../tools/web-flasher.md)**
 
 Manually flash firmware using your browser.
-**[Settings & WiFi](/radr/guides/user-guide/settings-and-wifi/)**
+**[Settings & WiFi](settings-and-wifi.md)**
 
 Complete guide to RADR settings.

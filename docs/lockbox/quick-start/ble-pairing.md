@@ -11,7 +11,7 @@ Automatic pairing connects your Lockbox to your dashboard account directly over 
 | WiFi (optional) | Only needed if your Lockbox isn't already on WiFi |
 
 !!! warning
-    Web Bluetooth is not supported in Firefox, Safari, or most mobile browsers. If you're on one of these, use [manual pairing with a pairing code](/lockbox/quick-start/pairing#option-2-manual-pairing-pairing-code) instead.
+    Web Bluetooth is not supported in Firefox, Safari, or most mobile browsers. If you're on one of these, use [manual pairing with a pairing code](pairing.md#option-2-manual-pairing-pairing-code) instead.
 
 ---
 
@@ -98,7 +98,7 @@ To manage saved networks, go to **Settings → WiFi Networks** in the dashboard.
       - Double-check that the network is 2.4 GHz — the Lockbox does not support 5 GHz
       - Verify the password is correct by connecting another device to the same network
       - Make sure the Lockbox is within range of your router during the connection attempt
-      - If the issue persists, try the [manual WiFi setup](/lockbox/quick-start/wifi-setup) flow instead
+      - If the issue persists, try the [manual WiFi setup](wifi-setup.md) flow instead
 
 !!! note "I see 'Scan for Lockbox' but clicking it does nothing"
       Your browser may not support Web Bluetooth. Confirm you're using Chrome or Edge. In Chrome, you can check by visiting `chrome://flags` and searching for "bluetooth" to verify the feature is enabled.

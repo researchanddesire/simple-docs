@@ -118,9 +118,9 @@ Offline playback uses the same segment limits as online mode (up to 100 effectiv
 Offline session syncing (storing multiple sessions for later upload) is planned for a future firmware release. See the <a href="/dtt/software-2.0-preview">Software 2.0 Preview</a> for upcoming features.
 
 ## Related guides
-**[Wi-Fi Setup](/dtt/quick-start/pairing/wifi-setup)**
+**[Wi-Fi Setup](../quick-start/pairing/wifi-setup.md)**
 
 Connect your trainer to Wi-Fi.
-**[Checking Results](/dtt/quick-start/checking-results)**
+**[Checking Results](../quick-start/checking-results.md)**
 
 View your synced session results.

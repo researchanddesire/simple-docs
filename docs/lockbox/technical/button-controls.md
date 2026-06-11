@@ -180,15 +180,15 @@ Your device conserves power by entering idle states after periods of inactivity.
     After a firmware flash, calibration ensures buttons are correctly mapped. If buttons seem swapped, contact support to recalibrate.
 
 ## Related guides
-**[Menu Structure](./menu-structure)**
+**[Menu Structure](menu-structure.md)**
 
 Complete guide to all menus and navigation paths.
-**[Timer Duration Limits](./timer-duration-limits)**
+**[Timer Duration Limits](timer-duration-limits.md)**
 
 Understand the full range of lock durations available.
-**[Restarting Device](../device-states/restarting)**
+**[Restarting Device](../device-states/restarting.md)**
 
 Standard restart procedures and troubleshooting.
-**[Sleep Mode](../device-states/sleep-mode)**
+**[Sleep Mode](../device-states/sleep-mode.md)**
 
 How idle states and sleep affect your device.

@@ -32,16 +32,16 @@ Watch the video below to see how to create training templates for your partner.
 
 Training sessions are built from segments. Each segment type offers a different training approach to help develop skills progressively.
 
-- **[Repetition](/dtt/training-modes/repetition/)**  
+- **[Repetition](repetition.md)**  
   Practice consistent depth and rhythm with repeated strokes at a set pace.
 
-- **[Endurance](/dtt/training-modes/endurance/)**  
+- **[Endurance](endurance.md)**  
   Build stamina by holding at depth for extended periods.
 
-- **[Freeform](/dtt/training-modes/freeform/)**  
+- **[Freeform](freeform.md)**  
   Train with dynamic, self-paced patterns targeting average RPM.
 
-- **[Bounce](/dtt/training-modes/bounce/)**  
+- **[Bounce](bounce.md)**  
   Master controlled rhythm with gradual movements in both directions.
 
 !!! tip
@@ -51,8 +51,8 @@ Training sessions are built from segments. Each segment type offers a different 
 
 During training, your device provides real-time feedback through LED colors and on-screen indicators. Learn more about interpreting this feedback:
 
-- **[LED Feedback System](/dtt/technical/led-feedback/)**  
+- **[LED Feedback System](../technical/led-feedback.md)**  
   Understand what the LED colors mean during training.
 
-- **[Pass/Fail Mode](/dtt/faqs/#what-is-passfail-mode)**  
+- **[Pass/Fail Mode](../faqs.md#what-is-passfail-mode)**  
   Add accountability with minimum score thresholds (Ultra).

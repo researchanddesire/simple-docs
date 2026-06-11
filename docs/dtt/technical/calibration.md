@@ -173,9 +173,9 @@ The next time you use that toy, the trainer will prompt you to calibrate again. 
     If you have a keyholder managing your settings, they can adjust your calibration on your behalf.
 
 ## Related guides
-**[Sensor Limits](/dtt/technical/sensor-limits)**
+**[Sensor Limits](sensor-limits.md)**
 
 Technical specifications for the distance sensor.
-**[Software 2.0 Preview](/dtt/software-2.0-preview)**
+**[Software 2.0 Preview](../software-2.0-preview.md)**
 
 Learn about cloud calibration and other new features.

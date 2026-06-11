@@ -102,10 +102,10 @@ If your device shows offline status or the dashboard says "Offline":
     4. If using hotel, corporate, or public Wi-Fi, check if you need to complete a captive portal login
 
     If you see a red dot on multiple different networks, <a href="mailto:support@researchanddesire.com">contact support</a> for further troubleshooting.
-    **[Quick Start](/lockbox/)**
+    **[Quick Start](../index.md)**
 
     Set up Wi‑Fi, pair your device, and start a lock.
-    **[Sleep Mode](/lockbox/device-states/sleep-mode)**
+    **[Sleep Mode](../device-states/sleep-mode.md)**
 
     Understand Automatic vs Deep Sleep and connectivity.
 

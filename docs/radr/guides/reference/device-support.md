@@ -16,7 +16,7 @@ RADR supports Research And Desire devices first, followed by popular third‑par
 - Pending: Not yet implemented; on the roadmap.
 
 !!! tip
-    For the smoothest setup, keep your device firmware up to date and follow the [Quick Start](/radr/guides/getting-started/quick-start/) to pair.
+    For the smoothest setup, keep your device firmware up to date and follow the [Quick Start](../getting-started/quick-start.md) to pair.
 
 !!! info
     Device support is continuously expanding. RADR uses a dynamic device registry that can be updated via firmware updates without changing the core application, allowing new devices to be added more frequently.
@@ -39,7 +39,7 @@ Turn on your target device and ensure Bluetooth is enabled or the device is in p
 
 ### Step 3: Scan with RADR
 
-Follow the [Quick Start](/radr/guides/getting-started/quick-start/) to scan. RADR only lists supported devices; if yours appears, select to connect.
+Follow the [Quick Start](../getting-started/quick-start.md) to scan. RADR only lists supported devices; if yours appears, select to connect.
 
 !!! success
     You can start/stop and change intensity from RADR.

@@ -2,5 +2,5 @@
 
 Technical reference for power behavior, indicators, and feedback.
 
-- [Battery and Power](/radr/Hardware/specifications/battery-and-power/)
-- [Feedback and Indicators](/radr/Hardware/specifications/feedback-and-indicators/)
+- [Battery and Power](battery-and-power.md)
+- [Feedback and Indicators](feedback-and-indicators.md)

@@ -31,7 +31,7 @@ Welcome to Chastity Lockbox. This guide walks you through the first setup steps:
     If you see the main menu, your Lockbox is ready for Wi-Fi setup.
 
 !!! warning
-    If your device does not turn on after charging for 30 minutes, see the [troubleshooting guide](/lockbox/faqs/).
+    If your device does not turn on after charging for 30 minutes, see the [troubleshooting guide](faqs.md).
 
 ## Connect To Wi-Fi
 
@@ -46,7 +46,7 @@ If you are using automatic Bluetooth pairing in Chrome or Edge, Wi-Fi can be con
 !!! warning
     The Lockbox requires a 2.4 GHz Wi-Fi connection. 5 GHz networks are not supported.
 
-For a deeper walkthrough, see [Connect to Wi-Fi](/lockbox/quick-start/wifi-setup/).
+For a deeper walkthrough, see [Connect to Wi-Fi](quick-start/wifi-setup.md).
 
 ## Pair With The Dashboard
 
@@ -58,7 +58,7 @@ Pairing lets you control locks remotely, assign a keyholder, and use dashboard f
 4. Use **Scan for Lockbox** in Chrome or Edge, or enter the pairing code shown on the Lockbox.
 5. Confirm that the device appears in your dashboard.
 
-Need more help? See [Pair your Lockbox](/lockbox/quick-start/pairing/).
+Need more help? See [Pair your Lockbox](quick-start/pairing.md).
 
 ## Start Your First Lock
 
@@ -67,7 +67,7 @@ You can start a lock on the device or from the dashboard.
 - On the device, choose **Lock**, set the duration, and confirm.
 - In the dashboard, use the Chastity Lockbox section to set the duration, breaks, and keyholder rules.
 
-For the dashboard flow, see [Start a lock from the dashboard](/lockbox/quick-start/start-a-lock/).
+For the dashboard flow, see [Start a lock from the dashboard](quick-start/start-a-lock.md).
 
 ## Unlocking And Safety
 
@@ -81,8 +81,8 @@ If you need urgent access, press and hold the **Enter/Lock** button to open the 
 !!! info
     Emergency Unlock ends the current session immediately. Additional dashboard actions or consequences may apply depending on your settings.
 
-If the device fails or has no power, the hardware emergency unlock is the last resort. See [Emergency Unlock](/lockbox/device-states/emergency-unlock/) before using it.
+If the device fails or has no power, the hardware emergency unlock is the last resort. See [Emergency Unlock](device-states/emergency-unlock.md) before using it.
 
 ## What To Read Next
 
-Ready for the full setup flow? Go to [Connect to Wi-Fi](/lockbox/quick-start/wifi-setup/).
+Ready for the full setup flow? Go to [Connect to Wi-Fi](quick-start/wifi-setup.md).

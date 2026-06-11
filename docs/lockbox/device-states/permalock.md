@@ -66,15 +66,15 @@ Even in Permalock mode, you still have release options. Choose the safest option
     Always prioritize your physical and mental well‑being. If you feel unsafe or experience genuine distress, use Emergency Unlock. That is what it’s for.
 
 ## See also
-**[Emergency Unlock](/lockbox/device-states/emergency-unlock)**
+**[Emergency Unlock](emergency-unlock.md)**
 
 How software Emergency Unlock works and what to expect afterward.
-**[How to take a break](/lockbox/using/take-a-break)**
+**[How to take a break](../using/take-a-break.md)**
 
 Temporarily pause a lock session when breaks are allowed by your settings.
-**[Hide the remaining time](/lockbox/using/hiding-time)**
+**[Hide the remaining time](../using/hiding-time.md)**
 
 Play without seeing the countdown while your Keyholder stays informed.
-**[FAQs](/lockbox/faqs)**
+**[FAQs](../faqs.md)**
 
 Answers to common questions about locks, abandonment, and control.

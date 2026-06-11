@@ -71,16 +71,16 @@ Create a temporary hotspot on your phone and connect the Lockbox to it. If it co
     - The dashboard shows the device online after a brief delay
 
 ## Related guides
-**[Quick Start](/lockbox/quick-start/)**
+**[Quick Start](../quick-start/index.md)**
 
 Step‑by‑step setup, including Wi‑Fi requirements and basics.
-**[Sleep Mode](/lockbox/device-states/sleep-mode)**
+**[Sleep Mode](../device-states/sleep-mode.md)**
 
 Understand Automatic vs Deep Sleep and Wi‑Fi behavior.
-**[Restarting Device](/lockbox/device-states/restarting)**
+**[Restarting Device](../device-states/restarting.md)**
 
 How to safely reboot the Lockbox.
-**[Lockbox FAQs](/lockbox/faqs)**
+**[Lockbox FAQs](../faqs.md)**
 
 Connection indicators, setup flow, and common questions.
 

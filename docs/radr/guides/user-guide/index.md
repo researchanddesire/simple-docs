@@ -4,14 +4,14 @@ Use these guides once RADR is powered on and ready to connect.
 
 ## Core Controls
 
-- [Navigation and Controls](/radr/guides/user-guide/navigation-and-controls/)
-- [OSSM Controls](/radr/guides/user-guide/ossm-controls/)
-- [Stroke Patterns](/radr/guides/user-guide/stroke-patterns/)
-- [Lovense Controls](/radr/guides/user-guide/lovense-controls/)
+- [Navigation and Controls](navigation-and-controls.md)
+- [OSSM Controls](ossm-controls.md)
+- [Stroke Patterns](stroke-patterns.md)
+- [Lovense Controls](lovense-controls.md)
 
 ## Setup and Maintenance
 
-- [Device Scanning](/radr/guides/user-guide/device-scanning/)
-- [Settings and Wi-Fi](/radr/guides/user-guide/settings-and-wifi/)
-- [Connecting to Wi-Fi](/radr/guides/user-guide/connecting-to-wifi/)
-- [Updating Your Device](/radr/guides/user-guide/updating-your-device/)
+- [Device Scanning](device-scanning.md)
+- [Settings and Wi-Fi](settings-and-wifi.md)
+- [Connecting to Wi-Fi](connecting-to-wifi.md)
+- [Updating Your Device](updating-your-device.md)

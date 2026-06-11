@@ -77,16 +77,16 @@ If you do not see the Emergency Unlock option, it may be disabled in your lock s
     No. The current session ends immediately and the 24‑hour cooldown starts. You can prepare a new session after the cooldown.
 
 ## Related
-**[Quick Start](/lockbox/quick-start/)**
+**[Quick Start](../quick-start/index.md)**
 
 Overview of setup, locking, taking a break, and emergency unlock.
-**[Restarting Device](/lockbox/device-states/restarting)**
+**[Restarting Device](../device-states/restarting.md)**
 
 How to safely restart if the UI is unresponsive.
-**[Hardware Emergency Unlock](/lockbox/support/emergency-backplate)**
+**[Hardware Emergency Unlock](../support/emergency-backplate.md)**
 
 Destructive fallback method when the software option is unavailable.
-**[FAQs](/lockbox/faqs)**
+**[FAQs](../faqs.md)**
 
 Answers to common Lockbox questions, including abandoning locks and session states.
 

@@ -1,6 +1,6 @@
 # Lockbox FAQs
 
-Short answers to common Chastity Lockbox questions. If you need step-by-step troubleshooting, start with the [Help Center](/lockbox/support/).
+Short answers to common Chastity Lockbox questions. If you need step-by-step troubleshooting, start with the [Help Center](support/index.md).
 
 ## Pricing and Subscriptions
 
@@ -10,7 +10,7 @@ Short answers to common Chastity Lockbox questions. If you need step-by-step tro
     Research and Desire offers an optional service called **Ultra** for additional features and perks.
 
 !!! note "Does my keyholder need to pay for a subscription?"
-    No. Keyholders can create a free dashboard account at [dashboard.researchanddesire.com](https://dashboard.researchanddesire.com) and follow the [Keyholder Guide](/lockbox/quick-start/keyholder-guide/).
+    No. Keyholders can create a free dashboard account at [dashboard.researchanddesire.com](https://dashboard.researchanddesire.com) and follow the [Keyholder Guide](quick-start/keyholder-guide.md).
 
 !!! note "Can I explore the dashboard before purchasing a Lockbox?"
     Yes. You can create a free dashboard account at [dashboard.researchanddesire.com](https://dashboard.researchanddesire.com) and explore the interface before purchasing.
@@ -20,7 +20,7 @@ Short answers to common Chastity Lockbox questions. If you need step-by-step tro
 !!! note "How do I connect my Lockbox to Wi-Fi?"
     If you pair with the automatic Bluetooth method in Chrome or Edge, Wi-Fi setup happens during pairing.
 
-    If you use manual pairing, connect Wi-Fi first from **Settings > Wi-Fi Settings** on the device. See [Connect to Wi-Fi](/lockbox/quick-start/wifi-setup/) for the full walkthrough.
+    If you use manual pairing, connect Wi-Fi first from **Settings > Wi-Fi Settings** on the device. See [Connect to Wi-Fi](quick-start/wifi-setup.md) for the full walkthrough.
 
 !!! note "How do I pair my Lockbox to the dashboard?"
     There are two pairing methods:
@@ -28,7 +28,7 @@ Short answers to common Chastity Lockbox questions. If you need step-by-step tro
     - **Automatic Bluetooth pairing:** Recommended. Use Chrome or Edge from **Settings > Devices** in the dashboard.
     - **Manual pairing code:** Connect the Lockbox to Wi-Fi first, then enter the six-digit pairing code from **Settings > Pairing**.
 
-    See [Pairing](/lockbox/quick-start/pairing/) for the full instructions.
+    See [Pairing](quick-start/pairing.md) for the full instructions.
 
 !!! note "I bought a secondhand Lockbox. How do I pair it to my account?"
     If the previous owner paired the Lockbox to their account, contact [support@researchanddesire.com](mailto:support@researchanddesire.com) for an ownership transfer.
@@ -43,7 +43,7 @@ Short answers to common Chastity Lockbox questions. If you need step-by-step tro
 !!! note "How long does the battery last?"
     The Lockbox battery lasts approximately 24 hours unplugged with normal use. Sleep modes help extend battery life by dimming the screen, turning the screen off, or disconnecting Wi-Fi during deep sleep.
 
-    For longer sessions, keep the device plugged in when possible. See [Sleep Mode](/lockbox/device-states/sleep-mode/) for power-saving details.
+    For longer sessions, keep the device plugged in when possible. See [Sleep Mode](device-states/sleep-mode.md) for power-saving details.
 
 !!! note "Should I keep the Lockbox plugged in?"
     Yes, when you have access to power. Keeping the Lockbox plugged in helps it stay connected to Wi-Fi and responsive to remote keyholder commands.
@@ -53,7 +53,7 @@ Short answers to common Chastity Lockbox questions. If you need step-by-step tro
 !!! note "My Lockbox will not turn on. What should I try first?"
     Connect it to a computer with a USB-C cable that supports data transfer and leave it charging for at least 30 minutes. Then press the **Enter/Lock** button several times.
 
-    If the device is detected as **USB JTAG Serial Debug** or still does not respond, see [Firmware Flashing](/lockbox/support/flashing/) or contact [support@researchanddesire.com](mailto:support@researchanddesire.com).
+    If the device is detected as **USB JTAG Serial Debug** or still does not respond, see [Firmware Flashing](support/flashing.md) or contact [support@researchanddesire.com](mailto:support@researchanddesire.com).
 
 ## Users and Roles
 
@@ -82,7 +82,7 @@ Short answers to common Chastity Lockbox questions. If you need step-by-step tro
     If you accidentally started a self-lock and need partner control, contact support to end the session early. Then start a new lock with your partner assigned as keyholder.
 
 !!! note "How do I assign a keyholder?"
-    Go to **Settings > Partners** in the dashboard and invite another dashboard user to control your devices. See the [Keyholder Guide](/lockbox/quick-start/keyholder-guide/) for the full flow.
+    Go to **Settings > Partners** in the dashboard and invite another dashboard user to control your devices. See the [Keyholder Guide](quick-start/keyholder-guide.md) for the full flow.
 
 ## Lock Sessions
 
@@ -134,7 +134,7 @@ Short answers to common Chastity Lockbox questions. If you need step-by-step tro
 !!! note "What is Public Voting?"
     Public Voting lets other people influence your lock duration through a shareable voting link. Voters can add or subtract a configured amount of time and can vote once every 24 hours.
 
-    See [Public Voting](/lockbox/using/public-voting/) for setup details.
+    See [Public Voting](using/public-voting.md) for setup details.
 
 !!! note "How do I earn XP from the Lockbox?"
     XP from the Lockbox is earned through public voting participation.
@@ -162,25 +162,25 @@ Short answers to common Chastity Lockbox questions. If you need step-by-step tro
 !!! note "What if there is an emergency and I need my key immediately?"
     Use the software emergency unlock when available. On the Lockbox, open the lock menu and select **Emergency Unlock**.
 
-    If software emergency unlock is unavailable, the hardware backplate method is the last resort. See [Emergency Unlock: Break the Backplate](/lockbox/support/emergency-backplate/).
+    If software emergency unlock is unavailable, the hardware backplate method is the last resort. See [Emergency Unlock: Break the Backplate](support/emergency-backplate.md).
 
 !!! note "Can the physical emergency fail-safe be disabled?"
     No. The hardware fail-safe is a physical safety feature built into every Lockbox. It cannot be disabled in software.
 
-    The hardware method is destructive and requires a replacement backplate afterward. Use [software Emergency Unlock](/lockbox/device-states/emergency-unlock/) whenever possible.
+    The hardware method is destructive and requires a replacement backplate afterward. Use [software Emergency Unlock](device-states/emergency-unlock.md) whenever possible.
 
 ## Troubleshooting
 
 !!! note "Dashboard shows offline but my device shows connected. Which guide should I use?"
     First, check whether the device display shows a solid green dot. The dashboard can take up to 60 seconds to update.
 
-    Use [Check Online Status](/lockbox/support/online-status/) to confirm status indicators. If the dashboard and device remain out of sync, use [Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting/).
+    Use [Check Online Status](support/online-status.md) to confirm status indicators. If the dashboard and device remain out of sync, use [Connectivity Troubleshooting](support/connectivity-troubleshooting.md).
 
 !!! note "My lock randomly unlocks or does not sync properly. What should I do?"
-    The device and server may be out of sync. Start with [Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting/), especially the hard reboot with resync steps.
+    The device and server may be out of sync. Start with [Connectivity Troubleshooting](support/connectivity-troubleshooting.md), especially the hard reboot with resync steps.
 
 !!! note "My Lockbox freezes or keeps restarting. What should I do?"
-    Try a hard reset by holding the **Enter/Lock** button for 10 seconds. If freezing or power cycling persists, see [Firmware Flashing](/lockbox/support/flashing/).
+    Try a hard reset by holding the **Enter/Lock** button for 10 seconds. If freezing or power cycling persists, see [Firmware Flashing](support/flashing.md).
 
 !!! note "Why did my Lockbox display the re-lock animation during an active lock session?"
     This is normal. After waking from sleep, the Lockbox verifies that it remains properly locked. You may also see periodic lock verifications during extended sessions.

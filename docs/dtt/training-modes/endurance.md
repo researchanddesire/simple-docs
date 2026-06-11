@@ -102,7 +102,7 @@ Your score is based on how much time you spent in the target zone versus total a
     - Check <a href="/dtt/quick-start/checking-results">Checking Your Results</a> for where to find uploads.
 
 ## Related guides
-**[Repetition Mode](/dtt/training-modes/repetition)**
+**[Repetition Mode](repetition.md)**
 
 Build rhythm and consistency with paced movements.
 **[Points and leaderboards](https://dashboard.researchanddesire.com/leaderboards/points)**

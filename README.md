@@ -88,3 +88,12 @@ The check script uses the same local Python environment as the preview.
 ## Advanced options
 
 If you prefer to manage the environment manually, the scripts in `scripts/` are a good next step. Most contributors should be able to stick with the top-level start and check scripts.
+
+## Hosting
+
+The site is published two ways from this repo:
+
+- Custom domain: <https://docs.researchanddesire.com>
+- GitHub Pages: <https://researchanddesire.github.io/simple-docs/>
+
+Both are built and deployed by the [`Deploy docs to GitHub Pages`](.github/workflows/deploy-docs.yml) workflow, which runs automatically on every push to `main` (and can be run manually from the Actions tab). The workflow builds the site with `mkdocs build --strict` and publishes it via the GitHub Pages Actions deployment.

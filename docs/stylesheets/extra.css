@@ -31,19 +31,6 @@
   font-weight: 600;
 }
 
-.md-typeset > p:first-child:has(> a[href="/"]:first-child) {
-  color: var(--md-default-fg-color--light);
-  font-size: 0.68rem;
-  font-weight: 700;
-  letter-spacing: 0.04em;
-  margin-bottom: 1.1rem;
-  text-transform: uppercase;
-}
-
-.md-typeset > p:first-child:has(> a[href="/"]:first-child) a {
-  color: var(--md-accent-fg-color);
-}
-
 .md-nav__link--active,
 .md-nav__link:hover {
   color: var(--md-accent-fg-color);

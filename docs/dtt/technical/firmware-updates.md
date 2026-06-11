@@ -164,9 +164,9 @@ Updates and changes are communicated through:
 - The <a href="/dtt/software-2.0-preview">Software 2.0 Preview</a> page
 
 ## Related guides
-**[Software 2.0 Preview](/dtt/software-2.0-preview)**
+**[Software 2.0 Preview](../software-2.0-preview.md)**
 
 Current beta features and roadmap.
-**[Wi-Fi Setup](/dtt/quick-start/pairing/wifi-setup)**
+**[Wi-Fi Setup](../quick-start/pairing/wifi-setup.md)**
 
 Connect your trainer for updates.

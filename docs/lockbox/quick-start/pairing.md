@@ -60,7 +60,7 @@ Once you see the confirmation message, your Lockbox is paired and ready to use. 
 ## Option 2: Manual pairing (pairing code)
 
 Use this method if you're on Firefox, Safari, or any browser that doesn't support Web Bluetooth. Your Lockbox must already be connected to WiFi before you begin.
-**[Connect to WiFi first](/lockbox/quick-start/wifi-setup)**
+**[Connect to WiFi first](wifi-setup.md)**
 
 If your Lockbox isn't on WiFi yet, complete Wi-Fi setup before continuing.
 

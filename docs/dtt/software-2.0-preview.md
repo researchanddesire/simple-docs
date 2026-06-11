@@ -176,12 +176,12 @@ Store up to 100 segments locally and upload them when you reconnect.
 
 Learn what’s included in Ultra and how to upgrade.
 
-**[Deepthroat Trainer FAQs](/dtt/faqs)**
+**[Deepthroat Trainer FAQs](faqs.md)**
 
 Answers to common questions about modes, segments, and more.
 
 !!! tip
     Want community-made training? Explore <strong>Shareable Templates</strong> to browse and import public templates.
-    **[Browse Shareable Templates](/dtt/quick-start/templates)**
+    **[Browse Shareable Templates](quick-start/templates.md)**
 
 Find templates with creator info, difficulty, and descriptions.

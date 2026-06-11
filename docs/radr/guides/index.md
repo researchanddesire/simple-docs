@@ -2,8 +2,8 @@
 
 Browse RADR guides by task.
 
-- [Getting Started](/radr/guides/getting-started/)
-- [User Guide](/radr/guides/user-guide/)
-- [Reference](/radr/guides/reference/)
-- [Open Source](/radr/guides/housekeeping/open-source/)
-- [Changelog](/radr/guides/changelog/)
+- [Getting Started](getting-started/index.md)
+- [User Guide](user-guide/index.md)
+- [Reference](reference/index.md)
+- [Open Source](housekeeping/open-source/index.md)
+- [Changelog](changelog/index.md)

@@ -3,21 +3,21 @@
 Once your lockbox is paired and connected, you're ready to explore its full capabilities. This section covers everything you need to know about operating your lockbox during active sessions.
 
 ## Essential operations
-**[Understanding status icons](./symbols)**
+**[Understanding status icons](symbols.md)**
 
 Learn what each icon on your lockbox display means, including lock status, Wi-Fi connectivity, and battery level.
-**[Emergency unlock](./emergency-unlock)**
+**[Emergency unlock](emergency-unlock.md)**
 
 Access your key immediately when you need it using the software emergency unlock feature.
-**[Taking a break](./take-a-break)**
+**[Taking a break](take-a-break.md)**
 
 Temporarily pause your session without ending it—useful for hygiene, medical needs, or other situations.
-**[Hiding remaining time](./hiding-time)**
+**[Hiding remaining time](hiding-time.md)**
 
 Add uncertainty to your experience by hiding how much time remains in your session.
 
 ## Social features
-**[Public voting](./public-voting)**
+**[Public voting](public-voting.md)**
 
 Let others vote to increase or decrease your lock time for added excitement and community engagement.
 
@@ -38,9 +38,9 @@ During an active session, you can:
 
 If something isn't working as expected:
 
-1. Check the [status icons](./symbols) to diagnose connectivity or lock issues
-2. Use the [emergency unlock](./emergency-unlock) if you need immediate access
-3. Visit the [support section](../support) for troubleshooting guides
+1. Check the [status icons](symbols.md) to diagnose connectivity or lock issues
+2. Use the [emergency unlock](emergency-unlock.md) if you need immediate access
+3. Visit the [support section](../support/index.md) for troubleshooting guides
 
 !!! warning
     Always familiarize yourself with the emergency unlock procedures before starting a session. Having a backup plan ensures you can access your key in any situation.

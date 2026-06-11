@@ -14,7 +14,7 @@ When your trainer encounters an issue, it displays an error code or message on s
 1. Check your router's firewall settings
 2. Ensure the device isn't blocked in access control
 3. Try connecting via mobile hotspot to test
-**[Full E-DTT-1 Guide](/dtt/errors/e-dtt-1)**
+**[Full E-DTT-1 Guide](../errors/e-dtt-1.md)**
 
 Detailed troubleshooting steps for this error.
 
@@ -35,7 +35,7 @@ These messages appear during the calibration process:
 
 !!! tip
     A larger range between positions gives you more room for accurate tracking and graduated training segments. Aim for at least 5–10 cm of usable range if possible.
-    **[Calibration Guide](/dtt/technical/calibration)**
+    **[Calibration Guide](calibration.md)**
 
 Detailed instructions for proper calibration technique.
 
@@ -93,7 +93,7 @@ This error has different causes depending on when it appears:
 2. Long-press during startup to enter Wi-Fi setup mode
 3. After connecting, the device should update and restart
 4. Try starting a session again after the update completes
-**[Wi-Fi Setup](/dtt/quick-start/pairing/wifi-setup)**
+**[Wi-Fi Setup](../quick-start/pairing/wifi-setup.md)**
 
 Connect your trainer to receive firmware updates.
 

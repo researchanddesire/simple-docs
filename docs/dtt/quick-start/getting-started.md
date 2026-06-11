@@ -19,13 +19,13 @@ Welcome to the Deepthroat Trainer (DTT). In a few minutes you'll mount the devic
     If you're brand new, begin with the lowest difficulty and short segments. Increase intensity as your confidence and technique improve.
 
 ## What you'll learn
-**[Pair your device](/dtt/quick-start/pairing/pairing-guide)**
+**[Pair your device](pairing/pairing-guide.md)**
 
 Connect your trainer to the dashboard so results are saved.
-**[Choose training modes](/dtt/training-modes/)**
+**[Choose training modes](../training-modes/index.md)**
 
 Pick a mode that matches your current goal and comfort.
-**[Review results](/dtt/quick-start/checking-results)**
+**[Review results](checking-results.md)**
 
 See grades, points, and progress after each session.
 

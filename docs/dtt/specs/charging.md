@@ -60,9 +60,9 @@ If your Trainer isn’t powering on, work through these steps:
   
 !!! info
     Need help? Visit <a href="/dtt/faqs">Deepthroat Trainer FAQs</a> or email support@researchanddesire.com and we’ll get you sorted out.
-    **[Pair your Trainer](/dtt/quick-start/pairing/pairing-guide)**
+    **[Pair your Trainer](../quick-start/pairing/pairing-guide.md)**
 
 Step‑by‑step guide to pair your device with your dashboard account.
-**[Accessory port](/dtt/specs/accessory-port)**
+**[Accessory port](accessory-port.md)**
 
 Learn about the 3.5 mm accessory port and compatible add‑ons.

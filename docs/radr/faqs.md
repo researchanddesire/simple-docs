@@ -32,7 +32,7 @@ Find answers to common questions about setting up, using, and troubleshooting yo
     | Right Bumper (`>>`) | Switch to next mode |
 
     The modes cycle through: **Depth → Sensation → Stroke → Depth**
-    **[OSSM Controls Guide](/radr/guides/user-guide/ossm-controls)**
+    **[OSSM Controls Guide](guides/user-guide/ossm-controls.md)**
 
     Learn more about controlling your OSSM with RADR.
 
@@ -45,7 +45,7 @@ Find answers to common questions about setting up, using, and troubleshooting yo
     3. Wait for the scan to complete (about 5 seconds)
     4. Select your OSSM from the device list
     5. Wait for the connection confirmation sound
-    **[Quick Start Guide](/radr/guides/getting-started/quick-start)**
+    **[Quick Start Guide](guides/getting-started/quick-start.md)**
 
     Step-by-step instructions for getting started.
 
@@ -56,7 +56,7 @@ Find answers to common questions about setting up, using, and troubleshooting yo
     2. **Power cycle both devices** — Turn both off, wait 10 seconds, then power on
     3. **Check OSSM firmware** — Ensure your OSSM is running compatible firmware
     4. **Disable other Bluetooth connections** — Disconnect other devices that may be connected to your OSSM
-    **[Device Support](/radr/guides/reference/device-support)**
+    **[Device Support](guides/reference/device-support.md)**
 
     See which devices are compatible with RADR.
 
@@ -65,13 +65,13 @@ Find answers to common questions about setting up, using, and troubleshooting yo
 
     **To use RADR with your OSSM:**
 
-    1. Update your OSSM firmware to version 2.0.0 or later using the [Web Flasher](/ossm/tools/)
+    1. Update your OSSM firmware to version 2.0.0 or later using the [Web Flasher](../ossm/tools.md)
     2. Power on both devices
     3. RADR will automatically detect and connect to your OSSM
 
     !!! note
         The main differences between board versions relate to motor compatibility (v2.3 includes a capacitor for Gold Motor support) rather than RADR functionality. All board versions support RADR once the firmware is updated.
-        **[Flash your OSSM](/ossm/tools/)**
+        **[Flash your OSSM](../ossm/tools.md)**
 
     Update your OSSM firmware for RADR compatibility.
 
@@ -85,7 +85,7 @@ Find answers to common questions about setting up, using, and troubleshooting yo
 
 !!! note "How long does the battery last?"
     RADR typically provides 4+ hours of active use on a full charge. Battery life varies based on screen brightness, vibration feedback usage, and connection activity.
-    **[Battery & Power](/radr/Hardware/specifications/battery-and-power)**
+    **[Battery & Power](Hardware/specifications/battery-and-power.md)**
 
     Technical details about battery monitoring and charging.
 

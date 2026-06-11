@@ -3,29 +3,29 @@
 Your Chastity Lockbox operates in several distinct states, each designed to provide specific functionality while maintaining security and safety. This section covers everything you need to know about how your device behaves in different situations.
 
 ## Operational states
-**[Calibration](./calibration)**
+**[Calibration](calibration.md)**
 
 Automatic setup process that configures motor orientation, lock detection, and power settings. Typically pre-configured when you receive your device.
 
-**[Sleep Mode](./sleep-mode)**
+**[Sleep Mode](sleep-mode.md)**
 
 Power-saving modes that extend battery life during periods of inactivity. Choose between automatic sleep and deep sleep based on your needs.
 
 ## Lock modes
-**[Take a Break](./take-a-break)**
+**[Take a Break](take-a-break.md)**
 
 Scheduled temporary unlocks for hygiene and health maintenance during extended lock periods. Configured by your Keyholder.
 
-**[Permalock](./permalock)**
+**[Permalock](permalock.md)**
 
 Indefinite lock mode with no time restrictions. The device remains locked until your Keyholder grants release.
 
 ## Safety & maintenance
-**[Emergency Unlock](./emergency-unlock)**
+**[Emergency Unlock](emergency-unlock.md)**
 
 Safety feature for urgent situations when you need immediate access to your keys and your Keyholder is unavailable.
 
-**[Restarting Device](./restarting)**
+**[Restarting Device](restarting.md)**
 
 How to safely restart your device when needed. Your lock state is preserved through restarts.
 

@@ -6,7 +6,7 @@ Stay up to date with the latest changes to the Chastity Lockbox. This changelog 
 
 ## Placeholder Release
 
-This is a placeholder entry for future Chastity Lockbox updates. See the [detailed release notes](/lockbox/changelog/v0.0.0) for more information.
+This is a placeholder entry for future Chastity Lockbox updates. See the [detailed release notes](v0.0.0.md) for more information.
 
 ### v1.17.47
 - **Automated changelog generation** — Version bump workflow now automatically generates changelog entries using AI

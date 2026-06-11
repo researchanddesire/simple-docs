@@ -105,6 +105,6 @@ Your RADR is now ready to receive updates!
 ## Next Steps
 
 Now that your RADR is connected to WiFi, you can check for updates:
-**[Updating Your Device](/radr/guides/user-guide/updating-your-device/)**
+**[Updating Your Device](updating-your-device.md)**
 
 Learn how to check for and install the latest updates.

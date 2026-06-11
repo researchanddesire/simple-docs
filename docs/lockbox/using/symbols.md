@@ -71,7 +71,7 @@ This symbol indicates your device is not connected to any Wi-Fi network. This ty
 - Your lockbox is brand new and has never been configured for Wi-Fi
 - Your lockbox was previously connected but is now out of range of the saved network
 
-In either case, you'll need to configure Wi-Fi by following the [Wi-Fi setup guide](../quick-start/wifi-setup).
+In either case, you'll need to configure Wi-Fi by following the [Wi-Fi setup guide](../quick-start/wifi-setup.md).
 
 ### Wi-Fi connected
 
@@ -82,7 +82,7 @@ In either case, you'll need to configure Wi-Fi by following the [Wi-Fi setup gui
 This symbol confirms your device is connected to Wi-Fi and can access the internet.
 
 !!! note
-    Wi-Fi connectivity alone doesn't mean your device can receive commands. You also need to pair your device and connect it to the dashboard. Follow the [pairing guide](../quick-start/pairing) for instructions.
+    Wi-Fi connectivity alone doesn't mean your device can receive commands. You also need to pair your device and connect it to the dashboard. Follow the [pairing guide](../quick-start/pairing.md) for instructions.
 
 Check the status indicator in the bottom-left corner of the Wi-Fi icon to see if your device is ready to receive commands.
 
@@ -99,7 +99,7 @@ A flashing yellow indicator means your device is connected to Wi-Fi but not yet 
 
 This can happen if:
 
-- **Your device hasn't been paired** — Follow the [pairing guide](../quick-start/pairing) to complete setup.
+- **Your device hasn't been paired** — Follow the [pairing guide](../quick-start/pairing.md) to complete setup.
 - **Your device just powered on** — Server connection typically takes 15–30 seconds, but can take up to 2 minutes depending on your location and network conditions.
 - **Server connectivity issue** — Temporary server maintenance or network routing issues.
 

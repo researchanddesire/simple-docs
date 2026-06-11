@@ -28,11 +28,11 @@ The Deepthroat Trainer features:
 
 ## In this section
 
-- **[Charging your battery](/dtt/specs/charging/)**  
+- **[Charging your battery](charging.md)**  
   Learn how to charge your device, check battery status, and troubleshoot power issues.
 
-- **[Accessory port](/dtt/specs/accessory-port/)**  
+- **[Accessory port](accessory-port.md)**  
   Technical details about the 3.5mm TRRS jack for connecting reward accessories.
 
 !!! info
-    Looking for setup instructions? Head to the [Quick Start guide](/dtt/) to pair your device and begin training.
+    Looking for setup instructions? Head to the [Quick Start guide](../index.md) to pair your device and begin training.

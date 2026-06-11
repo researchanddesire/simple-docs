@@ -95,18 +95,18 @@ Toggle **Disable Emergency Unlock** and confirm.
     Emergency Unlock works locally on the device and does not require an internet connection. If Wi‑Fi is down, you can still use the device menu.
 
 ## Related guides
-**[Quick Start](/lockbox/quick-start)**
+**[Quick Start](../quick-start/index.md)**
 
 Connect, pair, and learn the basics, including emergency options.
 
-**[Hardware Emergency Unlock](/lockbox/support/emergency-backplate)**
+**[Hardware Emergency Unlock](../support/emergency-backplate.md)**
 
 Destructive backplate method for when software unlock isn't possible.
 
-**[Restarting your device](/lockbox/device-states/restarting)**
+**[Restarting your device](restarting.md)**
 
 Safe restart steps and what to expect after reboot.
 
-**[FAQs](/lockbox/faqs)**
+**[FAQs](../faqs.md)**
 
 Common questions about locks, control, and emergency scenarios.

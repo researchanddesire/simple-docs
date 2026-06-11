@@ -15,7 +15,7 @@ RADR has been tested with the following Lovense devices:
 | Lovense Hyphy | Tested |
 | Lovense Ferri | Tested |
 
-Many other Lovense devices are supported but untested. See [Device Support](/radr/guides/reference/device-support/) for the complete list.
+Many other Lovense devices are supported but untested. See [Device Support](../reference/device-support.md) for the complete list.
 
 ## Control Screen Overview
 

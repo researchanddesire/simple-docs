@@ -27,13 +27,13 @@ Follow these guides in order to get your Deep Throat Trainer up and running.
 - **[Create your account](https://dashboard.researchanddesire.com/quick-start/create-account)**  
   Register once to access the dashboard, results, templates, and partner features.
 
-- **[Pair your trainer](/dtt/quick-start/pairing/pairing-guide/)**  
+- **[Pair your trainer](quick-start/pairing/pairing-guide.md)**  
   Link your device to your account using the on-screen Trainer ID.
 
-- **[Connect to Wi‑Fi](/dtt/quick-start/pairing/wifi-setup/)**  
+- **[Connect to Wi‑Fi](quick-start/pairing/wifi-setup.md)**  
   Get online to download training settings and upload results.
 
-- **[Check your results](/dtt/quick-start/checking-results/)**  
+- **[Check your results](quick-start/checking-results.md)**  
   View grades, points, and leaderboard position after each session.
 
 ## Quick Overview
@@ -46,14 +46,14 @@ Already familiar with the basics? Here's a condensed checklist.
 
 ### Step 2: Pair your trainer
 
-Power on your Deep Throat Trainer, note the Trainer ID shown during boot, and [enter it in the dashboard](/dtt/quick-start/pairing/pairing-guide/) under Settings → Devices.
+Power on your Deep Throat Trainer, note the Trainer ID shown during boot, and [enter it in the dashboard](quick-start/pairing/pairing-guide.md) under Settings → Devices.
 
 !!! info
     If the device is already paired to another account, have the current owner unpair it first. See the [device ownership policy](https://dashboard.researchanddesire.com/faqs/ownership-disputes) for transfer requests.
 
 ### Step 3: Connect to Wi‑Fi
 
-Hold the button from the home screen to enter Settings, then [follow the Wi‑Fi setup guide](/dtt/quick-start/pairing/wifi-setup/) to connect to your 2.4 GHz network.
+Hold the button from the home screen to enter Settings, then [follow the Wi‑Fi setup guide](quick-start/pairing/wifi-setup.md) to connect to your 2.4 GHz network.
 
 !!! warning
     The trainer only supports 2.4 GHz Wi‑Fi. If your router combines 2.4 GHz and 5 GHz under one name, create a separate 2.4 GHz SSID or use your router's IoT/guest network.
@@ -63,16 +63,16 @@ Hold the button from the home screen to enter Settings, then [follow the Wi‑Fi
 Choose a compatible toy, apply water‑based lubricant, and position the trainer on a stable surface. From the dashboard, select a training template or start a freeform session, then fetch settings to your device and press Start.
 
 !!! tip
-    See [using different toys](/dtt/quick-start/using-toys/) for toy compatibility and setup tips.
+    See [using different toys](quick-start/using-toys.md) for toy compatibility and setup tips.
 
 ### Step 5: Review your results
 
-After training, [check your results](/dtt/quick-start/checking-results/) in the dashboard to see grades, points earned, and leaderboard position.
+After training, [check your results](quick-start/checking-results.md) in the dashboard to see grades, points earned, and leaderboard position.
 
 ## Common Questions
 
 !!! note "Do I need Wi‑Fi for every session?"
-    The trainer works best online so it can fetch the latest training settings and upload results. If you run a session while offline, results won't upload until the trainer reconnects. See [connectivity FAQs](/dtt/faqs#connectivity) for details.
+    The trainer works best online so it can fetch the latest training settings and upload results. If you run a session while offline, results won't upload until the trainer reconnects. See [connectivity FAQs](faqs.md#connectivity) for details.
 
 !!! note "Partner features and competition"
     Invite a partner to view your results and hold you accountable, and use points to compete on leaderboards. Learn how scoring works in the [points guide](https://dashboard.researchanddesire.com/leaderboards/points).
@@ -87,4 +87,4 @@ After training, [check your results](/dtt/quick-start/checking-results/) in the 
 
 ## What To Read Next
 
-Ready for the full setup flow? Go to [Pair your Trainer](/dtt/quick-start/pairing/pairing-guide/).
+Ready for the full setup flow? Go to [Pair your Trainer](quick-start/pairing/pairing-guide.md).

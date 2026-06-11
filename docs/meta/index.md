@@ -1,5 +1,5 @@
 # Index of meta
 
-- [contributing](/meta/contributing/)
-- [getting-started](/meta/getting-started/)
-- [writing-guide](/meta/writing-guide/)
+- [contributing](contributing.md)
+- [getting-started](getting-started.md)
+- [writing-guide](writing-guide.md)

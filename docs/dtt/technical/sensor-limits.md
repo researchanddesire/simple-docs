@@ -88,9 +88,9 @@ Very small movements (less than 0.8 cm) may not register as separate strokes. Th
     Movements smaller than 0.8 cm may not register. This is by design to prevent false readings from vibration or minor adjustments.
 
 ## Related guides
-**[LED Feedback](/dtt/technical/led-feedback)**
+**[LED Feedback](led-feedback.md)**
 
 How LED colors indicate your position status.
-**[Calibration](/dtt/technical/calibration)**
+**[Calibration](calibration.md)**
 
 Step-by-step guide to calibrating your trainer.

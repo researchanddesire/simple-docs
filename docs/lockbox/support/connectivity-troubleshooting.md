@@ -10,11 +10,11 @@ Your Lockbox shows a green dot when it has both WiFi and MQTT broker connectivit
 
 1. **Wait up to 60 seconds** — The dashboard polls for device status periodically and may lag behind the actual connection state.
 2. **Hard reboot with resync** — Force the device to re-establish its connection and pull the latest lock state from the server.
-**[Hard Reboot Procedure](/lockbox/technical/button-controls#hard-reboot-with-resync)**
+**[Hard Reboot Procedure](../technical/button-controls.md#hard-reboot-with-resync)**
 
 Press and hold the Enter/Lock button for 10 seconds to force a full resync.
 
-3. **Check for alpha firmware** — If you're enrolled in the alpha program, alpha firmware can occasionally cause sync issues. Consider [returning to stable firmware](/lockbox/support/alpha-updates#leaving-the-alpha-program) using the web flasher.
+3. **Check for alpha firmware** — If you're enrolled in the alpha program, alpha firmware can occasionally cause sync issues. Consider [returning to stable firmware](alpha-updates.md#leaving-the-alpha-program) using the web flasher.
 4. **Remove and re-pair** — As a last resort, remove the device from your account (Settings → Devices), then re-pair it using the pairing code on your Lockbox.
 
 !!! note
@@ -33,7 +33,7 @@ If your Lockbox unlocks unexpectedly or lock commands from the dashboard aren't 
 
 **How to fix:**
 
-Perform a [hard reboot with resync](/lockbox/technical/button-controls#hard-reboot-with-resync) by pressing and holding the **Enter/Lock** button for 10 seconds. This forces the device to restart, reconnect to WiFi, and pull the latest lock state from the server.
+Perform a [hard reboot with resync](../technical/button-controls.md#hard-reboot-with-resync) by pressing and holding the **Enter/Lock** button for 10 seconds. This forces the device to restart, reconnect to WiFi, and pull the latest lock state from the server.
 
 !!! note
     If the issue persists after resyncing, contact [support@researchanddesire.com](mailto:support@researchanddesire.com) with your username and a description of the behavior.
@@ -44,14 +44,14 @@ Perform a [hard reboot with resync](/lockbox/technical/button-controls#hard-rebo
 
 Alpha firmware receives early-access features that may occasionally introduce sync regressions. If you're experiencing connectivity or sync problems while enrolled in the alpha program:
 
-1. **Hard reboot with resync** — Press and hold the **Enter/Lock** button for 10 seconds to [force a resync](/lockbox/technical/button-controls#hard-reboot-with-resync)
+1. **Hard reboot with resync** — Press and hold the **Enter/Lock** button for 10 seconds to [force a resync](../technical/button-controls.md#hard-reboot-with-resync)
 2. **Abandon and restart the lock** — If your keyholder can access the dashboard, have them abandon the stuck session so you can start a new one
-3. **Reflash to stable firmware** — If issues persist, use the web flasher to [return to stable firmware](/lockbox/support/alpha-updates#leaving-the-alpha-program). After flashing, you may need to remove the device from your account (Settings → Devices) and re-pair it
-**[Alpha Updates](/lockbox/support/alpha-updates)**
+3. **Reflash to stable firmware** — If issues persist, use the web flasher to [return to stable firmware](alpha-updates.md#leaving-the-alpha-program). After flashing, you may need to remove the device from your account (Settings → Devices) and re-pair it
+**[Alpha Updates](alpha-updates.md)**
 
 How to enroll in or leave the alpha program.
 
-**[Firmware Flashing](/lockbox/support/flashing)**
+**[Firmware Flashing](flashing.md)**
 
 Step-by-step firmware flashing instructions.
 

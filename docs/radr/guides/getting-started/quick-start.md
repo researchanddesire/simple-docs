@@ -13,7 +13,7 @@ RADR started as a wireless, user-friendly controller for the OSSM (Open Source S
 
 This guide helps you pair your RADR with the OSSM and get playing in minutes. The same process applies to other supported devices like the Lovense Domi 2.
 
-See [Device Support](/radr/guides/reference/device-support/) for the complete list of supported Bluetooth devices.
+See [Device Support](../reference/device-support.md) for the complete list of supported Bluetooth devices.
 
 ## Getting started
 
@@ -25,7 +25,7 @@ See [Device Support](/radr/guides/reference/device-support/) for the complete li
 - No other apps or controllers currently connected to the Bluetooth device
 
 !!! note
-    RADR only connects to supported devices. See [Device Support](/radr/guides/reference/device-support/) for details.
+    RADR only connects to supported devices. See [Device Support](../reference/device-support.md) for details.
 
 ### Remote layout
 
@@ -71,14 +71,14 @@ Flip the power switch to the right (toward the USB‑C port).
 !!! warning
     Only one controller/app can be connected to a Bluetooth device at a time. Close vendor apps (e.g., Lovense) before pairing with RADR.
 
-Check [Device Support](/radr/guides/reference/device-support/) to confirm which devices are compatible with RADR.
+Check [Device Support](../reference/device-support.md) to confirm which devices are compatible with RADR.
 
 ### Pairing with the OSSM
 
 ### Step 4: Update your OSSM firmware
 
 Ensure your OSSM is running firmware 2.0.0 or higher.
-**[Flashing your OSSM](/ossm/tools/)**
+**[Flashing your OSSM](../../../ossm/tools.md)**
 
 Follow our firmware update guide if you need to update your OSSM.
 
@@ -222,12 +222,12 @@ Once you've completed setup, you should have:
 
 Continue with:
 
-- [OSSM Controls](/radr/guides/user-guide/ossm-controls/) to learn about speed, depth, sensation, and stroke modes.
-- [Stroke Patterns](/radr/guides/user-guide/stroke-patterns/) to explore the 7 built-in motion patterns.
-- [Navigation Guide](/radr/guides/user-guide/navigation-and-controls/) for buttons, menus, and screen navigation.
-- [Device Support](/radr/guides/reference/device-support/) to view all compatible Bluetooth devices.
-- [Settings and WiFi](/radr/guides/user-guide/settings-and-wifi/) to configure WiFi and access device settings.
-- [Firmware Updates](/ossm/tools/) to keep your devices up to date.
+- [OSSM Controls](../user-guide/ossm-controls.md) to learn about speed, depth, sensation, and stroke modes.
+- [Stroke Patterns](../user-guide/stroke-patterns.md) to explore the 7 built-in motion patterns.
+- [Navigation Guide](../user-guide/navigation-and-controls.md) for buttons, menus, and screen navigation.
+- [Device Support](../reference/device-support.md) to view all compatible Bluetooth devices.
+- [Settings and WiFi](../user-guide/settings-and-wifi.md) to configure WiFi and access device settings.
+- [Firmware Updates](../../../ossm/tools.md) to keep your devices up to date.
 
 Enjoy your Research And Desire Wireless Remote—designed for seamless, intuitive control across the RAD ecosystem.
 

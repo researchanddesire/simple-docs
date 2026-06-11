@@ -55,9 +55,9 @@ Once enabled, all time displays hide across the dashboard and on your physical d
     Yes. Once your lock session completes, you can see the full history including all time information in your activity log.
 
 ## Related Pages
-**[Symbols on the Lockbox](./symbols)**
+**[Symbols on the Lockbox](symbols.md)**
 
 Learn what the icons and indicators on your lockbox display mean.
-**[How to Take a Break](./take-a-break)**
+**[How to Take a Break](take-a-break.md)**
 
 Understand how to pause your lock session when needed.

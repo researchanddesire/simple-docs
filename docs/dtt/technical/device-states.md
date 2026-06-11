@@ -140,9 +140,9 @@ Power On → Welcome → Preflight → [Update if available]
 | Final | Play again | — |
 
 ## Related guides
-**[Button Controls](/dtt/technical/button-controls)**
+**[Button Controls](button-controls.md)**
 
 Complete guide to button interactions.
-**[Error Codes](/dtt/technical/error-codes)**
+**[Error Codes](error-codes.md)**
 
 Troubleshoot error messages.

@@ -1,7 +1,7 @@
 # Connect Your Lockbox to Wi-Fi
 
 !!! info
-    **Using automatic Bluetooth pairing?** You can skip this guide entirely — WiFi setup is handled for you during the pairing process. See [Pairing Your Lockbox](/lockbox/quick-start/pairing) to get started.
+    **Using automatic Bluetooth pairing?** You can skip this guide entirely — WiFi setup is handled for you during the pairing process. See [Pairing Your Lockbox](pairing.md) to get started.
 
 ## Video Walkthrough
 

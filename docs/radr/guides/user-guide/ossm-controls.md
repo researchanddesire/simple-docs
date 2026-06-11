@@ -134,7 +134,7 @@ In Pattern Mode:
 - Press the right button to select a pattern
 - Press the left button to cancel and return
 
-See [Stroke Patterns](/radr/guides/user-guide/stroke-patterns/) for details on each pattern.
+See [Stroke Patterns](stroke-patterns.md) for details on each pattern.
 
 ## Linear Rail Graph
 

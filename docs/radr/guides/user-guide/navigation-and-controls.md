@@ -133,7 +133,7 @@ Once connected, you enter the device control screen. The layout varies by device
 - Single encoder dial for vibration intensity
 - STOP button in the center
 
-See [OSSM Controls](/radr/guides/user-guide/ossm-controls/) or [Lovense Controls](/radr/guides/user-guide/lovense-controls/) for device-specific details.
+See [OSSM Controls](ossm-controls.md) or [Lovense Controls](lovense-controls.md) for device-specific details.
 
 ### Device Menu Screen
 
