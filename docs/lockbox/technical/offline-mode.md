@@ -2,6 +2,9 @@
 
 Your Chastity Lockbox is designed to function both online and offline. This guide explains what works without WiFi, what requires connectivity, and how the device handles transitions between online and offline states.
 
+!!! info
+    For firmware/hardware details (storage persistence, dashboard sync payloads, and reconnection timing), see the developer docs: https://dev.researchanddesire.com/lockbox/hardware/state-and-sync/
+
 ## What works offline
 
 These features function fully without any internet connection:
@@ -85,13 +88,11 @@ Your device preserves its state across:
 
 The following data persists:
 
-| Data | Storage |
-|------|---------|
-| Lock state (locked/unlocked) | Non-volatile memory |
-| Lock end time | Non-volatile memory |
-| Session settings | Non-volatile memory |
-| WiFi credentials | Non-volatile memory |
-| Calibration data | Non-volatile memory |
+- Lock state (locked/unlocked)
+- Lock end time
+- Session settings
+- WiFi credentials
+- Calibration data
 
 !!! note
     Even if your device loses power completely, it will return to its locked state when powered on.
@@ -101,7 +102,7 @@ The following data persists:
 When WiFi disconnects during operation:
 
 1. **Immediate**: Device continues operating normally
-2. **Every 30 seconds**: Automatic reconnection attempt
+2. **Automatically**: The device retries the connection on its own
 3. **On reconnection**: Syncs state with dashboard
 
 ### Manual WiFi setup
@@ -118,7 +119,7 @@ This opens the configuration portal without affecting your lock state.
 
 - Lock timer continues normally
 - "Connecting" indicator shows on status bar
-- Auto-reconnect attempts every 30 seconds
+- Auto-reconnect attempts run automatically in the background
 - Lock unlocks when timer expires (no WiFi needed)
 
 ### Scenario 2: Starting lock without WiFi
@@ -144,28 +145,12 @@ This opens the configuration portal without affecting your lock state.
 - On wake, WiFi reconnects automatically
 - Pending dashboard commands received
 
-## Dashboard sync details
+## Dashboard sync
 
-When online, your device periodically syncs with the dashboard:
-
-### Outgoing (device → dashboard)
-
-- Lock state changes
-- Button presses
-- Sensor readings
-- Emergency unlock usage
-- Break timing
-
-### Incoming (dashboard → device)
-
-- Lock commands
-- Unlock commands
-- Break schedule updates
-- Session setting changes
-- Time display preferences
+When online, your device keeps in sync with the dashboard—sending updates such as lock state changes and receiving commands such as lock, unlock, and break schedule updates. Commands typically arrive within seconds when online.
 
 !!! info
-    Sync happens via MQTT for real-time responsiveness. Commands typically arrive within seconds when online.
+    For the exact data sent and received and the underlying protocol, see the developer docs: https://dev.researchanddesire.com/lockbox/hardware/state-and-sync/
 
 ## Troubleshooting offline issues
 !!! note "Time remaining not showing"

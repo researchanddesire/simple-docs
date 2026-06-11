@@ -49,17 +49,13 @@ Press and hold the Enter/Lock button (the right button) until the device acknowl
 
 ### Step 2: Motor calibration
 
-The device displays "Calibrating Motor" and automatically tests the locking mechanism:
-
-1. The motor attempts to lock
-2. Sensors verify the lock position
-3. The motor attempts to unlock
-4. Sensors verify the unlock position
-
-This determines if the motor direction needs to be inverted for your hardware.
+The device displays "Calibrating Motor" and automatically tests the locking mechanism by locking and unlocking once to learn how your hardware is configured.
 
 !!! warning
     Do not turn off the device during motor calibration. The process takes approximately 6 seconds.
+
+!!! info
+    For firmware/hardware details (motor/button orientation flags, the sensor-verified lock/unlock cycle, and how calibration is stored), see the developer docs: https://dev.researchanddesire.com/lockbox/hardware/state-and-sync/
 
 ### Step 3: Automatic restart
 

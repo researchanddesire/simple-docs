@@ -39,7 +39,7 @@ These messages appear during the calibration process:
 
 Detailed instructions for proper calibration technique.
 
-### "Error sending results" (with code)
+### "Error sending results"
 
 **Cause**: The device attempted to upload calibration or session data but couldn't reach the server. This is expected when training offline.
 
@@ -47,9 +47,6 @@ Detailed instructions for proper calibration technique.
 - If training offline intentionally, this message is informational—press the button to continue
 - If you expected to be online, check your Wi-Fi connection
 - Results will sync when you reconnect to the internet
-
-!!! note
-    Error codes like "69 0" are internal status codes. When offline, these errors don't prevent training—they simply indicate that data couldn't be uploaded at that moment.
 
 ## Training Errors
 
@@ -100,28 +97,9 @@ Connect your trainer to receive firmware updates.
 !!! note
     This error loop was fixed in a firmware update. If you haven't connected your trainer to Wi-Fi recently, updating the firmware should resolve this issue.
 
-### "Invalid Range"
+## "ERROR" Screen
 
-**Cause**: The segment parameters result in an invalid training range.
-
-**Solutions**:
-- This typically indicates a configuration issue
-- Check your template settings in the dashboard
-- Ensure start and end positions are valid
-
-### "Small window"
-
-**Cause**: The target window is too small for reliable tracking.
-
-**Solutions**:
-- Increase the target window size in your template
-- The minimum effective window depends on sensor resolution
-
-## System Errors
-
-### "Segment is nullptr" / "ERROR"
-
-**Cause**: Internal error — the trainer couldn't load segment data.
+If the trainer shows an "ERROR" header, it couldn't load your session data.
 
 **Solutions**:
 1. Press the button to reset
@@ -179,18 +157,8 @@ These aren't errors, but feedback messages shown after completing a segment:
 | 20%+ | "Bombing out is not fun" |
 | \<20% | "Oh poop! Next time" |
 
-## Provisioning Errors
-
-These only appear during initial device setup (factory/repair):
-
-### "Failed to get trainer ID"
-
-**Cause**: Provisioning server communication failed.
-
-**Solutions**:
-- Ensure internet connection
-- Try again
-- Contact support if persistent
+!!! info "Developer documentation"
+    Internal and engineering error codes (such as numeric status codes, segment validation errors, and provisioning errors) are documented in the [developer Error Catalog](https://dev.researchanddesire.com/dtt/firmware/error-catalog/).
 
 ## General Troubleshooting
 !!! note "Device shows error then freezes"

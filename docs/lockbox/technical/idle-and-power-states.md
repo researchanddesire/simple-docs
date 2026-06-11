@@ -1,6 +1,9 @@
 # Idle and Power States
 
-Your Chastity Lockbox automatically manages power consumption through a series of idle states. This guide explains the technical details of how these states work and what triggers transitions between them.
+Your Chastity Lockbox automatically manages power consumption through a series of idle states. This guide explains how these states work and what triggers transitions between them.
+
+!!! info
+    For firmware/hardware details (timeout constants, backlight values, current draw, and wake sources), see the developer docs: https://dev.researchanddesire.com/lockbox/hardware/power-management/
 
 ## Idle state progression
 
@@ -8,8 +11,8 @@ After any user interaction, the device progresses through idle states based on i
 
 | State | Timeout | Backlight | WiFi | Power use |
 |-------|---------|-----------|------|-----------|
-| Active | — | Full (100%) | Connected | Normal |
-| Idle | 30 seconds | Dimmed (10%) | Connected | Reduced |
+| Active | — | Full | Connected | Normal |
+| Idle | 30 seconds | Dimmed | Connected | Reduced |
 | Pseudo-sleep | 2 minutes | Off | Connected | Low |
 | Deep sleep | 10 minutes | Off | Disconnected | Minimal |
 
@@ -20,7 +23,7 @@ After any user interaction, the device progresses through idle states based on i
 
 When you're actively using your device:
 
-- **Backlight brightness**: 100% (value: 255)
+- **Backlight**: Full brightness
 - **All sensors**: Active and monitoring
 - **WiFi**: Connected and syncing
 - **Motor controller**: Ready for commands
@@ -31,7 +34,7 @@ Any button press or encoder turn keeps the device in the active state and resets
 
 After 30 seconds of no interaction:
 
-- **Backlight brightness**: Dimmed to approximately 10% (value: 24)
+- **Backlight**: Dimmed
 - **Sensors**: Active
 - **WiFi**: Still connected
 - **Motor controller**: Cleared (not actively driving)
@@ -50,11 +53,10 @@ Any of these actions return the device to active state:
 
 After 2 minutes of no interaction:
 
-- **Backlight brightness**: Off (value: 0)
+- **Backlight**: Off
 - **Screen**: Still powered, just dark
 - **WiFi**: Still connected—keyholder commands work
 - **Motor controller**: Cleared
-- **Current sensor (INA219)**: Enters power-save mode
 
 !!! note
     This is the deepest sleep state while charging. When connected to USB power, your device will not enter deep sleep, ensuring it stays connected to receive keyholder commands.
@@ -85,11 +87,11 @@ Deep sleep only activates when **all** of these conditions are true:
 
 ### Wake from deep sleep
 
-- Press the Enter button (if on pins ≤21) or Back button
+- Press the Enter or Back button
 - Automatic timer wake if a lock timer is nearing completion
 
 !!! info
-    When a timed lock has less than the pseudo-sleep timeout remaining, the device automatically stays awake to handle the unlock.
+    When a timed lock is close to finishing, the device automatically stays awake to handle the unlock.
 
 ## Charging behavior
 
@@ -104,24 +106,11 @@ This ensures your device remains reachable for dashboard commands while charging
 
 ## Timer-based wake
 
-For timed locks, your device calculates an optimal wake time:
-
-```
-sleepDuration = max(remainingTimeMs - PSEUDO_SLEEP_TIMEOUT, 0)
-```
-
-This means the device will wake from deep sleep before your lock timer expires, ensuring you don't miss the unlock.
+For timed locks, your device calculates an optimal wake time so it wakes from deep sleep before your lock timer expires, ensuring you don't miss the unlock.
 
 ## Power consumption
 
-Approximate current draw in each state:
-
-| State | Estimated current |
-|-------|------------------|
-| Active | ~80-100mA |
-| Idle | ~40-60mA |
-| Pseudo-sleep | ~20-30mA |
-| Deep sleep | ~0.5-2mA |
+Your device uses progressively less power as it moves into deeper sleep states—from normal use when active down to minimal power in deep sleep.
 
 !!! tip
     For maximum battery life during extended locks, keep the device off the charger when not needed. It will automatically enter deep sleep and wake for important events.
@@ -134,25 +123,6 @@ Every user interaction resets the idle timer. Tracked interactions include:
 - Encoder rotation
 - USB power state changes
 - Sensor state changes (while actively monitoring)
-
-## Technical reference
-
-### Constants
-
-```
-IDLE_TIMEOUT = 30000         // 30 seconds
-PSEUDO_SLEEP_TIMEOUT = 120000  // 2 minutes
-SLEEP_TIMEOUT = 600000       // 10 minutes
-```
-
-### LED PWM values
-
-```
-Active:       255 (100%)
-Idle:         24  (~10%)
-Pseudo-sleep: 0   (off)
-Deep sleep:   0   (off)
-```
 
 ## Related guides
 **[Sleep Mode](../device-states/sleep-mode.md)**

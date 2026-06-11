@@ -11,7 +11,7 @@ Your device attempted to lock but couldn't confirm that the locking mechanism en
 
 ## Why this happens
 
-The device uses three sensors (called TMRs) to verify the locking paddle position. All three sensors must detect the paddle in the locked position to confirm a secure lock. When this error appears, one or more sensors isn't detecting the locked position correctly.
+The device uses the lock sensors to verify the locking paddle position, and needs them to detect the paddle in the locked position to confirm a secure lock. When this error appears, the sensors aren't detecting the locked position correctly.
 
 ## How to fix it
 

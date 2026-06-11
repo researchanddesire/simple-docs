@@ -61,16 +61,8 @@ You'll see these status messages in sequence:
 7. **"Discovering device capabilities..."** — Reading device features
 8. **"Device ready!"** — Connection complete, entering control mode
 
-### Connection Parameters
-
-RADR uses optimized connection parameters for responsive control:
-
-| Parameter | Value |
-|-----------|-------|
-| Connection interval | 15ms |
-| Latency | 0 |
-| Timeout | 1500ms |
-| Connect timeout | 5000ms |
+!!! info
+    RADR uses optimized Bluetooth connection settings for responsive, low-latency control. The exact connection parameters are documented in the developer docs: [BLE Protocol](https://dev.researchanddesire.com/radr/communication/ble/).
 
 ## Connection Failures
 
@@ -109,27 +101,12 @@ To disconnect and switch devices:
 2. Navigate back to the main menu
 3. Start a new device search
 
-## Device Registry
+## Supported Devices
 
-RADR uses a two-tier device registry to identify supported devices:
-
-### Built-in Registry
-
-- Hardcoded support for Research And Desire devices (OSSM)
-- Always available and cannot be modified
-- Provides full-featured control interfaces
-
-### Dynamic Registry (registry.json)
-
-- Stored in RADR's internal filesystem (LittleFS)
-- Contains Buttplug.io device UUIDs and configurations
-- **Can be updated via firmware updates without changing the core application**
-- This allows faster device support additions
-
-When scanning, RADR checks both registries to identify devices by their Bluetooth service UUIDs.
+RADR automatically recognizes supported devices by their Bluetooth identifiers, so there's nothing for you to configure. Support for new Bluetooth toys is added over time and delivered through firmware updates, so keeping RADR updated unlocks compatibility with more devices.
 
 !!! info
-    The dynamic registry enables Research And Desire to add support for new devices more frequently, as it only requires updating a configuration file rather than the entire firmware.
+    For the technical details of how RADR identifies devices (service UUIDs and the on-device registry), see the developer docs: [BLE Protocol](https://dev.researchanddesire.com/radr/communication/ble/).
 
 ### Supported Device Types
 

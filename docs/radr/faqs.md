@@ -85,7 +85,7 @@ Find answers to common questions about setting up, using, and troubleshooting yo
 
 !!! note "How long does the battery last?"
     RADR typically provides 4+ hours of active use on a full charge. Battery life varies based on screen brightness, vibration feedback usage, and connection activity.
-    **[Battery & Power](Hardware/specifications/battery-and-power.md)**
+    **[Battery & Power](https://dev.researchanddesire.com/radr/hardware/specifications/battery-and-power/)**
 
     Technical details about battery monitoring and charging.
 
@@ -93,21 +93,10 @@ Find answers to common questions about setting up, using, and troubleshooting yo
     Connect a USB-C cable to the port on the top edge of RADR. The device can be used while charging.
 
 ## Repairs & Replacement Parts
-!!! note "Where can I find part numbers to source replacement components?"
-    If you're comfortable with electronics repair and want to source replacement components yourself (such as encoders, switches, or other parts), the Bill of Materials (BOM) contains manufacturer part numbers for all components:
-    **[RADR Bill of Materials](https://github.com/researchanddesire/radr-wireless-remote/tree/main/Hardware)**
-
-    Complete parts list with manufacturer part numbers and specifications.
-
-    The BOM Excel file (`RADR BOM - OSSM Wireless - v0.4 - S3.xlsx`) includes:
-    - Manufacturer part numbers
-    - Component values and specifications
-    - Quantity per board
-
-    !!! tip
-        For common components like rotary encoders and tactile switches, you can often find equivalent parts at electronics suppliers like DigiKey, Mouser, or LCSC using the part numbers from the BOM.
-
+!!! note "How do I get replacement parts?"
     If you'd prefer not to source parts yourself, [contact support](mailto:support@researchanddesire.com) and we can send replacement components or a replacement remote.
+
+    If you're comfortable with electronics repair and want to source components (such as encoders or switches) yourself, the full Bill of Materials with manufacturer part numbers and sourcing details lives in the developer docs: **[RADR Bill of Materials](https://dev.researchanddesire.com/radr/hardware/bom/)**.
 
 ## Support
 

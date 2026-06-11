@@ -2,6 +2,9 @@
 
 When setting a timed lock on your Chastity Lockbox, you can choose durations ranging from 30 seconds to over 1000 years. This guide explains how the timer system works and the available duration ranges.
 
+!!! info
+    For firmware/hardware details (internal time storage, unit conversion constants, and the encoder unit-range mapping), see the developer docs: https://dev.researchanddesire.com/lockbox/hardware/state-and-sync/
+
 ## Duration range overview
 
 | Minimum | Maximum |
@@ -9,7 +12,7 @@ When setting a timed lock on your Chastity Lockbox, you can choose durations ran
 | 30 seconds | 1000 years |
 
 !!! info
-    The timer uses millisecond precision internally, supporting extremely precise timing for any duration within this range.
+    The timer supports precise timing for any duration within this range.
 
 ## Setting the duration
 
@@ -24,51 +27,9 @@ When you select **Lock** from the main menu, the timer configuration screen appe
 
 The timer starts at **10 minutes** by default, positioned in the minutes range for quick adjustment.
 
-## Duration units and increments
+## Duration units
 
-The encoder maps to different time units depending on the current value. As you increase the duration, the unit automatically changes:
-
-### Seconds (30–120 seconds)
-
-| Range | Increment | Example values |
-|-------|-----------|----------------|
-| 30–120 seconds | 1 second | 30s, 31s, 32s... 120s |
-
-### Minutes (1–120 minutes)
-
-| Range | Increment | Example values |
-|-------|-----------|----------------|
-| 1–120 minutes | 1 minute | 1 min, 2 min... 120 min |
-
-### Hours (2–24 hours)
-
-| Range | Increment | Example values |
-|-------|-----------|----------------|
-| 2–24 hours | 1 hour | 2h, 3h, 4h... 24h |
-
-### Days (1–30 days)
-
-| Range | Increment | Example values |
-|-------|-----------|----------------|
-| 1–30 days | 1 day | 1 day, 2 days... 30 days |
-
-### Weeks (4–8 weeks)
-
-| Range | Increment | Example values |
-|-------|-----------|----------------|
-| 4–8 weeks | 1 week | 4 weeks, 5 weeks... 8 weeks |
-
-### Months (2–12 months)
-
-| Range | Increment | Example values |
-|-------|-----------|----------------|
-| 2–12 months | 1 month | 2 months, 3 months... 12 months |
-
-### Years (1–1000 years)
-
-| Range | Increment | Example values |
-|-------|-----------|----------------|
-| 1–1000 years | 1 year | 1 year, 2 years... 1000 years |
+As you increase the duration, the display steps through larger units—seconds, minutes, hours, days, weeks, months, and years—up to the 1000-year maximum. Turn the encoder to move within and between these units.
 
 !!! warning
     Extremely long durations are technically supported but not recommended. Consider using **Lock Forever** mode with keyholder control for indefinite locks instead of setting multi-year timers.
@@ -92,23 +53,6 @@ The encoder has acceleration enabled for timer configuration:
 
 !!! tip
     For very long durations, turn the encoder quickly to move through the ranges faster, then slow down to fine-tune.
-
-## Time calculations
-
-Internally, durations are stored in milliseconds using these conversions:
-
-| Unit | Milliseconds |
-|------|--------------|
-| 1 second | 1,000 |
-| 1 minute | 60,000 |
-| 1 hour | 3,600,000 |
-| 1 day | 86,400,000 |
-| 1 week | 604,800,000 |
-| 1 month | 2,629,746,000 (~30.44 days) |
-| 1 year | 31,556,952,000 (~365.24 days) |
-
-!!! note
-    Month and year calculations use average lengths to account for varying month lengths and leap years.
 
 ## Display format
 

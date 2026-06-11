@@ -1,143 +1,99 @@
 # Device States and Screens
 
-Your Deepthroat Trainer moves through various states during operation, each with its own display screen. Understanding these states helps you navigate the device and troubleshoot any issues.
+Your Deepthroat Trainer moves through various screens during operation. Understanding what each screen means helps you navigate the device and know what to expect.
 
-## Startup sequence
-
-When you power on your trainer, it goes through these states:
+## Startup screens
 
 ### Welcome Screen
 - Displays your **Trainer ID** (5-character alphanumeric code)
 - Shows Wi-Fi connection status
-- **Timeout**: 15 seconds before auto-advancing
+- Advances on its own after a short pause
 
 !!! info
     Write down your Trainer ID — you'll need it to pair the device with your dashboard account.
 
 ### Preflight Checks
-After the welcome screen, the device runs system checks:
+After the welcome screen, the device runs system checks and shows "Getting ready..." while it:
 - Verifies Wi-Fi connection
-- Checks if device is paired
+- Checks if the device is paired
 - Looks for available updates
 
-The screen shows "Getting ready..." while these checks complete.
+## Wi-Fi Setup Screen
+Shown when entering Wi-Fi configuration mode (long press during the welcome screen):
+- Displays a QR code for easy connection
+- Shows "Connect to 'Trainer Setup'"
 
-## Wi-Fi Configuration
-
-### Wi-Fi Setup Screen
-Displayed when entering Wi-Fi configuration mode:
-- Shows a QR code for easy connection
-- Displays "Connect to 'Trainer Setup'"
-- **Enter via**: Long press during welcome screen
-
-!!! tip
-    The WiFi configuration portal has a 400-second timeout. If it expires, the device will restart.
-
-## Pairing State
+## Pairing Screen
 
 If your device isn't paired to a dashboard account:
 - Displays a QR code linking to dashboard settings
 - Shows "Pair me for more settings and fun!"
 - Press the button to skip and continue offline
 
-## Update State
+## Update Screen
 
 When a firmware update is available:
 - Displays "Updating" with a progress indicator
 - Shows "Thanks for waiting! You're almost ready to play."
-- The device will restart automatically after updating
+- The device restarts automatically after updating
 
 !!! warning
     Do not power off the device during an update. Wait for it to complete and restart automatically.
 
-## Play Flow States
+## Play screens
 
-### Pre-Session Screens
+### Getting ready
 
-| Screen | Description |
-|--------|-------------|
+| Screen | What it means |
+|--------|---------------|
 | **Preflight** | "Getting ready..." — checks connectivity and settings |
 | **Fetch Settings** | "I'm getting your settings from the dashboard." |
 | **Load Settings** | "You're offline, your grades may not be saved." (offline mode) |
-| **Bad Health Check** | Error E-DTT-1 — see <a href="/dtt/errors/e-dtt-1">troubleshooting guide</a> |
 
-### Calibration Screens
+### Calibration
 
-| Screen | Description |
-|--------|-------------|
-| **Calibration Min** | Capture minimum (closest) position — press button when ready |
-| **Calibration Max** | Capture maximum (rest) position — press button when ready |
+| Screen | What it means |
+|--------|---------------|
+| **Calibration Min** | Capture your minimum (closest) position — press the button when ready |
+| **Calibration Max** | Capture your maximum (rest) position — press the button when ready |
 
 !!! note
-    Calibration captures 100 samples at each position for accuracy. Hold steady while pressing the button.
+    Hold steady while pressing the button so the device can capture an accurate reading.
 
-### Session Details
+### Session details
 
-Before training begins, you'll see information screens:
+Before training begins, you'll see information screens for the **Session**, the **Toy**, and the current **Segment**. In Hands-Free Mode (Ultra) these advance automatically; otherwise, press the button to continue.
 
-| Screen | Content | Timeout |
-|--------|---------|---------|
-| **Session Details** | Session name, total segments | 10 seconds |
-| **Toy Details** | Assigned toy name and settings | 10 seconds |
-| **Segment Details** | Current segment name and parameters | 10 seconds |
+### Training
 
-!!! tip
-    In Hands-Free Mode (Ultra), these screens advance automatically. Otherwise, press the button to continue.
-
-### Training Screens
-
-| Screen | Description |
-|--------|-------------|
+| Screen | What it means |
+|--------|---------------|
 | **Countdown** | "Starting in 3... 2... 1... Good Luck!" |
 | **Active Training** | Real-time display showing position, target, and progress |
-| **Grade** | Your score and performance feedback (timeout: 30 seconds) |
+| **Grade** | Your score and performance feedback |
 
-### Pass/Fail Screens (if enabled)
+### Pass/Fail (if enabled)
 
-| Screen | Description | Timeout |
-|--------|-------------|---------|
-| **Failed** | Shows "Failed" with attempt count (e.g., "Attempt 1/3") | Press to retry |
-| **Three Strikes** | "YOU FAIL - 3 failed attempts" — session restarts | 5 seconds |
+| Screen | What it means |
+|--------|---------------|
+| **Failed** | Shows "Failed" with attempt count (e.g., "Attempt 1/3") — press to retry |
+| **Three Strikes** | "YOU FAIL - 3 failed attempts" — the session restarts |
 
-### Session Complete
+### Session complete
 
-| Screen | Description |
-|--------|-------------|
-| **Final Page** | "Well done! You finished the session." (timeout: 10 seconds) |
+When you finish, the **Final Page** shows "Well done! You finished the session." and the LED turns magenta to celebrate.
 
-The LED turns magenta on the final page to celebrate completion.
+## Error screens
 
-## Error States
-
-| Error | Screen Content |
-|-------|----------------|
+| Error | What you'll see |
+|-------|-----------------|
 | **E-DTT-1** | "No internet. Check firewall and router." |
-| **Segment Error** | "ERROR" header with reset option |
+| **Segment Error** | "ERROR" header with a reset option |
 
-See the <a href="/dtt/technical/error-codes">Error Codes</a> guide for detailed troubleshooting.
+See the <a href="/dtt/technical/error-codes">Error Codes</a> guide for what each message means and how to resolve it.
 
-## State diagram overview
-
-```
-Power On → Welcome → Preflight → [Update if available]
-                              → [Pairing if needed]
-                              → Play Preflight → Fetch/Load Settings
-                                              → Calibration (if needed)
-                                              → Session Details
-                                              → Countdown → Training
-                                              → Grade → [Next Segment or Final]
-```
-
-## Button actions by state
-
-| State | Short Press | Long Press |
-|-------|-------------|------------|
-| Welcome | Start preflight | Enter Wi-Fi setup |
-| Session Details | Next screen | Skip to training |
-| Segment Details | Start segment | Skip to training |
-| Grade | Next segment | — |
-| Failed | Retry segment | — |
-| Final | Play again | — |
+!!! info "Developer documentation"
+    Looking for the full state-flow diagram, screen timeouts, and the button-action matrix? See the [developer Device States reference](https://dev.researchanddesire.com/dtt/firmware/device-states/).
 
 ## Related guides
 **[Button Controls](button-controls.md)**

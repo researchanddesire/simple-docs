@@ -43,7 +43,7 @@ Deep sleep provides maximum power savings. It activates automatically after 10 m
 - Screen, WiFi, Bluetooth, and most sensors turn off
 - The locked or unlocked state remains unchanged
 - Remote communication with keyholders is disabled
-- The device uses minimal power (under 2mA)
+- The device uses minimal power
 
 ### Manual deep sleep
 
@@ -76,16 +76,8 @@ Manual deep sleep is appropriate for specific situations where power conservatio
 !!! note
     For regular daily use, automatic sleep handles power management effectively. Most users never need to activate deep sleep manually.
 
-## Technical details
-
-| State | Backlight PWM | Current draw |
-|-------|---------------|--------------|
-| Active | 255 (100%) | ~80-100mA |
-| Idle | 24 (~10%) | ~40-60mA |
-| Pseudo-sleep | 0 (off) | ~20-30mA |
-| Deep sleep | 0 (off) | ~0.5-2mA |
-
-For more technical details, see [Idle and Power States](../technical/idle-and-power-states.md).
+!!! info
+    For firmware/hardware details (backlight values and current draw per state), see the developer docs: https://dev.researchanddesire.com/lockbox/hardware/power-management/
 
 ## Best practices
 !!! note "Maximize battery life"

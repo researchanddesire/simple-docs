@@ -58,9 +58,9 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
 
     !!! warning
         Using multiple accessories drains the battery faster. With both accessories connected, expect approximately 2–3 hours of battery life instead of the standard 4 hours.
-        **[Accessory Port](specs/accessory-port.md)**
+        **[Accessory Port](https://dev.researchanddesire.com/dtt/hardware/accessory-port/)**
 
-    Technical details about connecting accessories.
+    Technical details about connecting accessories (developer docs).
 
 !!! note "What size dildos are available for the Trainer?"
     Deepthroat Training Dildos come in three sizes for progressive training:
@@ -94,8 +94,8 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
     The Trainer's distance sensor has a maximum range of approximately 22.5 cm (about 9 inches). There is also a small dead zone of 1.7 cm at the closest point where the sensor cannot detect position changes.
 
     !!! info
-        The effective usable sensing range is approximately 20.8 cm (8.2 inches). For technical details, see <a href="/dtt/technical/sensor-limits">
-        Sensor Limits</a>
+        The effective usable sensing range is approximately 20.8 cm (8.2 inches). For technical details, see <a href="https://dev.researchanddesire.com/dtt/hardware/distance-sensor/">
+        Distance Sensor</a>
 
     .
 
@@ -703,9 +703,9 @@ Find answers to common questions about your Deepthroat Trainer below. Each answe
 
     !!! warning
         Do not attempt to open the device or repair the port yourself—this will void any warranty coverage.
-        **[Accessory Port Specs](specs/accessory-port.md)**
+        **[Accessory Port Specs](https://dev.researchanddesire.com/dtt/hardware/accessory-port/)**
 
-    Technical specifications for the accessory port.
+    Technical specifications for the accessory port (developer docs).
 
 ## Privacy & Discretion
 !!! note "How does the Trainer appear on my WiFi network?"
