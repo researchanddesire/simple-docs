@@ -90,6 +90,3 @@ Since Bounce requires controlled movement in both directions, watch for the LED 
 **[Training Modes](../training-modes/index.md)**
 
 Learn how each training mode uses position feedback.
-**[Distance Sensor](https://dev.researchanddesire.com/dtt/hardware/distance-sensor/)**
-
-Technical specifications for the distance sensor (developer docs).

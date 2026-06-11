@@ -27,10 +27,6 @@ Technical details on power management, timeouts, and battery conservation.
 
 How your device operates without WiFi, including local locks and state persistence.
 
-## Developer documentation
-
-Looking for firmware, hardware, and electrical details (sensor logic, power management internals, state persistence, and dashboard sync)? See the [Lockbox developer docs](https://dev.researchanddesire.com/lockbox/).
-
 ## Reference sections
 **[Device States](../device-states/index.md)**
 

@@ -20,9 +20,6 @@ When an update is available:
 
 Active subscribers are often enrolled in early (beta) releases during rollouts. See the <a href="/dtt/software-2.0-preview">Software 2.0 Preview</a> for details on current beta features.
 
-!!! info "Developer documentation"
-    Looking for the firmware release streams (Production / Beta / Alpha) or manual USB flashing instructions? See the [developer Firmware Flashing reference](https://dev.researchanddesire.com/dtt/firmware/flashing/).
-
 ## What updates include
 
 Firmware updates may include:

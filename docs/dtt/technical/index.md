@@ -27,19 +27,10 @@ This section provides technical resources for understanding how your Deepthroat 
 - **[Error Codes](error-codes.md)**  
   All error messages and how to resolve them.
 
-!!! info
-    Detailed distance sensor specifications now live in the <a href="https://dev.researchanddesire.com/dtt/hardware/distance-sensor/">developer hardware docs</a>.
-
 ## Software updates
 
 - **[Software 2.0 Preview](../software-2.0-preview.md)**  
   Explore new firmware capabilities and upcoming features.
-
-## Developer documentation
-
-In-depth hardware and firmware references—pinouts, electrical specs, the device state machine, firmware flashing, internal error codes, and offline caching—are maintained in our developer documentation:
-
-- **[Developer docs](https://dev.researchanddesire.com/dtt/)**
 
 ## Troubleshooting
 

@@ -77,9 +77,6 @@ Results from offline training are shown during the session but aren't saved to y
     - Don't update templates while offline (changes won't apply until re-downloaded)
     - Reconnect when possible to sync results and get updates
 
-!!! info "Developer documentation"
-    Looking for how the offline cache stores data, storage limits, and sync-on-reconnect behavior? See the [developer Offline Cache reference](https://dev.researchanddesire.com/dtt/firmware/offline-cache/).
-
 ## Troubleshooting
 !!! note "Offline mode won't start"
     - Ensure you've previously downloaded a session while online

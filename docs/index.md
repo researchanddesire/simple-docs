@@ -41,5 +41,3 @@ Open-hardware guides for Research and Desire products.
     Check your changes and share them back with the team.
 
 </div>
-
-Developer documentation lives at [dev.researchanddesire.com](https://dev.researchanddesire.com).

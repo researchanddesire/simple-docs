@@ -76,9 +76,6 @@ Manual deep sleep is appropriate for specific situations where power conservatio
 !!! note
     For regular daily use, automatic sleep handles power management effectively. Most users never need to activate deep sleep manually.
 
-!!! info
-    For firmware/hardware details (backlight values and current draw per state), see the developer docs: https://dev.researchanddesire.com/lockbox/hardware/power-management/
-
 ## Best practices
 !!! note "Maximize battery life"
     - Keep the device plugged in when you're at home

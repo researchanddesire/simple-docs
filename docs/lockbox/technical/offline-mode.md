@@ -2,9 +2,6 @@
 
 Your Chastity Lockbox is designed to function both online and offline. This guide explains what works without WiFi, what requires connectivity, and how the device handles transitions between online and offline states.
 
-!!! info
-    For firmware/hardware details (storage persistence, dashboard sync payloads, and reconnection timing), see the developer docs: https://dev.researchanddesire.com/lockbox/hardware/state-and-sync/
-
 ## What works offline
 
 These features function fully without any internet connection:
@@ -148,9 +145,6 @@ This opens the configuration portal without affecting your lock state.
 ## Dashboard sync
 
 When online, your device keeps in sync with the dashboard—sending updates such as lock state changes and receiving commands such as lock, unlock, and break schedule updates. Commands typically arrive within seconds when online.
-
-!!! info
-    For the exact data sent and received and the underlying protocol, see the developer docs: https://dev.researchanddesire.com/lockbox/hardware/state-and-sync/
 
 ## Troubleshooting offline issues
 !!! note "Time remaining not showing"

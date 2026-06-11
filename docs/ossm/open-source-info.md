@@ -17,5 +17,3 @@ Open source means contributions can come from anyone, anywhere. Before contribut
 2. Review our [Pre-play Safety Checklist](how-to-use.md)
 
 !!! success "You're ready to contribute!"
-
-!!! info "Looking for license details and contributor terms? See the developer docs at [https://dev.researchanddesire.com/ossm/contributing/license/](https://dev.researchanddesire.com/ossm/contributing/license/)."

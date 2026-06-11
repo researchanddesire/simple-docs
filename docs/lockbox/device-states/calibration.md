@@ -54,9 +54,6 @@ The device displays "Calibrating Motor" and automatically tests the locking mech
 !!! warning
     Do not turn off the device during motor calibration. The process takes approximately 6 seconds.
 
-!!! info
-    For firmware/hardware details (motor/button orientation flags, the sensor-verified lock/unlock cycle, and how calibration is stored), see the developer docs: https://dev.researchanddesire.com/lockbox/hardware/state-and-sync/
-
 ### Step 3: Automatic restart
 
 After calibration completes successfully, the device automatically restarts and returns to normal operation.

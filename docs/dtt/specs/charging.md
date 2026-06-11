@@ -63,6 +63,3 @@ If your Trainer isn’t powering on, work through these steps:
     **[Pair your Trainer](../quick-start/pairing/pairing-guide.md)**
 
 Step‑by‑step guide to pair your device with your dashboard account.
-**[Accessory port](https://dev.researchanddesire.com/dtt/hardware/accessory-port/)**
-
-Learn about the 3.5 mm accessory port and compatible add‑ons (developer docs).

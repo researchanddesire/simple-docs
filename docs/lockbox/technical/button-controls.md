@@ -171,7 +171,7 @@ Your device conserves power by entering idle states after periods of inactivity.
 !!! note "Device is completely unresponsive"
     Try the hard reset: hold the Enter button for 10 seconds. If that doesn't work, connect the device to power and try again.
 
-    If freezing persists after multiple hard resets, reflash the firmware using the <a href="../support/flashing">web flasher</a>. When flashing, do not check the "Erase device" box to preserve your settings and lock state.
+    If freezing persists after multiple hard resets, reflash the firmware using the <a href="../../support/flashing/">web flasher</a>. When flashing, do not check the "Erase device" box to preserve your settings and lock state.
 
 !!! note "Encoder skips options"
     Turn the dial more slowly. The encoder has acceleration, so fast turns can skip multiple options.

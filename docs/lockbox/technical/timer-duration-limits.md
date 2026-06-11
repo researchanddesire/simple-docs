@@ -2,9 +2,6 @@
 
 When setting a timed lock on your Chastity Lockbox, you can choose durations ranging from 30 seconds to over 1000 years. This guide explains how the timer system works and the available duration ranges.
 
-!!! info
-    For firmware/hardware details (internal time storage, unit conversion constants, and the encoder unit-range mapping), see the developer docs: https://dev.researchanddesire.com/lockbox/hardware/state-and-sync/
-
 ## Duration range overview
 
 | Minimum | Maximum |

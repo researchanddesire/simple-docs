@@ -92,9 +92,6 @@ When you finish, the **Final Page** shows "Well done! You finished the session."
 
 See the <a href="/dtt/technical/error-codes">Error Codes</a> guide for what each message means and how to resolve it.
 
-!!! info "Developer documentation"
-    Looking for the full state-flow diagram, screen timeouts, and the button-action matrix? See the [developer Device States reference](https://dev.researchanddesire.com/dtt/firmware/device-states/).
-
 ## Related guides
 **[Button Controls](button-controls.md)**
 

@@ -62,7 +62,7 @@ You'll see these status messages in sequence:
 8. **"Device ready!"** — Connection complete, entering control mode
 
 !!! info
-    RADR uses optimized Bluetooth connection settings for responsive, low-latency control. The exact connection parameters are documented in the developer docs: [BLE Protocol](https://dev.researchanddesire.com/radr/communication/ble/).
+    RADR uses optimized Bluetooth connection settings for responsive, low-latency control.
 
 ## Connection Failures
 
@@ -104,9 +104,6 @@ To disconnect and switch devices:
 ## Supported Devices
 
 RADR automatically recognizes supported devices by their Bluetooth identifiers, so there's nothing for you to configure. Support for new Bluetooth toys is added over time and delivered through firmware updates, so keeping RADR updated unlocks compatibility with more devices.
-
-!!! info
-    For the technical details of how RADR identifies devices (service UUIDs and the on-device registry), see the developer docs: [BLE Protocol](https://dev.researchanddesire.com/radr/communication/ble/).
 
 ### Supported Device Types
 

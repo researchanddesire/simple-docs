@@ -85,9 +85,6 @@ Find answers to common questions about setting up, using, and troubleshooting yo
 
 !!! note "How long does the battery last?"
     RADR typically provides 4+ hours of active use on a full charge. Battery life varies based on screen brightness, vibration feedback usage, and connection activity.
-    **[Battery & Power](https://dev.researchanddesire.com/radr/hardware/specifications/battery-and-power/)**
-
-    Technical details about battery monitoring and charging.
 
 !!! note "How do I charge RADR?"
     Connect a USB-C cable to the port on the top edge of RADR. The device can be used while charging.
@@ -95,8 +92,6 @@ Find answers to common questions about setting up, using, and troubleshooting yo
 ## Repairs & Replacement Parts
 !!! note "How do I get replacement parts?"
     If you'd prefer not to source parts yourself, [contact support](mailto:support@researchanddesire.com) and we can send replacement components or a replacement remote.
-
-    If you're comfortable with electronics repair and want to source components (such as encoders or switches) yourself, the full Bill of Materials with manufacturer part numbers and sourcing details lives in the developer docs: **[RADR Bill of Materials](https://dev.researchanddesire.com/radr/hardware/bom/)**.
 
 ## Support
 

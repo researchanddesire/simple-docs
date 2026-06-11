@@ -157,9 +157,6 @@ These aren't errors, but feedback messages shown after completing a segment:
 | 20%+ | "Bombing out is not fun" |
 | \<20% | "Oh poop! Next time" |
 
-!!! info "Developer documentation"
-    Internal and engineering error codes (such as numeric status codes, segment validation errors, and provisioning errors) are documented in the [developer Error Catalog](https://dev.researchanddesire.com/dtt/firmware/error-catalog/).
-
 ## General Troubleshooting
 !!! note "Device shows error then freezes"
     1. Try pressing the button to dismiss

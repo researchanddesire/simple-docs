@@ -2,9 +2,6 @@
 
 Your Chastity Lockbox automatically manages power consumption through a series of idle states. This guide explains how these states work and what triggers transitions between them.
 
-!!! info
-    For firmware/hardware details (timeout constants, backlight values, current draw, and wake sources), see the developer docs: https://dev.researchanddesire.com/lockbox/hardware/power-management/
-
 ## Idle state progression
 
 After any user interaction, the device progresses through idle states based on inactivity time:
