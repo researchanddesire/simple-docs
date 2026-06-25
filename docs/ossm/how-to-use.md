@@ -154,8 +154,9 @@ Connecting your OSSM to WiFi enables it to receive firmware updates as they are 
 4. Select "Settings" ![](/docs/img/wireless_remote_wifi_connectivity_settings_unannotated.png)
 5. Select "Wifi Settings" ![](/docs/img/wireless-remote-wifi-connectivity-wifi-settings-unannotated.png)
 6. Using your phone camera, scan the QR code that appears on the device screen ![](/docs/img/wireless_remote_wifi_connectivity_wifi_QR_code_unannotated.png)
-7. On your phone or computer, connect to the WiFi network named "OSSM Setup"
-8. Select your WiFi network, enter your password, and save
+7. On your phone or computer, connect to the WiFi network named "OSSM Setup" ![](/docs/img/RADR-wifi-setup-annotated.png)
+8. Select "Configure WiFi" ![](/docs/img/WiFi-manager-annotated.png)
+9. Select your WiFi network (this will auto-fill the SSID info), enter your WiFi password, and click save ![](/docs/img/RADR-WiFi-network-selection-annotated.png)
 
 !!! success "Yay! Your OSSM is connected to WiFi."
 
