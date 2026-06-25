@@ -151,9 +151,9 @@ Connecting your OSSM to WiFi enables it to receive firmware updates as they are 
 1. Connect your OSSM to power and let it home
 2. Connect your Wireless Remote to your OSSM
 3. Navigate to the Wireless Remote menu using the left button
-4. Select "Settings"
-5. Select "Wifi Settings"
-6. Using your phone camera, scan the QR code that appears on the device screen
+4. Select "Settings" ![](/docs/img/wireless_remote_wifi_connectivity_settings_unannotated.png)
+5. Select "Wifi Settings" ![](/docs/img/wireless-remote-wifi-connectivity-wifi-settings-unannotated.png)
+6. Using your phone camera, scan the QR code that appears on the device screen ![](/docs/img/wireless_remote_wifi_connectivity_wifi_QR_code_unannotated.png)
 7. On your phone or computer, connect to the WiFi network named "OSSM Setup"
 8. Select your WiFi network, enter your password, and save
 
