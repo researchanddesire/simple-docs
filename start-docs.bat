@@ -3,12 +3,10 @@ setlocal
 
 cd /d "%~dp0"
 
-if not exist ".\.venv\Scripts\python.exe" (
-  echo Local docs environment not found yet.
-  powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0scripts\bootstrap.ps1"
-  if errorlevel 1 (
-    goto :end
-  )
+echo Preparing the local docs environment...
+powershell -NoProfile -ExecutionPolicy Bypass -File "%~dp0scripts\bootstrap.ps1"
+if errorlevel 1 (
+  goto :end
 )
 
 echo Starting the docs preview...
