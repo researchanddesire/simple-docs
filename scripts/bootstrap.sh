@@ -11,9 +11,12 @@ if ! command -v python3 >/dev/null 2>&1; then
   exit 1
 fi
 
-echo "Creating the local docs environment..."
-python3 -m venv .venv
+if [ ! -x "./.venv/bin/python" ]; then
+  echo "Creating the local docs environment..."
+  python3 -m venv .venv
+  ./.venv/bin/python -m pip install --upgrade pip
+fi
+
 echo "Installing docs dependencies..."
-./.venv/bin/python -m pip install --upgrade pip
 ./.venv/bin/python -m pip install -r requirements.txt
 echo "Local docs environment is ready."

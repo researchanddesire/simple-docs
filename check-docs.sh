@@ -4,10 +4,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 cd "$SCRIPT_DIR"
 
-if [ ! -x "./.venv/bin/python" ]; then
-  echo "Local docs environment not found yet."
-  ./scripts/bootstrap.sh
-fi
+./scripts/bootstrap.sh
 
 echo "Checking the docs site..."
 if ! ./.venv/bin/python -m mkdocs build --clean --strict; then
