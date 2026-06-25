@@ -25,9 +25,9 @@ Here's how to connect your OSSM to power:
 
 You can control your OSSM using one of three different remote types:
 
-  1. Wired Remote
-  2. Wireless Remote (RADR)
-  3. Web Controller
+  1. Wired Remote ![](/docs/img/wired-remote.png)
+  2. Wireless Remote (RADR) ![](/docs/img/wireless-remote-unannotated.png)
+  3. Web Controller ![](/docs/img/web-controller-play-interface.png)
 
 Please note that the OSSM will home when:
 
