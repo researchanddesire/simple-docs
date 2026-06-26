@@ -153,9 +153,9 @@ Connecting your OSSM to WiFi enables it to receive firmware updates as they are 
 1. Connect your OSSM to power and let it home
 2. Navigate to the [Web Controller URL](https://docs.researchanddesire.com/ossm/tools/web-controller)
 3. Click "Connect" and select your OSSM, then click "Pair" ![](../img/web-controller-connect-annotated.png)
-4. Select your OSSM and click "Pair" ![](../img/web-controller-pair-annotated.png)
+4. Select your OSSM and click "Pair" ![](./img/web-controller-pair-annotated.webp)
 5. Once paired, click on the "WiFi Settings" tab at the top of the Web Controller interface ![](../img/web-controller-wifisettings-annotated.png)
-6. Enter your WiFi network's name and password ![](../img/web-controller-wifisettings2-annotated.png)
+6. Enter your WiFi network's name and password ![](./img/web-controller-wifisettings2-annotated.webp)
 7. Click "Save & Connect"
 
 !!! success "Yay! Your OSSM is connected to WiFi."
@@ -169,8 +169,8 @@ Connecting your OSSM to WiFi enables it to receive firmware updates as they are 
 5. Select "Wifi Settings" ![wireless remote wifi connectivity wifi settings unannotated](./docs/img/wireless-remote-wifi-connectivity-wifi-settings-unannotated.webp)
 6. Using your phone camera, scan the QR code that appears on the device screen ![wireless remote wifi connectivity wifi qr code unannotated](./docs/img/wireless-remote-wifi-connectivity-wifi-qr-code-unannotated.webp)
 7. On your phone or computer, connect to the WiFi network named "OSSM Setup" ![radr wifi setup annotated](./docs/img/radr-wifi-setup-annotated.webp)
-8. Select "Configure WiFi" ![](/docs/img/WiFi-manager-annotated.png)
-9. Select your WiFi network (this will auto-fill the SSID info), enter your WiFi password, and click save ![](/docs/img/RADR-WiFi-network-selection-annotated.png)
+8. Select "Configure WiFi" ![wifi manager annotated](./docs/img/wifi-manager-annotated.webp)
+9. Select your WiFi network (this will auto-fill the SSID info), enter your WiFi password, and click save ![radr wifi network selection annotated](./docs/img/radr-wifi-network-selection-annotated.webp)
 
 !!! success "Yay! Your OSSM is connected to WiFi."
 
