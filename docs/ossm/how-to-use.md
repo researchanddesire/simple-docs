@@ -9,10 +9,15 @@ The OSSM comes with bespoke a 24V 4A DC power supply - this is what will power y
 Here's how to connect your OSSM to power:
 
 1. Plug the socket plug of the power supply cord into a wall socket
+
 ![](./img/power-supply-annotated.webp)
+
 2. Plug the barrel jack end of the power supply into the barrel jack port on your OSSM board
+
 ![](./img/enclosed-ossm-pcb-annotated1.webp)
-1. Check that the board's LED lights up, and let the device home
+
+3. Check that the board's LED lights up, and let the device home
+
 ![](./img/enclosed-ossm-pcb-annotated2.webp)
 
 !!! success "Your OSSM is receiving power!"
@@ -25,9 +30,17 @@ Here's how to connect your OSSM to power:
 
 You can control your OSSM using one of three different remote types:
 
-  1. Wired Remote ![wired remote](./docs/img/wired-remote.webp)
-  2. Wireless Remote (RADR) ![wireless remote unannotated](./docs/img/wireless-remote-unannotated.webp)
-  3. Web Controller ![](/docs/img/web-controller-play-interface.png)
+  1. Wired Remote
+
+![wired remote](./docs/img/wired-remote.webp)
+
+  1. Wireless Remote (RADR)
+
+![wireless remote unannotated](./docs/img/wireless-remote-unannotated.webp)
+
+Web Controller
+
+![web controller play interface](./docs/img/web-controller-play-interface.webp)
 
 Please note that the OSSM will home when:
 
@@ -49,6 +62,8 @@ To connect your Wired Remote to the OSSM:
 
 The Wired Remote has a left and a right knob.
 
+  ![](./img/wired-remote-annotated.webp)
+
 **Right knob**
 
 - Scrolls the menu
@@ -61,7 +76,6 @@ The Wired Remote has a left and a right knob.
 **Left knob**
 
 - Adjusts stroke speed
-  ![](./img/wired-remote-annotated.webp)
 
 ### Wireless Remote
 

@@ -15,5 +15,6 @@ Open source means contributions can come from anyone, anywhere. Before contribut
 
 1. Take time to thoroughly read the [CERN-OHL-S-v2 license terms](https://gitlab.com/ohwr/project/cernohl/-/wikis/uploads/819d71bea3458f71fba6cf4fb0f2de6b/cern_ohl_s_v2.txt) to understand how the license functions
 2. Review our [Pre-play Safety Checklist](how-to-use.md)
+3. If you're contributing documentation, review the [Documentation Guide](/meta/getting-started)
 
 !!! success "You're ready to contribute!"
