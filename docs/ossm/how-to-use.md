@@ -9,11 +9,11 @@ The OSSM comes with bespoke a 24V 4A DC power supply - this is what will power y
 Here's how to connect your OSSM to power:
 
 1. Plug the socket plug of the power supply cord into a wall socket
-![](../img/power-supply-annotated.png)
+![](./img/power-supply-annotated.webp)
 2. Plug the barrel jack end of the power supply into the barrel jack port on your OSSM board
-![](../img/enclosed-ossm-pcb-annotated1.png)
+![](./img/enclosed-ossm-pcb-annotated1.webp)
 1. Check that the board's LED lights up, and let the device home
-![](../img/enclosed-ossm-pcb-annotated2.png)
+![](./img/enclosed-ossm-pcb-annotated2.webp)
 
 !!! success "Your OSSM is receiving power!"
 
@@ -25,8 +25,8 @@ Here's how to connect your OSSM to power:
 
 You can control your OSSM using one of three different remote types:
 
-  1. Wired Remote ![](/docs/img/wired-remote.png)
-  2. Wireless Remote (RADR) ![](/docs/img/wireless-remote-unannotated.png)
+  1. Wired Remote ![wired remote](./docs/img/wired-remote.webp)
+  2. Wireless Remote (RADR) ![wireless remote unannotated](./docs/img/wireless-remote-unannotated.webp)
   3. Web Controller ![](/docs/img/web-controller-play-interface.png)
 
 Please note that the OSSM will home when:
@@ -61,12 +61,12 @@ The Wired Remote has a left and a right knob.
 **Left knob**
 
 - Adjusts stroke speed
-  ![](../img/wired-remote-annotated.png)
+  ![](./img/wired-remote-annotated.webp)
 
 ### Wireless Remote
 
 Let's start with some orientation. In comparison to the Wired Remote, the Wireless Remote has more buttons (for fun physical interactivity!) In this doc we'll be directing you to press certain buttons. Take a second to review the photo below to orient yourself with the device's physical controls and how we refer to them.
-![](../img/wireless-remote-annotated.png)
+![](./img/wireless-remote-annotated.webp)
 
 #### Connecting your Wireless Remote to the OSSM
 
@@ -74,7 +74,7 @@ The Wireless Remote connects to your OSSM via Bluetooth. To connect your Wireles
 
 1. Connect your OSSM to power and allow it to home
 2. Turn on the Wireless Remote via the power switch
-3. The Wireless Remote will detect your OSSM. Use the right button to select your OSSM ![](../img/wireless-remote2-annotated.png)
+3. The Wireless Remote will detect your OSSM. Use the right button to select your OSSM ![](./img/wireless-remote2-annotated.webp)
 
 !!! success "You are now at the Simple Stroke screen and can start controlling your OSSM with the Wireless Remote!"
 
@@ -151,10 +151,10 @@ Connecting your OSSM to WiFi enables it to receive firmware updates as they are 
 1. Connect your OSSM to power and let it home
 2. Connect your Wireless Remote to your OSSM
 3. Navigate to the Wireless Remote menu using the left button
-4. Select "Settings" ![](/docs/img/wireless_remote_wifi_connectivity_settings_unannotated.png)
-5. Select "Wifi Settings" ![](/docs/img/wireless-remote-wifi-connectivity-wifi-settings-unannotated.png)
-6. Using your phone camera, scan the QR code that appears on the device screen ![](/docs/img/wireless_remote_wifi_connectivity_wifi_QR_code_unannotated.png)
-7. On your phone or computer, connect to the WiFi network named "OSSM Setup" ![](/docs/img/RADR-wifi-setup-annotated.png)
+4. Select "Settings" ![wireless remote wifi connectivity settings unannotated](./docs/img/wireless-remote-wifi-connectivity-settings-unannotated.webp)
+5. Select "Wifi Settings" ![wireless remote wifi connectivity wifi settings unannotated](./docs/img/wireless-remote-wifi-connectivity-wifi-settings-unannotated.webp)
+6. Using your phone camera, scan the QR code that appears on the device screen ![wireless remote wifi connectivity wifi qr code unannotated](./docs/img/wireless-remote-wifi-connectivity-wifi-qr-code-unannotated.webp)
+7. On your phone or computer, connect to the WiFi network named "OSSM Setup" ![radr wifi setup annotated](./docs/img/radr-wifi-setup-annotated.webp)
 8. Select "Configure WiFi" ![](/docs/img/WiFi-manager-annotated.png)
 9. Select your WiFi network (this will auto-fill the SSID info), enter your WiFi password, and click save ![](/docs/img/RADR-WiFi-network-selection-annotated.png)
 
