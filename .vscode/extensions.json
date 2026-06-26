@@ -1,5 +1,6 @@
 {
-  "recommendations": [
+  "recommendations": ["ResearchAndDesire.fumadocs-vscode-plugin"],
+  "unwantedRecommendations": [
     "ms-python.python",
     "DavidAnson.vscode-markdownlint",
     "yzhang.markdown-all-in-one"
