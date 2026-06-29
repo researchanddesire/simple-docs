@@ -69,6 +69,7 @@ nav:
       - How to Use: ossm/how-to-use.md
       - Open Source Info: ossm/open-source-info.md
       - Tools: ossm/tools.md
+      - Care & Maintenance: ossm/care-and-maintenance.md
   - Chastity Lockbox:
       - Quick Start:
           - Quick Start: lockbox/index.md
