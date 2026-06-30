@@ -1,93 +1,33 @@
 # Simple Docs
 
-This repo is set up so docs contributors can start helping quickly, even if they do not usually write code.
+Documentation for Research and Desire products, built with [Fumadocs](https://fumadocs.dev).
 
-You do not need to know Python internals, virtual environments, or MkDocs configuration to edit pages here.
+You do not need to run a local dev server or learn the full toolchain to edit pages here. Open the repo in VS Code and preview your changes with the Fumadocs Preview extension.
 
 ## Fastest path for writers
 
-1. Install Python 3 if you do not already have it.
-2. Download or clone this repo.
-3. Start the docs preview:
+1. Install [VS Code](https://code.visualstudio.com/).
+2. Install the **Fumadocs Preview** extension:
+   - [Visual Studio Marketplace](https://marketplace.visualstudio.com/items?itemName=ResearchAndDesire.fumadocs-vscode-plugin)
+   - [Open VSX](https://open-vsx.org/extension/ResearchAndDesire/fumadocs-vscode-plugin)
+3. Clone or download this repo and open it in VS Code.
+4. Open any `.mdx` file in `content/`.
+5. Run **Fumadocs: Preview** from the Command Palette, the editor title bar, or the CodeLens link at the top of the file (`Cmd+Alt+V` on macOS, `Ctrl+Alt+V` on Windows and Linux).
+6. Edit the file and save. The preview updates beside your editor.
 
-macOS:
+On first preview, the extension installs its bundled renderer dependencies once. You need [Node.js](https://nodejs.org/) and a package manager (`npm`, `pnpm`, or `yarn`) on your `PATH`.
 
-```bash
-./start-docs.command
-```
+## What to edit
 
-Windows:
-
-```powershell
-.\start-docs.bat
-```
-
-Linux:
-
-```bash
-./start-docs.sh
-```
-
-On macOS and Windows, you can also double-click the start script instead of running it from a terminal.
-The script will create the local docs environment for you the first time you run it.
-
-4. Open <http://localhost:8000>.
-5. Edit files in `docs/` and refresh the browser to see your changes.
-
-## Install Python
-
-If `python3` or `py` is not already available on your machine:
-
-- macOS: install Python 3 from [python.org](https://www.python.org/downloads/) or with Homebrew using `brew install python`
-- Windows: install Python 3 from [python.org](https://www.python.org/downloads/) and make sure the installer adds Python to your `PATH`
-- Linux: install Python 3 with your package manager, for example `sudo apt install python3 python3-venv` on Ubuntu or Debian
-
-You can check whether Python is ready with one of these commands:
-
-```bash
-python3 --version
-```
-
-Windows PowerShell:
-
-```powershell
-py -3 --version
-```
-
-## Before you share your work
-
-Run the docs check:
-
-macOS:
-
-```bash
-./check-docs.command
-```
-
-Windows:
-
-```powershell
-.\check-docs.bat
-```
-
-Linux:
-
-```bash
-./check-docs.sh
-```
-
-On macOS and Windows, you can also double-click the check script.
-The check script uses the same local Python environment as the preview.
+- Pages live in `content/` as MDX files.
+- Sidebar order and section titles are controlled by `meta.json` files in each folder.
+- Copy `templates/page-template.mdx` when adding a new page.
 
 ## Helpful files
 
-- [CONTRIBUTING.md](CONTRIBUTING.md) explains the writing workflow in plain language.
-- [templates/page-template.md](templates/page-template.md) gives you a starting point for new pages.
-- [docs/getting-started.md](docs/getting-started.md) is the contributor guide inside the docs site itself.
-
-## Advanced options
-
-If you prefer to manage the environment manually, the scripts in `scripts/` are a good next step. Most contributors should be able to stick with the top-level start and check scripts.
+- [content/meta/contributing.mdx](content/meta/contributing.mdx) explains the writing workflow inside the docs site.
+- [content/meta/getting-started.mdx](content/meta/getting-started.mdx) is the contributor guide for new writers.
+- [templates/page-template.mdx](templates/page-template.mdx) is a starting point for new pages.
 
 ## Hosting
 
@@ -96,4 +36,4 @@ The site is published two ways from this repo:
 - Custom domain: <https://docs.researchanddesire.com>
 - GitHub Pages: <https://researchanddesire.github.io/simple-docs/>
 
-Both are built and deployed by the [`Deploy docs to GitHub Pages`](.github/workflows/deploy-docs.yml) workflow, which runs automatically on every push to `main` (and can be run manually from the Actions tab). The workflow builds the site with `mkdocs build --strict` and publishes it via the GitHub Pages Actions deployment.
+Both are built and deployed by the [`Deploy docs to GitHub Pages`](.github/workflows/deploy-docs.yml) workflow on every push to `main`.

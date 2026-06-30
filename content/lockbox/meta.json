@@ -1,0 +1,14 @@
+{
+  "title": "Lockbox",
+  "pages": [
+    "index",
+    "changelog",
+    "device-states",
+    "errors",
+    "faqs",
+    "quick-start",
+    "support",
+    "technical",
+    "using"
+  ]
+}

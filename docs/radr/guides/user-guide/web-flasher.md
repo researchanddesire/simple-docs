@@ -1,8 +1,0 @@
-# Web Flasher
-
-!!! info "Coming soon"
-    The RADR Web Flasher lets you install or recover firmware directly from your browser over a USB-C cable — no software to install. A dedicated page for the flasher tool is on its way.
-
-    In the meantime, most updates can be done over the air from your device: go to **Settings → Update Device**. See [Updating Your Device](updating-your-device.md) for step-by-step instructions.
-
-    If your RADR isn't responding and you need to recover it, [contact support](mailto:support@researchanddesire.com) and we'll help you get back up and running.
