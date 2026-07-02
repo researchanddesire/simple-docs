@@ -16,9 +16,19 @@ So you've received your Chastity Lockbox and are wondering how it works. In this
 ![back housing exterior annotated](./images/back-housing-exterior-annotated.webp)
 
 
-!!! warning "The back housing's physical unlock feature should only be used in emergency situations where a software emergency unlock is not available, as its use will irreparably damage the back housing."
+<Callout type="warn">
 
-!!! success "Congratulations! You're now an expert on the Chastity Lockbox's physical controls."
+The physical unlock should only be used in emergency situations where a software emergency unlock is unavailable, as its use will irreparably damage the back housing.
+
+</Callout>
+
+
+<Callout type="success">
+
+Congratulations! You're now an expert on the Chastity Lockbox's physical controls.
+
+</Callout>
+
 
 ## Connecting your Lockbox to WiFi
 
@@ -29,17 +39,74 @@ The Chastity Lockbox is designed to be used in conjunction with the R+D LABS das
 - Integration with the Deepthroat Trainer
 - Intricate lock settings, including specifics on break times, access to Emergency Unlocks,and more
 
-!!! info "The Chastity Lockbox is compatible only with 2.4GHz networks."
+<Callout type="info">
+
+The Chastity Lockbox is compatible only with 2.4GHz networks.
+
+</Callout>
+
 
 Follow one of the guide below to connect your device to WiFi:
 
-1. Power on your device by clicking the right button
-2. Navigate to **Settings**
-3. Select **WiFi Settings**
-4. Navigate to the **WiFi settings** panel on your phone or laptop
-5. Select the **Lockbox Setup** network
-6. Select **Configure WiFi**
-7. Select your **local WiFi network**, input your WiFi password, and click save
+Power on your device by clicking the right button
+Navigate to **Settings**
+Select **WiFi Settings**
+Navigate to the **WiFi settings** panel on your phone or laptop
+Select the **Lockbox Setup** network
+Select **Configure WiFi**
+Select your **local WiFi network**, input your WiFi password, and click save
 
-!!! success "Your Chastity Lockbox is now connected to WiFi!"
+<Steps>
+  <Step>
 
+### Power
+
+Power on your device by clicking the right button
+
+  </Step>
+  <Step>
+
+### Navigate to Settings
+
+![lockbox settings unannotated](./images/lockbox-settings-unannotated.webp)
+
+  </Step>
+  <Step>
+
+### Select WiFi Settings
+
+![lockbox wifi settings unannotated](./images/lockbox-wifi-settings-unannotated.webp)
+
+  </Step>
+  <Step>
+
+### Navigate to WiFi settings on your phone or laptop
+
+
+
+  </Step>
+  <Step>
+
+### Select the Lockbox Setup Network
+
+![wifi setup lockbox setup annotated png](./images/wifi-setup-lockbox-setup-annotated-png.webp)
+
+  </Step>
+  <Step>
+
+### Select Configure WiFi
+
+
+
+  </Step>
+</Steps>
+
+
+
+
+
+<Callout type="success">
+
+Your Chastity Lockbox is now connected to WiFi!
+
+</Callout>
