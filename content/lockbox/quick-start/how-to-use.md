@@ -20,5 +20,26 @@ So you've received your Chastity Lockbox and are wondering how it works. In this
 
 !!! success "Congratulations! You're now an expert on the Chastity Lockbox's physical controls."
 
-## Using the device without WiFi
+## Connecting your Lockbox to WiFi
+
+The Chastity Lockbox is designed to be used in conjunction with the R+D LABS dashboard app. The app gives you access to features such as:
+
+- Partnership & keyholding
+- Public voting on locks
+- Integration with the Deepthroat Trainer
+- Intricate lock settings, including specifics on break times, access to Emergency Unlocks,and more
+
+!!! info "The Chastity Lockbox is compatible only with 2.4GHz networks."
+
+Follow one of the guide below to connect your device to WiFi:
+
+1. Power on your device by clicking the right button
+2. Navigate to **Settings**
+3. Select **WiFi Settings**
+4. Navigate to the **WiFi settings** panel on your phone or laptop
+5. Select the **Lockbox Setup** network
+6. Select **Configure WiFi**
+7. Select your **local WiFi network**, input your WiFi password, and click save
+
+!!! success "Your Chastity Lockbox is now connected to WiFi!"
 
