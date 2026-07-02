@@ -46,15 +46,7 @@ The Chastity Lockbox is compatible only with 2.4GHz networks.
 </Callout>
 
 
-Follow one of the guide below to connect your device to WiFi:
-
-Power on your device by clicking the right button
-Navigate to **Settings**
-Select **WiFi Settings**
-Navigate to the **WiFi settings** panel on your phone or laptop
-Select the **Lockbox Setup** network
-Select **Configure WiFi**
-Select your **local WiFi network**, input your WiFi password, and click save
+To connect your device to WiFi, follow the guide below:
 
 <Steps>
   <Step>
@@ -96,10 +88,19 @@ Power on your device by clicking the right button
 
 ### Select Configure WiFi
 
+![lockbox wifi manager annotated](./images/lockbox-wifi-manager-annotated.webp)
+
+  </Step>
+  <Step>
+
+### Select your **local WiFi network**, input your WiFi password, and click save
+
 
 
   </Step>
 </Steps>
+
+![radr wifi network selection annotated](./images/radr-wifi-network-selection-annotated-1.webp)
 
 
 
@@ -110,3 +111,53 @@ Power on your device by clicking the right button
 Your Chastity Lockbox is now connected to WiFi!
 
 </Callout>
+
+Now that your Chastity Lockbox is connected to WiFi, let's pair it with your dashboard account.
+
+## Pairing your Chastity Lockbox
+
+To use your Chastity Lockbox on conjunction with your dashboard account, you need to pair your device. There are two ways to pair your device.
+
+### Pair via Bluetooth
+
+<Callout type="info" title="Bluetooth pairing requirements">
+
+1. Google Chrome or Microsoft Edge browser
+2. Desktop or laptop computer
+3. Chastity Lockbox is powered ON
+4. Chastity Lockbox is not currently paired to an account
+5. Chastity Lockbox is connected to WiFi
+6. A R+D dashboard account
+
+</Callout>
+
+<Steps>
+  <Step>
+
+### Log in
+
+Log in to your R+D dashboard account
+
+  </Step>
+  <Step>
+
+### Select Settings from the lefthand tab
+
+![dashboard lefthand side annotated](./images/dashboard-lefthand-side-annotated.webp)
+
+  </Step>
+  <Step>
+
+### Select My Devices
+
+![lkbx pairing settings dropdown annotated](./images/lkbx-pairing-settings-dropdown-annotated.webp)
+
+  </Step>
+</Steps>
+
+
+
+
+
+
+### Pair via Dashboard
