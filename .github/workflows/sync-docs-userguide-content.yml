@@ -1,0 +1,56 @@
+name: Sync Docs Userguide Content
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "content/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-userguide-content-sync
+  cancel-in-progress: true
+
+jobs:
+  sync-to-rad-app:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[docs-sync]') }}
+    steps:
+      - name: Debounce sync
+        run: sleep 120
+
+      - name: Checkout simple-docs
+        uses: actions/checkout@v4
+        with:
+          path: simple-docs
+
+      - name: Checkout rad-app
+        uses: actions/checkout@v4
+        with:
+          repository: researchanddesire/rad-app
+          ref: main
+          token: ${{ secrets.DOCS_SYNC_TOKEN }}
+          path: rad-app
+
+      - name: Sync content to rad-app
+        run: |
+          mkdir -p rad-app/apps/docs-userguide/content
+          rsync -a --delete simple-docs/content/ rad-app/apps/docs-userguide/content/
+
+      - name: Commit and push rad-app changes
+        working-directory: rad-app
+        run: |
+          if git diff --quiet; then
+            echo "rad-app docs-userguide content is already up to date."
+            exit 0
+          fi
+
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add apps/docs-userguide/content
+          git commit -m "AUTO: Sync docs-userguide content from simple-docs [docs-sync]"
+          git push origin main
