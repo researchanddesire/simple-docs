@@ -10,10 +10,10 @@ So you've received your Chastity Lockbox and are wondering how it works. In this
 
 ![lockbox front housing annotated](./images/lockbox-front-housing-annotated.webp)
 
-- Left button: back button
-- Right button: selection button
-- Scroll wheel: moves you between selection options on the device screen
-- Screen: allows you to visually interact with the device
+- Left button - back button
+- Right button - selection button
+- Scroll wheel - moves you between selection options on the device screen
+- Screen - allows you to visually interact with the device
 
 ![front and back housing annotated](./images/front-and-back-housing-annotated.webp)
 
@@ -41,7 +41,7 @@ The Chastity Lockbox is designed to be used in conjunction with the R+D LABS das
 - Partnership & keyholding
 - Public voting on locks
 - Integration with the Deepthroat Trainer
-- Intricate lock settings, including specifics on break times, access to Emergency Unlocks,and more
+- Intricate lock settings, including specifics on break times, access to Emergency Unlocks, and more
 
 <Callout type="info">
 
@@ -120,7 +120,7 @@ Now that your Chastity Lockbox is connected to WiFi, let's pair it with your das
 
 ## Pairing your Chastity Lockbox
 
-To use your Chastity Lockbox on conjunction with your dashboard account, you need to pair your device. There are two ways to pair your device.
+To use your Chastity Lockbox in conjunction with your dashboard account, you need to pair your device. There are two ways to pair your device:
 
 ### Pair via Bluetooth
 
@@ -157,6 +157,20 @@ Log in to your R+D dashboard account
 ![lkbx pairing settings dropdown annotated](./images/lkbx-pairing-settings-dropdown-annotated.webp)
 
   </Step>
+  <Step>
+
+### Select Add Network
+
+![add network unannotated](./images/add-network-unannotated.webp)
+
+  </Step>
+  <Step>
+
+### Enter local WiFi network info and save network
+
+![lkbx add wifi network](./images/lkbx-add-wifi-network.webp)
+
+  </Step>
 </Steps>
 
 
@@ -164,4 +178,92 @@ Log in to your R+D dashboard account
 
 
 
-### Pair via Dashboard
+
+
+
+
+
+### Pair Manually
+
+<Callout type="info">
+
+Manual pairing requirements:
+
+1. Chastity Lockbox is connected to WiFi
+2. Chastity Lockbox is not already paired to another dashboard account
+
+</Callout>
+
+<Steps>
+  <Step>
+
+### Log in to your R+D dashboard account
+
+
+
+  </Step>
+  <Step>
+
+### Select Settings from the lefthand tab
+
+![dashboard lefthand side annotated](./images/dashboard-lefthand-side-annotated-1.webp)
+
+  </Step>
+  <Step>
+
+### Select My Devices
+
+![lkbx pairing settings dropdown annotated](./images/lkbx-pairing-settings-dropdown-annotated-1.webp)
+
+  </Step>
+  <Step>
+
+### Select Pair a Lockbox
+
+![pair a lockbox](./images/pair-a-lockbox-1.webp)
+
+  </Step>
+  <Step>
+
+### Power on your Lockbox and select Settings
+
+![lockbox settings unannotated](./images/lockbox-settings-unannotated-1.webp)
+
+  </Step>
+  <Step>
+
+### Select Pairing
+
+![lkbx pairing selection unannotated](./images/lkbx-pairing-selection-unannotated.webp)
+
+  </Step>
+  <Step>
+
+### Your device's unique pairing code is displayed on screen
+
+![lkbx pairing code annotated](./images/lkbx-pairing-code-annotated.webp)
+
+  </Step>
+  <Step>
+
+### Enter your pairing code and select Pair device 
+
+![lockbox pairing code entry annotated](./images/lockbox-pairing-code-entry-annotated.webp)
+
+
+  </Step>
+</Steps>
+
+<Callout type="success">
+
+Your Chastity Lockbox is now paired!
+
+</Callout>
+
+
+
+
+
+
+
+
