@@ -1,3 +1,7 @@
+---
+title: Using your Chastity Lockbox
+---
+
 # Using your Chastity Lockbox
 
 ## Physical controls
