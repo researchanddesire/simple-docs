@@ -65,25 +65,25 @@ flowchart TD
     MainMenu --> DeviceSearch[Device Search]
     MainMenu --> Settings[Settings Menu]
     MainMenu --> Sleep[Deep Sleep]
-    
+
     DeviceSearch --> DeviceList[Device List]
     DeviceList --> Connecting[Connecting]
     DeviceList --> MainMenu
-    
+
     Connecting --> Control[Device Control]
     Connecting --> DeviceList
-    
+
     Control --> DeviceMenu[Device Menu]
     Control --> DeviceStop[Device Stopped]
     DeviceMenu --> Control
     DeviceStop --> Control
     DeviceStop --> MainMenu
-    
+
     Settings --> WiFiSetup[WiFi Setup]
     Settings --> MainMenu
     WiFiSetup --> WiFiConnected[WiFi Connected]
     WiFiConnected --> MainMenu
-    
+
     Sleep --> Boot
 ```
 
