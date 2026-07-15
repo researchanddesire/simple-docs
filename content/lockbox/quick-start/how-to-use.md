@@ -2,18 +2,16 @@
 title: Using your Chastity Lockbox
 ---
 
-# Using your Chastity Lockbox
-
-## Physical controls
+## Physical Controls
 
 So you've received your Chastity Lockbox and are wondering how it works. In this guide we'll user certain language to refer to the device's controls and other components. Let's get acquainted with this language:
 
 ![lockbox front housing annotated](./images/lockbox-front-housing-annotated.webp)
 
-- Left button - back button
-- Right button - selection button
-- Scroll wheel - moves you between selection options on the device screen
-- Screen - allows you to visually interact with the device
+- **Left button** - back button
+- **Right button** - selection button
+- **Scroll wheel** - moves you between selection options on the device screen
+- **Screen** - allows you to visually interact with the device
 
 ![front and back housing annotated](./images/front-and-back-housing-annotated.webp)
 
@@ -34,7 +32,7 @@ Congratulations! You're now an expert on the Chastity Lockbox's physical control
 </Callout>
 
 
-## Connecting your Lockbox to WiFi
+## Connecting Your Lockbox to WiFi
 
 The Chastity Lockbox is designed to be used in conjunction with the R+D LABS dashboard app. The app gives you access to features such as:
 
@@ -62,14 +60,14 @@ Power on your device by clicking the right button
   </Step>
   <Step>
 
-### Navigate to Settings
+### Select "Settings"
 
 ![lockbox settings unannotated](./images/lockbox-settings-unannotated.webp)
 
   </Step>
   <Step>
 
-### Select WiFi Settings
+### Select "WiFi Settings"
 
 ![lockbox wifi settings unannotated](./images/lockbox-wifi-settings-unannotated.webp)
 
@@ -90,7 +88,7 @@ Power on your device by clicking the right button
   </Step>
   <Step>
 
-### Select Configure WiFi
+### Select "Configure WiFi"
 
 ![lockbox wifi manager annotated](./images/lockbox-wifi-manager-annotated.webp)
 
@@ -105,9 +103,6 @@ Power on your device by clicking the right button
 </Steps>
 
 ![radr wifi network selection annotated](./images/radr-wifi-network-selection-annotated-1.webp)
-
-
-
 
 
 <Callout type="success">
@@ -145,21 +140,21 @@ Log in to your R+D dashboard account
   </Step>
   <Step>
 
-### Select Settings from the lefthand tab
+### Select "Settings" from the lefthand tab
 
 ![dashboard lefthand side annotated](./images/dashboard-lefthand-side-annotated.webp)
 
   </Step>
   <Step>
 
-### Select My Devices
+### Select "My Devices"
 
 ![lkbx pairing settings dropdown annotated](./images/lkbx-pairing-settings-dropdown-annotated.webp)
 
   </Step>
   <Step>
 
-### Select Add Network
+### Select "Add Network"
 
 ![add network unannotated](./images/add-network-unannotated.webp)
 
@@ -172,16 +167,6 @@ Log in to your R+D dashboard account
 
   </Step>
 </Steps>
-
-
-
-
-
-
-
-
-
-
 
 ### Pair Manually
 
@@ -204,35 +189,35 @@ Manual pairing requirements:
   </Step>
   <Step>
 
-### Select Settings from the lefthand tab
+### Select "Settings" from the lefthand tab
 
 ![dashboard lefthand side annotated](./images/dashboard-lefthand-side-annotated-1.webp)
 
   </Step>
   <Step>
 
-### Select My Devices
+### Select "My Devices"
 
 ![lkbx pairing settings dropdown annotated](./images/lkbx-pairing-settings-dropdown-annotated-1.webp)
 
   </Step>
   <Step>
 
-### Select Pair a Lockbox
+### Select "Pair a Lockbox"
 
 ![pair a lockbox](./images/pair-a-lockbox-1.webp)
 
   </Step>
   <Step>
 
-### Power on your Lockbox and select Settings
+### Power on your Lockbox and select "Settings"
 
 ![lockbox settings unannotated](./images/lockbox-settings-unannotated-1.webp)
 
   </Step>
   <Step>
 
-### Select Pairing
+### Select "Pairing"
 
 ![lkbx pairing selection unannotated](./images/lkbx-pairing-selection-unannotated.webp)
 
@@ -246,7 +231,7 @@ Manual pairing requirements:
   </Step>
   <Step>
 
-### Enter your pairing code and select Pair device 
+### Enter your pairing code and select "Pair device"
 
 ![lockbox pairing code entry annotated](./images/lockbox-pairing-code-entry-annotated.webp)
 
@@ -260,7 +245,45 @@ Your Chastity Lockbox is now paired!
 
 </Callout>
 
+## Starting a Lock
 
+### Terminology
+
+There are many ways to initiate a lock. For clarity, we'll be using some specific chastity-related terminology as we go. Click on a word below for its definition in relation to the Chastity Lockbox:
+
+<Accordions type="single">
+  <Accordion title="Self lock">
+
+A lock initiated by you on your device. Self locks can be initiated via device or dashboard. Once initiated, the terms of an active self lock are uneditable.
+
+  </Accordion>
+  <Accordion title="Held lock">
+
+A lock initiated by your partner on your device. Held locks can only be initiated via the dashboard. Once initiated, only the keyholder can edit the active lock terms.
+
+  </Accordion>
+  <Accordion title="Lockee">
+
+The person subject to the lock.
+
+  </Accordion>
+  <Accordion title="Keyholder">
+
+The person who has initiated the lock.
+
+  </Accordion>
+  <Accordion title="Active lock">
+
+The lock session you are presently engaged in as lockee and/or keyholder.
+
+  </Accordion>
+</Accordions>
+
+<Callout type="info" title="If you are in a self lock you are technically both the lockee and the keyholder. However,  self locks and held locks are subject to different conditions, which we will get into later.">
+
+</Callout>
+
+### Starting a Lock On-Device
 
 
 
