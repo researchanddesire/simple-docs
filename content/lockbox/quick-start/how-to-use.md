@@ -285,8 +285,120 @@ The lock session you are presently engaged in as lockee and/or keyholder.
 
 ### Starting a Lock On-Device
 
+Before proceeding, ensure that the device is closed (back housing is slotted into the grooves of the front housing).
+
+<Steps>
+  <Step>
+
+### Click the right button to awaken your device from sleep
+
+  </Step>
+  <Step>
+
+### Select "Lock"
+
+![lockbox local lock unannotated](./images/lockbox-local-lock-unannotated.webp)
+
+  </Step>
+  <Step>
+
+### Use the scroll wheel to set the duration of your lock
+
+![lockbox scroll wheel annotated](./images/lockbox-scroll-wheel-annotated.webp)
+
+  </Step>
+  <Step>
+
+### Click the right button to lock the device
+
+![lockbox local local unannotated](./images/lockbox-local-local-unannotated.webp)
+
+  </Step>
+</Steps>
+
+<Callout type="success" title="You are now locked!">
+
+</Callout>
+
+### Starting a Self Lock via the Dashboard
+
+<Callout type="info">
+
+To start a left lock via the dashboard you'll need:
+
+1. A computer or phone
+2. A R+D dashboard account
+3. A Chastity Lockbox that is both paired to your dashboard account and connected to Wifi
+
+</Callout>
+
+<Callout type="warn" title="Once started, self lock settings cannot be edited.">
+
+</Callout>
 
 
+<Steps>
+  <Step>
 
+### Log in to your dashboard account
+
+
+  </Step>
+  <Step>
+
+### Select "Chastity Lockbox"
+
+![dashboard self lock annotated](./images/dashboard-self-lock-annotated.webp)
+
+
+  </Step>
+  <Step>
+
+### Select "Lock Sessions"
+
+![dashboard lock sessions annotated](./images/dashboard-lock-sessions-annotated.webp)
+
+  </Step>
+  <Step>
+
+### Click the "Lock" button beside the session you want to initiate
+
+![dashboard lock selection annotated](./images/dashboard-lock-selection-annotated.webp)
+
+  </Step>
+  <Step>
+
+### Click "Self Lock"
+
+![self lock selection annotated](./images/self-lock-selection-annotated.webp)
+
+  </Step>
+  <Step>
+
+### Click "Start lock session"
+
+![self lock start lock session annotated](./images/self-lock-start-lock-session-annotated.webp)
+
+  </Step>
+</Steps>
+
+<Callout type="success" title="You are now locked!">
+
+</Callout>
+
+### Starting a Held Lock via the Dashboard
+
+<Callout type="info">
+
+To start a held lock via the dashboard you'll need:
+
+1. A R+D dashboard account
+2. A partner whose devices you control
+
+Your partner's Chastity Lockbox must be:
+
+1. Paired to their account
+2. Connected to WiFi
+</Callout>
 
 
