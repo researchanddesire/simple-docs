@@ -1,0 +1,4 @@
+{
+  "title": "Account & Dashboard",
+  "pages": ["account-password", "devices-pairing", "partners-access"]
+}

@@ -1,8 +1,4 @@
 {
-  "title": "RADR",
-  "pages": [
-    "index",
-    "faqs",
-    "guides"
-  ]
+  "title": "RADR Controller",
+  "pages": ["get-started", "connect-device", "controls", "supported-devices", "troubleshooting"]
 }

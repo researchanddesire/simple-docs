@@ -1,14 +1,4 @@
 {
-  "title": "DTT",
-  "pages": [
-    "index",
-    "changelog",
-    "errors",
-    "faqs",
-    "quick-start",
-    "software-2.0-preview",
-    "specs",
-    "technical",
-    "training-modes"
-  ]
+  "title": "Deepthroat Trainer",
+  "pages": ["get-started", "toy-safety", "start-training", "training-modes", "results", "troubleshooting"]
 }
