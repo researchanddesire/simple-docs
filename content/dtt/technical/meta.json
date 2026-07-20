@@ -1,0 +1,13 @@
+{
+  "title": "Technical",
+  "pages": [
+    "index",
+    "button-controls",
+    "calibration",
+    "device-states",
+    "error-codes",
+    "firmware-updates",
+    "led-feedback",
+    "offline-mode"
+  ]
+}

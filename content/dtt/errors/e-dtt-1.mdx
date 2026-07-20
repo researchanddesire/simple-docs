@@ -1,0 +1,118 @@
+---
+title: "E-DTT-1: No Internet"
+---
+
+## What this error means
+
+Your Trainer successfully connected to your Wi-Fi network but cannot reach the remote server. This typically indicates that your router or firewall is blocking the device from accessing the internet.
+
+<Callout type="info">
+
+The device has network connectivity but external communication is being restricted by your network configuration.
+
+</Callout>
+## Common causes
+
+- **Strict firewall settings** — Your router's firewall security level is too restrictive
+- **Device blocking** — The Trainer is blocked in your router's Access Control or Security settings
+- **Network filters** — Features like child protection, IoT isolation, or private network modes are preventing outbound communication
+
+## How to fix this error
+
+### Step 1: Access your router settings
+
+  Open a web browser and navigate to your router's admin panel. Most routers use one of these addresses:
+
+  - `192.168.0.1`
+  - `192.168.1.1`
+
+<Callout type="idea">
+</Callout>
+Check the label on your router for the correct address and default login credentials. You can also search online for your specific router model's setup instructions.
+
+
+### Step 2: Check for blocked devices
+
+  Look for settings menus labeled:
+
+  - **Access Control**
+  - **MAC Filtering**
+  - **Device List**
+  - **Connected Devices**
+
+  Verify that your Trainer device is not on a blocked or restricted list. If you find it blocked, remove it from the list and save your changes.
+
+### Step 3: Adjust firewall settings
+
+  If your router offers firewall security levels (High, Medium, Low):
+
+  1. Change from **High** to **Medium** or **Low**
+  2. Save your changes
+
+<Callout type="warn">
+</Callout>
+Only lower your firewall settings if you understand the security implications. Medium is usually sufficient for most home networks.
+
+
+### Step 4: Reboot your devices
+
+  Restart both devices in this order:
+
+  1. Power cycle your **router** (wait 30 seconds before turning it back on)
+  2. Restart your **Trainer** device
+
+  Wait 2-3 minutes for everything to reconnect, then check if the error clears.
+
+## Alternative: Test with a mobile hotspot
+
+If the error persists after adjusting router settings, your router may have IoT traffic filtering that cannot be easily disabled. Use your phone's hotspot to confirm this is the issue.
+
+### Step 5: Enable your phone's hotspot
+
+  Turn on the mobile hotspot feature:
+
+  - **Android**: Settings → Network & Internet → Hotspot & tethering
+  - **iPhone**: [Personal Hotspot Guide](https://support.apple.com/en-us/HT204023)
+
+### Step 6: Connect the Trainer to your hotspot
+
+  1. On your Trainer, open the Wi-Fi setup page
+  2. Using a laptop or second device, connect to the **"Trainer Setup"** Wi-Fi network
+  3. Follow the setup steps to connect the Trainer to your phone's hotspot
+
+### Step 7: Verify the connection
+
+  If the error disappears when connected to your phone's hotspot, this confirms your home router is blocking the device.
+
+<Callout type="success">
+</Callout>
+Success! The Trainer can reach the internet through your mobile connection.
+
+
+## Permanent router configuration
+
+Once you've confirmed the router is the issue, you can create a permanent fix:
+<Callout type="info" title="Create an allow rule for the Trainer">
+
+Add the Trainer's MAC address to your router's allowlist or whitelist. This ensures the device always has internet access regardless of other security settings.
+
+Find the MAC address in your Trainer's network settings or on the device label.
+
+</Callout>
+<Callout type="info" title="Adjust IoT device settings">
+
+Some routers have specific IoT device settings. Look for options like:
+
+- **IoT Network** — Add the Trainer to a trusted IoT network
+- **Device Priority** — Set the Trainer to high priority
+- **Access Scheduling** — Ensure no time-based restrictions apply
+
+</Callout>
+## Summary
+
+<Callout type="info">
+
+**Error E-DTT-1** indicates your device has local network access but cannot reach the internet due to router or firewall restrictions.
+
+</Callout>
+Follow the steps above to allow traffic through your router's firewall, or use the mobile hotspot test to confirm the issue. Once outbound traffic is permitted, the Trainer automatically reconnects and the error clears.

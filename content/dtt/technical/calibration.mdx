@@ -1,0 +1,209 @@
+---
+title: "Calibration"
+---
+
+Calibration teaches your trainer the range of motion for your specific setup. Proper calibration ensures accurate position tracking and consistent scoring across sessions.
+
+## When calibration is required
+
+Your trainer prompts for calibration when:
+- Using a new toy for the first time
+- Cloud calibration data isn't available for your current toy
+- You request recalibration from the dashboard
+
+<Callout type="info">
+
+With Software 2.0+, calibration data is stored in the cloud per-toy. Once calibrated, you won't need to recalibrate unless you change toys or reset the data.
+
+</Callout>
+## The calibration process
+
+Calibration captures two key positions to define your training range:
+
+### Step 1: Minimum Position (Closest)
+
+The trainer prompts you to capture the **minimum position** — this is typically your maximum comfortable depth, closest to the sensor.
+
+1. Position yourself at your comfortable maximum depth
+2. Hold steady
+3. Press the button to capture
+
+<Callout type="warn">
+
+Choose a depth you can comfortably reach during training. Don't over-extend during calibration.
+
+</Callout>
+### Step 2: Maximum Position (Rest)
+
+Next, capture the **maximum position** — this is your rest or start position, furthest from the sensor.
+
+1. Return to your starting/rest position
+2. Hold steady
+3. Press the button to capture
+
+<Callout type="info">
+
+The trainer captures 100 samples at each position for accuracy. Hold still while pressing the button to get consistent readings.
+
+</Callout>
+## Understanding calibration values
+
+| Position | Description | Typical Range |
+|----------|-------------|---------------|
+| **Minimum** | Closest comfortable depth | 2–8 cm from sensor |
+| **Maximum** | Rest/start position | 15–22 cm from sensor |
+| **Range** | Difference between positions | At least 0.8 cm required |
+
+The effective training range is the distance between these two positions. A larger range gives you more room for graduated training segments.
+
+## Types of calibration
+
+### Device-Level Calibration
+Local calibration stored on the device during a session. Used when:
+- Cloud calibration isn't available
+- You're training offline
+- Starting fresh without saved toy data
+
+### Toy-Level Calibration (Cloud)
+Calibration data stored in the cloud and associated with a specific toy:
+- Persists across sessions
+- Syncs automatically when online
+- Can be viewed and reset from the dashboard
+
+<Callout type="idea">
+
+Toy-level calibration is preferred because it remembers your settings. You only need to recalibrate when changing toys.
+
+</Callout>
+## Cloud calibration (Software 2.0+)
+
+With the latest firmware, calibration works with the cloud:
+
+1. When you calibrate, data is sent to the dashboard
+2. The calibration is associated with your selected toy
+3. Next time you use that toy, calibration loads automatically
+
+### Managing cloud calibration
+
+From the dashboard, you can:
+- View current calibration values for each toy
+- Reset calibration to force recalibration
+- Manually adjust values (if supported)
+
+### How to reset calibration for a toy
+
+If you've improved and want to recalibrate to a new depth, or if your current calibration feels off:
+
+### Step 1: Open your Toybox
+
+In the dashboard, go to **Toybox** to see your registered toys.
+
+### Step 2: Select the toy
+
+Click on the toy you want to recalibrate.
+
+### Step 3: Reset calibration
+
+Look for the **Reset Calibration** option in the toy's settings. Click it to clear the stored calibration data.
+
+### Step 4: Recalibrate on your next session
+
+The next time you use that toy, the trainer will prompt you to calibrate again. Set your new comfortable depth during this process.
+
+<Callout type="idea">
+
+Recalibrating is useful when your training has progressed and your previous "comfortable maximum depth" is now too shallow. Reset and recalibrate to update your range.
+
+</Callout>
+<Callout type="info">
+
+Cloud calibration requires an internet connection during the calibration step. If offline, calibration is stored locally for that session only.
+
+</Callout>
+## Calibration tips
+
+### For accurate calibration:
+- Use the same toy you'll train with
+- Hold steady during capture (don't rush)
+- Choose realistic, repeatable positions
+- Ensure the trainer is securely mounted
+
+### Avoid these common issues:
+- Moving while the button is pressed
+- Calibrating at extreme positions you can't sustain
+- Changing toy or mount position after calibration
+
+## Troubleshooting
+<Callout type="info" title="Start and end location too close">
+
+This error means the two positions you captured are less than 0.8 cm apart—not enough range for the trainer to track your movement accurately.
+
+**How to fix:**
+1. Press the button to restart calibration
+2. For the **minimum position** (closest point): go to your comfortable maximum depth, hold steady, then press the button
+3. For the **maximum position** (rest point): pull back to your natural starting position—this should be noticeably farther from the sensor
+4. Hold completely still while pressing the button at each position
+
+**Common causes:**
+- Rushing through calibration without moving far enough between positions
+- Moving while pressing the button (the trainer samples your position during the press)
+- Accidentally capturing the same position twice
+
+<Callout type="idea">
+
+Aim for at least 5–10 cm between your closest and rest positions. The more range you have, the better the trainer can track your progress during training.
+
+</Callout>
+
+</Callout>
+<Callout type="info" title="Calibration option isn't appearing">
+
+- You may be on firmware with cloud calibration enabled
+- Check if calibration data already exists for your toy
+- Try selecting a different toy or resetting calibration from the dashboard
+
+</Callout>
+<Callout type="info" title="Position readings seem wrong after calibration">
+
+- Recalibrate, ensuring you hold steady during capture
+- Check that the toy and mount haven't moved
+- Verify the sensor has a clear view (nothing blocking)
+
+</Callout>
+<Callout type="info" title="Calibration keeps being requested">
+
+- Check your internet connection for cloud sync
+- Ensure a toy is selected in your active template
+- The trainer may be using default values due to sync issues
+
+</Callout>
+<Callout type="info" title="Can I skip calibration?">
+
+If calibration data exists from a previous session, you can often skip to training. Long-press during the calibration prompt to skip (not recommended for accuracy).
+
+</Callout>
+<Callout type="info" title="Training requires depths I can't physically reach">
+
+If the trainer is asking you to go deeper than is physically possible—even when your nose touches the sensor—your calibration minimum position is set too aggressively.
+
+**Why this happens:**
+- Your minimum position was calibrated too close to the sensor (under 5 cm)
+- Training segments with depth scaling push beyond your comfortable range
+- High-speed segments require the deepest positions in final reps
+
+**How to fix:**
+
+From the dashboard, go to **Toybox**, select your toy, and adjust the calibration minimum position to **5 cm** or further from the sensor. This ensures the deepest required depth is always achievable.
+
+<Callout type="idea">
+
+A minimum position of 5 cm keeps you outside the sensor's dead zone (1.7 cm) with comfortable margin. You can always recalibrate to a closer position later as you progress.
+
+</Callout>
+If you have a keyholder managing your settings, they can adjust your calibration on your behalf.
+
+</Callout>
+## Related guides
+**[Software 2.0 Preview](/dtt/software-2.0-preview)**
+
+Learn about cloud calibration and other new features.

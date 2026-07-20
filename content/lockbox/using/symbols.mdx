@@ -1,0 +1,139 @@
+---
+title: "Symbols on the Lockbox"
+---
+
+<img src="/lockbox/img/header.webp" alt="Lockbox header bar showing status icons" />
+
+The header bar on your lockbox displays several icons that indicate the current state of your device. Understanding these symbols helps you quickly assess whether your lockbox is locked, connected, and ready for use.
+
+From left to right, the icons are:
+
+### Step 1: Lock icon
+
+    Indicates whether your device is currently locked. The status indicator shows whether the backplate is properly positioned. See [Lock icon](#lock-icon) for details.
+
+### Step 2: Wi-Fi icon
+
+    Shows whether your device is connected to a Wi-Fi network. The status indicator reveals whether you're also connected to the dashboard and ready to play. See [Wi-Fi icon](#wi-fi-icon) for details.
+
+### Step 3: Battery icon
+
+    Displays the current battery level and charging status. This icon has no status indicator. See [Battery icon](#battery-icon) for details.
+
+## Lock icon
+
+The lock icon shows the current status of your device's sensors. This icon reflects the physical state of the lock mechanism—not your active play session.
+
+### Locked
+
+<img src="/lockbox/img/locked.webp" alt="Locked icon showing the device is secured" />
+
+When you see this symbol, the locking mechanism is engaged. Your device's sensors have detected that the lock is secured and the contents cannot be accessed.
+
+### Unlocked
+
+<img src="/lockbox/img/unlocked.webp" alt="Unlocked icon showing the device can be opened" />
+
+The unlocked symbol indicates that the sensors have detected the lock is open. You can access the contents of the box.
+
+### Backplate on
+<img src="/lockbox/img/locked backplate on.webp" alt="Locked state with backplate detected" />
+<img src="/lockbox/img/unlocked backplate on.webp" alt="Unlocked state with backplate detected" />
+A small status indicator appears in the bottom-left corner of the lock icon. When this indicator is **green**, the sensors have detected that the backplate is properly positioned and the device is ready to lock. This indicator can appear in both locked and unlocked states.
+
+### Backplate off
+<img src="/lockbox/img/locked backplate off (1).webp" alt="Locked state with backplate removed" />
+<img src="/lockbox/img/unlocked backplate off.webp" alt="Unlocked state with backplate removed" />
+When the status indicator is **solid yellow**, the sensors have detected that the backplate is not in position. Attempting to lock in this state will fail.
+
+## Wi-Fi icon
+
+### Wi-Fi not connected
+
+<img src="/lockbox/img/wifi-off (1).webp" alt="Wi-Fi disconnected icon" />
+
+This symbol indicates your device is not connected to any Wi-Fi network. This typically occurs when:
+
+- Your lockbox is brand new and has never been configured for Wi-Fi
+- Your lockbox was previously connected but is now out of range of the saved network
+
+In either case, you'll need to configure Wi-Fi by following the [Wi-Fi setup guide](/lockbox/quick-start/wifi-setup).
+
+### Wi-Fi connected
+
+<img src="/lockbox/img/wifi (1).webp" alt="Wi-Fi connected icon" />
+
+This symbol confirms your device is connected to Wi-Fi and can access the internet.
+
+<Callout type="info">
+
+Wi-Fi connectivity alone doesn't mean your device can receive commands. You also need to pair your device and connect it to the dashboard. Follow the [pairing guide](/lockbox/quick-start/pairing) for instructions.
+
+</Callout>
+Check the status indicator in the bottom-left corner of the Wi-Fi icon to see if your device is ready to receive commands.
+
+#### Status indicator: flashing yellow
+
+<img src="/lockbox/img/wifi-flashing.webp" alt="Wi-Fi connected with flashing yellow status indicator" />
+
+A flashing yellow indicator means your device is connected to Wi-Fi but not yet connected to the dashboard server. Your device cannot receive keyholder commands in this state.
+
+<Callout type="info">
+
+The indicator checks two things: Wi-Fi connectivity AND server connection. Both must be working for the green indicator.
+
+</Callout>
+This can happen if:
+
+- **Your device hasn't been paired** — Follow the [pairing guide](/lockbox/quick-start/pairing) to complete setup.
+- **Your device just powered on** — Server connection typically takes 15–30 seconds, but can take up to 2 minutes depending on your location and network conditions.
+- **Server connectivity issue** — Temporary server maintenance or network routing issues.
+
+<Callout type="warn">
+
+If you've waited more than two minutes and still see the flashing yellow indicator, please contact support as this may indicate a server issue.
+
+</Callout>
+#### Status indicator: solid red
+
+A solid red indicator means your device is connected to the Wi-Fi network but cannot reach the internet. Your device cannot receive keyholder commands in this state.
+
+This typically indicates a network configuration issue rather than a device problem. Common causes include:
+
+- **Router has no internet connection** — Check that other devices on the same network can access the internet.
+- **Network firewall or filtering** — Some networks (corporate, hotel, or public Wi-Fi) block certain connections. Try a different network.
+- **Captive portal not completed** — Some networks require you to accept terms or log in through a browser before granting internet access.
+- **DNS or routing issues** — Your router may be misconfigured. Try restarting your router.
+
+<Callout type="warn">
+
+If you see a red dot on multiple different networks, contact support as this may indicate a device issue requiring further troubleshooting.
+
+</Callout>
+#### Status indicator: solid green
+
+<img src="/lockbox/img/wifi-solid-green.webp" alt="Wi-Fi connected with solid green status indicator" />
+
+A solid green indicator means:
+1. Your device is connected to Wi-Fi
+2. Your device is connected to the dashboard server
+3. Your device is ready to receive keyholder commands instantly
+
+<Callout type="idea">
+
+Trust the device indicator over the dashboard status. The device shows real-time connectivity, while the dashboard may lag by up to 60 seconds.
+
+</Callout>
+## Battery icon
+<img src="/lockbox/img/battery charging.webp" alt="Battery charging" />
+<img src="/lockbox/img/battery full.webp" alt="Battery full" />
+<img src="/lockbox/img/battery mid.webp" alt="Battery medium" />
+<img src="/lockbox/img/battery low.webp" alt="Battery low" />
+<img src="/lockbox/img/battery none.webp" alt="Battery empty" />
+These icons show your device's current battery level. When your device is charging, you'll see a lightning bolt through the battery icon.
+
+<Callout type="warn">
+
+If the battery icon turns red, charge your device immediately to avoid interruption.
+
+</Callout>
