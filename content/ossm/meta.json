@@ -1,4 +1,10 @@
 {
   "title": "OSSM",
-  "pages": ["get-started", "use-ossm", "safety", "care", "troubleshooting"]
+  "pages": [
+    "index",
+    "how-to-use",
+    "care-and-maintenance",
+    "open-source-info",
+    "tools"
+  ]
 }

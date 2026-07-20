@@ -1,0 +1,96 @@
+---
+title: "Contributing"
+---
+
+This project is built so writers can contribute without learning the full toolchain first.
+
+## Start the preview
+
+Use the script for your operating system:
+
+- macOS: `./start-docs.command`
+- Windows: `.\start-docs.bat`
+- Linux: `./start-docs.sh`
+
+When the preview is ready, open [http://127.0.0.1:6969](http://127.0.0.1:6969).
+The first run will install the docs tools for you.
+
+## Edit a page
+
+1. Open the `content/` folder.
+2. Choose the page you want to improve.
+3. Edit the MDX file.
+4. Save your changes and review the preview.
+
+<Accordions type="multiple">
+  <Accordion title="First question hey">
+
+Answer to the first question.
+
+  </Accordion>
+  <Accordion title="Second question sup?">
+
+Answer to the second question. asdfasdfas dasdf asdf
+
+  </Accordion>
+</Accordions>
+
+<Steps>
+  <Step>
+
+### Install dependencies
+
+Run the install command.
+
+  </Step>
+  <Step>
+
+### Step two
+
+Step content goes here.
+
+  </Step>
+  <Step>
+
+### Step three
+
+Step content goes here.
+
+Here's some more information!
+
+  </Step>
+</Steps>
+
+
+## Add a page
+
+1. Copy `templates/page-template.mdx`.
+2. Save the new file inside `content/`.
+3. Add the page to the `pages` list in the nearest `meta.json`.
+4. Refresh the preview and confirm the page appears in the sidebar.
+
+## Check before sharing
+
+Use the script for your operating system:
+
+- macOS: `./check-docs.command`
+- Windows: `.\check-docs.bat`
+- Linux: `./check-docs.sh`
+
+## If you prefer the manual steps
+
+There is also a manual local workflow:
+
+### macOS and Linux
+
+```bash
+./scripts/bootstrap.sh
+./scripts/serve-local.sh
+```
+
+### Windows PowerShell
+
+```powershell
+.\scripts\bootstrap.ps1
+.\scripts\serve-local.ps1
+```

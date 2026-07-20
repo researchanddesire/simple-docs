@@ -1,4 +1,14 @@
 {
   "title": "Lockbox",
-  "pages": ["get-started", "start-end-lock", "keyholder-setup", "take-a-break", "emergency-unlock", "troubleshooting"]
+  "pages": [
+    "index",
+    "changelog",
+    "device-states",
+    "errors",
+    "faqs",
+    "quick-start",
+    "support",
+    "technical",
+    "using"
+  ]
 }

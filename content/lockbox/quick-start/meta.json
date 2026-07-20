@@ -1,0 +1,12 @@
+{
+  "title": "Quick start",
+  "pages": [
+    "index",
+    "ble-pairing",
+    "keyholder-guide",
+    "pairing",
+    "start-a-lock",
+    "wifi-setup",
+    "how-to-use"
+  ]
+}

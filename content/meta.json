@@ -1,12 +1,11 @@
 {
-  "title": "R+D User Guides",
+  "title": "Research and Desire",
   "pages": [
     "index",
-    "account-and-dashboard",
     "ossm",
     "lockbox",
     "dtt",
     "radr",
-    "support"
+    "meta"
   ]
 }
