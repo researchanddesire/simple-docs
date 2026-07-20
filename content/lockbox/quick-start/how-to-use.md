@@ -20,14 +20,14 @@ So you've received your Chastity Lockbox and are wondering how it works. In this
 
 <Callout type="warn">
 
-The physical unlock should only be used in emergency situations where a software emergency unlock is unavailable, as its use will irreparably damage the back housing.
+**The physical unlock should only be used in emergency situations where a software emergency unlock is unavailable, as its use will irreparably damage the back housing.**
 
 </Callout>
 
 
 <Callout type="success">
 
-Congratulations! You're now an expert on the Chastity Lockbox's physical controls.
+**Congratulations! You're now an expert on the Chastity Lockbox's physical controls.**
 
 </Callout>
 
@@ -43,7 +43,7 @@ The Chastity Lockbox is designed to be used in conjunction with the R+D LABS das
 
 <Callout type="info">
 
-The Chastity Lockbox is compatible only with 2.4GHz networks.
+**The Chastity Lockbox is compatible only with 2.4GHz networks.**
 
 </Callout>
 
@@ -119,7 +119,7 @@ To use your Chastity Lockbox in conjunction with your dashboard account, you nee
 
 ### Pair via Bluetooth
 
-<Callout type="info" title="Bluetooth pairing requirements">
+<Callout type="info" title="Bluetooth pairing requirements:">
 
 1. Google Chrome or Microsoft Edge browser
 2. Desktop or laptop computer
@@ -172,7 +172,7 @@ Log in to your R+D dashboard account
 
 <Callout type="info">
 
-Manual pairing requirements:
+**Manual pairing requirements:**
 
 1. Chastity Lockbox is connected to WiFi
 2. Chastity Lockbox is not already paired to another dashboard account
@@ -320,11 +320,35 @@ Before proceeding, ensure that the device is closed (back housing is slotted int
 
 </Callout>
 
+### Creating and Editing Lock Sessions
+
+Lock sessions define the conditions of your lock, including aspects like:
+
+- Duration
+- Break times
+- Visibility
+
+Lock sessions can be created and edited by you and/or your partner if you have given them access to your devices.
+
+<Callout type="info" title="For self locks:">
+
+You may edit the conditions of your active self lock session while it is active, however these new settings will not apply to the active lock in real time. They will, however, be saved for the future.
+
+</Callout>
+
+<Callout type="info" title="For held locks:">
+
+If a keyholder edits the conditions of an active lock session, the conditions of the active lock will change in real time. Because a keyholder acts through the account of their partner, any new lock session they create will live on the partner's account and not the keyholder's.
+
+</Callout>
+
+
+
 ### Starting a Self Lock via the Dashboard
 
 <Callout type="info">
 
-To start a left lock via the dashboard you'll need:
+**To start a left lock via the dashboard you'll need:**
 
 1. A computer or phone
 2. A R+D dashboard account
@@ -390,15 +414,72 @@ To start a left lock via the dashboard you'll need:
 
 <Callout type="info">
 
-To start a held lock via the dashboard you'll need:
+**To start a held lock via the dashboard you'll need:**
 
 1. A R+D dashboard account
 2. A partner whose devices you control
 
-Your partner's Chastity Lockbox must be:
+**Your partner's Chastity Lockbox must be:**
 
-1. Paired to their account
+1. Paired to their R+D dashboard account
 2. Connected to WiFi
 </Callout>
 
+<Steps>
+  <Step>
+
+### Log in to your R+D dashboard account
+
+  </Step>
+  <Step>
+
+### Select "Your Account"
+
+![held lock your account dashboard](./images/held-lock-your-account-dashboard.webp)
+
+
+  </Step>
+  <Step>
+
+### Select the account of the user you want to lock
+
+![held lock my parnter dashboard](./images/held-lock-my-parnter-dashboard.webp)
+
+  </Step>
+  <Step>
+
+### Select "Chastity Lockbox"
+
+![dashboard self lock annotated](./images/dashboard-self-lock-annotated-1.webp)
+
+  </Step>
+  <Step>
+
+### Select "Lock Sessions"
+
+![dashboard lock sessions annotated](./images/dashboard-lock-sessions-annotated-1.webp)
+
+  </Step>
+  <Step>
+
+### Click the "Lock" button beside the session you want to initiate
+
+![dashboard lock selection annotated](./images/dashboard-lock-selection-annotated-1.webp)
+
+  </Step>
+  <Step>
+
+### Click "Start lock session"
+
+![start lock session keyholder annotated](./images/start-lock-session-keyholder-annotated.webp)
+
+
+  </Step>
+</Steps>
+
+<Callout type="success">
+
+**Your partner is now locked!**
+
+</Callout>
 
