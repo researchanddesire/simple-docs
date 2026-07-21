@@ -342,6 +342,64 @@ If a keyholder edits the conditions of an active lock session, the conditions of
 
 </Callout>
 
+#### Creating and Editing Lock Templates on Your Dashboard Account
+
+<Accordions type="single">
+  <Accordion title="First question">
+
+Answer to the first question.
+
+  </Accordion>
+  <Accordion title="Second question">
+
+Answer to the second question.
+
+  </Accordion>
+</Accordions>
+
+
+<Callout type="success" title="You have created or edited a new lock!">
+
+</Callout>
+
+
+#### Creating and Editing Lock Sessions on Your Partner's Account
+
+<Steps>
+  <Step>
+
+### Log in to your R+D dashboard account
+
+
+  </Step>
+  <Step>
+
+### Select "Your Account"
+
+![held lock your account dashboard](./images/held-lock-your-account-dashboard-1.webp)
+
+  </Step>
+  <Step>
+
+### Select your partner's account
+
+![held lock my parnter dashboard](./images/held-lock-my-parnter-dashboard-1.webp)
+
+
+  </Step>
+  <Step>
+
+### Follow steps 2-5 in the guide above
+
+
+  </Step>
+</Steps>
+
+
+
+<Callout type="success" title="You have created or edited a new lock!">
+
+</Callout>
 
 
 ### Starting a Self Lock via the Dashboard
@@ -483,3 +541,33 @@ If a keyholder edits the conditions of an active lock session, the conditions of
 
 </Callout>
 
+### Unlocking in Emergencies
+
+There are three ways to unlock your device in case of emergency:
+
+<Callout type="warn" title="The Emergency Unlock feature will only be available to you if:">
+
+1. Your active lock is a test lock; or
+2. Your active lock was started on-device; or
+3. Your active lock was started via the dashboard using a lock session that has the Emergency Unlock feature enabled
+
+</Callout>
+
+
+<Accordions type="single">
+  <Accordion title="Using Emergency Unlock on-device">
+
+
+
+  </Accordion>
+  <Accordion title="Using Emergency Unlock via the dashboard">
+
+Answer to the second question.
+
+  </Accordion>
+  <Accordion title="Physical unlock (last resort)">
+
+Answer goes here.
+
+  </Accordion>
+</Accordions>
