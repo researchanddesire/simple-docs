@@ -545,7 +545,7 @@ Answer to the second question.
 
 There are three ways to unlock your device in case of emergency:
 
-<Callout type="warn" title="The Emergency Unlock feature will only be available to you if:">
+<Callout type="info" title="The Emergency Unlock feature will only be available to you if:">
 
 1. Your active lock is a test lock; or
 2. Your active lock was started on-device; or
@@ -553,16 +553,29 @@ There are three ways to unlock your device in case of emergency:
 
 </Callout>
 
+<Callout type="warn" title="Note that the use of the Emergency Unlock feature will disable your Chastity Lockbox for a 24-hour period.">
+
+</Callout>
+
+
 
 <Accordions type="single">
   <Accordion title="Using Emergency Unlock on-device">
 
+1. Awaken your device using the **right button**
+2. Select **Emergency Unlock**
 
+![emergency unlock on device select annotated](./images/emergency-unlock-on-device-select-annotated.webp)
+
+3. Select **Unlock**
+
+![emergency unlock on device select annotated](./images/emergency-unlock-on-device-select-annotated.webp)
 
   </Accordion>
-  <Accordion title="Using Emergency Unlock via the dashboard">
+  <Accordion title="Ending a held lock (keyholder only)">
 
-Answer to the second question.
+1. **Log in** to the R+D dashboard
+2. 
 
   </Accordion>
   <Accordion title="Physical unlock (last resort)">
@@ -571,3 +584,4 @@ Answer goes here.
 
   </Accordion>
 </Accordions>
+
