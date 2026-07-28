@@ -7,6 +7,7 @@ on:
       - staging
     paths:
       - "content/**"
+      - ".github/workflows/sync-docs-userguide-content.yml"
   workflow_dispatch:
     inputs:
       branch:
