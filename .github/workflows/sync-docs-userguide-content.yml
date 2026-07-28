@@ -1,0 +1,33 @@
+name: Sync Docs Userguide Content
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - "content/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: docs-userguide-content-sync
+  cancel-in-progress: true
+
+jobs:
+  request-rad-app-import:
+    runs-on: ubuntu-latest
+    if: ${{ github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[docs-sync]') }}
+    steps:
+      - name: Debounce sync
+        run: sleep 120
+
+      - name: Request User Guide import
+        env:
+          GH_TOKEN: ${{ secrets.DOCS_SYNC_TOKEN }}
+        run: |
+          gh workflow run import-docs-content.yml \
+            --repo researchanddesire/rad-app \
+            --ref main \
+            --field site=userguide
