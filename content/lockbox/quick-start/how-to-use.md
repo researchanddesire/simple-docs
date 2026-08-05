@@ -8,10 +8,28 @@ So you've received your Chastity Lockbox and are wondering how it works. In this
 
 ![lockbox front housing annotated](./images/lockbox-front-housing-annotated.webp)
 
-- **Left button** - back button
-- **Right button** - selection button
-- **Scroll wheel** - moves you between selection options on the device screen
-- **Screen** - allows you to visually interact with the device
+<Accordions type="single">
+  <Accordion title="Left button">
+
+Use this button to return to the previous menu selection.
+
+  </Accordion>
+  <Accordion title="Right button">
+
+Use this button to make a menu selection.
+
+  </Accordion>
+  <Accordion title="Scroll wheel">
+
+Use this to move between selection options on the device screen.
+
+  </Accordion>
+  <Accordion title="Screen">
+
+This allows you to visually interact with the device.
+
+  </Accordion>
+</Accordions>
 
 ![front and back housing annotated](./images/front-and-back-housing-annotated.webp)
 
@@ -275,6 +293,11 @@ The person who has initiated the lock.
   <Accordion title="Active lock">
 
 The lock session you are presently engaged in as lockee and/or keyholder.
+
+  </Accordion>
+  <Accordion title="On-device">
+
+Anct
 
   </Accordion>
 </Accordions>
@@ -569,16 +592,35 @@ There are three ways to unlock your device in case of emergency:
 
 3. Select **Unlock**
 
-![emergency unlock on device select annotated](./images/emergency-unlock-on-device-select-annotated.webp)
+![emergency unlock on device confirm annotated](./images/emergency-unlock-on-device-confirm-annotated-1.webp)
 
   </Accordion>
-  <Accordion title="Ending a held lock (keyholder only)">
+  <Accordion title="Keyholder terminates a held lock">
 
-1. **Log in** to the R+D dashboard
-2. 
+1. **Log in** to the R+D dashboard. Your partner's lock will appear on your dashboard homepage
+2. Select **Unlock**
+
+![end held lock unlock annotated](./images/end-held-lock-unlock-annotated.webp)
+
+3. Select **Yes, end session**
+
+![end held lock yes annotated](./images/end-held-lock-yes-annotated.webp)
+
 
   </Accordion>
-  <Accordion title="Physical unlock (last resort)">
+  <Accordion title="Physical unlock">
+
+  1. Locate the cutout on the back housing of your device
+  
+![back housing exterior annotated](./images/back-housing-exterior-annotated-1.webp)
+
+  2. Position the device so that the cutout faces away from you
+
+![physical lock inverted annotated](./images/physical-lock-inverted-annotated.webp)
+
+  3. Place the head of a small flat-head screwdriver into the cutout. Angle the screwdriver slightly down and away from you and push the screwdriver with force. This will break open the cutout
+  4. Once the cutout is open, angle the head of your screwdriver between the wall of the back housing and the locking paddle
+  5. Use gentle force on the screwdriver to slide the locking paddle upwards
 
 Answer goes here.
 
