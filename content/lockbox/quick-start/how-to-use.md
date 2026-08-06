@@ -610,20 +610,25 @@ There are three ways to unlock your device in case of emergency:
   </Accordion>
   <Accordion title="Physical unlock">
 
-  1. Locate the cutout on the back housing of your device
+  1. Locate the cutout on the back housing of your device.
   
 ![back housing exterior annotated](./images/back-housing-exterior-annotated-1.webp)
 
-  2. Position the device so that the cutout faces away from you
+  2. Position the device so that the cutout faces away from you.
 
 ![physical lock inverted annotated](./images/physical-lock-inverted-annotated.webp)
 
-  3. Place the head of a small flat-head screwdriver into the cutout. Angle the screwdriver slightly down and away from you and push the screwdriver with force. This will break open the cutout
-  4. Once the cutout is open, angle the head of your screwdriver between the wall of the back housing and the locking paddle
-  5. Use gentle force on the screwdriver to slide the locking paddle upwards
+  3. Place the head of a small flat-head screwdriver into the cutout. Angle the screwdriver slightly down and away from you and push inwards and down on the hilt of the screwdriver. This will break open the cutout.
 
-Answer goes here.
+![physical unlock break open cutout annotated](./images/physical-unlock-break-open-cutout-annotated.webp)
+
+  4. Remove the cutout so that you have clear access to the motor paddle.
+
+![physical unlock remove cutout annotated](./images/physical-unlock-remove-cutout-annotated.webp)
+
+  5. Use gentle force on the screwdriver to slide the locking paddle upwards. Once the paddle is upright, you can open your device.
+
+![physical unlock paddle annotated](./images/physical-unlock-paddle-annotated.webp)
 
   </Accordion>
 </Accordions>
-
