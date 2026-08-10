@@ -1,14 +1,16 @@
-Community documentation components
-==================================
+# Community documentation components
 
-This directory preserves the three interactive React tools that remain in scope:
+This directory contains the bidirectionally synchronized implementations for the
+@repo/device-tools workspace package. The thin package boundary lives at
+packages/device-tools so pnpm links do not appear inside the content tree watched
+by the documentation compiler. These tools are shared by the dashboard and docs:
 
 - device-flasher.jsx
 - mermaid-controls.jsx
+- ossm-ble-controller.tsx
 - ossm-funscript-player.jsx
 
 The directory is mirrored with the User Guide content so public contributors can
-develop the components without access to the private application repository.
-These sources are not registered in the Fumadocs MDX runtime until each component
-has been ported, tested, and reviewed. Do not add new legacy widgets here; prefer
-native Fumadocs components for ordinary documentation UI.
+develop the components without access to the private application repository. Keep
+the implementations in this synchronized directory: moving their source outside
+the content tree would break inbound edits from researchanddesire/simple-docs.

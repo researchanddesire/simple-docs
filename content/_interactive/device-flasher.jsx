@@ -4,6 +4,16 @@ import { useEffect, useRef, useState } from "react";
 
 export const DeviceFlasher = ({ device = "ossm" }) => {
   const DEVICE_CONFIGS = {
+    dtt: {
+      name: "DTT",
+      fullName: "Deepthroat Trainer",
+      storageBucket: "dtt-firmware",
+      productionManifestPath: "production/manifest.json",
+      description:
+        "Flash your Deepthroat Trainer with the latest stable firmware. Connect via USB-C to get started.",
+      connectInstructions:
+        "Connect your Deepthroat Trainer to your computer via USB-C",
+    },
     ossm: {
       name: "OSSM",
       fullName: "Open Source Sex Machine",
