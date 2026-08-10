@@ -1,0 +1,32 @@
+name: Check Content Images
+
+on:
+  pull_request:
+    branches:
+      - main
+      - staging
+    paths:
+      - "content/**"
+      - "scripts/verify-content-images.mjs"
+      - ".github/workflows/check-content-images.yml"
+  push:
+    branches:
+      - main
+      - staging
+    paths:
+      - "content/**"
+      - "scripts/verify-content-images.mjs"
+      - ".github/workflows/check-content-images.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  verify-content-images:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v7
+
+      - name: Verify Fumadocs image references
+        run: node scripts/verify-content-images.mjs
