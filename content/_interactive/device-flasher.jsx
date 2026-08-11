@@ -2,6 +2,8 @@
 
 import { useEffect, useRef, useState } from "react";
 
+import { loadEspWebTools } from "@repo/device-tools/esp-web-tools-loader";
+
 export const DeviceFlasher = ({ device = "ossm" }) => {
   const DEVICE_CONFIGS = {
     dtt: {
@@ -50,24 +52,13 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
   const [isLoadingManifest, setIsLoadingManifest] = useState(false);
   const [manifestError, setManifestError] = useState(null);
 
-  const espToolsLoaded = useRef(false);
   const branchSetFromUrl = useRef(false);
 
-  // Load ESP Web Tools from CDN
+  // Share one installer module across every flasher on the page.
   useEffect(() => {
-    if (espToolsLoaded.current) return;
-
-    const script = document.createElement("script");
-    script.type = "module";
-    script.defer = true;
-    script.src =
-      "https://unpkg.com/esp-web-tools@10/dist/web/install-button.js?module";
-    document.head.appendChild(script);
-    espToolsLoaded.current = true;
-
-    return () => {
-      // Cleanup not needed - script stays loaded
-    };
+    void loadEspWebTools().catch((error) => {
+      console.error("Failed to load ESP Web Tools", error);
+    });
   }, []);
 
   // Fetch branches from registry and check URL params
