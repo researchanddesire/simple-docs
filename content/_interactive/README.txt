@@ -6,6 +6,7 @@ packages/device-tools so pnpm links do not appear inside the content tree watche
 by the documentation compiler. These tools are shared by the dashboard and docs:
 
 - device-flasher.jsx
+- gold-motor-control.jsx
 - mermaid-controls.jsx
 - ossm-ble-controller.tsx
 - ossm-funscript-player.jsx
