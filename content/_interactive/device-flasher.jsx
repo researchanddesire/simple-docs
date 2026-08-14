@@ -16,6 +16,16 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
       connectInstructions:
         "Connect your Deepthroat Trainer to your computer via USB-C",
     },
+    lkbx: {
+      name: "LKBX",
+      fullName: "Chastity Lockbox",
+      storageBucket: "lkbx-firmware",
+      productionManifestPath: "production/manifest.json",
+      description:
+        "Flash your Chastity Lockbox with the latest stable firmware. Connect via USB-C to get started.",
+      connectInstructions:
+        "Connect your Chastity Lockbox to your computer via USB-C",
+    },
     ossm: {
       name: "OSSM",
       fullName: "Open Source Sex Machine",

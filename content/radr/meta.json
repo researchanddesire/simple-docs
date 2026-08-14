@@ -1,8 +1,6 @@
 {
   "title": "RADR",
-  "pages": [
-    "index",
-    "faqs",
-    "guides"
-  ]
+  "description": "RAD Remote guides and support",
+  "root": true,
+  "pages": ["index", "faqs", "guides", "tools"]
 }
