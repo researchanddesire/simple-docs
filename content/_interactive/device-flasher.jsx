@@ -3,6 +3,10 @@
 import { useEffect, useRef, useState } from "react";
 
 import { loadEspWebTools } from "@repo/device-tools/esp-web-tools-loader";
+import {
+  firmwareStorageBaseUrl,
+  firmwareSupabaseProjectRefs,
+} from "@repo/docs-config/firmware";
 
 export const DeviceFlasher = ({ device = "ossm" }) => {
   const DEVICE_CONFIGS = {
@@ -46,8 +50,10 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
     },
   };
 
-  const STORAGE_BASE_URL =
-    "https://acjajruwevyyatztbkdf.supabase.co/storage/v1/object/public";
+  const projectRef =
+    process.env.NEXT_PUBLIC_FIRMWARE_SUPABASE_PROJECT_REF ??
+    firmwareSupabaseProjectRefs.staging;
+  const STORAGE_BASE_URL = firmwareStorageBaseUrl(projectRef);
   const config = DEVICE_CONFIGS[device] || DEVICE_CONFIGS.ossm;
   const STORAGE_URL = `${STORAGE_BASE_URL}/${config.storageBucket}`;
 
