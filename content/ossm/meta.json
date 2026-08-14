@@ -1,5 +1,7 @@
 {
   "title": "OSSM",
+  "description": "Open Source Sex Machine guides and support",
+  "root": true,
   "pages": [
     "index",
     "how-to-use",
