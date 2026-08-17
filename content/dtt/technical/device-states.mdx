@@ -1,109 +1,34 @@
 ---
 title: "Device States and Screens"
+description: "Follow the Deep Throat Trainer from startup through network checks, calibration, training, completion, and recovery."
 ---
 
-Your Deepthroat Trainer moves through various screens during operation. Understanding what each screen means helps you navigate the device and know what to expect.
+## State flow
 
-## Startup screens
+| Order | State              | What to verify                                            | Recovery                                          |
+| ----: | ------------------ | --------------------------------------------------------- | ------------------------------------------------- |
+|     1 | Boot / welcome     | Trainer ID and startup text appear                        | charge, then restart if the display remains blank |
+|     2 | Preflight          | pairing, connectivity, settings, and update checks finish | note the exact error; use the error center        |
+|     3 | Settings fetch     | expected template and toy load                            | verify active template, pairing, and Wi-Fi        |
+|     4 | Calibration        | both positions are accepted                               | use the calibration recovery table                |
+|     5 | Session summary    | toy, mode, and segment are expected                       | stop and correct the dashboard selection          |
+|     6 | Countdown          | mount is stable and you can move away                     | move away before motion if anything is wrong      |
+|     7 | Active segment     | screen and LED/text feedback respond                      | stop movement and move away whenever needed       |
+|     8 | Grade / pass state | completion or retry state appears                         | lower the template target if it is unsuitable     |
+|     9 | Session complete   | completion is shown                                       | verify the result in the dashboard                |
 
-### Welcome Screen
-- Displays your **Trainer ID** (5-character alphanumeric code)
-- Shows Wi-Fi connection status
-- Advances on its own after a short pause
+## Offline branch
 
-<Callout type="info">
+If online settings cannot load, some firmware can offer cached settings. The screen may warn that grades may not be saved. Treat that warning literally: continue only when the cached toy and session are correct, and assume no dashboard record until one appears.
 
-Write down your Trainer ID — you'll need it to pair the device with your dashboard account.
+## Update branch
 
-</Callout>
-### Preflight Checks
-After the welcome screen, the device runs system checks and shows "Getting ready..." while it:
-- Verifies Wi-Fi connection
-- Checks if the device is paired
-- Looks for available updates
+An update screen may interrupt preflight. Keep the device powered and connected unless the screen reports failure or [Firmware updates](/dtt/technical/firmware-updates) instructs otherwise. Exact progress text and duration are firmware-specific.
 
-## Wi-Fi Setup Screen
-Shown when entering Wi-Fi configuration mode (long press during the welcome screen):
-- Displays a QR code for easy connection
-- Shows "Connect to 'Trainer Setup'"
+## Pass/fail branch
 
-## Pairing Screen
+When a template includes pass/fail behavior, the device can show a failed attempt and a retry count. Current server logic can process a three-strike result, but template behavior and firmware presentation can change. Follow the screen and stop if repeating the segment is no longer comfortable.
 
-If your device isn't paired to a dashboard account:
-- Displays a QR code linking to dashboard settings
-- Shows "Pair me for more settings and fun!"
-- Press the button to skip and continue offline
+## Error branch
 
-## Update Screen
-
-When a firmware update is available:
-- Displays "Updating" with a progress indicator
-- Shows "Thanks for waiting! You're almost ready to play."
-- The device restarts automatically after updating
-
-<Callout type="warn">
-
-Do not power off the device during an update. Wait for it to complete and restart automatically.
-
-</Callout>
-## Play screens
-
-### Getting ready
-
-| Screen | What it means |
-|--------|---------------|
-| **Preflight** | "Getting ready..." — checks connectivity and settings |
-| **Fetch Settings** | "I'm getting your settings from the dashboard." |
-| **Load Settings** | "You're offline, your grades may not be saved." (offline mode) |
-
-### Calibration
-
-| Screen | What it means |
-|--------|---------------|
-| **Calibration Min** | Capture your minimum (closest) position — press the button when ready |
-| **Calibration Max** | Capture your maximum (rest) position — press the button when ready |
-
-<Callout type="info">
-
-Hold steady while pressing the button so the device can capture an accurate reading.
-
-</Callout>
-### Session details
-
-Before training begins, you'll see information screens for the **Session**, the **Toy**, and the current **Segment**. In Hands-Free Mode (Ultra) these advance automatically; otherwise, press the button to continue.
-
-### Training
-
-| Screen | What it means |
-|--------|---------------|
-| **Countdown** | "Starting in 3... 2... 1... Good Luck!" |
-| **Active Training** | Real-time display showing position, target, and progress |
-| **Grade** | Your score and performance feedback |
-
-### Pass/Fail (if enabled)
-
-| Screen | What it means |
-|--------|---------------|
-| **Failed** | Shows "Failed" with attempt count (e.g., "Attempt 1/3") — press to retry |
-| **Three Strikes** | "YOU FAIL - 3 failed attempts" — the session restarts |
-
-### Session complete
-
-When you finish, the **Final Page** shows "Well done! You finished the session." and the LED turns magenta to celebrate.
-
-## Error screens
-
-| Error | What you'll see |
-|-------|-----------------|
-| **E-DTT-1** | "No internet. Check firewall and router." |
-| **Segment Error** | "ERROR" header with a reset option |
-
-See the <a href="/dtt/technical/error-codes">Error Codes</a> guide for what each message means and how to resolve it.
-
-## Related guides
-**[Button Controls](/dtt/technical/button-controls)**
-
-Complete guide to button interactions.
-**[Error Codes](/dtt/technical/error-codes)**
-
-Troubleshoot error messages.
+Use [Error codes and messages](/dtt/technical/error-codes). If the device freezes, stop the physical session, move away, power-cycle when safe, and record the screen before contacting support.

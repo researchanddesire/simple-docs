@@ -1,134 +1,68 @@
 ---
-title: "Emergency Unlock"
+title: "Software Emergency Unlock"
+description: "Open a Lockbox locally in an emergency and understand the device state that follows."
 ---
 
-Emergency Unlock is a safety feature that lets you open your Lockbox locally when you need immediate access and your Keyholder isn't available. Use it only in genuine emergencies.
+Emergency Unlock is a local safety feature for immediate access when a normal or Keyholder unlock is unavailable.
 
-<Callout type="warn">
+<Callout type="warn" title="Use it when you need it">
 
-Emergency Unlock is for real emergencies. Using it without a valid reason may damage trust with your Keyholder and affect your experience.
-
-</Callout>
-## Use Emergency Unlock
-
-### Step 1: Open the device menu
-
-While the Lockbox is locked or a lock timer is running, press and hold the Lock/Enter button for about 2 seconds until the menu appears.
-
-### Step 2: Select Emergency Unlock
-
-Navigate to **Emergency Unlock** and select it.
-
-### Step 3: Confirm
-
-Confirm your decision. A QR code linking back to this guide appears on the screen.
-
-<Callout type="success">
-
-Verify success:
-
-- The device displays that it is unlocked and the lid can be opened.
-- In your dashboard, the active lock session shows as ended.
+Do not delay emergency access because of a cooldown, notification, score, relationship rule, or concern about explaining the decision. Attend to safety first.
 
 </Callout>
-## What happens when you use it
 
-Using Emergency Unlock triggers important consequences:
+## Unlock from the device
 
-1. **Immediate session end** — Your current lock session ends right away.
-2. **Partner notification** — If you have a Keyholder or partners linked to your account, they receive an alert via email and the dashboard.
-3. **24‑hour cooldown** — After an emergency unlock, the Lockbox cannot start a new lock for 24 hours. You may see "Emergency Mode" during this period. After the cooldown ends, locking becomes available again.
+1. Press and hold the **Enter/Lock** button for about two seconds to open the lock menu.
+
+![Front of the Lockbox with the Enter/Lock button labeled](../quick-start/images/lockbox-front-housing-annotated.webp)
+
+2. Select **Emergency Unlock**.
+
+![Emergency Unlock selected on the Lockbox](../quick-start/images/emergency-unlock-on-device-select-annotated.webp)
+
+3. Confirm the action.
+
+![Emergency Unlock confirmation screen](../quick-start/images/emergency-unlock-on-device-confirm-annotated.webp)
+
+4. Confirm the device reports unlocked and that you can open it without forcing the mechanism.
+
+## What happens next
+
+The current documentation records these behaviors after software Emergency Unlock:
+
+- the active session ends immediately;
+- linked partners may receive an email or dashboard notification;
+- the action appears in device activity; and
+- the Lockbox enters a 24-hour cooldown before another lock can start, unless the current dashboard behavior provides an earlier resolution.
 
 <Callout type="info">
 
-Activity related to Emergency Unlock appears in your device's activity history in the dashboard.
+The cooldown affects starting another lock, not your right to retrieve the key. Dashboard wording and recovery controls can change; follow the state shown on your account and contact support if it does not clear as expected.
 
 </Callout>
-## Before you use Emergency Unlock
 
-<Callout type="idea">
+See [E-Lock 20](/lockbox/errors/e-lock-20) for the post-unlock state.
 
-Try messaging your Keyholder to request a break first. Open communication is usually the best path.
+## Availability
 
-</Callout>
-Consider these checks before proceeding:
-
-- Confirm the situation is a genuine emergency requiring immediate access
-- Try contacting your Keyholder directly for a temporary break
-- Remember you may be asked to explain your reasons afterward
-
-## Disable Emergency Unlock (optional)
-
-If you find Emergency Unlock too tempting, you can disable it from your dashboard so it cannot be used under any circumstances.
+Emergency Unlock works locally without internet when the option is enabled. Some session settings can disable the software option while the Lockbox is unlocked. Before any lock, verify whether the option will be available and review the hardware fallback.
 
 <Callout type="warn">
 
-When Emergency Unlock is disabled, the only way to access the device without your Keyholder is to physically break the backplate. Consider this carefully.
+Disabling software Emergency Unlock removes the normal local release path. The remaining fallback is destructive hardware access. Never disable it without the informed agreement of everyone affected and a practiced recovery plan.
 
 </Callout>
-### What to know
 
-- You can change this setting only while the device is unlocked
-- Once disabled, Emergency Unlock cannot be used
-- The only way to unlock will be through your Keyholder
+## If the menu is unavailable
 
-### How to disable it
+| Situation                                       | Action                                                                                |
+| ----------------------------------------------- | ------------------------------------------------------------------------------------- |
+| Emergency Unlock option is disabled or absent   | Use [Hardware Backplate Emergency Access](/lockbox/support/emergency-backplate)       |
+| Device is unresponsive and access is not urgent | Try one documented [restart](/lockbox/device-states/restarting), then reassess        |
+| Device reports it cannot unlock                 | Follow [E-Lock 2](/lockbox/errors/e-lock-2), starting with the emergency path         |
+| Immediate access is still impossible            | Contact local emergency services and do not use powered tools near the device battery |
 
-### Step 4: Open your dashboard
+## Keep this available offline
 
-Sign in and go to your Lockbox dashboard.
-
-### Step 5: Open the session settings
-
-Navigate to your current lock session settings.
-
-### Step 6: Locate Emergency Unlock
-
-Find the **Emergency Unlock** section.
-
-### Step 7: Toggle to disable
-
-Toggle **Disable Emergency Unlock** and confirm.
-
-<Callout type="success">
-
-Verify the toggle remains enabled after refresh.
-
-</Callout>
-<Callout type="info">
-
-Disabling adds commitment and security, but it also means you cannot access the device in a real emergency without your Keyholder's help.
-
-</Callout>
-## If the software menu isn't available
-<Callout type="info" title="Emergency Unlock is disabled or blocked">
-
-If your Keyholder or lock template disabled Emergency Unlock, the software option won't appear. As a last resort, you can perform a hardware emergency unlock by breaking the backplate. See <a href="/lockbox/support/emergency-backplate">Emergency Unlock: Break the Backplate</a>.
-
-</Callout>
-<Callout type="info" title="Device is unresponsive">
-
-Restart the device, then try again. See <a href="/lockbox/device-states/restarting">Restarting your device</a>.
-
-</Callout>
-<Callout type="info" title="No internet connection">
-
-Emergency Unlock works locally on the device and does not require an internet connection. If Wi‑Fi is down, you can still use the device menu.
-
-</Callout>
-## Related guides
-**[Quick Start](/lockbox/quick-start)**
-
-Connect, pair, and learn the basics, including emergency options.
-
-**[Hardware Emergency Unlock](/lockbox/support/emergency-backplate)**
-
-Destructive backplate method for when software unlock isn't possible.
-
-**[Restarting your device](/lockbox/device-states/restarting)**
-
-Safe restart steps and what to expect after reboot.
-
-**[FAQs](/lockbox/faqs)**
-
-Common questions about locks, control, and emergency scenarios.
+Save or print [Lockbox Safety and Emergency Access](/lockbox/safety) and [Hardware Backplate Emergency Access](/lockbox/support/emergency-backplate) before a long or remotely managed lock.

@@ -2,9 +2,8 @@
   "title": "Quick start",
   "pages": [
     "index",
-    "ble-pairing",
-    "keyholder-guide",
     "pairing",
+    "keyholder-guide",
     "start-a-lock",
     "wifi-setup",
     "how-to-use"

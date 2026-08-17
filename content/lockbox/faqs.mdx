@@ -1,237 +1,122 @@
 ---
-title: "Lockbox FAQs"
+title: "Lockbox Frequently Asked Questions"
+description: "Short answers about Lockbox setup, roles, sessions, power, features, and emergency access."
 ---
 
 import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
 
-Short answers to common Chastity Lockbox questions. If you need step-by-step troubleshooting, start with the [Help Center](/lockbox/support).
+For procedures, use the [Quick Start](/lockbox/quick-start) or [Support Center](/lockbox/support).
 
-## Fees
+## Setup and pairing
 
-<Accordions type="single">
-  <Accordion title="Is the dashboard free to use?">
+<Accordions type="multiple">
+  <Accordion title="What is the recommended setup method?">
 
-Answer to the first question.
+Use [automatic Bluetooth pairing](/lockbox/quick-start/pairing) in Chrome or Edge. It pairs the Lockbox and provisions 2.4 GHz Wi-Fi in one flow. Manual Wi-Fi setup is the fallback.
+
+  </Accordion>
+  <Accordion title="How do I pair a secondhand Lockbox?">
+
+The previous owner should unpair it first. If that is impossible, contact [support@researchanddesire.com](mailto:support@researchanddesire.com) with proof of purchase and the identifier shown under **Settings → Pairing**. Do not publish the pairing code.
+
+  </Accordion>
+  <Accordion title="Why does the pairing code change?">
+
+The code can change after a restart. Use the code currently shown on the device. Once paired, normal account ownership does not depend on retaining that code.
+
+  </Accordion>
+</Accordions>
+## Roles and sessions
+
+<Accordions type="multiple">
+  <Accordion title="What are the Lockee and Keyholder roles?">
+
+The **Lockee** is subject to the lock. A **Keyholder** is another account the Lockee authorizes to manage agreed session controls. Review consent, permissions, release, offline behavior, and revocation in the [Keyholder Guide](/lockbox/quick-start/keyholder-guide).
+
+  </Accordion>
+  <Accordion title="What is a self-lock?">
+
+A self-lock is started without a Keyholder. Active self-lock controls can be more limited than a Keyholder-managed or test session, so complete a short test and verify Emergency Unlock before relying on it.
+
+  </Accordion>
+  <Accordion title="Can I add or remove a Keyholder during an active session?">
+
+Do not change the partnership while a session is active. End the session safely, confirm the physical Lockbox is unlocked, then change the relationship under **Settings → Partners**. If account access or ownership is disputed, contact support.
+
+  </Accordion>
+  <Accordion title="What is a test lock?">
+
+A test lock is a practice session intended to verify setup and release behavior before a real lock. Use [Start Your First Lock](/lockbox/quick-start/start-a-lock).
 
   </Accordion>
 </Accordions>
 
-
-
-## Setup and Pairing
+## Power and connectivity
 
 <Accordions type="multiple">
+  <Accordion title="How long does the battery last?">
 
+The existing product notes estimate about 24 hours unplugged under normal use, but actual runtime depends on screen, radio, motor, battery condition, and firmware behavior. Keep long sessions on stable power and verify the battery state before locking.
 
-<Accordion title="I bought a secondhand Lockbox. How do I pair it to my account?" id="i-bought-a-secondhand-lockbox-how-do-i-pair-it-to-my-account">
+  </Accordion>
+  <Accordion title="Should I keep the Lockbox plugged in?">
 
-If the previous owner paired the Lockbox to their account, contact [support@researchanddesire.com](mailto:support@researchanddesire.com) for an ownership transfer.
+Use stable USB power for longer sessions when practical. The current documentation says a plugged-in Lockbox does not enter deep sleep, which helps preserve remote connectivity.
 
-Include proof of purchase and the MAC address or pairing code from **Settings > Pairing**. Once support unpairs the device, it restarts and can be paired to your account.
+  </Accordion>
+  <Accordion title="Why do the device and dashboard show different online states?">
 
-</Accordion>
-<Accordion title="Why does the pairing code change?" id="why-does-the-pairing-code-change">
+The physical indicator is live; the dashboard can take up to 60 seconds to update. Compare them with [Check Online Status](/lockbox/support/online-status).
 
-The pairing code changes each time the device restarts. This is normal. Once paired, your Lockbox stays connected to your account regardless of which pairing code it displays.
+  </Accordion>
+  <Accordion title="What works without Wi-Fi?">
 
-</Accordion>
-</Accordions>
+Local timers, menus, and physical controls continue according to the state stored on the device. Remote Keyholder commands, dashboard changes, and public votes require connectivity. See the [Offline Capability Matrix](/lockbox/technical/offline-mode).
 
-## Battery and Power
-
-<Accordions type="multiple">
-
-<Accordion title="How long does the battery last?" id="how-long-does-the-battery-last">
-
-The Lockbox battery lasts approximately 24 hours unplugged with normal use. Sleep modes help extend battery life by dimming the screen, turning the screen off, or disconnecting Wi-Fi during deep sleep.
-
-For longer sessions, keep the device plugged in when possible. See [Sleep Mode](/lockbox/device-states/sleep-mode) for power-saving details.
-
-</Accordion>
-<Accordion title="Should I keep the Lockbox plugged in?" id="should-i-keep-the-lockbox-plugged-in">
-
-Yes, when you have access to power. Keeping the Lockbox plugged in helps it stay connected to Wi-Fi and responsive to remote keyholder commands.
-
-When plugged in, the device does not enter deep sleep.
-
-</Accordion>
-<Accordion title="My Lockbox will not turn on. What should I try first?" id="my-lockbox-will-not-turn-on-what-should-i-try-first">
-
-Connect it to a computer with a USB-C cable that supports data transfer and leave it charging for at least 30 minutes. Then press the **Enter/Lock** button several times.
-
-If the device is detected as **USB JTAG Serial Debug** or still does not respond, see [Firmware Flashing](/lockbox/support/flashing) or contact [support@researchanddesire.com](mailto:support@researchanddesire.com).
-
-</Accordion>
-</Accordions>
-
-## Users and Roles
-
-<Accordions type="multiple">
-
-<Accordion title="What is a keyholder?" id="what-is-a-keyholder">
-
-A keyholder is the person you authorize to control your lock conditions. They can create, edit, manage, and end lock sessions through the dashboard.
-
-</Accordion>
-<Accordion title="What is a lockee?" id="what-is-a-lockee">
-
-A lockee is the person subject to the lock, usually the person physically holding the Lockbox.
-
-</Accordion>
-<Accordion title="What is a self-lock?" id="what-is-a-self-lock">
-
-A self-lock is a lock you start without a keyholder. You are both the lockee and the authority.
-
-Self-locks cannot be abandoned or modified through the dashboard once started.
-
-</Accordion>
-<Accordion title="What is the difference between keyholding and self-locking?" id="what-is-the-difference-between-keyholding-and-self-locking">
-
-| Feature | Keyholding | Self-locking |
-| --- | --- | --- |
-| Users involved | Two: keyholder and lockee | One |
-| Edit active lock | Keyholder can edit | Cannot edit |
-| Abandon lock | Keyholder can abandon | Cannot abandon |
-| Remote unlock | Yes | No |
-
-</Accordion>
-<Accordion title="Can I add a keyholder after starting a self-lock?" id="can-i-add-a-keyholder-after-starting-a-self-lock">
-
-No. Keyholders must be assigned before starting the lock.
-
-If you accidentally started a self-lock and need partner control, contact support to end the session early. Then start a new lock with your partner assigned as keyholder.
-
-</Accordion>
-<Accordion title="How do I assign a keyholder?" id="how-do-i-assign-a-keyholder">
-
-Go to **Settings > Partners** in the dashboard and invite another dashboard user to control your devices. See the [Keyholder Guide](/lockbox/quick-start/keyholder-guide) for the full flow.
-
-</Accordion>
-</Accordions>
-
-## Lock Sessions
-
-<Accordions type="multiple">
-
-<Accordion title="How do I start or unlock a lock session?" id="how-do-i-start-or-unlock-a-lock-session">
-
-Use the **Quick Actions** card on the **Chastity Lockbox > Home** dashboard page.
-
-- **Start Lock Session:** available when no session is active.
-- **Unlock:** available during active sessions for keyholders and test locks.
-
-Self-locks cannot be unlocked remotely. Use Emergency Unlock on the device if needed.
-
-</Accordion>
-<Accordion title="How can I abandon a lock session?" id="how-can-i-abandon-a-lock-session">
-
-Go to **Chastity Lockbox > Home**, select **Edit Lock**, then click **Abandon Lock**.
-
-Only keyholders can abandon locks. Self-locks cannot be abandoned through the dashboard.
-
-</Accordion>
-<Accordion title="My keyholder is unresponsive. How do I end my lock?" id="my-keyholder-is-unresponsive-how-do-i-end-my-lock">
-
-Contact [support@researchanddesire.com](mailto:support@researchanddesire.com). Support can abandon the lock on your behalf if your keyholder is unavailable.
-
-</Accordion>
-<Accordion title="I removed my keyholder during an active session and now my lock is stuck. What should I do?" id="i-removed-my-keyholder-during-an-active-session-and-now-my-lock-is-stuck-what-should-i-do">
-
-Contact [support@researchanddesire.com](mailto:support@researchanddesire.com) and ask support to abandon the lock. Include your account email and a brief description of what happened.
-
-Avoid removing your keyholder while a lock session is active. Have the keyholder end or abandon the session first.
-
-</Accordion>
-<Accordion title="What is a test lock?" id="what-is-a-test-lock">
-
-A test lock is a practice mode you enable when configuring your lock template.
-
-Any authorized user can abandon or edit a test lock. Statistics are not recorded and results do not appear on the leaderboard.
-
-</Accordion>
-<Accordion title="Can I change the template of an active lock session?" id="can-i-change-the-template-of-an-active-lock-session">
-
-It depends on the lock type.
-
-| Lock type | Can modify |
-| --- | --- |
-| Keyholder lock | Yes, keyholder only |
-| Test lock | Yes, any authorized user |
-| Self-lock | No |
-
-Changes apply when the Lockbox is connected to Wi-Fi.
-
-</Accordion>
-<Accordion title="Can I delete the template of an active lock session?" id="can-i-delete-the-template-of-an-active-lock-session">
-
-Yes, but deleting the template does not end the lock session. The current conditions stay in effect until the session completes or is ended manually.
-
-</Accordion>
+  </Accordion>
 </Accordions>
 
 ## Features
 
 <Accordions type="multiple">
+  <Accordion title="How do scheduled breaks work?">
 
-<Accordion title="Can I unlock my Lockbox with Deep Throat Trainer points?" id="can-i-unlock-my-lockbox-with-deep-throat-trainer-points">
+The session must enable breaks. The Lockee starts a break from the device, retrieves the key, and returns it before ending the break. Health and emergency access always take priority over an overdue record. See [Take a Break](/lockbox/using/take-a-break).
 
-Yes. Toggle **Enable Deepthroat Training** when setting lock conditions, then use the gear icon to configure how many minutes are deducted per training XP earned.
+  </Accordion>
+  <Accordion title="What does Hide Remaining Time hide?">
 
-</Accordion>
-<Accordion title="What is Public Voting?" id="what-is-public-voting">
+It hides countdown information from the Lockee-facing device and dashboard views described in the feature guide. It must not hide safety or emergency instructions. See [Hide Remaining Time](/lockbox/using/hiding-time).
 
-Public Voting lets other people influence your lock duration through a shareable voting link. Voters can add or subtract a configured amount of time and can vote once every 24 hours.
+  </Accordion>
+  <Accordion title="What is Public Voting?">
 
-See [Public Voting](/lockbox/using/public-voting) for setup details.
+It creates a shareable page where visitors can add or remove configured time. Agree on the audience and duration boundaries before sharing, and test how to disable it. See [Public Voting](/lockbox/using/public-voting).
 
-</Accordion>
-<Accordion title="How do I earn XP from the Lockbox?" id="how-do-i-earn-xp-from-the-lockbox">
+  </Accordion>
+  <Accordion title="What is Permalock?">
 
-XP from the Lockbox is earned through public voting participation.
+Permalock removes the preset end time and uses Keyholder-controlled release. It is an advanced online mode that requires completed test locks and reviewed emergency access. See [Permalock](/lockbox/device-states/permalock).
 
-- You can earn XP when others vote on your public lock session.
-- You can earn XP by voting on other users' public lock sessions.
-
-</Accordion>
-<Accordion title="How does lock detection work?" id="how-does-lock-detection-work">
-
-The Lockbox has tamper detection sensors that notify your keyholder if you physically interfere with the locking paddle or forcibly open the back housing.
-
-</Accordion>
-<Accordion title="What happens if I use Give Up Control?" id="what-happens-if-i-use-give-up-control">
-
-**Give Up Control** transfers authority over your device to another user.
-
-- Your dashboard lock button becomes disabled.
-- Only your assigned keyholder can control your device.
-- You cannot start, stop, or modify lock sessions.
-
-If you selected delayed consent, you can reclaim control from **Settings > Advanced** after a 72-hour waiting period. If you selected permanent consent, only your keyholder can return control.
-
-</Accordion>
+  </Accordion>
 </Accordions>
 
-## Emergency Access
+## Emergency access
 
 <Accordions type="multiple">
+  <Accordion title="My Keyholder is unavailable and I need the key. What should I do?">
 
-<Accordion title="Why can't I see Emergency Unlock or Take a Break on my Lockbox?" id="why-cant-i-see-emergency-unlock-or-take-a-break-on-my-lockbox">
+Use local [Software Emergency Unlock](/lockbox/device-states/emergency-unlock) when available. If it is disabled or the device cannot unlock, use [Hardware Backplate Emergency Access](/lockbox/support/emergency-backplate). Do not wait for support when access is urgent.
 
-These options only appear when the device is locked. They may also be hidden if your keyholder, or you when self-locking, disabled them in the lock template.
+  </Accordion>
+  <Accordion title="Can hardware emergency access be disabled?">
 
-</Accordion>
-<Accordion title="What if there is an emergency and I need my key immediately?" id="what-if-there-is-an-emergency-and-i-need-my-key-immediately">
+The current design uses a replaceable backplate as a destructive physical fallback. Software cannot disable that physical path. Review it before every long or remotely managed session.
 
-Use the software emergency unlock when available. On the Lockbox, open the lock menu and select **Emergency Unlock**.
+  </Accordion>
+  <Accordion title="What happens after software Emergency Unlock?">
 
-If software emergency unlock is unavailable, the hardware backplate method is the last resort. See [Emergency Unlock: Break the Backplate](/lockbox/support/emergency-backplate).
+The active session ends, the event may be shared with connected partners, and the current documentation describes a 24-hour cooldown before another lock. See [E-Lock 20](/lockbox/errors/e-lock-20). Safety comes before the cooldown or notification.
 
-</Accordion>
-<Accordion title="Can the physical emergency fail-safe be disabled?" id="can-the-physical-emergency-fail-safe-be-disabled">
-
-No. The hardware fail-safe is a physical safety feature built into every Lockbox. It cannot be disabled in software.
-
-The hardware method is destructive and requires a replacement backplate afterward. Use [software Emergency Unlock](/lockbox/device-states/emergency-unlock) whenever possible.
-
-</Accordion>
+  </Accordion>
 </Accordions>

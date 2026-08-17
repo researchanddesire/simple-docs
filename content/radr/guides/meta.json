@@ -1,11 +1,4 @@
 {
-  "title": "Guides",
-  "pages": [
-    "index",
-    "changelog",
-    "getting-started",
-    "housekeeping",
-    "reference",
-    "user-guide"
-  ]
+  "title": "RADR",
+  "pages": ["getting-started", "user-guide", "reference", "housekeeping"]
 }

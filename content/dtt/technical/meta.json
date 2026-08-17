@@ -1,5 +1,6 @@
 {
   "title": "Technical",
+  "description": "Device behavior, errors, calibration, and firmware",
   "pages": [
     "index",
     "button-controls",

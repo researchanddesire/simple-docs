@@ -1,11 +1,4 @@
 {
   "title": "Features",
-  "pages": [
-    "index",
-    "emergency-unlock",
-    "hiding-time",
-    "public-voting",
-    "symbols",
-    "take-a-break"
-  ]
+  "pages": ["index", "take-a-break", "hiding-time", "public-voting", "symbols"]
 }

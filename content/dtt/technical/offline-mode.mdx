@@ -1,117 +1,44 @@
 ---
-title: "Offline Mode"
+title: "Offline Mode and Result Persistence"
+description: "Use cached Deep Throat Trainer settings conservatively and understand what the current source can and cannot verify about results."
 ---
 
-Your Deepthroat Trainer can operate offline using your last downloaded session. While some features require connectivity, you can still train when Wi-Fi isn't available.
+## Evidence boundary
 
-## What works offline
+Device documentation and messages indicate that some firmware can run previously downloaded settings and show on-device feedback without a current server connection. The dashboard source confirms that settings are normally fetched online and results are persisted when the v2 completion endpoint receives a valid request from a paired Trainer.
 
-With Software 2.0+, the trainer remembers the last session you downloaded:
+The DTT firmware repository is not present in this checkout. This documentation therefore cannot verify a durable result queue, queue capacity, retention time, retry schedule, power-loss behavior, or the firmware versions that implement any of those details.
 
-| Feature | Offline Support |
-|---------|-----------------|
-| **Training sessions** | Yes — uses your cached session |
-| **Position tracking** | Yes — fully functional |
-| **LED feedback** | Yes — fully functional |
-| **On-device grades** | Yes — displayed after segments |
-| **Calibration** | Yes — used for the session |
+## Capability matrix
 
-## What requires connectivity
+| Capability                          | Offline status                                                                      |
+| ----------------------------------- | ----------------------------------------------------------------------------------- |
+| Run previously downloaded settings  | supported by existing device guidance; verify on your firmware before relying on it |
+| Position and on-device feedback     | available during a successfully started cached session                              |
+| Download a new or edited template   | requires connectivity                                                               |
+| Confirm cloud calibration save      | requires an accepted server request                                                 |
+| Confirm dashboard result and points | not confirmed until the result appears online                                       |
+| Check or download firmware          | requires connectivity                                                               |
 
-| Feature | Why |
-|---------|-----|
-| **Uploading results** | Grades and stats need to sync to the dashboard |
-| **Downloading new sessions** | Template changes require a fresh download |
-| **Firmware updates** | OTA updates need internet access |
-| **Cloud calibration sync** | Toy calibration data stored remotely |
-| **Leaderboard updates** | Points aren't recorded until sync |
+## Prepare
 
-<Callout type="warn">
+1. Connect online and pair the Trainer.
+2. Activate the intended template and toy.
+3. Let the Trainer fetch and display their summaries.
+4. Complete calibration if prompted.
+5. Disconnect from the network and run a controlled, nonessential test.
+6. Confirm the same template and toy appear before starting.
 
-Offline sessions are **not saved** to your dashboard until you reconnect. If the device loses power before syncing, that session's results may be lost.
+<Callout type="warn" title="Treat offline results as unsaved">
 
-</Callout>
-## Starting an offline session
-
-1. Power on the trainer
-2. If offline, you'll see "You're offline, your grades may not be saved."
-3. Press the button to continue with your saved settings
-4. Train normally — everything works locally
-
-<Callout type="info">
-
-The trainer uses your **last downloaded** session. To train a different template offline, download it while online first.
+If a session record matters for progress, points, partner accountability, or any other consequence, train online and verify the record afterward. Do not promise that reconnection will recover an offline result.
 
 </Callout>
-## Preparing for offline training
 
-Before going offline:
+## Reconnect
 
-### Step 1: Connect to Wi-Fi
+Reconnect Wi-Fi, restart normally, and let preflight finish. Check the dashboard. If an offline session appears, it was delivered; if it does not, there is no documented manual upload action in this repository.
 
-Ensure your trainer connects to the internet successfully.
+## Wrong cached session
 
-### Step 2: Select your template
-
-Choose the template you want to train with on the dashboard.
-
-### Step 3: Fetch settings
-
-Start a session on the trainer to download the latest settings. You can exit after fetching — your settings are now saved for offline use.
-
-### Step 4: Verify
-
-Optionally, disconnect Wi-Fi and start a session to confirm offline mode works.
-
-## Syncing results when back online
-
-When you reconnect to Wi-Fi, power on the trainer and your pending results sync automatically. Check your dashboard to confirm the session appeared.
-
-## Things to keep in mind
-
-### Results not saved
-Results from offline training are shown during the session but aren't saved to your dashboard until you reconnect. They may be lost if:
-- The device loses power before reconnecting
-- You download a new session before syncing
-
-## Best practices
-
-<Callout type="idea">
-
-**Plan ahead**: Download your intended session while online before traveling or going somewhere without Wi-Fi.
-
-- Keep the trainer charged — losing power loses unsaved results
-- Don't update templates while offline (changes won't apply until re-downloaded)
-- Reconnect when possible to sync results and get updates
-
-</Callout>
-## Troubleshooting
-<Callout type="info" title="Offline mode won't start">
-
-- Ensure you've previously downloaded a session while online
-- Your saved session may be empty if this is a new device or after a reset
-- Try connecting to Wi-Fi first, then disconnect
-
-</Callout>
-<Callout type="info" title="Results didn't sync after reconnecting">
-
-- Start a new session while online to trigger sync
-- Check your dashboard — results may take a moment to appear
-- If still missing, the results may not have been stored before power-off
-
-</Callout>
-<Callout type="info" title="Wrong template loads offline">
-
-The trainer uses your last downloaded session. To change templates offline:
-1. Reconnect to Wi-Fi
-2. Start a session with the desired template
-3. Disconnect and continue offline
-
-</Callout>
-## Related guides
-**[Wi-Fi Setup](/dtt/quick-start/pairing/wifi-setup)**
-
-Connect your trainer to Wi-Fi.
-**[Checking Results](/dtt/quick-start/checking-results)**
-
-View your synced session results.
+Return online, select the correct active template and toy, let the Trainer fetch them, and verify the summaries before disconnecting again.

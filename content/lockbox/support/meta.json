@@ -2,10 +2,10 @@
   "title": "Support",
   "pages": [
     "index",
-    "alpha-updates",
-    "connectivity-troubleshooting",
     "emergency-backplate",
+    "connectivity-troubleshooting",
+    "online-status",
     "flashing",
-    "online-status"
+    "[Contact support](mailto:support@researchanddesire.com)"
   ]
 }

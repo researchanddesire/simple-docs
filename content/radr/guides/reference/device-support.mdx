@@ -1,212 +1,45 @@
 ---
-title: "Device Support"
+title: "RADR Device Compatibility"
+description: "Check which device models and controls have been validated with RADR, known limits, and how to report a compatibility result."
 ---
 
-## Overview
+Use this page before buying or connecting a third-party device. A model appearing in an upstream Bluetooth registry does **not** mean Research and Desire has validated it with RADR.
 
-RADR supports Research And Desire devices first, followed by popular third‑party toys via direct integrations and the Buttplug.io Bluetooth protocol. We continuously evaluate, implement, and validate support across 2025–2026.
+<Callout type="warn" title="Start every new connection unloaded">
 
-<Callout type="info">
-
-Want us to prioritize a device or add a new one? Email support@researchanddesire.com or use our contact form at https://www.researchanddesire.com/contact.
+Keep the connected device clear of the body, start at its lowest output, and verify pause or Stop before use. Disconnect immediately if a control behaves differently from the label on RADR.
 
 </Callout>
-### Status legend
 
-- Supported: RADR can connect and control the device.
-- Tested: Verified by R+D in-house for reliability with RADR.
-- Vibration Only: Only the vibration motor is controllable; advanced features (heating, thrusting, suction, rotation, lighting) are not yet supported.
-- Oscillation Only: Only oscillation/thrusting control is available; vibration features are not supported.
-- Pending: Not yet implemented; on the roadmap.
+## Validation status
 
-<Callout type="idea">
+Last documentation review: **16 August 2026**. The exact third-party firmware versions used in earlier tests were not recorded, so those combinations must be retested after either device receives an update.
 
-For the smoothest setup, keep your device firmware up to date and follow the [Quick Start](/radr/guides/getting-started/quick-start) to pair.
+| Device                                                                               | Connection                    | Controls exposed by RADR                                   | Validation status                                                    | Known limits                               |
+| ------------------------------------------------------------------------------------ | ----------------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------ |
+| [Open Source Sex Machine](https://www.researchanddesire.com/open-source-sex-machine) | Direct                        | Speed, depth, sensation, stroke, pause, Stop, and patterns | Primary supported integration                                        | Available patterns depend on OSSM firmware |
+| Lovense Domi / Domi 2                                                                | Direct                        | Vibration, battery level, and power commands               | Previously tested; current firmware combination needs reconfirmation | Non-vibration features are not exposed     |
+| Lovense Hyphy                                                                        | Buttplug-compatible Bluetooth | Vibration                                                  | Previously tested; current firmware combination needs reconfirmation | Vibration only                             |
+| Lovense Ferri                                                                        | Buttplug-compatible Bluetooth | Vibration                                                  | Previously tested; current firmware combination needs reconfirmation | Vibration only                             |
 
-</Callout>
-<Callout type="info">
+Lockbox, Deep Throat Trainer, DG Labs Coyote, and other brands or models are **not validated RADR integrations** unless they appear in the table above with a validation status. Do not treat a device merely appearing during a scan as proof that every control is safe or supported.
 
-Device support is continuously expanding. RADR uses a dynamic device registry that can be updated via firmware updates without changing the core application, allowing new devices to be added more frequently.
+For upstream protocol coverage, consult the [Buttplug device list](https://iostindex.com/?filter0ButtplugSupport=4). That list describes upstream protocol support, not RADR validation.
 
-</Callout>
-<Callout type="warn">
+## Verify a connection
 
-Untested devices show a warning before first use. When connecting to an untested device for the first time, RADR displays a confirmation dialog. You must acknowledge you understand the risks before proceeding. Start at the lowest intensity and verify basic controls before a session.
+1. Update only after reading [Update RADR](/radr/guides/user-guide/updating-your-device) and the connected device's release instructions.
+2. Power on the target device and place it in its documented pairing or advertising mode.
+3. Follow [Scan and Connect a Device](/radr/guides/user-guide/device-scanning).
+4. With the device unloaded, test the lowest output first.
+5. Test pause or Stop and confirm the physical device stops before continuing.
+6. Test one supported control at a time. Do not assume an advanced feature is mapped.
 
-</Callout>
-## Verify your device works with RADR
+## If a device is missing or behaves incorrectly
 
-### Step 1: Charge and update
+- Disconnect it and stop using the pairing until its behavior is understood.
+- Record the RADR firmware version, exact brand and model, the other device's firmware version, and which control failed.
+- Describe the expected and actual physical response. A short video is useful only when it can be recorded safely.
+- Email [support@researchanddesire.com](mailto:support@researchanddesire.com) or use the [contact form](https://www.researchanddesire.com/pages/contact-us).
 
-Charge your RADR via USB‑C. If your OSSM or RADR needs an update, use the dedicated <a href="/ossm/tools/web-flasher">OSSM Web Flasher</a> or <a href="/radr/tools/web-flasher">RADR Web Flasher</a>.
-
-<Callout type="success">
-
-Device powers on and shows the home screen.
-
-</Callout>
-### Step 2: Power on and make discoverable
-
-Turn on your target device and ensure Bluetooth is enabled or the device is in pairing/advertising mode (consult the device's manual if unsure).
-
-### Step 3: Scan with RADR
-
-Follow the [Quick Start](/radr/guides/getting-started/quick-start) to scan. RADR only lists supported devices; if yours appears, select to connect.
-
-<Callout type="success">
-
-You can start/stop and change intensity from RADR.
-
-</Callout>
-## Research And Desire devices
-
-| Device                                                                               | Supported | Tested |
-| ------------------------------------------------------------------------------------ | --------- | ------ |
-| [Open Source Sex Machine](https://www.researchanddesire.com/open-source-sex-machine) | Yes       | Yes    |
-| [Chastity Lockbox](https://www.researchanddesire.com/products/lockbox)               | Pending   | -      |
-| Deepthroat Trainer                                                                   | Pending   | -      |
-
-<Callout type="info">
-
-Deepthroat Trainer integrations focus on cross‑device experiences and are rolling out in phases. Watch the <a href="/dtt/quick-start">Quick Start</a> and <a href="/dtt/faqs">FAQs</a> for updates.
-
-</Callout>
-## Third‑party devices
-
-| Device                             | Supported | Tested |
-| ---------------------------------- | --------- | ------ |
-| DG Labs Coyote E‑Stim Powerbox 3.0 | Pending   | -      |
-
-## Buttplug.io devices
-
-Through our partnership with Buttplug.io, RADR supports Bluetooth devices that speak the Buttplug protocol. Check their public compatibility list for the most current coverage. Feature availability varies by model; in many cases RADR provides vibration control only.
-
-### Lovense (tested)
-
-| Device        | Supported      | Tested |
-| ------------- | -------------- | ------ |
-| Lovense Domi  | Vibration Only | Yes    |
-| Lovense Hyphy | Vibration Only | Yes    |
-| Lovense Ferri | Vibration Only | Yes    |
-
-<Callout type="info">
-
-Lovense Domi (and Domi 2) has direct integration—not via Buttplug.io—that includes battery level reading and power control commands. Other Lovense devices use the generic Buttplug.io implementation with vibration-only control.
-
-</Callout>
-### Lovense (untested)
-
-| Device             | Supported        | Tested |
-| ------------------ | ---------------- | ------ |
-| Lovense Max        | Vibration Only   | -      |
-| Lovense Edge       | Vibration Only   | -      |
-| Lovense Nora       | Vibration Only   | -      |
-| Lovense Ambi       | Vibration Only   | -      |
-| Lovense Lush       | Vibration Only   | -      |
-| Lovense Hush       | Vibration Only   | -      |
-| Lovense Osci       | Vibration Only   | -      |
-| Lovense Mission    | Vibration Only   | -      |
-| Lovense Mission 2  | Vibration Only   | -      |
-| Lovense Diamo      | Vibration Only   | -      |
-| Loveai Dolp        | Vibration Only   | -      |
-| Lovense Dolce      | Vibration Only   | -      |
-| Lovense Osci 3     | Vibration Only   | -      |
-| Lovense Gush       | Vibration Only   | -      |
-| Lovense Gush 2     | Vibration Only   | -      |
-| Lovense Calor      | Vibration Only   | -      |
-| Lovense Flexer     | Vibration Only   | -      |
-| Lovense Gemini     | Vibration Only   | -      |
-| Lovense Gravity    | Vibration Only   | -      |
-| Lovense Tenera     | Vibration Only   | -      |
-| Lovense Ridge      | Vibration Only   | -      |
-| Lovense Lapis      | Vibration Only   | -      |
-| Lovense Vulse      | Vibration Only   | -      |
-| Lovense Solace     | Oscillation Only | -      |
-| Lovense Solace Pro | Oscillation Only | -      |
-
-### Other brands (pending support)
-
-<Callout type="info" title="We‑Vibe">
-
-- We‑Vibe Melt
-- We‑Vibe Moxie
-- We‑Vibe Vector
-- We‑Vibe Wand / Wand 2
-- We‑Vibe Bond
-- We‑Vibe Nova / Nova 2
-- We‑Vibe Jive / Jive 2
-- We‑Vibe Sync / Sync 2 / Sync Lite
-- We‑Vibe Bloom
-- We‑Vibe Ditto
-- We‑Vibe Pivot
-- We‑Vibe Rave
-- We‑Vibe Verge
-- We‑Vibe Wish
-- We‑Vibe 4 Plus
-- We‑Vibe Gala
-
-</Callout>
-<Callout type="info" title="Satisfyer">
-
-- Satisfyer Hot Spot
-- Satisfyer Love Triangle
-- Satisfyer Curvy 1+ / 2+ / 3+
-- Satisfyer Double Joy / Double Fun / Double Love
-- Satisfyer Mono Flex / Double Flex
-- Satisfyer Pro 2 Gen 3
-- And many more models...
-
-</Callout>
-<Callout type="info" title="Kiiroo / OhMiBod">
-
-- Kiiroo Pearl / Pearl 2 / Pearl 3
-- Kiiroo Onyx / Onyx 2 / Onyx+
-- Kiiroo Titan
-- Kiiroo Keon
-- OhMiBod Fuse
-- OhMiBod Esca 2
-- OhMiBod Lumen
-
-</Callout>
-<Callout type="info" title="LELO">
-
-- Lelo F1s V2 / V3
-- Lelo Ida Wave
-- Lelo Tor 3
-- Lelo Hugo 2
-- Lelo Enigma Double Sonic
-
-</Callout>
-<Callout type="info" title="MagicMotion">
-
-- MagicMotion Smart Bean
-- MagicMotion Vini
-- MagicMotion Flamingo
-- MagicMotion Equinox
-- MagicMotion Zenith
-
-</Callout>
-For the broader upstream compatibility list, see the [Buttplug.io device support documentation](https://buttplug.io).
-
-## Troubleshooting
-
-<Callout type="info" title="My device doesn't appear in the scan list">
-
-- Ensure it's a supported model and is powered on/in pairing mode
-- Move the device within 1–2 meters of RADR
-- Power‑cycle both RADR and the device, then rescan
-- Update firmware where applicable: <a href="/ossm/tools/">Flashing your OSSM</a>
-
-</Callout>
-<Callout type="info" title="Device connects but controls don't work">
-
-- Many third‑party devices are "Vibration Only" on first release
-- Try basic intensity up/down; advanced features may be pending
-- Disconnect other apps that might have claimed the device over Bluetooth
-
-</Callout>
-<Callout type="info" title="I need a device added or prioritized">
-
-Open a request with brand, exact model, and a short description of what you want to control. Include any available links to the product page and Bluetooth details. Contact support@researchanddesire.com or use the website form.
-
-</Callout>
+Compatibility ownership: the Research and Desire firmware/support team maintains this matrix. A reported device remains unvalidated until that team reproduces the result and updates this page.

@@ -1,31 +1,25 @@
 ---
-title: "Overview"
+title: "Deep Throat Trainer Release Notes"
+description: "Verified release-note policy and current source status for Deep Throat Trainer firmware."
 ---
 
-Stay up to date with the latest changes to the Deepthroat Trainer. This changelog documents all releases, including new features, improvements, and bug fixes.
+No dated, versioned DTT firmware release entries are available in this user-guide repository. The previous page mixed undated implementation notes, placeholder accordions, and a promotional image; those were not reliable release notes and have been removed from the published content.
 
-## Automated Changelog Updates
+## What a release entry must include
 
-- **Automated changelog generation** — Version bumps now automatically generate changelog entries via CI pipeline
-- **Improved offline play support** — Unpaired devices can now load local settings and start sessions without requiring pairing first
-- **Simplified WiFi health check** — Streamlined connectivity verification for faster startup
-- **Memory management fix** — Increased memory threshold before API requests to improve stability
-- **API response handling fix** — Fixed issue where successful API responses weren't being properly captured
-- **Enhanced session parsing diagnostics** — Added comprehensive debug logging for session and segment parsing to aid troubleshooting
-- **Session statistics fix** — Fixed missing end time tracking for Bounce and Endurance training segments
-- **Training while charging** — Sessions can now start while the device is plugged in
+Future entries should be published newest first with:
 
-<Accordions type="single">
-  <Accordion title="First question">
+- firmware version and release date;
+- release channel and eligible hardware;
+- user-visible changes;
+- dashboard or API dependencies;
+- known issues;
+- update and recovery instructions;
+- rollback or support boundary;
+- source or artifact used to verify the entry.
 
-Answer to the first question.
+## Find current status
 
-  </Accordion>
-  <Accordion title="Second question">
+Use [Firmware updates and recovery](/dtt/technical/firmware-updates) for the dynamic update behavior. The version assigned to a device can vary by release track, eligibility, and staged rollout; this page does not invent a “current” version.
 
-Answer to the second question.
-
-  </Accordion>
-</Accordions>
-
-![lime get subscription for free promo offer instagram feed ad post 3](./images/lime-get-subscription-for-free-promo-offer-instagram-feed-ad-post-3.webp)
+Last reviewed: August 16, 2026.

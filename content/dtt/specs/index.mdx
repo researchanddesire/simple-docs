@@ -1,16 +1,32 @@
 ---
-title: "Device Specifications"
+title: "Deep Throat Trainer Specifications"
+description: "Verified user-facing interfaces and clearly marked specification gaps for the Deep Throat Trainer."
 ---
 
-Your Deepthroat Trainer is designed to be straightforward to use and maintain. This section covers the everyday essentials—like keeping your device charged.
+This page lists only values supported by the current product and application source. Contact support when an unpublished value affects installation, travel, repair, or compatibility.
 
-## In this section
+| Item                | Verified information                                                                                          |
+| ------------------- | ------------------------------------------------------------------------------------------------------------- |
+| Account pairing     | short Trainer ID displayed during boot                                                                        |
+| Network setup       | 2.4 GHz Wi-Fi through the local **Trainer Setup** portal                                                      |
+| Local setup address | `http://192.168.4.1`                                                                                          |
+| Charging connector  | USB-C                                                                                                         |
+| User input          | front button and side power switch                                                                            |
+| Feedback            | display plus RGB LED strip                                                                                    |
+| Session measurement | position, speed/RPM, time, distance, strokes, and target-window data are accepted by the current v2 API       |
+| Calibration storage | current v2 API stores 1.5–21.5 cm values with at least a 2 cm gap; these are software bounds, not use targets |
 
-- **[Charging your battery](/dtt/specs/charging)**
-  Learn how to charge your device, check battery status, and troubleshoot power issues.
+## Not published here
 
-<Callout type="info">
+Exact enclosure dimensions, weight, battery chemistry/capacity, charge time, rated runtime, USB input rating, environmental limits, ingress protection, sensor model/range, accessory electrical limits, and supported Wi-Fi security modes are not verified in this repository.
 
-Looking for setup instructions? Head to the [Quick Start guide](/dtt) to pair your device and begin training.
+Do not infer an electrical, environmental, or medical limit from an API field or UI scale.
 
-</Callout>
+## Related
+
+- [Charging](/dtt/specs/charging)
+- [Toy compatibility](/dtt/quick-start/using-toys)
+- [Technical reference](/dtt/technical)
+- [Developer Docs](https://dev.researchanddesire.com)
+
+Last reviewed: August 16, 2026.

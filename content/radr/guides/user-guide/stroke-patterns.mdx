@@ -1,8 +1,17 @@
 ---
-title: "Stroke Patterns"
+title: "RADR Stroke Pattern Reference"
+description: "Compare OSSM patterns available through RADR, their motion behaviour, firmware dependence, and safe starting method."
 ---
 
 RADR provides access to the OSSM's built-in stroke patterns. Patterns are loaded directly from your OSSM when you connect, so the available patterns depend on your OSSM firmware version.
+
+![RADR pattern-selection screen with the highlighted pattern, its motion description, and select and back actions](<../../img/image (3).webp>)
+
+<Callout type="warn" title="Change patterns at zero speed">
+
+Return speed to zero before selecting a different pattern. Confirm the highlighted name and begin again at low speed; pattern names and behaviour can change with the connected OSSM firmware.
+
+</Callout>
 
 ## Accessing Patterns
 
@@ -21,13 +30,13 @@ Patterns are loaded from your OSSM when you connect. The pattern list may vary d
 </Callout>
 ## Controls in Pattern Mode
 
-| Control | Action |
-|---------|--------|
-| Right Encoder | Scroll through patterns |
-| Left Encoder | Adjust speed (still works) |
-| Right Button | Select the highlighted pattern |
-| Left Button | Cancel and return to control screen |
-| Middle Button | Pause and return to control screen |
+| Control       | Action                              |
+| ------------- | ----------------------------------- |
+| Right Encoder | Scroll through patterns             |
+| Left Encoder  | Adjust speed (still works)          |
+| Right Button  | Select the highlighted pattern      |
+| Left Button   | Cancel and return to control screen |
+| Middle Button | Pause and return to control screen  |
 
 <Callout type="idea">
 
@@ -39,6 +48,18 @@ The speed control (left encoder) continues to work while in Pattern Mode, allowi
 RADR displays all patterns available on your connected OSSM. Pattern behavior depends on your OSSM firmware version, and the on-screen description explains how the sensation parameter affects each pattern.
 
 This page summarizes how to access and use patterns such as Simple Stroke, Teasing or Pounding, Robo Stroke, Half'n'Half, Deeper, Stop'n'Go, Insist, and more.
+
+| Pattern family shown by RADR | General motion characteristic                             | What to verify before increasing speed                               |
+| ---------------------------- | --------------------------------------------------------- | -------------------------------------------------------------------- |
+| Simple Stroke                | Regular back-and-forth stroke                             | Stroke range and depth match the display                             |
+| Teasing / Pounding           | Motion character changes with the sensation control       | The low setting behaves as expected before trying a stronger setting |
+| Robo Stroke                  | Mechanically regular variation                            | Transitions do not exceed the intended range                         |
+| Half'n'Half                  | Alternates between two motion sections                    | Both sections remain within the selected range                       |
+| Deeper                       | Biases motion toward the deeper end of the selected range | The deepest point remains clear and comfortable                      |
+| Stop'n'Go                    | Includes intentional pauses                               | A programmed pause is not mistaken for a disconnected controller     |
+| Insist                       | Repeats or emphasizes part of the stroke                  | Repetition remains within the intended position and range            |
+
+These are orientation descriptions, not fixed motion specifications. The connected OSSM supplies the authoritative pattern implementation. If its on-screen behaviour differs from this table, stop, note both firmware versions, and [contact support](mailto:support@researchanddesire.com).
 
 ## Tips
 

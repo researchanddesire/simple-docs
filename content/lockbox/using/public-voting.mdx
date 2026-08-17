@@ -1,211 +1,77 @@
 ---
-title: "Public Voting"
+title: "Lockbox Public Voting"
+description: "Enable, share, monitor, limit, and disable Lockbox public voting with clear privacy and role boundaries."
 ---
 
-Public voting lets you share an active lock session so others can vote to increase or decrease your remaining lock time. This introduces friendly unpredictability and community interaction while you stay in control of the rules.
-
-<Callout type="info">
-
-Public voting only applies to active lock sessions. If your session ends or is abandoned, the public voting link becomes inactive.
-
-</Callout>
-## How it works
-
-- You enable public voting for a specific active lock session.
-- Voters choose to increase or decrease your remaining time.
-- Each vote adjusts the timer by fixed amounts you configure.
-- You can disable public voting at any time.
-
-<Callout type="idea">
-
-Start with small, balanced increments (for example, +60 seconds and −60 seconds) to keep sessions engaging without extreme swings.
-
-</Callout>
-## Enable public voting
-
-### Step 1: Open your session or template settings
-
-On the "Templates" part of the app, click "Edit" on an existing lockbox template, or click "New lockbox template". For lockbox sessions that are already active, if you are the keyholder or if it is a test session, you can click "Modify settings" on that session in the "Home" page of the Chastity Lockbox part of the dashboard.
-
-<Callout type="success">
-
-You should see a setting labeled "Public Voting" within the session or lockbox settings.
-
-</Callout>
-### Step 2: Enable the Public Voting option
-
-Toggle on **Public Voting** for the active lock session.
+Public voting creates a shareable link that lets visitors add or remove time from an active lock according to values configured for that session.
 
 <Callout type="warn">
 
-Public voting affects your timer in real time. Make sure you are comfortable with the configured increments before enabling it.
+Everyone affected should agree on the audience, vote effects, minimum and maximum duration, and shutdown plan before the link is shared. Public voting must not remove access to breaks or emergency release.
 
 </Callout>
-### Step 3: Configure time values
 
-Click on the cog icon next to the public voting toggle, and define how each vote changes your time:
+## Roles and visibility
 
-- **Time Plus**: Seconds added for an increase vote.
-- **Time Minus**: Seconds removed for a decrease vote.
-- By default, voters can reduce or increase your lock session's duration without limits. If you would like public voting to only be permitted to increase or decrease the lock duration up until certain upper (max) and lower (min) limits, you can specify that in the "Maximum Lock Duration" and/or "Minimum Lock Duration" sections on this screen.
+| Role        | What to verify                                                                       |
+| ----------- | ------------------------------------------------------------------------------------ |
+| Lockee      | Consents to the audience and configured effects; retains safety and emergency access |
+| Keyholder   | Has permission to modify this session and knows how to disable voting or end it      |
+| Self-locker | Configures and tests the limits before starting the active session                   |
+| Voter       | Receives only the public voting view; logged-in identity may appear in activity      |
 
-<Callout type="info">
+The public page exposes session details needed for voting. It must not expose account credentials, but sharing the link intentionally makes the voting view available to anyone who receives or forwards it.
 
-Time values are in seconds. Use whole numbers only.
+## Enable and configure
 
-</Callout>
-## Share your voting link
+1. In the dashboard, edit a Lockbox template, or open **Modify settings** for an eligible active or test session.
 
-Once public voting is enabled on an active session, a unique share link becomes available.
+![Lockbox template editor where session features are configured](../quick-start/images/creating-and-editing-a-lock-annotated.webp)
 
-### Step 4: Open your lockbox page
+2. Enable **Public Voting**.
+3. Open its settings and configure:
+   - **Time Plus**: seconds added by an increase vote;
+   - **Time Minus**: seconds removed by a decrease vote;
+   - **Maximum Lock Duration**: optional upper boundary; and
+   - **Minimum Lock Duration**: optional lower boundary.
 
-Navigate to the lockbox page in your dashboard.
+4. Review the final values with the Lockee and Keyholder before saving.
 
-### Step 5: Find the Public Voting badge
-
-Look for the **Public Voting** badge with a share icon.
-
-### Step 6: Copy and share your link
-
-Select the badge to copy your public voting link, then share it with friends, partners, or your community.
-
-<Callout type="success">
-
-Open the link in a private/incognito window to confirm it loads the public voting view without exposing your account details.
-
-</Callout>
-## View voting activity
-
-You can track votes in two places.
-
-### Vote counter badges
-
-On the lockbox page, counters appear next to session details when public voting is active or after receiving the first vote:
-
-- 👍 Thumbs Up: Total votes to increase time
-- 👎 Thumbs Down: Total votes to decrease time
-
-<Callout type="info">
-
-Counters only display when public voting is enabled or at least one vote has been recorded for the session.
-
-</Callout>
-### Activity history
-
-For a detailed view of votes and other events:
-
-1. Open your lockbox page.
-2. Find the <strong>Session activity</strong>
-    section.
-3. Select <strong>View more</strong>
-    to open the full activity log.
-
-Each vote event shows:
-
-- <strong>Icon</strong>
-  : 👍 for increase, 👎 for decrease
-- <strong>Action</strong>
-  : "Voted to increase time" or "Voted to decrease time"
-- <strong>Voter</strong>
-  : Username (or "Anonymous" if the voter was not logged in)
-- <strong>Timestamp</strong>
-  : When the vote was cast
-
-Vote events appear alongside other session activities (locks, unlocks, breaks) in chronological order.
-
-## Voting restrictions
-
-To reduce spam and abuse, the following limits apply:
-
-- Each person can vote once every 24 hours on a given session.
-- Votes are tracked by user account and by IP address.
-
-<Callout type="info">
-
-If both an account and an IP are detected for the same person, the stricter limit is applied.
-
-</Callout>
-## Privacy and anonymity
-<Callout type="info" title="Logged‑in voters">
-
-When someone votes while logged in, their username appears in your activity history.
-
-</Callout>
-<Callout type="info" title="Anonymous voters">
-
-When someone votes without logging in, they appear as "Anonymous" in your activity history.
-
-</Callout>
-<Callout type="info" title="Your privacy">
-
-Your public voting link shows session details necessary for voting but does not expose your account credentials or private profile information.
-
-</Callout>
-## Points and rewards
-
-Both you and voters earn points for participating in public voting.
-
-**You:**
-
-Earn points when people vote on your session.
-
-**Voters:**
-
-Earn points when they vote on sessions.
-
-<Callout type="info">
-
-Point values decrease throughout the day as more votes are cast, which encourages early participation.
-
-</Callout>
-## Tips for engagement
-
-- Share your link with communities that match your interests and boundaries.
-- Use balanced increments to keep the session fun and sustainable.
-- Check your activity history regularly to see who is supporting (or challenging) you.
-- Remember: votes apply immediately. Share responsibly.
-
-## Disable public voting
-
-You can turn public voting off at any time.
-
-### Step 7: Open session settings
-
-Go to your active lock session settings.
-
-### Step 8: Turn off Public Voting
-
-Toggle off the **Public Voting** option.
-
-<Callout type="success">
-
-The Public Voting badge and share link should no longer appear on the lockbox page.
-
-</Callout>
 <Callout type="warn">
 
-Disabling public voting stops new votes from being accepted. Past vote events remain in your activity history.
+Without an upper or lower boundary, the current documentation says votes can continue changing the duration in that direction. Do not publish the link until the configured effects and boundaries are acceptable.
 
 </Callout>
-## Troubleshooting
-<Callout type="info" title="I don’t see the Public Voting toggle">
 
-Ensure you’re viewing an active lock session. The toggle only appears for active sessions.
+## Share the link
 
-</Callout>
-<Callout type="info" title="The link shows as inactive">
+1. Open the active Lockbox session in the dashboard.
+2. Find the **Public Voting** badge or share action.
+3. Copy the link.
+4. Open it in a private/incognito window before sharing.
+5. Confirm the public view contains only information you intend to publish.
 
-The session may have ended or been abandoned. Public voting links only work for active sessions.
+Treat the URL as public. Share it only in communities that match the agreed audience and assume it can be forwarded.
 
-</Callout>
-<Callout type="info" title="People say they can’t vote again">
+## Monitor activity
 
-Voters are limited to one vote per session every 24 hours. Ask them to try again after the cooldown period.
+The Lockbox page can show counters for increase and decrease votes. The session activity history records vote direction, timestamp, and either a logged-in username or **Anonymous**.
 
-</Callout>
-<Callout type="info" title="Votes seem too extreme">
+The current documentation describes a per-session voting limit of one vote every 24 hours, tracked by account and IP address. Because abuse controls can change, rely on the live interface rather than using this as a guaranteed rate limit.
 
-Lower the Time Plus/Time Minus values to more moderate increments.
+Check the physical Lockbox periodically. Votes apply to the session, but the dashboard can be ahead of an offline device.
 
-</Callout>
+## Disable voting and revoke the link
+
+1. Open the active session settings.
+2. Turn off **Public Voting** and save.
+3. Confirm the badge/share action disappears.
+4. Open the old link in a private window and confirm it no longer accepts votes.
+
+Past vote events remain in activity history. Disabling voting cannot retract information already shared or copies of the URL.
+
+## Safety and recovery
+
+- If votes create an unsafe or unwanted situation, disable voting and end the session.
+- If the dashboard cannot reach the Lockbox, use local controls and [Emergency Access](/lockbox/safety).
+- If the public page exposes unexpected information or continues accepting votes after disabling, stop sharing and contact [support@researchanddesire.com](mailto:support@researchanddesire.com).

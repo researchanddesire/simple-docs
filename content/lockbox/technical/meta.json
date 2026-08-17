@@ -1,11 +1,4 @@
 {
   "title": "Technical",
-  "pages": [
-    "index",
-    "button-controls",
-    "idle-and-power-states",
-    "menu-structure",
-    "offline-mode",
-    "timer-duration-limits"
-  ]
+  "pages": ["index", "offline-mode"]
 }

@@ -1,5 +1,6 @@
 ---
 title: "OSSM Web Flasher"
+description: "Install the current stable OSSM firmware over USB or recover a control board that support has asked you to reflash."
 ---
 
 import { DeviceFlasher } from "@repo/device-tools/device-flasher";
@@ -11,5 +12,7 @@ Use this tool to install or recover OSSM firmware directly from a desktop browse
 Use Chrome or Edge, a data-capable USB cable, and stable power. Stop the OSSM and disconnect its motor power before connecting USB.
 
 </Callout>
+
+Flashing replaces the installed firmware and may require Wi-Fi or device settings to be entered again. Read [Flash or recover OSSM firmware](/ossm/tools) for preparation, success checks, and failure recovery before continuing.
 
 <DeviceFlasher device="ossm" />

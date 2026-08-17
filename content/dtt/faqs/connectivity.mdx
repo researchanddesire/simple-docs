@@ -1,0 +1,28 @@
+---
+title: "Connectivity Questions"
+description: "Diagnose 2.4 GHz setup, captive portals, offline playback, server reachability, and missing results."
+---
+
+## Which Wi-Fi does the Trainer use?
+
+The documented setup supports 2.4 GHz Wi-Fi. Use [Wi-Fi setup](/dtt/quick-start/pairing/wifi-setup) and select a 2.4 GHz network.
+
+## Why does Trainer Setup say “no internet”?
+
+It is a temporary local configuration network, not an internet connection. Stay connected and open `http://192.168.4.1` if the portal does not appear.
+
+## Why can it join Wi-Fi but still show E-DTT-1?
+
+The local connection succeeded but the online health check did not. Router filtering, client isolation, captive login, DNS, firewall, or upstream connectivity may be involved. Follow [E-DTT-1](/dtt/errors/e-dtt-1) and use a phone hotspot only as a diagnostic comparison.
+
+## What works offline?
+
+Available documentation and device messages support playback from previously downloaded settings and on-device feedback. Exact compatibility depends on firmware. New settings, confirmed result persistence, and online updates require connectivity.
+
+## Will an offline result upload later?
+
+Do not rely on it. Server code persists results only when a completion request arrives, and the firmware implementation is not present in this checkout. Queue durability, capacity, retention, retry schedule, and version applicability are therefore unknown. See [Offline mode](/dtt/technical/offline-mode).
+
+## How do I test before an offline session?
+
+While online, activate the intended template, let the Trainer fetch it, verify the toy and segment summary, then perform a controlled offline check. Treat that check as non-recorded and return online for any session whose result matters.

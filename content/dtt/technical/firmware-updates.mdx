@@ -1,116 +1,44 @@
 ---
-title: "Firmware Updates"
+title: "Firmware Updates and Recovery"
+description: "Understand automatic update checks, release channels, verification, failure recovery, and USB flashing requirements."
 ---
 
-Your Deepthroat Trainer receives firmware updates over-the-air (OTA) when connected to Wi-Fi. Updates bring new features, improvements, and bug fixes.
+## Automatic checks
 
-## How updates work
+When an online Trainer calls the current update service, the server compares its reported version with the version assigned to its release track. Eligibility and staged rollout logic can affect the returned firmware. A single “latest version” is therefore not hard-coded in this guide.
 
-### Automatic checking
+## Before an update
 
-Each time you power on and connect to Wi-Fi, the trainer checks for available updates during the preflight phase.
+- Finish and exit any physical session.
+- Place the Trainer securely with no toy in use.
+- Use a stable 2.4 GHz connection.
+- Ensure adequate battery charge; the repository does not define a required percentage.
+- Do not begin when losing power or connectivity is likely.
 
-### Update process
+## During and after
 
-When an update is available:
+Follow the device progress screen and keep it powered. After it restarts, let preflight complete and verify that the expected session can be fetched.
 
-1. The screen shows "Updating" with progress information
-2. New firmware downloads automatically
-3. The device restarts with the new version
+<Callout type="success" title="Verification">
 
-<Callout type="warn">
-
-Do not power off the device during an update. Wait for it to complete and restart automatically. Interrupting an update could cause issues.
-
-</Callout>
-## Beta features
-
-Active subscribers are often enrolled in early (beta) releases during rollouts. See the <a href="/dtt/software-2.0-preview">Software 2.0 Preview</a> for details on current beta features.
-
-## What updates include
-
-Firmware updates may include:
-
-- **New features** — Training modes, UI improvements, customization
-- **Bug fixes** — Resolved issues from previous versions
-- **Performance** — Faster response, better stability
-- **Security** — Protection improvements
-
-## Version information
-
-Your current firmware version is displayed during device startup. Note this information when contacting support.
-
-## Manual update check
-
-To force an update check:
-
-1. Ensure Wi-Fi is connected
-2. Power cycle the device
-3. The preflight checks will look for updates automatically
-
-There's no manual "check for updates" button — the check happens automatically on each startup when online.
-
-## Web flasher
-
-Use the web flasher to reinstall or recover firmware when an OTA update is not possible. Trainers purchased before July 1, 2025 do not support USB flashing; contact [support](mailto:support@researchanddesire.com) if you have an older Trainer.
-
-<Callout type="info" title="Use Chrome or Edge on a desktop computer">
-
-Connect the Trainer with a data-capable USB cable. Web Serial is not available in Safari, Firefox, or mobile browsers.
+The Trainer restarts normally, completes its online check, and does not repeat the update or show a recovery error.
 
 </Callout>
 
-Open the dedicated [DTT Web Flasher](/dtt/tools/web-flasher) to reinstall or recover firmware.
+## Release channels
 
-## Update requirements
+Dashboard device settings can expose firmware-channel controls for eligible devices. Channel names and eligibility may change. Choose only a channel currently offered to your account, and use Production when you do not intend to test prerelease software.
 
-| Requirement  | Details                            |
-| ------------ | ---------------------------------- |
-| **Internet** | Wi-Fi connection required          |
-| **Battery**  | Sufficient charge recommended      |
-| **Time**     | Updates typically take 1-3 minutes |
+## If an update fails
 
-## Troubleshooting
+1. Record the screen and any version shown.
+2. Keep the Trainer out of use.
+3. Restore a stable network and restart once.
+4. If normal startup does not recover, use the [DTT Web Flasher](/dtt/tools/web-flasher) only with supported hardware, browser, and a data-capable cable.
+5. Contact support before erasing the device or repeating failed flashes.
 
-<Callout type="info" title="Update doesn't start">
+## Version and rollback limits
 
-- Verify Wi-Fi is connected and working
-- Check that the device can reach the internet (no firewall blocks)
-- Try power cycling and reconnecting
+The current user-guide repository does not publish a current firmware version, full dated release history, support matrix, or guaranteed rollback path. The update service resolves versions dynamically. Report the version shown by your device or flasher when requesting support.
 
-</Callout>
-<Callout type="info" title="Update fails or restarts repeatedly">
-
-- Ensure stable power (plug in charger if battery is low)
-- Check for strong Wi-Fi signal
-- If repeated failures, contact support
-
-</Callout>
-<Callout type="info" title="Features don't match documentation">
-
-- You may be on a different firmware release than documented
-- Some features are beta/preview only
-- Check your current version against release notes
-
-</Callout>
-<Callout type="info" title="Can I downgrade firmware?">
-
-Downgrading isn't supported through normal operation. If you're experiencing issues with a new version, contact support.
-
-</Callout>
-## Release communication
-
-Updates and changes are communicated through:
-
-- Dashboard announcements
-- Documentation updates
-- The <a href="/dtt/software-2.0-preview">Software 2.0 Preview</a> page
-
-## Related guides
-
-**[Software 2.0 Preview](/dtt/software-2.0-preview)**
-
-Current beta features and roadmap.
-**[Wi-Fi Setup](/dtt/quick-start/pairing/wifi-setup)**
-
-Connect your trainer for updates.
+Last reviewed against dashboard/API source: August 16, 2026.

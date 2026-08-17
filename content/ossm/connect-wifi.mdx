@@ -1,0 +1,42 @@
+---
+title: "Connect OSSM to Wi-Fi"
+description: "Connect OSSM to a 2.4 GHz Wi-Fi network with the web controller or RADR setup portal and verify the online state."
+---
+
+Wi-Fi enables firmware updates. It is not required for wired local control. You need the network name and password for a 2.4 GHz network.
+
+## Option 1: web controller
+
+1. Power on and home OSSM.
+2. Open the [OSSM web controller](/ossm/tools/web-controller) in desktop Chrome or Edge.
+3. Select **Connect**, choose the OSSM, and select **Pair**.
+4. Open **Wi-Fi Settings**, enter the network name and password, then select **Save & Connect**.
+
+![The web controller Wi-Fi settings form with network fields identified](./images/web-controller-wifisettings2-annotated-1.webp)
+
+## Option 2: RADR
+
+1. Connect RADR to OSSM, open **Settings**, and select **Wi-Fi Settings**.
+2. Scan the QR code or join the temporary **RADR Setup** network shown on screen.
+3. In the setup portal, select **Configure Wi-Fi**.
+4. Choose the 2.4 GHz network, enter its password, and save.
+
+![The RADR Settings menu](./images/wireless-remote-wifi-connectivity-settings-unannotated.webp)
+
+![The RADR Wi-Fi Settings choice](./images/wireless-remote-wifi-connectivity-wifi-settings-unannotated.webp)
+
+![The RADR setup QR code shown on the remote](./images/wireless-remote-wifi-connectivity-wifi-qr-code-unannotated.webp)
+
+![A phone joined to the temporary RADR Setup network](./images/radr-wifi-setup-annotated.webp)
+
+![The Wi-Fi setup portal network configuration choice](./images/wifi-manager-annotated.webp)
+
+![The setup portal network list and password entry](./images/radr-wifi-network-selection-annotated.webp)
+
+<Callout type="success" title="Success">
+
+The Wi-Fi indicator shows a green status and remains connected after a restart. A yellow status means the network connected but the online service did not; red means no Wi-Fi connection.
+
+</Callout>
+
+If setup fails, confirm 2.4 GHz is enabled, re-enter the password, move closer to the router, and see [OSSM troubleshooting](/ossm/troubleshooting).

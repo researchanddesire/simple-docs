@@ -1,181 +1,23 @@
 ---
-title: "Settings and WiFi"
+title: "RADR Settings Reference"
+description: "Look up RADR settings, power actions, and links to the canonical Wi-Fi and firmware procedures."
 ---
 
-This guide covers RADR's settings menu, WiFi configuration, and power management options.
+From the main menu, select **Settings** with the right encoder and right button. Use the left button to return.
 
-## Accessing Settings
+| Menu item      | Purpose                                                     | Procedure                                                            |
+| -------------- | ----------------------------------------------------------- | -------------------------------------------------------------------- |
+| Go Back        | Return to the main menu                                     | —                                                                    |
+| Wi-Fi Settings | Open the temporary setup network and save a 2.4 GHz network | [Connect RADR to Wi-Fi](/radr/guides/user-guide/connecting-to-wifi)  |
+| Update Device  | Check for and install an over-the-air firmware update       | [Update RADR Firmware](/radr/guides/user-guide/updating-your-device) |
+| Restart Device | Reboot RADR and reset its current Bluetooth session         | Confirm the controlled device has stopped first                      |
 
-From the main menu, select **Settings** to access the settings menu.
+Wi-Fi is used for network features such as updates; direct device control uses Bluetooth. This reference deliberately does not repeat network credentials or update steps, so the linked canonical procedures remain the single source of truth.
 
-## Settings Menu Options
+## Sleep and power
 
-| Option | Description |
-|--------|-------------|
-| Go Back | Return to the main menu |
-| WiFi Settings | Configure WiFi network connection |
-| Update Device | Check for and install firmware updates |
-| Restart Device | Reboot the RADR |
+Choose **Sleep** from the main menu to disconnect the current device, turn off the display and LEDs, and enter the low-power state. An under-screen button wakes RADR and returns it through startup.
 
-### Navigation
+Use the physical power switch for extended storage. Before sleep, restart, or power-off, stop the connected device and verify it is physically stationary; a remote changing state is not a substitute for powering down a device that is behaving unexpectedly.
 
-- **Right Encoder** — Scroll through options
-- **Right Button** — Select the highlighted option
-- **Left Button** — Return to main menu
-
-## WiFi Configuration
-
-WiFi connectivity enables over-the-air (OTA) firmware updates for your RADR.
-
-<Callout type="info">
-
-WiFi is optional and primarily used for firmware updates. RADR's core functionality (device control) works entirely over Bluetooth.
-
-</Callout>
-### Setting Up WiFi
-
-### Step 1: Open WiFi Settings
-
-From the settings menu, select **WiFi Settings**.
-
-### Step 2: Connect to RADR's Access Point
-
-RADR creates a WiFi access point called **"RADR Setup"**.
-
-A QR code is displayed on screen for easy connection:
-
-```
-WIFI:S:RADR Setup;T:nopass;;
-```
-
-Scan the QR code with your phone, or manually connect to the network:
-- **Network Name:** RADR Setup
-- **Password:** None (open network)
-
-### Step 3: Configure WiFi Credentials
-
-Once connected to RADR's access point, a configuration portal opens automatically:
-
-1. Select your home WiFi network from the list
-2. Enter your WiFi password
-3. Save the configuration
-
-### Step 4: Confirmation
-
-After successful configuration, you'll see the **"WiFi Connected"** screen:
-
-- **Message:** "Your OSSM Remote is now connected to WiFi."
-- RADR is now ready to receive OTA updates
-
-### WiFi Configuration Details
-
-| Parameter | Value |
-|-----------|-------|
-| Access Point Name | RADR Setup |
-| Security | Open (no password) |
-| Portal Timeout | 30 seconds |
-| Retry Attempts | 5 |
-
-<Callout type="warn">
-
-The WiFi setup portal has a 30-second timeout. If the portal times out, restart the WiFi Settings process.
-
-</Callout>
-## Update Device
-
-Select **Update Device** to check for and install firmware updates.
-
-<Callout type="info">
-
-This feature requires WiFi to be configured. Updates are downloaded and installed over-the-air.
-
-</Callout>
-## Restart Device
-
-Select **Restart Device** to reboot your RADR. This is useful for:
-
-- Clearing temporary issues
-- Applying certain settings changes
-- Resetting the Bluetooth state
-
-The device will power off and restart automatically.
-
-## Sleep Mode
-
-From the main menu, select **Sleep** to enter deep sleep mode.
-
-### What Happens in Sleep Mode
-
-1. RADR disconnects any connected devices
-2. A shutdown sound plays
-3. The display turns off
-4. LEDs turn off
-5. The device enters ultra-low power mode
-
-### Waking from Sleep
-
-Press any of the three under-screen buttons to wake RADR:
-
-- Left button
-- Middle button
-- Right button
-
-<Callout type="info">
-
-When waking from sleep, RADR performs a full restart and returns to the main menu.
-
-</Callout>
-### When to Use Sleep Mode
-
-Use sleep mode when:
-
-- You're done using RADR but don't want to fully power off
-- You want to conserve battery between sessions
-- You want a quick way to pause without disconnecting the power switch
-
-<Callout type="idea">
-
-For extended storage, use the physical power switch instead of sleep mode. Sleep mode still consumes minimal power.
-
-</Callout>
-## Power Management Summary
-
-| Method | Battery Usage | Wake Method |
-|--------|---------------|-------------|
-| Active (connected) | High | N/A |
-| Active (idle) | Medium | N/A |
-| Sleep Mode | Very Low | Under-screen button |
-| Power Switch Off | None | Power switch |
-
-## Troubleshooting
-<Callout type="info" title="WiFi setup portal doesn't appear">
-
-- Ensure you're connected to the "RADR Setup" network
-- Try opening a browser and navigating to 192.168.4.1
-- Wait a few seconds after connecting
-- Restart WiFi Settings if the portal timed out
-
-</Callout>
-<Callout type="info" title="WiFi doesn't connect to my network">
-
-- Verify your WiFi password is correct
-- Ensure your router is within range
-- RADR supports 2.4GHz networks only
-- Try moving closer to your router
-
-</Callout>
-<Callout type="info" title="Update fails">
-
-- Ensure WiFi is connected and working
-- Check that RADR has sufficient battery
-- Try the update again
-- Contact support if updates consistently fail
-
-</Callout>
-<Callout type="info" title="Device won't wake from sleep">
-
-- Press and hold an under-screen button for 2-3 seconds
-- If unresponsive, toggle the power switch off and on
-- Ensure RADR has battery charge
-
-</Callout>
+If RADR will not wake, connect it to power, try the physical power switch, and then use the [RADR Web Flasher](/radr/tools/web-flasher) only if the firmware-recovery prerequisites apply.

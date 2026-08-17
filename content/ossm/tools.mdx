@@ -1,64 +1,55 @@
 ---
-title: "Flashing your OSSM PCBA or Wireless Remote"
+title: "Flash or Recover OSSM Firmware"
+description: "Prepare, install, verify, and recover OSSM or RADR firmware with the supported browser tools."
 ---
 
-All R+D PCBAs are shipped pre-flashed, but there may be some instances that require you to flash your device at home. We've created an easy flashing tool for this purpose!
+Use firmware flashing to recover a device or when Research and Desire support directs you. Everyday control does not require flashing.
 
-## Browser tools
+## Choose the correct tool
 
-- [BLE Controller](/ossm/tools/web-controller)
-- [Funscript Player](/ossm/tools/funscript-player)
-- [Gold Motor Programming Tool](/ossm/tools/gold-motor-programming)
-- [OSSM Web Flasher](/ossm/tools/web-flasher)
+- [OSSM web flasher](/ossm/tools/web-flasher) for the OSSM control board
+- [RADR web flasher](/radr/tools/web-flasher) for the wireless remote
+- [OSSM BLE controller](/ossm/tools/web-controller) for browser control without flashing
+- [OSSM Funscript Player](/ossm/tools/funscript-player) for local synchronized playback
+- [Gold Motor Programming Tool](/ossm/tools/gold-motor-programming) only for supported motor configuration
 
-<Callout
-  type="info"
-  title="You must use Google Chrome or Microsoft Edge to flash your device."
-></Callout>
-<Callout
-  type="warn"
-  title="Flash your device only when instructed to by support@researchanddesire.com"
-></Callout>
-## Before you flash
+## Requirements
 
-In order to flash your OSSM PCBA or Wireless Remote, you'll need the following tools:
+- Desktop Chrome or Edge with Web Serial support
+- A USB data cable, not a charge-only cable
+- Stable computer power and an uninterrupted USB connection
+- The exact device selected in the flasher
+- Time to re-enter Wi-Fi or device settings if the installed image resets them
 
-1. A computer with a USB-C or USB-A port
-2. A USB-C to C or USB-C to A cable that can transfer data
-3. This driver --->
-4. Your OSSM PCBA or Wireless Remote
+<Callout type="error" title="Make the machine safe before USB flashing">
 
-<Callout
-  type="success"
-  title="Once you have all four, you're ready to flash!"
-></Callout>
-## Flashing your OSSM PCBA
+Stop all motion, move people clear, disconnect OSSM motor power, and connect only the control board or remote by USB. Do not flash during a session.
 
-1. Open the [OSSM Web Flasher](/ossm/tools/web-flasher)
-2. Leave the mode set to **Production (Stable)**
-3. Click **Connect & Flash**
-4. Connect the OSSM PCBA to your computer via USB cable
-5. Select the appropriate serial port
-6. Confirm the install
-7. Let the flashing process run
+</Callout>
 
-<Callout type="success" title="Your device is now flashed."></Callout>
-<Callout
-  type="info"
-  title="If you are having trouble finding the correct serial port, disconnect and reconnect your device using the USB cable while the port selection screen remains open. This will make the device's serial port connection disappear and then reappear, so you can easily tell which port to select!"
-></Callout>
-## Flashing your Wireless Remote
+## Install stable firmware
 
-1. Open the [RADR Web Flasher](/radr/tools/web-flasher)
-2. Leave the mode set to **Production (Stable)**
-3. Click **Connect & Flash**
-4. Connect the Wireless Remote to your computer via USB cable
-5. Select the appropriate serial port
-6. Confirm the install
-7. Let the flashing process run
+1. Open the flasher for the exact device.
+2. Leave **Mode** set to **Production (Stable)** unless support supplied a specific development link.
+3. Select **Connect & Flash** and choose the serial port that appears when the device is connected.
+4. Confirm the device and installation. Do not unplug, close the tab, or let the computer sleep.
+5. Wait for the installer to report completion.
 
-<Callout type="success" title="Your device is now flashed."></Callout>
-<Callout
-  type="info"
-  title="If you are having trouble finding the correct serial port, disconnect and reconnect your device using the USB cable while the port selection screen remains open. This will make the device's serial port connection disappear and then reappear, so you can easily tell which port to select!"
-></Callout>
+The flasher installs the stable manifest available at the time you run it. The page does not promise a version number; record the version shown by the device after restart.
+
+## Verify success
+
+1. Disconnect USB, reconnect the normal power arrangement, and restart with the motion path empty.
+2. Confirm the device boots and shows a firmware version.
+3. Reconfigure Wi-Fi or pairing only if the device requests it.
+4. For OSSM, confirm unloaded homing, minimum motion, and Stop before use.
+
+## If flashing fails
+
+- Keep the installer open and reconnect the cable to identify the correct serial port.
+- Try another known data-capable cable or direct computer port; avoid an unpowered hub.
+- Close other tabs or programs using the serial port.
+- Retry the stable image once. Do not cycle through development branches.
+- If the device no longer boots or repeated stable flashing fails, stop and email [support@researchanddesire.com](mailto:support@researchanddesire.com) with device type, displayed version, browser, operating system, installer message, and whether settings were erased.
+
+**Applicability:** browser requirements and available manifests can change. Last reviewed 16 August 2026.

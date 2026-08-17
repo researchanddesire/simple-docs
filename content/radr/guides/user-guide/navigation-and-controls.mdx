@@ -1,19 +1,24 @@
 ---
-title: "Navigation and Controls"
+title: "RADR Navigation and Controls"
+description: "Identify every RADR knob, bumper, button, menu, indicator, screen state, and context-dependent action."
 ---
 
 This guide covers how to navigate RADR's menus and screens using the physical controls.
 
-## Physical Control Layout
+![RADR remote with the display, top bumpers, three face buttons, and two rotary encoders visible](<../../img/image (1).webp>)
+
+## Physical control layout
 
 RADR has the following physical controls:
 
 ### Top Edge
+
 - **Left Bumper** — Located on the top-left edge, used for switching to the previous mode
 - **Power Switch** — Above the screen, to the left of the USB-C port
 - **Right Bumper** — Located on the top-right edge, used for switching to the next mode
 
 ### Front Face
+
 - **320x240 Full-Color LCD** — Centered on the device
 - **Three Under-Screen Buttons:**
   - **Left Button** — Home / Back
@@ -21,6 +26,7 @@ RADR has the following physical controls:
   - **Right Button** — Menu / OK / Select
 
 ### Sides
+
 - **Left Encoder (Knob)** — Always controls speed or primary parameter
 - **Right Encoder (Knob)** — Controls secondary parameters or selection
 
@@ -28,13 +34,14 @@ RADR has the following physical controls:
 
 The main menu is your starting point after powering on RADR. It offers three options:
 
-| Option | Icon | Description |
-|--------|------|-------------|
-| Device Search | Waves | Scan for nearby Bluetooth devices |
-| Settings | Gear | Access WiFi and device settings |
-| Sleep | Moon | Enter deep sleep mode to conserve battery |
+| Option        | Icon  | Description                               |
+| ------------- | ----- | ----------------------------------------- |
+| Device Search | Waves | Scan for nearby Bluetooth devices         |
+| Settings      | Gear  | Access Wi-Fi and device settings          |
+| Sleep         | Moon  | Enter deep sleep mode to conserve battery |
 
 ### Navigation
+
 - **Right Encoder** — Scroll through menu options
 - **Right Button** — Select the highlighted option
 - **Left Button** — No action (already at top level)
@@ -43,14 +50,15 @@ The main menu is your starting point after powering on RADR. It offers three opt
 
 Access the settings menu from the main menu by selecting **Settings**.
 
-| Option | Description |
-|--------|-------------|
-| Go Back | Return to the main menu |
-| WiFi Settings | Configure WiFi for OTA updates |
-| Update Device | Check for and install firmware updates |
-| Restart Device | Reboot the RADR |
+| Option         | Description                            |
+| -------------- | -------------------------------------- |
+| Go Back        | Return to the main menu                |
+| Wi-Fi Settings | Configure Wi-Fi for OTA updates        |
+| Update Device  | Check for and install firmware updates |
+| Restart Device | Reboot the RADR                        |
 
 ### Navigation
+
 - **Right Encoder** — Scroll through options
 - **Right Button** — Select the highlighted option
 - **Left Button** — Return to main menu
@@ -79,10 +87,10 @@ flowchart TD
     DeviceStop --> Control
     DeviceStop --> MainMenu
 
-    Settings --> WiFiSetup[WiFi Setup]
+    Settings --> Wi-FiSetup[Wi-Fi Setup]
     Settings --> MainMenu
-    WiFiSetup --> WiFiConnected[WiFi Connected]
-    WiFiConnected --> MainMenu
+    Wi-FiSetup --> Wi-FiConnected[Wi-Fi Connected]
+    Wi-FiConnected --> MainMenu
 
     Sleep --> Boot
 ```
@@ -130,12 +138,14 @@ If connection fails, you'll see "Connection failed, please try again." Power-cyc
 Once connected, you enter the device control screen. The layout varies by device type:
 
 **For OSSM:**
+
 - Tab interface at top showing Depth, Sensation, Stroke modes
 - Left encoder dial for Speed
 - Right encoder dial for the active mode
 - Bottom buttons: Menu (disabled), Pause, Patterns
 
 **For Lovense:**
+
 - Single encoder dial for vibration intensity
 - STOP button in the center
 
@@ -159,25 +169,25 @@ After a double-press stop, this confirmation screen appears:
 
 ## Button Behavior by Screen
 
-| Screen | Left Button | Middle Button | Right Button |
-|--------|------------|---------------|--------------|
-| Main Menu | — | — | Select option |
-| Settings Menu | Back to main | — | Select option |
-| Device Search | Cancel | — | — |
-| Device List | Cancel | — | Connect |
-| Device Control | Menu (if enabled) | Pause/Stop | Patterns/Menu |
-| Device Menu | Back to control | Pause | Select pattern |
-| WiFi Setup | Cancel | — | — |
+| Screen         | Left Button       | Middle Button | Right Button   |
+| -------------- | ----------------- | ------------- | -------------- |
+| Main Menu      | —                 | —             | Select option  |
+| Settings Menu  | Back to main      | —             | Select option  |
+| Device Search  | Cancel            | —             | —              |
+| Device List    | Cancel            | —             | Connect        |
+| Device Control | Menu (if enabled) | Pause/Stop    | Patterns/Menu  |
+| Device Menu    | Back to control   | Pause         | Select pattern |
+| Wi-Fi Setup    | Cancel            | —             | —              |
 
 ## Encoder Behavior by Screen
 
-| Screen | Left Encoder | Right Encoder |
-|--------|-------------|---------------|
-| Main Menu | — | Scroll options |
-| Settings Menu | — | Scroll options |
-| Device List | — | Scroll devices |
+| Screen         | Left Encoder   | Right Encoder        |
+| -------------- | -------------- | -------------------- |
+| Main Menu      | —              | Scroll options       |
+| Settings Menu  | —              | Scroll options       |
+| Device List    | —              | Scroll devices       |
 | Device Control | Speed (0-100%) | Active mode (0-100%) |
-| Device Menu | Speed (0-100%) | Scroll patterns |
+| Device Menu    | Speed (0-100%) | Scroll patterns      |
 
 ## Tips for Navigation
 

@@ -1,17 +1,19 @@
 {
   "title": "DTT",
-  "description": "Deepthroat Trainer guides and support",
+  "description": "Deep Throat Trainer guides and support",
   "root": true,
   "pages": [
     "index",
-    "changelog",
-    "errors",
-    "faqs",
+    "safety",
     "quick-start",
-    "software-2.0-preview",
-    "specs",
+    "training-modes",
+    "faqs",
+    "care",
+    "errors",
     "technical",
+    "specs",
+    "software-2.0-preview",
     "tools",
-    "training-modes"
+    "changelog"
   ]
 }

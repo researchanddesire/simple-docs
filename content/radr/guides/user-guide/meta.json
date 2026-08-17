@@ -1,14 +1,13 @@
 {
   "title": "User guide",
   "pages": [
-    "index",
-    "connecting-to-wifi",
     "device-scanning",
-    "lovense-controls",
     "navigation-and-controls",
     "ossm-controls",
-    "settings-and-wifi",
+    "lovense-controls",
     "stroke-patterns",
+    "connecting-to-wifi",
+    "settings-and-wifi",
     "updating-your-device",
     "web-flasher"
   ]

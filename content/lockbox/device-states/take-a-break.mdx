@@ -1,94 +1,21 @@
 ---
-title: "Take a Break"
+title: "Break State Reference"
+description: "Reference how the Lockbox behaves while a scheduled break is active."
 ---
 
-The Break feature allows you to temporarily access your key for essential hygiene and health maintenance during extended lock periods. Your Keyholder configures break frequency and duration through their online dashboard.
+This page describes the device state. For the complete procedure, use [Take a Break](/lockbox/using/take-a-break).
 
-## Accessing the break feature
+| State           | Expected behavior                                                                      |
+| --------------- | -------------------------------------------------------------------------------------- |
+| Break available | The active session permits a break and the waiting interval has passed                 |
+| Break active    | The device unlocks and displays the remaining break time                               |
+| Break completed | Returning the key and ending the break re-locks the device and reports completion      |
+| Break overdue   | The device reports that the break is late and the Keyholder may receive a notification |
 
-To start a break, enter the lock menu by holding down the right button while your device is locked.
+The active template determines whether breaks are available and their timing. Test the workflow during a short lock before relying on it in a longer session.
 
 <Callout type="warn">
 
-The countdown timer starts immediately when you activate a break. Make sure you're ready to complete all necessary actions before initiating.
-
-</Callout>
-## Using your break time
-
-### Step 1: Activate the break
-
-  Select the Break option from the lock menu. The countdown timer begins immediately based on your Keyholder's configured duration (for example, 15 minutes every 2 days).
-
-### Step 2: Retrieve your key and unlock
-
-  Open the Lockbox, retrieve your key, and unlock your device.
-
-### Step 3: Complete hygiene maintenance
-
-  Attend to all necessary hygiene and health needs within the allotted time.
-
-### Step 4: Re-lock and return the key
-
-  Re-lock your device and return the key to the Lockbox before the timer expires.
-
-<Callout type="success">
-
-The break ends automatically when you re-lock the device or when the timer runs out—whichever happens first.
-
-</Callout>
-## Penalties for overdue locks
-
-If you fail to re-lock before the break timer expires:
-
-1. The device displays "**YOU ARE LATE!**" in red text along with how much time has passed
-2. Your Keyholder receives a "break_missed" notification
-3. Additional consequences depend on your account settings:
-
-<Tabs items={['Shame enabled', 'Shame disabled']}>
-  <Tab value="Shame enabled">
-
-  - Your missed lock time is shared publicly
-    - The community can vote on your lock conditions
-
-  </Tab>
-  <Tab value="Shame disabled">
-
-  - Your Keyholder receives a notification about the missed lock
-    - Any consequences are at your Keyholder's discretion
-
-  </Tab>
-</Tabs>
-<Callout type="warn">
-
-The overdue timer continues counting indefinitely until you re-lock. Your Keyholder can see exactly how long you were late.
-
-</Callout>
-## Break restrictions
-
-You may encounter these messages when trying to take a break:
-<Callout type="info" title="Breaks Not Enabled">
-
-Your current lock session doesn't have breaks enabled. Your Keyholder configured this session without the break feature. Contact them if you need breaks.
-
-</Callout>
-<Callout type="info" title="Too Soon for a Break">
-
-You've recently taken a break and must wait before taking another. The screen shows how long you need to wait. The waiting period (configured by your Keyholder) is measured from when your last break ended.
-
-</Callout>
-## Best practices
-
-<Callout type="idea">
-
-Establish a consistent routine for your breaks to maximize efficiency and avoid rushing.
-
-- **Plan ahead** — Know exactly what you need to accomplish before starting the timer
-- **Build in buffer time** — Don't cut it close; aim to finish with time to spare
-- **Communicate proactively** — Contact your Keyholder if you anticipate issues with scheduled breaks
-
-</Callout>
-<Callout type="info">
-
-The break feature exists to support your health and safety. Use it responsibly while respecting the boundaries set by your Keyholder.
+A break timer or overdue record must never prevent urgent access or necessary care. Use [Emergency Access](/lockbox/safety) whenever a scheduled break is insufficient.
 
 </Callout>

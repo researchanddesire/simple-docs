@@ -1,9 +1,5 @@
 {
   "title": "Changelog",
-  "description": "asdf",
-  "defaultOpen": true,
-  "pages": [
-    "index",
-    "..."
-  ]
+  "description": "Dated, verified Deep Throat Trainer releases",
+  "pages": ["index"]
 }

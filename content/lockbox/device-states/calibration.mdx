@@ -1,15 +1,18 @@
 ---
-title: "Calibration"
+title: "Calibrate Your Lockbox"
+description: "Complete Lockbox button and motor calibration, confirm success, and recover from a failed calibration."
 ---
 
 <iframe
 
-  src="https://www.loom.com/embed/481662e9ed284264b539d9e5fe4ac691"
-  title="How to calibrate your lockbox"
-  frameborder="0"
-  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
-></iframe>
+src="https://www.loom.com/embed/481662e9ed284264b539d9e5fe4ac691"
+title="How to calibrate your lockbox"
+frameBorder="0"
+allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+allowFullScreen
+
+> </iframe>
+
 <Callout type="info" title="Video transcript">
 
 0:00 Hey there! If you're here, it's likely because you're seeing this calibration message on your chastity lockbox. This can happen if your device has been reflashed, or if calibration, for some reason, has been reset.
@@ -39,13 +42,15 @@ You'll only encounter the calibration screen in these situations:
 
 Calibration automatically detects and sets three critical parameters:
 
-| Setting | Purpose |
-|---------|---------|
-| **Motor orientation** | Determines which direction the motor turns to lock and unlock |
-| **Lock detection** | Teaches the device how to verify when it's securely locked |
+| Setting               | Purpose                                                              |
+| --------------------- | -------------------------------------------------------------------- |
+| **Motor orientation** | Determines which direction the motor turns to lock and unlock        |
+| **Lock detection**    | Teaches the device how to verify when it's securely locked           |
 | **Motor power level** | Sets optimal power for secure locking while minimizing battery drain |
 
 ## Encountering the calibration screen
+
+![Front controls used during Lockbox calibration](../quick-start/images/lockbox-front-housing-annotated.webp)
 
 ### Step 1: Button calibration
 
@@ -68,18 +73,24 @@ After calibration completes successfully, the device automatically restarts and 
 
 <Callout type="success">
 
-You won't see the calibration screen again unless you reflash the firmware or perform a factory reset.
+Calibration succeeded when the motor completes its test, the Lockbox restarts, and the normal unlocked menu appears without an error. Do not start a lock until the mechanism can lock and unlock cleanly during a short test.
 
 </Callout>
 ## Calibration failures
 
 If calibration fails (motor doesn't reach expected positions), the device may:
+
 - Retry calibration automatically
 - Display an error requiring manual intervention
 - Need to be reflashed via the web flasher
 
+1. Stop if the paddle or lid is obstructed; do not force the mechanism.
+2. Confirm the backplate and lid are seated correctly.
+3. Restart once and follow the on-screen calibration prompts again.
+4. If calibration repeats, the motor does not move cleanly, or an error appears, leave the Lockbox unlocked and contact support. Flash firmware only when support instructs you to.
+
 <Callout type="info">
 
-If you're having trouble with calibration or your device isn't responding as expected, contact customer support at support@researchanddesire.com.
+If you're having trouble with calibration or your device isn't responding as expected, contact [support@researchanddesire.com](mailto:support@researchanddesire.com) and include a photo of the screen and mechanism.
 
 </Callout>

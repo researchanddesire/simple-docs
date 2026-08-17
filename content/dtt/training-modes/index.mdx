@@ -1,64 +1,56 @@
 ---
-title: "Training Modes"
+title: "Compare Training Modes"
+description: "Choose among Repetition, Endurance, Freeform, and Bounce by goal, target, feedback, and measured result."
 ---
 
-Watch the video below to see how to create training templates for your partner.
+Templates are made from segments. Choose the mode by the behavior you want to practice, then lower its targets until you can remain in control.
+
+## Comparison
+
+| Mode                                         | Primary task                                       | Main target                     | Current server measurement               | Start here when…                                           |
+| -------------------------------------------- | -------------------------------------------------- | ------------------------------- | ---------------------------------------- | ---------------------------------------------------------- |
+| [Repetition](/dtt/training-modes/repetition) | repeat a target movement                           | repetitions, pace, depth/window | strokes, time in window, RPM, depth      | you want a structured repeated motion                      |
+| [Endurance](/dtt/training-modes/endurance)   | remain in a target zone                            | duration and position window    | active time and time in window           | you want a controlled hold                                 |
+| [Freeform](/dtt/training-modes/freeform)     | choose your movement while following a pace target | average RPM and duration        | active time, time in window, average RPM | you want self-directed movement                            |
+| [Bounce](/dtt/training-modes/bounce)         | control both directions of a cycle                 | repetitions, pace, depth/window | strokes, time in window, RPM, depth      | you can already control repeated motion in both directions |
+
+<Callout type="warn">
+
+No mode, grade, or points formula defines a medically safe depth, duration, speed, or progression. Stop for pain, breathing difficulty, dizziness, nausea, loss of control, or any concerning symptom.
+
+</Callout>
+
+## Current points calculation
+
+The v2 completion API calculates an accuracy factor as `time inside target window ÷ total play time`, clamped from 0 to 1 (displayed here as 0–100%). The formulas below use that 0-to-1 factor.
+
+- Repetition and Bounce base points: completed repetitions × 2 × accuracy factor.
+- Endurance and Freeform base points: active seconds × 0.5 × accuracy factor.
+- A configured toy length can apply a size multiplier after the base calculation.
+
+The server rounds points upward. This is implementation behavior reviewed August 16, 2026 and can change; the dashboard result is authoritative.
+
+## Create a template
+
+1. Open the intended account and paired Trainer.
+2. Create or edit a template.
+3. Add one segment for the first test.
+4. Select the installed toy and conservative targets.
+5. Save and confirm the active template.
+6. Fetch it online and review the device summary before starting.
+
+## Tutorial video
 
 <iframe
-
   src="https://www.loom.com/embed/befe7d1a6d3944f887cb58c845e8058b"
-  title="Training Modes Tutorial"
-  frameborder="0"
+  title="Create Deep Throat Trainer template segments for a partner"
+  frameBorder="0"
   allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-  allowfullscreen
+  allowFullScreen
 ></iframe>
 
-<Callout type="info" title="Video Transcript">
+<Callout type="info" title="Video transcript">
 
-**0:00** Hello! Today I'm going to show you how to make training settings for a Deepthroat Trainer. I've logged in today as a top account, Delirious Leather, and I'm controlling in the top left, Thematic Voyeur, one of my partners.
-
-**0:12** They have a Deepthroat Trainer paired to their account, and we're going to work together to make some settings for them to train on.
-
-**0:17** So I've navigated to, on the left, Deepthroat Trainer, Templates, and I'm going to click on Add New. This will create a new template that will be applied to their account.
-
-**0:27** Each template has a name, difficulty, and up to three segments (or up to 100 with Ultra subscription). Song of Cyanide, in an upcoming video, will tell you more about the types of segments: Repetition, Endurance, and Freeform.
-
-**0:39** Today I'm just going to show you how to create a three-segment training session for your partner. So here, on the left, I'll click Add New.
-
-**0:48** And just for fun, I'll give them a little Endurance and a little Freeform. You can change the parameters of these segments right here on the right.
-
-**0:58** And by adding a name, we can hit Save. And this is, if we go back to Templates, automatically set as the active and default settings on Thematic Voyeur's account.
-
-**1:12** Perfect. That's it for today. Good job.
+The presenter signs in while controlling a partner’s account, opens **Deep Throat Trainer → Templates**, creates a new template, adds Endurance and Freeform segments, edits their parameters, names the template, and saves it. The saved template becomes available on the controlled account. The video predates the current safety and access guidance; review the selected account, toy, active state, and every segment before use.
 
 </Callout>
-## Segment Types
-
-Training sessions are built from segments. Each segment type offers a different training approach to help develop skills progressively.
-
-- **[Repetition](/dtt/training-modes/repetition)**
-  Practice consistent depth and rhythm with repeated strokes at a set pace.
-
-- **[Endurance](/dtt/training-modes/endurance)**
-  Build stamina by holding at depth for extended periods.
-
-- **[Freeform](/dtt/training-modes/freeform)**
-  Train with dynamic, self-paced patterns targeting average RPM.
-
-- **[Bounce](/dtt/training-modes/bounce)**
-  Master controlled rhythm with gradual movements in both directions.
-
-<Callout type="idea">
-
-Start with Repetition segments to build foundational skills, then progress to Endurance and Freeform as comfort and confidence grow. Bounce is more advanced—try it once you've mastered Repetition.
-
-</Callout>
-## Understanding feedback
-
-During training, your device provides real-time feedback through LED colors and on-screen indicators. Learn more about interpreting this feedback:
-
-- **[LED Feedback System](/dtt/technical/led-feedback)**
-  Understand what the LED colors mean during training.
-
-- **[Pass/Fail Mode](/dtt/faqs#what-is-passfail-mode)**
-  Add accountability with minimum score thresholds (Ultra).

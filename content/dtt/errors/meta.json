@@ -1,7 +1,5 @@
 {
-  "title": "Errors",
-  "pages": [
-    "index",
-    "e-dtt-1"
-  ]
+  "title": "Troubleshooting",
+  "description": "Error lookup and detailed recovery",
+  "pages": ["e-dtt-1"]
 }

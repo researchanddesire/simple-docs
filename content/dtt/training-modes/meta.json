@@ -1,10 +1,5 @@
 {
   "title": "Training modes",
-  "pages": [
-    "index",
-    "bounce",
-    "endurance",
-    "freeform",
-    "repetition"
-  ]
+  "description": "Compare and use each segment type",
+  "pages": ["index", "bounce", "endurance", "freeform", "repetition"]
 }

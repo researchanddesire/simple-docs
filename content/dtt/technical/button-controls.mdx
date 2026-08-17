@@ -1,138 +1,46 @@
 ---
 title: "Button Controls"
+description: "Look up the Deep Throat Trainer front-button action for startup, Wi-Fi setup, calibration, training, and completion screens."
 ---
 
-Your Deepthroat Trainer has a single front button that handles all device interactions. Different press types trigger different actions depending on the current screen.
+The Trainer has one front button. The screen determines what a press does, so read the prompt before acting.
 
-## Button press types
+## Press types
 
-| Press Type | How To |
-|------------|--------|
-| **Short Press** | Quick tap and release |
-| **Long Press** | Press and hold for 1-2 seconds |
+| Press       | Meaning                                                  |
+| ----------- | -------------------------------------------------------- |
+| Short press | press and release                                        |
+| Hold        | keep the button pressed until the screen acknowledges it |
 
-## Button actions by screen
+The user-facing source does not define an exact hold duration for every firmware version.
 
-### Startup & Navigation
+## Action by state
 
-| Screen | Short Press | Long Press |
-|--------|-------------|------------|
-| **Welcome** | Start preflight checks | Enter Wi-Fi setup mode |
-| **Preflight** | — | — |
-| **Pairing** | Skip pairing, continue offline | — |
+| State                   | Short press                                      | Hold                                                          |
+| ----------------------- | ------------------------------------------------ | ------------------------------------------------------------- |
+| Welcome                 | begin startup/preflight                          | open local Wi-Fi setup                                        |
+| Pairing prompt          | continue without pairing when offered            | follow the displayed prompt                                   |
+| Calibration minimum     | capture the current closest comfortable position | no documented action                                          |
+| Calibration maximum     | capture the current resting position             | no documented action                                          |
+| Session or toy summary  | continue                                         | a skip action may exist on some firmware; use the screen text |
+| Active segment          | no general stop command is documented            | developer-only skip may exist; do not rely on it for safety   |
+| Grade or failed attempt | continue or retry as shown                       | no documented action                                          |
+| Completion              | begin the next available flow as shown           | no documented action                                          |
+| Wi-Fi portal            | may exit or restart on some firmware             | use the displayed prompt                                      |
 
-<Callout type="idea">
+<Callout type="warn" title="The front button is not an emergency stop">
 
-Long-press during the welcome screen to enter Wi-Fi configuration mode. This is useful if you need to change networks.
-
-</Callout>
-<Callout type="info">
-
-The device screen may display "hold to launch settings page"—this refers specifically to Wi-Fi settings. There is no general settings menu on the device itself. Training configuration (templates, modes, toys) is managed through your [dashboard](https://dashboard.researchanddesire.com).
-
-</Callout>
-### Pre-Training Screens
-
-| Screen | Short Press | Long Press |
-|--------|-------------|------------|
-| **Fetch/Load Settings** | Continue when ready | Skip to training |
-| **Calibration Min** | Capture minimum position | — |
-| **Calibration Max** | Capture maximum position | — |
-| **Session Details** | Next screen | Skip to training |
-| **Toy Details** | Next screen | Skip to training |
-| **Segment Details** | Start the segment | Skip to training |
-
-<Callout type="info">
-
-Long-press on detail screens lets you skip directly to training. Useful if you've already reviewed the session info.
+To stop a physical session, stop your movement and move away from the toy. Switch the device off only when it is safe to reach the power switch. See [Safety and stopping](/dtt/safety).
 
 </Callout>
-### During Training
 
-| Screen | Short Press | Long Press |
-|--------|-------------|------------|
-| **Countdown** | — | — |
-| **Active Training** | — | Skip segment (dev mode only) |
-| **Grade** | Continue to next segment | — |
+## “Launch settings page”
 
-During active training, the button is generally inactive to prevent accidental interruptions.
+This device prompt opens the Wi-Fi configuration portal. Templates, toys, partner access, and account preferences remain in the dashboard.
 
-### Pass/Fail Screens
+## If a press does nothing
 
-| Screen | Short Press | Long Press |
-|--------|-------------|------------|
-| **Failed** | Retry the segment | — |
-| **Three Strikes** | Restart session | — |
-
-### Session Complete
-
-| Screen | Short Press | Long Press |
-|--------|-------------|------------|
-| **Final Page** | Start a new session | — |
-
-## Hands-Free Mode
-
-When Hands-Free Mode is enabled in your template (Ultra subscription), many screens advance automatically without button presses:
-
-- Detail screens timeout and advance automatically
-- Segments progress without manual confirmation
-- Grade screens advance after the timeout period
-
-<Callout type="info">
-
-Hands-Free Mode is ideal for longer sessions where you don't want to interrupt training to press buttons.
-
-</Callout>
-## Wi-Fi Setup Mode
-
-In Wi-Fi setup mode:
-- The device creates a "Trainer Setup" network
-- Connect to this network from your phone/computer
-- Follow the captive portal to enter your Wi-Fi credentials
-
-| Action | Result |
-|--------|--------|
-| **Short Press** | Restart device (exits Wi-Fi setup) |
-| **Timeout (400s)** | Auto-restart device |
-
-## Special behaviors
-
-### Charging restriction
-In production firmware, the device won't start a training session while charging. Unplug the charger to begin training.
-
-### Button disabled states
-The button is intentionally disabled during:
-- Active training (to prevent accidental stops)
-- System operations (updates, provisioning)
-- Countdown sequences
-
-## Troubleshooting
-<Callout type="info" title="Button doesn't respond">
-
-- Check if you're on a screen where the button is disabled
-- Try a longer press (some actions require long-press)
-- Power cycle the device if completely unresponsive
-
-</Callout>
-<Callout type="info" title="Wrong action triggered">
-
-- Ensure you're using the correct press type (short vs. long)
-- Wait for the screen to fully load before pressing
-- Some screens have different timeout behaviors
-
-</Callout>
-<Callout type="info" title="Can't enter Wi-Fi setup">
-
-You must be on the welcome screen to enter Wi-Fi setup. If you've already passed the welcome screen:
-1. Power cycle the device
-2. Wait for the welcome screen to appear
-3. Long-press before it times out
-
-</Callout>
-## Related guides
-**[Device States](/dtt/technical/device-states)**
-
-Understanding all screens and states.
-**[Getting Started](/dtt/quick-start/getting-started)**
-
-Complete setup walkthrough.
+1. Read the full screen; some states wait for an automatic check.
+2. Release the button fully and try one deliberate short press.
+3. If the device remains unresponsive, move away from the toy and power-cycle it.
+4. Note the exact screen and report repeated freezes to support.
