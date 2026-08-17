@@ -1,223 +1,165 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
 
+import { useEspWebToolsDialogCustomization } from "@repo/device-tools/esp-dialog-customization";
 import { loadEspWebTools } from "@repo/device-tools/esp-web-tools-loader";
-import {
-  firmwareStorageBaseUrl,
-  firmwareSupabaseProjectRefs,
-} from "@repo/docs-config/firmware";
 
+const DEVICE_CONFIGS = {
+  dtt: {
+    name: "DTT",
+    description:
+      "Flash your Deepthroat Trainer with an approved firmware release.",
+    connectInstructions:
+      "Connect your Deepthroat Trainer to your computer via USB-C",
+    hardwareVariants: ["v1", "v2"],
+  },
+  lkbx: {
+    name: "LKBX",
+    description:
+      "Flash your Chastity Lockbox with an approved firmware release.",
+    connectInstructions:
+      "Connect your Chastity Lockbox to your computer via USB-C",
+    hardwareVariants: ["default"],
+  },
+  ossm: {
+    name: "OSSM",
+    description:
+      "Flash your Open Source Sex Machine with an approved firmware release.",
+    connectInstructions: "Connect your OSSM to your computer via USB-C",
+    hardwareVariants: ["default"],
+  },
+  radr: {
+    name: "RADR",
+    description:
+      "Flash your RADR wireless remote with an approved firmware release.",
+    connectInstructions: "Connect your RADR to your computer via USB-C",
+    hardwareVariants: ["default"],
+  },
+};
+
+const CHANNEL_LABELS = {
+  production: "Production (Stable)",
+  beta: "Beta",
+  alpha: "Alpha",
+};
+
+const isCatalog = (value) =>
+  value &&
+  typeof value === "object" &&
+  Array.isArray(value.targets) &&
+  value.targets.every(
+    (target) =>
+      target &&
+      typeof target.channel === "string" &&
+      typeof target.version === "string" &&
+      typeof target.releaseId === "string" &&
+      typeof target.buildSha === "string" &&
+      typeof target.manifestUrl === "string",
+  );
+
+const catalogUrl = (device, hardwareVariant) => {
+  const configuredOrigin =
+    process.env.NEXT_PUBLIC_FIRMWARE_CONTROL_PLANE_ORIGIN?.trim();
+  const url = new URL(
+    "/api/firmware/v1/web-flasher/catalog",
+    configuredOrigin || window.location.origin,
+  );
+  url.search = new URLSearchParams({
+    deviceType: device,
+    hardwareVariant,
+  }).toString();
+  return url.toString();
+};
+
+/**
+ * @param {{ device?: "dtt" | "lkbx" | "ossm" | "radr" }} props
+ */
 export const DeviceFlasher = ({ device = "ossm" }) => {
-  const DEVICE_CONFIGS = {
-    dtt: {
-      name: "DTT",
-      fullName: "Deepthroat Trainer",
-      storageBucket: "dtt-firmware",
-      productionManifestPath: "production/manifest.json",
-      description:
-        "Flash your Deepthroat Trainer with the latest stable firmware. Connect via USB-C to get started.",
-      connectInstructions:
-        "Connect your Deepthroat Trainer to your computer via USB-C",
-    },
-    lkbx: {
-      name: "LKBX",
-      fullName: "Chastity Lockbox",
-      storageBucket: "lkbx-firmware",
-      productionManifestPath: "production/manifest.json",
-      description:
-        "Flash your Chastity Lockbox with the latest stable firmware. Connect via USB-C to get started.",
-      connectInstructions:
-        "Connect your Chastity Lockbox to your computer via USB-C",
-    },
-    ossm: {
-      name: "OSSM",
-      fullName: "Open Source Sex Machine",
-      storageBucket: "ossm-firmware",
-      productionManifestPath: "master/manifest.json",
-      description:
-        "Flash your Open Source Sex Machine with the latest firmware. Connect via USB-C to get started.",
-      connectInstructions: "Connect your OSSM to your computer via USB-C",
-    },
-    radr: {
-      name: "RADR",
-      fullName: "RAD Wireless Remote",
-      storageBucket: "radr-firmware",
-      productionManifestPath: "master/manifest.json",
-      description:
-        "Flash your RADR wireless remote with the latest firmware. Connect via USB-C to get started.",
-      connectInstructions: "Connect your RADR to your computer via USB-C",
-    },
-  };
-
-  const projectRef =
-    process.env.NEXT_PUBLIC_FIRMWARE_SUPABASE_PROJECT_REF ??
-    firmwareSupabaseProjectRefs.staging;
-  const STORAGE_BASE_URL = firmwareStorageBaseUrl(projectRef);
   const config = DEVICE_CONFIGS[device] || DEVICE_CONFIGS.ossm;
-  const STORAGE_URL = `${STORAGE_BASE_URL}/${config.storageBucket}`;
+  const normalizedDevice = DEVICE_CONFIGS[device] ? device : "ossm";
+  const [catalogs, setCatalogs] = useState({});
+  const [selectedHardwareVariant, setSelectedHardwareVariant] = useState(
+    config.hardwareVariants[0],
+  );
+  const [selectedChannel, setSelectedChannel] = useState("production");
+  const [isLoading, setIsLoading] = useState(true);
+  const [catalogError, setCatalogError] = useState(null);
+  const [webSerialSupported, setWebSerialSupported] = useState(null);
 
-  const [mode, setMode] = useState("production");
-  const [branches, setBranches] = useState([]);
-  const [selectedBranch, setSelectedBranch] = useState("");
-  const [selectedCommit, setSelectedCommit] = useState("head");
-  const [isLoadingBranches, setIsLoadingBranches] = useState(false);
-  const [branchError, setBranchError] = useState(null);
+  useEspWebToolsDialogCustomization(normalizedDevice);
 
-  const [manifestUrl, setManifestUrl] = useState("");
-  const [isLoadingManifest, setIsLoadingManifest] = useState(false);
-  const [manifestError, setManifestError] = useState(null);
-
-  const branchSetFromUrl = useRef(false);
-
-  // Share one installer module across every flasher on the page.
   useEffect(() => {
+    setWebSerialSupported("serial" in navigator);
     void loadEspWebTools().catch((error) => {
       console.error("Failed to load ESP Web Tools", error);
     });
   }, []);
 
-  // Fetch branches from registry and check URL params
   useEffect(() => {
-    const fetchBranches = async () => {
-      setIsLoadingBranches(true);
-      setBranchError(null);
-      try {
-        const response = await fetch(`${STORAGE_URL}/registry.json`);
-        if (!response.ok) throw new Error("Failed to fetch branches");
+    const controller = new AbortController();
+    setIsLoading(true);
+    setCatalogError(null);
+    setCatalogs({});
+    setSelectedHardwareVariant(config.hardwareVariants[0]);
 
-        const registry = await response.json();
-        const branchList = Object.entries(registry).map(
-          ([branchPath, commits]) => ({
-            path: branchPath,
-            commits: ["head", ...commits],
+    const loadCatalogs = async () => {
+      try {
+        const entries = await Promise.all(
+          config.hardwareVariants.map(async (hardwareVariant) => {
+            const response = await fetch(
+              catalogUrl(normalizedDevice, hardwareVariant),
+              { signal: controller.signal },
+            );
+            if (!response.ok)
+              throw new Error("Firmware catalog request failed");
+            const catalog = await response.json();
+            if (!isCatalog(catalog))
+              throw new Error("Invalid firmware catalog");
+            return [hardwareVariant, catalog];
           }),
         );
-
-        branchList.sort((a, b) => a.path.localeCompare(b.path));
-        setBranches(branchList);
-
-        // Check URL params for branch selection
-        const urlParams = new URLSearchParams(window.location.search);
-        const branchParam = urlParams.get("branch");
-
-        if (branchParam && branchList.length > 0) {
-          // Find matching branch (check both encoded and decoded paths)
-          const matchingBranch = branchList.find(
-            (b) =>
-              b.path === branchParam ||
-              decodeURIComponent(b.path) === branchParam ||
-              b.path === encodeURIComponent(branchParam),
-          );
-
-          if (matchingBranch) {
-            branchSetFromUrl.current = true;
-            setSelectedBranch(matchingBranch.path);
-            setMode("development");
-            return;
-          }
-        }
-
-        // Default to first branch if no URL param match
-        if (branchList.length > 0) {
-          setSelectedBranch(branchList[0].path);
-        }
+        const nextCatalogs = Object.fromEntries(entries);
+        setCatalogs(nextCatalogs);
       } catch (error) {
-        console.error("Error fetching branches:", error);
-        setBranchError("Failed to load available branches");
-        setBranches([]);
+        if (controller.signal.aborted) return;
+        console.error("Failed to load firmware catalogs", error);
+        setCatalogError(
+          "Approved firmware releases could not be loaded. Please try again.",
+        );
       } finally {
-        setIsLoadingBranches(false);
+        if (!controller.signal.aborted) setIsLoading(false);
       }
     };
 
-    fetchBranches();
-  }, [STORAGE_URL]);
+    void loadCatalogs();
+    return () => controller.abort();
+  }, [config, normalizedDevice]);
 
-  // Reset branch when switching modes
+  const targets = catalogs[selectedHardwareVariant]?.targets ?? [];
+  const selectedTarget = useMemo(
+    () =>
+      targets.find(({ channel }) => channel === selectedChannel) ?? targets[0],
+    [selectedChannel, targets],
+  );
+
   useEffect(() => {
-    if (mode === "production") {
-      setSelectedBranch("");
-      setSelectedCommit("head");
-      branchSetFromUrl.current = false;
-    } else if (
-      branches.length > 0 &&
-      !selectedBranch &&
-      !branchSetFromUrl.current
-    ) {
-      setSelectedBranch(branches[0].path);
-    }
-  }, [mode, branches]);
+    if (!selectedTarget) return;
+    setSelectedChannel(selectedTarget.channel);
+  }, [selectedTarget]);
 
-  // Reset commit when branch changes
-  useEffect(() => {
-    setSelectedCommit("head");
-  }, [selectedBranch]);
-
-  // Update manifest URL
-  useEffect(() => {
-    setIsLoadingManifest(true);
-    setManifestError(null);
-
-    const checkManifest = async () => {
-      try {
-        let manifestPath;
-
-        if (mode === "production") {
-          manifestPath = config.productionManifestPath;
-        } else {
-          if (!selectedBranch) {
-            setManifestError("Please select a branch");
-            setIsLoadingManifest(false);
-            return;
-          }
-
-          manifestPath =
-            selectedCommit === "head"
-              ? `${selectedBranch}/manifest.json`
-              : `${selectedBranch}/${selectedCommit}/manifest.json`;
-        }
-
-        const manifestFullUrl = `${STORAGE_URL}/${manifestPath}`;
-
-        const manifestResponse = await fetch(manifestFullUrl, {
-          method: "HEAD",
-        });
-
-        if (!manifestResponse.ok) {
-          const errorContext =
-            mode === "production"
-              ? "production firmware"
-              : `${decodeURIComponent(selectedBranch)}${selectedCommit !== "head" ? ` (${selectedCommit})` : ""}`;
-          setManifestError(`Manifest not found for ${errorContext}`);
-          setIsLoadingManifest(false);
-          return;
-        }
-
-        setManifestUrl(manifestFullUrl);
-      } catch (error) {
-        console.error("Error checking manifest:", error);
-        setManifestError("Error checking manifest availability");
-      } finally {
-        setIsLoadingManifest(false);
-      }
-    };
-
-    checkManifest();
-  }, [
-    mode,
-    selectedBranch,
-    selectedCommit,
-    STORAGE_URL,
-    config.productionManifestPath,
-  ]);
-
-  const selectedBranchData = branches.find((b) => b.path === selectedBranch);
-  const commits = selectedBranchData?.commits ?? ["head"];
+  const selectHardwareVariant = (hardwareVariant) => {
+    setSelectedHardwareVariant(hardwareVariant);
+    const nextTargets = catalogs[hardwareVariant]?.targets ?? [];
+    setSelectedChannel(
+      nextTargets.some(({ channel }) => channel === "production")
+        ? "production"
+        : nextTargets[0]?.channel || "production",
+    );
+  };
 
   return (
     <div className="not-prose mx-auto max-w-2xl rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-700 dark:bg-zinc-900">
-      {/* Header */}
       <div className="mb-4">
         <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
           {config.name} Web Flasher
@@ -227,138 +169,112 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
         </p>
       </div>
 
-      {/* Branch Error */}
-      {branchError && (
-        <div className="mb-4 rounded-lg border border-red-300 bg-red-50 p-3 dark:border-red-700 dark:bg-red-900/20">
-          <p className="font-medium text-red-800 dark:text-red-300">Error</p>
-          <p className="text-sm text-red-700 dark:text-red-400">
-            {branchError}
-          </p>
-        </div>
-      )}
-
-      {/* Controls */}
-      <div className="mb-4 flex flex-wrap gap-3">
-        {/* Mode Selection */}
-        <div className="flex flex-col gap-1.5">
-          <label className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
-            Mode
+      {config.hardwareVariants.length > 1 && (
+        <div className="mb-4 flex flex-col gap-1.5">
+          <label
+            htmlFor={`${normalizedDevice}-hardware`}
+            className="text-sm font-medium text-zinc-500 dark:text-zinc-400"
+          >
+            Hardware
           </label>
           <select
-            value={mode}
-            onChange={(e) => setMode(e.target.value)}
-            className="w-[180px] rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 focus:border-violet-500 focus:ring-1 focus:ring-violet-500 focus:outline-none dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-100"
+            id={`${normalizedDevice}-hardware`}
+            aria-label="Hardware"
+            value={selectedHardwareVariant}
+            onChange={(event) => selectHardwareVariant(event.target.value)}
+            className="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-100"
           >
-            <option value="production">Production (Stable)</option>
-            <option value="development">Development</option>
+            <option value="v1">V1 — Universal (4 MB)</option>
+            <option value="v2" disabled={!catalogs.v2?.targets?.length}>
+              V2 — 16 MB hardware
+              {!isLoading && !catalogs.v2?.targets?.length
+                ? " (Unavailable)"
+                : ""}
+            </option>
           </select>
-        </div>
-
-        {/* Branch Selection */}
-        {mode === "development" && (
-          <div className="flex flex-col gap-1.5">
-            <label className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
-              Branch
-            </label>
-            <select
-              value={selectedBranch}
-              onChange={(e) => setSelectedBranch(e.target.value)}
-              disabled={isLoadingBranches}
-              className="w-[200px] rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 focus:border-violet-500 focus:ring-1 focus:ring-violet-500 focus:outline-none disabled:cursor-not-allowed disabled:bg-zinc-100 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-100 dark:disabled:bg-zinc-900"
-            >
-              {isLoadingBranches ? (
-                <option>Loading branches...</option>
-              ) : (
-                branches.map((branch) => (
-                  <option key={branch.path} value={branch.path}>
-                    {branch.path ? decodeURIComponent(branch.path) : "(root)"}
-                  </option>
-                ))
-              )}
-            </select>
-          </div>
-        )}
-
-        {/* Commit Selection */}
-        {mode === "development" && selectedBranch && (
-          <div className="flex flex-col gap-1.5">
-            <label className="text-sm font-medium text-zinc-500 dark:text-zinc-400">
-              Commit
-            </label>
-            <select
-              value={selectedCommit}
-              onChange={(e) => setSelectedCommit(e.target.value)}
-              className="w-[150px] rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 focus:border-violet-500 focus:ring-1 focus:ring-violet-500 focus:outline-none dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-100"
-            >
-              {commits.map((commit) => (
-                <option key={commit} value={commit}>
-                  {commit === "head" ? "Head (Latest)" : commit}
-                </option>
-              ))}
-            </select>
-          </div>
-        )}
-      </div>
-
-      {/* Development Info */}
-      {mode === "development" && selectedBranch && !manifestError && (
-        <div className="mb-4 rounded-lg border border-zinc-300 bg-zinc-50 p-3 dark:border-zinc-600 dark:bg-zinc-800">
-          <p className="font-medium text-zinc-800 dark:text-zinc-200">
-            Development Firmware
-          </p>
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">
-            {`Branch: ${decodeURIComponent(selectedBranch)}${selectedCommit !== "head" ? ` (${selectedCommit})` : " (latest)"}`}
-          </p>
         </div>
       )}
 
-      {/* Flash Button Area */}
-      <div className="mb-4 pt-2">
-        {isLoadingManifest && (
-          <div className="flex flex-col items-center justify-center py-4">
-            <div className="h-8 w-8 animate-spin rounded-full border-4 border-zinc-200 border-t-violet-500 dark:border-zinc-700 dark:border-t-violet-400" />
-            <p className="mt-2 text-sm text-zinc-500 dark:text-zinc-400">
-              Checking firmware availability...
-            </p>
-          </div>
-        )}
+      {normalizedDevice === "dtt" && selectedHardwareVariant === "v2" && (
+        <div className="mb-4 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900 dark:border-amber-700 dark:bg-amber-900/20 dark:text-amber-200">
+          V2 requires confirmed 16 MB DTT hardware. If you are unsure, use the
+          universal V1 image.
+        </div>
+      )}
 
-        {manifestError && (
+      <div className="mb-4 flex flex-col gap-1.5">
+        <label
+          htmlFor={`${normalizedDevice}-channel`}
+          className="text-sm font-medium text-zinc-500 dark:text-zinc-400"
+        >
+          Approved channel
+        </label>
+        <select
+          id={`${normalizedDevice}-channel`}
+          aria-label="Approved channel"
+          value={selectedTarget?.channel ?? ""}
+          onChange={(event) => setSelectedChannel(event.target.value)}
+          disabled={isLoading || targets.length === 0}
+          className="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 disabled:cursor-not-allowed disabled:bg-zinc-100 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-100 dark:disabled:bg-zinc-950"
+        >
+          {targets.map((target) => (
+            <option key={target.channel} value={target.channel}>
+              {CHANNEL_LABELS[target.channel] || target.channel} — v
+              {target.version}
+            </option>
+          ))}
+        </select>
+      </div>
+
+      <div className="mb-4 pt-2">
+        {isLoading && (
+          <p className="text-sm text-zinc-500 dark:text-zinc-400">
+            Loading approved firmware...
+          </p>
+        )}
+        {catalogError && (
           <div className="rounded-lg border border-red-300 bg-red-50 p-3 dark:border-red-700 dark:bg-red-900/20">
             <p className="font-medium text-red-800 dark:text-red-300">
               Firmware Not Available
             </p>
             <p className="text-sm text-red-700 dark:text-red-400">
-              {manifestError}
-              <br />
-              <span className="text-xs">
-                Please check the branch/commit and try again.
-              </span>
+              {catalogError}
             </p>
           </div>
         )}
-
-        {!isLoadingManifest && !manifestError && manifestUrl && (
-          <div
-            dangerouslySetInnerHTML={{
-              __html: `<esp-web-install-button manifest="${manifestUrl}">
-                <button slot="activate" style="background-color: #8b5cf6; color: white; padding: 10px 24px; border-radius: 9999px; font-weight: 500; border: none; cursor: pointer; transition: background-color 0.2s;">
-                  Connect &amp; Flash
-                </button>
-              </esp-web-install-button>`,
-            }}
-          />
+        {!isLoading && !catalogError && targets.length === 0 && (
+          <div className="rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900 dark:border-amber-700 dark:bg-amber-900/20 dark:text-amber-200">
+            No approved firmware with a verified web installer is available for
+            this hardware.
+          </div>
         )}
+        {webSerialSupported === false && (
+          <div className="rounded-lg border border-red-300 bg-red-50 p-3 text-sm text-red-800 dark:border-red-700 dark:bg-red-900/20 dark:text-red-300">
+            This browser cannot connect over USB. Open this page in Chrome or
+            Edge on a desktop computer.
+          </div>
+        )}
+        {!isLoading &&
+          !catalogError &&
+          webSerialSupported !== false &&
+          selectedTarget && (
+            <div
+              dangerouslySetInnerHTML={{
+                __html: `<esp-web-install-button manifest="${selectedTarget.manifestUrl}">
+                  <button slot="activate" style="background-color: #8b5cf6; color: white; padding: 10px 24px; border-radius: 9999px; font-weight: 500; border: none; cursor: pointer;">Connect &amp; Flash</button>
+                </esp-web-install-button>`,
+              }}
+            />
+          )}
       </div>
 
-      {/* Instructions */}
       <div className="rounded-lg border border-zinc-200 bg-zinc-50 p-3 text-sm dark:border-zinc-700 dark:bg-zinc-800/50">
         <p className="font-medium text-zinc-800 dark:text-zinc-200">
           Instructions:
         </p>
         <ol className="mt-2 list-inside list-decimal space-y-1 text-zinc-600 dark:text-zinc-400">
           <li>{config.connectInstructions}</li>
-          <li>Select the firmware version above</li>
+          <li>Select an available approved channel</li>
           <li>Click the "Connect & Flash" button</li>
           <li>Select your {config.name} from the device list</li>
           <li>Wait for the flash to complete</li>
