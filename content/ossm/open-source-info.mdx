@@ -1,23 +1,27 @@
 ---
-title: "Open Source Info"
+title: "OSSM Open-Source Reference"
+description: "Find official OSSM source code, hardware files, firmware documentation, licenses, bills of materials, issues, and contribution guidance."
 ---
 
-## Why open source?
+OSSM hardware and software are developed openly. User setup and safety stay on this site; build instructions and technical implementation live in their dedicated documentation.
 
-The ethos of open source hardware and software is very important to us at Research and Desire. The Open Source Sex Machine is open source because we believe that:
+## Official destinations
 
-1. The open source contribution structure increases transparency around the product's design and change history
-2. Dovetailing with this, the machine's repairaibility is improved
-3. Contributions are egalitarian. When one OSSM gets better, all OSSMs get better
-4. Together we generate a lively social network of OSSM contributers and enjoyers
+| Resource                        | Destination                                                                                                              |
+| ------------------------------- | ------------------------------------------------------------------------------------------------------------------------ |
+| Source repository               | [researchanddesire/ossm](https://github.com/researchanddesire/ossm)                                                      |
+| Hardware source files           | [`hardware/` in the OSSM repository](https://github.com/researchanddesire/ossm/tree/main/hardware)                       |
+| Product bill of materials       | [Assembly BOM](https://ohai.researchanddesire.com/ossm/product-bom)                                                      |
+| Build instructions              | [OSSM Assembly](https://ohai.researchanddesire.com/ossm/build/introduction)                                              |
+| PCB reference                   | [OSSM hardware developer docs](https://dev.researchanddesire.com/ossm/hardware/pcb/introduction)                         |
+| Firmware and software reference | [OSSM software developer docs](https://dev.researchanddesire.com/ossm/software/getting-started/introduction)             |
+| Safety features in firmware     | [Developer safety-feature reference](https://dev.researchanddesire.com/ossm/software/getting-started/safety-features)    |
+| License                         | [CERN Open Hardware Licence Version 2 — Strongly Reciprocal](https://ohwr.org/cern_ohl_s_v2.txt)                         |
+| Issues and bug reports          | [OSSM GitHub issues](https://github.com/researchanddesire/ossm/issues)                                                   |
+| Contribution guidance           | [Developer documentation contribution guide](https://dev.researchanddesire.com/ossm/software/contributing/documentation) |
 
-## Who can contribute?
+<Callout type="warn" title="Modified hardware or firmware changes the safety case">
 
-Open source means contributions can come from anyone, anywhere. Before contributing, we advise that you do the following:
+Re-run the unloaded homing, minimum-motion, and Stop tests after any change. A community modification is not automatically tested or supported by Research and Desire; review its source, license, known issues, and maintenance status before use.
 
-1. Take time to thoroughly read the [CERN-OHL-S-v2 license terms](https://gitlab.com/ohwr/project/cernohl/-/wikis/uploads/819d71bea3458f71fba6cf4fb0f2de6b/cern_ohl_s_v2.txt) to understand how the license functions
-2. Review our [Pre-play Safety Checklist](/ossm/how-to-use)
-3. If you're contributing documentation, review the [Documentation Guide](/meta/getting-started)
-
-<Callout type="success" title="You're ready to contribute!">
 </Callout>

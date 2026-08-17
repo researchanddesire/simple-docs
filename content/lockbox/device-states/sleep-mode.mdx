@@ -1,16 +1,23 @@
 ---
-title: "Sleep Mode"
+title: "Lockbox Sleep and Power States"
+description: "Compare Lockbox idle, pseudo-sleep, and deep-sleep behavior, connectivity, and wake actions."
 ---
 
 ## Overview
 
+<Callout type="info">
+
+The timings below describe the currently documented behavior. Firmware can change power-management timing. If your device behaves differently, use the screen and connectivity indicators as the source of truth and contact support with the displayed firmware version.
+
+</Callout>
+
 Your Chastity Lockbox includes multiple power-saving states to help conserve battery life while maintaining the functionality you need.
 
-| State | Timeout | Screen | WiFi | Best for |
-|-------|---------|--------|------|----------|
-| Idle | 30 seconds | Dimmed (10%) | Connected | Short pauses |
-| Pseudo-sleep | 2 minutes | Off | Connected | Daily use |
-| Deep sleep | 10 minutes | Off | Disconnected | Extended battery saving |
+| State        | Timeout    | Screen       | Wi-Fi        | Best for                |
+| ------------ | ---------- | ------------ | ------------ | ----------------------- |
+| Idle         | 30 seconds | Dimmed (10%) | Connected    | Short pauses            |
+| Pseudo-sleep | 2 minutes  | Off          | Connected    | Daily use               |
+| Deep sleep   | 10 minutes | Off          | Disconnected | Extended battery saving |
 
 ## Automatic power management
 
@@ -18,8 +25,8 @@ Your device automatically progresses through power states based on inactivity:
 
 1. **Active** — Full brightness, all features enabled
 2. **Idle (30 seconds)** — Screen dims to approximately 10% brightness
-3. **Pseudo-sleep (2 minutes)** — Screen turns off, WiFi stays connected
-4. **Deep sleep (10 minutes)** — WiFi disconnects, minimal power use
+3. **Pseudo-sleep (2 minutes)** — Screen turns off, Wi-Fi stays connected
+4. **Deep sleep (10 minutes)** — Wi-Fi disconnects, minimal power use
 
 <Callout type="idea">
 
@@ -31,8 +38,9 @@ Any button press or encoder turn resets the timer and returns the device to acti
 Automatic sleep activates on its own during short periods of inactivity. You don't need to do anything—the device handles power management intelligently.
 
 **What happens in automatic sleep:**
+
 - The screen dims after 30 seconds, then turns off after 2 minutes
-- WiFi stays connected for keyholder communication
+- Wi-Fi stays connected for Keyholder communication
 - Lock timers continue running normally
 - The device wakes instantly when you interact with it
 
@@ -46,7 +54,8 @@ When connected to USB power (charging), the device will not enter deep sleep. It
 Deep sleep provides maximum power savings. It activates automatically after 10 minutes of inactivity (when not charging), or you can activate it manually from the menu.
 
 **What happens in deep sleep:**
-- Screen, WiFi, Bluetooth, and most sensors turn off
+
+- Screen, Wi-Fi, Bluetooth, and most sensors turn off
 - The locked or unlocked state remains unchanged
 - Remote communication with keyholders is disabled
 - The device uses minimal power
@@ -63,12 +72,12 @@ Press the Enter button (or Back button, depending on hardware) to exit deep slee
 
 <Callout type="success">
 
-The device will boot up and reconnect to WiFi automatically.
+The device will boot up and reconnect to Wi-Fi automatically.
 
 </Callout>
 <Callout type="warn">
 
-While in deep sleep, you won't receive updates or commands from your keyholder. Only use manual sleep when you're certain you won't need remote access.
+While in deep sleep, the Lockbox cannot receive remote Keyholder commands. Confirm the Lockee has local and emergency access before using it during a session.
 
 </Callout>
 ### Automatic wake for timers

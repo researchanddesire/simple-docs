@@ -2,8 +2,8 @@
   "title": "Device states",
   "pages": [
     "index",
-    "calibration",
     "emergency-unlock",
+    "calibration",
     "permalock",
     "restarting",
     "sleep-mode",

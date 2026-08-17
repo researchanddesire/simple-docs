@@ -1,133 +1,71 @@
 ---
-title: "Pairing Your Chastity Lockbox"
+title: "Pair Your Lockbox"
+description: "Pair a Lockbox and provision 2.4 GHz Wi-Fi with the recommended Bluetooth flow or a manual code."
 ---
 
-To use your Chastity Lockbox in conjunction with your dashboard account, you need to pair your device. There are two ways to pair your device:
+Automatic Bluetooth pairing is the recommended setup method. It pairs the Lockbox to your dashboard account and sends Wi-Fi credentials in one flow.
 
-### Pair via Bluetooth
+## What you need
 
-<Callout type="info" title="Bluetooth pairing requirements:">
-
-1. Google Chrome or Microsoft Edge browser
-2. Desktop or laptop computer
-3. Chastity Lockbox is powered ON
-4. Chastity Lockbox is not currently paired to an account
-5. Chastity Lockbox is connected to WiFi
-6. A R+D dashboard account
-
-</Callout>
-
-<Steps>
-  <Step>
-
-### Log in
-
-Log in to your R+D dashboard account
-
-  </Step>
-  <Step>
-
-### Select "Settings" from the lefthand tab
-
-![dashboard lefthand side annotated](./images/dashboard-lefthand-side-annotated.webp)
-
-  </Step>
-  <Step>
-
-### Select "My Devices"
-
-![lkbx pairing settings dropdown annotated](./images/lkbx-pairing-settings-dropdown-annotated.webp)
-
-  </Step>
-  <Step>
-
-### Select "Add Network"
-
-![add network unannotated](./images/add-network-unannotated.webp)
-
-  </Step>
-  <Step>
-
-### Enter local WiFi network info and save network
-
-![lkbx add wifi network](./images/lkbx-add-wifi-network.webp)
-
-  </Step>
-</Steps>
-
-### Pair Manually
+- A powered, unlocked Lockbox that is not paired to another account
+- A dashboard account
+- Chrome or Edge on a desktop or laptop for automatic pairing
+- A nearby 2.4 GHz Wi-Fi network and its password
 
 <Callout type="info">
 
-**Manual pairing requirements:**
-
-1. Chastity Lockbox is connected to WiFi
-2. Chastity Lockbox is not already paired to another dashboard account
+Bluetooth is used only for nearby setup. After pairing, normal dashboard communication uses the Lockbox's Wi-Fi connection.
 
 </Callout>
 
-<Steps>
-  <Step>
+## Recommended: automatic Bluetooth pairing
 
-### Log in to your R+D dashboard account
+1. Sign in at [dashboard.researchanddesire.com](https://dashboard.researchanddesire.com).
+2. Open **Settings → My Devices**.
 
+![Dashboard navigation with Settings and My Devices labeled](./images/lkbx-pairing-settings-dropdown-annotated.webp)
 
+3. Choose **Pair a Lockbox**, then choose the option to scan for a nearby Lockbox.
 
-  </Step>
-  <Step>
+![Pair a Lockbox action in My Devices](./images/pair-a-lockbox.webp)
 
-### Select "Settings" from the lefthand tab
+4. In the browser Bluetooth chooser, select your Lockbox and approve the connection.
+5. When asked, enter the name and password for the 2.4 GHz Wi-Fi network the Lockbox should use.
+6. Wait for the dashboard to report success and for the Lockbox to restart or return to its normal screen.
 
-![dashboard lefthand side annotated](./images/dashboard-lefthand-side-annotated-1.webp)
+<Callout type="success" title="Confirm pairing succeeded">
 
-  </Step>
-  <Step>
-
-### Select "My Devices"
-
-![lkbx pairing settings dropdown annotated](./images/lkbx-pairing-settings-dropdown-annotated-1.webp)
-
-  </Step>
-  <Step>
-
-### Select "Pair a Lockbox"
-
-![pair a lockbox](./images/pair-a-lockbox-1.webp)
-
-  </Step>
-  <Step>
-
-### Power on your Lockbox and select "Settings"
-
-![lockbox settings unannotated](./images/lockbox-settings-unannotated-1.webp)
-
-  </Step>
-  <Step>
-
-### Select "Pairing"
-
-![lkbx pairing selection unannotated](./images/lkbx-pairing-selection-unannotated.webp)
-
-  </Step>
-  <Step>
-
-### Your device's unique pairing code is displayed on screen
-
-![lkbx pairing code annotated](./images/lkbx-pairing-code-annotated.webp)
-
-  </Step>
-  <Step>
-
-### Enter your pairing code and select "Pair device"
-
-![lockbox pairing code entry annotated](./images/lockbox-pairing-code-entry-annotated.webp)
-
-
-  </Step>
-</Steps>
-
-<Callout type="success">
-
-Your Chastity Lockbox is now paired!
+The Lockbox appears in **My Devices**, and the device status becomes online after it connects to Wi-Fi. Status can take a short time to update; use [Check Online Status](/lockbox/support/online-status) if the two displays disagree.
 
 </Callout>
+
+## Manual pairing code
+
+Use this method if Web Bluetooth is unavailable. Complete [manual Wi-Fi setup](/lockbox/quick-start/wifi-setup) first.
+
+1. On the Lockbox, open **Settings → Pairing**.
+
+![Pairing selected in the Lockbox Settings menu](./images/lkbx-pairing-selection-unannotated.webp)
+
+2. Note the unique pairing code shown on the Lockbox.
+
+![Pairing code shown on the Lockbox display](./images/lkbx-pairing-code-annotated.webp)
+
+3. In the dashboard, open **Settings → My Devices → Pair a Lockbox**.
+4. Enter the code and choose **Pair device**.
+
+![Pairing-code entry in the dashboard](./images/lockbox-pairing-code-entry-annotated.webp)
+
+5. Confirm the device appears in **My Devices** and becomes online.
+
+## If pairing does not work
+
+| Symptom                                      | Next action                                                                                               |
+| -------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Browser does not offer Bluetooth             | Use current Chrome or Edge on a desktop/laptop and allow Bluetooth permission                             |
+| No Lockbox appears in the chooser            | Confirm it is powered, nearby, unlocked, and not already paired; restart it once                          |
+| Wi-Fi provisioning fails                     | Confirm 2.4 GHz credentials, then use [manual Wi-Fi setup](/lockbox/quick-start/wifi-setup)               |
+| Dashboard says it belongs to another account | Ask the current owner to unpair it; if that is impossible, contact support rather than repeatedly pairing |
+| Device is listed but offline                 | Follow [Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting)                      |
+
+Never share a pairing code publicly. If ownership or access is disputed, stop setup and email [support@researchanddesire.com](mailto:support@researchanddesire.com).

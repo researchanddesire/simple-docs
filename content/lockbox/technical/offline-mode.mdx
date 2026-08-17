@@ -1,192 +1,62 @@
 ---
-title: "Offline Mode"
+title: "Lockbox Offline Mode"
+description: "Compare local and online Lockbox capabilities, prepare for disconnection, and verify state after reconnecting."
 ---
 
-Your Chastity Lockbox is designed to function both online and offline. This guide explains what works without WiFi, what requires connectivity, and how the device handles transitions between online and offline states.
+The Lockbox keeps core local functions when internet service is unavailable, but remote controls and dashboard updates require a connection.
 
-## What works offline
+## Capability matrix
 
-These features function fully without any internet connection:
-
-| Feature | Offline behavior |
-|---------|-----------------|
-| Timed locks | Timer continues counting down locally |
-| Lock/unlock mechanism | Physical lock engages and releases |
-| Menu navigation | All menus accessible |
-| Button controls | Full functionality |
-| Sleep modes | Automatic and manual sleep work |
-| Emergency unlock | Can be used locally (if enabled) |
-| State persistence | Lock state survives restarts |
-
-<Callout type="idea">
-
-If you're going somewhere without WiFi, your lock will continue working. The timer runs on the device itself, not on a server.
-
-</Callout>
-## What requires WiFi
-
-These features need an active WiFi connection:
-
-| Feature | Why WiFi is needed |
-|---------|-------------------|
-| Pairing | Device must register with dashboard server |
-| Firmware updates | Downloads from update server |
-| Dashboard sync | Receives keyholder commands |
-| Time synchronization | Gets accurate time from NTP server |
-| Activity logging | Sends events to dashboard |
-| Public voting | Receives vote updates |
-| Keyholder unlock | Remote unlock commands |
-
-## Time display when offline
-
-When your device isn't connected to WiFi and hasn't synchronized time, the lock screen shows:
-
-> "Connect Wi-Fi to see time remaining"
+| Capability                  | Offline behavior                                       | After reconnection                                                |
+| --------------------------- | ------------------------------------------------------ | ----------------------------------------------------------------- |
+| Local timed lock            | Timer continues on the device                          | Dashboard state can update                                        |
+| Local lock/unlock mechanism | Available from the physical device                     | Physical state remains authoritative                              |
+| Device menus and buttons    | Available                                              | No special action expected                                        |
+| Sleep and wake              | Available                                              | Wi-Fi reconnects after wake when credentials remain valid         |
+| Software Emergency Unlock   | Available locally when the session has not disabled it | Event can sync to the dashboard                                   |
+| Keyholder commands          | **Unavailable**                                        | Current server/device state must reconcile; confirm on the device |
+| Dashboard changes           | **Unavailable to the device**                          | May arrive after reconnection; do not assume order or timing      |
+| Public voting               | New votes cannot reach the device                      | Check the active session after reconnection                       |
+| Activity history            | Dashboard may be stale                                 | Events can appear after reconnection                              |
+| Firmware updates            | Unavailable                                            | Resume only on stable power and network                           |
 
 <Callout type="warn">
 
-Without time sync, the device cannot display accurate remaining time. However, the lock timer itself still runs correctly based on the configured duration.
+An offline Lockbox cannot receive a remote Keyholder unlock. Before any session that may lose internet, confirm local Emergency Unlock availability and keep the hardware backplate procedure available.
 
 </Callout>
-### Why this happens
 
-The device needs to know the current time to calculate "time remaining." Without an NTP sync:
-- The device knows the lock duration
-- The device doesn't know what time it is now
-- Therefore, it can't calculate remaining time
+## Time display
 
-Once WiFi connects and time syncs, the display updates to show accurate remaining time.
+The current documentation says a local timer continues even when the device cannot synchronize network time. The screen may show **Connect Wi-Fi to see time remaining** until time is synchronized again.
 
-## Local play mode
+Do not infer that a hidden or unavailable countdown means the session ended. Confirm the physical lock state and use emergency access when needed.
 
-When you start a lock directly on the device (not from the dashboard), it operates in "local play" mode:
+## Local locks and dashboard-managed locks
 
-### Local play characteristics
+| Session type           | Created where                               | Offline control                                                                          |
+| ---------------------- | ------------------------------------------- | ---------------------------------------------------------------------------------------- |
+| Local lock             | Physical Lockbox                            | Runs on the device; dashboard does not manage it                                         |
+| Dashboard-managed lock | Dashboard, then synchronized to the Lockbox | Continues with the last settings held by the device; remote changes require reconnection |
 
-- Lock duration is stored locally on device
-- Timer runs independently of server
-- No keyholder involvement required
-- Lock ends when timer expires
+## Test before relying on offline use
 
-### Dashboard locks
-
-When a lock is started from the dashboard:
-
-- Settings sync to device over WiFi
-- Break schedules are received
-- Emergency unlock can be remotely disabled
-- Keyholder can modify lock remotely
+1. Complete pairing and Wi-Fi setup while unlocked.
+2. Run a short online test lock and normal unlock.
+3. Confirm local Emergency Unlock and review [hardware emergency access](/lockbox/support/emergency-backplate).
+4. Start another short test, disconnect the network, and confirm the expected local screen and timer behavior.
+5. Reconnect and verify the physical device and dashboard reach the same state.
 
 <Callout type="info">
 
-Local locks (started on device) cannot be modified from the dashboard. Dashboard locks can be modified by your keyholder even when you're offline—the changes sync when you reconnect.
+Firmware and dashboard reconciliation behavior can change. This guide does not promise how conflicting offline and online changes are ordered. Avoid making competing changes while offline and verify the final physical state after reconnection.
 
 </Callout>
-## State persistence
 
-Your device preserves its state across:
+## Recover after a disconnection
 
-- Restarts
-- Power cycles
-- WiFi disconnections
-- Deep sleep
-
-The following data persists:
-
-- Lock state (locked/unlocked)
-- Lock end time
-- Session settings
-- WiFi credentials
-- Calibration data
-
-<Callout type="info">
-
-Even if your device loses power completely, it will return to its locked state when powered on.
-
-</Callout>
-## WiFi reconnection behavior
-
-When WiFi disconnects during operation:
-
-1. **Immediate**: Device continues operating normally
-2. **Automatically**: The device retries the connection on its own
-3. **On reconnection**: Syncs state with dashboard
-
-### Manual WiFi setup
-
-You can reconfigure WiFi at any time through:
-- Main Menu → Settings → WiFi Settings
-- Lock Menu → WiFi Settings (while locked)
-
-This opens the configuration portal without affecting your lock state.
-
-## Offline scenarios
-
-### Scenario 1: WiFi goes down during lock
-
-- Lock timer continues normally
-- "Connecting" indicator shows on status bar
-- Auto-reconnect attempts run automatically in the background
-- Lock unlocks when timer expires (no WiFi needed)
-
-### Scenario 2: Starting lock without WiFi
-
-- Navigate to Lock in menu
-- Set duration with encoder
-- Press Enter to confirm
-- Lock engages locally
-- Time display shows "Connect Wi-Fi to see time remaining"
-- Timer still counts down correctly
-
-### Scenario 3: Travel to location without WiFi
-
-- Device works normally
-- Dashboard cannot send commands
-- Local emergency unlock still available (if enabled)
-- On return to WiFi, state syncs automatically
-
-### Scenario 4: Deep sleep disconnects WiFi
-
-- WiFi disconnects in deep sleep (power saving)
-- Lock state unchanged
-- On wake, WiFi reconnects automatically
-- Pending dashboard commands received
-
-## Dashboard sync
-
-When online, your device keeps in sync with the dashboard—sending updates such as lock state changes and receiving commands such as lock, unlock, and break schedule updates. Commands typically arrive within seconds when online.
-
-## Troubleshooting offline issues
-<Callout type="info" title="Time remaining not showing">
-
-Connect to WiFi to sync time. The lock is still running—you just can't see the countdown until time syncs.
-
-</Callout>
-<Callout type="info" title="Can't receive keyholder commands">
-
-Your device must be online to receive dashboard commands. Check WiFi connection status in the status bar.
-
-</Callout>
-<Callout type="info" title="Lock ended but dashboard still shows locked">
-
-The dashboard updates when your device reconnects. Connect to WiFi and the status will sync.
-
-</Callout>
-<Callout type="info" title="WiFi won't reconnect automatically">
-
-Go to Settings → WiFi Settings to manually reconnect. Your lock state is unaffected.
-
-</Callout>
-## Related guides
-**[WiFi Setup](/lockbox/quick-start/wifi-setup)**
-
-How to connect your device to WiFi.
-**[Sleep Mode](/lockbox/device-states/sleep-mode)**
-
-How sleep affects WiFi connectivity.
-**[Status Symbols](/lockbox/using/symbols)**
-
-Understanding the WiFi status indicator.
-**[Online Status](/lockbox/support/online-status)**
-
-How to verify your device is online.
+1. Wake the Lockbox; deep sleep disables Wi-Fi.
+2. Wait for the status indicator to settle.
+3. Use [Check Online Status](/lockbox/support/online-status).
+4. Compare the physical state with the dashboard after its update interval.
+5. If they disagree, do not start another lock. Follow [Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting).

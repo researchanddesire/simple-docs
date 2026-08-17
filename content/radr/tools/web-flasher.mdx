@@ -1,5 +1,6 @@
 ---
 title: "RADR Web Flasher"
+description: "Install the current stable RADR firmware over USB or recover a remote that support has asked you to reflash."
 ---
 
 import { DeviceFlasher } from "@repo/device-tools/device-flasher";
@@ -12,4 +13,19 @@ Web Serial is not available in Safari, Firefox, or mobile browsers. Use a data-c
 
 </Callout>
 
+## Before connecting
+
+1. Stop and disconnect any controlled device.
+2. Note the current firmware version and settings if RADR can still start.
+3. Use a USB data cable, not a charge-only cable, and connect directly to the computer when possible.
+4. Keep the browser tab open and the cable connected until the tool reports completion.
+
+Flashing can replace device firmware and may reset settings. The version shown by the tool is authoritative for that operation; this page does not hard-code a current version.
+
 <DeviceFlasher device="radr" />
+
+## Verify or recover
+
+After a successful flash, power-cycle RADR, confirm the startup version, and verify its menus before reconnecting a device. Reconnect unloaded and test the lowest output and Stop.
+
+If no serial device appears, close other serial tools, reconnect the cable, try another data-capable cable or USB port, and reopen Chrome or Edge. If flashing fails repeatedly, stop retrying and send the browser, operating system, selected version, and last tool message to [support](mailto:support@researchanddesire.com).

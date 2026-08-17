@@ -1,51 +1,26 @@
 ---
 title: "E-Lock 2: Could Not Unlock"
+description: "Get emergency key access first, then diagnose a Lockbox that cannot confirm it unlocked."
 ---
 
-## What's happening?
+E-Lock 2 means the Lockbox attempted to unlock but could not confirm that the locking paddle reached the unlocked position.
 
-Your Chastity Lockbox is attempting to unlock but cannot confirm that the lock has fully disengaged. This error can occur when you:
+<Callout type="warn" title="Access first">
 
-- End a lock session
-- Complete a timed lock session
-- Request an unlock from the web dashboard
-- Attempt to unlock the device manually
-
-## Understanding the issue
-
-The device uses three sensors (called TMRs) to verify the locking paddle's position. When all three sensors detect the paddle in the unlocked position, the device confirms it's open and accessible.
-
-This error means one or more sensors isn't detecting the unlocked position correctly.
-
-## How to fix this
-
-### Step 1: Check the locking paddle
-
-  Inspect the locking paddle for any obstructions. Gently move the paddle back and forth to ensure it moves freely and isn't stuck.
-
-### Step 2: Reseat the lid
-
-  The device uses two sensors to detect lid placement. Remove the lid completely, then place it back on the device, ensuring it's properly seated and aligned.
-
-### Step 3: Verify power levels
-
-  Ensure your device has sufficient battery power or is properly connected to a power source. Low power can affect the unlocking mechanism's performance.
-
-### Step 4: Attempt to unlock again
-
-  After completing the steps above, try unlocking the device once more.
-
-### Step 5: Contact support if the issue persists
-
-  If the problem continues after troubleshooting, there may be an issue with the unlocking mechanism or sensors. Contact our support team for further assistance.
-
-<Callout type="warn">
-
-**Can't access your belongings?**
+If the key is needed urgently, do not work through routine retries. Use [Software Emergency Unlock](/lockbox/device-states/emergency-unlock) if available, then [Hardware Backplate Emergency Access](/lockbox/support/emergency-backplate). Contact local emergency services if access is still not possible.
 
 </Callout>
-Your items remain safe inside the locked device. In an emergency, you may be able to open the back panel to retrieve your keys. If you need to do this, contact our support team immediately for emergency access instructions.
 
-## Need more help?
+## If access is not urgent
 
-If you're still experiencing issues, please reach out to our support team. We're here to help you resolve this as quickly as possible.
+![Lockbox paddle and backplate orientation](../quick-start/images/physical-lock-inverted-annotated.webp)
+
+1. Keep the Lockbox on stable power.
+2. Remove external pressure from the lid/backplate and make sure nothing is loading the mechanism.
+3. Attempt one normal unlock.
+4. If the device is responsive but still reports E-Lock 2, try one documented [restart](/lockbox/device-states/restarting).
+5. Do not repeatedly cycle or force the paddle.
+
+## Stop and escalate
+
+Use hardware emergency access and contact support if the mechanism binds, the device repeats E-Lock 2, the motor sounds abnormal, or the lid/backplate is damaged. Send [support@researchanddesire.com](mailto:support@researchanddesire.com) the code, current lock state, a photo, and the actions already attempted.

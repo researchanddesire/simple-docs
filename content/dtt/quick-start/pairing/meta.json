@@ -1,8 +1,5 @@
 {
   "title": "Pairing",
-  "pages": [
-    "index",
-    "pairing-guide",
-    "wifi-setup"
-  ]
+  "description": "Account pairing and Wi-Fi setup",
+  "pages": ["index", "pairing-guide", "wifi-setup"]
 }

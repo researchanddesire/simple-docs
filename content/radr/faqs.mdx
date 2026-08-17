@@ -1,128 +1,40 @@
 ---
-title: "Frequently Asked Questions"
+title: "RADR FAQs and Troubleshooting"
+description: "Find concise answers and canonical guides for RADR controls, connection, compatibility, charging, Wi-Fi, updates, and support."
 ---
 
-Find answers to common questions about setting up, using, and troubleshooting your RADR wireless remote.
+## Where should I start?
 
-## Controls & Buttons
-<Callout type="info" title="One bumper button feels different or has no tactile feedback">
+Use the [RADR start guide](/radr) to choose OSSM, validated Lovense, or another-device guidance. Before connecting anything, read [RADR Safety](/radr/safety) and test Stop with the target device unloaded.
 
-Each bumper button on the RADR has two microswitches wired in parallel for redundancy. If one bumper feels different from the other or has reduced/no tactile feedback, this could be caused by:
+## What do the bumper buttons do?
 
-- **Assembly alignment** — Print inconsistencies or alignment during assembly can cause one microswitch to activate differently
-- **Screw tension** — A slightly over-torqued screw can affect the bumper's tactile feel
+While controlling OSSM, the bumpers move between depth, sensation, and stroke adjustments. Their action is context-dependent; use [RADR Navigation and Controls](/radr/guides/user-guide/navigation-and-controls) for the complete button map.
 
-**To troubleshoot:**
+## Why does a device not appear or connect?
 
-1. Locate the single screw on the rear of the remote, directly behind the affected bumper
-2. Try loosening the screw slightly (quarter turn)
-3. Test the bumper feel again
+Close other Bluetooth controllers, confirm the exact model is validated, put it in advertising mode, move it nearer, power-cycle both devices, and scan again. Do not select an unnamed result. Follow [Scan and Connect a Device](/radr/guides/user-guide/device-scanning) for the failure checklist.
 
-If both bumpers still function (the button registers on screen) but one has reduced tactile feedback, the remote is working as designed—some variation is normal.
+## Is my device or firmware supported?
 
-<Callout type="warn">
+Use the dated [RADR Device Compatibility](/radr/guides/reference/device-support) matrix. Board-family names, an upstream Bluetooth registry entry, or a successful scan are not sufficient evidence that every control has been tested. Report the exact RADR version, target-device version, model, and behaviour when requesting support.
 
-If the button has absolutely no tactile feedback or doesn't register presses at all, the microswitch may be defective. Contact support for a replacement.
-**[Contact Support](mailto:support@researchanddesire.com)**
+## How do I connect Wi-Fi?
 
-</Callout>
-Get help from our support team.
+RADR uses a temporary setup network to save a 2.4 GHz network for updates. The canonical steps and recovery advice are in [Connect RADR to Wi-Fi](/radr/guides/user-guide/connecting-to-wifi).
 
-</Callout>
-<Callout type="info" title="What do the bumper buttons do?">
+## How do I update or recover RADR?
 
-The left and right bumper buttons on the top edge of the RADR switch between control modes when connected to an OSSM:
+Use [Update RADR Firmware](/radr/guides/user-guide/updating-your-device) for preparation, verification, and interruption recovery. If over-the-air update is unavailable or RADR will not start normally, review the data-cable and browser requirements before opening the [RADR Web Flasher](/radr/tools/web-flasher).
 
-| Button | Function |
-|--------|----------|
-| Left Bumper (`<<`) | Switch to previous mode |
-| Right Bumper (`>>`) | Switch to next mode |
+## How do I charge RADR?
 
-The modes cycle through: **Depth → Sensation → Stroke → Depth**
-**[OSSM Controls Guide](/radr/guides/user-guide/ossm-controls)**
+Connect its USB-C port to a suitable USB power source with an undamaged cable. Battery runtime varies with display, feedback, radio use, battery age, and firmware; this documentation does not promise a fixed duration. Stop using a battery that swells, leaks, overheats, or is physically damaged and contact support.
 
-Learn more about controlling your OSSM with RADR.
+## A button feels different, rattles, or does not register. Should I open RADR?
 
-</Callout>
-## Connectivity
-<Callout type="info" title="How do I connect RADR to my OSSM?">
+Do not open or adjust the enclosure based only on a generic FAQ. Record which control fails, whether the action registers on screen, and any recent drop or damage, then ask support for the correct inspection or replacement path.
 
-To connect your RADR to an OSSM:
+## How do I get help or request compatibility?
 
-1. Power on both devices
-2. On RADR, select **Device Search** from the main menu
-3. Wait for the scan to complete (about 5 seconds)
-4. Select your OSSM from the device list
-5. Wait for the connection confirmation sound
-**[Quick Start Guide](/radr/guides/getting-started/quick-start)**
-
-Step-by-step instructions for getting started.
-
-</Callout>
-<Callout type="info" title="Why won't RADR find my OSSM?">
-
-If RADR can't find your OSSM during scanning:
-
-1. **Check distance** — Move RADR closer to your OSSM (within 10 meters)
-2. **Power cycle both devices** — Turn both off, wait 10 seconds, then power on
-3. **Check OSSM firmware** — Ensure your OSSM is running compatible firmware
-4. **Disable other Bluetooth connections** — Disconnect other devices that may be connected to your OSSM
-**[Device Support](/radr/guides/reference/device-support)**
-
-See which devices are compatible with RADR.
-
-</Callout>
-<Callout type="info" title="Is RADR compatible with older OSSM board versions?">
-
-Yes, RADR is compatible with all OSSM PCB versions (v2.1, v2.3, and newer). The board version doesn't affect RADR compatibility—only the firmware version matters.
-
-**To use RADR with your OSSM:**
-
-1. Update your OSSM firmware to version 2.0.0 or later using the [Web Flasher](/ossm/tools)
-2. Power on both devices
-3. RADR will automatically detect and connect to your OSSM
-
-<Callout type="info">
-
-The main differences between board versions relate to motor compatibility (v2.3 includes a capacitor for Gold Motor support) rather than RADR functionality. All board versions support RADR once the firmware is updated.
-**[Flash your OSSM](/ossm/tools)**
-
-</Callout>
-Update your OSSM firmware for RADR compatibility.
-
-</Callout>
-## Battery & Charging
-<Callout type="info" title="My RADR makes a rattling sound when shaken">
-
-A slight rattling sound when shaking the device is normal. This is caused by the internal battery pressing against a small piece of foam inside the enclosure.
-
-The rattling does not affect functionality — nothing is broken.
-
-If the sound bothers you, you can open the back panel and add a slightly thicker piece of foam to dampen the rattling.
-
-</Callout>
-<Callout type="info" title="How long does the battery last?">
-
-RADR typically provides 4+ hours of active use on a full charge. Battery life varies based on screen brightness, vibration feedback usage, and connection activity.
-
-</Callout>
-<Callout type="info" title="How do I charge RADR?">
-
-Connect a USB-C cable to the port on the top edge of RADR. The device can be used while charging.
-
-</Callout>
-## Repairs & Replacement Parts
-<Callout type="info" title="How do I get replacement parts?">
-
-If you'd prefer not to source parts yourself, [contact support](mailto:support@researchanddesire.com) and we can send replacement components or a replacement remote.
-
-</Callout>
-## Support
-
-<Callout type="info" title="Who should I contact for RADR support?">
-
-For technical support or questions about your RADR, contact our support team:
-
-- **Email:** [support@researchanddesire.com](mailto:support@researchanddesire.com)
-
-</Callout>
+Email [support@researchanddesire.com](mailto:support@researchanddesire.com) with the RADR firmware version, exact connected-device model and firmware, steps to reproduce, on-screen message, and actual physical response. You can also use the [contact form](https://www.researchanddesire.com/pages/contact-us).

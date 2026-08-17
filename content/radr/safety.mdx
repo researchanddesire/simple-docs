@@ -1,0 +1,39 @@
+---
+title: "RADR Safety, Pause, and Stop"
+description: "Connect at zero intensity, verify pause and full Stop, and respond safely to disconnection or unexpected target-device output."
+---
+
+RADR can command motion or vibration on another device. The hazards and safe state depend on that target, so read both this page and the target manufacturer's safety instructions.
+
+<Callout type="error" title="Unexpected output can cause injury">
+
+**Hazard:** the wrong target, an unverified control mapping, connection loss, or a high starting value can create unexpected motion or vibration. **Consequence:** this can cause impact, pinch, entanglement, internal injury, pain, or distress. **Avoidance:** confirm the target name, start at zero, keep the Stop control reachable, test without body contact, and disconnect target power if control is lost and doing so is safe.
+
+</Callout>
+
+## Mandatory pre-use checklist
+
+1. Confirm the exact target model appears in [Supported Devices](/radr/guides/reference/device-support) and read its limitations.
+2. Inspect and position the target according to its own instructions.
+3. Close other Bluetooth apps and controllers.
+4. Turn every RADR output value to zero before connection.
+5. Confirm the selected device name; do not choose an unidentified device.
+6. Test a brief minimum output without body contact.
+7. Press the middle button once and confirm the target pauses.
+8. Use the documented full-Stop action for that target and confirm output is zero.
+
+![RADR OSSM controls showing a paused state, zero speed, and the red Stop control](<./img/image (2).webp>)
+
+## Pause is not full Stop
+
+On OSSM, a single middle-button press pauses by setting speed to zero; changing the speed can resume motion. A double press performs the documented full Stop and resets motion parameters. For non-OSSM devices, mappings vary—use only the behaviour listed in the target's support entry and confirm it during the unloaded test.
+
+## Connection loss or unexpected output
+
+1. Use Pause or full Stop immediately.
+2. If RADR does not respond, move clear and turn off or disconnect the target when safe.
+3. Do not reconnect while the target is positioned for use.
+4. Record the target name, RADR firmware version, screen state, and last control used.
+5. Retest at zero without body contact. Stop using the combination if output, reconnection, or Stop behaviour is not repeatable.
+
+Contact [support@researchanddesire.com](mailto:support@researchanddesire.com) for unidentified devices, unexpected mappings, unreliable stopping, damaged hardware, or behaviour that differs from the support table.

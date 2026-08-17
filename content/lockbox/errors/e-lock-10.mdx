@@ -1,26 +1,27 @@
 ---
-title: "E‑LOCK‑10: Could Not Connect to Wi‑Fi"
+title: "E-Lock 10: Could Not Connect to Wi-Fi"
+description: "Diagnose E-Lock 10 with 2.4 GHz credential, signal, sleep-state, hotspot, and dashboard checks."
 ---
 
-Error E‑LOCK‑10 means your Chastity Lockbox failed to join a Wi‑Fi network. Cloud features like the web dashboard, remote updates, and partner notifications won’t work until the device reconnects. The Lockbox still operates locally with its current settings.
+Error E-Lock 10 means your Chastity Lockbox failed to join a Wi-Fi network. Cloud features like the web dashboard, remote updates, and partner notifications won’t work until the device reconnects. The Lockbox still operates locally with its current settings.
 
 <Callout type="warn">
 
-Without Wi‑Fi, you can’t make changes through the web dashboard or receive remote updates. The device continues to run based on its current state.
+Without Wi-Fi, you can’t make changes through the web dashboard or receive remote updates. The device continues to run based on its current state.
 
 </Callout>
 ## Common causes
 
-- Incorrect Wi‑Fi credentials — The SSID or password is wrong or case doesn’t match
+- Incorrect Wi-Fi credentials — The SSID or password is wrong or case doesn’t match
 - 2.4 GHz unavailable — The Lockbox requires a 2.4 GHz network (not 5 GHz only)
 - Weak signal — Distance, walls, metal, and appliances can interfere
 - Network type not supported — Captive portals, public hotspots, or enterprise networks can block IoT devices
-- Device is asleep — Deep Sleep turns Wi‑Fi off until you wake the device
+- Device is asleep — Deep Sleep turns Wi-Fi off until you wake the device
 - Temporary glitch — A brief software or router hiccup
 
 ## How to fix it
 
-### Step 1: Verify your Wi‑Fi name and password (2.4 GHz only)
+### Step 1: Verify your Wi-Fi name and password (2.4 GHz only)
 
 Open your router’s 2.4 GHz network and confirm the exact SSID and password. Re‑enter them on the Lockbox.
 
@@ -31,12 +32,21 @@ Type the password in a notes app first to confirm punctuation and capitalization
 </Callout>
 <Callout type="success">
 
-On the Lockbox display, a green dot appears to the left of the Wi‑Fi symbol when connected.
+On the Lockbox display, a green dot appears to the left of the Wi-Fi symbol when connected.
 
 </Callout>
 ### Step 2: Test your network with another device
 
-Connect a phone or laptop to the same Wi‑Fi network using the same password. If it fails, restart your router and modem, wait 2 minutes, then try again.
+Connect a phone or laptop to the same Wi-Fi network using the same password. If it fails, restart your router and modem, wait 2 minutes, then try again.
+
+Use the row that matches how the router presents its networks:
+
+| Router or network setup                     | What to try                                                                                                                                                 |
+| ------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| Separate 2.4 GHz and 5 GHz names            | Choose the 2.4 GHz name                                                                                                                                     |
+| One combined network name                   | Confirm in the router's documentation or settings that 2.4 GHz is enabled; if the Lockbox still cannot join, continue with the hotspot isolation test below |
+| Guest, enterprise, hotel, or public network | Use a private 2.4 GHz network without a browser sign-in page                                                                                                |
+| Mobile hotspot                              | Use temporarily to determine whether the home router is the cause                                                                                           |
 
 ### Step 3: Improve signal strength
 
@@ -44,20 +54,20 @@ Move the Lockbox closer to your router and remove obvious obstructions (large me
 
 ### Step 4: Wake the device if it’s in Deep Sleep
 
-Deep Sleep disables Wi‑Fi. Wake the Lockbox by pressing the left (back) button, then try reconnecting.
+Deep Sleep disables Wi-Fi. Wake the Lockbox by pressing the left (back) button, then try reconnecting.
 
 <Callout type="info">
 
 Learn more about sleep states in Sleep Mode.
 
 </Callout>
-### Step 5: Reconfigure Wi‑Fi from the device menu
+### Step 5: Reconfigure Wi-Fi from the device menu
 
-On the Lockbox, go to Settings → Wi‑Fi Settings. Scan the QR code with your phone and select your 2.4 GHz network to re‑enter credentials.
+On the Lockbox, go to Settings → Wi-Fi Settings. Scan the QR code with your phone and select your 2.4 GHz network to re-enter credentials.
 
 <Callout type="success">
 
-After a successful join, you’ll see the green dot next to the Wi‑Fi symbol on the Lockbox.
+After a successful join, you’ll see the green dot next to the Wi-Fi symbol on the Lockbox.
 
 </Callout>
 <Callout type="info">
@@ -67,7 +77,7 @@ If your router broadcasts separate names for 2.4 GHz and 5 GHz, choose the 2.4 G
 </Callout>
 ### Step 6: Restart the Lockbox
 
-If the error persists, restart the device to clear transient issues: press and hold the Lock/Enter button for 7 seconds, or go to Settings → Restart Device.
+If the error persists, use **Settings → Restart Device**. If the controls are unresponsive, follow the 10-second button procedure in [Restarting Your Device](/lockbox/device-states/restarting).
 
 ### Step 7: Try a mobile hotspot (isolation test)
 
@@ -84,20 +94,27 @@ Avoid public hotspots or networks that require a browser sign‑in (captive port
 
 You’re connected when:
 
-- A green dot appears to the left of the Wi‑Fi symbol on the Lockbox display
+- A green dot appears to the left of the Wi-Fi symbol on the Lockbox display
 - The dashboard shows the device online after a brief delay
 
 </Callout>
-## Related guides
-**[Quick Start](/lockbox/quick-start)**
 
-Step‑by‑step setup, including Wi‑Fi requirements and basics.
+![Wi-Fi connected with the dashboard connection indicator shown in green](../img/wifi-solid-green.webp)
+
+## Related guides
+
+**[Manual Wi-Fi Setup](/lockbox/quick-start/wifi-setup)**
+
+Reconnect or replace the saved network.
 **[Sleep Mode](/lockbox/device-states/sleep-mode)**
 
-Understand Automatic vs Deep Sleep and Wi‑Fi behavior.
+Understand Automatic vs Deep Sleep and Wi-Fi behavior.
 **[Restarting Device](/lockbox/device-states/restarting)**
 
 How to safely reboot the Lockbox.
+**[Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting)**
+
+Separate Wi-Fi, internet, dashboard, sleep, and firmware symptoms.
 **[Lockbox FAQs](/lockbox/faqs)**
 
 Connection indicators, setup flow, and common questions.
@@ -106,7 +123,7 @@ Connection indicators, setup flow, and common questions.
 
 <Callout type="info">
 
-If you’ve tried all steps and still see E‑LOCK‑10, contact support. Include your device serial number, your router model, the network type (2.4 GHz SSID), and a photo of the error on the Lockbox display.
+If you’ve tried all steps and still see E-Lock 10, contact support. Include your device serial number, your router model, the network type (2.4 GHz SSID), and a photo of the error on the Lockbox display.
 
 - Email: <a href="mailto:support@researchanddesire.com">support@researchanddesire.com</a>
 - General FAQs: <a href="/lockbox/faqs">Lockbox FAQs</a>

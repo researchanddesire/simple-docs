@@ -1,0 +1,26 @@
+---
+title: "Troubleshoot OSSM"
+description: "Diagnose OSSM power, homing, controller, Bluetooth, Wi-Fi, and unexpected-motion problems safely."
+---
+
+Stop and disconnect power before inspecting hardware. Never reach into the travel path while OSSM is powered.
+
+| Symptom                              | First safe action                                   | Next check                                                                                |
+| ------------------------------------ | --------------------------------------------------- | ----------------------------------------------------------------------------------------- |
+| No power or status light             | Disconnect power                                    | Reseat the supplied supply and inspect the cable and connector for damage                 |
+| Homing does not finish               | Disconnect power                                    | Clear obstructions and inspect belt, rail, frame stability, and cables                    |
+| Controller cannot find OSSM          | Keep motion values at zero                          | Restart only the controller, move closer, and confirm another controller is not connected |
+| Controller disconnects during motion | Use Stop; disconnect power if Stop does not respond | Do not resume until an unloaded Stop test passes                                          |
+| Wi-Fi will not connect               | Local control may remain available                  | Confirm a 2.4 GHz network, password, range, and internet service                          |
+| Wi-Fi indicator is yellow            | Do not repeat setup immediately                     | Wait 60 seconds; the router is connected but the online service is unavailable            |
+| Unexpected, rough, or noisy motion   | Stop and disconnect power                           | Inspect for looseness, contamination, obstruction, or damage                              |
+
+## Recovery sequence
+
+1. Record what was on screen and which controller was connected.
+2. Stop and disconnect power.
+3. Correct only an obvious, non-damaging issue such as a loose external plug or obstruction.
+4. Power on with the motion path empty.
+5. Confirm homing, minimum unloaded motion, and Stop.
+
+Do not continue after electrical smell, heat, damaged insulation, repeated homing failure, unreliable Stop, belt or rail damage, or unexplained motion. Email [support@researchanddesire.com](mailto:support@researchanddesire.com) with the device version, controller type, status indicators, and the steps already tried.

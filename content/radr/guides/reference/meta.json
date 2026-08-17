@@ -1,7 +1,4 @@
 {
   "title": "Reference",
-  "pages": [
-    "index",
-    "device-support"
-  ]
+  "pages": ["device-support"]
 }

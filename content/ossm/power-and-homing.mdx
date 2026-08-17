@@ -1,0 +1,51 @@
+---
+title: "Power On and Home OSSM"
+description: "Connect the supplied 24 V power unit, keep clear of startup movement, and confirm OSSM homes successfully."
+---
+
+**Outcome:** OSSM has completed homing and is waiting with motion controls at zero. Allow about two minutes.
+
+## Before you connect power
+
+- Read [OSSM safety and emergency stop](/ossm/safety).
+- Stabilise the frame and clear the full rail travel path.
+- Set controller speed and depth to zero.
+- Use the supplied 24 V, 4 A DC power supply. Do not substitute an unverified supply.
+
+<Steps>
+  <Step>
+
+### Connect the power supply to the wall
+
+![The supplied OSSM power supply with its wall lead and DC output identified](./ossm/img/power-supply-annotated.webp)
+
+  </Step>
+  <Step>
+
+### Connect the barrel plug to OSSM
+
+![The OSSM power input identified on the enclosed control board](./ossm/img/enclosed-ossm-pcb-annotated1.webp)
+
+Keep hands and objects outside the rail path before making this connection.
+
+  </Step>
+  <Step>
+
+### Observe homing from a safe distance
+
+![The OSSM control board status LED illuminated during startup](./images/enclosed-ossm-pcb-annotated2.webp)
+
+The rail moves slowly to measure its endpoints. Do not restrain or touch it.
+
+  </Step>
+</Steps>
+
+<Callout type="success" title="Success">
+
+Homing finishes without obstruction or unusual noise, the status LED remains on, and the carriage is stationary. Continue to [choose and test a controller](/ossm/controllers).
+
+</Callout>
+
+## If homing does not finish
+
+Disconnect power. Check for an obstruction, loose belt, damaged cable, unstable frame, or attachment in the travel path. Do not repeatedly power-cycle a jammed or noisy machine; use [OSSM troubleshooting](/ossm/troubleshooting) or contact support.

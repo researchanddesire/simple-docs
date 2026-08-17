@@ -1,75 +1,78 @@
 ---
-title: "Connectivity Troubleshooting"
+title: "Lockbox Connectivity Troubleshooting"
+description: "Diagnose Lockbox Wi-Fi, internet, dashboard, sleep, and remote-command problems with a decision tree."
 ---
 
-If your Lockbox and the dashboard are showing different states — for example, the dashboard says "Offline" while your device shows a green connection indicator, or your lock session isn't behaving as expected — this guide covers the most common causes and fixes.
+<Callout type="warn">
 
-## Dashboard shows offline but device shows connected
-
-Your Lockbox shows a green dot when it has both WiFi and MQTT broker connectivity. The dashboard may take up to 60 seconds to reflect the device's actual status.
-
-**Try these steps in order:**
-
-1. **Wait up to 60 seconds** — The dashboard polls for device status periodically and may lag behind the actual connection state.
-2. **Hard reboot with resync** — Force the device to re-establish its connection and pull the latest lock state from the server.
-**[Hard Reboot Procedure](/lockbox/technical/button-controls#hard-reboot-with-resync)**
-
-Press and hold the Enter/Lock button for 10 seconds to force a full resync.
-
-3. **Check for alpha firmware** — If you're enrolled in the alpha program, alpha firmware can occasionally cause sync issues. Consider [returning to stable firmware](/lockbox/support/alpha-updates#leaving-the-alpha-program) using the web flasher.
-4. **Remove and re-pair** — As a last resort, remove the device from your account (Settings → Devices), then re-pair it using the pairing code on your Lockbox.
-
-<Callout type="info">
-
-If your lock session is stuck in a "pending" state along with this issue, ask your keyholder to abandon the session from the dashboard so you can start fresh after resolving the connectivity problem.
+Connectivity troubleshooting is not an emergency-release method. If urgent key access is needed, use [Emergency Access](/lockbox/safety).
 
 </Callout>
----
 
-## Lock randomly unlocks or doesn't sync
+## Choose the visible symptom
 
-If your Lockbox unlocks unexpectedly or lock commands from the dashboard aren't being applied correctly, the device and server may be out of sync.
+```mermaid
+flowchart TD
+  A["Connectivity problem"] --> B{"Wi-Fi icon present?"}
+  B -->|No| C["Reconnect 2.4 GHz Wi-Fi"]
+  B -->|Yes| D{"Status dot"}
+  D -->|Red| E["Wi-Fi works; internet unavailable"]
+  D -->|Yellow| F["Wait, then check dashboard service connection"]
+  D -->|Green| G{"Dashboard agrees?"}
+  G -->|No| H["Wait 60 seconds, then restart once"]
+  G -->|Yes| I["Connectivity is healthy"]
+```
 
-**Common causes:**
-- A temporary network interruption caused the device to miss a state update
-- The device woke from deep sleep and loaded stale local state before syncing
-- Alpha firmware introduced a sync regression
+## No Wi-Fi icon
 
-**How to fix:**
+1. Wake the Lockbox; deep sleep turns Wi-Fi off.
+2. Confirm the saved network is 2.4 GHz.
+3. Run [Manual Wi-Fi Setup](/lockbox/quick-start/wifi-setup) again.
+4. If E-Lock 10 appears, follow [E-Lock 10](/lockbox/errors/e-lock-10).
 
-Perform a [hard reboot with resync](/lockbox/technical/button-controls#hard-reboot-with-resync) by pressing and holding the **Enter/Lock** button for 10 seconds. This forces the device to restart, reconnect to WiFi, and pull the latest lock state from the server.
+## Red status dot
 
-<Callout type="info">
+The device joined Wi-Fi but cannot reach the internet.
 
-If the issue persists after resyncing, contact [support@researchanddesire.com](mailto:support@researchanddesire.com) with your username and a description of the behavior.
+1. Confirm another device on the same network can reach the internet.
+2. Avoid networks that require a browser sign-in.
+3. Restart the router, then wait for it to recover.
+4. Test a simple mobile hotspot. If the hotspot works, investigate the original router or firewall.
+
+## Yellow dot does not become green
+
+The Lockbox is trying to connect beyond the local Wi-Fi network.
+
+1. Wait up to 60 seconds.
+2. Wake the Lockbox and keep it near the router.
+3. Use **Settings → Restart Device** once.
+4. If the indicator remains yellow on more than one network, contact support.
+
+## Device is green but dashboard says offline
+
+1. Wait up to 60 seconds for the dashboard status to update.
+2. Confirm you are signed into the account that owns this Lockbox.
+3. Refresh the dashboard once.
+4. Restart the Lockbox using [Restarting Your Device](/lockbox/device-states/restarting), then confirm the physical lock state.
+5. Do not remove/re-pair the device during an active lock unless support directs you to.
+
+## Remote command did not arrive
+
+- Confirm the device is awake and shows a green status indicator.
+- Confirm the command was sent to the correct Lockbox and active session.
+- Wait for the dashboard status interval, then try once more.
+- Ask the Lockee to confirm the physical device state.
+
+<Callout type="warn">
+
+Never assume a remote unlock succeeded from the dashboard alone. The Lockee must confirm that the physical Lockbox reports unlocked and opens normally.
 
 </Callout>
----
 
-## Alpha firmware sync issues
+## Firmware-channel uncertainty
 
-Alpha firmware receives early-access features that may occasionally introduce sync regressions. If you're experiencing connectivity or sync problems while enrolled in the alpha program:
+If you are using prerelease firmware, record the displayed version and tell support. This guide does not claim which prerelease versions are stable or compatible. Reinstall firmware only when support instructs you to and use [Flash or Recover Firmware](/lockbox/support/flashing).
 
-1. **Hard reboot with resync** — Press and hold the **Enter/Lock** button for 10 seconds to [force a resync](/lockbox/technical/button-controls#hard-reboot-with-resync)
-2. **Abandon and restart the lock** — If your keyholder can access the dashboard, have them abandon the stuck session so you can start a new one
-3. **Reflash to stable firmware** — If issues persist, use the web flasher to [return to stable firmware](/lockbox/support/alpha-updates#leaving-the-alpha-program). After flashing, you may need to remove the device from your account (Settings → Devices) and re-pair it
-**[Alpha Updates](/lockbox/support/alpha-updates)**
+## Contact support
 
-How to enroll in or leave the alpha program.
-
-**[Firmware Flashing](/lockbox/support/flashing)**
-
-Step-by-step firmware flashing instructions.
-
----
-
-## When to contact support
-
-Contact [support@researchanddesire.com](mailto:support@researchanddesire.com) if:
-
-- A hard reboot does not resolve the sync issue
-- Your lock session is stuck and your keyholder cannot abandon it
-- You removed your keyholder during an active session and your lock is stuck (support can abandon the lock on your behalf)
-- The dashboard consistently shows incorrect lock state after multiple resync attempts
-
-Include your account email, a description of the issue, and what you've already tried.
+Email [support@researchanddesire.com](mailto:support@researchanddesire.com) if the problem remains on multiple networks, the dashboard repeatedly reports the wrong state, or a session is stuck. Include the account email, displayed firmware version, indicator color, router model, active lock state, and steps already tried.

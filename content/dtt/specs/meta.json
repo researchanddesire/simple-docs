@@ -1,7 +1,5 @@
 {
-  "title": "Specs",
-  "pages": [
-    "index",
-    "charging"
-  ]
+  "title": "Specifications",
+  "description": "Verified power and product reference",
+  "pages": ["index", "charging"]
 }

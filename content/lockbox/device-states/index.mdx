@@ -1,54 +1,39 @@
 ---
-title: "Device States"
+title: "Lockbox Device States"
+description: "Identify Lockbox calibration, ready, locked, break, sleep, error, and emergency states."
 ---
 
-Your Chastity Lockbox operates in several distinct states, each designed to provide specific functionality while maintaining security and safety. This section covers everything you need to know about how your device behaves in different situations.
+Use the physical screen and mechanism together when identifying state. A dashboard status can lag while the Lockbox is offline or asleep.
 
-## Operational states
-**[Calibration](/lockbox/device-states/calibration)**
+```mermaid
+flowchart TD
+  A["Power on"] --> B{"Calibration required?"}
+  B -->|Yes| C["Calibration"]
+  B -->|No| D["Ready / unlocked"]
+  C --> D
+  D --> E["Active lock"]
+  E --> F["Scheduled break"]
+  F --> E
+  E --> G["Normal unlock"]
+  E --> H["Emergency unlock"]
+  G --> D
+  H --> I["Emergency cooldown"]
+  I --> D
+  A --> J["Sleep / wake"]
+  J --> B
+  A --> K["Error state"]
+```
 
-Automatic setup process that configures motor orientation, lock detection, and power settings. Typically pre-configured when you receive your device.
+## State reference
 
-**[Sleep Mode](/lockbox/device-states/sleep-mode)**
+| State              | What you should see                                  | Next guide                                        |
+| ------------------ | ---------------------------------------------------- | ------------------------------------------------- |
+| Calibration        | On-screen button and motor prompts                   | [Calibration](/lockbox/device-states/calibration) |
+| Ready / unlocked   | Unlocked symbol and normal menu                      | [Quick Start](/lockbox/quick-start)               |
+| Active lock        | Locked symbol and active session information         | [Status Symbols](/lockbox/using/symbols)          |
+| Scheduled break    | Break countdown and temporary access                 | [Take a Break](/lockbox/using/take-a-break)       |
+| Sleep              | Dim/off display; connectivity depends on sleep state | [Sleep Mode](/lockbox/device-states/sleep-mode)   |
+| Error              | E-Lock code or failure message                       | [Error Codes](/lockbox/errors)                    |
+| Emergency cooldown | E-Lock 20 or cooldown status                         | [E-Lock 20](/lockbox/errors/e-lock-20)            |
 
-Power-saving modes that extend battery life during periods of inactivity. Choose between automatic sleep and deep sleep based on your needs.
-
-## Lock modes
-**[Take a Break](/lockbox/device-states/take-a-break)**
-
-Scheduled temporary unlocks for hygiene and health maintenance during extended lock periods. Configured by your Keyholder.
-
-**[Permalock](/lockbox/device-states/permalock)**
-
-Indefinite lock mode with no time restrictions. The device remains locked until your Keyholder grants release.
-
-## Safety & maintenance
-**[Emergency Unlock](/lockbox/device-states/emergency-unlock)**
-
-Safety feature for urgent situations when you need immediate access to your keys and your Keyholder is unavailable.
-
-**[Restarting Device](/lockbox/device-states/restarting)**
-
-How to safely restart your device when needed. Your lock state is preserved through restarts.
-
-## Quick reference
-
-| State | Purpose | Keyholder required |
-|-------|---------|-------------------|
-| Calibration | Initial device setup | No |
-| Automatic Sleep | Battery conservation | No |
-| Deep Sleep | Extended battery conservation | No |
-| Take a Break | Scheduled hygiene breaks | Yes (to configure) |
-| Permalock | Indefinite lock | Yes (to release) |
-| Emergency Unlock | Safety release | No |
-
-<Callout type="warn">
-
-Always prioritize your physical and mental well-being. If you experience genuine distress, use the Emergency Unlock feature without hesitation.
-
-</Callout>
-<Callout type="info">
-
-Your device preserves its locked or unlocked state through restarts, sleep modes, and power cycles. You never need to worry about accidental state changes.
-
-</Callout>
+If the device state cannot be confirmed, keep key access available, stop the session, and use the [Support Center](/lockbox/support).

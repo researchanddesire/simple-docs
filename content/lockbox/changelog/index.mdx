@@ -1,51 +1,47 @@
 ---
-title: "Overview"
+title: "Lockbox Firmware Changelog"
+description: "Review user-visible Lockbox firmware changes, known cautions, and support guidance by version."
 ---
 
-Stay up to date with the latest changes to the Chastity Lockbox. This changelog documents all releases, including new features, improvements, and bug fixes.
+User-visible releases are listed newest first. The source notes did not include verified release dates, so none are invented here.
 
-## Placeholder Release
+<Callout type="info">
 
-This is a placeholder entry for future Chastity Lockbox updates. See the [detailed release notes](/lockbox/changelog/v0.0.0) for more information.
+The Lockbox does not currently expose a complete public release ledger with dates, compatibility, and rollback packages. Before changing firmware channels or reinstalling a version, contact [support@researchanddesire.com](mailto:support@researchanddesire.com).
 
-### v1.17.47
-- **Automated changelog generation** — Version bump workflow now automatically generates changelog entries using AI
+</Callout>
 
-### v1.17.48
-- **Instant 24-hour lock documentation** — Added guide for the new quick-start 24-hour lock session feature
+## v1.17.66
 
-### v1.17.49
-- **Improved boot screen** — Redesigned splash screen with centered RD logo and cleaner version display
-- **Onboarding preflight flow** — Added structured initialization states for welcome, WiFi setup, and device pairing
-- **Text display improvements** — Fixed text wrapping to properly handle line breaks and cursor positioning
+- Added automatic pairing from Chrome or Edge with Web Bluetooth.
+- Added Wi-Fi provisioning during Bluetooth pairing, so manual Wi-Fi setup is no longer required for the recommended flow.
+- Improved unpairing so an unpaired Lockbox restarts and advertises for pairing again.
 
-### v1.17.51
-- **Public voting duration limits** — Added configurable maximum and minimum lock duration limits for public voting
-- **Improved public voting docs** — Clarified setup instructions for templates and active session modifications
+## v1.17.63
 
-### v1.17.56
-- **Changelog maintenance** — Removed premature version entries from documentation
+- Restored the battery status icon.
+- Added fallback behavior when the INA219 battery sensor is unavailable.
 
-### v1.17.57
-- **AI development context** — Added project memory file to improve AI-assisted development and code navigation
+## v1.17.62
 
-### v1.17.58
-- **Header bar cleanup** — Disabled battery icon from the status bar display
+- Reverted the HTTP-client reuse and boot-sequence changes from v1.17.61 after stability concerns.
 
-### v1.17.62
-- **Reverted memory changes** — Rolled back HTTP client reuse and boot sequence changes from v1.17.61 due to stability issues
+## v1.17.58
 
-### v1.17.63
-- **Battery icon restored** — Re-enabled battery status icon in the header bar with improved reliability
-- **INA219 sensor handling** — Added graceful fallback when battery sensor is unavailable
+- Disabled the battery icon in the status bar. It was restored in v1.17.63.
 
-### v1.17.65
-- **Interactive diagram controls** — Added pan, zoom, and pinch-to-zoom support for Mermaid diagrams in documentation
+## v1.17.51
 
-### v1.17.66
-- **Automatic Bluetooth pairing** — Pair your Lockbox directly from Chrome or Edge using Web Bluetooth — no manual WiFi setup required
-- **WiFi provisioning over BLE** — WiFi credentials are sent securely over Bluetooth during automatic pairing
-- **Improved unpair flow** — Unpaired devices automatically restart and re-enable Bluetooth advertising for re-pairing
+- Added configurable minimum and maximum duration boundaries for Public Voting.
 
-### v1.17.67
-- **Debugging improvements** — Added test logging tag for improved diagnostics and development
+## v1.17.49
+
+- Redesigned the startup screen.
+- Added onboarding states for welcome, Wi-Fi setup, and device pairing.
+- Improved text wrapping and cursor positioning.
+
+## Known issues and recovery
+
+If a documented feature does not appear, record the version displayed on the Lockbox and contact support. Do not assume that a lower version is compatible with current dashboard behavior. Follow [Flash or Recover Lockbox Firmware](/lockbox/support/flashing) only when support identifies the correct package and whether local data should be erased.
+
+Last reviewed: August 16, 2026.

@@ -1,7 +1,4 @@
 {
-  "title": "Housekeeping",
-  "pages": [
-    "index",
-    "open-source"
-  ]
+  "title": "Open source",
+  "pages": ["open-source"]
 }

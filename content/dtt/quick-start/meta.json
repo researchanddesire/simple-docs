@@ -1,11 +1,13 @@
 {
   "title": "Quick start",
+  "description": "A linear first-session setup",
   "pages": [
     "index",
-    "checking-results",
     "getting-started",
     "pairing",
-    "templates",
-    "using-toys"
+    "using-toys",
+    "first-session",
+    "checking-results",
+    "templates"
   ]
 }
