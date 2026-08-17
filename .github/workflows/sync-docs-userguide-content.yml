@@ -28,24 +28,24 @@ concurrency:
 
 jobs:
   request-import:
-    if: ${{ github.event_name == 'workflow_dispatch' || !startsWith(github.event.head_commit.message, 'Sync ') || !contains(github.event.head_commit.message, '[docs-sync]') }}
+    if: ${{ github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[docs-sync]') }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     env:
       SYNC_BRANCH: ${{ github.event_name == 'push' && github.ref_name || inputs.branch }}
     steps:
-      - name: Verify sync credential
-        env:
-          DOCS_SYNC_TOKEN: ${{ secrets.DOCS_SYNC_TOKEN }}
-        run: |
-          if [ -z "$DOCS_SYNC_TOKEN" ]; then
-            echo "::error::DOCS_SYNC_TOKEN is required to request a RadApp import."
-            exit 1
-          fi
+      - name: Create documentation sync token
+        id: app-token
+        uses: actions/create-github-app-token@v2
+        with:
+          app-id: ${{ vars.RAD_VERSION_CONTROL_APP_ID }}
+          private-key: ${{ secrets.RAD_VERSION_CONTROL_PRIVATE_KEY }}
+          owner: researchanddesire
+          repositories: rad-app
 
       - name: Request matching RadApp import
         env:
-          GH_TOKEN: ${{ secrets.DOCS_SYNC_TOKEN }}
+          GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           gh workflow run import-docs-content.yml \
             --repo researchanddesire/rad-app \
