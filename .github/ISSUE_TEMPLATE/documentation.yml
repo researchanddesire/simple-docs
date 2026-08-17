@@ -1,0 +1,31 @@
+name: Documentation correction
+description: Report documentation that is unclear, incomplete, or incorrect.
+title: "Docs: "
+labels:
+  - documentation
+body:
+  - type: input
+    id: page
+    attributes:
+      label: Page URL
+      placeholder: https://docs.example.com/page
+    validations:
+      required: true
+  - type: textarea
+    id: problem
+    attributes:
+      label: What is wrong?
+      description: Explain the inaccurate or unclear text.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Suggested correction
+  - type: checkboxes
+    id: safety
+    attributes:
+      label: Public information
+      options:
+        - label: This report contains no credentials or private customer information.
+          required: true
