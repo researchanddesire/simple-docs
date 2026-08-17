@@ -28,7 +28,7 @@ concurrency:
 
 jobs:
   request-import:
-    if: ${{ github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[docs-sync]') }}
+    if: ${{ github.event_name == 'workflow_dispatch' || !startsWith(github.event.head_commit.message, 'Sync ') || !contains(github.event.head_commit.message, '[docs-sync]') }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
     env:
