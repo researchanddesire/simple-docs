@@ -47,6 +47,7 @@ const CHANNEL_LABELS = {
 const isCatalog = (value) =>
   value &&
   typeof value === "object" &&
+  value.protocolVersion === 1 &&
   Array.isArray(value.targets) &&
   value.targets.every(
     (target) =>
@@ -83,6 +84,7 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
     config.hardwareVariants[0],
   );
   const [selectedChannel, setSelectedChannel] = useState("production");
+  const [catalogLoadAttempt, setCatalogLoadAttempt] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [catalogError, setCatalogError] = useState(null);
   const [webSerialSupported, setWebSerialSupported] = useState(null);
@@ -134,7 +136,7 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
 
     void loadCatalogs();
     return () => controller.abort();
-  }, [config, normalizedDevice]);
+  }, [catalogLoadAttempt, config, normalizedDevice]);
 
   const targets = catalogs[selectedHardwareVariant]?.targets ?? [];
   const selectedTarget = useMemo(
@@ -240,6 +242,13 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
             <p className="text-sm text-red-700 dark:text-red-400">
               {catalogError}
             </p>
+            <button
+              type="button"
+              onClick={() => setCatalogLoadAttempt((attempt) => attempt + 1)}
+              className="mt-2 rounded-md border border-red-300 px-3 py-1.5 text-sm font-medium text-red-800 hover:bg-red-100 dark:border-red-700 dark:text-red-300 dark:hover:bg-red-950"
+            >
+              Retry
+            </button>
           </div>
         )}
         {!isLoading && !catalogError && targets.length === 0 && (
