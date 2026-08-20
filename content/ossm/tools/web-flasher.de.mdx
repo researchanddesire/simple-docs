@@ -1,0 +1,18 @@
+---
+title: „OSSM Web Flasher“
+description: „Installieren Sie die aktuelle stabile OSSM-Firmware über USB oder stellen Sie eine Steuerplatine wieder her, deren Support Sie zum erneuten Flashen aufgefordert hat.“
+---
+
+importiere { DeviceFlasher } aus „@repo/device-tools/device-flasher";“
+
+Verwenden Sie dieses Tool, um die Firmware OSSM direkt von einem Desktop-Browser über USB zu installieren oder wiederherzustellen.
+
+<Callout type="warn" title="Flash nur auf Anweisung des Supports">
+
+Verwenden Sie Chrome oder Edge, ein datenfähiges USB-Kabel und eine stabile Stromversorgung. Stoppen Sie den OSSM und trennen Sie die Motorstromversorgung, bevor Sie USB anschließen.
+
+</Callout>
+
+Das Flashen ersetzt die installierte Firmware und erfordert möglicherweise eine erneute Eingabe von Wi-Fi oder Geräteeinstellungen. Lesen Sie [Flash or recover OSSM firmware](/ossm/tools) zur Vorbereitung, Erfolgsprüfung und Fehlerbehebung, bevor Sie fortfahren.
+
+<DeviceFlasher device="ossm" />

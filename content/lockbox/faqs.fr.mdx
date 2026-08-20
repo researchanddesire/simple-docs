@@ -1,0 +1,122 @@
+---
+title: « Lockbox Questions fréquemment posées »
+description: "Réponses courtes sur la configuration, les rôles, les sessions, l'alimentation, les fonctionnalités et l'accès d'urgence de Lockbox."
+---
+
+import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
+
+Pour les procédures, utilisez le [Quick Start](/lockbox/quick-start) ou le [Support Center](/lockbox/support).
+
+## Configuration et appairage
+
+<Accordions type="multiple">
+  <Accordion title="Quelle est la méthode de configuration recommandée ?">
+
+Utilisez [automatic Bluetooth pairing](/lockbox/quick-start/pairing) dans Chrome ou Edge. Il associe le Lockbox et fournit 2,4 GHz Wi-Fi en un seul flux. La configuration manuelle Wi-Fi est la solution de secours.
+
+  </Accordion>
+  <Accordion title="Comment appairer un Lockbox d'occasion ?">
+
+L'ancien propriétaire doit d'abord le dissocier. Si cela est impossible, contactez [support@researchanddesire.com](mailto:support@researchanddesire.com) avec une preuve d'achat et l'identifiant indiqué sous **Paramètres → Couplage**. Ne publiez pas le code d’appairage.
+
+  </Accordion>
+  <Accordion title="Pourquoi le code d'appairage change-t-il ?">
+
+Le code peut changer après un redémarrage. Utilisez le code actuellement affiché sur l'appareil. Une fois couplé, la propriété normale du compte ne dépend pas de la conservation de ce code.
+
+  </Accordion>
+</Accordions>
+## Rôles et sessions
+
+<Accordions type="multiple">
+  <Accordion title="Quels sont les rôles de Lockee et de Keyholder ?">
+
+Le **Lockee** est soumis au verrouillage. Un **Keyholder** est un autre compte que Lockee autorise à gérer les contrôles de session convenus. Vérifiez le consentement, les autorisations, la libération, le comportement hors ligne et la révocation dans le [Keyholder Guide](/lockbox/quick-start/keyholder-guide).
+
+  </Accordion>
+  <Accordion title="Qu'est-ce qu'un autoverrouillage ?">
+
+Un autoverrouillage est démarré sans Keyholder. Les contrôles d'auto-verrouillage actifs peuvent être plus limités qu'une session de test ou gérée par le détenteur de clé, alors effectuez un court test et vérifiez le déverrouillage d'urgence avant de vous y fier.
+
+  </Accordion>
+  <Accordion title="Puis-je ajouter ou supprimer un Keyholder pendant une session active ?">
+
+Ne modifiez pas le partenariat lorsqu'une session est active. Terminez la session en toute sécurité, confirmez que le Lockbox physique est déverrouillé, puis modifiez la relation sous **Paramètres → Partenaires**. Si l’accès au compte ou la propriété est contesté, contactez l’assistance.
+
+  </Accordion>
+  <Accordion title="Qu'est-ce qu'un verrouillage de test ?">
+
+Un test de verrouillage est une séance d'entraînement destinée à vérifier le comportement de configuration et de libération avant un véritable verrouillage. Utilisez [Start Your First Lock](/lockbox/quick-start/start-a-lock).
+
+  </Accordion>
+</Accordions>
+
+## Alimentation et connectivité
+
+<Accordions type="multiple">
+  <Accordion title="Combien de temps dure la batterie ?">
+
+Les notes de produit existantes estiment environ 24 heures débranché dans des conditions normales d'utilisation, mais la durée de fonctionnement réelle dépend de l'écran, de la radio, du moteur, de l'état de la batterie et du comportement du micrologiciel. Maintenez de longues sessions sur une alimentation stable et vérifiez l'état de la batterie avant de verrouiller.
+
+  </Accordion>
+  <Accordion title="Dois-je laisser le Lockbox branché ?">
+
+Utilisez une alimentation USB stable pour des sessions plus longues lorsque cela est possible. La documentation actuelle indique qu'un Lockbox branché n'entre pas en veille profonde, ce qui permet de préserver la connectivité à distance.
+
+  </Accordion>
+  <Accordion title="Pourquoi l'appareil et le tableau de bord affichent-ils différents états en ligne ?">
+
+L'indicateur physique est en direct ; la mise à jour du tableau de bord peut prendre jusqu'à 60 secondes. Comparez-les avec [Check Online Status](/lockbox/support/online-status).
+
+  </Accordion>
+  <Accordion title="Qu'est-ce qui fonctionne sans Wi-Fi ?">
+
+Les minuteries locales, les menus et les commandes physiques continuent en fonction de l'état stocké sur l'appareil. Les commandes du détenteur de clé à distance, les modifications du tableau de bord et les votes publics nécessitent une connectivité. Voir le [Offline Capability Matrix](/lockbox/technical/offline-mode).
+
+  </Accordion>
+</Accordions>
+
+## Fonctionnalités
+
+<Accordions type="multiple">
+  <Accordion title="Comment fonctionnent les pauses programmées ?">
+
+La séance doit permettre des pauses. Le Lockee démarre une pause à partir de l'appareil, récupère la clé et la restitue avant de mettre fin à la pause. Les accès sanitaires et d’urgence ont toujours la priorité sur un dossier en retard. Voir [Take a Break](/lockbox/using/take-a-break).
+
+  </Accordion>
+  <Accordion title="Que cache Masquer le temps restant ?">
+
+Il masque les informations du compte à rebours des vues de l'appareil et du tableau de bord faisant face à Lockee décrites dans le guide des fonctionnalités. Il ne doit pas cacher des consignes de sécurité ou d’urgence. Voir [Hide Remaining Time](/lockbox/using/hiding-time).
+
+  </Accordion>
+  <Accordion title="Qu’est-ce que le vote public ?">
+
+Il crée une page partageable où les visiteurs peuvent ajouter ou supprimer l'heure configurée. Convenez des limites d'audience et de durée avant de partager, et testez comment les désactiver. Voir [Public Voting](/lockbox/using/public-voting).
+
+  </Accordion>
+  <Accordion title="Qu’est-ce que Permalock ?">
+
+Permalock supprime l'heure de fin prédéfinie et utilise la libération contrôlée par le détenteur de clé. Il s'agit d'un mode en ligne avancé qui nécessite des tests de verrouillage terminés et un accès d'urgence révisé. Voir [Permalock](/lockbox/device-states/permalock).
+
+  </Accordion>
+</Accordions>
+
+## Accès d'urgence
+
+<Accordions type="multiple">
+  <Accordion title="Mon détenteur de clé n'est pas disponible et j'ai besoin de la clé. Que dois-je faire?">
+
+Utilisez le [Software Emergency Unlock](/lockbox/device-states/emergency-unlock) local lorsqu'il est disponible. S'il est désactivé ou si l'appareil ne peut pas se déverrouiller, utilisez [Hardware Backplate Emergency Access](/lockbox/support/emergency-backplate). N'attendez pas d'assistance lorsque l'accès est urgent.
+
+  </Accordion>
+  <Accordion title="L’accès d’urgence au matériel peut-il être désactivé ?">
+
+La conception actuelle utilise une plaque arrière remplaçable comme solution de repli physique destructrice. Le logiciel ne peut pas désactiver ce chemin physique. Consultez-le avant chaque session longue ou gérée à distance.
+
+  </Accordion>
+  <Accordion title="Que se passe-t-il après le déverrouillage d'urgence du logiciel ?">
+
+La session active se termine, l'événement peut être partagé avec des partenaires connectés et la documentation actuelle décrit un temps de recharge de 24 heures avant un autre verrouillage. Voir [E-Lock 20](/lockbox/errors/e-lock-20). La sécurité passe avant le temps de recharge ou la notification.
+
+  </Accordion>
+</Accordions>

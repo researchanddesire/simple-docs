@@ -1,0 +1,19 @@
+{
+  "title": "RADR",
+  "description": "RAD Remote-Anleitungen und Support",
+  "root": true,
+  "pages": [
+    "index",
+    "safety",
+    "---Set up---",
+    "...guides/getting-started",
+    "---Use RADR---",
+    "...guides/user-guide",
+    "---Compatibility and help---",
+    "...guides/reference",
+    "faqs",
+    "---Firmware and open source---",
+    "...guides/housekeeping",
+    "tools"
+  ]
+}

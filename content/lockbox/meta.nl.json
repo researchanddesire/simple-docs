@@ -1,0 +1,18 @@
+{
+  "title": "Lockbox",
+  "description": "Kuisheid Lockbox gidsen en ondersteuning",
+  "root": true,
+  "pages": [
+    "index",
+    "safety",
+    "quick-start",
+    "using",
+    "support",
+    "faqs",
+    "errors",
+    "device-states",
+    "technical",
+    "tools",
+    "changelog"
+  ]
+}

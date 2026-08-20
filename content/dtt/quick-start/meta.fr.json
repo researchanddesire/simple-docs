@@ -1,0 +1,13 @@
+{
+  "title": "Démarrage rapide",
+  "description": "Une configuration linéaire de première session",
+  "pages": [
+    "index",
+    "getting-started",
+    "pairing",
+    "using-toys",
+    "first-session",
+    "checking-results",
+    "templates"
+  ]
+}

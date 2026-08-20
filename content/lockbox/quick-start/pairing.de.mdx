@@ -1,0 +1,71 @@
+---
+title: „Koppeln Sie Ihr Lockbox“
+description: „Koppeln Sie einen Lockbox und stellen Sie 2,4 GHz Wi-Fi mit dem empfohlenen Bluetooth-Flow oder einem manuellen Code bereit.“
+---
+
+Die automatische Bluetooth-Kopplung ist die empfohlene Einrichtungsmethode. Es koppelt den Lockbox mit Ihrem Dashboard-Konto und sendet Wi-Fi-Anmeldeinformationen in einem Fluss.
+
+## Was Sie brauchen
+
+– Ein mit Strom versorgter, entsperrter Lockbox, der nicht mit einem anderen Konto gekoppelt ist
+- Ein Dashboard-Konto
+- Chrome oder Edge auf einem Desktop oder Laptop zur automatischen Kopplung
+- Ein nahegelegenes 2,4-GHz-Netzwerk Wi-Fi und sein Passwort
+
+<Callout type="info">
+
+Bluetooth wird nur für die Einrichtung in der Nähe verwendet. Nach der Kopplung erfolgt die normale Dashboard-Kommunikation über die Verbindung Wi-Fi des Lockbox.
+
+</Callout>
+
+## Empfohlen: automatische Bluetooth-Kopplung
+
+1. Melden Sie sich unter [dashboard.researchanddesire.com](https://dashboard.researchanddesire.com) an.
+2. Öffnen Sie **Einstellungen → Meine Geräte**.
+
+![Dashboard navigation with Settings and My Devices labeled](./images/lkbx-pairing-settings-dropdown-annotated.webp)
+
+3. Wählen Sie **Einen Lockbox koppeln** und wählen Sie dann die Option zum Scannen nach einem Lockbox in der Nähe.
+
+![Pair a Lockbox action in My Devices](./images/pair-a-lockbox.webp)
+
+4. Wählen Sie im Bluetooth-Auswahlmenü des Browsers Ihr Lockbox aus und genehmigen Sie die Verbindung.
+5. Wenn Sie dazu aufgefordert werden, geben Sie den Namen und das Passwort für das 2,4-GHz-Netzwerk Wi-Fi ein, das der Lockbox verwenden soll.
+6. Warten Sie, bis das Dashboard den Erfolg meldet und der Lockbox neu startet oder zum normalen Bildschirm zurückkehrt.
+
+<Callout type="success" title="Bestätigen Sie, dass die Kopplung erfolgreich war">
+
+Der Lockbox wird in **Meine Geräte** angezeigt und der Gerätestatus wechselt zu „Online“, nachdem eine Verbindung zu Wi-Fi hergestellt wurde. Die Aktualisierung des Status kann kurze Zeit in Anspruch nehmen. Verwenden Sie [Check Online Status](/lockbox/support/online-status), wenn die beiden Anzeigen nicht übereinstimmen.
+
+</Callout>
+
+## Manueller Kopplungscode
+
+Verwenden Sie diese Methode, wenn Web Bluetooth nicht verfügbar ist. Schließen Sie zuerst [manual Wi-Fi setup](/lockbox/quick-start/wifi-setup) ab.
+
+1. Öffnen Sie auf dem Lockbox **Einstellungen → Kopplung**.
+
+![Pairing selected in the Lockbox Settings menu](./images/lkbx-pairing-selection-unannotated.webp)
+
+2. Notieren Sie sich den eindeutigen Kopplungscode, der auf dem Lockbox angezeigt wird.
+
+![Pairing code shown on the Lockbox display](./images/lkbx-pairing-code-annotated.webp)
+
+3. Öffnen Sie im Dashboard **Einstellungen → Meine Geräte → Lockbox koppeln**.
+4. Geben Sie den Code ein und wählen Sie **Gerät koppeln**.
+
+![Pairing-code entry in the dashboard](./images/lockbox-pairing-code-entry-annotated.webp)
+
+5. Bestätigen Sie, dass das Gerät unter **Meine Geräte** angezeigt wird und online ist.
+
+## Wenn das Pairing nicht funktioniert
+
+| Symptom | Nächste Aktion |
+| -------------------------------------------- | ------------------------------------------------------------------------------------------- |
+| Browser bietet Bluetooth | nicht an Verwenden Sie aktuelles Chrome oder Edge auf einem Desktop/laptop und erlauben Sie Bluetooth die Berechtigung |
+| In der Auswahl erscheint kein Lockbox | Stellen Sie sicher, dass es mit Strom versorgt, in der Nähe, entsperrt und nicht bereits gekoppelt ist. einmal neu starten |
+| Wi-Fi Bereitstellung schlägt fehl | Bestätigen Sie die 2,4-GHz-Anmeldeinformationen und verwenden Sie dann [manual Wi-Fi setup](/lockbox/quick-start/wifi-setup) |
+| Im Dashboard wird angezeigt, dass es zu einem anderen Konto gehört | Bitten Sie den aktuellen Besitzer, die Verbindung zu trennen. Wenn dies nicht möglich ist, wenden Sie sich an den Support, anstatt wiederholt zu koppeln |
+| Gerät ist aufgeführt, aber offline | Folgen Sie [Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting) |
+
+Geben Sie einen Kopplungscode niemals öffentlich weiter. Wenn Eigentum oder Zugriff umstritten sind, beenden Sie die Einrichtung und senden Sie eine E-Mail an [support@researchanddesire.com](mailto:support@researchanddesire.com).

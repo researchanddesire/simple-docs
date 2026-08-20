@@ -1,0 +1,51 @@
+---
+title: "Vrije vormmodus"
+description: "Gebruik zelfgestuurde bewegingen terwijl de Deep Throat Trainer het tempo, de actieve tijd en de nauwkeurigheid van het doelvenster meet."
+---
+
+Met Freeform kunt u de beweging kiezen terwijl u het geconfigureerde tempodoel volgt. Het registreert nog steeds een gestructureerd resultaat; “vrije vorm” neemt de noodzaak van kalibratie, controle of stoppen niet weg.
+
+## Configureer
+
+1. Voeg één **Freeform**-segment toe.
+2. Selecteer het geïnstalleerde speelgoed.
+3. Kies een conservatief tempodoel en duur.
+4. Bewaar, activeer, haal op en bekijk het apparaatoverzicht.
+
+De gebruikersinterface kan tempogericht Freeform-gedrag per firmware anders labelen. Gebruik de huidige editor en apparaattekst in plaats van een historische ‘snelheidsmodus’-belofte.
+
+## Rennen
+
+Kies een ritme en bereik dat u kunt controleren. Gebruik de weergegeven gemiddelde RPM/target-feedback als informatie, niet als eis om te accelereren. Stop onmiddellijk bij veranderingen in ademhalen, comfort, stabiliteit van de berg of controle.
+
+## Resultaat en punten
+
+De huidige v2 API registreert actieve tijd, gemiddelde RPM, afstand, slagen, dieptebereik en tijd in het doelvenster. Voor een sessie die niet nul is, zijn de basispunten `active seconds × 0.5 × accuracy factor`, waarbij de factor de tijd in het doelvenster is, gedeeld door de totale speeltijd en vastgezet van 0 naar 1. De server rondt naar boven af ​​vóór een speelgoedvermenigvuldiger.
+
+## Offline grens
+
+Afspelen in cache is mogelijk beschikbaar, maar persistentie van resultaten is niet gegarandeerd totdat de sessie in het dashboard verschijnt. Zie [Offline mode](/dtt/technical/offline-mode).
+
+## Video
+
+<iframe
+  src="https://player.mux.com/SURPNES3aDtZUMBVAFN51F00jbgtZK027sBjOv5qsCurc"
+  title="Demonstratie van de vrije vormmodus"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+<Callout type="info" title="Videotranscriptie en visuele beschrijving">
+
+De demonstratie toont een Freeform-sessie waarin de gebruiker beweging kiest terwijl hij de tempofeedback bekijkt, vervolgens afrondt en het resultaat bekijkt. Interfacelabels kunnen afwijken van de huidige firmware. De bovenstaande schriftelijke procedure is het huidige, niet-visuele equivalent.
+
+</Callout>
+
+## Problemen oplossen
+
+| Symptoom | Actie |
+| ------------------------ | --------------------------------------------------------- |
+| gemiddeld tempo is onstabiel | verlaag het doel en gebruik een kleiner gecontroleerd bereik |
+| feedback reageert niet | speelgoedselectie, sensorpad en kalibratie verifiëren |
+| verwacht resultaat ontbreekt | maak opnieuw verbinding, voer een online test uit en volg de resultaten voor het oplossen van problemen |

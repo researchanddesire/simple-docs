@@ -1,0 +1,45 @@
+---
+title: "Compatibilité des appareils RADR"
+description: "Vérifiez quels modèles et commandes d'appareils ont été validés avec RADR, les limites connues et comment signaler un résultat de compatibilité."
+---
+
+Utilisez cette page avant d'acheter ou de connecter un appareil tiers. Un modèle apparaissant dans un registre Bluetooth en amont ne signifie **pas** que Research and Desire l'a validé avec RADR.
+
+<Callout type="warn" title="Démarrez chaque nouvelle connexion déchargée">
+
+Gardez l'appareil connecté à l'écart du corps, démarrez à sa puissance la plus basse et vérifiez la pause ou l'arrêt avant utilisation. Déconnectez-vous immédiatement si un contrôle se comporte différemment de l’étiquette sur RADR.
+
+</Callout>
+
+## Statut de validation
+
+Dernière revue de la documentation : **16 août 2026**. Les versions exactes du micrologiciel tiers utilisées lors des tests précédents n'ont pas été enregistrées, ces combinaisons doivent donc être testées à nouveau une fois que l'un ou l'autre des appareils a reçu une mise à jour.
+
+| Appareil | Connexion | Contrôles exposés par RADR | Statut de validation | Limites connues |
+| ------------------------------------------------------------------------------------ | ----------------------------- | ---------------------------------------------------------- | -------------------------------------------------------------------- | ------------------------------------------ |
+| [Open Source Sex Machine](https://www.researchanddesire.com/open-source-sex-machine) | Direct | Vitesse, profondeur, sensation, course, pause, arrêt et schémas | Intégration prise en charge principale | Les modèles disponibles dépendent du micrologiciel OSSM |
+| Lovense Domi / Domi 2 | Direct | Vibrations, niveau de batterie et commandes d'alimentation | Testé précédemment ; la combinaison actuelle du micrologiciel doit être reconfirmée | Les caractéristiques non vibratoires ne sont pas exposées |
+| Lovense Hyphy | Compatible avec un plug anal Bluetooth | Vibrations | Testé précédemment ; la combinaison actuelle du micrologiciel doit être reconfirmée | Vibrations uniquement |
+| Lovense Ferri | Compatible avec un plug anal Bluetooth | Vibrations | Testé précédemment ; la combinaison actuelle du micrologiciel doit être reconfirmée | Vibrations uniquement |
+
+Lockbox, Deep Throat Trainer, DG Labs Coyote et d'autres marques ou modèles ne sont **pas d'intégrations RADR validées** à moins qu'ils n'apparaissent dans le tableau ci-dessus avec un statut de validation. Ne considérez pas un appareil apparaissant simplement lors d’une analyse comme une preuve que chaque contrôle est sûr ou pris en charge.
+
+Pour la couverture du protocole en amont, consultez le [Buttplug device list](https://iostindex.com/?filter0ButtplugSupport=4). Cette liste décrit la prise en charge du protocole en amont, et non la validation RADR.
+
+## Vérifier une connexion
+
+1. Mettez à jour uniquement après avoir lu [Update RADR](/radr/guides/user-guide/updating-your-device) et les instructions de version de l'appareil connecté.
+2. Allumez l'appareil cible et placez-le dans son mode d'appairage ou de publicité documenté.
+3. Suivez [Scan and Connect a Device](/radr/guides/user-guide/device-scanning).
+4. L'appareil étant déchargé, testez d'abord la sortie la plus basse.
+5. Testez la pause ou Arrêtez et confirmez que l'appareil physique s'arrête avant de continuer.
+6. Testez un contrôle pris en charge à la fois. Ne présumez pas qu’une fonctionnalité avancée est mappée.
+
+## Si un appareil est manquant ou se comporte incorrectement
+
+- Déconnectez-le et arrêtez d'utiliser l'appairage jusqu'à ce que son comportement soit compris.
+- Enregistrez la version du micrologiciel RADR, la marque et le modèle exacts, la version du micrologiciel de l'autre appareil et quel contrôle a échoué.
+- Décrire la réponse physique attendue et réelle. Une courte vidéo n’est utile que lorsqu’elle peut être enregistrée en toute sécurité.
+- Envoyez un e-mail à [support@researchanddesire.com](mailto:support@researchanddesire.com) ou utilisez le [contact form](https://www.researchanddesire.com/pages/contact-us).
+
+Propriété de compatibilité : l'équipe Research and Desire firmware/support maintient cette matrice. Un appareil signalé reste non validé jusqu'à ce que cette équipe reproduise le résultat et mette à jour cette page.

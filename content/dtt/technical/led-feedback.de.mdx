@@ -1,0 +1,38 @@
+---
+title: „LED- und Bildschirm-Feedback“
+description: „Interpretieren Sie die Positionsrückmeldung von Deep Throat Trainer unter Verwendung von Farbe, Text und Bewegung zusammen.“
+---
+
+Der LED-Streifen bietet eine schnelle Positionsrückmeldung, aber die Farbe darf nie die einzige Bedeutungsquelle sein. Nutzen Sie den Bildschirmtext, die Zielanzeige und Ihre kontrollierte Bewegung gemeinsam.
+
+## Während eines Segments
+
+| Visueller Zustand | Bedeutung in der aktuellen Benutzerführung | Antwort |
+| --------- | ---------------------------------------------------------- | ------------------------------------------------------------- |
+| Grün / im Ziel | gemessene Position liegt innerhalb des Zielfensters | nur beibehalten, wenn es bequem ist |
+| Gelb / vorne | gemessene Position ist flacher oder vor dem Ziel | Verwenden Sie die Bildschirmrichtung. schrittweise anpassen |
+| Rot / hinten oder außen | gemessene Position liegt tiefer, hinter oder außerhalb des Ziels | Verwenden Sie die Bildschirmrichtung. stoppen, anstatt eine Korrektur zu erzwingen |
+
+Firmware und Modus können die Darstellung verändern. Wenn eine Farbe inkonsistent erscheint, sind der Begleittext und die Positionsanzeige maßgebend.
+
+## Nicht trainierte Staaten
+
+In Leerlauf-, Abschluss-, Noten- und Fehlerbildschirmen kann ebenfalls Farbe verwendet werden. Koppeln Sie die Farbe immer mit der sichtbaren Bezeichnung, z. B. **vollständig**, **Note**, **nicht bestanden** oder einem Fehlercode.
+
+## Wenn die Farbe schwer zu unterscheiden ist
+
+- Verwenden Sie die Positionsanzeige auf dem Bildschirm.
+- Reduzieren Sie die Blendung durch die Umgebung.
+- Wählen Sie ein Tempo, das langsam genug ist, um die Anzeige lesen zu können.
+- Bitten Sie eine andere Person nicht, allein aufgrund der Farbe tiefere oder schnellere Bewegungen zu steuern.
+
+## Unerwartetes Feedback
+
+| Symptom | Prüfen |
+| ------------- | --------------------------------------------------------------------------------- |
+| Feedback ändert sich nicht | Sensorpfad, Montagestabilität, Spielzeugzuordnung und Kalibrierung |
+| Feedback scheint umgekehrt zu sein | Bildschirmrichtung und aktueller Modus; Bei Unsicherheit anhalten und neu kalibrieren |
+| Farben flackern an einer Grenze | verlangsamen und erweitern oder senken Sie das Vorlagenziel, falls verfügbar |
+| keine LED, aber Bildschirm funktioniert | Fahren Sie nur fort, wenn das Bildschirm-Feedback ausreichend ist. Wiederholtes Hardwareverhalten melden |
+
+Die vollständige Sequenz finden Sie unter [Device states](/dtt/technical/device-states).

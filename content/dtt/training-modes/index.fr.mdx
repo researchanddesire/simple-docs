@@ -1,0 +1,56 @@
+---
+title: "Comparer les modes d'entraînement"
+description: "Choisissez entre Répétition, Endurance, Forme libre et Rebond par objectif, cible, retour d'information et résultat mesuré."
+---
+
+Les modèles sont créés à partir de segments. Choisissez le mode en fonction du comportement que vous souhaitez pratiquer, puis abaissez ses objectifs jusqu'à ce que vous puissiez garder le contrôle.
+
+## Comparaison
+
+| Mode | Tâche principale | Cible principale | Mesure actuelle du serveur | Commencez ici quand… |
+| -------------------------------------------- | -------------------------------------------------- | ------------------------------- | --------------------------------------------- | ---------------------------------------------------------- |
+| [Repetition](/dtt/training-modes/repetition) | répéter un mouvement cible | répétitions, rythme, profondeur/window | coups, temps dans la fenêtre, RPM, profondeur | vous voulez un mouvement répété et structuré |
+| [Endurance](/dtt/training-modes/endurance) | rester dans une zone cible | fenêtre de durée et de position | heure d'activité et heure dans la fenêtre | vous voulez une prise contrôlée |
+| [Freeform](/dtt/training-modes/freeform) | choisissez votre mouvement tout en suivant un objectif de rythme | RPM moyen et durée | temps d'activité, temps dans la fenêtre, RPM moyen | vous voulez un mouvement autonome |
+| [Bounce](/dtt/training-modes/bounce) | contrôler les deux sens d'un cycle | répétitions, rythme, profondeur/window | coups, temps dans la fenêtre, RPM, profondeur | vous pouvez déjà contrôler les mouvements répétés dans les deux sens |
+
+<Callout type="warn">
+
+Aucun mode, note ou formule de points ne définit une profondeur, une durée, une vitesse ou une progression médicalement sûre. Arrêtez-vous en cas de douleur, de difficultés respiratoires, d'étourdissements, de nausées, de perte de contrôle ou de tout symptôme inquiétant.
+
+</Callout>
+
+## Calcul des points actuel
+
+L'achèvement v2 API calcule un facteur de précision comme `time inside target window ÷ total play time`, serré de 0 à 1 (affiché ici comme 0 à 100 %). Les formules ci-dessous utilisent ce facteur de 0 à 1.
+
+- Points de base de répétition et de rebond : répétitions terminées × 2 × facteur de précision.
+- Points de base d'endurance et de forme libre : secondes actives × 0,5 × facteur de précision.
+- Une longueur de jouet configurée peut appliquer un multiplicateur de taille après le calcul de base.
+
+Le serveur arrondit les points vers le haut. Il s’agit d’un comportement de mise en œuvre révisé le 16 août 2026 et peut changer ; le résultat du tableau de bord fait autorité.
+
+## Créer un modèle
+
+1. Ouvrez le compte prévu et le Trainer couplé.
+2. Créez ou modifiez un modèle.
+3. Ajoutez un segment pour le premier test.
+4. Sélectionnez le jouet installé et les cibles conservatrices.
+5. Enregistrez et confirmez le modèle actif.
+6. Récupérez-le en ligne et consultez le résumé de l'appareil avant de commencer.
+
+## Vidéo tutoriel
+
+<iframe
+  src="https://www.loom.com/embed/befe7d1a6d3944f887cb58c845e8058b"
+  title="Créer des segments de modèle Deep Throat Trainer pour un partenaire"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+<Callout type="info" title="Transcription vidéo">
+
+Le présentateur se connecte tout en contrôlant le compte d'un partenaire, ouvre **Deep Throat Trainer → Modèles**, crée un nouveau modèle, ajoute des segments Endurance et Freeform, modifie leurs paramètres, nomme le modèle et l'enregistre. Le modèle enregistré devient disponible sur le compte contrôlé. La vidéo est antérieure aux directives actuelles en matière de sécurité et d'accès ; examinez le compte sélectionné, le jouet, l'état actif et chaque segment avant utilisation.
+
+</Callout>

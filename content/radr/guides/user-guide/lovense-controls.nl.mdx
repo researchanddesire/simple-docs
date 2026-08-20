@@ -1,0 +1,169 @@
+---
+title: "Bedien een Lovense apparaat met RADR"
+description: "Gebruik de ondersteunde RADR-besturingselementen voor een getest Lovense-model en verifieer uitvoer met lage intensiteit en stop."
+---
+
+RADR ondersteunt Lovense Bluetooth apparaten met een vereenvoudigde besturingsinterface die alleen trillingen bevat. In deze handleiding wordt beschreven hoe u Lovense-apparaten bedient.
+
+<Callout type="warn" title="Controleer het model en stop gelost">
+
+Controleer het model en de huidige validatienota in [RADR Device Compatibility](/radr/guides/reference/device-support). Houd het apparaat uit de buurt van het lichaam, begin op niveau 0, verhoog het met één stap en druk op Stop. Als het fysieke apparaat niet naar nul terugkeert, schakelt u het uit en gaat u niet verder.
+
+</Callout>
+
+<Callout type="info">
+
+RADR biedt controle over alleen trillingen voor Lovense-apparaten. Geavanceerde functies zoals verwarming, rotatie of apparaatspecifieke patronen worden momenteel niet ondersteund.
+
+</Callout>
+## Ondersteunde Lovense-apparaten
+
+Eerdere RADR-tests hadden betrekking op de volgende Lovense-apparaten; de exacte firmwareversies van derden zijn niet geregistreerd, dus raadpleeg vóór gebruik de compatibiliteitsmatrix:
+
+| Apparaat | Staat |
+| ------------- | ------ |
+| Lovense Domi | Getest |
+| Lovense Hyphy | Getest |
+| Lovense Ferri | Getest |
+
+Andere Lovense-modellen zijn niet alleen gevalideerd omdat ze een compatibel upstream-protocol gebruiken. Zie [RADR Device Compatibility](/radr/guides/reference/device-support) voor de bijgehouden lijst.
+
+## Overzicht bedieningsscherm
+
+Wanneer aangesloten op een Lovense-apparaat, is het bedieningsscherm eenvoudiger dan de OSSM-interface:
+
+- **Linker encoderknop:** Controle van de trillingsintensiteit
+- **Middelste knop:** STOP-knop
+- **Display:** Toont het trillingsniveau en de apparaatstatus
+
+## Trillingscontrole
+
+De **linker encoder** regelt de trillingsintensiteit.
+
+| Parameter | Bereik | Standaard |
+| --------- | ----- | ------- |
+| Trillen | 0–16 | 0 |
+
+- Draai met de klok mee om de intensiteit te verhogen
+- Draai tegen de klok in om de intensiteit te verlagen
+- Instelling op 0 stopt trillingen
+
+<Callout type="info">
+
+Lovense apparaten gebruiken een intensiteitsschaal van 0–16, geen percentage. Niveau 16 is maximale intensiteit.
+
+</Callout>
+## Stopknop
+
+De **middelste knop** fungeert als onmiddellijke stop:
+
+- Druk op om de trilling op 0 te zetten
+- Bevestig dat het fysieke apparaat terugkeert naar niveau 0
+
+In tegenstelling tot de OSSM is er geen pauze/resume-status; verhoog gewoon het trillingsniveau om opnieuw te starten.
+
+<Callout type="info">
+
+RADR herhaalt mogelijk de stopopdracht, maar de levering van Bluetooth kan niet worden gegarandeerd. Gebruik de eigen stroomregeling van het doelapparaat als de uitvoer aanhoudt.
+
+</Callout>
+## Batterijniveau
+
+Voor Lovense Domi (en Domi 2) kan RADR het batterijniveau van het apparaat opvragen via de directe integratie:
+
+- Batterijpercentage wordt op het scherm weergegeven
+- Controleer de batterijstatus vóór sessies om onderbrekingen te voorkomen
+
+<Callout type="info">
+
+Batterijniveau is beschikbaar voor Domi-apparaten via directe Bluetooth-integratie. Andere Lovense-apparaten ondersteunen mogelijk wel of niet de rapportage van het batterijniveau, afhankelijk van hun Buttplug.io-implementatie.
+
+</Callout>
+## Verbinding maken met Lovense apparaten
+
+### Stap 1: Bereid uw Lovense-apparaat voor
+
+Schakel uw Lovense-apparaat in. Zorg ervoor dat de Lovense-app **gesloten** is op uw telefoon: er kan slechts één controller tegelijk verbinding maken.
+
+### Stap 2: Scannen met RADR
+
+Schakel RADR in of selecteer **Apparaat zoeken** in het hoofdmenu. RADR-scans gedurende 5 seconden.
+
+### Stap 3: Selecteer uw apparaat
+
+Uw Lovense-apparaat verschijnt in de apparatenlijst. Selecteer het met de rechterknop om verbinding te maken.
+
+### Stap 4: Begin met controleren
+
+Eenmaal aangesloten, gebruikt u de linker encoder om de trillingsintensiteit te regelen.
+
+<Callout type="warn">
+
+Sluit de telefoonapp Lovense voordat u verbinding maakt met RADR. Bluetooth-apparaten kunnen slechts één actieve controller hebben.
+
+</Callout>
+## Beperkingen versus native app
+
+RADR biedt basistrillingscontrole. De volgende functies zijn **niet** beschikbaar:
+
+| Kenmerk | RADR | Lovense-app |
+| ---------------------- | ---- | ----------- |
+| Basistrilling | Ja | Ja |
+| Trillingspatronen | Nee | Ja |
+| Partnercontrole op afstand | Nee | Ja |
+| Geluidsreactieve modi | Nee | Ja |
+| Alarmfuncties | Nee | Ja |
+| Apparaatinstellingen | Nee | Ja |
+| Firmware-updates | Nee | Ja |
+
+<Callout type="idea">
+
+Gebruik RADR als u tactiele, fysieke bediening zonder telefoon wilt. Gebruik de Lovense-app voor geavanceerde functies en Remote-play.
+
+</Callout>
+## Snelle referentie| Controle | Actie |
+| ------------- | ---------------------- |
+| Linker encoder | Trilling aanpassen (0–16) |
+| Rechter encoder | Niet gebruikt |
+| Linkerbumper | Niet gebruikt |
+| Rechterbumper | Niet gebruikt |
+| Linkerknop | Terug naar hoofdmenu |
+| Middelste knop | Stoppen (ingesteld op 0) |
+| Rechterknop | Niet gebruikt |
+
+## Problemen oplossen
+
+<Callout type="info" title="Lovense-apparaat verschijnt niet in de scan">
+
+- Zorg ervoor dat het apparaat is ingeschakeld (LED knippert)
+- Sluit de telefoonapp Lovense volledig
+- Verplaats RADR binnen 1-2 meter van het apparaat
+- Schakel beide apparaten uit en weer in en probeer het opnieuw
+
+</Callout>
+<Callout type="info" title="Apparaat maakt verbinding maar trilt niet">
+
+- Zorg ervoor dat het trillingsniveau boven 0 ligt
+- Controleer of de batterij van het apparaat is opgeladen
+- Sommige apparaten hebben na het verbinden een paar seconden nodig om te initialiseren
+
+</Callout>
+<Callout type="info" title="Trillingen zijn inconsistent">
+
+- Verklein de afstand tussen RADR en het apparaat
+- Ga weg van Wi-Fi routers en andere Bluetooth apparaten
+- Zorg ervoor dat geen andere apps verbinding proberen te maken
+
+</Callout>
+## Tips
+
+<Callout type="idea">
+
+Begin bij 0 en verhoog pas één niveau per keer nadat de stopcontrole is geslaagd.
+
+</Callout>
+<Callout type="idea">
+
+De encoder biedt snelle toegang tot alle 17 niveaus (0–16). Je kunt snel door de intensiteiten scrollen.
+
+</Callout>

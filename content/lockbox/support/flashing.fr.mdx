@@ -1,0 +1,113 @@
+---
+title: "Flasher ou récupérer Lockbox Firmware"
+description: "Réinstallez le micrologiciel Lockbox avec Web Serial, choisissez le comportement d'effacement, vérifiez le succès et récupérez en toute sécurité."
+---
+
+<Callout type="warn">
+
+Flashez votre appareil uniquement si le support Research and Desire vous le demande. Si vous rencontrez des problèmes, contactez d'abord [support@researchanddesire.com](mailto:support@researchanddesire.com).
+
+</Callout>
+<iframe
+  src="https://www.loom.com/embed/09a4bc33d3d945f6811efecc78e4b5bd"
+  title="Comment reflasher votre Chastity Lockbox"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+/>
+
+<Callout type="info" title="Transcription vidéo">
+
+La vidéo montre la connexion du Lockbox à un ordinateur de bureau avec un câble USB-C compatible données, l'ouverture du flasher Web dans un navigateur Chromium, la sélection du périphérique série Lockbox, le choix de conserver ou d'effacer les données de l'appareil local, le démarrage de l'installation et l'attente du redémarrage du Lockbox. La procédure écrite ci-dessous reprend les mêmes actions et les contrôles de récupération.
+
+</Callout>
+
+## Quand flasher votre appareil
+
+Le clignotement réinstalle le firmware et peut résoudre :
+
+- L'appareil redémarre tout seul en continu (recyclage de l'alimentation ou boucle de démarrage)
+- L'appareil se bloque lorsque vous appuyez sur les boutons de menu
+- Écrans ou boutons qui ne répondent pas après le réveil
+- Problèmes logiciels qui persistent après une réinitialisation matérielle
+
+<Callout type="idea">
+
+Avant de flasher, essayez d'abord une réinitialisation matérielle : maintenez le bouton **Enter/Lock** enfoncé pendant 10 secondes. Si le problème persiste, procédez au flashage.
+
+</Callout>
+## Prérequis
+
+Avant de commencer, assurez-vous d'avoir :
+
+- Un câble USB-C qui prend en charge le **transfert de données** (pas seulement le chargement)
+- Un ordinateur avec un port USB-C disponible
+- Google Chrome ou un autre navigateur basé sur Chromium
+- Le canal et la version du micrologiciel pris en charge que vous avez demandé d'installer
+- Un enregistrement de l'état actuel du verrouillage physique et si les données locales peuvent être effacées
+
+<Callout type="info">
+
+Certains câbles USB-C prennent uniquement en charge le chargement. Si votre appareil n'est pas détecté, essayez un autre câble prenant en charge le transfert de données.
+
+</Callout>
+## Flasheur Web
+
+<Callout type="info" title="Utiliser Chrome ou Edge sur un ordinateur de bureau">
+
+Connectez le Lockbox avec un câble USB-C compatible données. Web Serial n'est pas disponible dans Safari, Firefox ou les navigateurs mobiles.
+
+</Callout>
+
+Ouvrez le [LKBX Web Flasher](/lockbox/tools/web-flasher) dédié.
+
+## Instructions clignotantes
+
+### Étape 1 : Connectez votre appareil
+
+Branchez le câble USB-C sur votre Chastity Lockbox et connectez l'autre extrémité à votre ordinateur.
+
+### Étape 2 : Ouvrez le flasher Web
+
+Utilisez le [LKBX Web Flasher](/lockbox/tools/web-flasher).
+
+### Étape 3 : Connectez-vous à votre appareil
+
+Cliquez sur **Connecter** et sélectionnez le périphérique intitulé **USB JTAG Serial Debug** (ou similaire) dans la liste.
+
+<Callout type="warn">
+
+Si aucun périphérique n'apparaît, vérifiez que votre câble prend en charge le transfert de données et essayez un autre port USB.
+
+</Callout>
+### Étape 4 : Choisissez d'effacer ou non les données de l'appareil
+
+Lorsque vous êtes invité à cocher la case **Effacer l'appareil** :
+
+| Choix | Résultat local | Utiliser quand |
+| --------------- | ------------------------------------------------------------------------- | --------------------------------------------- |
+| Laisser décoché | Tentatives de préservation des paramètres et de l'état locaux lors de la réinstallation du micrologiciel | Le support demande une réinstallation normale |
+| Vérifier effacer | Efface les paramètres locaux et l'étalonnage et nécessite une nouvelle configuration | Le support demande explicitement une réinitialisation complète |
+
+<Callout type="info">
+
+La documentation actuelle indique que le couplage du tableau de bord est préservé, mais l'état de configuration visible peut varier après la récupération. Confirmez l'appareil dans **Mes appareils** après son redémarrage et contactez l'assistance avant de le supprimer ou de le réassocier.
+
+</Callout>
+### Étape 5 : Terminez le flash
+
+Cliquez sur **Suivant** pour lancer le processus de flash. Attendez qu'il soit terminé.
+
+<Callout type="success">
+
+Une fois terminé, votre appareil redémarre. Si vous avez effacé l'appareil, il affiche l'écran d'étalonnage. Consultez le guide d'étalonnage pour les étapes suivantes. Si vous n'avez pas effacé, l'appareil revient à un fonctionnement normal.
+
+</Callout>
+
+## Vérifier la récupération
+
+1. Confirmez que le navigateur signale une installation terminée avant de déconnecter USB.
+2. Attendez que le Lockbox redémarre.
+3. Complétez [Calibration](/lockbox/device-states/calibration) si vous y êtes invité.
+4. Confirmez que l'appareil est physiquement déverrouillé avant le test.
+5. Vérifiez Wi-Fi, le couplage du tableau de bord et un cycle de verrouillage déverrouillé/unlock.Si l'installation échoue, gardez le Lockbox connecté à une alimentation stable USB, fermez les autres applications série, rouvrez Chrome ou Edge et réessayez le package pris en charge. Si le périphérique série est toujours absent ou si la deuxième tentative échoue, arrêtez-vous et contactez l'assistance avec le message du navigateur. Ne devinez pas un autre progiciel ou canal.

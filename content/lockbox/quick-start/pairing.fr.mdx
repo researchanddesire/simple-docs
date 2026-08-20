@@ -1,0 +1,71 @@
+---
+title: "Associez votre Lockbox"
+description: "Associez un Lockbox et fournissez 2,4 GHz Wi-Fi avec le flux Bluetooth recommandé ou un code manuel."
+---
+
+Le couplage automatique Bluetooth est la méthode de configuration recommandée. Il associe le Lockbox à votre compte de tableau de bord et envoie les informations d'identification Wi-Fi en un seul flux.
+
+## Ce dont vous avez besoin
+
+- Un Lockbox alimenté et déverrouillé qui n'est pas associé à un autre compte
+- Un compte tableau de bord
+- Chrome ou Edge sur un ordinateur de bureau ou portable pour un couplage automatique
+- Un réseau Wi-Fi 2,4 GHz à proximité et son mot de passe
+
+<Callout type="info">
+
+Bluetooth est utilisé uniquement pour une configuration à proximité. Après le couplage, la communication normale du tableau de bord utilise la connexion Wi-Fi du Lockbox.
+
+</Callout>
+
+## Recommandé : couplage automatique Bluetooth
+
+1. Connectez-vous à [dashboard.researchanddesire.com](https://dashboard.researchanddesire.com).
+2. Ouvrez **Paramètres → Mes appareils**.
+
+![Dashboard navigation with Settings and My Devices labeled](./images/lkbx-pairing-settings-dropdown-annotated.webp)
+
+3. Choisissez **Associez un Lockbox**, puis choisissez l'option permettant de rechercher un Lockbox à proximité.
+
+![Pair a Lockbox action in My Devices](./images/pair-a-lockbox.webp)
+
+4. Dans le sélecteur Bluetooth du navigateur, sélectionnez votre Lockbox et approuvez la connexion.
+5. Lorsque vous y êtes invité, entrez le nom et le mot de passe du réseau Wi-Fi 2,4 GHz que le Lockbox doit utiliser.
+6. Attendez que le tableau de bord signale le succès et que le Lockbox redémarre ou revienne à son écran normal.
+
+<Callout type="success" title="Confirmer que l'appairage a réussi">
+
+Le Lockbox apparaît dans **Mes appareils** et l'état de l'appareil devient en ligne une fois qu'il s'est connecté à Wi-Fi. La mise à jour du statut peut prendre un certain temps ; utilisez [Check Online Status](/lockbox/support/online-status) si les deux affichages ne sont pas d'accord.
+
+</Callout>
+
+## Code d'appairage manuel
+
+Utilisez cette méthode si Web Bluetooth n’est pas disponible. Complétez d'abord [manual Wi-Fi setup](/lockbox/quick-start/wifi-setup).
+
+1. Sur le Lockbox, ouvrez **Paramètres → Couplage**.
+
+![Pairing selected in the Lockbox Settings menu](./images/lkbx-pairing-selection-unannotated.webp)
+
+2. Notez le code d'appairage unique affiché sur le Lockbox.
+
+![Pairing code shown on the Lockbox display](./images/lkbx-pairing-code-annotated.webp)
+
+3. Dans le tableau de bord, ouvrez **Paramètres → Mes appareils → Associer un Lockbox**.
+4. Saisissez le code et choisissez **Associer l'appareil**.
+
+![Pairing-code entry in the dashboard](./images/lockbox-pairing-code-entry-annotated.webp)
+
+5. Vérifiez que l'appareil apparaît dans **Mes appareils** et qu'il est en ligne.
+
+## Si l'appairage ne fonctionne pas
+
+| Symptôme | Action suivante |
+| -------------------------------------------- | --------------------------------------------------------------------------------------------------------- |
+| Le navigateur n'offre pas Bluetooth | Utiliser Chrome ou Edge actuel sur un ordinateur de bureau/laptop et autoriser l'autorisation Bluetooth |
+| Aucun Lockbox n'apparaît dans le sélecteur | Vérifiez qu'il est alimenté, à proximité, déverrouillé et qu'il n'est pas déjà couplé ; redémarrez-le une fois |
+| Le provisionnement Wi-Fi échoue | Confirmez les informations d'identification 2,4 GHz, puis utilisez [manual Wi-Fi setup](/lockbox/quick-start/wifi-setup) |
+| Le tableau de bord indique qu'il appartient à un autre compte | Demandez au propriétaire actuel de le dissocier ; si cela est impossible, contactez l'assistance plutôt que d'effectuer des couplages répétés |
+| L'appareil est répertorié mais hors ligne | Suivre [Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting) |
+
+Ne partagez jamais publiquement un code de couplage. Si la propriété ou l'accès est contesté, arrêtez l'installation et envoyez un e-mail à [support@researchanddesire.com](mailto:support@researchanddesire.com).

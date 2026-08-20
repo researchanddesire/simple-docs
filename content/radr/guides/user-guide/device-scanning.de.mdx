@@ -1,0 +1,53 @@
+---
+title: „Scannen und verbinden Sie ein Gerät mit RADR“
+description: „Identifizieren Sie Scan-Ergebnisse, schließen Sie ein validiertes Gerät an, bestätigen Sie die Steuerungszuordnung und stellen Sie eine fehlgeschlagene Verbindung sicher wieder her.“
+---
+
+RADR scannt beim Start in der Nähe befindliche Bluetooth-Geräte. Sie können auch **Gerätesuche** aus dem Hauptmenü auswählen, um erneut zu scannen.
+
+<Callout type="warn" title="Ein Scanergebnis ist keine Kompatibilitätsgarantie">
+
+Schließen Sie nur ein in [RADR Device Compatibility](/radr/guides/reference/device-support) aufgeführtes Modell an. Lassen Sie es unbelastet und überprüfen Sie die niedrigste Leistung und stoppen Sie es vor der Verwendung. Schließen Sie kein „unbekanntes Gerät“ an, um herauszufinden, was seine Bedienelemente bewirken.
+
+</Callout>
+
+## Vor dem Scannen
+
+1. Laden Sie beide Geräte auf und achten Sie darauf, dass sie nicht weiter als ein paar Meter voneinander entfernt sind.
+2. Schließen Sie die Telefon-App des Herstellers und trennen Sie andere Controller. Viele Bluetooth-Geräte akzeptieren nur einen Controller.
+3. Versetzen Sie das Zielgerät in den dokumentierten Kopplungs- oder Werbemodus.
+4. Halten Sie das physische Gerät vom Körper fern und bereit zum Ausschalten.
+
+## Scannen und verbinden
+
+1. Wählen Sie im Hauptmenü von RADR **Gerätesuche**.
+2. Warten Sie, bis der Scan abgeschlossen ist und die Geräteliste angezeigt wird.
+3. Drehen Sie den rechten Encoder, um den genauen angekündigten Namen hervorzuheben. Ein unbenanntes Ergebnis erscheint als **Unbekanntes Gerät**; abbrechen, anstatt es auszuwählen.
+4. Drücken Sie die rechte Taste, um eine Verbindung herzustellen. RADR kann die Status „Initialisierung“, „Verbindung“, „Fähigkeitserkennung“ und „Bereit“ anzeigen.
+5. Warten Sie auf den gerätespezifischen Kontrollbildschirm. Wenn die Bildschirm- oder Steuerelementbezeichnungen nicht mit dem erwarteten Modell übereinstimmen, trennen Sie die Verbindung.
+6. Testen Sie bei der niedrigsten Ausgabe jeweils eine Steuerung und bestätigen Sie dann, dass sich „Stopp“ auf das physische Gerät auswirkt.
+
+| Gerätelistensteuerung | Aktion |
+| ------------------- | ---------------------------------- |
+| Rechter Encoder | Durch die Ergebnisse navigieren |
+| Rechte Taste | Verbinden Sie das markierte Gerät |
+| Linke Taste | Abbrechen und zum Hauptmenü zurückkehren |
+
+RADR steuert jeweils ein angeschlossenes Gerät. Kehren Sie zum Hauptmenü zurück und scannen Sie erneut, bevor Sie das Gerät wechseln.
+
+## Wenn das Gerät nicht angezeigt wird
+
+- Bestätigen Sie, dass das genaue Modell in der Kompatibilitätsmatrix enthalten ist.
+- Vergewissern Sie sich, dass es eingeschaltet ist und Werbung macht, und schließen Sie dann alle bereits damit verbundenen Apps.
+- Bewegen Sie beide Geräte näher heran, schalten Sie sie aus und wieder ein und scannen Sie erneut.
+- Wenn mehrere identische Namen angezeigt werden, schalten Sie die anderen Geräte aus und scannen Sie erneut, anstatt zu raten.
+
+## Wenn die Verbindung oder Steuerung fehlschlägt
+
+1. Setzen Sie alle verfügbaren Steuerelemente auf Null zurück und verwenden Sie Stop.
+2. Schalten Sie das Zielgerät aus, wenn die physische Ausgabe weiterhin oder unerwartet erfolgt.
+3. Schließen Sie andere Bluetooth-Controller, schalten Sie beide Geräte aus und wieder ein und versuchen Sie es einmal erneut.
+4. Wenn es erneut fehlschlägt, notieren Sie die beim Start angezeigte RADR-Firmwareversion, das genaue Zielmodell und die Firmware, die Bildschirmmeldung und das tatsächliche Verhalten.
+5. Senden Sie diese Informationen an [support@researchanddesire.com](mailto:support@researchanddesire.com). Verwenden Sie kein Mapping weiter, das sich nicht ordnungsgemäß verhält.
+
+RADR erinnert sich möglicherweise an eine kürzlich erfolgte Verbindung und versucht, die Verbindung wiederherzustellen. Verlassen Sie sich niemals auf die Wiederherstellung der Verbindung als Sicherheitsmaßnahme; Bestätigen Sie den Bildschirm und die physische Reaktion nach einem Sturz.

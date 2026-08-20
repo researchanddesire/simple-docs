@@ -1,0 +1,48 @@
+---
+title: "E-DTT-1 : échec de la vérification en ligne"
+description: "Diagnostiquer un entraîneur qui a rejoint Wi-Fi mais ne peut pas effectuer le bilan de santé en ligne R+D."
+---
+
+## Signification
+
+E-DTT-1 signifie que le contrôle de santé en ligne a échoué. Le formateur a peut-être rejoint le réseau local Wi-Fi, mais il n'a pas répondu à la demande de serveur requise. Cela ne prouve pas qu'un pare-feu en soit la cause.
+
+## Échelle de diagnostic
+
+### 1. Confirmez le service réseau ordinaire
+
+En utilisant un autre appareil sur le même Wi-Fi, confirmez qu'Internet fonctionne. Redémarrez le routeur uniquement si vous êtes autorisé à le faire et que d'autres clients ont également un problème.
+
+### 2. Répétez la configuration de Wi-Fi
+
+Suivez [Connect the Trainer to Wi-Fi](/dtt/quick-start/pairing/wifi-setup). Ressaisissez le mot de passe et laissez le Trainer redémarrer.
+
+### 3. Vérifiez les restrictions du réseau
+
+Recherchez une connexion de navigateur captive, une isolation client, des appareils /blocked en pause, des contrôles parentaux, un filtrage DNS ou un réseau IoT/guest qui bloque le trafic sortant. Ne désactivez pas l'intégralité du pare-feu ; modifiez uniquement une règle que vous comprenez ou demandez à l'administrateur réseau.
+
+### 4. Comparez avec un simple hotspot
+
+Connectez le Trainer à un point d'accès téléphonique comme test de diagnostic temporaire. Si le point d'accès fonctionne, la configuration réseau d'origine constitue la limite probable. Si les deux échouent, rassemblez des preuves à l’appui.
+
+<Callout type="info">
+
+Un test de point d'accès peut utiliser des données mobiles. Restaurez ensuite le réseau prévu ; ne laissez pas d'informations d'identification sur un téléphone partagé sans autorisation.
+
+</Callout>
+
+## Succès
+
+Le formateur redémarre, termine le vol en amont sans E-DTT-1 et récupère le modèle et le jouet attendus.
+
+## Contacter l'assistance
+
+Envoyez un e-mail à [support@researchanddesire.com](mailto:support@researchanddesire.com) avec :
+
+- Trainer ID et version du firmware si affiché ;
+- si la configuration de Wi-Fi elle-même réussit ;
+- si un autre client dispose d'Internet sur ce réseau ;
+- si un point d'accès téléphonique modifie le résultat ;
+- type de routeur/network et texte d'erreur exact.
+
+N'envoyez pas de mots de passe ou d'identifiants de compte Wi-Fi.

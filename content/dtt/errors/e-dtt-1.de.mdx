@@ -1,0 +1,48 @@
+---
+title: "E-DTT-1: Online-Überprüfung fehlgeschlagen"
+description: "Diagnostizieren Sie einen Trainer, der Wi-Fi beigetreten ist, aber den Online-Gesundheitscheck von R+D nicht abschließen kann."
+---
+
+## Bedeutung
+
+E-DTT-1 bedeutet, dass die Online-Integritätsprüfung fehlgeschlagen ist. Der Trainer ist möglicherweise dem lokalen Wi-Fi-Netzwerk beigetreten, hat jedoch die erforderliche Serveranforderung nicht abgeschlossen. Dies beweist nicht, dass eine Firewall die Ursache ist.
+
+## Diagnoseleiter
+
+### 1. Bestätigen Sie den normalen Netzwerkdienst
+
+Vergewissern Sie sich mithilfe eines anderen Geräts auf demselben Wi-Fi, dass die Internetverbindung funktioniert. Starten Sie den Router nur dann neu, wenn Sie dazu berechtigt sind und auch andere Clients ein Problem haben.
+
+### 2. Wiederholen Sie die Einrichtung von Wi-Fi
+
+Folgen Sie [Connect the Trainer to Wi-Fi](/dtt/quick-start/pairing/wifi-setup). Geben Sie das Passwort erneut ein und lassen Sie den Trainer neu starten.
+
+### 3. Überprüfen Sie die Netzwerkbeschränkungen
+
+Suchen Sie nach einer Captive-Browser-Anmeldung, Client-Isolation, angehaltenen/blocked-Geräten, Kindersicherung, DNS-Filterung oder einem IoT/guest-Netzwerk, das ausgehenden Datenverkehr blockiert. Deaktivieren Sie nicht die gesamte Firewall. Ändern Sie nur eine Regel, die Sie verstehen, oder fragen Sie den Netzwerkadministrator.
+
+### 4. Vergleichen Sie mit einem einfachen Hotspot
+
+Verbinden Sie den Trainer als temporären Diagnosetest mit einem Telefon-Hotspot. Wenn der Hotspot funktioniert, ist die ursprüngliche Netzwerkkonfiguration die wahrscheinliche Grenze. Wenn beides fehlschlägt, sammeln Sie Belege zur Unterstützung.
+
+<Callout type="info">
+
+Ein Hotspot-Test kann mobile Daten nutzen. Stellen Sie anschließend das gewünschte Netzwerk wieder her; Hinterlassen Sie keine Zugangsdaten ohne Erlaubnis auf einem gemeinsam genutzten Telefon.
+
+</Callout>
+
+## Erfolg
+
+Der Trainer startet neu, schließt den Preflight ohne E-DTT-1 ab und ruft die erwartete Vorlage und das erwartete Spielzeug ab.
+
+## Kontaktieren Sie den Support
+
+E-Mail an [support@researchanddesire.com](mailto:support@researchanddesire.com) mit:
+
+- Trainer ID und Firmware-Version, falls angezeigt;
+- ob die Einrichtung von Wi-Fi selbst erfolgreich ist;
+- ob ein anderer Client Internet in diesem Netzwerk hat;
+- ob ein Telefon-Hotspot das Ergebnis verändert;
+- router/network Typ und genauer Fehlertext.
+
+Senden Sie keine Wi-Fi-Passwörter oder Kontoanmeldeinformationen.

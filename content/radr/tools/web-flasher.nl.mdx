@@ -1,0 +1,31 @@
+---
+title: "RADR-webflasher"
+description: "Installeer de huidige stabiele RADR-firmware via USB of herstel een afstandsbediening waarvan de ondersteuning u heeft gevraagd deze opnieuw te flashen."
+---
+
+importeer { DeviceFlasher } van "@repo/device-tools/device-flasher";
+
+Gebruik deze tool om RADR-firmware rechtstreeks vanuit een desktopbrowser via USB-C te installeren of te herstellen.
+
+<Callout type="info" title="Gebruik Chrome of Edge op een desktopcomputer">
+
+Web Serial is niet beschikbaar in Safari, Firefox of mobiele browsers. Gebruik een data-compatibele USB-C-kabel en sluit elke andere app via de seriële poort.
+
+</Callout>
+
+## Voordat u verbinding maakt
+
+1. Stop en koppel elk bestuurd apparaat los.
+2. Noteer de huidige firmwareversie en instellingen als RADR nog steeds kan starten.
+3. Gebruik een USB-datakabel, geen oplaadkabel, en sluit indien mogelijk rechtstreeks aan op de computer.
+4. Houd het browsertabblad geopend en de kabel aangesloten totdat het hulpprogramma voltooiing meldt.
+
+Knipperen kan de apparaatfirmware vervangen en kan instellingen resetten. De versie die door de tool wordt weergegeven, is gezaghebbend voor die bewerking; deze pagina bevat geen harde code voor een huidige versie.
+
+<DeviceFlasher device="radr" />
+
+## Verifiëren of herstellen
+
+Na een geslaagde flits schakelt u de RADR uit en weer in, bevestigt u de opstartversie en controleert u de menu's voordat u een apparaat opnieuw aansluit. Sluit onbelast opnieuw aan en test de laagste output en Stop.
+
+Als er geen serieel apparaat verschijnt, sluit u andere seriële tools, sluit u de kabel opnieuw aan, probeert u een andere datakabel of USB-poort en opent u Chrome of Edge opnieuw. Als het knipperen herhaaldelijk mislukt, stop dan met opnieuw proberen en stuur de browser, het besturingssysteem, de geselecteerde versie en het laatste toolbericht naar [support](mailto:support@researchanddesire.com).

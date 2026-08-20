@@ -1,0 +1,55 @@
+---
+title: „Flash oder Wiederherstellung OSSM Firmware“
+description: „Vorbereiten, Installieren, Überprüfen und Wiederherstellen der OSSM- oder RADR-Firmware mit den unterstützten Browser-Tools.“
+---
+
+Verwenden Sie das Firmware-Flashen, um ein Gerät wiederherzustellen oder wenn Sie vom Support von Research and Desire dazu aufgefordert werden. Für die alltägliche Steuerung ist kein Blinken erforderlich.
+
+## Wählen Sie das richtige Werkzeug
+
+- [OSSM web flasher](/ossm/tools/web-flasher) für die Steuerplatine OSSM
+- [RADR web flasher](/radr/tools/web-flasher) für die drahtlose Fernbedienung
+- [OSSM BLE controller](/ossm/tools/web-controller) zur Browsersteuerung ohne Flashen
+- [OSSM Funscript Player](/ossm/tools/funscript-player) für lokal synchronisierte Wiedergabe
+- [Gold Motor Programming Tool](/ossm/tools/gold-motor-programming) nur für unterstützte Motorkonfiguration
+
+## Anforderungen
+
+- Desktop Chrome oder Edge mit Web Serial-Unterstützung
+- Ein USB-Datenkabel, kein reines Ladekabel
+- Stabile Computerleistung und eine unterbrechungsfreie USB-Verbindung
+- Das genaue im Flasher ausgewählte Gerät
+– Es ist Zeit, Wi-Fi oder Geräteeinstellungen erneut einzugeben, wenn das installierte Image sie zurücksetzt
+
+<Callout type="error" title="Machen Sie das Gerät vor dem USB-Flashen sicher">
+
+Stoppen Sie alle Bewegungen, entfernen Sie Personen, trennen Sie den Motor von OSSM und schließen Sie nur die Steuerplatine oder die Fernbedienung über USB an. Während einer Sitzung nicht blinken.
+
+</Callout>
+
+## Stabile Firmware installieren
+
+1. Öffnen Sie den Flasher für das genaue Gerät.
+2. Belassen Sie **Modus** auf **Produktion (stabil)**, es sei denn, der Support hat einen bestimmten Entwicklungslink bereitgestellt.
+3. Wählen Sie **Verbinden & Flash** und wählen Sie den seriellen Port aus, der angezeigt wird, wenn das Gerät angeschlossen ist.
+4. Bestätigen Sie das Gerät und die Installation. Ziehen Sie nicht den Netzstecker, schließen Sie die Lasche nicht und lassen Sie den Computer nicht in den Ruhezustand versetzen.
+5. Warten Sie, bis das Installationsprogramm den Abschluss meldet.
+
+Der Flasher installiert das stabile Manifest, das zum Zeitpunkt der Ausführung verfügbar ist. Die Seite verspricht keine Versionsnummer; Notieren Sie die vom Gerät nach dem Neustart angezeigte Version.
+
+## Erfolg überprüfen
+
+1. Trennen Sie USB, schließen Sie die normale Stromanordnung wieder an und starten Sie mit leerem Bewegungspfad neu.
+2. Bestätigen Sie, dass das Gerät startet und eine Firmware-Version anzeigt.
+3. Konfigurieren Sie Wi-Fi neu oder koppeln Sie es nur, wenn das Gerät dies anfordert.
+4. Bestätigen Sie bei OSSM vor der Verwendung die unbelastete Referenzfahrt, minimale Bewegung und Stopp.
+
+## Wenn das Flashen fehlschlägt
+
+- Lassen Sie das Installationsprogramm geöffnet und schließen Sie das Kabel erneut an, um den richtigen seriellen Anschluss zu ermitteln.
+- Versuchen Sie es mit einem anderen bekanntermaßen datenfähigen Kabel oder einem direkten Computeranschluss. Vermeiden Sie einen Hub ohne Stromversorgung.
+- Schließen Sie andere Registerkarten oder Programme über die serielle Schnittstelle.
+- Versuchen Sie es einmal erneut mit dem stabilen Image. Wechseln Sie nicht durch Entwicklungszweige.
+- Wenn das Gerät nicht mehr startet oder wiederholtes stabiles Flashen fehlschlägt, halten Sie an und senden Sie eine E-Mail an [support@researchanddesire.com](mailto:support@researchanddesire.com) mit Gerätetyp, angezeigter Version, Browser, Betriebssystem, Installationsmeldung und ob die Einstellungen gelöscht wurden.
+
+**Anwendbarkeit:** Browseranforderungen und verfügbare Manifeste können sich ändern. Zuletzt überprüft am 16. August 2026.

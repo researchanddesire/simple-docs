@@ -1,0 +1,113 @@
+---
+title: "Lockbox États de veille et d'alimentation"
+description: "Comparez le comportement, la connectivité et les actions de réveil de Lockbox en veille, en pseudo-sommeil et en veille profonde."
+---
+
+## Aperçu
+
+<Callout type="info">
+
+Les horaires ci-dessous décrivent le comportement actuellement documenté. Firmware peut modifier le timing de gestion de l'alimentation. Si votre appareil se comporte différemment, utilisez les indicateurs d'écran et de connectivité comme source de vérité et contactez l'assistance avec la version du micrologiciel affichée.
+
+</Callout>
+
+Votre Chastity Lockbox comprend plusieurs états d'économie d'énergie pour vous aider à préserver la durée de vie de la batterie tout en conservant les fonctionnalités dont vous avez besoin.
+
+| État | Délai d'attente | Écran | Wi-Fi | Idéal pour |
+| ------------ | ---------- | ------------ | ------------ | ----------------------- |
+| Inactif | 30 secondes | Estompé (10%) | Connecté | Courtes pauses |
+| Pseudo-sommeil | 2 minutes | Désactivé | Connecté | Utilisation quotidienne |
+| Sommeil profond | 10 minutes | Désactivé | Déconnecté | Économie de batterie étendue |
+
+## Gestion automatique de l'alimentation
+
+Votre appareil passe automatiquement d'un état d'alimentation à l'autre en fonction de son inactivité :
+
+1. **Actif** — Pleine luminosité, toutes les fonctionnalités activées
+2. **Inactif (30 secondes)** — L'écran s'assombrit jusqu'à environ 10 % de luminosité.
+3. **Pseudo-veille (2 minutes)** — L'écran s'éteint, Wi-Fi reste connecté
+4. **Veille profonde (10 minutes)** — Wi-Fi se déconnecte, consommation d'énergie minimale
+
+<Callout type="idea">
+
+Toute pression sur un bouton ou toute rotation de l'encodeur réinitialise la minuterie et ramène l'appareil en mode actif. La première interaction réveille l'appareil ; vous devrez peut-être appuyer à nouveau pour effectuer l'action souhaitée.
+
+</Callout>
+## Veille automatique (inactivité et pseudo-veille)
+
+Le sommeil automatique s'active tout seul pendant de courtes périodes d'inactivité. Vous n'avez rien à faire : l'appareil gère intelligemment la gestion de l'alimentation.
+
+**Que se passe-t-il en mode veille automatique :**
+
+- L'écran s'assombrit après 30 secondes, puis s'éteint après 2 minutes
+- Wi-Fi reste connecté pour la communication avec le détenteur de clé
+- Les minuteries de verrouillage continuent de fonctionner normalement
+- L'appareil se réveille instantanément lorsque vous interagissez avec lui
+
+<Callout type="info">
+
+Lorsqu'il est connecté à l'alimentation USB (chargement), l'appareil n'entrera pas en veille profonde. Il reste tout au plus en pseudo-veille, garantissant que votre détenteur de clé peut toujours envoyer des commandes.
+
+</Callout>
+## Sommeil profond
+
+La veille profonde permet des économies d'énergie maximales. Il s'active automatiquement après 10 minutes d'inactivité (hors charge), ou vous pouvez l'activer manuellement depuis le menu.
+
+**Que se passe-t-il pendant le sommeil profond :**
+
+- L'écran, Wi-Fi, Bluetooth et la plupart des capteurs s'éteignent
+- L'état verrouillé ou déverrouillé reste inchangé
+- La communication à distance avec les détenteurs de clés est désactivée
+- L'appareil consomme un minimum d'énergie
+
+### Sommeil profond manuel
+
+### Étape 1 : Entrez dans le sommeil profond
+
+Accédez au menu et sélectionnez **Veille**, puis appuyez sur Entrée pour confirmer.
+
+### Étape 2 : Réveillez l'appareil
+
+Appuyez sur le bouton Entrée (ou sur le bouton Retour, selon le matériel) pour quitter la veille profonde et restaurer toutes les fonctionnalités.
+
+<Callout type="success">
+
+L'appareil démarrera et se reconnectera automatiquement à Wi-Fi.
+
+</Callout>
+<Callout type="warn">
+
+En veille profonde, le Lockbox ne peut pas recevoir de commandes du détenteur de clé à distance. Confirmez que le Lockee dispose d'un accès local et d'urgence avant de l'utiliser pendant une session.
+
+</Callout>
+### Réveil automatique pour les minuteries
+
+Si vous disposez d'un verrouillage temporisé actif, votre appareil calcule une heure de réveil optimale pour garantir qu'il est réveillé avant l'expiration du verrouillage. Vous n'avez pas à craindre de manquer votre déverrouillage.
+
+## Quand utiliser le sommeil profond manuel
+
+La veille profonde manuelle est appropriée pour des situations spécifiques où la conservation de l'énergie est prioritaire sur la connectivité :
+
+- **Longs voyages** pour lesquels vous devrez peut-être déverrouiller à mi-chemin mais n'aurez pas accès à la recharge
+- **Période prolongée sans alimentation** comme le camping ou les voyages
+- **Stockage** lorsque l'appareil n'est pas utilisé pendant plusieurs jours
+
+<Callout type="info">
+
+Pour une utilisation quotidienne régulière, la veille automatique gère efficacement la gestion de l’énergie. La plupart des utilisateurs n’ont jamais besoin d’activer manuellement le sommeil profond.
+
+</Callout>
+## Bonnes pratiques
+<Callout type="info" title="Maximiser la durée de vie de la batterie">
+
+- Gardez l'appareil branché lorsque vous êtes à la maison
+- La veille automatique gère efficacement la gestion quotidienne de l'énergie
+- Réservez la veille profonde manuelle pour les situations où vous avez réellement besoin d'une durée de vie prolongée de la batterie
+
+</Callout>
+<Callout type="info" title="Restez connecté à votre détenteur de clé">
+- Évitez la mise en veille profonde manuelle si votre détenteur de clé peut avoir besoin d'envoyer des commandes
+- Communiquez avec votre détenteur de clé avant d'entrer en veille profonde manuelle
+- N'oubliez pas que la veille automatique (y compris la pseudo-sommeil) maintient une connectivité complète
+
+</Callout>

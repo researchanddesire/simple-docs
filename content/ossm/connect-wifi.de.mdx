@@ -1,0 +1,42 @@
+---
+title: „Verbinde OSSM mit Wi-Fi“
+description: „Verbinden Sie OSSM mit einem 2,4-GHz-Wi-Fi-Netzwerk mit dem Web-Controller oder dem RADR-Setup-Portal und überprüfen Sie den Online-Status.“
+---
+
+Wi-Fi ermöglicht Firmware-Updates. Für die kabelgebundene lokale Steuerung ist dies nicht erforderlich. Für ein 2,4-GHz-Netzwerk benötigen Sie den Netzwerknamen und das Passwort.
+
+## Option 1: Webcontroller
+
+1. Einschalten und Home OSSM.
+2. Öffnen Sie [OSSM web controller](/ossm/tools/web-controller) im Desktop-Chrome oder Edge.
+3. Wählen Sie **Verbinden**, wählen Sie OSSM und wählen Sie **Pair**.
+4. Öffnen Sie **Wi-Fi Settings**, geben Sie den Netzwerknamen und das Passwort ein und wählen Sie dann **Save & Connect**.
+
+![The web controller Wi-Fi settings form with network fields identified](./images/web-controller-wifisettings2-annotated-1.webp)
+
+## Option 2: RADR
+
+1. Verbinden Sie RADR mit OSSM, öffnen Sie **Einstellungen** und wählen Sie **Wi-Fi Einstellungen**.
+2. Scannen Sie den QR code oder treten Sie dem auf dem Bildschirm angezeigten temporären **RADR-Setup**-Netzwerk bei.
+3. Wählen Sie im Setup-Portal **Configure Wi-Fi** aus.
+4. Wählen Sie das 2,4-GHz-Netzwerk, geben Sie das Passwort ein und speichern Sie es.
+
+![The RADR Settings menu](./images/wireless-remote-wifi-connectivity-settings-unannotated.webp)
+
+![The RADR Wi-Fi Settings choice](./images/wireless-remote-wifi-connectivity-wifi-settings-unannotated.webp)
+
+![The RADR setup QR code shown on the remote](./images/wireless-remote-wifi-connectivity-wifi-qr-code-unannotated.webp)
+
+![A phone joined to the temporary RADR Setup network](./images/radr-wifi-setup-annotated.webp)
+
+![The Wi-Fi setup portal network configuration choice](./images/wifi-manager-annotated.webp)
+
+![The setup portal network list and password entry](./images/radr-wifi-network-selection-annotated.webp)
+
+<Callout type="success" title="Erfolg">
+
+Die Anzeige Wi-Fi zeigt einen grünen Status und bleibt nach einem Neustart verbunden. Ein gelber Status bedeutet, dass das Netzwerk verbunden ist, der Onlinedienst jedoch nicht. Rot bedeutet keine Wi-Fi-Verbindung.
+
+</Callout>
+
+Wenn die Einrichtung fehlschlägt, bestätigen Sie, dass 2,4 GHz aktiviert ist, geben Sie das Passwort erneut ein, gehen Sie näher an den Router heran und sehen Sie sich [OSSM troubleshooting](/ossm/troubleshooting) an.

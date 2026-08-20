@@ -1,0 +1,30 @@
+---
+title: "DTT Webflitser"
+description: "Installeer of herstel stabiele Deep Throat Trainer-firmware via USB met een ondersteunde desktopbrowser."
+---
+
+importeer { DeviceFlasher } van "@repo/device-tools/device-flasher";
+
+Gebruik deze tool om Deep Throat Trainer-firmware rechtstreeks vanuit een desktopbrowser via USB te installeren of te herstellen. Beëindig de fysieke sessie en stel het speelgoed buiten gebruik voordat u de Trainer aansluit.
+
+<Callout type="info" title="Gebruik Chrome of Edge op een desktopcomputer">
+
+Sluit de Trainer aan met een data-compatibele USB-kabel. Web Serial is niet beschikbaar in Safari, Firefox of mobiele browsers. Trainers die vóór 1 juli 2025 zijn aangeschaft, ondersteunen het knipperen van USB niet.
+
+</Callout>
+
+## Voordat je gaat knipperen
+
+- Gebruik Chrome of Edge op een desktopcomputer.
+- Gebruik een USB-C-kabel die geschikt is voor data; een alleen-oplaadkabel kan niet flitsen.
+- Selecteer **Productie (stabiel)** tenzij ondersteuning u een exacte ontwikkelingstak en commit geeft.
+- Laat alle opties voor **Wis apparaat** uitgeschakeld. De huidige dashboardflitser dwingt opzettelijk DTT-installaties af om de koppeling op het apparaat, Wi-Fi, kalibratie en opgeslagen instellingen te behouden.
+- Houd de computer wakker en de kabel aangesloten tot voltooiing.
+
+## Verifieer en herstel
+
+Na een succesvolle installatie koppelt u USB los, start u de Trainer opnieuw op en laat u de preflight voltooien. Bevestig koppeling, Wi-Fi, speelgoed, kalibratie en actieve sjabloon vóór een fysieke sessie.
+
+Als de browser het seriële apparaat niet kan vinden, probeer dan een andere datakabel of USB poort. Als de installatie herhaaldelijk mislukt of de Trainer niet meer opstart, stop dan en stuur een e-mail naar [support@researchanddesire.com](mailto:support@researchanddesire.com) met de aankoopdatum van de hardware, browser, besturingssysteem, geselecteerd kanaal en installatiebericht.
+
+<DeviceFlasher device="dtt" />

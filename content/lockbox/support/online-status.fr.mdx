@@ -1,0 +1,33 @@
+---
+title: "Vérifier l'état en ligne de Lockbox"
+description: "Comparez l'indicateur de connexion en direct du Lockbox avec l'état en ligne retardé du tableau de bord."
+---
+
+Le Lockbox physique affiche l'état de la connexion en direct. Le tableau de bord peut prendre jusqu'à 60 secondes pour le refléter.
+
+## Comparez les indicateurs
+
+| Physique Lockbox | Tableau de bord | Signification | Actions |
+| -------------------------------- | ----------------- | ----------------------------------------------------- | ---------------------------------------------- |
+| Pas d'icône ou de point Wi-Fi | Hors ligne | Wi-Fi est déconnecté ou l'appareil est en veille profonde | Réveillez-le ; puis reconnectez Wi-Fi si nécessaire |
+| Icône Wi-Fi + point jaune clignotant | Hors ligne ou en ligne | L'appareil se connecte au service de tableau de bord | Attendez jusqu'à 60 secondes |
+| Icône Wi-Fi + point vert uni | En ligne | Entièrement connecté | Aucune action |
+| Icône Wi-Fi + point vert uni | Hors ligne | L'état du tableau de bord est retardé ou les comptes diffèrent | Attendez 60 secondes, confirmez le compte, actualisez une fois |
+| Icône Wi-Fi + point rouge | Hors ligne | J'ai rejoint Wi-Fi mais je ne parviens pas à accéder à Internet | Testez le réseau ou un hotspot |
+
+![Lockbox Wi-Fi connected with a solid green status indicator](../img/wifi-solid-green.webp)
+
+## Vérifiez l'appareil
+
+1. Réveillez le Lockbox.
+2. Attendez que l'icône et le point Wi-Fi se stabilisent.
+3. Comparez l'affichage avec [Status Symbols](/lockbox/using/symbols).
+
+## Vérifiez le tableau de bord
+
+1. Connectez-vous et ouvrez **Paramètres → Mes appareils**.
+2. Confirmez que le bon Lockbox est associé à ce compte.
+3. Ouvrez la page Lockbox et vérifiez son indicateur en ligne/offline.
+4. Attendez jusqu'à 60 secondes après que l'appareil devienne vert.
+
+Si les deux statuts ne sont toujours pas d'accord, suivez [Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting). Si une session active est impliquée, confirmez l’état du verrouillage physique avant d’envoyer une autre commande.

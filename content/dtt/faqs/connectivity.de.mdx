@@ -1,0 +1,28 @@
+---
+title: „Fragen zur Konnektivität“
+description: „Diagnostizieren Sie 2,4-GHz-Setup, Captive-Portale, Offline-Wiedergabe, Server-Erreichbarkeit und fehlende Ergebnisse.“
+---
+
+## Welches Wi-Fi verwendet der Trainer?
+
+Das dokumentierte Setup unterstützt 2,4 GHz Wi-Fi. Verwenden Sie [Wi-Fi setup](/dtt/quick-start/pairing/wifi-setup) und wählen Sie ein 2,4-GHz-Netzwerk.
+
+## Warum sagt Trainer Setup „Kein Internet“?
+
+Es handelt sich um ein temporäres lokales Konfigurationsnetzwerk, nicht um eine Internetverbindung. Bleiben Sie in Verbindung und öffnen Sie `http://192.168.4.1`, wenn das Portal nicht angezeigt wird.
+
+## Warum kann es Wi-Fi beitreten, aber immer noch E-DTT-1 anzeigen?
+
+Die lokale Verbindung war erfolgreich, die Online-Zustandsprüfung jedoch nicht. Router-Filterung, Client-Isolation, Captive-Login, DNS, Firewall oder Upstream-Konnektivität können beteiligt sein. Folgen Sie [E-DTT-1](/dtt/errors/e-dtt-1) und verwenden Sie einen Telefon-Hotspot nur als Diagnosevergleich.
+
+## Was funktioniert offline?
+
+Verfügbare Dokumentation und Gerätemeldungen unterstützen die Wiedergabe zuvor heruntergeladener Einstellungen und Feedback auf dem Gerät. Die genaue Kompatibilität hängt von der Firmware ab. Neue Einstellungen, bestätigte Ergebnispersistenz und Online-Updates erfordern eine Konnektivität.
+
+## Wird ein Offline-Ergebnis später hochgeladen?
+
+Verlassen Sie sich nicht darauf. Der Servercode speichert die Ergebnisse nur dann, wenn eine Abschlussanforderung eintrifft und die Firmware-Implementierung in diesem Checkout nicht vorhanden ist. Haltbarkeit, Kapazität, Aufbewahrung, Wiederholungszeitplan und Versionsanwendbarkeit der Warteschlange sind daher unbekannt. Siehe [Offline mode](/dtt/technical/offline-mode).
+
+## Wie teste ich vor einer Offline-Sitzung?
+
+Aktivieren Sie online die gewünschte Vorlage, lassen Sie sie vom Trainer abrufen, überprüfen Sie die Spielzeug- und Segmentzusammenfassung und führen Sie dann eine kontrollierte Offline-Prüfung durch. Behandeln Sie diese Prüfung als nicht aufgezeichnet und kehren Sie für jede Sitzung, deren Ergebnis wichtig ist, online zurück.

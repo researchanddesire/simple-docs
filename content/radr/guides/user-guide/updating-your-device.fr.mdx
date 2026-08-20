@@ -1,0 +1,43 @@
+---
+title: "Mettre à jour le RADR Firmware"
+description: "Préparez une mise à jour du micrologiciel RADR, vérifiez le résultat de l'installation et récupérez en toute sécurité après une mise à jour interrompue."
+---
+
+La version du micrologiciel apparaît lors du démarrage de RADR. Cette documentation ne publie pas de « dernière » version car le manifeste de version peut changer indépendamment ; le programme de mise à jour ou [Web Flasher](/radr/tools/web-flasher) affiche la version qu'il est prêt à installer.
+
+## Avant la mise à jour
+
+1. Arrêtez et déconnectez l'appareil contrôlé. Ne pas mettre à jour pendant une session.
+2. Notez la version actuelle du micrologiciel affichée au démarrage et tous les paramètres spécifiques au périphérique que vous devrez peut-être recréer.
+3. Chargez le RADR et maintenez-le connecté à une alimentation stable pour la mise à jour.
+4. Pour une mise à jour en direct, commencez par [connect RADR to Wi-Fi](/radr/guides/user-guide/connecting-to-wifi).
+5. Ne commencez pas à moins que vous puissiez laisser le RADR sous tension et à proximité jusqu'à ce qu'il redémarre.
+
+<Callout type="warn" title="La préservation et la restauration des paramètres ne sont pas garanties">
+
+Le référentiel ne fournit pas de garantie de migration ou de restauration des paramètres version par version. Enregistrez les paramètres importants avant la mise à jour. Installez une image plus ancienne uniquement lorsque le flasher la propose et que le support a confirmé que la rétrogradation est appropriée.
+
+</Callout>
+
+## Mise à jour par liaison radio
+
+1. Dans le menu principal, sélectionnez **Paramètres**.
+2. Sélectionnez **Mettre à jour l'appareil**.
+3. Laissez RADR sous tension pendant qu'il vérifie, télécharge, installe et redémarre.
+4. Après le redémarrage, notez la version affichée sur l'écran de démarrage.
+5. Ouvrez les paramètres et l'analyse de l'appareil pour confirmer le fonctionnement normal.
+6. Reconnectez le périphérique cible déchargé, démarrez à sa sortie la plus basse et vérifiez l'arrêt.
+
+La mise à jour n'est réussie qu'après le redémarrage normal de RADR et l'affichage de la version attendue. Ne déduisez pas le succès simplement parce que l’écran de progression a disparu.
+
+## Si la mise à jour échoue
+
+| Symptôme | Actions |
+| ------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
+| La vérification ou le téléchargement échoue avant l'installation | Confirmez 2,4 GHz Wi-Fi et l'accès Internet, redémarrez RADR et réessayez une fois |
+| Les progrès s'arrêtent et RADR reste réactif | Gardez l'alimentation connectée et attendez que l'état à l'écran change ; ne le redémarrez pas à plusieurs reprises |
+| RADR redémarre mais signale l'ancienne version | Enregistrez les deux versions et le message, puis contactez l'assistance avant de réessayer à plusieurs reprises |
+| RADR ne démarre pas normalement | Connectez l'alimentation stable USB et utilisez la procédure de récupération [RADR Web Flasher](/radr/tools/web-flasher) |
+| Un appareil connecté se comporte différemment par la suite | Arrêtez, éteignez le périphérique cible et signalez les deux versions du micrologiciel |
+
+Pour un résultat irrécupérable, envoyez un e-mail à [support@researchanddesire.com](mailto:support@researchanddesire.com) avec la version précédente, la version tentée, le navigateur ou la méthode de mise à jour et le dernier message visible.

@@ -1,0 +1,38 @@
+---
+title: "Bounce-modus"
+description: "Oefen gecontroleerde bewegingen in beide richtingen en begrijp stuiterspecifieke doelen en scores."
+---
+
+Bounce meet herhaalde cycli met gecontroleerde beweging in beide richtingen. Het verschilt vooral van Herhaling in de verwachte teruggaande beweging, dus gebruik het pas nadat u kunt stoppen en soepel achteruit kunt rijden.
+
+## Configureer
+
+1. Voeg één **Bounce**-segment toe.
+2. Selecteer het geïnstalleerde speelgoed.
+3. Kies een laag aantal herhalingen, een comfortabel bereik, tempo en doelvenster.
+4. Opslaan, activeren, ophalen en kalibreren.
+
+## Rennen
+
+Volg het weergegeven doel in beide richtingen van elke cyclus. Houd voldoende marge aan om te vertragen, achteruit te rijden en weg te rijden. Stop in plaats van te proberen een doelwit ‘in te halen’ dat buiten de comfortabele controle is geraakt.
+
+## Stuiteren versus herhaling
+
+| Aspect | Herhaling | Stuiteren |
+| ------------------ | ----------------------------------------- | ----------------------------------------- |
+| Nadruk | herhaalde doelbeweging met een eenvoudiger terugkeer | gecontroleerde doeltracking in beide richtingen |
+| Beste eerste gebruik | een consistente cyclus leren | verfijning van de coördinatie na herhaling |
+| Huidige basispunten | herhalingen × 2 × nauwkeurigheidsfactor | herhalingen × 2 × nauwkeurigheidsfactor |
+
+De huidige API leidt herhalingen af ​​als `ceil(strokes ÷ 2)`. De nauwkeurigheidsfactor is de tijd in het doelvenster gedeeld door de totale speeltijd, vastgezet van 0 tot 1. Een speelgoedvermenigvuldiger kan worden toegepast na de basispunten, en de server rondt naar boven af.
+
+## Problemen oplossen
+
+| Symptoom | Actie |
+| ----------------------- | ------------------------------------------------------------------- |
+| ommekeer is abrupt | lager tempo en kleiner bereik |
+| herhaaldelijk achter doel | stop met proberen in te halen; lagere template moeilijkheidsgraad |
+| telling ziet er verkeerd uit | verifieer volledige gecontroleerde cycli en rapporteer de sessiedetails indien herhaalbaar |
+| resultaat ontbreekt | gebruik [Check session results](/dtt/quick-start/checking-results) |
+
+Keer terug naar de [mode comparison](/dtt/training-modes).

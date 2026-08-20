@@ -1,0 +1,51 @@
+---
+title: "Mode forme libre"
+description: "Utilisez des mouvements autodirigés pendant que le Deep Throat Trainer mesure le rythme, le temps d'activité et la précision de la fenêtre cible."
+---
+
+Freeform vous permet de choisir le mouvement tout en suivant l'objectif de rythme configuré. Il enregistre toujours un résultat structuré ; La « forme libre » ne supprime pas le besoin d’étalonnage, de contrôle ou d’arrêt.
+
+## Configurer
+
+1. Ajoutez un segment **Freeform**.
+2. Sélectionnez le jouet installé.
+3. Choisissez un objectif de rythme et une durée prudents.
+4. Enregistrez, activez, récupérez et consultez le résumé de l'appareil.
+
+L'interface utilisateur peut étiqueter différemment le comportement Freeform orienté vers le rythme selon le micrologiciel. Utilisez l'éditeur et le texte actuels de l'appareil plutôt qu'une promesse historique de « mode vitesse ».
+
+## Exécuter
+
+Choisissez un rythme et une plage que vous pouvez contrôler. Utilisez le retour RPM/target moyen affiché comme information, et non comme une demande d'accélération. Arrêtez-vous immédiatement lorsque la respiration, le confort, la stabilité ou le contrôle changent.
+
+## Résultat et points
+
+La v2 actuelle API enregistre le temps d'activité, le régime moyen, la distance, les coups, la plage de profondeur et le temps dans la fenêtre cible. Pour une session non nulle, les points de base sont `active seconds × 0.5 × accuracy factor`, où le facteur est le temps dans la fenêtre cible divisé par le temps de jeu total et fixé entre 0 et 1. Le serveur arrondit vers le haut avant tout multiplicateur de jouet.
+
+## Limite hors ligne
+
+La lecture en cache peut être disponible, mais la persistance des résultats n'est pas garantie jusqu'à ce que la session apparaisse dans le tableau de bord. Voir [Offline mode](/dtt/technical/offline-mode).
+
+## Vidéo
+
+<iframe
+  src="https://player.mux.com/SURPNES3aDtZUMBVAFN51F00jbgtZK027sBjOv5qsCurc"
+  title="Démonstration du mode forme libre"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+<Callout type="info" title="Transcription vidéo et description visuelle">
+
+La démonstration montre une session Freeform dans laquelle l'utilisateur choisit un mouvement tout en regardant le retour de rythme, puis termine et examine le résultat. Les étiquettes d'interface peuvent différer du micrologiciel actuel. La procédure écrite ci-dessus est l’équivalent actuel, non visuel.
+
+</Callout>
+
+## Dépannage
+
+| Symptôme | Actions |
+| ------------------------- | ----------------------------------------------------------------- |
+| le rythme moyen est instable | abaisser la cible et utiliser une plage contrôlée plus petite |
+| les commentaires ne répondent pas | vérifier la sélection du jouet, le chemin du capteur et l'étalonnage |
+| le résultat attendu est absent | reconnectez-vous, exécutez un test en ligne et suivez les résultats de dépannage |

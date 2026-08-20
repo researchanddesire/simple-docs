@@ -1,0 +1,129 @@
+---
+title: "E-Lock 10: Verbindung zu Wi-Fi konnte nicht hergestellt werden"
+description: "Diagnostizieren Sie E-Lock 10 mit 2,4-GHz-Anmeldeinformationen, Signal, Ruhezustand, Hotspot und Dashboard-Prüfungen."
+---
+
+Fehler E-Lock 10 bedeutet, dass Ihr Chastity Lockbox keine Verbindung zu einem Wi-Fi-Netzwerk herstellen konnte. Cloud-Funktionen wie das Web-Dashboard, Remote-Updates und Partnerbenachrichtigungen funktionieren erst, wenn das Gerät erneut eine Verbindung herstellt. Der Lockbox arbeitet weiterhin lokal mit seinen aktuellen Einstellungen.
+
+<Callout type="warn">
+
+Ohne Wi-Fi können Sie keine Änderungen über das Web-Dashboard vornehmen oder Remote-Updates erhalten. Das Gerät läuft weiterhin in seinem aktuellen Zustand.
+
+</Callout>
+## Häufige Ursachen
+
+- Falsche Wi-Fi-Anmeldeinformationen – Der SSID oder das Passwort ist falsch oder die Groß-/Kleinschreibung stimmt nicht überein
+- 2,4 GHz nicht verfügbar – Der Lockbox erfordert ein 2,4-GHz-Netzwerk (nicht nur 5 GHz)
+- Schwaches Signal – Entfernung, Wände, Metall und Geräte können Störungen verursachen
+– Netzwerktyp nicht unterstützt – Captive Portale, öffentliche Hotspots oder Unternehmensnetzwerke können IoT-Geräte blockieren
+- Gerät befindet sich im Ruhezustand – „Deep Sleep“ schaltet Wi-Fi aus, bis Sie das Gerät aufwecken
+- Vorübergehender Fehler – ein kurzer Software- oder Router-Fehler
+
+## So beheben Sie das Problem
+
+### Schritt 1: Überprüfen Sie Ihren Wi-Fi-Namen und Ihr Passwort (nur 2,4 GHz)
+
+Öffnen Sie das 2,4-GHz-Netzwerk Ihres Routers und bestätigen Sie den genauen Namen SSID und das Passwort. Geben Sie sie erneut auf dem Lockbox ein.
+
+<Callout type="idea">
+
+Geben Sie das Passwort zunächst in eine Notizen-App ein, um die Zeichensetzung und Groß-/Kleinschreibung zu bestätigen, und kopieren Sie es dann in das Lockbox-Setup.
+
+</Callout>
+<Callout type="success">
+
+Auf dem Lockbox-Display erscheint beim Anschluss ein grüner Punkt links neben dem Wi-Fi-Symbol.
+
+</Callout>
+### Schritt 2: Testen Sie Ihr Netzwerk mit einem anderen Gerät
+
+Verbinden Sie ein Telefon oder einen Laptop mit demselben Wi-Fi-Netzwerk und verwenden Sie dasselbe Passwort. Wenn dies fehlschlägt, starten Sie Ihren Router und Ihr Modem neu, warten Sie 2 Minuten und versuchen Sie es dann erneut.
+
+Verwenden Sie die Zeile, die der Art und Weise entspricht, wie der Router seine Netzwerke darstellt:
+
+| Router- oder Netzwerkeinrichtung | Was Sie ausprobieren sollten |
+| ------------------------------------------- | -----------------------------------------------------------------------------------------------------
+| Separate 2,4-GHz- und 5-GHz-Namen | Wählen Sie den 2,4-GHz-Namen |
+| Ein kombinierter Netzwerkname | Bestätigen Sie in der Dokumentation oder den Einstellungen des Routers, dass 2,4 GHz aktiviert ist; Wenn Lockbox immer noch nicht beitreten kann, fahren Sie mit dem Hotspot-Isolationstest unten fort |
+| Gast, Unternehmen, Hotel oder öffentliches Netzwerk | Verwenden Sie ein privates 2,4-GHz-Netzwerk ohne Browser-Anmeldeseite |
+| Mobiler Hotspot | Vorübergehend verwenden, um festzustellen, ob der Heimrouter die Ursache ist |
+
+### Schritt 3: Signalstärke verbessern
+
+Bewegen Sie den Lockbox näher an Ihren Router und entfernen Sie offensichtliche Hindernisse (große Metallgegenstände, Geräte). Versuchen Sie erneut, eine Verbindung herzustellen.
+
+### Schritt 4: Wecken Sie das Gerät auf, wenn es sich im Tiefschlaf befindet
+
+Deep Sleep deaktiviert Wi-Fi. Wecken Sie den Lockbox auf, indem Sie die linke Taste (Zurück) drücken, und versuchen Sie dann, die Verbindung erneut herzustellen.
+
+<Callout type="info">
+
+Erfahren Sie mehr über die Schlafzustände im Schlafmodus.
+
+</Callout>
+### Schritt 5: Konfigurieren Sie Wi-Fi über das Gerätemenü neu
+
+Gehen Sie auf dem Lockbox zu Einstellungen → Wi-Fi-Einstellungen. Scannen Sie den QR code mit Ihrem Telefon und wählen Sie Ihr 2,4-GHz-Netzwerk aus, um die Anmeldeinformationen erneut einzugeben.
+
+<Callout type="success">
+
+Nach einer erfolgreichen Verbindung sehen Sie den grünen Punkt neben dem Wi-Fi-Symbol auf dem Lockbox.
+
+</Callout>
+<Callout type="info">
+
+Wenn Ihr Router separate Namen für 2,4 GHz und 5 GHz sendet, wählen Sie 2,4 GHz SSID.
+
+</Callout>
+### Schritt 6: Starten Sie den Lockbox neu
+
+Wenn der Fehler weiterhin besteht, verwenden Sie **Einstellungen → Gerät neu starten**. Wenn die Bedienelemente nicht reagieren, befolgen Sie das 10-Sekunden-Tastenverfahren in [Restarting Your Device](/lockbox/device-states/restarting).
+
+### Schritt 7: Probieren Sie einen mobilen Hotspot aus (Isolationstest)Erstellen Sie einen temporären Hotspot auf Ihrem Telefon und verbinden Sie das Lockbox damit. Wenn hier eine Verbindung hergestellt wird, liegt das Problem an der Konfiguration Ihres Heimnetzwerks.
+
+<Callout type="warn">
+
+Vermeiden Sie öffentliche Hotspots oder Netzwerke, die eine Browser-Anmeldung erfordern (Captive-Portale). Diese werden für den Lockbox nicht unterstützt.
+
+</Callout>
+## Bestätigen Sie, dass das Problem behoben ist
+
+<Callout type="success">
+
+Sie sind verbunden, wenn:
+
+- Auf der Anzeige Lockbox erscheint links neben dem Symbol Wi-Fi ein grüner Punkt
+- Das Dashboard zeigt das Gerät nach einer kurzen Verzögerung online an
+
+</Callout>
+
+![Wi-Fi connected with the dashboard connection indicator shown in green](../img/wifi-solid-green.webp)
+
+## Verwandte Anleitungen
+
+**[Manual Wi-Fi Setup](/lockbox/quick-start/wifi-setup)**
+
+Verbinden Sie das gespeicherte Netzwerk erneut oder ersetzen Sie es.
+**[Sleep Mode](/lockbox/device-states/sleep-mode)**
+
+Verstehen Sie das Verhalten von Automatik vs. Tiefschlaf und Wi-Fi.
+**[Restarting Device](/lockbox/device-states/restarting)**
+
+So starten Sie den Lockbox sicher neu.
+**[Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting)**
+
+Separate Wi-Fi-, Internet-, Dashboard-, Schlaf- und Firmware-Symptome.
+**[Lockbox FAQs](/lockbox/faqs)**
+
+Verbindungsindikatoren, Einrichtungsablauf und häufige Fragen.
+
+## Brauchen Sie noch Hilfe?
+
+<Callout type="info">
+
+Wenn Sie alle Schritte ausprobiert haben und immer noch E-Lock 10 angezeigt wird, wenden Sie sich an den Support. Geben Sie die Seriennummer Ihres Geräts, Ihr Routermodell, den Netzwerktyp (2,4 GHz SSID) und ein Foto des Fehlers auf dem Display Lockbox an.
+
+- E-Mail: <a href="mailto:support@researchanddesire.com">support@researchanddesire.com</a>
+- Allgemeine FAQs: <a href="/lockbox/faqs">Lockbox-FAQs</a>
+
+</Callout>

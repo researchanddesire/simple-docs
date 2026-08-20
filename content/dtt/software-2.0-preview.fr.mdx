@@ -1,0 +1,51 @@
+---
+title: "Aperçu historique du logiciel 2.0"
+description: "Contexte archivé pour l'aperçu DTT 2.0, séparé du tableau de bord actuellement vérifié et du comportement API."
+---
+
+<Callout type="warn" title="Aperçu historique, pas de conseils de configuration actuels">
+
+Cet aperçu non daté décrivait un comportement planifié et mis en scène. Ses promesses d'inscription, ses fonctionnalités potentielles, ses limites et la disponibilité des chaînes ne sont pas traitées comme des faits actuels. Utilisez les commandes du tableau de bord proposées à votre compte et [Firmware updates](/dtt/technical/firmware-updates).
+
+</Callout>
+
+## Comportement vérifié dans la source actuelle du tableau de bord/API
+
+- Les paramètres v2 API fournissent des modèles sous forme de segments ordonnés et étendent les répétitions configurées.
+- L'étalonnage v2 API stocke l'étalonnage par jouet pour le propriétaire de la session.
+- La complétion v2 API accepte les résultats de répétition, d'endurance, de forme libre et de rebond.
+- L'achèvement API accepte les données pass/fail et contient un traitement en trois temps.
+- Le tableau de bord expose la sélection d'avatar d'appareil pour les comptes éligibles et les contrôles de canal de micrologiciel pour les appareils éligibles.
+- Le serveur résout le micrologiciel de manière dynamique au lieu de publier ici une version codée en dur.
+
+Ces capacités du serveur ne prouvent pas que chaque version du micrologiciel ou chaque compte reçoit la même interface utilisateur.
+
+## Réclamations qui restent non vérifiées ici
+
+Le référentiel extrait ne contient pas le micrologiciel DTT. Le comportement exact de la file d'attente hors ligne, la capacité locale, le délai de nouvelle tentative, la fréquence d'images, les écrans par version, les pourcentages de déploiement actuels et un chemin de restauration garanti ne peuvent pas être vérifiés. Voir [Offline mode](/dtt/technical/offline-mode) pour la limite de persistance conservatrice.
+
+## Vidéo
+
+<iframe
+  src="https://www.youtube.com/embed/N5KAoqPdEyE"
+  title="Aperçu historique de Deep Throat Trainer 2.0"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+<Callout type="info" title="Transcription vidéo et notes sur l'état actuel">
+
+L'aperçu présente l'étalonnage des jouets enregistrés dans le cloud, des modèles /repeated plus grands, la mise à l'échelle de la profondeur, l'attribution des jouets, les tentatives de réussite/fail, les avatars de l'appareil, la progression mains libres, les résumés de session, les commentaires Freeform orientés vitesse, la notation unifiée du temps dans la cible et la lecture hors ligne en cache. Il présente également plusieurs éléments de tableau de bord, de personnalisation et de synchronisation hors ligne en tant que travaux futurs. Étant donné que la vidéo est un aperçu, vérifiez chaque fonctionnalité dans le tableau de bord actuel et sur votre propre appareil avant de vous y fier. Les sections écrites ci-dessus identifient quel comportement de serveur associé est présent dans le référentiel actuel et quels détails du micrologiciel restent inconnus.
+
+</Callout>
+
+## Destinations actuelles
+
+-[Device and avatar settings](https://dashboard.researchanddesire.com/app/settings)
+-[Subscription settings](https://dashboard.researchanddesire.com/app/settings/subscription)
+-[Templates](/dtt/quick-start/templates)
+-[Calibration](/dtt/technical/calibration)
+-[Offline mode](/dtt/technical/offline-mode)
+
+Archivé et réexaminé : 16 août 2026.

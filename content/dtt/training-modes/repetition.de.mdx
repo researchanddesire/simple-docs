@@ -1,0 +1,55 @@
+---
+title: „Wiederholungsmodus“
+description: „Konfigurieren und führen Sie wiederholte Zielbewegungen aus, während Sie Schläge, Position, Tempo und Zeit im Zielfenster verfolgen.“
+---
+
+Bei der Wiederholung handelt es sich um eine wiederholte Bewegung auf ein Ziel zu und von diesem weg. Der aktuelle Server leitet abgeschlossene Wiederholungen aus gemessenen Schlägen ab und bewertet die Zeit im Zielfenster.
+
+## Konfigurieren
+
+1. Fügen Sie einer Vorlage ein **Wiederholungssegment** hinzu.
+2. Wählen Sie das physisch installierte Spielzeug aus.
+3. Stellen Sie eine niedrige Wiederholungszahl, eine angenehme Reichweite, ein angenehmes Tempo und ein Zielfenster ein.
+4. Speichern und aktivieren Sie die Vorlage.
+5. Rufen Sie es online ab und kalibrieren Sie es, wenn Sie dazu aufgefordert werden.
+
+Die genauen Editorbezeichnungen können variieren. Überprüfen Sie die Segmentzusammenfassung des Geräts, bevor Sie beginnen.
+
+## Lauf
+
+Folgen Sie dem Ziel mit sanften Bewegungen, Sie können jederzeit anhalten. Verwenden Sie die Bildschirmrichtung mit der LED-Rückmeldung. Eine Nichtübereinstimmung ist ein Grund, langsamer zu werden oder anzuhalten, nicht, um Tiefe oder Geschwindigkeit zu erzwingen.
+
+<Callout type="success" title="Erfolg">
+
+Das Gerät erreicht den Bildschirm grade/completion und eine Online-Sitzung wird mit dem erwarteten Wiederholungssegment angezeigt.
+
+</Callout>
+
+## Ergebnis und Punkte
+
+Für die aktuelle Version 2 API sind abgeschlossene Wiederholungen `ceil(strokes ÷ 2)`. Für eine Sitzung ungleich Null sind die Basispunkte `completed repetitions × 2 × accuracy factor`, wobei der Faktor die Zeit im Zielfenster dividiert durch die Gesamtspielzeit ist und von 0 bis 1 begrenzt wird. Anschließend kann ein Spielzeugmultiplikator angewendet werden, und der Server rundet nach oben.
+
+## Fehlerbehebung
+
+| Symptom | Aktion |
+| --------------------------------- | -------------------------------------------------------------- |
+| kann nicht mit dem Ziel | übereinstimmen geringeres Tempo, geringere Reichweite oder geringere Wiederholungszahl |
+| Feedback scheint umgekehrt zu sein | anhalten, Spielzeugzuordnung überprüfen und neu kalibrieren |
+| Segment wiederholt sich nach einer niedrigen Note | Überprüfen Sie pass/fail und wiederholen Sie die Einstellungen in der Vorlage |
+| Ergebnis fehlt | verwenden Sie [Check session results](/dtt/quick-start/checking-results) |
+
+## Video
+
+<iframe
+  src="https://player.mux.com/xNiIoQbQwUcN02oUmVWiM2vNbF97hysdNNmrb44D5kk4"
+  title="Demonstration des Wiederholungsmodus"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+<Callout type="info" title="Videotranskript und visuelle Beschreibung">
+
+Die Demonstration wählt Wiederholung aus, kalibriert das installierte Spielzeug, folgt einem wiederholten Ziel und beobachtet dabei die Positionsrückmeldung, vervollständigt den Satz und öffnet die hochgeladene Bewertung. Verwenden Sie Ihre eigenen komfortablen Ziele, anstatt die im Video gezeigten Werte zu kopieren.
+
+</Callout>

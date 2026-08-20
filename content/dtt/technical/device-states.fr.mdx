@@ -1,0 +1,34 @@
+---
+title: "États et écrans du périphérique"
+description: "Suivez le Deep Throat Trainer depuis le démarrage jusqu'aux vérifications du réseau, à l'étalonnage, à la formation, à l'achèvement et à la récupération."
+---
+
+## Flux d'état
+
+| Commander | État | Que vérifier | Récupération |
+| ---- : | ------------------ | --------------------------------------------------------- | ------------------------------------------------- |
+|     1 | Démarrage / bienvenue | Trainer ID et le texte de démarrage apparaissent | charge, puis redémarrez si l'écran reste vide |
+|     2 | Contrôle en amont | les vérifications de couplage, de connectivité, de paramètres et de mise à jour sont terminées | notez l'erreur exacte ; utiliser le centre d'erreurs |
+|     3 | Récupération des paramètres | modèle attendu et charge de jouet | vérifier le modèle actif, le couplage et Wi-Fi |
+|     4 | Calibrage | les deux postes sont acceptés | utiliser la table de récupération d'étalonnage |
+|     5 | Résumé de la séance | jouet, mode et segment sont attendus | arrêter et corriger la sélection du tableau de bord |
+|     6 | Compte à rebours | la monture est stable et vous pouvez vous éloigner | éloignez-vous avant le mouvement si quelque chose ne va pas |
+|     7 | Segment actif | écran et LED/text feedback répondent | arrêter le mouvement et s'éloigner chaque fois que nécessaire |
+|     8 | État de note/réussite | l'état d'achèvement ou de nouvelle tentative apparaît | abaissez la cible du modèle si elle ne convient pas |
+|     9 | Séance terminée | l'achèvement est affiché | vérifier le résultat dans le tableau de bord |
+
+## Branche hors ligne
+
+Si les paramètres en ligne ne peuvent pas être chargés, certains micrologiciels peuvent proposer des paramètres en cache. L'écran peut avertir que les notes risquent de ne pas être enregistrées. Traitez cet avertissement littéralement : continuez uniquement lorsque le jouet et la session mis en cache sont corrects, et supposez qu'aucun enregistrement du tableau de bord n'apparaît jusqu'à ce qu'il y en ait un.
+
+## Mettre à jour la branche
+
+Un écran de mise à jour peut interrompre le contrôle en amont. Gardez l'appareil alimenté et connecté à moins que l'écran ne signale une panne ou que [Firmware updates](/dtt/technical/firmware-updates) indique le contraire. Le texte exact de la progression et la durée sont spécifiques au micrologiciel.
+
+## Pass/fail branche
+
+Lorsqu'un modèle inclut le comportement pass/fail, l'appareil peut afficher une tentative ayant échoué et un nombre de nouvelles tentatives. La logique actuelle du serveur peut traiter un résultat à trois frappes, mais le comportement du modèle et la présentation du micrologiciel peuvent changer. Suivez l'écran et arrêtez-vous si la répétition du segment n'est plus confortable.
+
+## Branche d'erreur
+
+Utilisez [Error codes and messages](/dtt/technical/error-codes). Si l'appareil se bloque, arrêtez la session physique, éloignez-vous, redémarrez-le en toute sécurité et enregistrez l'écran avant de contacter l'assistance.

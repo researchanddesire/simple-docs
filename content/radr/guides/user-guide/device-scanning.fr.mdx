@@ -1,0 +1,53 @@
+---
+title: "Analyser et connecter un appareil avec RADR"
+description: "Identifiez les résultats de l'analyse, connectez un périphérique validé, confirmez le mappage de contrôle et récupérez en toute sécurité après un échec de connexion."
+---
+
+RADR analyse les appareils Bluetooth à proximité lorsqu'il démarre. Vous pouvez également choisir **Recherche d'appareil** dans le menu principal pour effectuer une nouvelle analyse.
+
+<Callout type="warn" title="Un résultat d'analyse n'est pas une garantie de compatibilité">
+
+Connectez uniquement un modèle répertorié dans [RADR Device Compatibility](/radr/guides/reference/device-support). Gardez-le déchargé et vérifiez la sortie la plus basse et arrêtez-vous avant utilisation. Ne connectez pas un « appareil inconnu » pour savoir à quoi servent ses commandes.
+
+</Callout>
+
+## Avant de numériser
+
+1. Chargez les deux appareils et maintenez-les à quelques mètres l’un de l’autre.
+2. Fermez l'application téléphonique du fabricant et déconnectez les autres contrôleurs ; de nombreux appareils Bluetooth n'acceptent qu'un seul contrôleur.
+3. Mettez l'appareil cible dans son mode d'appairage ou de publicité documenté.
+4. Gardez l'appareil physique éloigné du corps et prêt à être éteint.
+
+## Scannez et connectez-vous
+
+1. Dans le menu principal de RADR, sélectionnez **Recherche de périphérique**.
+2. Attendez que l'analyse soit terminée et que la liste des appareils apparaisse.
+3. Tournez l'encodeur droit pour mettre en surbrillance le nom exact annoncé. Un résultat sans nom s'affiche sous la forme **Périphérique inconnu** ; annuler au lieu de le sélectionner.
+4. Appuyez sur le bouton droit pour vous connecter. Le RADR peut afficher les états d'initialisation, de connexion, de découverte de capacités et de préparation.
+5. Attendez l'écran de contrôle spécifique à l'appareil. Si les étiquettes de l'écran ou des commandes ne correspondent pas au modèle attendu, déconnectez-vous.
+6. À la sortie la plus basse, testez une commande à la fois, puis confirmez que l'arrêt affecte le périphérique physique.
+
+| Contrôle de la liste des appareils | Actions |
+| ------------------- | ---------------------------------- |
+| Encodeur droit | Parcourez les résultats |
+| Bouton droit | Connectez l'appareil en surbrillance |
+| Bouton gauche | Annuler et revenir au menu principal |
+
+RADR contrôle un appareil connecté à la fois. Revenez au menu principal et numérisez à nouveau avant de changer d’appareil.
+
+## Si l'appareil n'apparaît pas
+
+- Confirmez que son modèle exact est dans la matrice de compatibilité.
+- Confirmez qu'il est allumé et qu'il fait de la publicité, puis fermez toute application qui y est déjà connectée.
+- Rapprochez les deux appareils, redémarrez-les et numérisez à nouveau.
+- Si plusieurs noms identiques apparaissent, éteignez les autres appareils et relancez la recherche plutôt que de deviner.
+
+## Si la connexion ou le contrôle échoue
+
+1. Remettez tous les contrôles disponibles à zéro et utilisez Stop.
+2. Mettez le périphérique cible hors tension si sa sortie physique continue ou est inattendue.
+3. Fermez les autres contrôleurs Bluetooth, redémarrez les deux appareils et réessayez une fois.
+4. En cas d'échec à nouveau, enregistrez la version du micrologiciel RADR affichée au démarrage, le modèle cible et le micrologiciel exacts, le message à l'écran et le comportement réel.
+5. Envoyez ces informations à [support@researchanddesire.com](mailto:support@researchanddesire.com). Ne continuez pas à utiliser un mappage qui se comporte incorrectement.
+
+RADR peut se souvenir d'une connexion récente et tenter de se reconnecter. Ne comptez jamais sur la reconnexion comme mesure de sécurité ; confirmer l'écran et la réponse physique après toute chute.

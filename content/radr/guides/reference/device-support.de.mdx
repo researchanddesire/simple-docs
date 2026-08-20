@@ -1,0 +1,45 @@
+---
+title: „RADR-Gerätekompatibilität“
+description: „Überprüfen Sie, welche Gerätemodelle und Steuerungen mit RADR validiert wurden, welche Grenzwerte bekannt sind und wie Sie ein Kompatibilitätsergebnis melden.“
+---
+
+Nutzen Sie diese Seite, bevor Sie ein Gerät eines Drittanbieters kaufen oder anschließen. Ein Modell, das in einer Upstream-Registrierung Bluetooth erscheint, bedeutet **nicht**, dass Research and Desire es mit RADR validiert hat.
+
+<Callout type="warn" title="Starten Sie jede neue Verbindung ungeladen">
+
+Halten Sie das angeschlossene Gerät vom Körper fern, beginnen Sie mit der niedrigsten Leistung und überprüfen Sie vor der Verwendung die Pause- oder Stopp-Funktion. Trennen Sie die Verbindung sofort, wenn sich ein Steuerelement anders verhält als auf der RADR-Bezeichnung angegeben.
+
+</Callout>
+
+## Validierungsstatus
+
+Letzte Überprüfung der Dokumentation: **16. August 2026**. Die genauen Firmware-Versionen von Drittanbietern, die in früheren Tests verwendet wurden, wurden nicht aufgezeichnet. Daher müssen diese Kombinationen erneut getestet werden, nachdem eines der Geräte ein Update erhalten hat.
+
+| Gerät | Verbindung | Von RADR verfügbar gemachte Steuerelemente | Validierungsstatus | Bekannte Grenzen |
+| ------------------------------------------------------------------------------------ | -------------- | ---------------------------------------------------------- | ------------------------------------------------------------------- | ------------------------------------------ |
+| [Open Source Sex Machine](https://www.researchanddesire.com/open-source-sex-machine) | Direkt | Geschwindigkeit, Tiefe, Empfindung, Schlaganfall, Pause, Stopp und Muster | Primär unterstützte Integration | Die verfügbaren Muster hängen von der OSSM-Firmware | ab
+| Lovense Domi / Domi 2 | Direkt | Befehle für Vibration, Batteriestand und Leistung | Zuvor getestet; aktuelle Firmware-Kombination muss erneut bestätigt werden | Nichtvibrationsmerkmale werden nicht freigelegt |
+| Lovense Hyphy | Buttplug-kompatibel Bluetooth | Vibration | Zuvor getestet; aktuelle Firmware-Kombination muss erneut bestätigt werden | Nur Vibration |
+| Lovense Ferri | Buttplug-kompatibel Bluetooth | Vibration | Zuvor getestet; aktuelle Firmware-Kombination muss erneut bestätigt werden | Nur Vibration |
+
+Lockbox, Deep Throat Trainer, DG Labs Coyote und andere Marken oder Modelle sind **nicht validierte RADR-Integrationen**, es sei denn, sie erscheinen in der Tabelle oben mit einem Validierungsstatus. Betrachten Sie das bloße Erscheinen eines Geräts während eines Scans nicht als Beweis dafür, dass alle Steuerelemente sicher sind oder unterstützt werden.
+
+Informationen zur Upstream-Protokollabdeckung finden Sie im [Buttplug device list](https://iostindex.com/?filter0ButtplugSupport=4). Diese Liste beschreibt die Upstream-Protokollunterstützung, nicht die RADR-Validierung.
+
+## Überprüfen Sie eine Verbindung
+
+1. Aktualisieren Sie erst, nachdem Sie [Update RADR](/radr/guides/user-guide/updating-your-device) und die Freigabeanweisungen des angeschlossenen Geräts gelesen haben.
+2. Schalten Sie das Zielgerät ein und versetzen Sie es in den dokumentierten Kopplungs- oder Werbemodus.
+3. Folgen Sie [Scan and Connect a Device](/radr/guides/user-guide/device-scanning).
+4. Testen Sie bei unbelastetem Gerät zunächst die niedrigste Leistung.
+5. Testen Sie Pause oder Stopp und bestätigen Sie, dass das physische Gerät stoppt, bevor Sie fortfahren.
+6. Testen Sie jeweils ein unterstütztes Steuerelement. Gehen Sie nicht davon aus, dass eine erweiterte Funktion zugeordnet ist.
+
+## Wenn ein Gerät fehlt oder sich falsch verhält
+
+- Trennen Sie die Verbindung und beenden Sie die Kopplung, bis Sie das Verhalten verstanden haben.
+- Notieren Sie die RADR-Firmware-Version, die genaue Marke und das Modell, die Firmware-Version des anderen Geräts und welche Steuerung fehlgeschlagen ist.
+- Beschreiben Sie die erwartete und tatsächliche körperliche Reaktion. Ein kurzes Video ist nur dann sinnvoll, wenn es sicher aufgenommen werden kann.
+- Senden Sie eine E-Mail an [support@researchanddesire.com](mailto:support@researchanddesire.com) oder verwenden Sie [contact form](https://www.researchanddesire.com/pages/contact-us).
+
+Kompatibilitätseigentum: Das Team von Research and Desire Firmware/support verwaltet diese Matrix. Ein gemeldetes Gerät bleibt solange unvalidiert, bis das Team das Ergebnis reproduziert und diese Seite aktualisiert.

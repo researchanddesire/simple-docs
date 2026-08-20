@@ -1,0 +1,14 @@
+{
+  "title": "Technisch",
+  "description": "Apparaatgedrag, fouten, kalibratie en firmware",
+  "pages": [
+    "index",
+    "button-controls",
+    "calibration",
+    "device-states",
+    "error-codes",
+    "firmware-updates",
+    "led-feedback",
+    "offline-mode"
+  ]
+}

@@ -1,0 +1,136 @@
+---
+title: „RADR mit Wi-Fi verbinden“
+description: „Verbinden Sie RADR mit einem 2,4-GHz-Netzwerk Wi-Fi, bestätigen Sie den Erfolgsbildschirm und beheben Sie die Probleme mit dem Setup-Portal.“
+---
+
+Durch die Wi-Fi-Konnektivität kann Ihre drahtlose Fernbedienung Research And Desire (RADR) Updates drahtlos empfangen, einschließlich neuer Geräteunterstützung und Fehlerbehebungen. Diese Anleitung führt Sie durch den einfachen Einrichtungsprozess.
+
+## Warum eine Verbindung zu Wi-Fi herstellen?
+
+Der Anschluss Ihres RADR an Wi-Fi ermöglicht Folgendes:
+
+- **Over-the-Air-Updates** – Erhalten Sie die neueste Firmware und Funktionen ohne Kabel
+- **Unterstützung neuer Geräte** – Erhalten Sie Updates, die die Kompatibilität mit neuen Bluetooth-Geräten erhöhen
+- **Fehlerbehebungen** – Bleiben Sie mit den neuesten Verbesserungen auf dem Laufenden
+
+<Callout type="info">
+
+Wi-Fi ist für die grundlegende Verwendung optional. RADR steuert Geräte vollständig über Bluetooth, sodass Sie es ohne Wi-Fi verwenden können. Wir empfehlen jedoch, eine Verbindung herzustellen, um Updates zu erhalten.
+
+</Callout>
+## Bevor Sie beginnen
+
+Stellen Sie sicher, dass Sie Folgendes haben:
+
+- Name und Passwort Ihres Heimnetzwerks Wi-Fi
+- Ein Telefon oder Tablet zum Scannen des QR code (oder Sie können eine manuelle Verbindung herstellen)
+- Ihr RADR ist aufgeladen und eingeschaltet
+
+<Callout type="warn">
+
+RADR unterstützt nur 2,4-GHz-Wi-Fi-Netzwerke. Wenn Ihr Router sowohl 2,4 GHz als auch 5 GHz überträgt, stellen Sie sicher, dass Sie eine Verbindung zum 2,4 GHz-Netzwerk herstellen.
+
+</Callout>
+## Verbindung mit Wi-Fi herstellen
+
+### Schritt 1: Öffnen Sie die Wi-Fi-Einstellungen
+
+Im Hauptmenü Ihres RADR:
+
+1. Wählen Sie mit dem rechten Knopf und der rechten Taste **Einstellungen** aus
+2. Wählen Sie **Wi-Fi Einstellungen**
+
+Ihr RADR erstellt für die Einrichtung ein eigenes temporäres Wi-Fi-Netzwerk.
+
+![RADR Settings menu with Wi-Fi Settings available](../../../ossm/images/wireless-remote-wifi-connectivity-settings-unannotated.webp)
+
+### Schritt 2: Stellen Sie eine Verbindung zum RADR-Setup-Netzwerk her
+
+Auf dem Bildschirm Ihres RADR erscheint ein QR code. Sie haben zwei Möglichkeiten:
+
+![RADR displaying the QR code for its temporary setup network](../../../ossm/images/wireless-remote-wifi-connectivity-wifi-qr-code-unannotated.webp)
+
+**Option A: QR-Code scannen (am einfachsten)**
+
+Verwenden Sie die Kamera Ihres Telefons, um den QR code zu scannen. Ihr Telefon stellt automatisch eine Verbindung zum RADR-Setup-Netzwerk her.
+
+**Option B: Manuell verbinden**
+
+Gehen Sie auf Ihrem Telefon oder Tablet zu den Wi-Fi-Einstellungen und stellen Sie eine Verbindung her zu:
+
+- **Netzwerkname:** RADR-Setup
+- **Passwort:** Keines (offenes Netzwerk)
+
+### Schritt 3: Geben Sie Ihre Wi-Fi-Details ein
+
+Sobald Sie mit dem Setup-Netzwerk von RADR verbunden sind, öffnet sich automatisch eine Konfigurationsseite in Ihrem Browser.
+
+<Callout type="idea">
+
+Wenn die Seite nicht automatisch geöffnet wird, öffnen Sie Ihren Browser und gehen Sie zu **192.168.4.1**
+
+</Callout>
+Auf der Konfigurationsseite:
+
+1. Wählen Sie Ihr Heimnetzwerk Wi-Fi aus der Liste aus
+2. Geben Sie Ihr Wi-Fi-Passwort ein
+3. Tippen Sie auf **Speichern**
+
+![Setup portal showing the 2.4 GHz network list and password field](../../../ossm/images/radr-wifi-network-selection-annotated.webp)
+
+### Schritt 4: Warten Sie auf die Bestätigung
+
+RADR stellt eine Verbindung zu Ihrem Wi-Fi-Netzwerk her. Bei Erfolg sehen Sie Folgendes:
+
+**"Wi-Fi Verbunden"** auf dem Bildschirm
+
+Ihr RADR ist jetzt bereit, Updates zu empfangen!
+
+## Fehlerbehebung
+
+<Callout type="info" title="Die Konfigurationsseite wird nicht geöffnet">
+
+- Stellen Sie sicher, dass Sie mit „RADR Setup“ verbunden sind (überprüfen Sie die Wi-Fi-Einstellungen Ihres Telefons).
+- Versuchen Sie, einen Browser zu öffnen und zu **192.168.4.1** zu gehen.
+- Warten Sie nach dem Herstellen der Verbindung einige Sekunden – das Laden der Seite kann einen Moment dauern
+- Wenn die Seite immer noch nicht angezeigt wird, starten Sie die Wi-Fi-Einstellungen auf Ihrem RADR neu und versuchen Sie es erneut
+
+</Callout>
+<Callout type="info" title="Mein WLAN-Netzwerk ist nicht in der Liste">
+
+- Gehen Sie näher an Ihren Wi-Fi-Router heran
+- Stellen Sie sicher, dass Sie nach Ihrem **2,4-GHz-Netzwerk** suchen (nicht nach 5 GHz)
+- Versuchen Sie, die Seite zu aktualisieren
+- Starten Sie die Einstellungen von Wi-Fi neu und scannen Sie erneut
+
+</Callout>
+<Callout type="info" title="Die Verbindung schlägt nach Eingabe des Passworts fehl">
+
+- Überprüfen Sie noch einmal, ob Sie das richtige Passwort eingegeben haben
+- Stellen Sie sicher, dass Sie das richtige Netzwerk ausgewählt haben
+- Bewegen Sie RADR näher an Ihren Router
+- Überprüfen Sie, ob Ihr Router funktioniert (versuchen Sie, ein anderes Gerät anzuschließen).
+
+</Callout>
+<Callout type="info" title="Das Setup läuft ab, bevor ich eine Verbindung herstellen kann">
+
+Das Setup-Portal Wi-Fi verfügt über eine Zeitüberschreitung von 30 Sekunden. Wenn es geschlossen wird, bevor Sie fertig sind:
+
+1. Gehen Sie zurück zu **Einstellungen > Wi-Fi Einstellungen** auf Ihrem RADR
+2. Der Einrichtungsvorgang wird neu gestartet
+3. Halten Sie Ihr Wi-Fi-Passwort zur schnellen Eingabe bereit
+
+</Callout>
+<Callout type="info" title="Ich habe eine Verbindung hergestellt, aber RADR meldet, dass es nicht online ist">
+
+- Überprüfen Sie, ob Ihr Zuhause Wi-Fi über einen Internetzugang verfügt
+- Versuchen Sie, Ihr RADR neu zu starten (Einstellungen > Gerät neu starten).
+- Führen Sie den Einrichtungsvorgang für Wi-Fi erneut aus
+
+</Callout>
+## Nächste Schritte
+
+Nachdem Ihr RADR nun mit Wi-Fi verbunden ist, können Sie nach Updates suchen:
+**[Updating Your Device](/radr/guides/user-guide/updating-your-device)**
+
+Erfahren Sie, wie Sie nach den neuesten Updates suchen und diese installieren.

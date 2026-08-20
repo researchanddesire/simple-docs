@@ -1,0 +1,55 @@
+---
+title: "Herhalingsmodus"
+description: "Configureer en voer herhaalde doelbewegingen uit terwijl u slagen, positie, tempo en tijd in het doelvenster volgt."
+---
+
+Herhaling maakt gebruik van herhaalde bewegingen naar en weg van een doel. De huidige server leidt voltooide herhalingen af ​​van gemeten slagen en scoort tijd in het doelvenster.
+
+## Configureer
+
+1. Voeg één **Herhaling**-segment toe aan een sjabloon.
+2. Selecteer het speelgoed dat fysiek is geïnstalleerd.
+3. Stel een laag aantal herhalingen, een comfortabel bereik, tempo en doelvenster in.
+4. Bewaar en activeer de sjabloon.
+5. Haal het online op en kalibreer wanneer daarom wordt gevraagd.
+
+De exacte editorlabels kunnen variëren. Bekijk het segmentoverzicht van het apparaat voordat u begint.
+
+## Rennen
+
+Volg het doel met vloeiende bewegingen die u op elk gewenst moment kunt stoppen. Gebruik de schermrichting met de LED-feedback. Een mismatch is een reden om te vertragen of te stoppen, niet om diepte of snelheid te forceren.
+
+<Callout type="success" title="Succes">
+
+Het apparaat bereikt het scherm grade/completion en er verschijnt een onlinesessie met het verwachte herhalingssegment.
+
+</Callout>
+
+## Resultaat en punten
+
+Voor de huidige v2 API zijn voltooide herhalingen `ceil(strokes ÷ 2)`. Voor een sessie die niet nul is, zijn de basispunten `completed repetitions × 2 × accuracy factor`, waarbij de factor de tijd in het doelvenster is, gedeeld door de totale speeltijd en vastgezet van 0 naar 1. Daarna kan een speelgoedvermenigvuldiger worden toegepast en de server rondt naar boven af.
+
+## Problemen oplossen
+
+| Symptoom | Actie |
+| ------------------------------- | ------------------------------------------------------ |
+| kan het doel niet matchen | lager tempo, bereik of aantal herhalingen |
+| feedback lijkt omgekeerd | stoppen, speelgoedtoewijzing verifiëren en opnieuw kalibreren |
+| segment herhaalt zich na een laag cijfer | controleer pass/fail en herhaal de instellingen in de sjabloon |
+| resultaat ontbreekt | gebruik [Check session results](/dtt/quick-start/checking-results) |
+
+## Video
+
+<iframe
+  src="https://player.mux.com/xNiIoQbQwUcN02oUmVWiM2vNbF97hysdNNmrb44D5kk4"
+  title="Demonstratie van de herhalingsmodus"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+<Callout type="info" title="Videotranscriptie en visuele beschrijving">
+
+De demonstratie selecteert Herhaling, kalibreert het geïnstalleerde speelgoed, volgt een herhaald doel terwijl de positiefeedback wordt bekeken, voltooit de set en opent het geüploade cijfer. Gebruik uw eigen comfortabele doelen in plaats van de waarden uit de video te kopiëren.
+
+</Callout>

@@ -1,0 +1,77 @@
+---
+title: "Lockbox Vote public"
+description: "Activez, partagez, surveillez, limitez et désactivez le vote public Lockbox avec des limites claires de confidentialité et de rôle."
+---
+
+Le vote public crée un lien partageable qui permet aux visiteurs d'ajouter ou de supprimer du temps d'un verrou actif en fonction des valeurs configurées pour cette session.
+
+<Callout type="warn">
+
+Toutes les personnes concernées doivent se mettre d'accord sur l'audience, les effets du vote, la durée minimale et maximale et le plan d'arrêt avant de partager le lien. Le vote du public ne doit pas supprimer l'accès aux freins ou au déverrouillage d'urgence.
+
+</Callout>
+
+## Rôles et visibilité
+
+| Rôle | Que vérifier |
+| ----------- | ------------------------------------------------------------------------------------ |
+| Lockee | Consentements à l'audience et effets configurés ; conserve la sécurité et l'accès d'urgence |
+| Porte-clés | A la permission de modifier cette session et sait comment désactiver le vote ou y mettre fin |
+| Casier automatique | Configure et teste les limites avant de démarrer la session active |
+| Électeur | Reçoit uniquement le point de vue du vote du public ; l'identité connectée peut apparaître dans l'activité |
+
+La page publique expose les détails de la session nécessaires au vote. Il ne doit pas exposer les informations d'identification du compte, mais le partage intentionnel du lien rend la vue de vote accessible à toute personne qui la reçoit ou la transmet.
+
+## Activer et configurer
+
+1. Dans le tableau de bord, modifiez un modèle Lockbox ou ouvrez **Modifier les paramètres** pour une session active ou de test éligible.
+
+![Lockbox template editor where session features are configured](../quick-start/images/creating-and-editing-a-lock-annotated.webp)
+
+2. Activez le **Vote public**.
+3. Ouvrez ses paramètres et configurez :
+   - **Time Plus** : secondes ajoutées par un vote d'augmentation ;
+   - **Time Minus** : secondes supprimées par un vote de diminution ;
+   - **Durée maximale de verrouillage** : limite supérieure facultative ; et
+   - **Durée minimale de verrouillage** : limite inférieure facultative.
+
+4. Vérifiez les valeurs finales avec le Lockee et le Keyholder avant de les enregistrer.
+
+<Callout type="warn">
+
+Sans limite supérieure ou inférieure, la documentation actuelle indique que les votes peuvent continuer à modifier la durée dans cette direction. Ne publiez pas le lien tant que les effets et les limites configurés ne sont pas acceptables.
+
+</Callout>
+
+## Partager le lien
+
+1. Ouvrez la session Lockbox active dans le tableau de bord.
+2. Recherchez le badge **Vote public** ou partagez l'action.
+3. Copiez le lien.
+4. Ouvrez-le dans une fenêtre privée /incognito avant de le partager.
+5. Confirmez que la vue publique contient uniquement les informations que vous avez l'intention de publier.
+
+Traitez le URL comme public. Partagez-le uniquement dans les communautés qui correspondent à l'audience convenue et supposez qu'il peut être transmis.
+
+## Surveiller l'activité
+
+La page Lockbox peut afficher les compteurs d'augmentation et de diminution des votes. L'historique des activités de session enregistre la direction du vote, l'horodatage et soit un nom d'utilisateur connecté, soit **Anonyme**.
+
+La documentation actuelle décrit une limite de vote par session d'un vote toutes les 24 heures, suivie par compte et adresse IP. Étant donné que les contrôles contre les abus peuvent changer, comptez sur l'interface en direct plutôt que de l'utiliser comme limite de débit garantie.
+
+Vérifiez périodiquement le Lockbox physique. Les votes s'appliquent à la session, mais le tableau de bord peut être en avance sur un appareil hors ligne.
+
+## Désactivez le vote et révoquez le lien
+
+1. Ouvrez les paramètres de session active.
+2. Désactivez le **Vote public** et enregistrez.
+3. Confirmez que l'action badge/share disparaît.
+4. Ouvrez l'ancien lien dans une fenêtre privée et confirmez qu'il n'accepte plus les votes.
+
+Les événements de vote passés restent dans l’historique des activités. La désactivation du vote ne peut pas retirer les informations déjà partagées ou les copies du URL.
+
+## Sécurité et récupération
+
+- Si les votes créent une situation dangereuse ou indésirable, désactivez le vote et mettez fin à la session.
+- Si le tableau de bord ne peut pas atteindre le Lockbox, utilisez les commandes locales et [Emergency Access](/lockbox/safety).
+- Si la page publique expose des informations inattendues ou continue d'accepter les votes après la désactivation, arrêtez le partage et contactez [support@researchanddesire.com](mailto:support@researchanddesire.com).

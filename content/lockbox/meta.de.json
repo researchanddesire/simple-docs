@@ -1,0 +1,18 @@
+{
+  "title": "Lockbox",
+  "description": "Chastity Lockbox Anleitungen und Support",
+  "root": true,
+  "pages": [
+    "index",
+    "safety",
+    "quick-start",
+    "using",
+    "support",
+    "faqs",
+    "errors",
+    "device-states",
+    "technical",
+    "tools",
+    "changelog"
+  ]
+}

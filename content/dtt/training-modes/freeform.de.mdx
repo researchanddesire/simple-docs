@@ -1,0 +1,51 @@
+---
+title: „Freiformmodus“
+description: „Verwenden Sie selbstgesteuerte Bewegungen, während der Deep Throat Trainer Tempo, aktive Zeit und Zielfenstergenauigkeit misst.“
+---
+
+Mit Freeform können Sie die Bewegung auswählen und dabei dem konfigurierten Tempoziel folgen. Es zeichnet immer noch ein strukturiertes Ergebnis auf; „Freiform“ macht Kalibrierung, Kontrolle oder Stoppen nicht überflüssig.
+
+## Konfigurieren
+
+1. Fügen Sie ein **Freeform**-Segment hinzu.
+2. Wählen Sie das installierte Spielzeug aus.
+3. Wählen Sie ein konservatives Tempoziel und eine konservative Dauer.
+4. Speichern, aktivieren, abrufen und überprüfen Sie die Geräteübersicht.
+
+Die Benutzeroberfläche kann geschwindigkeitsorientiertes Freeform-Verhalten je nach Firmware unterschiedlich kennzeichnen. Verwenden Sie den aktuellen Editor- und Gerätetext anstelle eines historischen „Geschwindigkeitsmodus“-Versprechens.
+
+## Lauf
+
+Wählen Sie einen Rhythmus und einen Bereich, den Sie steuern können. Verwenden Sie das angezeigte durchschnittliche RPM/target-Feedback als Information und nicht als Aufforderung zum Beschleunigen. Stoppen Sie sofort, wenn sich Atmung, Komfort, Montagestabilität oder Kontrolle ändern.
+
+## Ergebnis und Punkte
+
+Die aktuelle Version 2 API zeichnet aktive Zeit, durchschnittliche Drehzahl, Distanz, Schläge, Tiefenbereich und Zeit im Zielfenster auf. Für eine Sitzung ungleich Null sind die Basispunkte `active seconds × 0.5 × accuracy factor`, wobei der Faktor die Zeit im Zielfenster dividiert durch die Gesamtspielzeit ist und von 0 auf 1 begrenzt wird. Der Server rundet vor jedem Toy-Multiplikator auf.
+
+## Offline-Grenze
+
+Die zwischengespeicherte Wiedergabe ist möglicherweise verfügbar, die Persistenz der Ergebnisse ist jedoch nicht garantiert, bis die Sitzung im Dashboard angezeigt wird. Siehe [Offline mode](/dtt/technical/offline-mode).
+
+## Video
+
+<iframe
+  src="https://player.mux.com/SURPNES3aDtZUMBVAFN51F00jbgtZK027sBjOv5qsCurc"
+  title="Demonstration des Freiformmodus"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+<Callout type="info" title="Videotranskript und visuelle Beschreibung">
+
+Die Demonstration zeigt eine Freeform-Sitzung, in der der Benutzer eine Bewegung auswählt, während er das Tempo-Feedback beobachtet, dann die Sitzung beendet und das Ergebnis überprüft. Schnittstellenbezeichnungen können von der aktuellen Firmware abweichen. Das oben beschriebene schriftliche Verfahren ist das aktuelle, nicht-visuelle Äquivalent.
+
+</Callout>
+
+## Fehlerbehebung
+
+| Symptom | Aktion |
+| ------------------------- | ----------------------------------------------------------------- |
+| durchschnittliches Tempo ist instabil | Senken Sie das Ziel und verwenden Sie einen kleineren kontrollierten Bereich |
+| Feedback reagiert nicht | Spielzeugauswahl, Sensorpfad und Kalibrierung überprüfen |
+| erwartetes Ergebnis fehlt | Stellen Sie die Verbindung wieder her, führen Sie einen Online-Test durch und verfolgen Sie die Ergebnisse. Fehlerbehebung |

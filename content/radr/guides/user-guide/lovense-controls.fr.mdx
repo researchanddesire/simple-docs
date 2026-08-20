@@ -1,0 +1,169 @@
+---
+title: "Contrôler un appareil Lovense avec RADR"
+description: "Utilisez les commandes RADR prises en charge pour un modèle Lovense testé et vérifiez la sortie de faible intensité et l'arrêt."
+---
+
+RADR prend en charge les appareils Lovense Bluetooth avec une interface de contrôle simplifiée des vibrations uniquement. Ce guide explique comment contrôler les appareils Lovense.
+
+<Callout type="warn" title="Vérifiez le modèle et arrêtez le déchargement">
+
+Vérifiez le modèle et la note de validation actuelle dans [RADR Device Compatibility](/radr/guides/reference/device-support). Gardez l'appareil éloigné du corps, commencez au niveau 0, augmentez d'un cran et appuyez sur Stop. Si le périphérique physique ne revient pas à zéro, éteignez-le et ne continuez pas.
+
+</Callout>
+
+<Callout type="info">
+
+RADR fournit un contrôle **vibrations uniquement** pour les appareils Lovense. Les fonctionnalités avancées telles que le chauffage, la rotation ou les modèles spécifiques à l'appareil ne sont actuellement pas prises en charge.
+
+</Callout>
+## Appareils Lovense pris en charge
+
+Les tests RADR antérieurs couvraient les appareils Lovense suivants ; les versions exactes du firmware tiers n'ont pas été enregistrées, consultez donc la matrice de compatibilité avant utilisation :
+
+| Appareil | Statut |
+| ------------- | ------ |
+| Lovense Domi | Testé |
+| Lovense Hyphy | Testé |
+| Lovense Ferri | Testé |
+
+Les autres modèles Lovense ne sont pas validés simplement parce qu'ils utilisent un protocole en amont compatible. Voir [RADR Device Compatibility](/radr/guides/reference/device-support) pour la liste maintenue.
+
+## Aperçu de l'écran de contrôle
+
+Lorsqu'il est connecté à un appareil Lovense, l'écran de contrôle est plus simple que l'interface OSSM :
+
+- **Cadran encodeur gauche :** Contrôle de l'intensité des vibrations
+- **Bouton central :** bouton STOP
+- **Affichage :** Affiche le niveau de vibration et l'état de l'appareil
+
+## Contrôle des vibrations
+
+Le **encodeur gauche** contrôle l'intensité des vibrations.
+
+| Paramètre | Gamme | Par défaut |
+| --------- | ----- | ------- |
+| Vibrer | 0-16 | 0 |
+
+- Tournez dans le sens des aiguilles d'une montre pour augmenter l'intensité
+- Tournez dans le sens inverse des aiguilles d'une montre pour diminuer l'intensité
+- Le réglage à 0 arrête les vibrations
+
+<Callout type="info">
+
+Les appareils Lovense utilisent une échelle d'intensité de 0 à 16, et non un pourcentage. Le niveau 16 est l’intensité maximale.
+
+</Callout>
+## Bouton d'arrêt
+
+Le **bouton du milieu** agit comme un arrêt immédiat :
+
+- Appuyez pour régler la vibration à 0
+- Confirmez que l'appareil physique revient au niveau 0
+
+Contrairement au OSSM, il n'y a pas d'état de pause/resume : il suffit d'augmenter le niveau de vibration pour redémarrer.
+
+<Callout type="info">
+
+RADR peut répéter la commande d'arrêt, mais la livraison Bluetooth ne peut pas être garantie. Utilisez le contrôle d'alimentation du périphérique cible si la sortie continue.
+
+</Callout>
+## Niveau de batterie
+
+Pour Lovense Domi (et Domi 2), RADR peut interroger le niveau de batterie de l'appareil via son intégration directe :
+
+- Le pourcentage de batterie est affiché à l'écran
+- Vérifiez l'état de la batterie avant les sessions pour éviter les interruptions
+
+<Callout type="info">
+
+Le niveau de batterie est disponible pour les appareils Domi via l'intégration directe Bluetooth. D'autres appareils Lovense peuvent ou non prendre en charge les rapports sur le niveau de la batterie en fonction de leur implémentation Buttplug.io.
+
+</Callout>
+## Connexion aux appareils Lovense
+
+### Étape 1 : Préparez votre appareil Lovense
+
+Allumez votre appareil Lovense. Assurez-vous que l'application Lovense est **fermée** sur votre téléphone : un seul contrôleur peut se connecter à la fois.
+
+### Étape 2 : Scanner avec RADR
+
+Activez RADR ou sélectionnez **Recherche d'appareil** dans le menu principal. RADR scanne pendant 5 secondes.
+
+### Étape 3 : Sélectionnez votre appareil
+
+Votre appareil Lovense apparaît dans la liste des appareils. Sélectionnez-le avec le bouton droit pour vous connecter.
+
+### Étape 4 : Commencer à contrôler
+
+Une fois connecté, utilisez l'encodeur gauche pour contrôler l'intensité des vibrations.
+
+<Callout type="warn">
+
+Fermez l'application téléphonique Lovense avant de vous connecter à RADR. Les appareils Bluetooth ne peuvent avoir qu’un seul contrôleur actif.
+
+</Callout>
+## Limites par rapport à l'application native
+
+RADR fournit un contrôle de base des vibrations. Les fonctionnalités suivantes ne sont **pas** disponibles :
+
+| Fonctionnalité | RADR | Application Lovense |
+| ---------------------- | ---- | ----------- |
+| Vibrations de base | Oui | Oui |
+| Modèles de vibrations | Non | Oui |
+| Contrôle des partenaires à distance | Non | Oui |
+| Modes réactifs au son | Non | Oui |
+| Fonctions d'alarme | Non | Oui |
+| Paramètres de l'appareil | Non | Oui |
+| Mises à jour Firmware | Non | Oui |
+
+<Callout type="idea">
+
+Utilisez RADR lorsque vous souhaitez des commandes tactiles et physiques sans téléphone. Utilisez l'application Lovense pour les fonctionnalités avancées et la lecture à distance.
+
+</Callout>
+## Référence rapide| Contrôle | Actions |
+| ------------- | ----------------------- |
+| Encodeur gauche | Ajuster les vibrations (0–16) |
+| Encodeur droit | Non utilisé |
+| Pare-chocs gauche | Non utilisé |
+| Pare-chocs droit | Non utilisé |
+| Bouton gauche | Retour au menu principal |
+| Bouton du milieu | Arrêt (mis à 0) |
+| Bouton droit | Non utilisé |
+
+## Dépannage
+
+<Callout type="info" title="L'appareil Lovense n'apparaît pas dans l'analyse">
+
+- Assurez-vous que l'appareil est allumé (LED clignotante)
+- Fermez complètement l'application téléphonique Lovense
+- Déplacez RADR à moins de 1 à 2 mètres de l'appareil
+- Redémarrez les deux appareils et réessayez
+
+</Callout>
+<Callout type="info" title="L'appareil se connecte mais ne vibre pas">
+
+- Assurez-vous que le niveau de vibration est supérieur à 0
+- Vérifiez que l'appareil est chargé
+- Certains appareils ont besoin de quelques secondes après la connexion pour s'initialiser
+
+</Callout>
+<Callout type="info" title="Les vibrations sont incohérentes">
+
+- Réduire la distance entre le RADR et l'appareil
+- Éloignez-vous des routeurs Wi-Fi et des autres appareils Bluetooth
+- Assurez-vous qu'aucune autre application n'essaie de se connecter
+
+</Callout>
+## Conseils
+
+<Callout type="idea">
+
+Commencez à 0 et augmentez un niveau à la fois seulement après la réussite de la vérification Stop.
+
+</Callout>
+<Callout type="idea">
+
+L'encodeur offre un accès rapide aux 17 niveaux (0 à 16). Vous pouvez faire défiler rapidement les intensités.
+
+</Callout>

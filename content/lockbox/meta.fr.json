@@ -1,0 +1,18 @@
+{
+  "title": "Lockbox",
+  "description": "Chasteté Lockbox guides et assistance",
+  "root": true,
+  "pages": [
+    "index",
+    "safety",
+    "quick-start",
+    "using",
+    "support",
+    "faqs",
+    "errors",
+    "device-states",
+    "technical",
+    "tools",
+    "changelog"
+  ]
+}

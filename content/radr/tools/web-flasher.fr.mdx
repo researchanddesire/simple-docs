@@ -1,0 +1,31 @@
+---
+title: "Flasheur Web RADR"
+description: "Installez le micrologiciel RADR stable actuel sur USB ou récupérez une télécommande que le support vous a demandé de reflasher."
+---
+
+importer { DeviceFlasher } depuis "@repo/device-tools/device-flasher";
+
+Utilisez cet outil pour installer ou récupérer le micrologiciel RADR directement à partir d'un navigateur de bureau via USB-C.
+
+<Callout type="info" title="Utiliser Chrome ou Edge sur un ordinateur de bureau">
+
+Web Serial n'est pas disponible dans Safari, Firefox ou les navigateurs mobiles. Utilisez un câble USB-C compatible données et fermez toute autre application utilisant le port série.
+
+</Callout>
+
+## Avant de vous connecter
+
+1. Arrêtez et déconnectez tout appareil contrôlé.
+2. Notez la version actuelle du micrologiciel et les paramètres si RADR peut toujours démarrer.
+3. Utilisez un câble de données USB, et non un câble de charge uniquement, et connectez-le directement à l'ordinateur lorsque cela est possible.
+4. Gardez l'onglet du navigateur ouvert et le câble connecté jusqu'à ce que l'outil signale la fin.
+
+Le clignotement peut remplacer le micrologiciel de l'appareil et réinitialiser les paramètres. La version affichée par l'outil fait autorité pour cette opération ; cette page ne code pas en dur une version actuelle.
+
+<DeviceFlasher device="radr" />
+
+## Vérifier ou récupérer
+
+Après un flash réussi, redémarrez RADR, confirmez la version de démarrage et vérifiez ses menus avant de reconnecter un appareil. Reconnectez-vous déchargé et testez la sortie la plus basse et arrêtez-vous.
+
+Si aucun périphérique série n'apparaît, fermez les autres outils série, reconnectez le câble, essayez un autre câble compatible données ou un port USB, puis rouvrez Chrome ou Edge. Si le clignotement échoue à plusieurs reprises, arrêtez de réessayer et envoyez le navigateur, le système d'exploitation, la version sélectionnée et le dernier message de l'outil à [support](mailto:support@researchanddesire.com).

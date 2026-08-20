@@ -1,0 +1,48 @@
+---
+title: "E-DTT-1: onlinecontrole mislukt"
+description: "Diagnostiseer een trainer die lid is geworden van Wi-Fi maar de online statuscheck van R+D niet kan voltooien."
+---
+
+## Betekenis
+
+E-DTT-1 betekent dat de online statuscheck is mislukt. De Trainer heeft mogelijk verbinding gemaakt met het lokale Wi-Fi-netwerk, maar heeft het vereiste serververzoek niet voltooid. Dit bewijst niet dat een firewall de oorzaak is.
+
+## Diagnostische ladder
+
+### 1. Bevestig de gewone netwerkdienst
+
+Gebruik een ander apparaat op dezelfde Wi-Fi en controleer of het internet werkt. Start de router alleen opnieuw op als u daartoe bevoegd bent en ook andere clients een probleem hebben.
+
+### 2. Herhaal de installatie van Wi-Fi
+
+Volg [Connect the Trainer to Wi-Fi](/dtt/quick-start/pairing/wifi-setup). Voer het wachtwoord opnieuw in en laat de Trainer opnieuw opstarten.
+
+### 3. Controleer netwerkbeperkingen
+
+Zoek naar een captive browseraanmelding, clientisolatie, gepauzeerde/blocked apparaten, ouderlijk toezicht, DNS filtering of een IoT/guest netwerk dat uitgaand verkeer blokkeert. Schakel niet de hele firewall uit; verander alleen een regel die u begrijpt of vraag dit aan de netwerkbeheerder.
+
+### 4. Vergelijk met een eenvoudige hotspot
+
+Verbind de Trainer met een telefoonhotspot als tijdelijke diagnostische test. Als de hotspot werkt, is de oorspronkelijke netwerkconfiguratie de waarschijnlijke grens. Als beide niet slagen, verzamel dan bewijs ter ondersteuning.
+
+<Callout type="info">
+
+Bij een hotspottest kan gebruik worden gemaakt van mobiele data. Herstel daarna het beoogde netwerk; laat geen inloggegevens achter op een gedeelde telefoon zonder toestemming.
+
+</Callout>
+
+## Succes
+
+De Trainer start opnieuw op, voltooit de preflight zonder E-DTT-1 en haalt de verwachte sjabloon en het verwachte speelgoed op.
+
+## Neem contact op met ondersteuning
+
+E-mail [support@researchanddesire.com](mailto:support@researchanddesire.com) met:
+
+- Trainer ID en firmwareversie indien weergegeven;
+- of de Wi-Fi-installatie zelf slaagt;
+- of een andere klant internet heeft op dat netwerk;
+- of een telefoonhotspot het resultaat verandert;
+- router/network type en exacte fouttekst.
+
+Stuur geen Wi-Fi-wachtwoorden of accountgegevens.

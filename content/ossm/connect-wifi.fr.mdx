@@ -1,0 +1,42 @@
+---
+title: "Connectez OSSM à Wi-Fi"
+description: "Connectez OSSM à un réseau Wi-Fi 2,4 GHz avec le contrôleur Web ou le portail de configuration RADR et vérifiez l'état en ligne."
+---
+
+Wi-Fi permet les mises à jour du micrologiciel. Il n’est pas requis pour le contrôle local filaire. Vous avez besoin du nom de réseau et du mot de passe pour un réseau 2,4 GHz.
+
+## Option 1 : contrôleur Web
+
+1. Allumez et accueil OSSM.
+2. Ouvrez le [OSSM web controller](/ossm/tools/web-controller) dans le bureau Chrome ou Edge.
+3. Sélectionnez **Connect**, choisissez le OSSM et sélectionnez **Pair**.
+4. Ouvrez **Wi-Fi Paramètres**, saisissez le nom du réseau et le mot de passe, puis sélectionnez **Enregistrer et connecter**.
+
+![The web controller Wi-Fi settings form with network fields identified](./images/web-controller-wifisettings2-annotated-1.webp)
+
+## Option 2 : RADR
+
+1. Connectez RADR à OSSM, ouvrez **Paramètres** et sélectionnez **Wi-Fi Paramètres**.
+2. Scannez le QR code ou rejoignez le réseau temporaire **RADR Setup** affiché à l'écran.
+3. Dans le portail de configuration, sélectionnez **Configurer Wi-Fi**.
+4. Choisissez le réseau 2,4 GHz, saisissez son mot de passe et enregistrez.
+
+![The RADR Settings menu](./images/wireless-remote-wifi-connectivity-settings-unannotated.webp)
+
+![The RADR Wi-Fi Settings choice](./images/wireless-remote-wifi-connectivity-wifi-settings-unannotated.webp)
+
+![The RADR setup QR code shown on the remote](./images/wireless-remote-wifi-connectivity-wifi-qr-code-unannotated.webp)
+
+![A phone joined to the temporary RADR Setup network](./images/radr-wifi-setup-annotated.webp)
+
+![The Wi-Fi setup portal network configuration choice](./images/wifi-manager-annotated.webp)
+
+![The setup portal network list and password entry](./images/radr-wifi-network-selection-annotated.webp)
+
+<Callout type="success" title="Succès">
+
+L'indicateur Wi-Fi affiche un état vert et reste connecté après un redémarrage. Un statut jaune signifie que le réseau est connecté mais pas le service en ligne ; le rouge signifie aucune connexion Wi-Fi.
+
+</Callout>
+
+Si la configuration échoue, confirmez que 2,4 GHz est activé, saisissez à nouveau le mot de passe, rapprochez-vous du routeur et consultez [OSSM troubleshooting](/ossm/troubleshooting).

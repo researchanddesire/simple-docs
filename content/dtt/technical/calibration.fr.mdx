@@ -1,0 +1,56 @@
+---
+title: "Calibrer un jouet"
+description: "Capturez une plage de mouvement confortable, comprenez l'étalonnage enregistré par jouet, réinitialisez-le et récupérez les valeurs rejetées."
+---
+
+L'étalonnage mappe le jouet installé et la géométrie de montage aux positions des capteurs. Il s'agit d'une mesure, pas d'un défi pour atteindre une profondeur maximale.
+
+## Premier étalonnage
+
+### 1. Vérifiez la configuration
+
+Confirmez que le support est stable, que le jouet installé correspond à l'affectation du tableau de bord, que le chemin du capteur est dégagé et que vous pouvez vous éloigner immédiatement.
+
+### 2. Capturez la position confortable la plus proche
+
+Déplacez-vous lentement jusqu'à la position la plus proche que vous pouvez contrôler confortablement, restez immobile et appuyez sur le bouton lorsque vous y êtes invité.
+
+### 3. Capturez la position de repos
+
+Revenez à la position de démarrage naturel/rest, restez immobile et appuyez sur le bouton.
+
+### 4. Confirmez l'acceptation
+
+<Callout type="success" title="Succès">
+
+L'appareil accepte les deux valeurs et avance au résumé de la session ou au premier segment sans erreur d'étalonnage.
+
+</Callout>
+
+## Plage valide appliquée par le API actuel
+
+Le tableau de bord API fixe l'étalonnage du jouet stocké à 1,5-21,5 cm et nécessite au moins 2 cm entre le minimum et le maximum stockés. Il s’agit de limites de validation logicielle, et non de recommandations ou d’objectifs médicaux.
+
+## Calibrage par jouet enregistré
+
+La v2 actuelle API stocke `minCm`, `maxCm` et un horodatage d'étalonnage sur le jouet attribué à la session et appartenant à ce compte. Un flux de jouet, de propriétaire, d'affectation ou de micrologiciel différent peut à nouveau s'afficher.
+
+## Réinitialiser et recalibrer
+
+1. Ouvrez la **Toybox** du Trainer couplé dans le tableau de bord.
+2. Sélectionnez le jouet exact.
+3. Choisissez l'action reset/recalibrate si elle est affichée.
+4. Démarrez une nouvelle session en ligne avec ce jouet.
+5. Capturez à nouveau les deux positions.
+
+## Récupération
+
+| Symptôme | Actions |
+| ------------------------------- | ----------------------------------------------------------------------- |
+| les positions sont trop proches | utiliser une position de repos et une position la plus proche clairement séparées mais néanmoins confortables |
+| la valeur change tout en maintenant | stabilisez la monture et le corps ; dégager le chemin du capteur |
+| le mauvais jouet est nommé | arrêtez, corrigez l'affectation des jouets du tableau de bord et redémarrez |
+| l'étalonnage enregistré ne se charge pas | connectez-vous en ligne, confirmez le compte et le jouet, puis recalibrez |
+| serveur rejette la sauvegarde | garder la session arrêtée, vérifier la connectivité et réessayer une fois en ligne |
+
+Ne publiez pas et ne réutilisez pas les valeurs de profondeur « typiques » d’une autre personne. Continuez jusqu'à [Run your first session](/dtt/quick-start/first-session).

@@ -1,0 +1,68 @@
+---
+title: „Software-Notfall-Entsperrung“
+description: „Öffnen Sie im Notfall lokal ein Lockbox und verstehen Sie den folgenden Gerätestatus.“
+---
+
+Die Notentriegelung ist eine lokale Sicherheitsfunktion für sofortigen Zugriff, wenn eine normale oder Schlüsselhalter-Entriegelung nicht verfügbar ist.
+
+<Callout type="warn" title="Verwenden Sie es, wenn Sie es brauchen">
+
+Verzögern Sie den Notfallzugriff nicht aufgrund einer Abklingzeit, einer Benachrichtigung, einer Punktzahl, einer Beziehungsregel oder Bedenken hinsichtlich der Erklärung der Entscheidung. Achten Sie zuerst auf die Sicherheit.
+
+</Callout>
+
+## Vom Gerät entsperren
+
+1. Halten Sie die Taste **Enter/Lock** etwa zwei Sekunden lang gedrückt, um das Sperrmenü zu öffnen.
+
+![Front of the Lockbox with the Enter/Lock button labeled](../quick-start/images/lockbox-front-housing-annotated.webp)
+
+2. Wählen Sie **Notfall-Entriegelung**.
+
+![Emergency Unlock selected on the Lockbox](../quick-start/images/emergency-unlock-on-device-select-annotated.webp)
+
+3. Bestätigen Sie die Aktion.
+
+![Emergency Unlock confirmation screen](../quick-start/images/emergency-unlock-on-device-confirm-annotated.webp)
+
+4. Bestätigen Sie, dass das Gerät entsperrt ist und dass Sie es öffnen können, ohne den Mechanismus zu erzwingen.
+
+## Was passiert als nächstes?
+
+In der aktuellen Dokumentation werden diese Verhaltensweisen nach der Software-Notfallentsperrung aufgezeichnet:
+
+- Die aktive Sitzung endet sofort;
+- Verknüpfte Partner erhalten möglicherweise eine E-Mail- oder Dashboard-Benachrichtigung.
+- Die Aktion erscheint in der Geräteaktivität; und
+– Der Lockbox tritt in eine 24-stündige Abklingzeit ein, bevor eine weitere Sperre gestartet werden kann, es sei denn, das aktuelle Dashboard-Verhalten bietet eine frühere Lösung.
+
+<Callout type="info">
+
+Die Abklingzeit wirkt sich auf das Starten eines weiteren Schlosses aus, nicht auf Ihr Recht, den Schlüssel abzurufen. Der Wortlaut des Dashboards und die Wiederherstellungskontrollen können sich ändern. Verfolgen Sie den in Ihrem Konto angezeigten Status und wenden Sie sich an den Support, wenn der Status nicht wie erwartet behoben wird.
+
+</Callout>
+
+Den Status nach der Entsperrung finden Sie unter [E-Lock 20](/lockbox/errors/e-lock-20).
+
+## Verfügbarkeit
+
+Die Notfallentsperrung funktioniert lokal ohne Internet, wenn die Option aktiviert ist. Einige Sitzungseinstellungen können die Softwareoption deaktivieren, während der Lockbox entsperrt ist. Überprüfen Sie vor jeder Sperrung, ob die Option verfügbar ist, und prüfen Sie den Hardware-Fallback.
+
+<Callout type="warn">
+
+Durch das Deaktivieren der Software-Notfallentsperrung wird der normale lokale Freigabepfad entfernt. Der verbleibende Fallback ist der destruktive Hardwarezugriff. Deaktivieren Sie es niemals ohne die informierte Zustimmung aller Betroffenen und einen praktizierten Wiederherstellungsplan.
+
+</Callout>
+
+## Wenn das Menü nicht verfügbar ist
+
+| Situation | Aktion |
+| ----------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| Die Option zum Entsperren im Notfall ist deaktiviert oder fehlt | Verwenden Sie [Hardware Backplate Emergency Access](/lockbox/support/emergency-backplate) |
+| Das Gerät reagiert nicht und der Zugriff ist nicht dringend | Versuchen Sie es mit einem dokumentierten [restart](/lockbox/device-states/restarting) und bewerten Sie es dann erneut |
+| Gerät meldet, dass es nicht entsperrt werden kann | Folgen Sie [E-Lock 2](/lockbox/errors/e-lock-2), beginnend mit dem Notfallpfad |
+| Ein sofortiger Zugriff ist weiterhin nicht möglich | Wenden Sie sich an den örtlichen Rettungsdienst und verwenden Sie keine Elektrowerkzeuge in der Nähe der Gerätebatterie |
+
+## Halten Sie dies offline verfügbar
+
+Speichern oder drucken Sie [Lockbox Safety and Emergency Access](/lockbox/safety) und [Hardware Backplate Emergency Access](/lockbox/support/emergency-backplate) vor einer langen oder remote verwalteten Sperre.

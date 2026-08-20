@@ -1,0 +1,22 @@
+---
+title: "Gouden motorprogrammeertool"
+description: "Programmeer een OSSM Gold-motor met behulp van Web Serial en Modbus RTU."
+---
+
+importeer { GoldMotorControl } uit "@repo/device-tools/gold-motor-control";
+
+Configureer of herstel de standaardinstellingen van OSSM op een Gold Motor (57AIM-serie) rechtstreeks vanuit een ondersteunde desktopbrowser.
+
+<Callout type="info" title="Dit is een motorprogrammeur, geen firmware-flasher">
+
+Deze tool leest en schrijft motorconfiguratieregisters via Modbus RTU. Er wordt geen firmware gedownload en daarom wordt het firmware-manifestpad Supabase niet gebruikt.
+
+</Callout>
+
+<Callout type="warn" title="Koppel eerst de OSSM-signaalkabel los">
+
+Verwijder de OSSM-referentiekaart met vier pins signaalstekker voordat u gaat programmeren. Voed de motor met 20–36 V DC en sluit hem aan via een RS485 USB adapter. Gebruik Chrome of Edge op een desktopcomputer.
+
+</Callout>
+
+<GoldMotorControl />

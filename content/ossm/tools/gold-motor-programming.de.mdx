@@ -1,0 +1,22 @@
+---
+title: „Gold Motor-Programmiertool“
+description: „Programmieren Sie einen Goldmotor OSSM mit Web Serial und Modbus RTU.“
+---
+
+importiere { GoldMotorControl } von „@repo/device-tools/gold-motor-control";
+
+Konfigurieren oder stellen Sie die OSSM-Standardeinstellungen auf einem Gold Motor (57AIM-Serie) direkt über einen unterstützten Desktop-Browser wieder her.
+
+<Callout type="info" title="Dies ist ein Motorprogrammierer, kein Firmware-Flasher">
+
+Dieses Tool liest und schreibt Motorkonfigurationsregister über Modbus RTU. Es lädt keine Firmware herunter und verwendet daher nicht den Firmware-Manifest-Pfad Supabase.
+
+</Callout>
+
+<Callout type="warn" title="Trennen Sie zuerst das OSSM-Signalkabel">
+
+Entfernen Sie vor dem Programmieren den vierpoligen Signalstecker der Referenzplatine OSSM. Versorgen Sie den Motor mit 20–36 V Gleichstrom und schließen Sie ihn über einen RS485-USB-Adapter an. Verwenden Sie Chrome oder Edge auf einem Desktop-Computer.
+
+</Callout>
+
+<GoldMotorControl />

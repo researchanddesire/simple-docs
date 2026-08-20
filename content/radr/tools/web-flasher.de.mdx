@@ -1,0 +1,31 @@
+---
+title: „RADR Web Flasher“
+description: „Installieren Sie die aktuelle stabile RADR-Firmware über USB oder stellen Sie eine Fernbedienung wieder her, deren Support Sie zum erneuten Flashen aufgefordert hat.“
+---
+
+importiere { DeviceFlasher } aus „@repo/device-tools/device-flasher";“
+
+Verwenden Sie dieses Tool, um RADR-Firmware direkt von einem Desktop-Browser über USB-C zu installieren oder wiederherzustellen.
+
+<Callout type="info" title="Verwenden Sie Chrome oder Edge auf einem Desktop-Computer">
+
+Web Serial ist in Safari, Firefox oder mobilen Browsern nicht verfügbar. Verwenden Sie ein datenfähiges USB-C-Kabel und schließen Sie alle anderen Apps, die den seriellen Port verwenden.
+
+</Callout>
+
+## Vor dem Verbinden
+
+1. Stoppen und trennen Sie alle gesteuerten Geräte.
+2. Beachten Sie die aktuelle Firmware-Version und Einstellungen, ob RADR noch starten kann.
+3. Verwenden Sie ein Datenkabel vom Typ USB, kein reines Ladekabel, und schließen Sie es nach Möglichkeit direkt an den Computer an.
+4. Lassen Sie den Browser-Tab geöffnet und das Kabel angeschlossen, bis das Tool den Abschluss meldet.
+
+Durch das Flashen kann die Gerätefirmware ersetzt und Einstellungen zurückgesetzt werden. Die vom Tool angezeigte Version ist für diesen Vorgang maßgeblich; Auf dieser Seite ist keine aktuelle Version fest codiert.
+
+<DeviceFlasher device="radr" />
+
+## Überprüfen oder wiederherstellen
+
+Schalten Sie RADR nach einem erfolgreichen Flash aus und wieder ein, bestätigen Sie die Startversion und überprüfen Sie die Menüs, bevor Sie ein Gerät erneut anschließen. Unbelastet wieder anschließen, den niedrigsten Ausgang testen und stoppen.
+
+Wenn kein serielles Gerät angezeigt wird, schließen Sie andere serielle Tools, schließen Sie das Kabel erneut an, versuchen Sie es mit einem anderen datenfähigen Kabel oder USB-Anschluss und öffnen Sie Chrome oder Edge erneut. Wenn das Flashen wiederholt fehlschlägt, beenden Sie den erneuten Versuch und senden Sie den Browser, das Betriebssystem, die ausgewählte Version und die letzte Tool-Nachricht an [support](mailto:support@researchanddesire.com).

@@ -1,0 +1,77 @@
+---
+title: "Lockbox Publieke stemming"
+description: "Inschakelen, delen, monitoren, beperken en uitschakelen van Lockbox openbare stemmen met duidelijke privacy- en rolgrenzen."
+---
+
+Openbaar stemmen creëert een deelbare link waarmee bezoekers tijd kunnen toevoegen aan of verwijderen uit een actieve vergrendeling op basis van de waarden die voor die sessie zijn geconfigureerd.
+
+<Callout type="warn">
+
+Alle betrokkenen moeten het eens worden over het publiek, de stemeffecten, de minimale en maximale duur en het afsluitplan voordat de link wordt gedeeld. Publieke stemmingen mogen de toegang tot pauzes of noodontgrendeling niet ontnemen.
+
+</Callout>
+
+## Rollen en zichtbaarheid
+
+| Rol | Wat te verifiëren |
+| ----------- | -------------------------------------------------------------------------- |
+| Lockee | Toestemmingen aan het publiek en geconfigureerde effecten; behoudt veiligheid en noodtoegang |
+| Sleutelhouder | Heeft toestemming om deze sessie aan te passen en weet hoe u het stemmen kunt uitschakelen of beëindigen |
+| Zelfkluis | Configureert en test de limieten voordat de actieve sessie wordt gestart |
+| Kiezer | Ontvangt alleen de openbare stemweergave; ingelogde identiteit kan verschijnen in activiteit |
+
+Op de openbare pagina worden sessiegegevens weergegeven die nodig zijn om te stemmen. De accountgegevens mogen niet openbaar worden gemaakt, maar het delen van de link maakt de stemweergave opzettelijk beschikbaar voor iedereen die deze ontvangt of doorstuurt.
+
+## Inschakelen en configureren
+
+1. Bewerk in het dashboard een Lockbox-sjabloon of open **Instellingen wijzigen** voor een in aanmerking komende actieve sessie of testsessie.
+
+![Lockbox template editor where session features are configured](../quick-start/images/creating-and-editing-a-lock-annotated.webp)
+
+2. Schakel **Openbaar stemmen** in.
+3. Open de instellingen en configureer:
+   - **Tijd Plus**: seconden toegevoegd door een hogere stem;
+   - **Tijd Minus**: seconden verwijderd door een lagere stem;
+   - **Maximale sluisduur**: optionele bovengrens; en
+   - **Minimale sluisduur**: optionele ondergrens.
+
+4. Controleer de definitieve waarden met het slot en de sleutelhouder voordat u deze opslaat.
+
+<Callout type="warn">
+
+Zonder een boven- of ondergrens zegt de huidige documentatie dat stemmen de duur in die richting kunnen blijven veranderen. Publiceer de link pas als de geconfigureerde effecten en grenzen acceptabel zijn.
+
+</Callout>
+
+## Deel de link
+
+1. Open de actieve Lockbox sessie in het dashboard.
+2. Zoek de badge **Openbaar stemmen** of deel de actie.
+3. Kopieer de link.
+4. Open het in een privé/incognito venster voordat u het deelt.
+5. Controleer of de openbare weergave alleen informatie bevat die u wilt publiceren.
+
+Behandel de URL als openbaar. Deel het alleen in communities die overeenkomen met de afgesproken doelgroep en ga ervan uit dat het kan worden doorgestuurd.
+
+## Activiteit monitoren
+
+De Lockbox pagina kan tellers weergeven voor het verhogen en verlagen van stemmen. In de sessieactiviteitsgeschiedenis worden de stemrichting, tijdstempel en een ingelogde gebruikersnaam of **Anoniem** vastgelegd.
+
+De huidige documentatie beschrijft een stemlimiet per sessie van één stem per 24 uur, bijgehouden op account en IP-adres. Omdat misbruikcontroles kunnen veranderen, kunt u het beste vertrouwen op de live-interface in plaats van deze als gegarandeerde snelheidslimiet te gebruiken.
+
+Controleer de fysieke Lockbox regelmatig. Stemmen zijn van toepassing op de sessie, maar het dashboard kan voorlopen op een offline apparaat.
+
+## Schakel het stemmen uit en trek de link in
+
+1. Open de actieve sessie-instellingen.
+2. Schakel **Openbaar stemmen** uit en sla op.
+3. Bevestig dat de actie badge/share verdwijnt.
+4. Open de oude link in een privévenster en bevestig dat deze geen stemmen meer accepteert.
+
+Stemgebeurtenissen uit het verleden blijven in de activiteitengeschiedenis staan. Als u stemmen uitschakelt, kan informatie die al is gedeeld of kopieën van de URL niet worden ingetrokken.
+
+## Veiligheid en herstel
+
+- Als stemmen een onveilige of ongewenste situatie creëren, schakelt u het stemmen uit en beëindigt u de sessie.
+- Als het dashboard de Lockbox niet kan bereiken, gebruik dan lokale bedieningselementen en [Emergency Access](/lockbox/safety).
+- Als de openbare pagina onverwachte informatie openbaart of stemmen blijft accepteren nadat deze is uitgeschakeld, stop dan met delen en neem contact op met [support@researchanddesire.com](mailto:support@researchanddesire.com).

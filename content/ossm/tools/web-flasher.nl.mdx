@@ -1,0 +1,18 @@
+---
+title: "OSSM Webflitser"
+description: "Installeer de huidige stabiele OSSM-firmware via USB of herstel een besturingskaart waarvan de ondersteuning u heeft gevraagd om te reflashen."
+---
+
+importeer { DeviceFlasher } van "@repo/device-tools/device-flasher";
+
+Gebruik deze tool om OSSM-firmware rechtstreeks vanuit een desktopbrowser via USB te installeren of te herstellen.
+
+<Callout type="warn" title="Flits alleen als dit door de ondersteuning wordt aangegeven">
+
+Gebruik Chrome of Edge, een data-compatibele USB-kabel en stabiele voeding. Stop de OSSM en koppel de motorvoeding los voordat u USB aansluit.
+
+</Callout>
+
+Knipperen vervangt de geïnstalleerde firmware en vereist mogelijk dat Wi-Fi of apparaatinstellingen opnieuw worden ingevoerd. Lees [Flash or recover OSSM firmware](/ossm/tools) voor voorbereiding, succescontroles en herstel van fouten voordat u doorgaat.
+
+<DeviceFlasher device="ossm" />

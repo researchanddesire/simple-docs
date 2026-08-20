@@ -1,0 +1,51 @@
+---
+title: "Allumage et Accueil OSSM"
+description: "Connectez l'unité d'alimentation 24 V fournie, restez à l'écart du mouvement de démarrage et confirmez avec succès les maisons OSSM."
+---
+
+**Résultat :** OSSM a terminé la prise d'origine et attend avec les commandes de mouvement à zéro. Comptez environ deux minutes.
+
+## Avant de brancher l'alimentation
+
+- Lisez [OSSM safety and emergency stop](/ossm/safety).
+- Stabilisez le châssis et dégagez toute la trajectoire du rail.
+- Réglez la vitesse et la profondeur du contrôleur à zéro.
+- Utilisez l'alimentation 24 V, 4 A DC fournie. Ne remplacez pas une fourniture non vérifiée.
+
+<Steps>
+  <Step>
+
+### Connectez l'alimentation électrique au mur
+
+![The supplied OSSM power supply with its wall lead and DC output identified](./ossm/img/power-supply-annotated.webp)
+
+  </Step>
+  <Step>
+
+### Connectez la fiche cylindrique à OSSM
+
+![The OSSM power input identified on the enclosed control board](./ossm/img/enclosed-ossm-pcb-annotated1.webp)
+
+Gardez les mains et les objets à l'extérieur du chemin de fer avant d'effectuer cette connexion.
+
+  </Step>
+  <Step>
+
+### Observez le référencement à une distance de sécurité
+
+![The OSSM control board status LED illuminated during startup](./images/enclosed-ossm-pcb-annotated2.webp)
+
+Le rail se déplace lentement pour mesurer ses extrémités. Ne le retenez pas et ne le touchez pas.
+
+  </Step>
+</Steps>
+
+<Callout type="success" title="Succès">
+
+La prise d'origine se termine sans obstruction ni bruit inhabituel, la LED d'état reste allumée et le chariot est à l'arrêt. Continuez jusqu'à [choose and test a controller](/ossm/controllers).
+
+</Callout>
+
+## Si le homing ne se termine pas
+
+Coupez l’alimentation. Recherchez une obstruction, une courroie desserrée, un câble endommagé, un cadre instable ou une fixation sur le chemin de déplacement. Ne redémarrez pas à plusieurs reprises une machine bloquée ou bruyante ; utilisez [OSSM troubleshooting](/ossm/troubleshooting) ou contactez l'assistance.

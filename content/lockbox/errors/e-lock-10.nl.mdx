@@ -1,0 +1,129 @@
+---
+title: "E-Lock 10: Kan geen verbinding maken met Wi-Fi"
+description: "Diagnose E-Lock 10 met 2,4 GHz-referentie-, signaal-, slaapstatus-, hotspot- en dashboardcontroles."
+---
+
+Fout E-Lock 10 betekent dat uw Chastity Lockbox geen verbinding kon maken met een Wi-Fi netwerk. Cloudfuncties zoals het webdashboard, updates op afstand en partnermeldingen werken pas als het apparaat opnieuw verbinding maakt. De Lockbox werkt nog steeds lokaal met de huidige instellingen.
+
+<Callout type="warn">
+
+Zonder Wi-Fi kunt u geen wijzigingen aanbrengen via het webdashboard of updates op afstand ontvangen. Het apparaat blijft werken op basis van de huidige status.
+
+</Callout>
+## Veelvoorkomende oorzaken
+
+- Onjuiste Wi-Fi-inloggegevens: de SSID of het wachtwoord is verkeerd of de hoofdletters en kleine letters komen niet overeen
+- 2,4 GHz niet beschikbaar — De Lockbox vereist een 2,4 GHz-netwerk (niet alleen 5 GHz)
+- Zwak signaal: afstand, muren, metaal en apparaten kunnen interferentie veroorzaken
+- Netwerktype niet ondersteund: Captive portals, openbare hotspots of bedrijfsnetwerken kunnen IoT-apparaten blokkeren
+- Apparaat slaapt: Diepe slaap schakelt Wi-Fi uit totdat u het apparaat uit de slaapstand haalt
+- Tijdelijke storing: een korte software- of routerstoring
+
+## Hoe het te repareren
+
+### Stap 1: Controleer uw Wi-Fi naam en wachtwoord (alleen 2,4 GHz)
+
+Open het 2,4 GHz-netwerk van uw router en bevestig de exacte SSID en het wachtwoord. Voer ze opnieuw in op de Lockbox.
+
+<Callout type="idea">
+
+Typ eerst het wachtwoord in een notitie-app om de interpunctie en hoofdlettergebruik te bevestigen en kopieer het vervolgens naar de Lockbox-installatie.
+
+</Callout>
+<Callout type="success">
+
+Op het Lockbox-display verschijnt een groene stip links van het Wi-Fi-symbool wanneer er verbinding is.
+
+</Callout>
+### Stap 2: Test uw netwerk met een ander apparaat
+
+Verbind een telefoon of laptop met hetzelfde Wi-Fi netwerk met hetzelfde wachtwoord. Als dit mislukt, start u uw router en modem opnieuw op, wacht u twee minuten en probeert u het opnieuw.
+
+Gebruik de rij die overeenkomt met hoe de router zijn netwerken presenteert:
+
+| Router- of netwerkconfiguratie | Wat te proberen |
+| --------------------------------------- | -------------------------------------------------------------------- ---------------------------------------------------------------------- |
+| Afzonderlijke 2,4 GHz- en 5 GHz-namen | Kies de 2,4 GHz-naam |
+| Eén gecombineerde netwerknaam | Bevestig in de documentatie of instellingen van de router dat 2,4 GHz is ingeschakeld; als de Lockbox nog steeds niet kan deelnemen, ga dan verder met de hotspot-isolatietest hieronder |
+| Gast-, ondernemings-, hotel- of openbaar netwerk | Gebruik een privé 2,4 GHz-netwerk zonder browseraanmeldingspagina |
+| Mobiele hotspot | Gebruik tijdelijk om vast te stellen of de thuisrouter de oorzaak is |
+
+### Stap 3: Verbeter de signaalsterkte
+
+Plaats de Lockbox dichter bij uw router en verwijder zichtbare obstakels (grote metalen voorwerpen, apparaten). Probeer opnieuw verbinding te maken.
+
+### Stap 4: Maak het apparaat wakker als het in diepe slaap staat
+
+Diepe slaap schakelt Wi-Fi uit. Activeer de Lockbox door op de linkerknop (terug) te drukken en probeer vervolgens opnieuw verbinding te maken.
+
+<Callout type="info">
+
+Meer informatie over slaaptoestanden in de slaapmodus.
+
+</Callout>
+### Stap 5: Configureer Wi-Fi opnieuw vanuit het apparaatmenu
+
+Ga op de Lockbox naar Instellingen → Wi-Fi Instellingen. Scan de QR code met uw telefoon en selecteer uw 2,4 GHz-netwerk om de inloggegevens opnieuw in te voeren.
+
+<Callout type="success">
+
+Na een succesvolle deelname ziet u de groene stip naast het Wi-Fi-symbool op de Lockbox.
+
+</Callout>
+<Callout type="info">
+
+Als uw router aparte namen uitzendt voor 2,4 GHz en 5 GHz, kies dan de 2,4 GHz SSID.
+
+</Callout>
+### Stap 6: Start de Lockbox opnieuw op
+
+Als de fout zich blijft voordoen, gebruikt u **Instellingen → Apparaat opnieuw opstarten**. Als de bedieningselementen niet reageren, volgt u de knopprocedure van 10 seconden in [Restarting Your Device](/lockbox/device-states/restarting).
+
+### Stap 7: Probeer een mobiele hotspot (isolatietest)Maak een tijdelijke hotspot op je telefoon en verbind de Lockbox ermee. Als het hier verbinding maakt, ligt het probleem bij de configuratie van uw thuisnetwerk.
+
+<Callout type="warn">
+
+Vermijd openbare hotspots of netwerken waarvoor aanmelding via een browser vereist is (captive portals). Deze worden niet ondersteund voor de Lockbox.
+
+</Callout>
+## Bevestig dat het probleem is opgelost
+
+<Callout type="success">
+
+Je bent verbonden wanneer:
+
+- Er verschijnt een groene stip links van het Wi-Fi-symbool op het Lockbox-display
+- Het dashboard toont het apparaat na een korte vertraging online
+
+</Callout>
+
+![Wi-Fi connected with the dashboard connection indicator shown in green](../img/wifi-solid-green.webp)
+
+## Gerelateerde handleidingen
+
+**[Manual Wi-Fi Setup](/lockbox/quick-start/wifi-setup)**
+
+Maak opnieuw verbinding of vervang het opgeslagen netwerk.
+**[Sleep Mode](/lockbox/device-states/sleep-mode)**
+
+Begrijp het gedrag van automatisch versus diepe slaap en Wi-Fi.
+**[Restarting Device](/lockbox/device-states/restarting)**
+
+Hoe u de Lockbox veilig opnieuw kunt opstarten.
+**[Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting)**
+
+Afzonderlijke symptomen van Wi-Fi, internet, dashboard, slaapstand en firmware.
+**[Lockbox FAQs](/lockbox/faqs)**
+
+Verbindingsindicatoren, installatiestroom en veelgestelde vragen.
+
+## Nog steeds hulp nodig?
+
+<Callout type="info">
+
+Als u alle stappen heeft geprobeerd en nog steeds E-Lock 10 ziet, neem dan contact op met de ondersteuning. Vermeld het serienummer van uw apparaat, uw routermodel, het netwerktype (2,4 GHz SSID) en een foto van de fout op het Lockbox-display.
+
+- E-mail: <a href="mailto:support@researchanddesire.com">support@researchanddesire.com</a>
+- Algemene veelgestelde vragen: <a href="/lockbox/faqs">Veelgestelde vragen over lockbox</a>
+
+</Callout>

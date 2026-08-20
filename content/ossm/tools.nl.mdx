@@ -1,0 +1,55 @@
+---
+title: "Flashen of herstellen OSSM Firmware"
+description: "Bereid, installeer, verifieer en herstel OSSM- of RADR-firmware met de ondersteunde browsertools."
+---
+
+Gebruik het flashen van firmware om een apparaat te herstellen of wanneer Research and Desire-ondersteuning u daartoe opdracht geeft. Bij dagelijkse bediening is knipperen niet nodig.
+
+## Kies het juiste gereedschap
+
+- [OSSM web flasher](/ossm/tools/web-flasher) voor de OSSM besturingskaart
+- [RADR web flasher](/radr/tools/web-flasher) voor de draadloze afstandsbediening
+- [OSSM BLE controller](/ossm/tools/web-controller) voor browserbediening zonder knipperen
+- [OSSM Funscript Player](/ossm/tools/funscript-player) voor lokaal gesynchroniseerd afspelen
+- [Gold Motor Programming Tool](/ossm/tools/gold-motor-programming) alleen voor ondersteunde motorconfiguratie
+
+## Vereisten
+
+- Desktop Chrome of Edge met Web Serial ondersteuning
+- Een USB datakabel, geen oplaadkabel
+- Stabiele computerkracht en een ononderbroken USB verbinding
+- Het exacte apparaat dat in de flitser is geselecteerd
+- Tijd om Wi-Fi of apparaatinstellingen opnieuw in te voeren als de geïnstalleerde image deze opnieuw instelt
+
+<Callout type="error" title="Maak de machine veilig voordat u USB-flasht">
+
+Stop alle bewegingen, verplaats mensen, ontkoppel de motorvoeding van OSSM en sluit alleen de besturingskaart of de afstandsbediening aan via USB. Flits niet tijdens een sessie.
+
+</Callout>
+
+## Installeer stabiele firmware
+
+1. Open het knipperlicht voor het exacte apparaat.
+2. Laat **Modus** ingesteld op **Productie (stabiel)** tenzij ondersteuning een specifieke ontwikkelingslink heeft geleverd.
+3. Selecteer **Connect & Flash** en kies de seriële poort die verschijnt wanneer het apparaat is aangesloten.
+4. Bevestig het apparaat en de installatie. Koppel de computer niet los, sluit het tabblad niet en laat de computer niet in de sluimerstand staan.
+5. Wacht tot het installatieprogramma de voltooiing rapporteert.
+
+De flasher installeert het stabiele manifest dat beschikbaar is op het moment dat u het uitvoert. De pagina belooft geen versienummer; registreer de versie die door het apparaat wordt weergegeven na het opnieuw opstarten.
+
+## Controleer succes
+
+1. Koppel USB los, sluit de normale stroomvoorziening weer aan en start opnieuw op terwijl het bewegingspad leeg is.
+2. Controleer of het apparaat opstart en een firmwareversie weergeeft.
+3. Configureer Wi-Fi opnieuw of koppel alleen als het apparaat daarom vraagt.
+4. Voor OSSM: bevestig vóór gebruik de onbelaste homing, minimale beweging en Stop.
+
+## Als het knipperen mislukt
+
+- Houd het installatieprogramma geopend en sluit de kabel opnieuw aan om de juiste seriële poort te identificeren.
+- Probeer een andere bekende datakabel of directe computerpoort; vermijd een hub zonder stroom.
+- Sluit andere tabbladen of programma's via de seriële poort.
+- Probeer het stabiele beeld één keer opnieuw. Fiets niet door ontwikkelingstakken.
+- Als het apparaat niet meer opstart of herhaaldelijk stabiel knipperen mislukt, stop dan en stuur een e-mail naar [support@researchanddesire.com](mailto:support@researchanddesire.com) met het apparaattype, de weergegeven versie, de browser, het besturingssysteem, het installatiebericht en of de instellingen zijn gewist.
+
+**Toepasselijkheid:** browservereisten en beschikbare manifesten kunnen veranderen. Laatst beoordeeld op 16 augustus 2026.

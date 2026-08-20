@@ -1,0 +1,43 @@
+---
+title: „RADR Firmware aktualisieren“
+description: „Bereiten Sie sich auf ein RADR-Firmware-Update vor, überprüfen Sie das Installationsergebnis und stellen Sie es sicher nach einem unterbrochenen Update wieder her.“
+---
+
+Die Firmware-Version wird beim RADR-Start angezeigt. Diese Dokumentation veröffentlicht keine „neueste“ Version, da sich das Release-Manifest unabhängig voneinander ändern kann; Der Updater oder [Web Flasher](/radr/tools/web-flasher) zeigt die Version an, für deren Installation er vorbereitet ist.
+
+## Vor dem Update
+
+1. Stoppen Sie das gesteuerte Gerät und trennen Sie es. Nicht während einer Sitzung aktualisieren.
+2. Notieren Sie sich die beim Start angezeigte aktuelle Firmware-Version und alle gerätespezifischen Einstellungen, die Sie möglicherweise neu erstellen müssen.
+3. Laden Sie RADR auf und lassen Sie es für die Aktualisierung an eine stabile Stromversorgung angeschlossen.
+4. Für ein Over-the-Air-Update zuerst [connect RADR to Wi-Fi](/radr/guides/user-guide/connecting-to-wifi).
+5. Beginnen Sie nicht, es sei denn, Sie können RADR eingeschaltet und in der Nähe lassen, bis es neu startet.
+
+<Callout type="warn" title="Die Erhaltung und Wiederherstellung der Einstellungen kann nicht garantiert werden">
+
+Das Repository bietet keine Versions-zu-Version-Einstellungen-Migration oder Rollback-Garantie. Notieren Sie wichtige Einstellungen vor dem Update. Installieren Sie ein älteres Image nur, wenn der Flasher es anbietet und der Support bestätigt hat, dass ein Downgrade angemessen ist.
+
+</Callout>
+
+## Update drahtlos
+
+1. Wählen Sie im Hauptmenü **Einstellungen**.
+2. Wählen Sie **Gerät aktualisieren**.
+3. Lassen Sie RADR eingeschaltet, während es prüft, herunterlädt, installiert und neu startet.
+4. Beachten Sie nach dem Neustart die auf dem Startbildschirm angezeigte Version.
+5. Öffnen Sie die Einstellungen und den Gerätescan, um den normalen Betrieb zu bestätigen.
+6. Schließen Sie das entladene Zielgerät wieder an, starten Sie es mit dem niedrigsten Ausgang und bestätigen Sie „Stopp“.
+
+Das Update ist erst erfolgreich, wenn RADR normal neu startet und die erwartete Version anzeigt. Schließen Sie nicht auf Erfolg, nur weil der Fortschrittsbildschirm verschwunden ist.
+
+## Wenn das Update fehlschlägt
+
+| Symptom | Aktion |
+| ------------------------------------------------ | --------------------------------------------------------------------------------------------------- |
+| Überprüfung oder Download schlägt vor der Installation fehl | Bestätigen Sie 2,4 GHz Wi-Fi und Internetzugang, starten Sie RADR neu und versuchen Sie es einmal erneut |
+| Der Fortschritt stoppt und RADR reagiert weiterhin | Lassen Sie die Stromversorgung angeschlossen und warten Sie, bis sich der Status auf dem Bildschirm ändert. Schalten Sie es nicht wiederholt aus und wieder ein |
+| RADR startet neu, meldet aber die alte Version | Notieren Sie beide Versionen und die Nachricht und wenden Sie sich dann an den Support, bevor Sie es wiederholt versuchen |
+| RADR startet nicht normal | Schließen Sie eine stabile USB-Stromversorgung an und verwenden Sie das [RADR Web Flasher](/radr/tools/web-flasher)-Wiederherstellungsverfahren |
+| Ein angeschlossenes Gerät verhält sich danach anders | Stoppen Sie, schalten Sie das Zielgerät aus und melden Sie beide Firmware-Versionen |
+
+Für ein nicht wiederherstellbares Ergebnis senden Sie eine E-Mail an [support@researchanddesire.com](mailto:support@researchanddesire.com) mit der vorherigen Version, der versuchten Version, dem Browser oder der Aktualisierungsmethode und der letzten sichtbaren Nachricht.

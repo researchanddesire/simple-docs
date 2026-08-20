@@ -1,0 +1,14 @@
+{
+  "title": "Technisch",
+  "description": "Geräteverhalten, Fehler, Kalibrierung und Firmware",
+  "pages": [
+    "index",
+    "button-controls",
+    "calibration",
+    "device-states",
+    "error-codes",
+    "firmware-updates",
+    "led-feedback",
+    "offline-mode"
+  ]
+}
