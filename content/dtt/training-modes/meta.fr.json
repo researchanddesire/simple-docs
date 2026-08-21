@@ -1,0 +1,11 @@
+{
+  "title": "Modes d'entraînement",
+  "description": "Comparez et utilisez chaque type de segment",
+  "pages": [
+    "index",
+    "bounce",
+    "endurance",
+    "freeform",
+    "repetition"
+  ]
+}

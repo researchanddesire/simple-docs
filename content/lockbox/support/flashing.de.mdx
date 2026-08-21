@@ -1,0 +1,113 @@
+---
+title: „Flash oder Wiederherstellung Lockbox Firmware“
+description: „Installieren Sie die Lockbox-Firmware mit Web Serial neu, wählen Sie das Löschverhalten, überprüfen Sie den Erfolg und stellen Sie sicher wieder her.“
+---
+
+<Callout type="warn">
+
+Flashen Sie Ihr Gerät nur, wenn Sie vom Support von Research and Desire dazu aufgefordert werden. Wenn Sie Probleme haben, wenden Sie sich zuerst an [support@researchanddesire.com](mailto:support@researchanddesire.com).
+
+</Callout>
+<iframe
+  src="https://www.loom.com/embed/09a4bc33d3d945f6811efecc78e4b5bd"
+  title="So aktualisieren Sie Ihr Chastity Lockbox"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+/>
+
+<Callout type="info" title="Videotranskript">
+
+Das Video zeigt, wie Sie den Lockbox mit einem datenfähigen USB-C-Kabel an einen Desktop-Computer anschließen, den Web-Flasher in einem Chromium-Browser öffnen, das serielle Gerät Lockbox auswählen, auswählen, ob lokale Gerätedaten beibehalten oder gelöscht werden sollen, die Installation starten und auf den Neustart des Lockbox warten. Das nachstehende schriftliche Verfahren umfasst dieselben Aktionen und Wiederherstellungsprüfungen.
+
+</Callout>
+
+## Wann Sie Ihr Gerät flashen müssen
+
+Das Flashen installiert die Firmware neu und kann Folgendes beheben:
+
+- Gerät startet ständig von selbst neu (Power-Cycling oder Boot-Loop)
+- Gerät friert ein, wenn Menütasten gedrückt werden
+- Nicht reagierende Bildschirme oder Tasten nach dem Aufwachen aus dem Schlaf
+- Softwarefehler, die nach einem Hard-Reset bestehen bleiben
+
+<Callout type="idea">
+
+Versuchen Sie vor dem Flashen zunächst einen Hard-Reset: Halten Sie die Taste **Enter/Lock** 10 Sekunden lang gedrückt. Wenn das Problem weiterhin besteht, fahren Sie mit dem Flashen fort.
+
+</Callout>
+## Voraussetzungen
+
+Bevor Sie beginnen, stellen Sie sicher, dass Sie Folgendes haben:
+
+- Ein USB-C-Kabel, das **Datenübertragung** unterstützt (nicht nur Laden)
+- Ein Computer mit einem verfügbaren USB-C-Port
+- Google Chrome oder ein anderer Chromium-basierter Browser
+- Der Firmware-Kanal und die Version, deren Unterstützung Sie zur Installation aufgefordert hat
+– Eine Aufzeichnung des aktuellen physischen Sperrstatus und ob lokale Daten gelöscht werden dürfen
+
+<Callout type="info">
+
+Einige USB-C-Kabel unterstützen nur das Laden. Wenn Ihr Gerät nicht erkannt wird, versuchen Sie es mit einem anderen Kabel, das die Datenübertragung unterstützt.
+
+</Callout>
+## Web-Flasher
+
+<Callout type="info" title="Verwenden Sie Chrome oder Edge auf einem Desktop-Computer">
+
+Verbinden Sie den Lockbox mit einem datenfähigen USB-C-Kabel. Web Serial ist in Safari, Firefox oder mobilen Browsern nicht verfügbar.
+
+</Callout>
+
+Öffnen Sie das dedizierte [LKBX Web Flasher](/lockbox/tools/web-flasher).
+
+## Blinkanweisungen
+
+### Schritt 1: Schließen Sie Ihr Gerät an
+
+Stecken Sie das Kabel USB-C in Ihr Chastity Lockbox und verbinden Sie das andere Ende mit Ihrem Computer.
+
+### Schritt 2: Öffnen Sie den Web-Flasher
+
+Verwenden Sie den [LKBX Web Flasher](/lockbox/tools/web-flasher).
+
+### Schritt 3: Verbinden Sie sich mit Ihrem Gerät
+
+Klicken Sie auf **Verbinden** und wählen Sie das Gerät mit der Bezeichnung **USB JTAG Serial Debug** (oder ähnlich) aus der Liste aus.
+
+<Callout type="warn">
+
+Wenn kein Gerät angezeigt wird, überprüfen Sie, ob Ihr Kabel die Datenübertragung unterstützt, und versuchen Sie es mit einem anderen USB-Port.
+
+</Callout>
+### Schritt 4: Wählen Sie, ob Gerätedaten gelöscht werden sollen
+
+Wenn Sie mit dem Kontrollkästchen **Gerät löschen** dazu aufgefordert werden:
+
+| Wahl | Lokales Ergebnis | Verwenden Sie wann |
+| --------------- | ----------------------------------------------------------- | ---------------------------------------- |
+| Deaktivieren | Versucht, lokale Einstellungen und Status bei der Neuinstallation der Firmware beizubehalten | Der Support bittet um eine normale Neuinstallation |
+| Löschen markieren | Löscht lokale Einstellungen und Kalibrierung und erfordert eine erneute Einrichtung | Der Support bittet ausdrücklich um einen vollständigen Reset |
+
+<Callout type="info">
+
+In der aktuellen Dokumentation heißt es, dass die Dashboard-Kopplung erhalten bleibt, der sichtbare Setup-Status jedoch nach der Wiederherstellung variieren kann. Bestätigen Sie das Gerät nach dem Neustart in **Meine Geräte** und wenden Sie sich an den Support, bevor Sie es entfernen oder erneut koppeln.
+
+</Callout>
+### Schritt 5: Schließen Sie den Flash ab
+
+Klicken Sie auf **Weiter**, um den Flash-Vorgang zu starten. Warten Sie, bis der Vorgang abgeschlossen ist.
+
+<Callout type="success">
+
+Sobald der Vorgang abgeschlossen ist, wird Ihr Gerät neu gestartet. Wenn Sie das Gerät gelöscht haben, wird der Kalibrierungsbildschirm angezeigt. Die nächsten Schritte finden Sie in der Kalibrierungsanleitung. Wenn Sie den Löschvorgang nicht durchgeführt haben, kehrt das Gerät zum Normalbetrieb zurück.
+
+</Callout>
+
+## Wiederherstellung überprüfen
+
+1. Vergewissern Sie sich, dass der Browser eine abgeschlossene Installation meldet, bevor Sie USB trennen.
+2. Warten Sie, bis der Lockbox neu startet.
+3. Geben Sie [Calibration](/lockbox/device-states/calibration) ein, wenn Sie dazu aufgefordert werden.
+4. Stellen Sie vor dem Test sicher, dass das Gerät physisch entsperrt ist.
+5. Überprüfen Sie Wi-Fi, die Dashboard-Kopplung und einen entsperrten Sperrzyklus/unlock.Wenn die Installation fehlschlägt, halten Sie den Lockbox an eine stabile USB-Stromversorgung angeschlossen, schließen Sie andere serielle Anwendungen, öffnen Sie Chrome oder Edge erneut und probieren Sie das unterstützte Paket noch einmal aus. Wenn das serielle Gerät immer noch fehlt oder der zweite Versuch fehlschlägt, stoppen Sie und kontaktieren Sie den Support mit der Browser-Meldung. Erraten Sie nicht ein anderes Firmware-Paket oder einen anderen Kanal.

@@ -1,0 +1,157 @@
+---
+title: „Lockbox Statussymbole“
+description: „Identifizieren Sie Lockbox Schloss, Rückplatte, Wi-Fi, Armaturenbrett-Anschluss und Batteriesymbole in Text und Bildern.“
+---
+
+![Lockbox header bar showing status icons](../img/header.webp)
+
+In der Kopfleiste Ihres Lockboxs werden mehrere Symbole angezeigt, die den aktuellen Status Ihres Geräts anzeigen. Wenn Sie diese Symbole verstehen, können Sie schnell beurteilen, ob Ihr Lockbox verschlossen, angeschlossen und betriebsbereit ist.
+
+Von links nach rechts sind die Symbole:
+
+### Sperrzustand
+
+    Zeigt an, ob Ihr Gerät derzeit gesperrt ist. Die Statusanzeige zeigt an, ob die Rückplatte richtig positioniert ist. Weitere Informationen finden Sie unter [Lock icon](#lock-icon).
+
+### Netzwerkstatus
+
+    Zeigt an, ob Ihr Gerät mit einem Wi-Fi-Netzwerk verbunden ist. Die Statusanzeige verrät, ob Sie auch mit dem Dashboard verbunden und spielbereit sind. Weitere Informationen finden Sie unter [Wi-Fi icon](#wi-fi-icon).
+
+### Batteriestatus
+
+    Zeigt den aktuellen Akkustand und Ladestatus an. Dieses Symbol hat keine Statusanzeige. Weitere Informationen finden Sie unter [Battery icon](#battery-icon).
+
+## Durchsuchbare Statustabelle
+
+| Symbol oder Indikator | Bedeutung | Was zu tun ist |
+| -------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Geschlossenes Schloss | Das Gerät meldet einen gesperrten Zustand | Bestätigen Sie, dass die Rückplatte angebracht ist und die Sitzung erwartet wird |
+| Schloss öffnen | Das Gerät meldet einen entsperrten Zustand | Vergewissern Sie sich, dass sich der Mechanismus öffnet, bevor Sie einen Schlüssel hineinstecken |
+| Wi-Fi-Symbol fehlt | Nicht mit Wi-Fi verbunden oder Tiefschlaf ist aktiv | Wecken Sie das Gerät auf. Konfigurieren Sie Wi-Fi, wenn das Symbol nicht | zurückgibt
+| Wi-Fi Symbol vorhanden | Einem Wi-Fi-Netzwerk beigetreten | Überprüfen Sie den nebenstehenden Statuspunkt auf Dashboard-Konnektivität |
+| Gelber blinkender Punkt | Verbindung zum Dashboard-Dienst herstellen | Warten Sie bis zu 60 Sekunden |
+| Grüner Punkt | Verbunden mit Wi-Fi und dem Dashboard-Dienst | Keine Aktion |
+| Roter Punkt | Beigetreten Wi-Fi, kann aber nicht auf das Internet zugreifen | Folgen Sie [Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting) |
+| Akku laden | USB Strom ist angeschlossen | Bestätigen Sie die stabile Stromversorgung für lange Sitzungen |
+| Niedriger oder leerer Akku | Vor einer langen Sitzung aufladen | Halten Sie einen Notfallzugang bereit |
+
+## Schlosssymbol
+
+Das Schlosssymbol zeigt den aktuellen Status der Sensoren Ihres Geräts an. Dieses Symbol spiegelt den physischen Zustand des Sperrmechanismus wider – nicht Ihre aktive Spielsitzung.
+
+### Gesperrt
+
+![Locked icon showing the device is secured](../img/locked.webp)
+
+Wenn Sie dieses Symbol sehen, ist der Verriegelungsmechanismus aktiviert. Die Sensoren Ihres Geräts haben erkannt, dass das Schloss gesichert ist und auf den Inhalt nicht zugegriffen werden kann.
+
+### Entsperrt
+
+![Unlocked icon showing the device can be opened](../img/unlocked.webp)
+
+Das entriegelte Symbol zeigt an, dass die Sensoren erkannt haben, dass das Schloss geöffnet ist. Sie können auf den Inhalt der Box zugreifen.
+
+### Rückplatte an
+
+![Locked state with backplate detected](<../img/locked backplate on.webp>)
+![Unlocked state with backplate detected](<../img/unlocked backplate on.webp>)
+In der unteren linken Ecke des Schlosssymbols erscheint eine kleine Statusanzeige. Wenn diese Anzeige **grün** leuchtet, haben die Sensoren erkannt, dass die Rückplatte richtig positioniert ist und das Gerät zum Verriegeln bereit ist. Dieser Indikator kann sowohl im gesperrten als auch im entsperrten Zustand erscheinen.
+
+### Rückplatte ab
+
+![Locked state with backplate removed](<../img/locked backplate off (1).webp>)
+![Unlocked state with backplate removed](<../img/unlocked backplate off.webp>)
+Wenn die Statusanzeige **durchgehend gelb** leuchtet, haben die Sensoren erkannt, dass die Rückplatte nicht in Position ist. Der Versuch, diesen Status zu sperren, schlägt fehl.
+
+## Wi-Fi-Symbol
+
+### Wi-Fi nicht verbunden
+
+![Wi-Fi disconnected icon](<../img/wifi-off (1).webp>)
+
+Dieses Symbol zeigt an, dass Ihr Gerät mit keinem Wi-Fi-Netzwerk verbunden ist. Dies geschieht typischerweise, wenn:
+
+- Ihr Lockbox ist brandneu und wurde noch nie für Wi-Fi konfiguriert
+- Ihr Lockbox war zuvor verbunden, befindet sich jetzt jedoch außerhalb der Reichweite des gespeicherten Netzwerks
+
+In beiden Fällen müssen Sie Wi-Fi konfigurieren, indem Sie dem [Wi-Fi setup guide](/lockbox/quick-start/wifi-setup) folgen.
+
+### Wi-Fi verbunden
+
+![Wi-Fi connected icon](<../img/wifi (1).webp>)
+
+Dieses Symbol bestätigt, dass Ihr Gerät mit Wi-Fi verbunden ist und auf das Internet zugreifen kann.
+
+<Callout type="info">
+
+Wi-Fi Konnektivität allein bedeutet nicht, dass Ihr Gerät Befehle empfangen kann. Sie müssen Ihr Gerät außerdem koppeln und mit dem Dashboard verbinden. Befolgen Sie die Anweisungen unter [pairing guide](/lockbox/quick-start/pairing).
+
+</Callout>
+Überprüfen Sie die Statusanzeige in der unteren linken Ecke des Wi-Fi-Symbols, um zu sehen, ob Ihr Gerät bereit ist, Befehle zu empfangen.
+
+#### Statusanzeige: gelb blinkend
+
+![Wi-Fi connected with flashing yellow status indicator](../img/wifi-flashing.webp)
+
+Eine blinkende gelbe Anzeige bedeutet, dass Ihr Gerät mit Wi-Fi, aber noch nicht mit dem Dashboard-Server verbunden ist. Ihr Gerät kann in diesem Zustand keine Schlüsselhalterbefehle empfangen.
+
+<Callout type="info">
+
+Der Indikator prüft zwei Dinge: Wi-Fi Konnektivität UND Serververbindung. Bei der grünen Anzeige müssen beide funktionieren.
+
+</Callout>
+Dies kann passieren, wenn:
+
+- **Ihr Gerät wurde nicht gekoppelt** – Befolgen Sie die Anweisungen unter [pairing guide](/lockbox/quick-start/pairing), um die Einrichtung abzuschließen.
+- **Ihr Gerät wurde gerade erst eingeschaltet** – Die Serververbindung dauert normalerweise 15–30 Sekunden, kann jedoch je nach Standort und Netzwerkbedingungen bis zu 2 Minuten dauern.
+- **Problem mit der Serververbindung** – Vorübergehende Serverwartungs- oder Netzwerkroutingprobleme.
+
+<Callout type="warn">
+
+Wenn Sie länger als zwei Minuten gewartet haben und die blinkende gelbe Anzeige immer noch sieht, wenden Sie sich bitte an den Support, da dies möglicherweise auf ein Serverproblem hinweist.
+
+</Callout>
+#### Statusanzeige: durchgehend rot
+
+Eine durchgehend rote Anzeige bedeutet, dass Ihr Gerät mit dem Wi-Fi-Netzwerk verbunden ist, aber keine Verbindung zum Internet herstellen kann. Ihr Gerät kann in diesem Zustand keine Schlüsselhalterbefehle empfangen.
+
+Dies weist in der Regel eher auf ein Problem mit der Netzwerkkonfiguration als auf ein Geräteproblem hin. Häufige Ursachen sind:
+
+- **Router hat keine Internetverbindung** – Überprüfen Sie, ob andere Geräte im selben Netzwerk auf das Internet zugreifen können.
+- **Netzwerk-Firewall oder Filterung** – Einige Netzwerke (Unternehmens-, Hotel- oder öffentliche Netzwerke Wi-Fi) blockieren bestimmte Verbindungen. Versuchen Sie es mit einem anderen Netzwerk.
+- **Captive-Portal nicht abgeschlossen** – Bei einigen Netzwerken müssen Sie die Bedingungen akzeptieren oder sich über einen Browser anmelden, bevor Sie den Internetzugang gewähren.
+- **DNS oder Routing-Probleme** – Ihr Router ist möglicherweise falsch konfiguriert. Versuchen Sie, Ihren Router neu zu starten.
+
+<Callout type="warn">
+
+Wenn Sie in mehreren verschiedenen Netzwerken einen roten Punkt sehen, wenden Sie sich an den Support, da dies möglicherweise auf ein Geräteproblem hinweist, das eine weitere Fehlerbehebung erfordert.
+
+</Callout>
+#### Statusanzeige: durchgehend grün
+
+![Wi-Fi connected with solid green status indicator](../img/wifi-solid-green.webp)
+
+Eine durchgehend grüne Anzeige bedeutet:
+
+1. Ihr Gerät ist mit Wi-Fi verbunden
+2. Ihr Gerät ist mit dem Dashboard-Server verbunden
+3. Ihr Gerät ist sofort bereit, Schlüsselbefehle zu empfangen
+
+<Callout type="idea">
+
+Vertrauen Sie der Geräteanzeige mehr als dem Dashboard-Status. Das Gerät zeigt Echtzeitkonnektivität an, während das Dashboard um bis zu 60 Sekunden verzögert sein kann.
+
+</Callout>
+## Batteriesymbol
+![Battery charging](<../img/battery charging.webp>)
+![Battery full](<../img/battery full.webp>)
+![Battery medium](<../img/battery mid.webp>)
+![Battery low](<../img/battery low.webp>)
+![Battery empty](<../img/battery none.webp>)
+Diese Symbole zeigen den aktuellen Akkustand Ihres Geräts an. Wenn Ihr Gerät aufgeladen wird, sehen Sie im Akkusymbol einen Blitz.
+
+<Callout type="warn">
+
+Wenn das Akkusymbol rot wird, laden Sie Ihr Gerät sofort auf, um Unterbrechungen zu vermeiden.
+
+</Callout>

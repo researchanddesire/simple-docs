@@ -1,0 +1,56 @@
+---
+title: "Een speeltje kalibreren"
+description: "Leg een comfortabel bewegingsbereik vast, begrijp de opgeslagen kalibratie per speeltje, reset deze en herstel van afgewezen waarden."
+---
+
+Kalibratie brengt het geïnstalleerde speelgoed en de montagegeometrie in kaart op sensorposities. Het is meten, geen uitdaging om een ​​maximale diepte te bereiken.
+
+## Eerste kalibratie
+
+### 1. Controleer de instellingen
+
+Controleer of de houder stabiel is, het geïnstalleerde speelgoed overeenkomt met de dashboardtoewijzing, het sensorpad vrij is en u onmiddellijk weg kunt gaan.
+
+### 2. Leg de dichtstbijzijnde comfortabele positie vast
+
+Beweeg langzaam naar de dichtstbijzijnde positie die u gemakkelijk kunt controleren, blijf stil staan en druk op de knop wanneer daarom wordt gevraagd.
+
+### 3. Leg de rustpositie vast
+
+Ga terug naar de natuurlijke start/rest positie, houd stil en druk op de knop.
+
+### 4. Acceptatie bevestigen
+
+<Callout type="success" title="Succes">
+
+Het apparaat accepteert beide waarden en gaat zonder kalibratiefout door naar het sessieoverzicht of het eerste segment.
+
+</Callout>
+
+## Geldig bereik afgedwongen door de huidige API
+
+Het dashboard API klemt de opgeslagen speelgoedkalibratie vast op 1,5–21,5 cm en vereist minimaal 2 cm tussen het opgeslagen minimum en maximum. Dit zijn softwarevalidatiegrenzen, geen medische aanbevelingen of doelen.
+
+## Opgeslagen kalibratie per stuk speelgoed
+
+De huidige v2 API slaat `minCm`, `maxCm` en een kalibratietijdstempel op op het speelgoed dat aan de sessie is toegewezen en eigendom is van dat account. Een ander speeltje, eigenaar, toewijzing of firmwarestroom kan opnieuw vragen.
+
+## Reset en herkalibreer
+
+1. Open de **Speelgoeddoos** van de gekoppelde Trainer in het dashboard.
+2. Selecteer het exacte speeltje.
+3. Kies de actie reset/recalibrate, indien weergegeven.
+4. Start een nieuwe online sessie met dat speeltje.
+5. Verover beide posities opnieuw.
+
+## Herstel
+
+| Symptoom | Actie |
+| ----------------------------- | --------------------------------------------------------------- |
+| posities zijn te dichtbij | gebruik een duidelijk gescheiden maar toch comfortabele rustplaats en dichtstbijzijnde positie |
+| waarde verandert terwijl | stabiliseer de houder en het lichaam; maak het sensorpad vrij |
+| verkeerd speelgoed heet | stop, corrigeer de toewijzing van het dashboardspeelgoed en start opnieuw |
+| opgeslagen kalibratie wordt niet geladen | maak online verbinding, bevestig account en speelgoed en kalibreer vervolgens opnieuw |
+| server weigert de opslag | houd de sessie gestopt, controleer de connectiviteit en probeer het opnieuw zodra u online bent |
+
+Publiceer of hergebruik geen “typische” dieptewaarden van iemand anders. Ga verder naar [Run your first session](/dtt/quick-start/first-session).

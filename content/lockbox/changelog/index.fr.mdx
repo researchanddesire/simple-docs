@@ -1,0 +1,47 @@
+---
+title: "Lockbox Firmware Journal des modifications"
+description: "Examinez les modifications du micrologiciel Lockbox visibles par l'utilisateur, les mises en garde connues et les conseils d'assistance par version."
+---
+
+Les versions visibles par l'utilisateur sont répertoriées en premier. Les notes sources n'incluaient pas de dates de sortie vérifiées, donc aucune n'est inventée ici.
+
+<Callout type="info">
+
+Le Lockbox n'expose pas actuellement un grand livre de versions publiques complet avec les dates, la compatibilité et les packages de restauration. Avant de modifier les canaux du micrologiciel ou de réinstaller une version, contactez [support@researchanddesire.com](mailto:support@researchanddesire.com).
+
+</Callout>
+
+## v1.17.66
+
+- Ajout du couplage automatique depuis Chrome ou Edge avec Web Bluetooth.
+- Ajout du provisionnement Wi-Fi lors du couplage Bluetooth, de sorte que la configuration manuelle Wi-Fi n'est plus requise pour le flux recommandé.
+- Amélioration du dissociation afin qu'un Lockbox non apparié redémarre et annonce à nouveau le couplage.
+
+##v1.17.63
+
+- Restauration de l'icône d'état de la batterie.
+- Ajout d'un comportement de repli lorsque le capteur de batterie INA219 est indisponible.
+
+##v1.17.62
+
+- Annulation de la réutilisation du client HTTP et des modifications de la séquence de démarrage par rapport à la version 1.17.61 après des problèmes de stabilité.
+
+##v1.17.58
+
+- Désactivation de l'icône de la batterie dans la barre d'état. Il a été restauré dans la v1.17.63.
+
+##v1.17.51
+
+- Ajout de limites de durée minimale et maximale configurables pour le vote public.
+
+## v1.17.49
+
+- Refonte de l'écran de démarrage.
+- Ajout des états d'intégration pour l'accueil, la configuration Wi-Fi et le couplage des appareils.
+- Amélioration de l'habillage du texte et du positionnement du curseur.
+
+## Problèmes connus et récupération
+
+Si une fonctionnalité documentée n'apparaît pas, enregistrez la version affichée sur le Lockbox et contactez l'assistance. Ne présumez pas qu’une version inférieure est compatible avec le comportement actuel du tableau de bord. Suivez [Flash or Recover Lockbox Firmware](/lockbox/support/flashing) uniquement lorsque le support identifie le package correct et si les données locales doivent être effacées.
+
+Dernière révision : 16 août 2026.

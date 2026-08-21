@@ -1,0 +1,43 @@
+---
+title: "RADR bijwerken Firmware"
+description: "Bereid je voor op een RADR-firmware-update, controleer het geïnstalleerde resultaat en herstel veilig van een onderbroken update."
+---
+
+De firmwareversie verschijnt tijdens het opstarten van RADR. Deze documentatie publiceert geen “nieuwste” versie omdat het releasemanifest onafhankelijk kan veranderen; de updater of [Web Flasher](/radr/tools/web-flasher) toont de versie die hij wil installeren.
+
+## Voordat u gaat updaten
+
+1. Stop en koppel het bestuurde apparaat los. Update niet tijdens een sessie.
+2. Noteer de huidige firmwareversie die wordt weergegeven bij het opstarten en eventuele apparaatspecifieke instellingen die u mogelijk opnieuw moet maken.
+3. Laad RADR op en houd hem aangesloten op een stabiele voeding voor de update.
+4. Voor een draadloze update gebruikt u eerst [connect RADR to Wi-Fi](/radr/guides/user-guide/connecting-to-wifi).
+5. Begin niet tenzij u de RADR ingeschakeld en in de buurt kunt laten totdat deze opnieuw wordt opgestart.
+
+<Callout type="warn" title="Het behoud en het terugdraaien van instellingen zijn niet gegarandeerd">
+
+De repository biedt geen versie-voor-versie-instellingenmigratie of terugdraaigarantie. Leg belangrijke instellingen vast voordat u gaat updaten. Installeer alleen een ouder image als de flasher dit aanbiedt en de ondersteuning heeft bevestigd dat downgraden passend is.
+
+</Callout>
+
+## Update via de ether
+
+1. Selecteer **Instellingen** in het hoofdmenu.
+2. Selecteer **Apparaat bijwerken**.
+3. Laat RADR ingeschakeld terwijl het programma controleert, downloadt, installeert en opnieuw opstart.
+4. Noteer na het opnieuw opstarten de versie die op het opstartscherm wordt weergegeven.
+5. Open de instellingen en apparaatscan om de normale werking te bevestigen.
+6. Sluit het doelapparaat opnieuw aan, onbelast, begin op de laagste uitvoer en controleer Stop.
+
+De update is pas succesvol nadat RADR normaal opnieuw is opgestart en de verwachte versie weergeeft. Leid geen succes af alleen maar omdat het voortgangsscherm verdwenen is.
+
+## Als de update mislukt
+
+| Symptoom | Actie |
+| ------------------------------------------- | --------------------------------------------------------------------------------------- |
+| Controleren of downloaden mislukt vóór installatie | Bevestig 2,4 GHz Wi-Fi en internettoegang, start RADR opnieuw en probeer het één keer opnieuw |
+| De voortgang stopt en RADR blijft responsief | Houd de stroom aangesloten en wacht tot de status op het scherm verandert; schakel het niet herhaaldelijk uit en weer in |
+| RADR start opnieuw op, maar rapporteert de oude versie | Neem beide versies en het bericht op en neem vervolgens contact op met de ondersteuning voordat u het herhaaldelijk opnieuw probeert |
+| RADR start niet normaal | Sluit een stabiele USB stroom aan en gebruik de [RADR Web Flasher](/radr/tools/web-flasher) herstelprocedure |
+| Een aangesloten apparaat gedraagt ​​zich daarna anders | Stop, schakel het doelapparaat uit en rapporteer beide firmwareversies |
+
+Voor een onherstelbaar resultaat stuurt u een e-mail naar [support@researchanddesire.com](mailto:support@researchanddesire.com) met de vorige versie, de geprobeerde versie, browser of updatemethode en het laatst zichtbare bericht.

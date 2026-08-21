@@ -1,0 +1,38 @@
+---
+title: „Bounce-Modus“
+description: „Üben Sie kontrollierte Bewegungen in beide Richtungen und verstehen Sie abprallspezifische Ziele und Punkte.“
+---
+
+Bounce misst wiederholte Zyklen mit kontrollierter Bewegung in beide Richtungen. Sie unterscheidet sich von der Wiederholung hauptsächlich durch die erwartete Rückwärtsbewegung. Verwenden Sie sie daher erst, wenn Sie anhalten und reibungslos rückwärts fahren können.
+
+## Konfigurieren
+
+1. Fügen Sie ein **Bounce**-Segment hinzu.
+2. Wählen Sie das installierte Spielzeug aus.
+3. Wählen Sie eine niedrige Wiederholungszahl, eine angenehme Reichweite, ein angenehmes Tempo und ein Zielfenster.
+4. Speichern, aktivieren, abrufen und kalibrieren.
+
+## Lauf
+
+Folgen Sie dem angezeigten Ziel in beide Richtungen jedes Zyklus. Halten Sie ausreichend Spielraum zum Abbremsen, Rückwärtsfahren und Wegfahren. Halten Sie an, anstatt zu versuchen, ein Ziel „einzuholen“, das sich außerhalb der bequemen Kontrolle befindet.
+
+## Sprung versus Wiederholung
+
+| Aspekt | Wiederholung | Abprallen |
+| ------------------- | ---------------------------------------------- | --------------------------------------------- |
+| Schwerpunkt | wiederholte Zielbewegung mit einfacherer Rückkehr | kontrollierte Zielverfolgung in beide Richtungen |
+| Beste Erstanwendung | Erlernen eines konsistenten Zyklus | Verfeinerung der Koordination nach Wiederholung |
+| Aktuelle Basispunkte | Wiederholungen × 2 × Genauigkeitsfaktor | Wiederholungen × 2 × Genauigkeitsfaktor |
+
+Der aktuelle API leitet Wiederholungen als `ceil(strokes ÷ 2)` ab. Sein Genauigkeitsfaktor ist die Zeit im Zielfenster geteilt durch die Gesamtspielzeit, begrenzt von 0 bis 1. Nach den Basispunkten kann ein Spielzeugmultiplikator angewendet werden, und der Server rundet nach oben.
+
+## Fehlerbehebung
+
+| Symptom | Aktion |
+| ------------------------ | -------------------------------------------------------------------------- |
+| Umkehr ist abrupt | Reduzieren Sie das Tempo und verringern Sie die Reichweite |
+| wiederholt hinter dem Ziel | Hören Sie auf, aufzuholen. geringerer Schwierigkeitsgrad der Vorlage |
+| Zählung sieht falsch aus | Überprüfen Sie vollständig kontrollierte Zyklen und melden Sie die Sitzungsdetails, wenn sie wiederholbar sind |
+| Ergebnis fehlt | verwenden Sie [Check session results](/dtt/quick-start/checking-results) |
+
+Kehren Sie zum [mode comparison](/dtt/training-modes) zurück.

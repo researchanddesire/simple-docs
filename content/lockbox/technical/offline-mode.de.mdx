@@ -1,0 +1,60 @@
+---
+title: „Lockbox Offline-Modus“
+description: „Vergleichen Sie lokale und Online-Funktionen von Lockbox, bereiten Sie die Trennung vor und überprüfen Sie den Status nach dem erneuten Verbinden.“
+---
+
+Der Lockbox behält wichtige lokale Funktionen bei, wenn der Internetdienst nicht verfügbar ist, Fernbedienungen und Dashboard-Updates erfordern jedoch eine Verbindung.
+
+## Fähigkeitsmatrix
+
+| Fähigkeit | Offline-Verhalten | Nach erneuter Verbindung |
+| ------------ | ----------------------------------------------------- | ----------------------------------------------------------------- |
+| Lokale zeitgesteuerte Sperre | Timer läuft auf dem Gerät weiter | Dashboard-Status kann aktualisiert werden |
+| Lokaler Sperrmechanismus/unlock | Verfügbar auf dem physischen Gerät | Der physische Zustand bleibt maßgebend |
+| Gerätemenüs und Schaltflächen | Verfügbar | Keine besonderen Maßnahmen erwartet |
+| Schlafen und wachen | Verfügbar | Wi-Fi stellt nach dem Aufwecken die Verbindung wieder her, wenn die Anmeldeinformationen gültig bleiben |
+| Software-Notfall-Entsperrung | Lokal verfügbar, wenn die Sitzung es nicht deaktiviert hat | Ereignis kann mit dem Dashboard synchronisiert werden |
+| Schlüsselhalterbefehle | **Nicht verfügbar** | Aktueller server/device-Status muss abgeglichen werden; am Gerät bestätigen |
+| Dashboard-Änderungen | **Für das Gerät nicht verfügbar** | Kann nach erneuter Verbindung eintreffen; Gehen Sie nicht von Reihenfolge oder Timing aus |
+| Öffentliche Abstimmung | Neue Stimmen können das Gerät nicht erreichen | Überprüfen Sie die aktive Sitzung nach erneuter Verbindung |
+| Aktivitätsverlauf | Das Dashboard ist möglicherweise veraltet | Nach erneuter Verbindung können Ereignisse auftreten |
+| Firmware Updates | Nicht verfügbar | Nur bei stabiler Stromversorgung und stabilem Netzwerk fortsetzen |
+
+<Callout type="warn">
+
+Ein Offline-Lockbox kann keine Remote-Schlüsselhalter-Entsperrung empfangen. Überprüfen Sie vor jeder Sitzung, bei der die Internetverbindung unterbrochen werden könnte, die Verfügbarkeit der Notentsperrung vor Ort und halten Sie das Hardware-Backplate-Verfahren bereit.
+
+</Callout>
+
+## Zeitanzeige
+
+Die aktuelle Dokumentation besagt, dass ein lokaler Timer auch dann weiterläuft, wenn das Gerät die Netzwerkzeit nicht synchronisieren kann. Auf dem Bildschirm wird möglicherweise **Verbinden Sie Wi-Fi, um die verbleibende Zeit anzuzeigen** angezeigt, bis die Zeit erneut synchronisiert wird.
+
+Schließen Sie nicht daraus, dass ein ausgeblendeter oder nicht verfügbarer Countdown bedeutet, dass die Sitzung beendet ist. Bestätigen Sie den physischen Sperrstatus und nutzen Sie bei Bedarf den Notfallzugang.
+
+## Lokale Sperren und vom Dashboard verwaltete Sperren
+
+| Sitzungstyp | Erstellt wo | Offline-Steuerung |
+| ---------------------- | ------------------------------------------- | ------------------------------------------------------------ |
+| Lokale Sperre | Physisch Lockbox | Läuft auf dem Gerät; Dashboard verwaltet es nicht |
+| Dashboard-verwaltete Sperre | Dashboard, dann mit Lockbox | synchronisiert Führt mit den letzten Einstellungen des Geräts fort; Remote-Änderungen erfordern eine erneute Verbindung |
+
+## Testen Sie, bevor Sie sich auf die Offline-Nutzung verlassen
+
+1. Schließen Sie das Pairing und die Einrichtung von Wi-Fi im entsperrten Zustand ab.
+2. Führen Sie eine kurze Online-Testsperre und eine normale Entsperrung durch.
+3. Bestätigen Sie die lokale Notentriegelung und überprüfen Sie [hardware emergency access](/lockbox/support/emergency-backplate).
+4. Starten Sie einen weiteren kurzen Test, trennen Sie das Netzwerk und bestätigen Sie das erwartete lokale Bildschirm- und Timerverhalten.
+5. Stellen Sie die Verbindung wieder her und überprüfen Sie, ob das physische Gerät und das Dashboard denselben Zustand erreichen.
+
+<Callout type="info">
+
+Firmware und das Dashboard-Abgleichsverhalten können sich ändern. Dieser Leitfaden gibt keine Zusicherung, wie widersprüchliche Offline- und Online-Änderungen angeordnet werden. Vermeiden Sie konkurrierende Änderungen im Offline-Modus und überprüfen Sie den endgültigen physischen Zustand nach der erneuten Verbindung.
+
+</Callout>
+
+## Wiederherstellung nach einer Verbindungsunterbrechung1. Wecken Sie den Lockbox; Tiefschlaf deaktiviert Wi-Fi.
+2. Warten Sie, bis die Statusanzeige erlischt.
+3. Verwenden Sie [Check Online Status](/lockbox/support/online-status).
+4. Vergleichen Sie den physischen Zustand mit dem Dashboard nach dessen Aktualisierungsintervall.
+5. Wenn sie nicht einverstanden sind, starten Sie keine weitere Sperre. Folgen Sie [Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting).

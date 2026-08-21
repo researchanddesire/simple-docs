@@ -1,0 +1,45 @@
+---
+title: "RADR-apparaatcompatibiliteit"
+description: "Controleer welke apparaatmodellen en bedieningselementen zijn gevalideerd met RADR, bekende limieten en hoe u een compatibiliteitsresultaat rapporteert."
+---
+
+Gebruik deze pagina voordat u een apparaat van derden koopt of aansluit. Een model dat verschijnt in een upstream Bluetooth-register betekent **niet** dat Research and Desire het heeft gevalideerd met RADR.
+
+<Callout type="warn" title="Start elke nieuwe verbinding onbelast">
+
+Houd het aangesloten apparaat uit de buurt van het lichaam, start op het laagste vermogen en controleer de pauze of stop vóór gebruik. Ontkoppel onmiddellijk als een besturingselement zich anders gedraagt ​​dan het label op RADR.
+
+</Callout>
+
+## Validatiestatus
+
+Laatste documentatiebeoordeling: **16 augustus 2026**. De exacte firmwareversies van derden die in eerdere tests zijn gebruikt, zijn niet vastgelegd, dus die combinaties moeten opnieuw worden getest nadat een van beide apparaten een update heeft ontvangen.
+
+| Apparaat | Verbinding | Controles blootgelegd door RADR | Validatiestatus | Bekende limieten |
+| -------------------------------------------------------------------------- | --------------------------- | ---------------------------------------------------- | ------------------------------------------------------------ | --------------------------------------- |
+| [Open Source Sex Machine](https://www.researchanddesire.com/open-source-sex-machine) | Direct | Snelheid, diepte, gevoel, slag, pauze, stop en patronen | Primair ondersteunde integratie | Beschikbare patronen zijn afhankelijk van OSSM firmware |
+| Lovense Domi / Domi 2 | Direct | Trillingen, batterijniveau en stroomopdrachten | Eerder getest; huidige firmwarecombinatie moet opnieuw worden bevestigd | Niet-trillingskenmerken zijn niet zichtbaar |
+| Lovense Hyphy | Buttplug-compatibel Bluetooth | Trilling | Eerder getest; huidige firmwarecombinatie moet opnieuw worden bevestigd | Alleen trillingen |
+| Lovense Ferri | Buttplug-compatibel Bluetooth | Trilling | Eerder getest; huidige firmwarecombinatie moet opnieuw worden bevestigd | Alleen trillingen |
+
+Lockbox, Deep Throat Trainer, DG Labs Coyote en andere merken of modellen zijn **geen gevalideerde RADR-integraties** tenzij ze in de bovenstaande tabel voorkomen met een validatiestatus. Beschouw een apparaat dat alleen tijdens een scan verschijnt niet als bewijs dat elke controle veilig is of wordt ondersteund.
+
+Voor upstream-protocoldekking raadpleegt u de [Buttplug device list](https://iostindex.com/?filter0ButtplugSupport=4). Die lijst beschrijft upstream-protocolondersteuning, niet RADR-validatie.
+
+## Controleer een verbinding
+
+1. Update alleen nadat u [Update RADR](/radr/guides/user-guide/updating-your-device) en de vrijgave-instructies van het aangesloten apparaat hebt gelezen.
+2. Schakel het doelapparaat in en plaats het in de gedocumenteerde koppelings- of advertentiemodus.
+3. Volg [Scan and Connect a Device](/radr/guides/user-guide/device-scanning).
+4. Test eerst het laagste vermogen terwijl het apparaat onbelast is.
+5. Test Pauze of Stop en bevestig dat het fysieke apparaat stopt voordat u doorgaat.
+6. Test één ondersteund besturingselement tegelijk. Ga er niet vanuit dat er een geavanceerd kenmerk in kaart is gebracht.
+
+## Als een apparaat ontbreekt of zich niet correct gedraagt
+
+- Koppel hem los en stop met het koppelen totdat het gedrag ervan wordt begrepen.
+- Noteer de versie van de RADR-firmware, het exacte merk en model, de firmwareversie van het andere apparaat en welke besturing is mislukt.
+- Beschrijf de verwachte en feitelijke fysieke reactie. Een korte video is alleen nuttig als deze veilig kan worden opgenomen.
+- E-mail [support@researchanddesire.com](mailto:support@researchanddesire.com) of gebruik [contact form](https://www.researchanddesire.com/pages/contact-us).
+
+Eigendom van compatibiliteit: het Research and Desire-firmware/support-team onderhoudt deze matrix. Een gerapporteerd apparaat blijft niet gevalideerd totdat dat team het resultaat reproduceert en deze pagina bijwerkt.

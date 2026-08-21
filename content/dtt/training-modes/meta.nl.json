@@ -1,0 +1,11 @@
+{
+  "title": "Trainingsmodi",
+  "description": "Vergelijk en gebruik elk segmenttype",
+  "pages": [
+    "index",
+    "bounce",
+    "endurance",
+    "freeform",
+    "repetition"
+  ]
+}

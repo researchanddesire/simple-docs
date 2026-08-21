@@ -1,0 +1,43 @@
+---
+title: „OSSM sicher betreiben“
+description: „Führen Sie die Prüfung vor der Verwendung durch und steuern Sie OSSM Geschwindigkeit, Tiefe, Muster und Gefühl mit einem verifizierten Controller.“
+---
+
+## Vor jeder Sitzung
+
+1. Vervollständigen Sie [mandatory safety checklist](/ossm/safety#mandatory-pre-use-checklist).
+2. Stellen Sie sicher, dass der vorgesehene Controller angeschlossen ist und seine Stopp-Aktion funktioniert.
+3. Sichern Sie das Anbaugerät und halten Sie den Fahrweg frei.
+4. Stellen Sie Geschwindigkeit und Tiefe auf Null, bevor Sie jemanden positionieren.
+5. Beginnen Sie unbelastet und erhöhen Sie dann jeweils eine Einstellung vom niedrigsten praktischen Wert.
+
+## Kernkontrollen
+
+| Einstellung | Wirkung | Sicherer Ausgangspunkt |
+| --------- | ------------------------------------- | --------------------------------------------------- |
+| Geschwindigkeit | Wie schnell bewegt sich der Wagen | Null, dann schrittweise erhöhen |
+| Tiefe | Hubwegweg | Null, dann Freigabe bei kurzem Hub bestätigen |
+| Muster | Bewegungszeitpunkt und Richtungsprofil | Einfacher Strich vor komplexen Mustern |
+| Sensation | Ändert die musterspezifische Variable | Mittelpunkt erst, wenn Geschwindigkeit und Tiefe angenehm sind |
+
+![OSSM web controller play interface showing speed, depth, pattern, and Stop controls](./images/web-controller-play-interface.webp)
+
+## Musterreferenz
+
+| Muster | Verhalten | Sensationseffekt |
+| ------------------- | ------------------------------------------------ | --------------------------------------- |
+| Einfacher Strich | Sanfte, gleichmäßige Bewegung | Keine |
+| Necken oder Stampfen | Langsam in die eine Richtung, schnell in die andere | Wählt aus, welche Richtung schneller ist |
+| Robo Stroke | Ändert die Beschleunigung | Passt die Beschleunigungsrate an |
+| Halb und halb | Jeder zweite Strich verbraucht die Hälfte der gewählten Tiefe | Ändert Richtungsbetonung |
+| Tiefer | Steigt allmählich von flach bis zur vollen Tiefe | Ändert, wie schnell die Tiefe zunimmt |
+| Stop'n'Go | Fügt Pausen zwischen Strichgruppen hinzu | Ändert die Pausendauer |
+| Bestehen Sie | Kleine, schnelle Impulse | Verschiebt den Impulsschwerpunkt entlang der Schiene |
+
+<Callout type="warn" title="Ein Muster kann die Bewegung abrupt ändern">
+
+Stellen Sie Geschwindigkeit und Tiefe auf Null zurück, bevor Sie das Muster ändern. Bei niedrigen Werten erneut testen und bei unerwartetem Verhalten, Verbindungsverlust, Schmerzen, Taubheitsgefühl oder Stress sofort anhalten.
+
+</Callout>
+
+Stoppen Sie nach dem Gebrauch die Bewegung, bewegen Sie sich frei, trennen Sie die Stromversorgung, entfernen und reinigen Sie den Aufsatz und befolgen Sie dann [care and maintenance](/ossm/care-and-maintenance).

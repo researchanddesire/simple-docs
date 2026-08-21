@@ -1,0 +1,56 @@
+---
+title: „Trainingsmodi vergleichen“
+description: „Wählen Sie zwischen Wiederholung, Ausdauer, Freiform und Sprungkraft nach Ziel, Zielvorgabe, Feedback und gemessenem Ergebnis.“
+---
+
+Vorlagen werden aus Segmenten erstellt. Wählen Sie den Modus entsprechend dem Verhalten aus, das Sie üben möchten, und senken Sie dann die Ziele ab, bis Sie die Kontrolle behalten.
+
+## Vergleich
+
+| Modus | Hauptaufgabe | Hauptziel | Aktuelle Servermessung | Beginnen Sie hier, wenn… |
+| -------------------------------------------- | ------------------------------------------------- | ---------------- | ---------------------------------------- | ---------------------------------------------------------- |
+| [Repetition](/dtt/training-modes/repetition) | eine Zielbewegung wiederholen | Wiederholungen, Tempo, Tiefe/window | Hübe, Zeit im Fenster, U/min, Tiefe | Sie möchten eine strukturierte, wiederholte Bewegung |
+| [Endurance](/dtt/training-modes/endurance) | in einer Zielzone bleiben | Dauer- und Positionsfenster | aktive Zeit und Zeit im Fenster | Sie wollen einen kontrollierten Halt |
+| [Freeform](/dtt/training-modes/freeform) | Wählen Sie Ihre Bewegung und folgen Sie dabei einem Tempoziel | durchschnittliche Drehzahl und Dauer | aktive Zeit, Zeit im Fenster, durchschnittliche Drehzahl | Sie wollen selbstgesteuerte Bewegung |
+| [Bounce](/dtt/training-modes/bounce) | beide Richtungen eines Zyklus steuern | Wiederholungen, Tempo, Tiefe/window | Hübe, Zeit im Fenster, U/min, Tiefe | Sie können bereits wiederholte Bewegungen in beide Richtungen steuern |
+
+<Callout type="warn">
+
+Kein Modus, keine Stufe oder keine Punkteformel definiert eine medizinisch sichere Tiefe, Dauer, Geschwindigkeit oder Progression. Stoppen Sie bei Schmerzen, Atembeschwerden, Schwindel, Übelkeit, Kontrollverlust oder anderen besorgniserregenden Symptomen.
+
+</Callout>
+
+## Aktuelle Punkteberechnung
+
+Die v2-Vervollständigung API berechnet einen Genauigkeitsfaktor als `time inside target window ÷ total play time`, geklemmt von 0 bis 1 (hier als 0–100 % angezeigt). Die folgenden Formeln verwenden diesen 0-zu-1-Faktor.
+
+- Wiederholungs- und Sprungbasispunkte: abgeschlossene Wiederholungen × 2 × Genauigkeitsfaktor.
+- Endurance- und Freeform-Basispunkte: aktive Sekunden × 0,5 × Genauigkeitsfaktor.
+- Eine konfigurierte Spielzeuglänge kann nach der Basisberechnung einen Größenmultiplikator anwenden.
+
+Der Server rundet die Punkte nach oben ab. Dies ist das Implementierungsverhalten, das am 16. August 2026 überprüft wurde und sich ändern kann; Das Dashboard-Ergebnis ist maßgeblich.
+
+## Erstellen Sie eine Vorlage
+
+1. Öffnen Sie das gewünschte Konto und koppeln Sie den Trainer.
+2. Erstellen oder bearbeiten Sie eine Vorlage.
+3. Fügen Sie ein Segment für den ersten Test hinzu.
+4. Wählen Sie das installierte Spielzeug und die konservativen Ziele aus.
+5. Speichern und bestätigen Sie die aktive Vorlage.
+6. Rufen Sie es online ab und überprüfen Sie die Geräteübersicht, bevor Sie beginnen.
+
+## Tutorial-Video
+
+<iframe
+  src="https://www.loom.com/embed/befe7d1a6d3944f887cb58c845e8058b"
+  title="Erstellen Sie Deep Throat Trainer-Vorlagensegmente für einen Partner"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+<Callout type="info" title="Videotranskript">
+
+Der Präsentator meldet sich an, während er das Konto eines Partners kontrolliert, öffnet **Deep Throat Trainer → Vorlagen**, erstellt eine neue Vorlage, fügt Endurance- und Freeform-Segmente hinzu, bearbeitet deren Parameter, benennt die Vorlage und speichert sie. Die gespeicherte Vorlage wird auf dem kontrollierten Konto verfügbar. Das Video ist älter als die aktuellen Sicherheits- und Zugangshinweise; Überprüfen Sie vor der Verwendung das ausgewählte Konto, das Spielzeug, den aktiven Status und jedes Segment.
+
+</Callout>

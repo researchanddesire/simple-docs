@@ -1,0 +1,14 @@
+{
+  "title": "Technique",
+  "description": "Comportement de l'appareil, erreurs, calibrage et micrologiciel",
+  "pages": [
+    "index",
+    "button-controls",
+    "calibration",
+    "device-states",
+    "error-codes",
+    "firmware-updates",
+    "led-feedback",
+    "offline-mode"
+  ]
+}

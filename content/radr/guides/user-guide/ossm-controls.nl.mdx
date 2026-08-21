@@ -1,0 +1,220 @@
+---
+title: "Besturing OSSM met RADR"
+description: "Bedien OSSM snelheid, diepte, gevoel, slag, pauze, volledige stop en patronen vanuit RADR."
+---
+
+In deze handleiding wordt beschreven hoe u de OSSM (Open Source Sex Machine) kunt bedienen met uw draadloze RADR-afstandsbediening.
+
+<Callout type="warn" title="Controleer Stop vóór gebruik">
+
+Houd de OSSM onbelast, stel de snelheid in op nul en test zowel een pauze met één druk op de knop als een volledige stop met tweemaal drukken voordat u een accessoire aansluit of een sessie begint. Pauze behoudt de huidige aanpassingen; Volledige Stop reset ze. Als een van beide acties de fysieke beweging niet stopt, schakelt u de OSSM uit en gebruikt u [troubleshooting](/ossm/troubleshooting).
+
+</Callout>
+
+![RADR OSSM control screen showing speed on the left, motion range in the centre, the active adjustment on the right, and pause and pattern actions below](<../../img/image (2).webp>)
+
+## Overzicht bedieningsscherm
+
+Wanneer aangesloten op een OSSM, geeft het bedieningsscherm het volgende weer:
+
+- **Boven:** Drie tabbladen met de modi Diepte, Sensatie en Beroerte
+- **Bovenbumpers:** `<<` en `>>` knoppen voor modusomschakeling
+- **Linkerkant:** Snelheidsencoderknop met boogindicator
+- **Rechterkant:** Modus-encoderknop (diepte/Sensation/Stroke) met boogindicator
+- **Midden:** Lineaire railgrafiek die lijn- en dieptevisualisatie toont
+- **Onder grafiek:** Huidige patroonnaam
+- **Onder:** Knoppen Menu, Pauze en Patronen
+
+## Snelheidsregeling
+
+De **linker encoder** regelt altijd de snelheid, ongeacht welke modus actief is.
+
+| Parameter | Bereik | Standaard |
+| --------- | ------ | ------- |
+| Snelheid | 0–100% | 0% |
+
+- Draai met de klok mee om de snelheid te verhogen
+- Draai tegen de klok in om de snelheid te verlagen
+- De encoder heeft versnelling: snellere bochten zorgen voor grotere veranderingen
+
+<Callout type="info">
+
+De snelheid moet hoger zijn dan 0% om de OSSM te laten bewegen. Wanneer u pauzeert, verhoogt u de snelheid om automatisch te hervatten.
+
+</Callout>
+## Aanpassingsmodi
+
+De **rechter encoder** bestuurt een van de drie parameters, afhankelijk van welke modus actief is. Gebruik de schouderbumpers om van modus te wisselen.
+
+### Dieptemodus
+
+Bepaalt hoe diep de penetratie reikt.
+
+| Parameter | Bereik | Standaard |
+| --------- | ------ | ------- |
+| Diepte | 0–100% | 10% |
+
+- Hogere waarden = diepere penetratie
+- De diepte wordt gevisualiseerd op de lineaire railgrafiek
+
+### Sensatiemodus
+
+Regelt de intensiteit of het ‘gevoel’ van de beweging.
+
+| Parameter | Bereik | Standaard |
+| --------- | ------ | ------- |
+| Sensatie | 0–100% | 50% |
+
+- Lagere waarden = zachtere, vloeiendere beweging
+- Hogere waarden = intensere, agressievere beweging
+
+### Slagmodus
+
+Regelt de lengte van elke slag.
+
+| Parameter | Bereik | Standaard |
+| --------- | ------ | ------- |
+| Beroerte | 0–100% | 50% |
+
+- Lagere waarden = kortere slagen
+- Hogere waarden = langere slagen
+- De slag wordt gevisualiseerd op de lineaire railgrafiek
+
+## Modi wisselen
+
+Er zijn twee manieren om te schakelen tussen Diepte, Sensatie en Beroerte:
+
+### Bumpers gebruiken (aanbevolen)
+
+- **Linkerbumper (`<<`)** — Schakel over naar de vorige modus
+- **Rechterbumper (`>>`)** — Schakel over naar de volgende modus
+
+De modusvolgorde is: Diepte → Sensatie → Slag → Diepte...
+
+### Visuele feedback
+
+Wanneer u van modus wisselt:
+
+- Het overeenkomstige tabblad bovenaan wordt gemarkeerd
+- De kleur van de rechter encoder-LED verandert:
+  - **Coral/Red** — Dieptemodus
+  - **Blauw** — Sensation-modus
+  - **Groen** — Stroke-modus
+- De linker encoder-LED blijft **paars** (altijd snelheid)
+
+## Pauzeren en stoppen
+
+Met de **middelste knop** regelt u het pauzeren en stoppen.
+
+### Eén keer drukken: Pauze
+
+Eén enkele druk pauzeert de OSSM:
+
+- Snelheid is ingesteld op 0%
+- De patroonnaam verandert in rood in "Gepauzeerd".
+- De middelste LED wordt rood
+- De pauzeknop verandert in "STOP" (rood)
+
+<Callout type="info">
+
+Om uit de pauze te hervatten, verhoogt u eenvoudigweg de snelheid met de linker encoder. De OSSM wordt automatisch hervat.
+
+</Callout>
+### Veiligheidsfunctie: permanente snelheidsbewaking
+
+Wanneer u de Patroonmodus of andere menu's opent, blijft RADR voor de veiligheid de linker encoder (snelheid) controleren. Dit betekent:
+
+- U kunt nog steeds de snelheid aanpassen terwijl u door patronen bladert
+- Als u de snelheid naar 0 draait, stopt de OSSM onmiddellijk
+- Dit zorgt ervoor dat u altijd onmiddellijk kunt stoppen
+
+<Callout type="idea">
+
+Zelfs tijdens het selecteren van patronen regelt de linker encoder de snelheid. Dit is een veiligheidsfunctie, geen bug.
+
+</Callout>
+### Dubbel indrukken: volledige stop
+
+Een snelle dubbele druk voert een volledige stop uit met reset:
+
+- Snelheid is ingesteld op 0%
+- Diepte wordt gereset naar 0%
+- Slag wordt gereset naar 10%
+- Sensatie wordt gereset naar 50%
+- Het bevestigingsscherm "Apparaat gestopt" verschijnt
+
+<Callout type="warn">
+
+Met Volledige stop worden uw aanpassingsinstellingen gereset. Als u wilt pauzeren zonder uw instellingen te verliezen, drukt u één keer op de knop.
+
+</Callout>
+## Patroonmodus
+
+Druk op de **rechterknop (Patronen)** om de Patroonmodus te openen.
+
+In patroonmodus:
+
+- Het scherm toont een lijst met beschikbare patronen
+- Gebruik de rechter encoder om door patronen te bladeren
+- Druk op de rechterknop om een patroon te selecteren
+- Druk op de linkerknop om te annuleren en terug te keren
+
+Zie [Stroke Patterns](/radr/guides/user-guide/stroke-patterns) voor details over elk patroon.
+
+## Lineaire spoorgrafiek
+
+De lineaire railgrafiek in het midden van het scherm geeft een visuele weergave van de beweging van de OSSM:
+
+- De grafiek toont het slagbereik en de dieptepositie
+- Terwijl u Lijn en Diepte aanpast, wordt de visualisatie in realtime bijgewerkt
+- Dit helpt u de fysieke beweging te begrijpen zonder naar de machine te kijken
+
+## Menuknop
+
+De **linkerknop (Menu)** is gereserveerd voor toekomstige OSSM apparaatinstellingen.
+
+<Callout type="info">
+
+De Menu-knop is momenteel uitgeschakeld en heeft geen functie. De stijl van de knoppen verandert wanneer deze wordt gepauzeerd (lijkt ingeschakeld), maar erop drukken heeft geen effect. Toekomstige firmware-updates zullen via deze knop apparaatspecifieke instellingen inschakelen.
+
+</Callout>
+## LED-indicatoren tijdens controle
+
+| LED | Kleur | Betekenis |
+| ------------ | --------- | ------------------------- |
+| Links (snelheid) | Paars | Snelheidsmodus (altijd actief) |
+| Midden | Wit | Actief en spelend |
+| Midden | Rood | Gepauzeerd of gestopt |
+| Rechts (modus) | Koraal/Red | Dieptemodus actief |
+| Rechts (modus) | Blauw | Sensatiemodus actief |
+| Rechts (modus) | Groen | Slagmodus actief |
+
+## Snelle referentie
+
+| Controle | Actie |
+| ------------- | --------------------------------------- |
+| Linker encoder | Snelheid aanpassen (0–100%) |
+| Rechter encoder | Actieve modus aanpassen (0–100%) |
+| Linkerbumper | Vorige modus (Diepte ← Sensatie ← Beroerte) |
+| Rechterbumper | Volgende modus (Diepte → Sensatie → Stroke) |
+| Linkerknop | Menu (uitgeschakeld) |
+| Middelste knop | Enkel: Pauze / Dubbel: Volledige stop |
+| Rechterknop | Patroonmodus openen |
+
+## Tips
+
+<Callout type="idea">
+
+Begin met een lage snelheid en verhoog deze geleidelijk om de gewenste intensiteit te vinden.
+
+</Callout>
+<Callout type="idea">
+
+Gebruik de bumpers om op gevoel van modus te wisselen, je hoeft niet naar het scherm te kijken.
+
+</Callout>
+<Callout type="idea">
+
+Als u per ongeluk een volledige stop maakt, hoeft u zich geen zorgen te maken. Pas gewoon uw instellingen opnieuw aan en verhoog de snelheid om verder te gaan.
+
+</Callout>

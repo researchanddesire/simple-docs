@@ -1,0 +1,18 @@
+{
+  "title": "OSSM",
+  "description": "Open Source Sex Machine-handleidingen en ondersteuning",
+  "root": true,
+  "pages": [
+    "index",
+    "safety",
+    "how-to-use",
+    "power-and-homing",
+    "controllers",
+    "connect-wifi",
+    "operation",
+    "troubleshooting",
+    "care-and-maintenance",
+    "open-source-info",
+    "tools"
+  ]
+}

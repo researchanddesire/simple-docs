@@ -1,0 +1,56 @@
+---
+title: "Trainingsmodi vergelijken"
+description: "Kies uit Herhaling, Uithoudingsvermogen, Vrije vorm en Bounce op basis van doel, doelgroep, feedback en gemeten resultaat."
+---
+
+Sjablonen zijn gemaakt van segmenten. Kies de modus op basis van het gedrag dat u wilt oefenen en verlaag vervolgens de doelstellingen totdat u de controle kunt behouden.
+
+## Vergelijking
+
+| Modus | Primaire taak | Hoofddoel | Huidige servermeting | Begin hier wanneer… |
+| ---------------------------------------- | --------------------------------------------- | ----------------------------- | ------------------------------------- | ---------------------------------------------------- |
+| [Repetition](/dtt/training-modes/repetition) | herhaal een doelbeweging | herhalingen, tempo, diepte/window | slagen, tijd in venster, RPM, diepte | je wilt een gestructureerde herhaalde beweging |
+| [Endurance](/dtt/training-modes/endurance) | in een doelzone blijven | duur- en positievenster | actieve tijd en tijd in venster | je wilt gecontroleerd vasthouden |
+| [Freeform](/dtt/training-modes/freeform) | kies je beweging terwijl je een tempodoel volgt | gemiddeld toerental en duur | actieve tijd, tijd in venster, gemiddeld toerental | je wilt zelfsturende beweging |
+| [Bounce](/dtt/training-modes/bounce) | controleer beide richtingen van een cyclus | herhalingen, tempo, diepte/window | slagen, tijd in venster, RPM, diepte | je kunt herhaalde bewegingen in beide richtingen al controleren |
+
+<Callout type="warn">
+
+Geen enkele formule voor modus, helling of punten definieert een medisch veilige diepte, duur, snelheid of progressie. Stop bij pijn, ademhalingsmoeilijkheden, duizeligheid, misselijkheid, controleverlies of andere symptomen.
+
+</Callout>
+
+## Berekening van huidige punten
+
+De v2-voltooiing API berekent een nauwkeurigheidsfactor als `time inside target window ÷ total play time`, vastgeklemd van 0 tot 1 (hier weergegeven als 0-100%). De onderstaande formules gebruiken die 0-op-1-factor.
+
+- Herhalings- en bouncebasispunten: voltooide herhalingen × 2 × nauwkeurigheidsfactor.
+- Endurance- en Freeform-basispunten: actieve seconden × 0,5 × nauwkeurigheidsfactor.
+- Een geconfigureerde speelgoedlengte kan na de basisberekening een maatvermenigvuldiger toepassen.
+
+De serverronden wijzen naar boven. Dit is het implementatiegedrag dat op 16 augustus 2026 is beoordeeld en kan veranderen; het dashboardresultaat is gezaghebbend.
+
+## Maak een sjabloon
+
+1. Open het beoogde account en koppelde Trainer.
+2. Maak of bewerk een sjabloon.
+3. Voeg één segment toe voor de eerste test.
+4. Selecteer het geïnstalleerde speelgoed en de conservatieve doelen.
+5. Sla het actieve sjabloon op en bevestig het.
+6. Haal het online op en bekijk het apparaatoverzicht voordat u begint.
+
+## Instructievideo
+
+<iframe
+  src="https://www.loom.com/embed/befe7d1a6d3944f887cb58c845e8058b"
+  title="Maak Deep Throat Trainer-sjabloonsegmenten voor een partner"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+<Callout type="info" title="Videotranscriptie">
+
+De presentator logt in terwijl hij de account van een partner beheert, opent **Deep Throat Trainer → Sjablonen**, maakt een nieuwe sjabloon, voegt Endurance- en Freeform-segmenten toe, bewerkt de parameters ervan, geeft de sjabloon een naam en slaat deze op. De opgeslagen sjabloon wordt beschikbaar op het gecontroleerde account. De video dateert van vóór de huidige veiligheids- en toegangsrichtlijnen; controleer vóór gebruik het geselecteerde account, speelgoed, de actieve status en elk segment.
+
+</Callout>

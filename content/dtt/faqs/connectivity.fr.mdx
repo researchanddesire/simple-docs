@@ -1,0 +1,28 @@
+---
+title: "Questions de connectivité"
+description: "Diagnostiquer la configuration 2,4 GHz, les portails captifs, la lecture hors ligne, l'accessibilité du serveur et les résultats manquants."
+---
+
+## Quel Wi-Fi le formateur utilise-t-il ?
+
+La configuration documentée prend en charge 2,4 GHz Wi-Fi. Utilisez [Wi-Fi setup](/dtt/quick-start/pairing/wifi-setup) et sélectionnez un réseau 2,4 GHz.
+
+## Pourquoi la configuration du formateur indique-t-elle « pas d'Internet » ?
+
+Il s'agit d'un réseau de configuration local temporaire, pas d'une connexion Internet. Restez connecté et ouvrez `http://192.168.4.1` si le portail n'apparaît pas.
+
+## Pourquoi peut-il rejoindre Wi-Fi mais afficher toujours E-DTT-1 ?
+
+La connexion locale a réussi, mais pas le contrôle de santé en ligne. Le filtrage du routeur, l'isolation du client, la connexion captive, DNS, le pare-feu ou la connectivité en amont peuvent être impliqués. Suivez [E-DTT-1](/dtt/errors/e-dtt-1) et utilisez un point d'accès téléphonique uniquement à des fins de comparaison de diagnostic.
+
+## Qu'est-ce qui fonctionne hors ligne ?
+
+La documentation disponible et les messages de l'appareil prennent en charge la lecture à partir des paramètres précédemment téléchargés et des commentaires sur l'appareil. La compatibilité exacte dépend du firmware. Les nouveaux paramètres, la persistance des résultats confirmés et les mises à jour en ligne nécessitent une connectivité.
+
+## Un résultat hors ligne sera-t-il téléchargé plus tard ?
+
+Ne vous y fiez pas. Le code du serveur conserve les résultats uniquement lorsqu'une demande d'achèvement arrive et que l'implémentation du micrologiciel n'est pas présente dans cette extraction. La durabilité, la capacité, la rétention, le calendrier des nouvelles tentatives et l'applicabilité des versions de la file d'attente sont donc inconnus. Voir [Offline mode](/dtt/technical/offline-mode).
+
+## Comment tester avant une session hors ligne ?
+
+Lorsque vous êtes en ligne, activez le modèle souhaité, laissez le formateur le récupérer, vérifiez le résumé du jouet et du segment, puis effectuez une vérification hors ligne contrôlée. Traitez ce chèque comme non enregistré et revenez en ligne pour toute session dont le résultat compte.

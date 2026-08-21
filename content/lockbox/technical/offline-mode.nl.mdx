@@ -1,0 +1,60 @@
+---
+title: "Lockbox Offlinemodus"
+description: "Vergelijk lokale en online Lockbox-mogelijkheden, bereid u voor op het verbreken van de verbinding en controleer de status na opnieuw verbinden."
+---
+
+De Lockbox behoudt de lokale kernfuncties wanneer de internetservice niet beschikbaar is, maar afstandsbedieningen en dashboardupdates vereisen een verbinding.
+
+## Capaciteitsmatrix
+
+| Vermogen | Offlinegedrag | Na opnieuw verbinden |
+| -------------------------- | ------------------------------------------------ | --------------------------------------------------------- |
+| Lokaal getimed slot | Timer loopt door op het apparaat | Dashboardstatus kan worden bijgewerkt |
+| Lokaal slot/unlock mechanisme | Beschikbaar vanaf het fysieke apparaat | Fysieke toestand blijft gezaghebbend |
+| Apparaatmenu's en knoppen | Beschikbaar | Geen speciale actie verwacht |
+| Slapen en wakker worden | Beschikbaar | Wi-Fi maakt opnieuw verbinding na het ontwaken wanneer de inloggegevens geldig blijven |
+| Software-noodontgrendeling | Lokaal beschikbaar als de sessie dit niet heeft uitgeschakeld | Evenement kan synchroniseren met het dashboard |
+| Sleutelhouderopdrachten | **Niet beschikbaar** | Huidige server/device-status moet overeenkomen; bevestigen op het apparaat |
+| Dashboardwijzigingen | **Niet beschikbaar op het apparaat** | Kan aankomen na opnieuw verbinden; ga niet uit van volgorde of timing |
+| Publieke stemming | Nieuwe stemmen kunnen het apparaat niet bereiken | Controleer de actieve sessie na opnieuw verbinden |
+| Activiteitengeschiedenis | Dashboard is mogelijk verouderd | Gebeurtenissen kunnen verschijnen na opnieuw verbinden |
+| Firmware-updates | Niet beschikbaar | Alleen hervatten op stabiele stroom en netwerk |
+
+<Callout type="warn">
+
+Een offline Lockbox kan geen sleutelhouderontgrendeling op afstand ontvangen. Controleer vóór elke sessie waarbij internet verloren kan gaan de lokale beschikbaarheid van noodontgrendeling en houd de hardware-backplate-procedure beschikbaar.
+
+</Callout>
+
+## Tijdweergave
+
+De huidige documentatie zegt dat een lokale timer doorgaat, zelfs als het apparaat de netwerktijd niet kan synchroniseren. Op het scherm wordt mogelijk **Verbind Wi-Fi weergegeven om de resterende tijd te zien** totdat de tijd opnieuw is gesynchroniseerd.
+
+Denk niet dat een verborgen of niet-beschikbare aftelling betekent dat de sessie is beëindigd. Bevestig de fysieke slotstatus en gebruik indien nodig noodtoegang.
+
+## Lokale sloten en dashboardbeheerde sloten
+
+| Sessietype | Gemaakt waar | Offline-controle |
+| ---------------------- | --------------------------------------- | ------------------------------------------------------------------------------ |
+| Lokaal slot | Fysiek Lockbox | Draait op het apparaat; dashboard beheert het niet |
+| Dashboardbeheerd slot | Dashboard en vervolgens gesynchroniseerd met de Lockbox | Gaat verder met de laatste instellingen van het apparaat; bij wijzigingen op afstand is opnieuw verbinding nodig |
+
+## Test voordat u vertrouwt op offline gebruik
+
+1. Voltooi het koppelen en instellen van Wi-Fi terwijl het ontgrendeld is.
+2. Voer een korte online testvergrendeling en normale ontgrendeling uit.
+3. Bevestig de lokale noodontgrendeling en bekijk [hardware emergency access](/lockbox/support/emergency-backplate).
+4. Start nog een korte test, koppel het netwerk los en bevestig het verwachte lokale scherm- en timergedrag.
+5. Maak opnieuw verbinding en controleer of het fysieke apparaat en het dashboard dezelfde status bereiken.
+
+<Callout type="info">
+
+Firmware en het afstemmingsgedrag van dashboards kunnen veranderen. Deze gids belooft niet hoe conflicterende offline en online wijzigingen worden geordend. Vermijd het aanbrengen van concurrerende wijzigingen terwijl u offline bent en controleer de uiteindelijke fysieke staat na opnieuw verbinden.
+
+</Callout>
+
+## Herstel na een verbroken verbinding1. Activeer de Lockbox; diepe slaap schakelt Wi-Fi uit.
+2. Wacht tot de statusindicator is verdwenen.
+3. Gebruik [Check Online Status](/lockbox/support/online-status).
+4. Vergelijk de fysieke staat met het dashboard na het update-interval.
+5. Als ze het er niet mee eens zijn, start dan geen nieuw slot. Volg [Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting).

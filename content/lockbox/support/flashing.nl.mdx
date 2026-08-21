@@ -1,0 +1,113 @@
+---
+title: "Flashen of herstellen Lockbox Firmware"
+description: "Installeer de Lockbox-firmware opnieuw met Web Serial, kies het wisgedrag, verifieer het succes en herstel veilig."
+---
+
+<Callout type="warn">
+
+Flash uw apparaat alleen als u hierom wordt gevraagd door Research and Desire-ondersteuning. Als u problemen ondervindt, neemt u eerst contact op met [support@researchanddesire.com](mailto:support@researchanddesire.com).
+
+</Callout>
+<iframe
+  src="https://www.loom.com/embed/09a4bc33d3d945f6811efecc78e4b5bd"
+  title="Hoe u uw Kuisheid Lockbox opnieuw kunt flashen"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+/>
+
+<Callout type="info" title="Videotranscriptie">
+
+De video demonstreert hoe u de Lockbox aansluit op een desktopcomputer met een data-compatibele USB-C-kabel, hoe u de webflasher opent in een Chromium-browser, hoe u het seriële apparaat Lockbox selecteert, kiest of u de lokale apparaatgegevens wilt behouden of wissen, hoe u de installatie start en wacht tot de Lockbox opnieuw opstart. De onderstaande schriftelijke procedure omvat dezelfde acties en de herstelcontroles.
+
+</Callout>
+
+## Wanneer moet je je apparaat flashen?
+
+Door te knipperen wordt de firmware opnieuw geïnstalleerd en kan het volgende worden opgelost:
+
+- Apparaat wordt voortdurend zelfstandig opnieuw opgestart (power cycling of opstartlus)
+- Apparaat bevriest bij het indrukken van menuknoppen
+- Niet-reagerende schermen of knoppen na het ontwaken uit de slaapstand
+- Softwareproblemen die blijven bestaan na een harde reset
+
+<Callout type="idea">
+
+Probeer eerst een harde reset voordat u gaat knipperen: houd de **Enter/Lock**-knop gedurende 10 seconden ingedrukt. Als het probleem zich blijft voordoen, gaat u verder met knipperen.
+
+</Callout>
+## Vereisten
+
+Zorg ervoor dat u, voordat u begint, over het volgende beschikt:
+
+- Een USB-C-kabel die **gegevensoverdracht** ondersteunt (niet alleen opladen)
+- Een computer met een beschikbare USB-C-poort
+- Google Chrome of een andere Chromium-gebaseerde browser
+- Het firmwarekanaal en de versie die door de ondersteuning werd geïnstrueerd om te installeren
+- Een registratie van de huidige fysieke slotstatus en of lokale gegevens mogen worden gewist
+
+<Callout type="info">
+
+Sommige USB-C-kabels ondersteunen alleen opladen. Als uw apparaat niet wordt gedetecteerd, probeer dan een andere kabel die gegevensoverdracht ondersteunt.
+
+</Callout>
+## Webflitser
+
+<Callout type="info" title="Gebruik Chrome of Edge op een desktopcomputer">
+
+Sluit de Lockbox aan met een data-compatibele USB-C-kabel. Web Serial is niet beschikbaar in Safari, Firefox of mobiele browsers.
+
+</Callout>
+
+Open de speciale [LKBX Web Flasher](/lockbox/tools/web-flasher).
+
+## Knipperende instructies
+
+### Stap 1: Sluit uw apparaat aan
+
+Sluit de USB-C-kabel aan op uw Chastity Lockbox en sluit het andere uiteinde aan op uw computer.
+
+### Stap 2: Open de webflitser
+
+Gebruik de [LKBX Web Flasher](/lockbox/tools/web-flasher).
+
+### Stap 3: Maak verbinding met uw apparaat
+
+Klik op **Verbinden** en selecteer het apparaat met de naam **USB JTAG Serial Debug** (of vergelijkbaar) in de lijst.
+
+<Callout type="warn">
+
+Als er geen apparaat verschijnt, controleer dan of uw kabel gegevensoverdracht ondersteunt en probeer een andere USB-poort.
+
+</Callout>
+### Stap 4: Kies of u apparaatgegevens wilt wissen
+
+Wanneer u hierom wordt gevraagd met het selectievakje **Apparaat wissen**:
+
+| Keuze | Lokaal resultaat | Gebruik wanneer |
+| --------------- | ------------------------------------------------------------------ | ------------------------------------- |
+| Niet aangevinkt laten | Pogingen om lokale instellingen en status te behouden tijdens het opnieuw installeren van firmware | Ondersteuning vraagt ​​om een ​​normale herinstallatie |
+| Controleer wissen | Wist lokale instellingen en kalibratie en vereist opnieuw instellen | Support vraagt ​​expliciet om een ​​volledige reset |
+
+<Callout type="info">
+
+Volgens de huidige documentatie blijft de dashboardkoppeling behouden, maar de zichtbare installatiestatus kan na herstel variëren. Bevestig het apparaat in **Mijn apparaten** nadat het opnieuw is opgestart en neem contact op met de ondersteuning voordat u het verwijdert of opnieuw koppelt.
+
+</Callout>
+### Stap 5: Voltooi de flits
+
+Klik op **Volgende** om het flashproces te starten. Wacht tot het voltooid is.
+
+<Callout type="success">
+
+Eenmaal voltooid, wordt uw apparaat opnieuw opgestart. Als u het apparaat hebt gewist, wordt het kalibratiescherm weergegeven. Zie de kalibratiegids voor de volgende stappen. Als u niet hebt gewist, keert het apparaat terug naar de normale werking.
+
+</Callout>
+
+## Herstel verifiëren
+
+1. Controleer of de browser een voltooide installatie rapporteert voordat u de verbinding met USB verbreekt.
+2. Wacht tot de Lockbox opnieuw is opgestart.
+3. Vul [Calibration](/lockbox/device-states/calibration) in als daarom wordt gevraagd.
+4. Controleer of het apparaat fysiek ontgrendeld is voordat u gaat testen.
+5. Controleer Wi-Fi, dashboardkoppeling en één ontgrendelde slot/unlock-cyclus.Als de installatie mislukt, houdt u de Lockbox aangesloten op een stabiele USB-stroomvoorziening, sluit u andere seriële toepassingen, opent u Chrome of Edge opnieuw en probeert u het ondersteunde pakket nogmaals. Als het seriële apparaat nog steeds afwezig is of de tweede poging mislukt, stop dan en neem contact op met de ondersteuning via het browserbericht. Raad niet een ander firmwarepakket of kanaal.

@@ -1,0 +1,38 @@
+---
+title: "Mode rebond"
+description: "Entraînez-vous à des mouvements contrôlés dans les deux sens et comprenez les cibles et les scores spécifiques au rebond."
+---
+
+Le rebond mesure les cycles répétés avec un mouvement contrôlé dans les deux sens. Elle diffère de la répétition principalement par le mouvement de retour attendu, utilisez-la donc uniquement après avoir pu vous arrêter et reculer en douceur.
+
+## Configurer
+
+1. Ajoutez un segment **Bounce**.
+2. Sélectionnez le jouet installé.
+3. Choisissez un faible nombre de répétitions, une plage, un rythme et une fenêtre cible confortables.
+4. Enregistrez, activez, récupérez et calibrez.
+
+## Exécuter
+
+Suivez la cible affichée dans les deux directions de chaque cycle. Gardez suffisamment de marge pour ralentir, faire marche arrière et vous éloigner. Arrêtez-vous au lieu d’essayer de « rattraper » une cible qui s’est éloignée d’un contrôle confortable.
+
+## Rebond contre répétition
+
+| Aspects | Répétition | Rebond |
+| ------------------- | ---------------------------------------------- | --------------------------------------------- |
+| Accentuation | mouvement de cible répété avec un retour plus simple | suivi de cible contrôlé dans les deux sens |
+| Meilleure première utilisation | apprendre un cycle cohérent | affiner la coordination après la répétition |
+| Points de base actuels | répétitions × 2 × facteur de précision | répétitions × 2 × facteur de précision |
+
+Le API actuel dérive des répétitions sous la forme `ceil(strokes ÷ 2)`. Son facteur de précision est le temps passé dans la fenêtre cible divisé par le temps de jeu total, compris entre 0 et 1. Un multiplicateur de jouet peut s'appliquer après les points de base et le serveur arrondit à la hausse.
+
+## Dépannage
+
+| Symptôme | Actions |
+| -------------------- | -------------------------------------------------------------------------- |
+| le renversement est brusque | ralentir le rythme et réduire la portée |
+| à plusieurs reprises derrière la cible | arrêtez d'essayer de rattraper votre retard; difficulté du modèle inférieur |
+| le décompte semble faux | vérifier les cycles entièrement contrôlés et signaler les détails de la session s'ils sont reproductibles |
+| résultat manquant | utiliser [Check session results](/dtt/quick-start/checking-results) |
+
+Retournez au [mode comparison](/dtt/training-modes).

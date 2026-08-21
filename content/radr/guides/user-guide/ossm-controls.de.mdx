@@ -1,0 +1,220 @@
+---
+title: „Steuern Sie OSSM mit RADR“
+description: „Steuern Sie OSSM Geschwindigkeit, Tiefe, Gefühl, Hub, Pause, Punkt und Muster von RADR.“
+---
+
+In dieser Anleitung erfahren Sie, wie Sie die OSSM (Open Source Sex Machine) mit Ihrer RADR-Funkfernbedienung steuern.
+
+<Callout type="warn" title="Stellen Sie sicher, dass Stop vor der Verwendung stoppt">
+
+Lassen Sie den OSSM unbelastet, stellen Sie die Geschwindigkeit auf Null und testen Sie sowohl eine Pause bei einmaligem Drücken als auch einen vollständigen Stopp bei doppeltem Druck, bevor Sie ein Zubehör anbringen oder eine Sitzung beginnen. Bei Pause bleiben die aktuellen Einstellungen erhalten; Ein vollständiger Stopp setzt sie zurück. Wenn eine der beiden Aktionen die physische Bewegung nicht stoppt, schalten Sie den OSSM aus und verwenden Sie [troubleshooting](/ossm/troubleshooting).
+
+</Callout>
+
+![RADR OSSM control screen showing speed on the left, motion range in the centre, the active adjustment on the right, and pause and pattern actions below](<../../img/image (2).webp>)
+
+## Übersicht über den Kontrollbildschirm
+
+Bei Anschluss an einen OSSM zeigt der Steuerbildschirm Folgendes an:
+
+- **Oben:** Drei Registerkarten mit den Modi Tiefe, Empfindung und Strich
+- **Obere Stoßstangen:** Tasten `<<` und `>>` zum Umschalten des Modus
+- **Linke Seite:** Geschwindigkeitsencoder-Skala mit Bogenanzeige
+- **Rechte Seite:** Modus-Encoder-Einstellrad (Depth/Sensation/Stroke) mit Bogenanzeige
+- **Mitte:** Lineares Schienendiagramm mit Visualisierung von Hub und Tiefe
+- **Unter dem Diagramm:** Aktueller Mustername
+- **Unten:** Menü-, Pause- und Mustertasten
+
+## Geschwindigkeitskontrolle
+
+Der **linke Encoder** steuert immer die Geschwindigkeit, unabhängig davon, welcher Modus aktiv ist.
+
+| Parameter | Reichweite | Standard |
+| --------- | ------ | ------- |
+| Geschwindigkeit | 0–100 % | 0% |
+
+- Im Uhrzeigersinn drehen, um die Geschwindigkeit zu erhöhen
+- Gegen den Uhrzeigersinn drehen, um die Geschwindigkeit zu verringern
+- Der Encoder verfügt über eine Beschleunigung: Schnellere Drehungen führen zu größeren Änderungen
+
+<Callout type="info">
+
+Damit sich der OSSM bewegen kann, muss die Geschwindigkeit über 0 % liegen. Erhöhen Sie bei einer Pause die Geschwindigkeit, um automatisch fortzufahren.
+
+</Callout>
+## Anpassungsmodi
+
+Der **rechte Encoder** steuert einen von drei Parametern, je nachdem welcher Modus aktiv ist. Verwenden Sie die Schulterpuffer, um den Modus zu wechseln.
+
+### Tiefenmodus
+
+Steuert, wie tief die Penetration reicht.
+
+| Parameter | Reichweite | Standard |
+| --------- | ------ | ------- |
+| Tiefe | 0–100 % | 10 % |
+
+- Höhere Werte = tiefere Eindringtiefe
+- Die Tiefe wird im linearen Schienendiagramm visualisiert
+
+### Sensation-Modus
+
+Steuert die Intensität oder das „Gefühl“ der Bewegung.
+
+| Parameter | Reichweite | Standard |
+| --------- | ------ | ------- |
+| Sensation | 0–100 % | 50 % |
+
+- Niedrigere Werte = sanftere, gleichmäßigere Bewegung
+- Höhere Werte = intensivere, aggressivere Bewegung
+
+### Strichmodus
+
+Steuert die Länge jedes Strichs.
+
+| Parameter | Reichweite | Standard |
+| --------- | ------ | ------- |
+| Schlaganfall | 0–100 % | 50 % |
+
+- Niedrigere Werte = kürzere Hübe
+- Höhere Werte = längere Hübe
+- Der Hub wird im linearen Schienendiagramm visualisiert
+
+## Modi wechseln
+
+Sie haben zwei Möglichkeiten, zwischen Tiefe, Empfindung und Strich zu wechseln:
+
+### Verwendung von Bumpern (empfohlen)
+
+- **Linker Stoßfänger (`<<`)** – Wechseln Sie zum vorherigen Modus
+- **Rechter Stoßfänger (`>>`)** – Wechseln Sie zum nächsten Modus
+
+Die Modusreihenfolge ist: Tiefe → Empfindung → Strich → Tiefe ...
+
+### Visuelles Feedback
+
+Wenn Sie den Modus wechseln:
+
+- Die entsprechende Registerkarte oben wird hervorgehoben
+- Die Farbe der rechten Encoder-LED ändert sich:
+  - **Coral/Red** – Tiefenmodus
+  - **Blau** – Sensationsmodus
+  - **Grün** – Strichmodus
+- Die linke Encoder-LED bleibt **lila** (immer Geschwindigkeit)
+
+## Pause und Stopp
+
+Die **mittlere Taste** steuert das Anhalten und Stoppen.
+
+### Einmaliges Drücken: Pause
+
+Durch einmaliges Drücken wird der OSSM angehalten:
+
+- Geschwindigkeit ist auf 0 % eingestellt
+- Der Mustername ändert sich in Rot zu „Pausiert“.
+- Die mittlere LED leuchtet rot
+- Die Pause-Taste wechselt zu „STOP“ (rot)
+
+<Callout type="info">
+
+Um aus der Pause fortzufahren, erhöhen Sie einfach die Geschwindigkeit mit dem linken Encoder. Der OSSM wird automatisch fortgesetzt.
+
+</Callout>
+### Sicherheitsfunktion: Permanente Geschwindigkeitsüberwachung
+
+Wenn Sie den Pattern-Modus oder andere Menüs aufrufen, überwacht RADR aus Sicherheitsgründen weiterhin den linken Encoder (Geschwindigkeit). Das bedeutet:
+
+- Sie können die Geschwindigkeit beim Durchsuchen von Mustern weiterhin anpassen
+- Wenn Sie die Geschwindigkeit auf 0 drehen, stoppt der OSSM sofort
+- Dies stellt sicher, dass Sie immer über die Möglichkeit eines sofortigen Stopps verfügen
+
+<Callout type="idea">
+
+Auch beim Auswählen von Mustern steuert der linke Encoder die Geschwindigkeit. Dies ist eine Sicherheitsfunktion, kein Fehler.
+
+</Callout>
+### Doppeltes Drücken: Vollständiger Stopp
+
+Durch kurzes Doppeldrücken wird ein Vollstopp mit Reset durchgeführt:
+
+- Geschwindigkeit ist auf 0 % eingestellt
+- Tiefe wird auf 0 % zurückgesetzt
+- Hub wird auf 10 % zurückgesetzt
+- Sensation wird auf 50 % zurückgesetzt
+- Der Bestätigungsbildschirm „Gerät gestoppt“ wird angezeigt
+
+<Callout type="warn">
+
+Bei „Vollstopp“ werden Ihre Anpassungseinstellungen zurückgesetzt. Wenn Sie pausieren möchten, ohne Ihre Einstellungen zu verlieren, verwenden Sie einen einzigen Tastendruck.
+
+</Callout>
+## Mustermodus
+
+Drücken Sie die **rechte Taste (Muster)**, um in den Mustermodus zu gelangen.
+
+Im Mustermodus:
+
+- Der Bildschirm zeigt eine Liste der verfügbaren Muster
+- Verwenden Sie den rechten Encoder, um durch die Muster zu scrollen
+- Drücken Sie die rechte Taste, um ein Muster auszuwählen
+- Drücken Sie die linke Taste, um abzubrechen und zurückzukehren
+
+Einzelheiten zu den einzelnen Mustern finden Sie unter [Stroke Patterns](/radr/guides/user-guide/stroke-patterns).
+
+## Lineares Schienendiagramm
+
+Das lineare Schienendiagramm in der Mitte des Bildschirms bietet eine visuelle Darstellung der Bewegung des OSSM:
+
+- Die Grafik zeigt den Hubbereich und die Tiefenposition
+- Wenn Sie Strich und Tiefe anpassen, wird die Visualisierung in Echtzeit aktualisiert
+- Dies hilft Ihnen, die physikalische Bewegung zu verstehen, ohne auf die Maschine zu schauen
+
+## Menütaste
+
+Die **linke Taste (Menü)** ist für zukünftige OSSM Geräteeinstellungen reserviert.
+
+<Callout type="info">
+
+Die Menütaste ist derzeit deaktiviert und hat keine Funktion. Der Stil der Schaltfläche ändert sich, wenn sie angehalten wird (erscheint aktiviert), aber das Drücken hat keine Auswirkung. Zukünftige Firmware-Updates werden über diese Schaltfläche gerätespezifische Einstellungen ermöglichen.
+
+</Callout>
+## LED-Anzeigen während der Steuerung
+
+| LED | Farbe | Bedeutung |
+| ------------ | --------- | -------------------------- |
+| Links (Geschwindigkeit) | Lila | Geschwindigkeitsmodus (immer aktiv) |
+| Mitte | Weiß | Aktiv und spielend |
+| Mitte | Rot | Angehalten oder gestoppt |
+| Rechts (Modus) | Coral/Red | Tiefenmodus aktiv |
+| Rechts (Modus) | Blau | Sensationsmodus aktiv |
+| Rechts (Modus) | Grün | Strichmodus aktiv |
+
+## Kurzreferenz
+
+| Kontrolle | Aktion |
+| ------------- | ------------------------------------------ |
+| Linker Encoder | Geschwindigkeit anpassen (0–100 %) |
+| Rechter Encoder | Aktiven Modus anpassen (0–100 %) |
+| Linke Stoßstange | Vorheriger Modus (Tiefe ← Empfindung ← Strich) |
+| Rechter Stoßfänger | Nächster Modus (Tiefe → Empfindung → Strich) |
+| Linke Taste | Menü (deaktiviert) |
+| Mittlerer Knopf | Single: Pause / Double: Punkt |
+| Rechter Knopf | Öffnen Sie den Mustermodus |
+
+## Tipps
+
+<Callout type="idea">
+
+Beginnen Sie mit niedriger Geschwindigkeit und steigern Sie diese schrittweise, um Ihre bevorzugte Intensität zu finden.
+
+</Callout>
+<Callout type="idea">
+
+Verwenden Sie die Stoßfänger, um den Modus nach Gefühl zu wechseln – Sie müssen nicht auf den Bildschirm schauen.
+
+</Callout>
+<Callout type="idea">
+
+Wenn Sie versehentlich einen Vollstopp ausführen, machen Sie sich keine Sorgen – passen Sie einfach Ihre Einstellungen neu an und erhöhen Sie die Geschwindigkeit, um fortzufahren.
+
+</Callout>

@@ -1,0 +1,30 @@
+---
+title: „DTT Web Flasher“
+description: „Installieren oder stellen Sie stabile Deep Throat Trainer-Firmware über USB mit einem unterstützten Desktop-Browser wieder her.“
+---
+
+importiere { DeviceFlasher } aus „@repo/device-tools/device-flasher";“
+
+Verwenden Sie dieses Tool, um die Deep Throat Trainer-Firmware direkt von einem Desktop-Browser über USB zu installieren oder wiederherzustellen. Beenden Sie die körperliche Sitzung und nehmen Sie das Spielzeug aus dem Gebrauch, bevor Sie den Trainer anschließen.
+
+<Callout type="info" title="Verwenden Sie Chrome oder Edge auf einem Desktop-Computer">
+
+Verbinden Sie den Trainer mit einem datenfähigen USB-Kabel. Web Serial ist in Safari, Firefox oder mobilen Browsern nicht verfügbar. Trainer, die vor dem 1. Juli 2025 gekauft wurden, unterstützen das Flashen von USB nicht.
+
+</Callout>
+
+## Vor dem Blinken
+
+- Verwenden Sie Chrome oder Edge auf einem Desktop-Computer.
+- Verwenden Sie ein nachweislich datenfähiges USB-C-Kabel. Ein reines Ladekabel kann nicht blinken.
+- Wählen Sie **Produktion (stabil)**, es sei denn, der Support gibt Ihnen einen genauen Entwicklungszweig und Commit.
+- Lassen Sie alle Optionen **Gerät löschen** deaktiviert. Der aktuelle Dashboard-Flasher erzwingt absichtlich die Installation von DTT, um die Kopplung auf dem Gerät, Wi-Fi, Kalibrierung und gespeicherte Einstellungen beizubehalten.
+- Lassen Sie den Computer bis zum Abschluss eingeschaltet und das Kabel angeschlossen.
+
+## Überprüfen und wiederherstellen
+
+Trennen Sie nach einer erfolgreichen Installation die Verbindung zu USB, starten Sie den Trainer neu und lassen Sie den Preflight beenden. Bestätigen Sie vor einer physischen Sitzung die Kopplung, Wi-Fi, das Spielzeug, die Kalibrierung und die aktive Vorlage.
+
+Wenn der Browser das serielle Gerät nicht finden kann, versuchen Sie es mit einem anderen Datenkabel oder einem anderen USB-Anschluss. Wenn die Installation wiederholt fehlschlägt oder der Trainer nicht mehr startet, halten Sie an und senden Sie eine E-Mail an [support@researchanddesire.com](mailto:support@researchanddesire.com) mit dem Kaufdatum der Hardware, dem Browser, dem Betriebssystem, dem ausgewählten Kanal und der Nachricht des Installationsprogramms.
+
+<DeviceFlasher device="dtt" />

@@ -1,0 +1,22 @@
+---
+title: "Outil de programmation de moteur en or"
+description: "Programmer un moteur OSSM Gold en utilisant Web Serial et Modbus RTU."
+---
+
+importer { GoldMotorControl } depuis "@repo/device-tools/gold-motor-control";
+
+Configurez ou restaurez les paramètres par défaut OSSM sur un moteur Gold (série 57AIM) directement à partir d'un navigateur de bureau pris en charge.
+
+<Callout type="info" title="Ceci est un programmateur moteur, pas un flasheur de firmware">
+
+Cet outil lit et écrit les registres de configuration du moteur via Modbus RTU. Il ne télécharge pas le micrologiciel et n'utilise donc pas le chemin du manifeste du micrologiciel Supabase.
+
+</Callout>
+
+<Callout type="warn" title="Débranchez d'abord le câble de signal OSSM">
+
+Retirez la fiche de signal à quatre broches de la carte de référence OSSM avant la programmation. Alimentez le moteur avec 20 à 36 V CC et connectez-le via un adaptateur RS485 USB. Utilisez Chrome ou Edge sur un ordinateur de bureau.
+
+</Callout>
+
+<GoldMotorControl />

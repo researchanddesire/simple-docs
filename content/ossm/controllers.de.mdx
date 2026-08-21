@@ -1,0 +1,51 @@
+---
+title: „Wählen und testen Sie einen OSSM Controller“
+description: „Schließen Sie eine kabelgebundene Fernbedienung, eine RADR-Funkfernbedienung oder einen Web-Controller an und überprüfen Sie vor der Verwendung die Stopp-Aktion.“
+---
+
+Alle Controller passen die Bewegung an, ihre Verbindungs- und Stoppaktionen unterscheiden sich jedoch. Beginnen Sie mit Geschwindigkeit und Tiefe bei Null.
+
+| Controller | Am besten, wenn | Verbindung | Aktion stoppen |
+| -------------------- | ------------------------------------- | ---------------------- | --------------- |
+| Kabelgebundene Fernbedienung | Sie möchten eine direkte physische Verbindung | Ethernet-Kabel zu OSSM | Drücken und halten Sie den rechten Knopf |
+| RADR-Funkfernbedienung | Sie möchten eine dedizierte drahtlose Steuerung | Bluetooth | Drücken Sie die mittlere Taste |
+| Web-Controller | Sie haben einen unterstützten Desktop-Browser | Web Bluetooth | Verwenden Sie das Stopp-Steuerelement | auf dem Bildschirm
+
+## Kabelgebundene Fernbedienung
+
+1. Schließen Sie bei ausgeschaltetem OSSM die Fernbedienung über ein Ethernet-Kabel an.
+2. Stellen Sie beide Knöpfe auf Null und schalten Sie OSSM ein.
+3. Warten Sie auf das Remote-Menü.
+4. Wählen Sie einen Bewegungsmodus mit minimalen Einstellungen aus und halten Sie dann den rechten Knopf gedrückt, um zu bestätigen, dass Stopp zum Hauptmenü zurückkehrt.
+
+![Wired remote with the left speed knob and right depth/menu knob identified](./images/wired-remote-annotated.webp)
+
+## RADR-Funkfernbedienung
+
+1. Einschalten und Home OSSM.
+2. Schalten Sie RADR ein und wählen Sie mit der rechten Taste den erkannten OSSM aus.
+3. Bestätigen Sie den Namen des angeschlossenen Geräts, bevor Sie einen Bewegungswert ändern.
+4. Drücken Sie bei der Mindesteinstellung die Mitteltaste und bestätigen Sie, dass die Bewegung stoppt.
+
+![RADR remote physical controls identified](./images/wireless-remote-annotated.webp)
+
+![RADR device-selection screen with the OSSM choice identified](./images/wireless-remote2-annotated.webp)
+
+## Web-Controller
+
+Verwenden Sie Desktop-Chrome oder Edge. iOS, Firefox und Safari unterstützen den erforderlichen Web Bluetooth-Flow nicht.
+
+1. Öffnen Sie das [OSSM web controller](/ossm/tools/web-controller).
+2. Wählen Sie **Verbinden**, wählen Sie Ihr OSSM und wählen Sie **Pair**.
+3. Halten Sie alle Bewegungswerte auf Null.
+4. Testen Sie kurz die minimale Bewegung, verwenden Sie dann „Stopp“ und bestätigen Sie, dass die Bewegung aufhört.
+
+![Web controller connection button](./images/web-controller-connect-annotated.webp)
+
+![Web Bluetooth device picker with an OSSM selected](./images/web-controller-pair-annotated.webp)
+
+<Callout type="error" title="Fahren Sie nicht ohne eine zuverlässige Stopp-Kontrolle fort">
+
+Wenn der Controller die Verbindung trennt, das falsche Gerät auswählt, langsam reagiert oder den Stopptest nicht besteht, trennen Sie den OSSM von der Stromversorgung und beheben Sie den Fehler vor der Verwendung.
+
+</Callout>

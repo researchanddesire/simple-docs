@@ -1,0 +1,44 @@
+---
+title: "Firmware Mises à jour et récupération"
+description: "Comprendre les vérifications automatiques des mises à jour, les canaux de publication, la vérification, la récupération après panne et les exigences de flashage USB."
+---
+
+## Contrôles automatiques
+
+Lorsqu'un formateur en ligne appelle le service de mise à jour actuel, le serveur compare sa version signalée avec la version attribuée à sa piste de publication. L’éligibilité et la logique de déploiement par étapes peuvent affecter le micrologiciel renvoyé. Une seule « dernière version » n’est donc pas codée en dur dans ce guide.
+
+## Avant une mise à jour
+
+- Terminez et quittez n'importe quelle séance physique.
+- Placez le formateur en toute sécurité sans utiliser de jouet.
+- Utilisez une connexion stable de 2,4 GHz.
+- Assurer une charge adéquate de la batterie ; le référentiel ne définit pas de pourcentage requis.
+- Ne commencez pas lorsqu'une perte d'alimentation ou de connectivité est probable.
+
+## Pendant et après
+
+Suivez l'écran de progression de l'appareil et maintenez-le alimenté. Après le redémarrage, laissez le contrôle en amont se terminer et vérifiez que la session attendue peut être récupérée.
+
+<Callout type="success" title="Vérification">
+
+Le Trainer redémarre normalement, termine sa vérification en ligne et ne répète pas la mise à jour ni n'affiche d'erreur de récupération.
+
+</Callout>
+
+## Canaux de diffusion
+
+Les paramètres des appareils du tableau de bord peuvent exposer les contrôles des canaux du micrologiciel pour les appareils éligibles. Les noms des chaînes et leur éligibilité peuvent changer. Choisissez uniquement une chaîne actuellement proposée à votre compte et utilisez Production lorsque vous n'avez pas l'intention de tester des versions préliminaires de logiciels.
+
+## Si une mise à jour échoue
+
+1. Enregistrez l'écran et toute version affichée.
+2. Gardez le Trainer hors d’usage.
+3. Restaurez un réseau stable et redémarrez une fois.
+4. Si le démarrage normal ne se rétablit pas, utilisez le [DTT Web Flasher](/dtt/tools/web-flasher) uniquement avec le matériel pris en charge, un navigateur et un câble compatible données.
+5. Contactez l'assistance avant d'effacer l'appareil ou de répéter des flashs échoués.
+
+## Limites de version et de restauration
+
+Le référentiel actuel du guide de l'utilisateur ne publie pas de version actuelle du micrologiciel, d'historique complet des versions, de matrice de support ou de chemin de restauration garanti. Le service de mise à jour résout les versions de manière dynamique. Signalez la version affichée par votre appareil ou votre flasher lors de la demande d'assistance.
+
+Dernière révision par rapport au tableau de bord/API source : 16 août 2026.

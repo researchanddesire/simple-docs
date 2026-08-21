@@ -1,0 +1,60 @@
+---
+title: "Lockbox Mode hors ligne"
+description: "Comparez les capacités Lockbox locales et en ligne, préparez-vous à la déconnexion et vérifiez l'état après la reconnexion."
+---
+
+Le Lockbox conserve les fonctions locales de base lorsque le service Internet n'est pas disponible, mais les télécommandes et les mises à jour du tableau de bord nécessitent une connexion.
+
+## Matrice de capacités
+
+| Capacité | Comportement hors ligne | Après reconnexion |
+| -------------------------------- | ------------------------------------------------------ | ----------------------------------------------------------------- |
+| Verrouillage temporisé local | La minuterie continue sur l'appareil | L'état du tableau de bord peut être mis à jour |
+| Mécanisme de verrouillage local/unlock | Disponible à partir du périphérique physique | L'état physique fait toujours autorité |
+| Menus et boutons de l'appareil | Disponible | Aucune action spéciale prévue |
+| Dormir et se réveiller | Disponible | Wi-Fi se reconnecte après le réveil lorsque les informations d'identification restent valides |
+| Déverrouillage d'urgence du logiciel | Disponible localement lorsque la session ne l'a pas désactivé | L'événement peut être synchronisé avec le tableau de bord |
+| Commandes du détenteur de clé | **Indisponible** | L’état actuel du serveur/device doit être rapproché ; confirmer sur l'appareil |
+| Modifications du tableau de bord | **Indisponible sur l'appareil** | Peut arriver après reconnexion ; ne présumez pas de l'ordre ou du timing |
+| Vote public | Les nouveaux votes ne peuvent pas atteindre l'appareil | Vérifier la session active après reconnexion |
+| Historique d'activité | Le tableau de bord est peut-être obsolète | Des événements peuvent apparaître après reconnexion |
+| Mises à jour Firmware | Indisponible | Reprendre uniquement sur alimentation et réseau stables |
+
+<Callout type="warn">
+
+Un Lockbox hors ligne ne peut pas recevoir de déverrouillage de porte-clé à distance. Avant toute session susceptible de perdre Internet, confirmez la disponibilité locale du déverrouillage d'urgence et gardez la procédure de la plaque arrière matérielle disponible.
+
+</Callout>
+
+## Affichage de l'heure
+
+La documentation actuelle indique qu'une minuterie locale continue même lorsque l'appareil ne peut pas synchroniser l'heure du réseau. L'écran peut afficher **Connectez Wi-Fi pour voir le temps restant** jusqu'à ce que l'heure soit à nouveau synchronisée.
+
+N'en déduisez pas qu'un compte à rebours masqué ou indisponible signifie que la session est terminée. Confirmez l'état du verrouillage physique et utilisez l'accès d'urgence en cas de besoin.
+
+## Verrous locaux et verrous gérés par le tableau de bord
+
+| Type de séance | Créé où | Contrôle hors ligne |
+| ---------------------- | ------------------------------------------------ | --------------------------------------------------------------------------------------------- |
+| Verrouillage local | Physique Lockbox | Fonctionne sur l'appareil ; le tableau de bord ne le gère pas |
+| Verrouillage géré par le tableau de bord | Tableau de bord, puis synchronisé avec le Lockbox | Continue avec les derniers paramètres détenus par l'appareil ; les modifications à distance nécessitent une reconnexion |
+
+## Testez avant de vous fier à une utilisation hors ligne
+
+1. Terminez l'appairage et la configuration Wi-Fi pendant le déverrouillage.
+2. Exécutez un court test de verrouillage en ligne et un déverrouillage normal.
+3. Confirmez le déverrouillage d'urgence local et examinez [hardware emergency access](/lockbox/support/emergency-backplate).
+4. Démarrez un autre court test, déconnectez le réseau et confirmez le comportement attendu de l'écran local et de la minuterie.
+5. Reconnectez-vous et vérifiez que le périphérique physique et le tableau de bord atteignent le même état.
+
+<Callout type="info">
+
+Firmware et le comportement de réconciliation du tableau de bord peuvent changer. Ce guide ne promet pas comment les modifications contradictoires hors ligne et en ligne sont ordonnées. Évitez d'effectuer des modifications concurrentes lorsque vous êtes hors ligne et vérifiez l'état physique final après la reconnexion.
+
+</Callout>
+
+## Récupérer après une déconnexion1. Réveillez le Lockbox ; le sommeil profond désactive Wi-Fi.
+2. Attendez que l'indicateur d'état se stabilise.
+3. Utilisez [Check Online Status](/lockbox/support/online-status).
+4. Comparez l'état physique avec le tableau de bord après son intervalle de mise à jour.
+5. S’ils ne sont pas d’accord, ne démarrez pas un autre verrouillage. Suivez [Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting).

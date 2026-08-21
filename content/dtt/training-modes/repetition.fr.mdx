@@ -1,0 +1,55 @@
+---
+title: "Mode répétition"
+description: "Configurez et exécutez des mouvements cibles répétés tout en suivant les coups, la position, le rythme et le temps dans la fenêtre cible."
+---
+
+La répétition utilise des mouvements répétés vers et loin d’une cible. Le serveur actuel dérive les répétitions terminées à partir des coups mesurés et marque le temps dans la fenêtre cible.
+
+## Configurer
+
+1. Ajoutez un segment **Répétition** à un modèle.
+2. Sélectionnez le jouet physiquement installé.
+3. Définissez un faible nombre de répétitions, une plage, un rythme et une fenêtre cible confortables.
+4. Enregistrez et activez le modèle.
+5. Récupérez-le en ligne et calibrez-le lorsque vous y êtes invité.
+
+Les étiquettes exactes de l’éditeur peuvent varier. Consultez le résumé des segments de l’appareil avant de commencer.
+
+## Exécuter
+
+Suivez la cible en utilisant un mouvement fluide que vous pouvez arrêter à tout moment. Utilisez la direction de l'écran avec le retour LED. Un décalage est une raison pour ralentir ou s’arrêter, et non pour forcer la profondeur ou la vitesse.
+
+<Callout type="success" title="Succès">
+
+L'appareil atteint l'écran grade/completion et une session en ligne apparaît avec le segment de répétition attendu.
+
+</Callout>
+
+## Résultat et points
+
+Pour la v2 actuelle API, les répétitions terminées sont `ceil(strokes ÷ 2)`. Pour une session non nulle, les points de base sont `completed repetitions × 2 × accuracy factor`, où le facteur est le temps dans la fenêtre cible divisé par le temps de jeu total et fixé entre 0 et 1. Un multiplicateur de jouet peut s'appliquer par la suite et le serveur arrondit à l'augmentation.
+
+## Dépannage
+
+| Symptôme | Actions |
+| --------------------------------- | -------------------------------------------------------------- |
+| ne peut pas correspondre à la cible | rythme, plage ou nombre de répétitions inférieurs |
+| les commentaires semblent inversés | arrêter, vérifier l'affectation des jouets et recalibrer |
+| segment se répète après une note faible | vérifiez pass/fail et répétez les paramètres dans le modèle |
+| le résultat est manquant | utiliser [Check session results](/dtt/quick-start/checking-results) |
+
+## Vidéo
+
+<iframe
+  src="https://player.mux.com/xNiIoQbQwUcN02oUmVWiM2vNbF97hysdNNmrb44D5kk4"
+  title="Démonstration du mode répétition"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+<Callout type="info" title="Transcription vidéo et description visuelle">
+
+La démonstration sélectionne la répétition, calibre le jouet installé, suit une cible répétée tout en regardant les commentaires de position, complète l'ensemble et ouvre la note téléchargée. Utilisez vos propres cibles confortables plutôt que de copier les valeurs affichées dans la vidéo.
+
+</Callout>

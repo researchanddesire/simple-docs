@@ -1,0 +1,157 @@
+---
+title: "Lockbox Statussymbolen"
+description: "Identificeer Lockbox slot, achterplaat, Wi-Fi, dashboardaansluiting en batterijsymbolen in tekst en afbeeldingen."
+---
+
+![Lockbox header bar showing status icons](../img/header.webp)
+
+De kopbalk op uw lockbox geeft verschillende pictogrammen weer die de huidige status van uw apparaat aangeven. Als u deze symbolen begrijpt, kunt u snel beoordelen of uw lockbox vergrendeld, verbonden en klaar voor gebruik is.
+
+Van links naar rechts zijn de pictogrammen:
+
+### Vergrendelingsstatus
+
+    Geeft aan of uw apparaat momenteel is vergrendeld. De statusindicator geeft aan of de achterplaat goed is gepositioneerd. Zie [Lock icon](#lock-icon) voor details.
+
+### Netwerkstatus
+
+    Toont of uw apparaat is verbonden met een Wi-Fi netwerk. De statusindicator laat zien of je ook verbonden bent met het dashboard en klaar bent om te spelen. Zie [Wi-Fi icon](#wi-fi-icon) voor details.
+
+### Batterijstatus
+
+    Geeft het huidige batterijniveau en de oplaadstatus weer. Dit pictogram heeft geen statusindicator. Zie [Battery icon](#battery-icon) voor details.
+
+## Doorzoekbare statustabel
+
+| Symbool of indicator | Betekenis | Wat te doen |
+| ------------------- | ------------------------------------------ | -------------------------------------------------------------------------- |
+| Gesloten slot | Het apparaat meldt een vergrendelde status | Bevestig dat de achterplaat is bevestigd en dat de sessie wordt verwacht |
+| Slot openen | Het apparaat meldt een ontgrendelde status | Controleer of het mechanisme opengaat voordat u er een sleutel in steekt |
+| Wi-Fi pictogram afwezig | Niet verbonden met Wi-Fi, of diepe slaap is actief | Maak het apparaat wakker; configureer Wi-Fi als het pictogram niet terugkeert |
+| Wi-Fi pictogram aanwezig | Aangesloten bij een Wi-Fi netwerk | Controleer het aangrenzende statuspunt voor dashboardconnectiviteit |
+| Geel knipperende stip | Verbinding maken met de dashboardservice | Wacht maximaal 60 seconden |
+| Groene stip | Verbonden met Wi-Fi en de dashboardservice | Geen actie |
+| Rode stip | Aangesloten bij Wi-Fi maar kan internet niet bereiken | Volg [Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting) |
+| Batterij opladen | USB voeding is aangesloten | Bevestig stabiel vermogen voor lange sessies |
+| Lage of lege batterij | Opladen voor een lange sessie | Houd noodtoegang beschikbaar |
+
+## Vergrendelingspictogram
+
+Het slotpictogram toont de huidige status van de sensoren van uw apparaat. Dit pictogram weerspiegelt de fysieke status van het vergrendelmechanisme, niet uw actieve speelsessie.
+
+### Vergrendeld
+
+![Locked icon showing the device is secured](../img/locked.webp)
+
+Wanneer u dit symbool ziet, is het vergrendelingsmechanisme ingeschakeld. De sensoren van uw apparaat hebben gedetecteerd dat het slot beveiligd is en dat de inhoud niet toegankelijk is.
+
+### Ontgrendeld
+
+![Unlocked icon showing the device can be opened](../img/unlocked.webp)
+
+Het ontgrendeld-symbool geeft aan dat de sensoren hebben gedetecteerd dat het slot open is. U heeft toegang tot de inhoud van de doos.
+
+### Achterplaat erop
+
+![Locked state with backplate detected](<../img/locked backplate on.webp>)
+![Unlocked state with backplate detected](<../img/unlocked backplate on.webp>)
+Er verschijnt een kleine statusindicator in de linkerbenedenhoek van het slotpictogram. Wanneer deze indicator **groen** is, hebben de sensoren gedetecteerd dat de achterplaat correct is gepositioneerd en dat het apparaat klaar is om te vergrendelen. Deze indicator kan zowel in vergrendelde als ontgrendelde toestand verschijnen.
+
+### Achterplaat verwijderd
+
+![Locked state with backplate removed](<../img/locked backplate off (1).webp>)
+![Unlocked state with backplate removed](<../img/unlocked backplate off.webp>)
+Wanneer de statusindicator **continu geel** is, hebben de sensoren gedetecteerd dat de achterplaat niet op zijn plaats zit. Een poging om deze status te vergrendelen zal mislukken.
+
+## Wi-Fi pictogram
+
+### Wi-Fi niet aangesloten
+
+![Wi-Fi disconnected icon](<../img/wifi-off (1).webp>)
+
+Dit symbool geeft aan dat uw apparaat niet is verbonden met een Wi-Fi-netwerk. Dit gebeurt meestal wanneer:
+
+- Uw lockbox is gloednieuw en is nooit geconfigureerd voor Wi-Fi
+- Uw lockbox was eerder verbonden, maar bevindt zich nu buiten het bereik van het opgeslagen netwerk
+
+In beide gevallen moet u Wi-Fi configureren door [Wi-Fi setup guide](/lockbox/quick-start/wifi-setup) te volgen.
+
+### Wi-Fi aangesloten
+
+![Wi-Fi connected icon](<../img/wifi (1).webp>)
+
+Dit symbool bevestigt dat uw apparaat is verbonden met Wi-Fi en toegang heeft tot internet.
+
+<Callout type="info">
+
+Alleen Wi-Fi-connectiviteit betekent niet dat uw apparaat opdrachten kan ontvangen. U moet ook uw apparaat koppelen en verbinden met het dashboard. Volg de [pairing guide](/lockbox/quick-start/pairing) voor instructies.
+
+</Callout>
+Controleer de statusindicator in de linkerbenedenhoek van het Wi-Fi-pictogram om te zien of uw apparaat gereed is om opdrachten te ontvangen.
+
+#### Statusindicator: geel knipperend
+
+![Wi-Fi connected with flashing yellow status indicator](../img/wifi-flashing.webp)
+
+Een knipperend geel lampje betekent dat uw apparaat is verbonden met Wi-Fi, maar nog niet is verbonden met de dashboardserver. In deze staat kan uw apparaat geen sleutelhouderopdrachten ontvangen.
+
+<Callout type="info">
+
+De indicator controleert twee dingen: Wi-Fi connectiviteit EN serververbinding. Beide moeten werken voor de groene indicator.
+
+</Callout>
+Dit kan gebeuren als:
+
+- **Uw apparaat is niet gekoppeld** — Volg de [pairing guide](/lockbox/quick-start/pairing) om de installatie te voltooien.
+- **Uw apparaat is zojuist ingeschakeld** — De serververbinding duurt doorgaans 15 tot 30 seconden, maar kan tot 2 minuten duren, afhankelijk van uw locatie en netwerkomstandigheden.
+- **Serverconnectiviteitsprobleem** — Tijdelijke problemen met serveronderhoud of netwerkroutering.
+
+<Callout type="warn">
+
+Als u meer dan twee minuten heeft gewacht en nog steeds de knipperende gele indicator ziet, neem dan contact op met de ondersteuning, aangezien dit op een serverprobleem kan duiden.
+
+</Callout>
+#### Statusindicator: continu rood
+
+Een ononderbroken rode indicator betekent dat uw apparaat is verbonden met het Wi-Fi-netwerk, maar geen internet kan bereiken. In deze staat kan uw apparaat geen sleutelhouderopdrachten ontvangen.
+
+Dit duidt doorgaans op een probleem met de netwerkconfiguratie en niet op een apparaatprobleem. Veel voorkomende oorzaken zijn:
+
+- **Router heeft geen internetverbinding** — Controleer of andere apparaten op hetzelfde netwerk toegang hebben tot internet.
+- **Netwerkfirewall of filtering**: sommige netwerken (bedrijfs-, hotel- of openbare Wi-Fi) blokkeren bepaalde verbindingen. Probeer een ander netwerk.
+- **Captive portal niet voltooid** — Voor sommige netwerken moet u de voorwaarden accepteren of inloggen via een browser voordat u internettoegang verleent.
+- **DNS of routeringsproblemen** — Uw router is mogelijk verkeerd geconfigureerd. Probeer uw router opnieuw op te starten.
+
+<Callout type="warn">
+
+Als u op meerdere verschillende netwerken een rode stip ziet, neem dan contact op met de ondersteuning, omdat dit kan duiden op een apparaatprobleem dat verdere probleemoplossing vereist.
+
+</Callout>
+#### Statusindicator: continu groen
+
+![Wi-Fi connected with solid green status indicator](../img/wifi-solid-green.webp)
+
+Een continu groene indicator betekent:
+
+1. Uw apparaat is verbonden met Wi-Fi
+2. Uw apparaat is verbonden met de dashboardserver
+3. Uw apparaat is klaar om direct sleutelhouderopdrachten te ontvangen
+
+<Callout type="idea">
+
+Vertrouw op de apparaatindicator over de dashboardstatus. Het apparaat toont real-time connectiviteit, terwijl het dashboard tot 60 seconden kan vertragen.
+
+</Callout>
+## Batterijpictogram
+![Battery charging](<../img/battery charging.webp>)
+![Battery full](<../img/battery full.webp>)
+![Battery medium](<../img/battery mid.webp>)
+![Battery low](<../img/battery low.webp>)
+![Battery empty](<../img/battery none.webp>)
+Deze pictogrammen tonen het huidige batterijniveau van uw apparaat. Wanneer uw apparaat wordt opgeladen, ziet u een bliksemschicht door het batterijpictogram.
+
+<Callout type="warn">
+
+Als het batterijpictogram rood wordt, laadt u uw apparaat onmiddellijk op om onderbrekingen te voorkomen.
+
+</Callout>

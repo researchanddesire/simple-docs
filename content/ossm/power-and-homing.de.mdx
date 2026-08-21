@@ -1,0 +1,51 @@
+---
+title: „Einschalten und Home OSSM“
+description: „Schließen Sie das mitgelieferte 24-V-Netzteil an, halten Sie sich von Startbewegungen fern und bestätigen Sie, dass OSSM erfolgreich funktioniert.“
+---
+
+**Ergebnis:** OSSM hat die Referenzfahrt abgeschlossen und wartet mit der Bewegungssteuerung auf Null. Warten Sie etwa zwei Minuten.
+
+## Bevor Sie die Stromversorgung anschließen
+
+- Lesen Sie [OSSM safety and emergency stop](/ossm/safety).
+- Stabilisieren Sie den Rahmen und machen Sie den gesamten Schienenweg frei.
+- Stellen Sie die Geschwindigkeit und Tiefe des Controllers auf Null.
+- Verwenden Sie das mitgelieferte 24 V, 4 A DC-Netzteil. Ersetzen Sie es nicht durch ein ungeprüftes Angebot.
+
+<Steps>
+  <Step>
+
+### Schließen Sie das Netzteil an die Wand an
+
+![The supplied OSSM power supply with its wall lead and DC output identified](./ossm/img/power-supply-annotated.webp)
+
+  </Step>
+  <Step>
+
+### Verbinden Sie den Zylinderstecker mit OSSM
+
+![The OSSM power input identified on the enclosed control board](./ossm/img/enclosed-ossm-pcb-annotated1.webp)
+
+Halten Sie Hände und Gegenstände außerhalb des Schienenwegs, bevor Sie diese Verbindung herstellen.
+
+  </Step>
+  <Step>
+
+### Beobachten Sie die Referenzfahrt aus sicherer Entfernung
+
+![The OSSM control board status LED illuminated during startup](./images/enclosed-ossm-pcb-annotated2.webp)
+
+Die Schiene bewegt sich langsam, um ihre Endpunkte zu messen. Halten Sie es nicht fest und berühren Sie es nicht.
+
+  </Step>
+</Steps>
+
+<Callout type="success" title="Erfolg">
+
+Die Referenzfahrt wird ohne Hindernisse oder ungewöhnliche Geräusche abgeschlossen, die Status-LED bleibt an und der Schlitten steht still. Weiter mit [choose and test a controller](/ossm/controllers).
+
+</Callout>
+
+## Wenn die Referenzfahrt nicht abgeschlossen wird
+
+Trennen Sie die Stromversorgung. Überprüfen Sie den Fahrweg auf ein Hindernis, einen losen Riemen, ein beschädigtes Kabel, einen instabilen Rahmen oder eine Befestigung. Schalten Sie eine verklemmte oder laute Maschine nicht wiederholt aus und wieder ein. Verwenden Sie [OSSM troubleshooting](/ossm/troubleshooting) oder wenden Sie sich an den Support.

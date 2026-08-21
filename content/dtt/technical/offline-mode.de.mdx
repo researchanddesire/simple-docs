@@ -1,0 +1,44 @@
+---
+title: „Offline-Modus und Ergebnispersistenz“
+description: „Verwenden Sie zwischengespeicherte Deep Throat Trainer-Einstellungen konservativ und verstehen Sie, was die aktuelle Quelle über die Ergebnisse überprüfen kann und was nicht.“
+---
+
+## Beweisgrenze
+
+Gerätedokumentationen und Meldungen weisen darauf hin, dass einige Firmware zuvor heruntergeladene Einstellungen ausführen und Feedback auf dem Gerät anzeigen kann, ohne dass eine aktuelle Serververbindung besteht. Die Dashboard-Quelle bestätigt, dass die Einstellungen normalerweise online abgerufen werden und die Ergebnisse beibehalten werden, wenn der v2-Abschlussendpunkt eine gültige Anfrage von einem gekoppelten Trainer erhält.
+
+Das Firmware-Repository DTT ist in diesem Checkout nicht vorhanden. Diese Dokumentation kann daher keine dauerhafte Ergebniswarteschlange, Warteschlangenkapazität, Aufbewahrungszeit, Wiederholungsplan, Stromausfallverhalten oder die Firmware-Versionen überprüfen, die diese Details implementieren.
+
+## Fähigkeitsmatrix
+
+| Fähigkeit | Offline-Status |
+| ----------------------------------- | ----------------------------------------------------------------------------------- |
+| Zuvor heruntergeladene Einstellungen ausführen | unterstützt durch bestehende Geräteführung; Überprüfen Sie Ihre Firmware, bevor Sie sich darauf verlassen |
+| Positions- und Geräte-Feedback | verfügbar während einer erfolgreich gestarteten zwischengespeicherten Sitzung |
+| Laden Sie eine neue oder bearbeitete Vorlage herunter | erfordert Konnektivität |
+| Bestätigen Sie das Speichern der Cloud-Kalibrierung | erfordert eine akzeptierte Serveranfrage |
+| Dashboard-Ergebnis und Punkte bestätigen | erst bestätigt, wenn das Ergebnis online erscheint |
+| Firmware prüfen oder herunterladen | erfordert Konnektivität |
+
+## Bereiten Sie sich vor
+
+1. Stellen Sie eine Online-Verbindung her und koppeln Sie den Trainer.
+2. Aktivieren Sie die vorgesehene Vorlage und das vorgesehene Spielzeug.
+3. Lassen Sie den Trainer seine Zusammenfassungen abrufen und anzeigen.
+4. Schließen Sie die Kalibrierung ab, wenn Sie dazu aufgefordert werden.
+5. Trennen Sie die Verbindung zum Netzwerk und führen Sie einen kontrollierten, nicht unbedingt notwendigen Test durch.
+6. Stellen Sie sicher, dass die gleiche Vorlage und das gleiche Spielzeug angezeigt werden, bevor Sie beginnen.
+
+<Callout type="warn" title="Behandeln Sie Offline-Ergebnisse als nicht gespeichert">
+
+Wenn eine Sitzungsaufzeichnung für Fortschritt, Punkte, Partnerverantwortung oder andere Konsequenzen von Bedeutung ist, trainieren Sie online und überprüfen Sie die Aufzeichnung anschließend. Versprechen Sie nicht, dass durch eine erneute Verbindung ein Offline-Ergebnis wiederhergestellt wird.
+
+</Callout>
+
+## Erneut verbinden
+
+Schließen Sie Wi-Fi wieder an, starten Sie normal neu und lassen Sie den Preflight beenden. Überprüfen Sie das Armaturenbrett. Wenn eine Offline-Sitzung angezeigt wird, wurde diese zugestellt. Ist dies nicht der Fall, gibt es in diesem Repository keine dokumentierte manuelle Upload-Aktion.
+
+## Falsche zwischengespeicherte Sitzung
+
+Kehren Sie online zurück, wählen Sie die richtige aktive Vorlage und das richtige Spielzeug aus, lassen Sie sie vom Trainer abrufen und überprüfen Sie die Zusammenfassungen, bevor Sie die Verbindung erneut trennen.

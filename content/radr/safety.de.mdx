@@ -1,0 +1,39 @@
+---
+title: „RADR Sicherheit, Pause und Stopp“
+description: „Bei Intensität Null verbinden, Pause und vollständigen Stopp überprüfen und sicher auf Unterbrechung oder unerwartete Ausgabe des Zielgeräts reagieren.“
+---
+
+RADR kann Bewegung oder Vibration auf einem anderen Gerät befehlen. Die Gefahren und der sichere Zustand hängen vom jeweiligen Ziel ab. Lesen Sie daher sowohl diese Seite als auch die Sicherheitshinweise des Zielherstellers.
+
+<Callout type="error" title="Unerwartete Leistung kann zu Verletzungen führen">
+
+**Gefahr:** Das falsche Ziel, eine nicht überprüfte Steuerungszuordnung, ein Verbindungsverlust oder ein hoher Startwert können zu unerwarteten Bewegungen oder Vibrationen führen. **Folge:** Dies kann zu Stößen, Quetschungen, Verwicklungen, inneren Verletzungen, Schmerzen oder Leiden führen. **Vermeidung:** Bestätigen Sie den Zielnamen, beginnen Sie bei Null, halten Sie die Stopp-Steuerung erreichbar, testen Sie ohne Körperkontakt und trennen Sie die Stromversorgung des Ziels, wenn die Kontrolle verloren geht und dies sicher ist.
+
+</Callout>
+
+## Obligatorische Checkliste vor der Verwendung
+
+1. Bestätigen Sie, dass das genaue Zielmodell in [Supported Devices](/radr/guides/reference/device-support) angezeigt wird, und lesen Sie seine Einschränkungen.
+2. Untersuchen und positionieren Sie das Ziel gemäß seinen eigenen Anweisungen.
+3. Schließen Sie andere Bluetooth-Apps und Controller.
+4. Setzen Sie jeden RADR-Ausgangswert vor dem Anschluss auf Null.
+5. Bestätigen Sie den ausgewählten Gerätenamen. Wählen Sie kein unbekanntes Gerät.
+6. Testen Sie eine kurze Mindestleistung ohne Körperkontakt.
+7. Drücken Sie einmal die mittlere Taste und bestätigen Sie die Zielpausen.
+8. Verwenden Sie die dokumentierte Vollstopp-Aktion für dieses Ziel und stellen Sie sicher, dass die Ausgabe Null ist.
+
+![RADR OSSM controls showing a paused state, zero speed, and the red Stop control](<./img/image (2).webp>)
+
+## Pause ist nicht ganz Stop
+
+Bei OSSM pausiert ein einziger Druck auf die mittlere Taste, indem die Geschwindigkeit auf Null gesetzt wird; Durch Ändern der Geschwindigkeit kann die Bewegung wieder aufgenommen werden. Durch zweimaliges Drücken wird der dokumentierte vollständige Stopp durchgeführt und die Bewegungsparameter zurückgesetzt. Bei Nicht-OSSM-Geräten variieren die Zuordnungen – verwenden Sie nur das im Supporteintrag des Ziels aufgeführte Verhalten und bestätigen Sie es während des Entlastungstests.
+
+## Verbindungsverlust oder unerwartete Ausgabe
+
+1. Benutzen Sie sofort Pause oder Stopp.
+2. Wenn RADR nicht reagiert, entfernen Sie sich und schalten Sie das Ziel aus oder trennen Sie es, wenn die Sicherheit gewährleistet ist.
+3. Schließen Sie das Gerät nicht erneut an, während das Ziel zur Verwendung positioniert ist.
+4. Notieren Sie den Zielnamen, die RADR-Firmware-Version, den Bildschirmstatus und die zuletzt verwendete Steuerung.
+5. Wiederholen Sie den Test bei Null ohne Körperkontakt. Beenden Sie die Verwendung der Kombination, wenn Ausgabe, Wiederverbindung oder Stoppverhalten nicht wiederholbar sind.
+
+Kontaktieren Sie [support@researchanddesire.com](mailto:support@researchanddesire.com) bei nicht identifizierten Geräten, unerwarteten Zuordnungen, unzuverlässigem Stoppen, beschädigter Hardware oder Verhalten, das von der Supporttabelle abweicht.

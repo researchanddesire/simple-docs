@@ -1,0 +1,33 @@
+---
+title: "Controleer Lockbox onlinestatus"
+description: "Vergelijk de live-verbindingsindicator van de Lockbox met de vertraagde onlinestatus van het dashboard."
+---
+
+De fysieke Lockbox toont de live verbindingsstatus. Het kan tot 60 seconden duren voordat het dashboard dit weergeeft.
+
+## Vergelijk de indicatoren
+
+| Fysiek Lockbox | Dashboard | Betekenis | Actie |
+| ----------------------------- | ----------------- | ------------------------------------------------ | ----------------------------------------- |
+| Geen Wi-Fi pictogram of punt | Offline | Wi-Fi is losgekoppeld of het apparaat bevindt zich in diepe slaap | Maak het wakker; sluit vervolgens indien nodig Wi-Fi opnieuw aan |
+| Wi-Fi pictogram + geel knipperende stip | Offline of online | Het apparaat maakt verbinding met de dashboardservice | Wacht maximaal 60 seconden |
+| Wi-Fi-pictogram + effen groene stip | Online | Volledig verbonden | Geen actie |
+| Wi-Fi-pictogram + effen groene stip | Offline | Dashboardstatus is vertraagd of de accounts verschillen | Wacht 60 seconden, bevestig account, vernieuw één keer |
+| Wi-Fi-pictogram + rode stip | Offline | Aangesloten bij Wi-Fi maar kan internet niet bereiken | Test het netwerk of een hotspot |
+
+![Lockbox Wi-Fi connected with a solid green status indicator](../img/wifi-solid-green.webp)
+
+## Controleer het apparaat
+
+1. Activeer de Lockbox.
+2. Wacht tot het Wi-Fi-pictogram en de stip zijn verdwenen.
+3. Vergelijk het scherm met [Status Symbols](/lockbox/using/symbols).
+
+## Controleer het dashboard
+
+1. Meld u aan en open **Instellingen → Mijn apparaten**.
+2. Bevestig dat de juiste Lockbox aan dit account is gekoppeld.
+3. Open de Lockbox pagina en controleer de online/offline indicator.
+4. Wacht maximaal 60 seconden nadat het apparaat groen wordt.
+
+Als de twee statussen nog steeds niet overeenkomen, volg dan [Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting). Als het om een ​​actieve sessie gaat, bevestig dan de fysieke vergrendelingsstatus voordat u een nieuw commando verzendt.

@@ -1,0 +1,122 @@
+---
+title: "Lockbox Veelgestelde vragen"
+description: "Korte antwoorden over de installatie van Lockbox, rollen, sessies, voeding, functies en noodtoegang."
+---
+
+import { Accordion, Accordions } from "fumadocs-ui/components/accordion";
+
+Gebruik voor procedures de [Quick Start](/lockbox/quick-start) of [Support Center](/lockbox/support).
+
+## Installatie en koppeling
+
+<Accordions type="multiple">
+  <Accordion title="Wat is de aanbevolen installatiemethode?">
+
+Gebruik [automatic Bluetooth pairing](/lockbox/quick-start/pairing) in Chrome of Edge. Het koppelt de Lockbox en levert 2,4 GHz Wi-Fi in één stroom. Handmatige Wi-Fi-installatie is de fallback.
+
+  </Accordion>
+  <Accordion title="Hoe koppel ik een tweedehands Lockbox?">
+
+De vorige eigenaar moet het eerst ontkoppelen. Als dat niet mogelijk is, neem dan contact op met [support@researchanddesire.com](mailto:support@researchanddesire.com) met het aankoopbewijs en de identificatie die wordt weergegeven onder **Instellingen → Koppelen**. Publiceer de koppelingscode niet.
+
+  </Accordion>
+  <Accordion title="Waarom verandert de koppelingscode?">
+
+De code kan veranderen na een herstart. Gebruik de code die momenteel op het apparaat wordt weergegeven. Eenmaal gekoppeld, is normaal accounteigendom niet afhankelijk van het behouden van die code.
+
+  </Accordion>
+</Accordions>
+## Rollen en sessies
+
+<Accordions type="multiple">
+  <Accordion title="Wat zijn de rollen van Lockee en Keyholder?">
+
+De **Lockee** is onderworpen aan het slot. Een **Sleutelhouder** is een ander account dat de Lockee autoriseert om overeengekomen sessiecontroles te beheren. Controleer toestemming, machtigingen, vrijgave, offline gedrag en intrekking in de [Keyholder Guide](/lockbox/quick-start/keyholder-guide).
+
+  </Accordion>
+  <Accordion title="Wat is een zelfvergrendeling?">
+
+Een zelfvergrendeling wordt gestart zonder sleutelhouder. Actieve zelfvergrendelingsbedieningen kunnen beperkter zijn dan een door de sleutelhouder beheerde sessie of een testsessie. Voer dus een korte test uit en controleer de noodontgrendeling voordat u erop vertrouwt.
+
+  </Accordion>
+  <Accordion title="Kan ik een sleutelhouder toevoegen of verwijderen tijdens een actieve sessie?">
+
+Wijzig het partnerschap niet terwijl een sessie actief is. Beëindig de sessie veilig, controleer of de fysieke Lockbox is ontgrendeld en wijzig vervolgens de relatie onder **Instellingen → Partners**. Neem contact op met de ondersteuning als de toegang tot of het eigendom van het account wordt betwist.
+
+  </Accordion>
+  <Accordion title="Wat is een testslot?">
+
+Een testslot is een oefensessie bedoeld om het instel- en vrijgavegedrag te verifiëren vóór een echt slot. Gebruik [Start Your First Lock](/lockbox/quick-start/start-a-lock).
+
+  </Accordion>
+</Accordions>
+
+## Stroom en connectiviteit
+
+<Accordions type="multiple">
+  <Accordion title="Hoe lang gaat de batterij mee?">
+
+De bestaande productnotities schatten dat de batterij bij normaal gebruik ongeveer 24 uur lang zonder stopcontact kan werken, maar de werkelijke looptijd is afhankelijk van het scherm, de radio, de motor, de toestand van de batterij en het gedrag van de firmware. Houd lange sessies op stabiel vermogen en controleer de batterijstatus voordat u vergrendelt.
+
+  </Accordion>
+  <Accordion title="Moet ik de Lockbox aangesloten laten?">
+
+Gebruik stabiel USB vermogen voor langere sessies als dat praktisch mogelijk is. Volgens de huidige documentatie gaat een aangesloten Lockbox niet in de diepe slaapstand, waardoor de externe connectiviteit behouden blijft.
+
+  </Accordion>
+  <Accordion title="Waarom tonen het apparaat en het dashboard verschillende online statussen?">
+
+De fysieke indicator is live; Het kan tot 60 seconden duren voordat het dashboard is bijgewerkt. Vergelijk ze met [Check Online Status](/lockbox/support/online-status).
+
+  </Accordion>
+  <Accordion title="Wat werkt zonder wifi?">
+
+Lokale timers, menu's en fysieke bedieningselementen blijven werken volgens de status die op het apparaat is opgeslagen. Voor opdrachten van de sleutelhouder op afstand, dashboardwijzigingen en openbare stemmen is connectiviteit vereist. Zie de [Offline Capability Matrix](/lockbox/technical/offline-mode).
+
+  </Accordion>
+</Accordions>
+
+## Kenmerken
+
+<Accordions type="multiple">
+  <Accordion title="Hoe werken geplande pauzes?">
+
+De sessie moet pauzes mogelijk maken. De Lockee start een pauze van het apparaat, haalt de sleutel op en geeft deze terug voordat hij de pauze beëindigt. Gezondheids- en noodtoegang hebben altijd voorrang op een achterstallige registratie. Zie [Take a Break](/lockbox/using/take-a-break).
+
+  </Accordion>
+  <Accordion title="Wat verbergt Resterende tijd verbergen?">
+
+Het verbergt aftelinformatie van het naar Lockee gerichte apparaat en dashboardweergaven die worden beschreven in de functiegids. Het mag geen veiligheids- of noodinstructies verbergen. Zie [Hide Remaining Time](/lockbox/using/hiding-time).
+
+  </Accordion>
+  <Accordion title="Wat is publiek stemmen?">
+
+Het creëert een deelbare pagina waar bezoekers geconfigureerde tijd kunnen toevoegen of verwijderen. Maak afspraken over de grenzen van het publiek en de duur voordat u deze deelt, en test hoe u deze kunt uitschakelen. Zie [Public Voting](/lockbox/using/public-voting).
+
+  </Accordion>
+  <Accordion title="Wat is Permalock?">
+
+Permalock verwijdert de vooraf ingestelde eindtijd en maakt gebruik van sleutelhoudergestuurde vrijgave. Het is een geavanceerde onlinemodus waarvoor voltooide testsloten en beoordeelde noodtoegang vereist zijn. Zie [Permalock](/lockbox/device-states/permalock).
+
+  </Accordion>
+</Accordions>
+
+## Noodtoegang
+
+<Accordions type="multiple">
+  <Accordion title="Mijn sleutelhouder is niet beschikbaar en ik heb de sleutel nodig. Wat moet ik doen?">
+
+Gebruik lokale [Software Emergency Unlock](/lockbox/device-states/emergency-unlock) indien beschikbaar. Als deze is uitgeschakeld of als het apparaat niet kan worden ontgrendeld, gebruik dan [Hardware Backplate Emergency Access](/lockbox/support/emergency-backplate). Wacht niet op ondersteuning als de toegang dringend is.
+
+  </Accordion>
+  <Accordion title="Kan hardware-noodtoegang worden uitgeschakeld?">
+
+Het huidige ontwerp maakt gebruik van een vervangbare achterplaat als destructieve fysieke terugval. Software kan dat fysieke pad niet uitschakelen. Controleer het vóór elke lange of op afstand beheerde sessie.
+
+  </Accordion>
+  <Accordion title="Wat gebeurt er na softwarematige noodontgrendeling?">
+
+De actieve sessie eindigt, de gebeurtenis kan worden gedeeld met verbonden partners en de huidige documentatie beschrijft een afkoelperiode van 24 uur voordat er weer een vergrendeling plaatsvindt. Zie [E-Lock 20](/lockbox/errors/e-lock-20). Veiligheid gaat vóór de cooldown of melding.
+
+  </Accordion>
+</Accordions>

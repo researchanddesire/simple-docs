@@ -1,0 +1,21 @@
+---
+title: "Référence d'état de rupture"
+description: "Référence au comportement du Lockbox lorsqu'une pause planifiée est active."
+---
+
+Cette page décrit l'état de l'appareil. Pour la procédure complète, utilisez [Take a Break](/lockbox/using/take-a-break).
+
+| État | Comportement attendu |
+| --------------- | ---------------------------------------------------------------------------- |
+| Pause disponible | La session active autorise une pause et le délai d'attente est écoulé |
+| Pause active | L'appareil se déverrouille et affiche le temps de pause restant |
+| Pause terminée | Rendre la clé et mettre fin à la pause reverrouille l'appareil et signale l'achèvement |
+| Pause en retard | L'appareil signale que la pause est en retard et le détenteur de clé peut recevoir une notification |
+
+Le modèle actif détermine si les pauses sont disponibles et leur timing. Testez le flux de travail pendant un court verrouillage avant de vous y fier lors d'une session plus longue.
+
+<Callout type="warn">
+
+Une minuterie de pause ou un enregistrement en retard ne doit jamais empêcher un accès urgent ou des soins nécessaires. Utilisez [Emergency Access](/lockbox/safety) chaque fois qu'une pause programmée est insuffisante.
+
+</Callout>

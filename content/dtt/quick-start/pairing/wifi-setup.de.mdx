@@ -1,0 +1,72 @@
+---
+title: „Verbinden Sie den Trainer mit Wi-Fi“
+description: „Konfigurieren Sie ein 2,4-GHz-Wi-Fi-Netzwerk über das Trainer-Setup-Portal und überprüfen Sie die Verbindung.“
+---
+
+Mit Wi-Fi kann der Trainer Einstellungen abrufen, Ergebnisse senden und nach Updates suchen. Diese Aufgabe ist unabhängig von der Kontokopplung.
+
+## Anforderungen
+
+- Ein 2,4-GHz-Netzwerk Wi-Fi und sein Passwort
+- Ein Telefon, Tablet oder Computer mit Wi-Fi
+- Der angetriebene Trainer während der Einrichtung in der Nähe des Routers
+
+<Callout type="warn">
+
+Das dokumentierte Trainer-Setup unterstützt 2,4 GHz Wi-Fi. Ein kombinierter Band-Router funktioniert möglicherweise, wenn er 2,4-GHz-Clients zulässt. Wenn die Einrichtung jedoch fehlschlägt, verwenden Sie ein separat benanntes 2,4-GHz- oder IoT-Netzwerk. Deaktivieren Sie die Netzwerksicherheit nicht, nur um das Gerät anzuschließen.
+
+</Callout>
+
+## Verbinden
+
+### 1. Rufen Sie den Setup-Modus auf
+
+Halten Sie auf dem Begrüßungsbildschirm die vordere Taste gedrückt, wenn das Display zum Starten der Einstellungsseite auffordert. Auf dem Gerät bedeutet „Einstellungsseite“ die Einrichtung von Wi-Fi, nicht die Vorlageneinstellungen.
+
+### 2. Treten Sie dem Trainer-Setup bei
+
+Treten Sie auf Ihrem Telefon oder Computer dem temporären Netzwerk namens **Trainer Setup** bei. Die Warnung „Kein Internet“ wird erwartet; Entscheiden Sie sich dafür, in Verbindung zu bleiben.
+
+### 3. Öffnen Sie das Portal
+
+Warten Sie auf das Gefangenenportal. Wenn es nicht geöffnet wird, navigieren Sie zu `http://192.168.4.1`, während Sie weiterhin mit **Trainer Setup** verbunden sind. Durch die vorübergehende Deaktivierung mobiler Daten kann verhindert werden, dass das Telefon das lokale Netzwerk umgeht.
+
+### 4. Wählen Sie das Netzwerk
+
+Wählen Sie **Configure Wi-Fi**, wählen Sie das gewünschte 2,4-GHz-Netzwerk aus, geben Sie das Passwort ein und speichern Sie es.
+
+### 5. Überprüfen
+
+Der Trainer sollte eine Verbindung herstellen und neu starten. Lassen Sie den Startvorgang abschließen.
+
+<Callout type="success" title="Erfolg">
+
+Der Trainer verlässt das Setup-Netzwerk, startet neu und schließt seine Online-Prüfung ohne E-DTT-1 ab.
+
+</Callout>
+
+## Wenn die Einrichtung fehlschlägt
+
+| Symptom | Versuchen Sie |
+| -------------------------------------- | ----------------------------------------------------------------- |
+| Portal öffnet sich nicht | Bleiben Sie im Trainer-Setup, öffnen Sie `192.168.4.1`, deaktivieren Sie mobile Daten oder versuchen Sie es mit einem anderen Client-Gerät |
+| Heimnetzwerk erscheint nicht | Bestätigen Sie, dass es 2,4 GHz sendet, und gehen Sie näher an den Router heran |
+| Neustart kehrt in den Offline-Zustand zurück | Wiederholen Sie die Einrichtung und geben Sie das Passwort erneut sorgfältig ein |
+| verbunden mit Wi-Fi, aber E-DTT-1 erscheint | Folgen Sie [E-DTT-1 troubleshooting](/dtt/errors/e-dtt-1) |
+| Unternehmens-, Hotel- oder gefiltertes Netzwerk | Testen Sie einen einfachen Telefon-Hotspot. Netzwerke, die eine Browser-Anmeldung erfordern, funktionieren möglicherweise nicht |
+
+## Video-Komplettlösung
+
+<iframe
+  src="https://www.loom.com/embed/c1e2179b7102479b89546e2366d4a7d8"
+  title="Verbinden Sie einen Deep Throat Trainer mit WLAN"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+<Callout type="info" title="Videotranskript">
+
+Halten Sie auf dem Begrüßungsbildschirm die vordere Taste gedrückt, um das **Trainer-Setup** zu erstellen. Treten Sie diesem temporären Netzwerk bei, bleiben Sie trotz der erwarteten No-Internet-Warnung verbunden, öffnen Sie das Konfigurationsportal, wählen Sie ein 2,4-GHz-Netzwerk, geben Sie das Passwort ein und speichern Sie. Bei Erfolg stellt der Trainer eine Verbindung her und startet neu.
+
+</Callout>

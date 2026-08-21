@@ -1,0 +1,113 @@
+---
+title: "Lockbox Slaap- en energiestatus"
+description: "Vergelijk Lockbox gedrag, connectiviteit en ontwaakacties bij inactiviteit, pseudo-slaap en diepe slaap."
+---
+
+## Overzicht
+
+<Callout type="info">
+
+De onderstaande tijden beschrijven het momenteel gedocumenteerde gedrag. Firmware kan de timing van het energiebeheer wijzigen. Als uw apparaat zich anders gedraagt, gebruik dan de scherm- en connectiviteitsindicatoren als bron van waarheid en neem contact op met de ondersteuning met de weergegeven firmwareversie.
+
+</Callout>
+
+Uw Chastity Lockbox bevat meerdere energiebesparende statussen om de levensduur van de batterij te helpen behouden en tegelijkertijd de functionaliteit te behouden die u nodig heeft.
+
+| Staat | Time-out | Scherm | Wi-Fi | Beste voor |
+| ------------ | ---------- | ------------ | ------------ | ---------------------- |
+| Inactief | 30 seconden | Gedimd (10%) | Verbonden | Korte pauzes |
+| Pseudo-slaap | 2 minuten | Uit | Verbonden | Dagelijks gebruik |
+| Diepe slaap | 10 minuten | Uit | Verbinding verbroken | Uitgebreide batterijbesparing |
+
+## Automatisch energiebeheer
+
+Uw apparaat doorloopt automatisch de energiestatus op basis van inactiviteit:
+
+1. **Actief** — Volledige helderheid, alle functies ingeschakeld
+2. **Inactief (30 seconden)** — Het scherm wordt gedimd tot een helderheid van ongeveer 10%
+3. **Pseudo-slaap (2 minuten)** — Scherm wordt uitgeschakeld, Wi-Fi blijft verbonden
+4. **Diepe slaap (10 minuten)** — Wi-Fi verbreekt de verbinding, minimaal stroomverbruik
+
+<Callout type="idea">
+
+Bij elke druk op de knop of draai aan de encoder wordt de timer gereset en keert het apparaat terug naar de actieve modus. De eerste interactie maakt het apparaat wakker; Mogelijk moet u nogmaals op drukken om de beoogde actie uit te voeren.
+
+</Callout>
+## Automatische slaap (inactief en pseudo-slaap)
+
+De automatische slaap wordt vanzelf geactiveerd tijdens korte perioden van inactiviteit. U hoeft niets te doen: het apparaat gaat op intelligente wijze om met energiebeheer.
+
+**Wat er gebeurt tijdens de automatische slaapstand:**
+
+- Het scherm wordt na 30 seconden gedimd en na 2 minuten uitgeschakeld
+- Wi-Fi blijft verbonden voor communicatie met de sleutelhouder
+- Vergrendeltimers blijven normaal lopen
+- Het apparaat wordt onmiddellijk wakker wanneer u ermee communiceert
+
+<Callout type="info">
+
+Wanneer het apparaat is aangesloten op de USB-voeding (opladen), gaat het niet in de diepe slaapstand. Het blijft hoogstens in pseudo-slaapstand, zodat uw sleutelhouder altijd opdrachten kan verzenden.
+
+</Callout>
+## Diepe slaap
+
+Diepe slaap zorgt voor maximale energiebesparing. Het wordt automatisch geactiveerd na 10 minuten inactiviteit (wanneer niet wordt opgeladen), of u kunt het handmatig activeren via het menu.
+
+**Wat er gebeurt in diepe slaap:**
+
+- Scherm, Wi-Fi, Bluetooth en de meeste sensoren worden uitgeschakeld
+- De vergrendelde of ontgrendelde status blijft ongewijzigd
+- Communicatie op afstand met sleutelhouders is uitgeschakeld
+- Het apparaat gebruikt minimaal stroom
+
+### Handmatige diepe slaap
+
+### Stap 1: Ga in diepe slaap
+
+Navigeer naar het menu, selecteer **Slaap** en druk vervolgens op Enter om te bevestigen.
+
+### Stap 2: Maak het apparaat wakker
+
+Druk op de Enter-knop (of de Back-knop, afhankelijk van de hardware) om de diepe slaap te verlaten en de volledige functionaliteit te herstellen.
+
+<Callout type="success">
+
+Het apparaat zal automatisch opstarten en opnieuw verbinding maken met Wi-Fi.
+
+</Callout>
+<Callout type="warn">
+
+Tijdens de diepe slaap kan de Lockbox geen opdrachten voor de sleutelhouder op afstand ontvangen. Controleer of de Lockee lokale en noodtoegang heeft voordat u deze tijdens een sessie gebruikt.
+
+</Callout>
+### Automatisch wekken voor timers
+
+Als u een actieve, getimede vergrendeling heeft, berekent uw apparaat een optimale wektijd om ervoor te zorgen dat het wakker is voordat de vergrendeling verloopt. U hoeft zich geen zorgen te maken dat u uw ontgrendeling mist.
+
+## Wanneer gebruik je handmatige diepe slaap?
+
+Handmatige diepe slaap is geschikt voor specifieke situaties waarin energiebesparing voorrang heeft op connectiviteit:
+
+- **Lange ritten** waarbij je misschien halverwege moet ontgrendelen, maar geen oplaadtoegang hebt
+- **Langere tijd zonder stroom**, zoals kamperen of reizen
+- **Opslag** wanneer u het apparaat meerdere dagen niet gebruikt
+
+<Callout type="info">
+
+Bij regelmatig dagelijks gebruik zorgt de automatische slaapfunctie voor een effectieve verwerking van het energiebeheer. De meeste gebruikers hoeven de diepe slaap nooit handmatig te activeren.
+
+</Callout>
+## Beste praktijken
+<Callout type="info" title="Maximaliseer de levensduur van de batterij">
+
+- Houd het apparaat aangesloten als u thuis bent
+- Automatische slaap zorgt voor een effectieve verwerking van het dagelijkse energiebeheer
+- Reserveer handmatige diepe slaap voor situaties waarin u echt een langere levensduur van de batterij nodig heeft
+
+</Callout>
+<Callout type="info" title="Blijf verbonden met uw sleutelhouder">
+- Vermijd handmatige diepe slaap als uw sleutelhouder mogelijk opdrachten moet verzenden
+- Communiceer met uw sleutelhouder voordat u de handmatige diepe slaap ingaat
+- Houd er rekening mee dat de automatische slaap (inclusief pseudo-slaap) volledige connectiviteit handhaaft
+
+</Callout>

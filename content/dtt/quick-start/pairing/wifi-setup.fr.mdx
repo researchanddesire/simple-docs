@@ -1,0 +1,72 @@
+---
+title: "Connectez le formateur à Wi-Fi"
+description: "Configurez un réseau Wi-Fi 2,4 GHz via le portail de configuration du formateur et vérifiez la connexion."
+---
+
+Wi-Fi permet au formateur de récupérer les paramètres, d'envoyer les résultats et de vérifier les mises à jour. Cette tâche est distincte du couplage de comptes.
+
+## Exigences
+
+- Un réseau Wi-Fi 2,4 GHz et son mot de passe
+- Un téléphone, une tablette ou un ordinateur avec Wi-Fi
+- Le Trainer motorisé à proximité du routeur pendant l'installation
+
+<Callout type="warn">
+
+La configuration documentée du Trainer prend en charge 2,4 GHz Wi-Fi. Un routeur à bande combinée peut fonctionner lorsqu'il autorise les clients 2,4 GHz, mais si la configuration échoue, utilisez un réseau 2,4 GHz ou IoT nommé séparément. Ne désactivez pas la sécurité du réseau simplement pour connecter l'appareil.
+
+</Callout>
+
+## Se connecter
+
+### 1. Entrez en mode configuration
+
+Depuis l'écran d'accueil, maintenez le bouton avant lorsque l'écran propose de lancer la page des paramètres. Sur l'appareil, « page de paramètres » signifie la configuration Wi-Fi, et non les paramètres du modèle.
+
+### 2. Rejoignez la configuration du formateur
+
+Sur votre téléphone ou votre ordinateur, rejoignez le réseau temporaire nommé **Trainer Setup**. Son avertissement « pas d'Internet » est attendu ; choisissez de rester connecté.
+
+### 3. Ouvrez le portail
+
+Attendez le portail captif. S'il ne s'ouvre pas, accédez à `http://192.168.4.1` tout en étant toujours connecté à **Trainer Setup**. La désactivation temporaire des données mobiles peut empêcher le téléphone de contourner le réseau local.
+
+### 4. Choisissez le réseau
+
+Sélectionnez **Configurer Wi-Fi**, choisissez le réseau 2,4 GHz prévu, saisissez son mot de passe et enregistrez.
+
+### 5. Vérifiez
+
+Le formateur doit se connecter et redémarrer. Laissez le démarrage se terminer.
+
+<Callout type="success" title="Succès">
+
+Le Trainer quitte le réseau de configuration, redémarre et termine sa vérification en ligne sans E-DTT-1.
+
+</Callout>
+
+## Si l'installation échoue
+
+| Symptôme | Essayez |
+| -------------------------------------- | ------------------------------------------------------------------------------------------------------------- |
+| le portail ne s'ouvre pas | restez sur la configuration du formateur, ouvrez `192.168.4.1`, désactivez les données mobiles ou essayez un autre appareil client |
+| réseau domestique n'apparaît pas | confirmez qu'il diffuse 2,4 GHz et rapprochez-vous du routeur |
+| le redémarrage revient en mode hors ligne | répétez la configuration et ressaisissez soigneusement le mot de passe |
+| connecté à Wi-Fi mais E-DTT-1 apparaît | suivre [E-DTT-1 troubleshooting](/dtt/errors/e-dtt-1) |
+| réseau d'entreprise, d'hôtel ou filtré | tester un simple hotspot téléphonique ; les réseaux nécessitant une connexion par navigateur peuvent ne pas fonctionner |
+
+## Présentation vidéo
+
+<iframe
+  src="https://www.loom.com/embed/c1e2179b7102479b89546e2366d4a7d8"
+  title="Connectez un Deep Throat Trainer au Wi-Fi"
+  frameBorder="0"
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+  allowFullScreen
+></iframe>
+
+<Callout type="info" title="Transcription vidéo">
+
+Maintenez le bouton situé à l'avant de l'écran d'accueil pour créer une **Configuration du formateur**. Rejoignez ce réseau temporaire, restez connecté malgré l'avertissement attendu d'absence d'Internet, ouvrez son portail de configuration, choisissez un réseau 2,4 GHz, entrez le mot de passe et enregistrez. En cas de succès, le formateur se connecte et redémarre.
+
+</Callout>

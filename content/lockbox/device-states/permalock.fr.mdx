@@ -1,0 +1,47 @@
+---
+title: "Permalock (Verrouillage éternel)"
+description: "Comprendre les responsabilités de Permalock, les vérifications avant vol, les chemins de libération et l'accès d'urgence."
+---
+
+Permalock, également appelé **Lock Forever**, supprime une heure de fin prédéfinie et laisse la libération normale sous le contrôle du détenteur de clé. Il s'agit d'un mode de session en ligne avancé.
+
+<Callout type="warn">
+
+N'utilisez pas Permalock pour une première séance. Effectuez d’abord de courtes sessions de test d’auto-verrouillage et de contrôle par le porte-clés.
+
+</Callout>
+
+## Contrôle en amont requis
+
+- Le Lockee et le Keyholder ont un consentement actuel et spécifique pour cette session.
+- Les deux personnes ont complété le [Keyholder Guide](/lockbox/quick-start/keyholder-guide).
+- L'appareil est couplé, en ligne, chargé et a réussi un court test de verrouillage.
+- Les deux personnes ont confirmé les chemins de publication normaux, d'urgence logicielle et matérielle.
+- Le Lockee peut physiquement atteindre le Lockbox et les commandes d'urgence.
+- Il existe un signal urgent convenu et un deuxième canal de communication.
+- Les deux personnes se sont mises d'accord sur les contrôles de santé et sur la fin de la séance sans débat.
+
+## Comment fonctionne la version
+
+| Chemin de sortie | Disponibilité |
+| -------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| Déverrouillage du détenteur de clé | Chemin de libération normal pendant que le détenteur de clé et l'appareil peuvent communiquer |
+| Abandon du tableau de bord du détenteur de clé | Disponible uniquement là où le tableau de bord actuel le propose ; pas un chemin de déverrouillage automatique |
+| [Software Emergency Unlock](/lockbox/device-states/emergency-unlock) | Chemin de sécurité local lorsqu'il est activé pour la session |
+| [Hardware backplate access](/lockbox/support/emergency-backplate) | Dernier recours destructeur si l'accès au logiciel n'est pas disponible |
+
+Les actions à distance nécessitent une connectivité. Un détenteur de clé ne doit pas supposer qu'une commande de tableau de bord a atteint un Lockbox hors ligne ou en veille ; le Lockee doit confirmer l'état physique.
+
+## Pendant la séance
+
+Maintenir une communication régulière et des contrôles de santé. Terminez la séance en cas de douleur, d'engourdissement, de modifications de la circulation, d'enflure, de lésion cutanée, de panique, de difficultés respiratoires ou de tout autre symptôme préoccupant. Cette documentation ne peut pas déterminer si un symptôme est sans danger.
+
+<Callout type="warn">
+
+Si le déverrouillage d'urgence du logiciel est désactivé, l'accès à la plaque arrière matérielle peut être la seule solution de secours locale. Examinez cette conséquence avant la séance, pas en cas d'urgence.
+
+</Callout>
+
+## Si quelque chose diffère de ce guide
+
+Les options du tableau de bord et le comportement du micrologiciel peuvent changer. Si un contrôle de libération, un état de connectivité ou une option d'urgence ne correspond pas exactement à celui attendu, ne démarrez pas la session Permalock. Contactez [support@researchanddesire.com](mailto:support@researchanddesire.com).

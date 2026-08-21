@@ -1,0 +1,77 @@
+---
+title: „Lockbox Öffentliche Abstimmung“
+description: „Aktivieren, teilen, überwachen, begrenzen und deaktivieren Sie Lockbox öffentliche Abstimmungen mit klaren Datenschutz- und Rollengrenzen.“
+---
+
+Bei der öffentlichen Abstimmung wird ein gemeinsam nutzbarer Link erstellt, über den Besucher gemäß den für diese Sitzung konfigurierten Werten Zeit zu einer aktiven Sperre hinzufügen oder daraus entfernen können.
+
+<Callout type="warn">
+
+Alle Betroffenen sollten sich vor der Weitergabe des Links über die Zielgruppe, die Abstimmungseffekte, die Mindest- und Höchstdauer sowie den Abschaltplan einigen. Bei der öffentlichen Abstimmung darf der Zugang zu Pausen oder die Notfreigabe nicht aufgehoben werden.
+
+</Callout>
+
+## Rollen und Sichtbarkeit
+
+| Rolle | Was zu überprüfen ist |
+| ----------- | ------------------------------------------------------------------------------------ |
+| Lockee | Zustimmungen zum Publikum und konfigurierte Effekte; behält Sicherheit und Notfallzugang |
+| Schlüsselhalter | Hat die Berechtigung, diese Sitzung zu ändern und weiß, wie man die Abstimmung deaktiviert oder beendet |
+| Selbstschließfach | Konfiguriert und testet die Grenzwerte vor dem Start der aktiven Sitzung |
+| Wähler | Erhält nur die öffentliche Abstimmungsansicht; Die angemeldete Identität kann in der Aktivität | angezeigt werden
+
+Auf der öffentlichen Seite werden Sitzungsdetails angezeigt, die für die Abstimmung erforderlich sind. Es darf keine Kontoanmeldeinformationen preisgeben, aber durch die Weitergabe des Links wird die Abstimmungsansicht absichtlich für jeden verfügbar gemacht, der sie empfängt oder weiterleitet.
+
+## Aktivieren und konfigurieren
+
+1. Bearbeiten Sie im Dashboard eine Lockbox-Vorlage oder öffnen Sie **Einstellungen ändern** für eine berechtigte aktive oder Testsitzung.
+
+![Lockbox template editor where session features are configured](../quick-start/images/creating-and-editing-a-lock-annotated.webp)
+
+2. Aktivieren Sie **Öffentliche Abstimmung**.
+3. Öffnen Sie die Einstellungen und konfigurieren Sie:
+   - **Time Plus**: Sekunden, die durch eine Erhöhungsabstimmung hinzugefügt wurden;
+   - **Time Minus**: Sekunden, die durch eine Verringerungsabstimmung entfernt wurden;
+   - **Maximale Sperrdauer**: optionale Obergrenze; und
+   - **Mindestsperrdauer**: optionale untere Grenze.
+
+4. Überprüfen Sie die endgültigen Werte vor dem Speichern mit dem Lockee und dem Schlüsselhalter.
+
+<Callout type="warn">
+
+Ohne eine obere oder untere Grenze heißt es in der aktuellen Dokumentation, dass Abstimmungen die Dauer weiterhin in diese Richtung ändern können. Veröffentlichen Sie den Link erst, wenn die konfigurierten Effekte und Grenzen akzeptabel sind.
+
+</Callout>
+
+## Teilen Sie den Link
+
+1. Öffnen Sie die aktive Lockbox-Sitzung im Dashboard.
+2. Suchen Sie nach dem Abzeichen „Öffentliche Abstimmung“ oder teilen Sie die Aktion.
+3. Kopieren Sie den Link.
+4. Öffnen Sie es vor dem Teilen in einem privaten /incognito-Fenster.
+5. Bestätigen Sie, dass die öffentliche Ansicht nur Informationen enthält, die Sie veröffentlichen möchten.
+
+Behandeln Sie URL als öffentlich. Teilen Sie es nur in Communities, die der vereinbarten Zielgruppe entsprechen, und gehen Sie davon aus, dass es weitergeleitet werden kann.
+
+## Aktivität überwachen
+
+Auf der Seite Lockbox können Zähler zum Erhöhen und Verringern der Stimmen angezeigt werden. Der Sitzungsaktivitätsverlauf zeichnet die Abstimmungsrichtung, den Zeitstempel und entweder einen angemeldeten Benutzernamen oder **Anonym** auf.
+
+Die aktuelle Dokumentation beschreibt ein Abstimmungslimit pro Sitzung von einer Stimme alle 24 Stunden, verfolgt nach Konto und IP-Adresse. Da sich Missbrauchskontrollen ändern können, sollten Sie sich auf die Live-Schnittstelle verlassen, anstatt diese als garantierte Ratenbegrenzung zu verwenden.
+
+Überprüfen Sie regelmäßig den physischen Zustand von Lockbox. Stimmen gelten für die Sitzung, aber das Dashboard kann einem Offline-Gerät voraus sein.
+
+## Abstimmung deaktivieren und Link widerrufen
+
+1. Öffnen Sie die aktiven Sitzungseinstellungen.
+2. Deaktivieren Sie **Öffentliche Abstimmung** und speichern Sie.
+3. Bestätigen Sie, dass die Aktion „badge/share“ verschwindet.
+4. Öffnen Sie den alten Link in einem privaten Fenster und bestätigen Sie, dass er keine Stimmen mehr akzeptiert.
+
+Vergangene Abstimmungsereignisse bleiben im Aktivitätsverlauf erhalten. Durch die Deaktivierung der Abstimmung können bereits geteilte Informationen oder Kopien des URL nicht zurückgezogen werden.
+
+## Sicherheit und Erholung
+
+- Wenn Abstimmungen zu einer unsicheren oder unerwünschten Situation führen, deaktivieren Sie die Abstimmung und beenden Sie die Sitzung.
+- Wenn das Armaturenbrett den Lockbox nicht erreichen kann, verwenden Sie die Ortssteuerung und [Emergency Access](/lockbox/safety).
+- Wenn die öffentliche Seite unerwartete Informationen preisgibt oder nach der Deaktivierung weiterhin Stimmen akzeptiert, beenden Sie die Freigabe und wenden Sie sich an [support@researchanddesire.com](mailto:support@researchanddesire.com).

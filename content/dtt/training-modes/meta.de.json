@@ -1,0 +1,11 @@
+{
+  "title": "Trainingsmodi",
+  "description": "Vergleichen und verwenden Sie jeden Segmenttyp",
+  "pages": [
+    "index",
+    "bounce",
+    "endurance",
+    "freeform",
+    "repetition"
+  ]
+}

@@ -1,0 +1,37 @@
+---
+title: „Fehlercodes und Meldungen“
+description: „Kanonische Deep Throat Trainer-Fehlersuche mit Schweregrad, erster Aktion, Wiederherstellung und Supportgrenzen.“
+---
+
+Dies ist das kanonische Fehlerzentrum. Notieren Sie den genauen Text, bevor Sie das Gerät neu starten.
+
+| Nachricht | Bedeutung | Erste Aktion | Ausführliche Hilfe |
+| ------------------------------------------------ | ----------------------------------------------------------------------------------- | ---------------------------------------------------------------- | ----------------------------------------------------- |
+| E-DTT-1: kein Internet / Firewall und Router prüfen | Wi-Fi ist möglicherweise beigetreten, aber die Online-Integritätsprüfung ist fehlgeschlagen | Testen Sie die grundlegende Netzwerkerreichbarkeit | [E-DTT-1](/dtt/errors/e-dtt-1) |
+| Start- und Endort zu nah beieinander | Kalibrierwerte entsprechen nicht der gespeicherten Bereichslücke | Wiederholen Sie beide Positionen, ohne den Komfort zu überschreiten | [Calibration](/dtt/technical/calibration) |
+| Fehler beim Senden der Ergebnisse | Eine Abschluss- oder Kalibrierungsanforderung ist nicht beim Server angekommen oder wurde von diesem nicht akzeptiert | Verbinden Sie das Dashboard erneut und überprüfen Sie es. Gehen Sie nicht von einer späteren Synchronisierung aus | [Offline mode](/dtt/technical/offline-mode) |
+| Geschwindigkeit zu hoch / zu niedrig | gemessenes Tempo liegt außerhalb des Segmentziels | Nur innerhalb komfortabler Kontrolle anpassen | [Training modes](/dtt/training-modes) |
+| FEHLER beim Laden einer Sitzung | Sitzungsdaten konnten nicht verwendet werden | Aus- und wieder einschalten, aktive Vorlage und Spielzeug bestätigen, erneut online abrufen | [Templates](/dtt/quick-start/templates) |
+| fehlgeschlagen / Anzahl der Versuche | Die Note liegt unter der Bestehensschwelle einer Vorlage | anhalten oder erneut versuchen; niedrigere ungeeignete Einstellungen in der Vorlage | [Training and results](/dtt/faqs/training-and-results) |
+
+## Ablehnung der Kalibrierung
+
+Die aktuelle v2-Servervalidierung speichert die Kalibrierung nur, wenn die Werte innerhalb der Grenzen von 1,5–21,5 cm bleiben und einen Abstand von mindestens 2 cm aufweisen. Bei diesen Zahlen handelt es sich um API-Validierungsgrenzen, nicht um Sicherheitsziele.
+
+## Geschwindigkeitsnachrichten
+
+Während eines Segments sind Geschwindigkeitsmeldungen Rückmeldungen zur Vorlage. Beschleunigen oder vertiefen Sie niemals die Bewegung, nur um eine Botschaft zu verdeutlichen, wenn dies unangenehm ist. Stoppen Sie stattdessen und bearbeiten Sie die Vorlage.
+
+Wenn ein Geschwindigkeitsfehler auftritt, bevor die Bewegung beginnt, oder eine sich wiederholende Bildschirmschleife verursacht, notieren Sie die Firmware-Version (falls angezeigt), stellen Sie eine Online-Verbindung für den unterstützten Update-Pfad her, starten Sie einmal neu und wenden Sie sich an den Support, wenn der Fehler erneut auftritt. In diesem Handbuch wird nicht behauptet, dass eine bestimmte Firmware-Version die Schleife behebt, da der Firmware-Verlauf hier nicht verfügbar ist.
+
+## Fehlversuche
+
+Das Dashboard v2 API akzeptiert ein `passed`-Ergebnis und enthält eine Three-Strike-Verarbeitung. Der genaue Gerätewortlaut und die Änderungen einer vom Partner konfigurierten Vorlage sind versionabhängig. Eine Wiederholungsaufforderung ist keine Anweisung, fortzufahren, wenn Sie anhalten müssen.
+
+## Nicht aufgeführter oder wiederkehrender Fehler
+
+1. Beenden Sie die physische Sitzung und gehen Sie weg.
+2. Fotografieren oder kopieren Sie die genaue Nachricht.
+3. Notieren Sie sich den Trainer ID, das ausgewählte Spielzeug, den Modus, das Netzwerk und die vorhergehende Aktion.
+4. Schalten Sie das Gerät erst aus und wieder ein, wenn Sie sicher frei sind.
+5. Senden Sie eine E-Mail an [support@researchanddesire.com](mailto:support@researchanddesire.com), wenn es sich wiederholt.

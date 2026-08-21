@@ -1,0 +1,113 @@
+---
+title: „Lockbox Schlaf- und Energiezustände“
+description: „Vergleichen Sie Lockbox Leerlauf-, Pseudo-Schlaf- und Tiefschlafverhalten, Konnektivität und Weckaktionen.“
+---
+
+## Übersicht
+
+<Callout type="info">
+
+Die folgenden Zeitangaben beschreiben das aktuell dokumentierte Verhalten. Firmware kann das Timing der Energieverwaltung ändern. Wenn sich Ihr Gerät anders verhält, verwenden Sie die Bildschirm- und Konnektivitätsanzeigen als Quelle der Wahrheit und wenden Sie sich mit der angezeigten Firmware-Version an den Support.
+
+</Callout>
+
+Ihr Chastity Lockbox verfügt über mehrere Energiesparzustände, um die Batterielebensdauer zu verlängern und gleichzeitig die von Ihnen benötigte Funktionalität beizubehalten.
+
+| Staat | Zeitüberschreitung | Bildschirm | Wi-Fi | Am besten für |
+| ------------ | ---------- | ------------ | ------------ | --------- |
+| Leerlauf | 30 Sekunden | Gedimmt (10 %) | Verbunden | Kurze Pausen |
+| Pseudo-Schlaf | 2 Minuten | Aus | Verbunden | Täglicher Gebrauch |
+| Tiefschlaf | 10 Minuten | Aus | Getrennt | Erweiterte Batterieschonung |
+
+## Automatische Energieverwaltung
+
+Ihr Gerät durchläuft basierend auf Inaktivität automatisch die Energiezustände:
+
+1. **Aktiv** – Volle Helligkeit, alle Funktionen aktiviert
+2. **Leerlauf (30 Sekunden)** – Der Bildschirm wird auf ca. 10 % Helligkeit gedimmt
+3. **Pseudo-Ruhezustand (2 Minuten)** – Der Bildschirm schaltet sich aus, Wi-Fi bleibt verbunden
+4. **Tiefschlaf (10 Minuten)** – Wi-Fi trennt die Verbindung, minimaler Stromverbrauch
+
+<Callout type="idea">
+
+Jeder Tastendruck oder jede Encoderdrehung setzt den Timer zurück und bringt das Gerät in den aktiven Modus zurück. Die erste Interaktion weckt das Gerät; Möglicherweise müssen Sie erneut drücken, um die beabsichtigte Aktion auszuführen.
+
+</Callout>
+## Automatischer Schlaf (Leerlauf und Pseudo-Schlaf)
+
+Der automatische Schlafmodus wird bei kurzen Inaktivitätsphasen automatisch aktiviert. Sie müssen nichts tun – das Gerät verwaltet die Energieverwaltung intelligent.
+
+**Was passiert im automatischen Ruhezustand:**
+
+- Der Bildschirm wird nach 30 Sekunden abgedunkelt und nach 2 Minuten ausgeschaltet
+- Wi-Fi bleibt für die Schlüsselhalterkommunikation verbunden
+- Schloss-Timer laufen normal weiter
+- Das Gerät wird sofort aktiviert, wenn Sie damit interagieren
+
+<Callout type="info">
+
+Wenn das Gerät an die Stromversorgung des USB angeschlossen ist (Ladevorgang), wechselt es nicht in den Tiefschlaf. Es bleibt höchstens im Pseudo-Schlafmodus, um sicherzustellen, dass Ihr Schlüsselhalter jederzeit Befehle senden kann.
+
+</Callout>
+## Tiefer Schlaf
+
+Tiefschlaf sorgt für maximale Energieeinsparungen. Die Aktivierung erfolgt automatisch nach 10 Minuten Inaktivität (wenn nicht aufgeladen wird) oder Sie können sie manuell über das Menü aktivieren.
+
+**Was passiert im Tiefschlaf:**
+
+- Bildschirm, Wi-Fi, Bluetooth und die meisten Sensoren schalten sich aus
+- Der gesperrte bzw. entsperrte Zustand bleibt unverändert
+- Die Fernkommunikation mit Schlüsselinhabern ist deaktiviert
+- Das Gerät verbraucht nur minimal Strom
+
+### Manueller Tiefschlaf
+
+### Schritt 1: Begib dich in den Tiefschlaf
+
+Navigieren Sie zum Menü, wählen Sie **Schlafmodus** und drücken Sie dann zur Bestätigung die Eingabetaste.
+
+### Schritt 2: Wecken Sie das Gerät auf
+
+Drücken Sie die Eingabetaste (oder die Zurück-Taste, je nach Hardware), um den Tiefschlaf zu beenden und die volle Funktionalität wiederherzustellen.
+
+<Callout type="success">
+
+Das Gerät fährt hoch und verbindet sich automatisch wieder mit Wi-Fi.
+
+</Callout>
+<Callout type="warn">
+
+Im Tiefschlaf kann der Lockbox keine Remote-Keyholder-Befehle empfangen. Stellen Sie sicher, dass der Lockee über lokalen Zugriff und Notfallzugriff verfügt, bevor Sie ihn während einer Sitzung verwenden.
+
+</Callout>
+### Automatische Weckfunktion für Timer
+
+Wenn Sie eine aktive zeitgesteuerte Sperre haben, berechnet Ihr Gerät eine optimale Weckzeit, um sicherzustellen, dass es wach ist, bevor die Sperre abläuft. Sie müssen sich keine Sorgen machen, dass Sie Ihre Freischaltung verpassen.
+
+## Wann man den manuellen Tiefschlaf verwenden sollte
+
+Der manuelle Tiefschlaf eignet sich für bestimmte Situationen, in denen Energieeinsparung Vorrang vor Konnektivität hat:
+
+- **Lange Fahrten**, bei denen Sie möglicherweise auf halbem Weg entsperren müssen, aber keinen Zugang zum Laden haben
+- **Längere Zeit ohne Strom**, z. B. beim Camping oder auf Reisen
+- **Speicherung**, wenn das Gerät mehrere Tage lang nicht verwendet wird
+
+<Callout type="info">
+
+Bei regelmäßiger täglicher Nutzung sorgt die automatische Schlaffunktion für eine effektive Energieverwaltung. Die meisten Benutzer müssen den Tiefschlaf nie manuell aktivieren.
+
+</Callout>
+## Best Practices
+<Callout type="info" title="Maximieren Sie die Akkulaufzeit">
+
+- Lassen Sie das Gerät angeschlossen, wenn Sie zu Hause sind
+- Der automatische Ruhezustand übernimmt die tägliche Energieverwaltung effektiv
+- Reservieren Sie den manuellen Tiefschlaf für Situationen, in denen Sie wirklich eine längere Akkulaufzeit benötigen
+
+</Callout>
+<Callout type="info" title="Bleiben Sie mit Ihrem Schlüsselhalter in Verbindung">
+- Vermeiden Sie den manuellen Tiefschlaf, wenn Ihr Schlüsselhalter möglicherweise Befehle senden muss
+- Kommunizieren Sie mit Ihrem Schlüsselhalter, bevor Sie in den manuellen Tiefschlaf wechseln
+- Denken Sie daran, dass der automatische Ruhezustand (einschließlich Pseudo-Ruhezustand) die vollständige Konnektivität aufrechterhält
+
+</Callout>

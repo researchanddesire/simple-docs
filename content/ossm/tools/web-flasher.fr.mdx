@@ -1,0 +1,18 @@
+---
+title: "OSSM Flasheur Web"
+description: "Installez le micrologiciel stable actuel OSSM sur USB ou récupérez une carte de contrôle que le support vous a demandé de reflasher."
+---
+
+importer { DeviceFlasher } depuis "@repo/device-tools/device-flasher";
+
+Utilisez cet outil pour installer ou récupérer le micrologiciel OSSM directement à partir d'un navigateur de bureau sur USB.
+
+<Callout type="warn" title="Flash uniquement lorsque le support vous le demande">
+
+Utilisez Chrome ou Edge, un câble USB compatible données et une alimentation stable. Arrêtez le OSSM et débranchez l'alimentation de son moteur avant de connecter le USB.
+
+</Callout>
+
+Le clignotement remplace le micrologiciel installé et peut nécessiter la saisie à nouveau de Wi-Fi ou des paramètres de l'appareil. Lisez [Flash or recover OSSM firmware](/ossm/tools) pour la préparation, les contrôles de réussite et la récupération après échec avant de continuer.
+
+<DeviceFlasher device="ossm" />

@@ -1,0 +1,51 @@
+---
+title: "Kies en test een OSSM-controller"
+description: "Verbind een bekabelde afstandsbediening, een draadloze RADR-afstandsbediening of een webcontroller en verifieer de Stop-actie vóór gebruik."
+---
+
+Alle controllers passen de beweging aan, maar hun verbindings- en stopacties verschillen. Begin met snelheid en diepte op nul.
+
+| Verantwoordelijke | Beste wanneer | Verbinding | Stop actie |
+| ------------------- | ----------------------------------- | ---------------------- | ---------------------------- |
+| Bedrade afstandsbediening | U wilt een directe fysieke verbinding | Ethernet-kabel naar OSSM | Houd de rechterknop | ingedrukt
+| RADR draadloze afstandsbediening | U wilt een speciale draadloze bediening | Bluetooth | Druk op de middelste knop |
+| Webcontroller | Je hebt een ondersteunde desktopbrowser | Web Bluetooth | Gebruik de stopknop op het scherm |
+
+## Bedrade afstandsbediening
+
+1. Terwijl OSSM is uitgeschakeld, sluit u de afstandsbediening aan via een Ethernet-kabel.
+2. Zet beide knoppen op nul en schakel OSSM in.
+3. Wacht op het externe menu.
+4. Selecteer een bewegingsmodus met minimale instellingen en houd vervolgens de rechterknop ingedrukt om te bevestigen dat Stop terugkeert naar het hoofdmenu.
+
+![Wired remote with the left speed knob and right depth/menu knob identified](./images/wired-remote-annotated.webp)
+
+## RADR draadloze afstandsbediening
+
+1. Schakel in en start OSSM.
+2. Schakel RADR in en selecteer de gedetecteerde OSSM met de rechterknop.
+3. Bevestig de naam van het aangesloten apparaat voordat u een bewegingswaarde wijzigt.
+4. Druk bij de minimuminstelling op de middelste knop en bevestig de bewegingsstops.
+
+![RADR remote physical controls identified](./images/wireless-remote-annotated.webp)
+
+![RADR device-selection screen with the OSSM choice identified](./images/wireless-remote2-annotated.webp)
+
+## Webcontroller
+
+Gebruik desktop Chrome of Edge. iOS, Firefox en Safari ondersteunen de vereiste Web Bluetooth-stroom niet.
+
+1. Open de [OSSM web controller](/ossm/tools/web-controller).
+2. Selecteer **Verbinden**, kies uw OSSM en selecteer **Koppelen**.
+3. Houd alle bewegingswaarden op nul.
+4. Test kort de minimale beweging, gebruik vervolgens Stop en bevestig dat de beweging stopt.
+
+![Web controller connection button](./images/web-controller-connect-annotated.webp)
+
+![Web Bluetooth device picker with an OSSM selected](./images/web-controller-pair-annotated.webp)
+
+<Callout type="error" title="Ga niet verder zonder een betrouwbare Stop-controle">
+
+Als de controller de verbinding verbreekt, het verkeerde apparaat selecteert, langzaam reageert of de stoptest niet doorstaat, koppelt u de voeding van de OSSM los en verhelpt u de fout vóór gebruik.
+
+</Callout>

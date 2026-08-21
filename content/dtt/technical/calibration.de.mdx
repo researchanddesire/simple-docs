@@ -1,0 +1,56 @@
+---
+title: „Ein Spielzeug kalibrieren“
+description: „Erfassen Sie einen komfortablen Bewegungsbereich, verstehen Sie die gespeicherte Kalibrierung pro Spielzeug, setzen Sie sie zurück und stellen Sie abgelehnte Werte wieder her.“
+---
+
+Die Kalibrierung ordnet die installierte Spielzeug- und Montagegeometrie den Sensorpositionen zu. Es ist eine Messung und keine Herausforderung, eine maximale Tiefe zu erreichen.
+
+## Erste Kalibrierung
+
+### 1. Überprüfen Sie die Einrichtung
+
+Stellen Sie sicher, dass die Halterung stabil ist, das installierte Spielzeug mit der Zuordnung zum Armaturenbrett übereinstimmt, der Sensorpfad frei ist und Sie sich sofort entfernen können.
+
+### 2. Nehmen Sie die nächstgelegene bequeme Position ein
+
+Bewegen Sie sich langsam zur nächstgelegenen Position, die Sie bequem kontrollieren können, halten Sie still und drücken Sie die Taste, wenn Sie dazu aufgefordert werden.
+
+### 3. Erfassen Sie die Ruheposition
+
+Gehen Sie zurück zur natürlichen Startposition/rest, halten Sie still und drücken Sie die Taste.
+
+### 4. Bestätigen Sie die Annahme
+
+<Callout type="success" title="Erfolg">
+
+Das Gerät akzeptiert beide Werte und geht ohne Kalibrierungsfehler zur Sitzungszusammenfassung oder zum ersten Segment über.
+
+</Callout>
+
+## Gültiger Bereich, der durch den aktuellen API erzwungen wird
+
+Das Armaturenbrett API klemmt die gespeicherte Spielzeugkalibrierung auf 1,5–21,5 cm und erfordert mindestens 2 cm zwischen dem gespeicherten Minimum und Maximum. Hierbei handelt es sich um Softwarevalidierungsgrenzen, nicht um medizinische Empfehlungen oder Ziele.
+
+## Gespeicherte Kalibrierung pro Spielzeug
+
+Die aktuelle Version 2 API speichert `minCm`, `maxCm` und einen Kalibrierungszeitstempel auf dem Spielzeug, das der Sitzung zugewiesen ist und diesem Konto gehört. Möglicherweise werden Sie erneut zu einem anderen Spielzeug, Besitzer, einer anderen Zuweisung oder einem anderen Firmware-Flow aufgefordert.
+
+## Zurücksetzen und neu kalibrieren
+
+1. Öffnen Sie die **Spielzeugbox** des gekoppelten Trainers im Dashboard.
+2. Wählen Sie das genaue Spielzeug aus.
+3. Wählen Sie die Aktion „reset/recalibrate“ aus, falls angezeigt.
+4. Starten Sie eine neue Online-Sitzung mit diesem Spielzeug.
+5. Erfassen Sie beide Positionen erneut.
+
+## Erholung
+
+| Symptom | Aktion |
+| ---------------- | ----------------------------------------------------------------------- |
+| Positionen sind zu nahe beieinander | Verwenden Sie eine klar getrennte, aber dennoch bequeme Ruhe- und Nahposition |
+| Der Wert ändert sich, während Sie | gedrückt halten Stabilisieren Sie die Halterung und den Körper. Den Sensorpfad freimachen |
+| falsches Spielzeug heißt | Stoppen Sie, korrigieren Sie die Zuordnung des Dashboard-Spielzeugs und starten Sie neu |
+| Gespeicherte Kalibrierung wird nicht geladen | Online verbinden, Konto und Spielzeug bestätigen, dann neu kalibrieren |
+| Server lehnt das Speichern | ab Halten Sie die Sitzung angehalten, überprüfen Sie die Konnektivität und versuchen Sie es erneut, sobald Sie online sind |
+
+Veröffentlichen oder verwenden Sie keine „typischen“ Tiefenwerte einer anderen Person. Weiter mit [Run your first session](/dtt/quick-start/first-session).

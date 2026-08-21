@@ -1,0 +1,13 @@
+{
+  "title": "Schnellstart",
+  "description": "Ein linearer Aufbau für die erste Sitzung",
+  "pages": [
+    "index",
+    "getting-started",
+    "pairing",
+    "using-toys",
+    "first-session",
+    "checking-results",
+    "templates"
+  ]
+}

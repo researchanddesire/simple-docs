@@ -1,0 +1,51 @@
+---
+title: "Choisissez et testez un contrôleur OSSM"
+description: "Connectez une télécommande filaire, une télécommande sans fil RADR ou un contrôleur Web et vérifiez son action d'arrêt avant utilisation."
+---
+
+Tous les contrôleurs ajustent le mouvement, mais leurs actions de connexion et d'arrêt diffèrent. Commencez avec une vitesse et une profondeur à zéro.
+
+| Contrôleur | Meilleur quand | Connexion | Arrêter l'action |
+| -------------------- | ------------------------------------- | ---------------------- | ------------------------------- |
+| Télécommande filaire | Vous souhaitez une connexion physique directe | Câble Ethernet vers OSSM | Appuyez et maintenez le bouton droit |
+| Télécommande sans fil RADR | Vous souhaitez une commande sans fil dédiée | Bluetooth | Appuyez sur le bouton du milieu |
+| Contrôleur Web | Vous disposez d'un navigateur de bureau pris en charge | Web Bluetooth | Utilisez le contrôle Stop à l'écran |
+
+## Télécommande filaire
+
+1. Avec OSSM éteint, connectez la télécommande par câble Ethernet.
+2. Réglez les deux boutons sur zéro et allumez OSSM.
+3. Attendez le menu distant.
+4. Sélectionnez un mode de mouvement avec les paramètres minimum, puis appuyez et maintenez le bouton droit enfoncé pour confirmer que Stop revient au menu principal.
+
+![Wired remote with the left speed knob and right depth/menu knob identified](./images/wired-remote-annotated.webp)
+
+## Télécommande sans fil RADR
+
+1. Allumez et accueil OSSM.
+2. Activez RADR et sélectionnez le OSSM détecté avec le bouton droit.
+3. Confirmez le nom de l'appareil connecté avant de modifier une valeur de mouvement.
+4. Au réglage minimum, appuyez sur le bouton du milieu et confirmez l'arrêt du mouvement.
+
+![RADR remote physical controls identified](./images/wireless-remote-annotated.webp)
+
+![RADR device-selection screen with the OSSM choice identified](./images/wireless-remote2-annotated.webp)
+
+## Contrôleur Web
+
+Utilisez Chrome ou Edge sur le bureau. iOS, Firefox et Safari ne prennent pas en charge le flux Web Bluetooth requis.
+
+1. Ouvrez le [OSSM web controller](/ossm/tools/web-controller).
+2. Sélectionnez **Connect**, choisissez votre OSSM et sélectionnez **Pair**.
+3. Gardez toutes les valeurs de mouvement à zéro.
+4. Testez brièvement le mouvement minimum, puis utilisez Arrêter et confirmez que le mouvement cesse.
+
+![Web controller connection button](./images/web-controller-connect-annotated.webp)
+
+![Web Bluetooth device picker with an OSSM selected](./images/web-controller-pair-annotated.webp)
+
+<Callout type="error" title="Ne continuez pas sans un contrôle d'arrêt fiable">
+
+Si le contrôleur se déconnecte, sélectionne le mauvais périphérique, répond lentement ou échoue au test d'arrêt, débranchez l'alimentation OSSM et résolvez le problème avant utilisation.
+
+</Callout>

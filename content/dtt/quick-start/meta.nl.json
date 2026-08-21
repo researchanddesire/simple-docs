@@ -1,0 +1,13 @@
+{
+  "title": "Snel beginnen",
+  "description": "Een lineaire opstelling voor de eerste sessie",
+  "pages": [
+    "index",
+    "getting-started",
+    "pairing",
+    "using-toys",
+    "first-session",
+    "checking-results",
+    "templates"
+  ]
+}

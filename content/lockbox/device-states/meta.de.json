@@ -1,0 +1,12 @@
+{
+  "title": "Gerätezustände",
+  "pages": [
+    "index",
+    "emergency-unlock",
+    "calibration",
+    "permalock",
+    "restarting",
+    "sleep-mode",
+    "take-a-break"
+  ]
+}

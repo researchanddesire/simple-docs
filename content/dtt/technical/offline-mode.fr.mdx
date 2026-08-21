@@ -1,0 +1,44 @@
+---
+title: "Mode hors ligne et persistance des résultats"
+description: "Utilisez les paramètres Deep Throat Trainer mis en cache de manière prudente et comprenez ce que la source actuelle peut et ne peut pas vérifier concernant les résultats."
+---
+
+## Limite des preuves
+
+La documentation et les messages de l'appareil indiquent que certains micrologiciels peuvent exécuter des paramètres précédemment téléchargés et afficher des commentaires sur l'appareil sans connexion actuelle au serveur. La source du tableau de bord confirme que les paramètres sont normalement récupérés en ligne et que les résultats sont conservés lorsque le point de terminaison d'achèvement de la v2 reçoit une demande valide d'un formateur couplé.
+
+Le référentiel du micrologiciel DTT n'est pas présent dans cette extraction. Cette documentation ne peut donc pas vérifier une file d'attente de résultats durable, la capacité de la file d'attente, le temps de rétention, la planification des nouvelles tentatives, le comportement en cas de panne de courant ou les versions du micrologiciel qui implémentent l'un de ces détails.
+
+## Matrice de capacités
+
+| Capacité | Statut hors ligne |
+| ----------------------------------- | ------------------------------------------------------------------------------------ |
+| Exécuter les paramètres précédemment téléchargés | pris en charge par les conseils sur les appareils existants ; vérifiez votre firmware avant de vous y fier |
+| Commentaires sur la position et sur l'appareil | disponible lors d'une session en cache démarrée avec succès |
+| Télécharger un modèle nouveau ou modifié | nécessite une connectivité |
+| Confirmer l'enregistrement de l'étalonnage dans le cloud | nécessite une demande de serveur acceptée |
+| Confirmer le résultat et les points du tableau de bord | pas confirmé jusqu'à ce que le résultat soit affiché en ligne |
+| Vérifier ou télécharger le firmware | nécessite une connectivité |
+
+## Préparer
+
+1. Connectez-vous en ligne et associez le Trainer.
+2. Activez le modèle et le jouet prévus.
+3. Laissez le formateur récupérer et afficher ses résumés.
+4. Terminez l'étalonnage si vous y êtes invité.
+5. Déconnectez-vous du réseau et exécutez un test contrôlé et non essentiel.
+6. Confirmez que le même modèle et le même jouet apparaissent avant de commencer.
+
+<Callout type="warn" title="Traiter les résultats hors ligne comme non enregistrés">
+
+Si un enregistrement de session est important pour les progrès, les points, la responsabilité du partenaire ou toute autre conséquence, entraînez-vous en ligne et vérifiez l'enregistrement par la suite. Ne promettez pas que la reconnexion récupérera un résultat hors ligne.
+
+</Callout>
+
+## Reconnecter
+
+Reconnectez Wi-Fi, redémarrez normalement et laissez le vol en amont se terminer. Vérifiez le tableau de bord. Si une session hors ligne apparaît, elle a été délivrée ; si ce n’est pas le cas, il n’existe aucune action de téléchargement manuel documentée dans ce référentiel.
+
+## Mauvaise session en cache
+
+Revenez en ligne, sélectionnez le modèle actif et le jouet corrects, laissez le formateur les récupérer et vérifiez les résumés avant de vous déconnecter à nouveau.

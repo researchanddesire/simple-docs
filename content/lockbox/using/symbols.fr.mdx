@@ -1,0 +1,157 @@
+---
+title: "Lockbox Symboles d'état"
+description: "Identifiez le verrou Lockbox, la plaque arrière, Wi-Fi, la connexion au tableau de bord et les symboles de batterie dans le texte et les images."
+---
+
+![Lockbox header bar showing status icons](../img/header.webp)
+
+La barre d'en-tête de votre lockbox affiche plusieurs icônes qui indiquent l'état actuel de votre appareil. Comprendre ces symboles vous aide à évaluer rapidement si votre coffre-fort est verrouillé, connecté et prêt à être utilisé.
+
+De gauche à droite, les icônes sont :
+
+### État du verrouillage
+
+    Indique si votre appareil est actuellement verrouillé. L'indicateur d'état indique si la plaque arrière est correctement positionnée. Voir [Lock icon](#lock-icon) pour plus de détails.
+
+### État du réseau
+
+    Indique si votre appareil est connecté à un réseau Wi-Fi. L'indicateur d'état révèle si vous êtes également connecté au tableau de bord et prêt à jouer. Voir [Wi-Fi icon](#wi-fi-icon) pour plus de détails.
+
+### État de la batterie
+
+    Affiche le niveau actuel de la batterie et l'état de charge. Cette icône n'a pas d'indicateur d'état. Voir [Battery icon](#battery-icon) pour plus de détails.
+
+## Table d'état consultable
+
+| Symbole ou indicateur | Signification | Que faire |
+| -------------------- | ----------------------------------------------- | ------------------------------------------------------------------------------------ |
+| Serrure fermée | L'appareil signale un état verrouillé | Confirmez que la plaque arrière est fixée et que la session est attendue |
+| Ouvrir la serrure | L'appareil signale un état déverrouillé | Confirmez que le mécanisme s'ouvre avant de mettre une clé à l'intérieur |
+| Icône Wi-Fi absente | Non connecté à Wi-Fi, ou le sommeil profond est actif | Réveillez l'appareil ; configurez Wi-Fi si l'icône ne renvoie pas |
+| Icône Wi-Fi présente | A rejoint un réseau Wi-Fi | Vérifiez le point d'état adjacent pour la connectivité du tableau de bord |
+| Point jaune clignotant | Connexion au service de tableau de bord | Attendez jusqu'à 60 secondes |
+| Point vert | Connecté à Wi-Fi et au service de tableau de bord | Aucune action |
+| Point rouge | J'ai rejoint Wi-Fi mais je ne parviens pas à accéder à Internet | Suivre [Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting) |
+| Chargement de la batterie | L'alimentation USB est connectée | Confirmez une puissance stable pour de longues sessions |
+| Batterie faible ou vide | Chargez avant une longue session | Garder l'accès d'urgence disponible |
+
+## Icône de verrouillage
+
+L'icône de verrouillage affiche l'état actuel des capteurs de votre appareil. Cette icône reflète l'état physique du mécanisme de verrouillage et non votre session de jeu active.
+
+### Verrouillé
+
+![Locked icon showing the device is secured](../img/locked.webp)
+
+Lorsque vous voyez ce symbole, le mécanisme de verrouillage est engagé. Les capteurs de votre appareil ont détecté que le verrou est sécurisé et que le contenu n'est pas accessible.
+
+### Débloqué
+
+![Unlocked icon showing the device can be opened](../img/unlocked.webp)
+
+Le symbole déverrouillé indique que les capteurs ont détecté que la serrure est ouverte. Vous pouvez accéder au contenu de la boîte.
+
+### Plaque arrière activée
+
+![Locked state with backplate detected](<../img/locked backplate on.webp>)
+![Unlocked state with backplate detected](<../img/unlocked backplate on.webp>)
+Un petit indicateur d'état apparaît dans le coin inférieur gauche de l'icône de verrouillage. Lorsque cet indicateur est **vert**, les capteurs ont détecté que la plaque arrière est correctement positionnée et que l'appareil est prêt à se verrouiller. Cet indicateur peut apparaître dans les états verrouillé et déverrouillé.
+
+### Plaque arrière désactivée
+
+![Locked state with backplate removed](<../img/locked backplate off (1).webp>)
+![Unlocked state with backplate removed](<../img/unlocked backplate off.webp>)
+Lorsque l'indicateur d'état est **jaune fixe**, les capteurs ont détecté que la plaque arrière n'est pas en position. Toute tentative de verrouillage dans cet état échouera.
+
+Icône ## Wi-Fi
+
+### Wi-Fi non connecté
+
+![Wi-Fi disconnected icon](<../img/wifi-off (1).webp>)
+
+Ce symbole indique que votre appareil n'est connecté à aucun réseau Wi-Fi. Cela se produit généralement lorsque :
+
+- Votre lockbox est neuf et n'a jamais été configuré pour Wi-Fi
+- Votre lockbox était précédemment connecté mais est désormais hors de portée du réseau enregistré
+
+Dans les deux cas, vous devrez configurer Wi-Fi en suivant le [Wi-Fi setup guide](/lockbox/quick-start/wifi-setup).
+
+### Wi-Fi connecté
+
+![Wi-Fi connected icon](<../img/wifi (1).webp>)
+
+Ce symbole confirme que votre appareil est connecté à Wi-Fi et peut accéder à Internet.
+
+<Callout type="info">
+
+La connectivité Wi-Fi à elle seule ne signifie pas que votre appareil peut recevoir des commandes. Vous devez également coupler votre appareil et le connecter au tableau de bord. Suivez le [pairing guide](/lockbox/quick-start/pairing) pour les instructions.
+
+</Callout>
+Vérifiez l'indicateur d'état dans le coin inférieur gauche de l'icône Wi-Fi pour voir si votre appareil est prêt à recevoir des commandes.
+
+#### Indicateur d'état : jaune clignotant
+
+![Wi-Fi connected with flashing yellow status indicator](../img/wifi-flashing.webp)
+
+Un indicateur jaune clignotant signifie que votre appareil est connecté à Wi-Fi mais pas encore connecté au serveur du tableau de bord. Votre appareil ne peut pas recevoir de commandes de détenteur de clé dans cet état.
+
+<Callout type="info">
+
+L'indicateur vérifie deux choses : la connectivité Wi-Fi ET la connexion au serveur. Les deux doivent fonctionner pour l’indicateur vert.
+
+</Callout>
+Cela peut arriver si :
+
+- **Votre appareil n'a pas été couplé** — Suivez le [pairing guide](/lockbox/quick-start/pairing) pour terminer la configuration.
+- **Votre appareil vient d'être allumé** — La connexion au serveur prend généralement 15 à 30 secondes, mais peut prendre jusqu'à 2 minutes en fonction de votre emplacement et des conditions du réseau.
+- **Problème de connectivité du serveur** — Problèmes temporaires de maintenance du serveur ou de routage réseau.
+
+<Callout type="warn">
+
+Si vous avez attendu plus de deux minutes et voyez toujours le voyant jaune clignotant, veuillez contacter l'assistance car cela peut indiquer un problème de serveur.
+
+</Callout>
+#### Indicateur d'état : rouge fixe
+
+Un indicateur rouge fixe signifie que votre appareil est connecté au réseau Wi-Fi mais ne peut pas accéder à Internet. Votre appareil ne peut pas recevoir de commandes de détenteur de clé dans cet état.
+
+Cela indique généralement un problème de configuration réseau plutôt qu'un problème de périphérique. Les causes courantes incluent :
+
+- **Le routeur n'a pas de connexion Internet** — Vérifiez que les autres appareils sur le même réseau peuvent accéder à Internet.
+- **Pare-feu ou filtrage réseau** — Certains réseaux (d'entreprise, d'hôtel ou public Wi-Fi) bloquent certaines connexions. Essayez un autre réseau.
+- **Portail captif non terminé** — Certains réseaux exigent que vous acceptiez les conditions ou que vous vous connectiez via un navigateur avant d'accorder l'accès à Internet.
+- **DNS ou problèmes de routage** — Votre routeur est peut-être mal configuré. Essayez de redémarrer votre routeur.
+
+<Callout type="warn">
+
+Si vous voyez un point rouge sur plusieurs réseaux différents, contactez l'assistance car cela peut indiquer un problème de périphérique nécessitant un dépannage plus approfondi.
+
+</Callout>
+#### Indicateur d'état : vert fixe
+
+![Wi-Fi connected with solid green status indicator](../img/wifi-solid-green.webp)
+
+Un indicateur vert fixe signifie :
+
+1. Votre appareil est connecté à Wi-Fi
+2. Votre appareil est connecté au serveur de tableau de bord
+3. Votre appareil est prêt à recevoir instantanément les commandes du détenteur de clé
+
+<Callout type="idea">
+
+Faites confiance à l'indicateur de l'appareil plutôt qu'à l'état du tableau de bord. L'appareil affiche une connectivité en temps réel, tandis que le tableau de bord peut prendre jusqu'à 60 secondes de retard.
+
+</Callout>
+## Icône de batterie
+![Battery charging](<../img/battery charging.webp>)
+![Battery full](<../img/battery full.webp>)
+![Battery medium](<../img/battery mid.webp>)
+![Battery low](<../img/battery low.webp>)
+![Battery empty](<../img/battery none.webp>)
+Ces icônes indiquent le niveau actuel de la batterie de votre appareil. Lorsque votre appareil est en charge, vous verrez un éclair à travers l'icône de la batterie.
+
+<Callout type="warn">
+
+Si l'icône de la batterie devient rouge, chargez votre appareil immédiatement pour éviter toute interruption.
+
+</Callout>

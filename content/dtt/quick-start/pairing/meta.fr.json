@@ -1,0 +1,9 @@
+{
+  "title": "Couplage",
+  "description": "Couplage de compte et configuration de Wi-Fi",
+  "pages": [
+    "index",
+    "pairing-guide",
+    "wifi-setup"
+  ]
+}

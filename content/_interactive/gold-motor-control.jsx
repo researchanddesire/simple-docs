@@ -1,6 +1,7 @@
 "use client";
 
 import { useRef, useState } from "react";
+import { captureDocsEvent } from "@repo/docs-kit/instrumentation-client";
 
 export const GoldMotorControl = () => {
   // =============================================================================
@@ -314,6 +315,10 @@ export const GoldMotorControl = () => {
   // =============================================================================
 
   const handleConnect = async () => {
+    captureDocsEvent("docs_tool_used", {
+      action: "started",
+      tool_key: "gold-motor-control",
+    });
     try {
       displayFeedback("Requesting port...", "info");
       // Web Serial API - prompts user to select a serial port
@@ -330,8 +335,16 @@ export const GoldMotorControl = () => {
       readerRef.current = port.readable.getReader();
       setIsConnected(true);
       displayFeedback("Connected to motor", "success");
+      captureDocsEvent("docs_tool_used", {
+        action: "completed",
+        tool_key: "gold-motor-control",
+      });
     } catch (error) {
       displayFeedback(`Failed to connect: ${error}`, "error");
+      captureDocsEvent("docs_tool_used", {
+        action: "failed",
+        tool_key: "gold-motor-control",
+      });
     }
   };
 
@@ -527,7 +540,10 @@ export const GoldMotorControl = () => {
   );
 
   return (
-    <div className="not-prose rounded-xl border bg-zinc-50 p-4 dark:border-zinc-700 dark:bg-zinc-900">
+    <div
+      className="not-prose rounded-xl border bg-zinc-50 p-4 dark:border-zinc-700 dark:bg-zinc-900"
+      data-device-output=""
+    >
       <div className="mx-auto max-w-2xl">
         {/* Title */}
         <div className="mb-4 rounded-lg bg-zinc-200 py-3 text-center dark:bg-zinc-800">

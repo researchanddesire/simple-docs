@@ -1,0 +1,55 @@
+---
+title: "Flasher ou récupérer OSSM Firmware"
+description: "Préparez, installez, vérifiez et récupérez le micrologiciel OSSM ou RADR avec les outils de navigateur pris en charge."
+---
+
+Utilisez le flashage du micrologiciel pour récupérer un appareil ou lorsque l’assistance Research and Desire vous le demande. Le contrôle quotidien ne nécessite pas de clignotement.
+
+## Choisissez le bon outil
+
+- [OSSM web flasher](/ossm/tools/web-flasher) pour la carte de contrôle OSSM
+- [RADR web flasher](/radr/tools/web-flasher) pour la télécommande sans fil
+- [OSSM BLE controller](/ossm/tools/web-controller) pour le contrôle du navigateur sans flasher
+- [OSSM Funscript Player](/ossm/tools/funscript-player) pour la lecture synchronisée locale
+- [Gold Motor Programming Tool](/ossm/tools/gold-motor-programming) uniquement pour la configuration de moteur prise en charge
+
+## Exigences
+
+- Bureau Chrome ou Edge avec prise en charge Web Serial
+- Un câble de données USB, pas un câble de charge uniquement
+- Puissance informatique stable et connexion USB ininterrompue
+- L'appareil exact sélectionné dans le flasher
+- Il est temps de saisir à nouveau Wi-Fi ou les paramètres de l'appareil si l'image installée les réinitialise
+
+<Callout type="error" title="Sécuriser la machine avant le flashage USB">
+
+Arrêtez tout mouvement, éloignez les personnes, débranchez l'alimentation du moteur OSSM et connectez uniquement le tableau de commande ou la télécommande par USB. Ne flashez pas pendant une session.
+
+</Callout>
+
+## Installer un firmware stable
+
+1. Ouvrez le clignotant pour l'appareil exact.
+2. Laissez **Mode** défini sur **Production (Stable)** à moins que le support n'ait fourni un lien de développement spécifique.
+3. Sélectionnez **Connect & Flash** et choisissez le port série qui apparaît lorsque l'appareil est connecté.
+4. Confirmez le périphérique et l'installation. Ne débranchez pas, ne fermez pas l'onglet et ne laissez pas l'ordinateur dormir.
+5. Attendez que le programme d'installation signale la fin du processus.
+
+Le flasher installe le manifeste stable disponible au moment où vous l'exécutez. La page ne promet pas de numéro de version ; enregistrez la version affichée par l'appareil après le redémarrage.
+
+## Vérifier le succès
+
+1. Débranchez USB, rebranchez le système d'alimentation normal et redémarrez avec la trajectoire de mouvement vide.
+2. Confirmez que l'appareil démarre et affiche une version du micrologiciel.
+3. Reconfigurez Wi-Fi ou le couplage uniquement si l'appareil le demande.
+4. Pour OSSM, confirmez la prise d'origine sans charge, le mouvement minimum et l'arrêt avant utilisation.
+
+## Si le clignotement échoue
+
+- Gardez l'installateur ouvert et reconnectez le câble pour identifier le bon port série.
+- Essayez un autre câble compatible avec les données ou un port d'ordinateur direct ; évitez un hub non alimenté.
+- Fermez les autres onglets ou programmes utilisant le port série.
+- Réessayez une fois l'image stable. Ne parcourez pas les branches de développement.
+- Si l'appareil ne démarre plus ou si le clignotement stable répété échoue, arrêtez et envoyez un e-mail à [support@researchanddesire.com](mailto:support@researchanddesire.com) avec le type d'appareil, la version affichée, le navigateur, le système d'exploitation, le message d'installation et si les paramètres ont été effacés.
+
+**Applicabilité :** les exigences du navigateur et les manifestes disponibles peuvent changer. Dernière révision le 16 août 2026.
