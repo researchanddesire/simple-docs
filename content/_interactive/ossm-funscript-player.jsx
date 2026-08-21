@@ -1,6 +1,7 @@
 "use client";
 
 import { useCallback, useEffect, useRef, useState } from "react";
+import { captureDocsEvent } from "@repo/docs-kit/instrumentation-client";
 
 export const OssmFunscriptPlayer = () => {
   // OSSM BLE UUIDs
@@ -233,6 +234,10 @@ export const OssmFunscriptPlayer = () => {
 
   // Connect to OSSM
   const handleConnect = async () => {
+    captureDocsEvent("docs_tool_used", {
+      action: "started",
+      tool_key: "ossm-funscript-player",
+    });
     setError(null);
     setConnectionStatus("connecting");
 
@@ -305,10 +310,18 @@ export const OssmFunscriptPlayer = () => {
       setDevice(bleDevice);
       setConnectionStatus("connected");
       addLog("INFO", "Ready for funscript playback");
+      captureDocsEvent("docs_tool_used", {
+        action: "completed",
+        tool_key: "ossm-funscript-player",
+      });
     } catch (err) {
       addLog("ERR", `Connection failed: ${err.message}`);
       setError(err.message);
       setConnectionStatus("disconnected");
+      captureDocsEvent("docs_tool_used", {
+        action: "failed",
+        tool_key: "ossm-funscript-player",
+      });
     }
   };
 
@@ -551,7 +564,10 @@ export const OssmFunscriptPlayer = () => {
   const isConnecting = connectionStatus === "connecting";
 
   return (
-    <div className="not-prose mx-auto max-w-2xl space-y-4">
+    <div
+      className="not-prose mx-auto max-w-2xl space-y-4"
+      data-device-output=""
+    >
       {/* Error display */}
       {error && (
         <div className="rounded-xl border border-red-300 bg-red-50 p-4 dark:border-red-700 dark:bg-red-900/20">

@@ -29,6 +29,7 @@ import {
 import { Slider } from "@repo/ui/slider";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@repo/ui/tabs";
 import { cn } from "@repo/ui/utils";
+import { captureDocsEvent } from "@repo/docs-kit/instrumentation-client";
 import { AlertCircle, Gauge } from "lucide-react";
 import { useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
@@ -47,6 +48,10 @@ export const OssmBleControllerCard = () => {
   const [currentState, setCurrentState] = useState<string>("");
 
   const connectBluetooth = async () => {
+    captureDocsEvent("docs_tool_used", {
+      action: "started",
+      tool_key: "ossm-ble-controller",
+    });
     try {
       const device = await navigator.bluetooth.requestDevice({
         filters: [
@@ -88,8 +93,16 @@ export const OssmBleControllerCard = () => {
           handleCharacteristicValueChanged,
         );
       }
+      captureDocsEvent("docs_tool_used", {
+        action: "completed",
+        tool_key: "ossm-ble-controller",
+      });
     } catch (error) {
       console.error("Error connecting:", error);
+      captureDocsEvent("docs_tool_used", {
+        action: "failed",
+        tool_key: "ossm-ble-controller",
+      });
     }
   };
 
@@ -372,7 +385,7 @@ export function OssmBleController() {
   }
 
   return (
-    <>
+    <div data-device-output="">
       <Alert className="mb-4">
         <AlertCircle className="size-4" />
         <AlertTitle>Beta Testing Only</AlertTitle>
@@ -383,7 +396,7 @@ export function OssmBleController() {
         </AlertDescription>
       </Alert>
       <OssmBleControllerCard />
-    </>
+    </div>
   );
 }
 

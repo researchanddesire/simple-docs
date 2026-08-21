@@ -4,6 +4,7 @@ import { useEffect, useMemo, useState } from "react";
 
 import { useEspWebToolsDialogCustomization } from "@repo/device-tools/esp-dialog-customization";
 import { loadEspWebTools } from "@repo/device-tools/esp-web-tools-loader";
+import { captureDocsEvent } from "@repo/docs-kit/instrumentation-client";
 
 const DEVICE_CONFIGS = {
   dtt: {
@@ -123,12 +124,20 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
         );
         const nextCatalogs = Object.fromEntries(entries);
         setCatalogs(nextCatalogs);
+        captureDocsEvent("docs_tool_used", {
+          action: "completed",
+          tool_key: "firmware-flasher-catalog",
+        });
       } catch (error) {
         if (controller.signal.aborted) return;
         console.error("Failed to load firmware catalogs", error);
         setCatalogError(
           "Approved firmware releases could not be loaded. Please try again.",
         );
+        captureDocsEvent("docs_tool_used", {
+          action: "failed",
+          tool_key: "firmware-flasher-catalog",
+        });
       } finally {
         if (!controller.signal.aborted) setIsLoading(false);
       }
@@ -161,7 +170,10 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
   };
 
   return (
-    <div className="not-prose mx-auto max-w-2xl rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-700 dark:bg-zinc-900">
+    <div
+      className="not-prose mx-auto max-w-2xl rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-700 dark:bg-zinc-900"
+      data-device-output=""
+    >
       <div className="mb-4">
         <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
           {config.name} Web Flasher
@@ -268,6 +280,12 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
           webSerialSupported !== false &&
           selectedTarget && (
             <div
+              onClick={() =>
+                captureDocsEvent("docs_tool_used", {
+                  action: "started",
+                  tool_key: "firmware-flasher",
+                })
+              }
               dangerouslySetInnerHTML={{
                 __html: `<esp-web-install-button manifest="${selectedTarget.manifestUrl}">
                   <button slot="activate" style="background-color: #8b5cf6; color: white; padding: 10px 24px; border-radius: 9999px; font-weight: 500; border: none; cursor: pointer;">Connect &amp; Flash</button>
