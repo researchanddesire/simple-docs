@@ -1,4 +1,13 @@
 {
   "title": "Research and Desire",
-  "pages": ["index", "safety", "ossm", "lockbox", "dtt", "radr", "tools"]
+  "pages": [
+    "index",
+    "safety",
+    "shop",
+    "ossm",
+    "lockbox",
+    "dtt",
+    "radr",
+    "tools"
+  ]
 }
