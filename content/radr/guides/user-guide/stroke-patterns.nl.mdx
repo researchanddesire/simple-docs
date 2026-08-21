@@ -1,65 +1,77 @@
 ---
-title: "RADR-lijnpatroonreferentie"
+title: "RADR-referentie voor slagpatronen"
 description: "Vergelijk OSSM-patronen die beschikbaar zijn via RADR, hun bewegingsgedrag, firmware-afhankelijkheid en veilige startmethode."
 ---
 
-RADR biedt toegang tot de ingebouwde streekpatronen van de OSSM. Patronen worden rechtstreeks van uw OSSM geladen wanneer u verbinding maakt, dus de beschikbare patronen zijn afhankelijk van de firmwareversie van uw OSSM.
+RADR biedt toegang tot de ingebouwde slagpatronen van de OSSM. De patronen
+worden rechtstreeks van uw OSSM geladen wanneer u verbinding maakt, dus de
+beschikbare patronen zijn afhankelijk van de firmwareversie van uw OSSM.
 
-![RADR pattern-selection screen with the highlighted pattern, its motion description, and select and back actions](<../../img/image (3).webp>)
+![RADR-scherm voor patroonselectie met het gemarkeerde patroon, de bewegingsbeschrijving en de acties voor selecteren en teruggaan](<../../img/image (3).webp>)
 
-<Callout type="warn" title="Verander patronen op nulsnelheid">
+<Callout type="warn" title="Patronen wijzigen bij nul snelheid">
 
-Zet de snelheid terug naar nul voordat u een ander patroon selecteert. Bevestig de gemarkeerde naam en begin opnieuw op lage snelheid; patroonnamen en gedrag kunnen veranderen met de aangesloten OSSM-firmware.
+Zet de snelheid terug naar nul voordat u een ander patroon selecteert. Bevestig
+de gemarkeerde naam en begin opnieuw op lage snelheid. Patroonnamen en gedrag
+kunnen veranderen met de aangesloten OSSM-firmware.
 
 </Callout>
 
 ## Patronen openen
 
-Om toegang te krijgen tot de patroonmodus:
+Om toegang te krijgen tot `Pattern Mode`:
 
 1. Maak verbinding met uw OSSM
-2. Druk vanuit het bedieningsscherm op de **rechterknop (Patronen)**
+2. Druk vanuit het bedieningsscherm op de **rechterknop (`Patterns`)**
 3. Gebruik de **rechter encoder** om door de beschikbare patronen te bladeren
 4. Druk op de **rechterknop** om een patroon te selecteren
 5. Druk op de **linkerknop** om te annuleren zonder te wijzigen
 
 <Callout type="info">
 
-Patronen worden geladen vanaf uw OSSM wanneer u verbinding maakt. De patroonlijst kan variëren afhankelijk van uw OSSM firmwareversie.
+De patronen worden van uw OSSM geladen wanneer u verbinding maakt. De
+patroonlijst kan variëren afhankelijk van de firmwareversie van uw OSSM.
 
 </Callout>
-## Bediening in patroonmodus
+## Bediening in `Pattern Mode`
 
-| Controle | Actie |
+| Bedieningselement | Actie |
 | ------------- | ---------------------------------- |
-| Rechter encoder | Blader door patronen |
-| Linker encoder | Snelheid aanpassen (werkt nog) |
-| Rechterknop | Selecteer het gemarkeerde patroon |
-| Linkerknop | Annuleren en terugkeren naar bedieningsscherm |
-| Middelste knop | Pauzeer en keer terug naar het bedieningsscherm |
+| Rechter encoder | Door patronen bladeren |
+| Linker encoder | Snelheid aanpassen (werkt nog steeds) |
+| Rechterknop | Gemarkeerd patroon selecteren |
+| Linkerknop | Annuleren en terugkeren naar het bedieningsscherm |
+| Middelste knop | Pauzeren en terugkeren naar het bedieningsscherm |
 
 <Callout type="idea">
 
-De snelheidsregeling (linker encoder) blijft werken in de patroonmodus, zodat u de intensiteit kunt aanpassen terwijl u door patronen bladert.
+De snelheidsregeling (linker encoder) blijft in `Pattern Mode` werken, zodat u
+de intensiteit kunt aanpassen terwijl u door patronen bladert.
 
 </Callout>
 ## Beschikbare patronen
 
-RADR geeft alle patronen weer die beschikbaar zijn op uw aangesloten OSSM. Het patroongedrag is afhankelijk van uw OSSM-firmwareversie, en de beschrijving op het scherm legt uit hoe de sensatieparameter elk patroon beïnvloedt.
+RADR geeft alle patronen weer die beschikbaar zijn op uw aangesloten OSSM. Het
+patroongedrag is afhankelijk van de firmwareversie van uw OSSM, en de
+beschrijving op het scherm legt uit hoe de parameter `Sensation` elk patroon
+beïnvloedt.
 
 Op deze pagina wordt samengevat hoe u patronen kunt openen en gebruiken, zoals Simple Stroke, Teasing or Pounding, Robo Stroke, Half'n'Half, Deeper, Stop'n'Go, Insist en meer.
 
-| Patroonfamilie getoond door RADR | Algemene bewegingskarakteristiek | Wat u moet controleren voordat u de snelheid verhoogt |
+| Door RADR getoonde patroonfamilie | Algemene bewegingskarakteristiek | Wat u moet controleren voordat u de snelheid verhoogt |
 | -------------------------- | --------------------------------------------------- | ------------------------------------------------------------ |
-| Eenvoudige beroerte | Regelmatige heen-en-weerbeweging | Slagbereik en diepte komen overeen met het display |
-| Plagen / Neuken | Bewegingskarakter verandert met de sensatiecontrole | De lage instelling gedraagt ​​zich zoals verwacht voordat een sterkere instelling wordt geprobeerd |
-| Robo-beroerte | Mechanisch regelmatige variatie | Overgangen overschrijden het beoogde bereik niet |
-| Half'n'Half | Wisselt tussen twee bewegingssecties | Beide secties blijven binnen het geselecteerde bereik |
-| Dieper | Vertekent de beweging naar het diepere uiteinde van het geselecteerde bereik | Het diepste punt blijft helder en comfortabel |
-| Stop'n'Go | Inclusief opzettelijke pauzes | Een geprogrammeerde pauze wordt niet verward met een losgekoppelde controller |
-| Sta erop | Herhaalt of benadrukt een deel van de streek | Herhaling blijft binnen de beoogde positie en bereik |
+| Simple Stroke | Regelmatige heen-en-weergaande slag | Het `Stroke`-bereik en de diepte komen overeen met het scherm |
+| Teasing / Pounding | Het bewegingskarakter verandert met de `Sensation`-regeling | De lage instelling gedraagt zich zoals verwacht voordat u een sterkere instelling probeert |
+| Robo Stroke | Mechanisch regelmatige variatie | Overgangen overschrijden het beoogde bereik niet |
+| Half'n'Half | Wisselt af tussen twee bewegingsdelen | Beide delen blijven binnen het geselecteerde bereik |
+| Deeper | Stuurt de beweging naar het diepere uiteinde van het geselecteerde bereik | Het diepste punt blijft duidelijk en comfortabel |
+| Stop'n'Go | Bevat opzettelijke pauzes | Een geprogrammeerde pauze wordt niet verward met een losgekoppelde controller |
+| Insist | Herhaalt of benadrukt een deel van de slag | De herhaling blijft binnen de beoogde positie en het beoogde bereik |
 
-Dit zijn oriëntatiebeschrijvingen, geen vaste bewegingsspecificaties. De aangesloten OSSM levert de gezaghebbende patroonimplementatie. Als het gedrag op het scherm afwijkt van deze tabel, stop dan en noteer beide firmwareversies en [contact support](mailto:support@researchanddesire.com).
+Dit zijn oriënterende beschrijvingen, geen vaste bewegingsspecificaties. De
+aangesloten OSSM levert de gezaghebbende patroonimplementatie. Als het gedrag
+op het scherm afwijkt van deze tabel, stop de OSSM, noteer beide firmwareversies
+en [neem contact op met support](mailto:support@researchanddesire.com).
 
 ## Tips
 
@@ -70,11 +82,12 @@ Patronen werken in combinatie met uw snelheidsinstelling. Een patroon op 20% sne
 </Callout>
 <Callout type="idea">
 
-Begin met **Simple Stroke** om vertrouwd te raken met de besturing, en experimenteer vervolgens met andere patronen.
+Begin met **Simple Stroke** om vertrouwd te raken met de besturing en
+experimenteer vervolgens met andere patronen.
 
 </Callout>
 <Callout type="idea">
 
-Nieuwe patronen kunnen worden toegevoegd via OSSM firmware-updates. Controleer op firmware-updates om toegang te krijgen tot de nieuwste patroonbibliotheken.
+Nieuwe patronen kunnen worden toegevoegd via OSSM-firmware-updates. Controleer op OSSM-firmware-updates om toegang te krijgen tot de nieuwste patroonbibliotheken.
 
 </Callout>
