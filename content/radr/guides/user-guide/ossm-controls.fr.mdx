@@ -1,37 +1,41 @@
 ---
-title: "Contrôle OSSM avec RADR"
-description: "Contrôlez OSSM la vitesse, la profondeur, la sensation, la course, la pause, l'arrêt complet et les modèles de RADR."
+title: "Contrôler l'OSSM avec RADR"
+description: "Contrôlez avec RADR la vitesse, la profondeur, la sensation, la course, la pause, l'arrêt complet et les motifs de l'OSSM."
 ---
 
-Ce guide explique comment contrôler la OSSM (Open Source Sex Machine) à l'aide de votre télécommande sans fil RADR.
+Ce guide explique comment contrôler l'OSSM (Open Source Sex Machine) à l'aide de votre télécommande sans fil RADR.
 
-<Callout type="warn" title="Vérifier l'arrêt avant utilisation">
+<Callout type="warn" title="Vérifiez la fonction d’arrêt avant utilisation">
 
-Gardez le OSSM déchargé, réglez la vitesse sur zéro et testez à la fois une pause par simple pression et une double pression sur Stop complet avant de connecter un accessoire ou de commencer une session. La pause préserve les ajustements en cours ; L'arrêt complet les réinitialise. Si l'une ou l'autre action n'arrête pas le mouvement physique, éteignez le OSSM et utilisez [troubleshooting](/ossm/troubleshooting).
+Laissez l'OSSM sans charge, réglez la vitesse sur zéro et testez `Pause` par simple
+pression et `Full Stop` par double pression avant de connecter un accessoire ou
+de commencer une session. `Pause` préserve les réglages en cours ; `Full Stop`
+les réinitialise. Si l'une ou l'autre action n'arrête pas le mouvement physique,
+éteignez l'OSSM et utilisez le [dépannage](/ossm/troubleshooting).
 
 </Callout>
 
-![RADR OSSM control screen showing speed on the left, motion range in the centre, the active adjustment on the right, and pause and pattern actions below](<../../img/image (2).webp>)
+![Écran de contrôle OSSM de RADR montrant la vitesse à gauche, la plage de mouvement au centre, le réglage actif à droite, ainsi que les actions de pause et de motif en dessous](<../../img/image (2).webp>)
 
 ## Aperçu de l'écran de contrôle
 
 Lorsqu'il est connecté à un OSSM, l'écran de contrôle affiche :
 
-- **Haut :** Trois onglets affichant les modes Profondeur, Sensation et Stroke
-- **Pare-chocs supérieurs :** Boutons `<<` et `>>` pour le changement de mode
+- **Haut :** Trois onglets affichant les modes `Depth`, `Sensation` et `Stroke`
+- **Boutons d’épaule :** `<<` et `>>` pour changer de mode
 - **Côté gauche :** Cadran d'encodeur de vitesse avec indicateur d'arc
-- **Côté droit :** Cadran d'encodeur de mode (Profondeur/Sensation/Stroke) avec indicateur d'arc
+- **Côté droit :** Cadran de l'encodeur de mode (`Depth`/`Sensation`/`Stroke`) avec indicateur d'arc
 - **Centre :** Graphique de rail linéaire montrant la visualisation de la course et de la profondeur
-- **Ci-dessous le graphique :** Nom du modèle actuel
-- **En bas :** Boutons Menu, Pause et Modèles
+- **Sous le graphique :** Nom du motif actuel
+- **En bas :** Boutons `Menu`, `Pause` et `Patterns`
 
 ## Contrôle de vitesse
 
 L'**encodeur gauche** contrôle toujours la vitesse, quel que soit le mode actif.
 
-| Paramètre | Gamme | Par défaut |
+| Paramètre | Plage | Par défaut |
 | --------- | ------ | ------- |
-| Vitesse | 0 à 100 % | 0% |
+| Speed | 0–100% | 0% |
 
 - Tournez dans le sens des aiguilles d'une montre pour augmenter la vitesse
 - Tournez dans le sens inverse des aiguilles d'une montre pour diminuer la vitesse
@@ -39,68 +43,69 @@ L'**encodeur gauche** contrôle toujours la vitesse, quel que soit le mode actif
 
 <Callout type="info">
 
-La vitesse doit être supérieure à 0 % pour que le OSSM puisse se déplacer. En pause, augmentez la vitesse pour reprendre automatiquement.
+`Speed` doit être supérieure à 0% pour que l'OSSM puisse se déplacer. Avec
+`Pause`, augmentez la vitesse pour reprendre automatiquement.
 
 </Callout>
 ## Modes de réglage
 
-L'**encodeur droit** contrôle l'un des trois paramètres, selon le mode actif. Utilisez les pare-chocs d'épaule pour changer de mode.
+L'**encodeur droit** contrôle l'un des trois paramètres, selon le mode actif. Utilisez les boutons d'épaule pour changer de mode.
 
-### Mode profondeur
+### Mode `Depth`
 
 Contrôle la profondeur de la pénétration.
 
-| Paramètre | Gamme | Par défaut |
+| Paramètre | Plage | Par défaut |
 | --------- | ------ | ------- |
-| Profondeur | 0 à 100 % | 10% |
+| Depth | 0–100% | 10% |
 
 - Valeurs plus élevées = pénétration plus profonde
 - La profondeur est visualisée sur le graphique du rail linéaire
 
-### Mode sensations
+### Mode `Sensation`
 
 Contrôle l'intensité ou la « sensation » du mouvement.
 
-| Paramètre | Gamme | Par défaut |
+| Paramètre | Plage | Par défaut |
 | --------- | ------ | ------- |
-| Sensations | 0 à 100 % | 50% |
+| Sensation | 0–100% | 50% |
 
 - Valeurs inférieures = mouvement plus doux et plus fluide
 - Valeurs plus élevées = mouvement plus intense et agressif
 
-### Mode course
+### Mode Stroke
 
-Contrôle la longueur de chaque trait.
+Contrôle la longueur de chaque course.
 
-| Paramètre | Gamme | Par défaut |
+| Paramètre | Plage | Par défaut |
 | --------- | ------ | ------- |
-| Accident vasculaire cérébral | 0 à 100 % | 50% |
+| Stroke | 0–100% | 50% |
 
 - Valeurs inférieures = courses plus courtes
 - Valeurs plus élevées = courses plus longues
-- Le trait est visualisé sur le graphique du rail linéaire
+- La course est visualisée sur le graphique du rail linéaire
 
-## Modes de commutation
+## Changer de mode
 
-Vous avez deux façons de basculer entre Profondeur, Sensation et Course :
+Vous avez deux façons de basculer entre `Depth`, `Sensation` et `Stroke` :
 
-### Utilisation des pare-chocs (recommandé)
+### Utilisation des boutons d'épaule (recommandée)
 
-- **Pare-chocs gauche (`<<`)** — Passer au mode précédent
-- **Pare-chocs droit (`>>`)** — Passer au mode suivant
+- **Bouton d'épaule gauche (`<<`)** — Passer au mode précédent
+- **Bouton d'épaule droit (`>>`)** — Passer au mode suivant
 
-L'ordre des modes est le suivant : Profondeur → Sensation → Course → Profondeur...
+L'ordre des modes est le suivant : `Depth` → `Sensation` → `Stroke` → `Depth`...
 
-### Commentaires visuels
+### Retour visuel
 
 Lorsque vous changez de mode :
 
-- L'onglet correspondant en haut devient mis en surbrillance
+- L'onglet correspondant en haut est mis en surbrillance
 - La couleur de la LED de l'encodeur droit change :
-  - **Coral/Red** — Mode profondeur
-  - **Bleu** — Mode sensation
-  - **Vert** — Mode Trait
-- La LED de l'encodeur gauche reste **violet** (toujours vitesse)
+  - **Corail/Rouge** — Mode profondeur
+  - **Bleu** — Mode Sensation
+  - **Vert** — Mode Stroke
+- La LED de l’encodeur gauche reste **violette** (toujours `Speed`)
 
 ## Pause et arrêt
 
@@ -108,98 +113,101 @@ Le **bouton du milieu** contrôle la pause et l'arrêt.
 
 ### Appui simple : Pause
 
-Une simple pression met le OSSM en pause :
+Une simple pression met l'OSSM en pause :
 
-- La vitesse est réglée à 0%
+- `Speed` est réglée à 0%
 - Le nom du motif devient "Paused" en rouge
 - La LED du milieu devient rouge
-- Le bouton Pause se transforme en "STOP" (rouge)
+- Le bouton `Pause` se transforme en `STOP` (rouge)
 
 <Callout type="info">
 
-Pour sortir d'une pause, augmentez simplement la vitesse avec l'encodeur gauche. Le OSSM reprendra automatiquement.
+Pour sortir d'une pause, augmentez simplement la vitesse avec l'encodeur gauche. L'OSSM reprendra automatiquement.
 
 </Callout>
 ### Fonction de sécurité : surveillance persistante de la vitesse
 
-Lorsque vous entrez en mode Pattern ou dans d'autres menus, RADR continue de surveiller l'encodeur gauche (vitesse) pour des raisons de sécurité. Cela signifie :
+Lorsque vous entrez en `Pattern Mode` ou dans d'autres menus, RADR continue de
+surveiller l'encodeur gauche (`Speed`) pour des raisons de sécurité. Cela signifie :
 
-- Vous pouvez toujours régler la vitesse tout en parcourant les modèles
-- Si vous mettez la vitesse à 0, le OSSM s'arrête immédiatement
+- Vous pouvez toujours régler la vitesse tout en parcourant les motifs
+- Si vous mettez la vitesse à 0, l'OSSM s'arrête immédiatement
 - Cela garantit que vous disposez toujours d'une capacité d'arrêt instantané
 
 <Callout type="idea">
 
-Même lors de la sélection de motifs, l'encodeur gauche contrôle la vitesse. Il s'agit d'une fonctionnalité de sécurité, pas d'un bug.
+Même lors de la sélection de motifs, l'encodeur gauche contrôle la vitesse. Il
+s'agit d'une fonctionnalité de sécurité, pas d'un bogue.
 
 </Callout>
 ### Double pression : arrêt complet
 
 Un double appui rapide effectue un arrêt complet avec réinitialisation :
 
-- La vitesse est réglée à 0%
-- La profondeur est réinitialisée à 0%
-- La course est réinitialisée à 10 %
-- La sensation est réinitialisée à 50%
-- L'écran de confirmation « Appareil arrêté » apparaît
+- `Speed` est réglée à 0%
+- `Depth` est réinitialisée à 0%
+- `Stroke` est réinitialisée à 10%
+- `Sensation` est réinitialisée à 50%
+- L'écran de confirmation `Device Stopped` apparaît
 
 <Callout type="warn">
 
-Le point final réinitialise vos paramètres de réglage. Si vous souhaitez faire une pause sans perdre vos paramètres, utilisez une simple pression.
+`Full Stop` réinitialise vos paramètres de réglage. Si vous souhaitez utiliser
+`Pause` sans perdre vos paramètres, utilisez une simple pression.
 
 </Callout>
-## Mode modèle
+## Pattern Mode
 
-Appuyez sur le **bouton droit (Motifs)** pour accéder au mode Modèle.
+Appuyez sur le **bouton droit (`Patterns`)** pour accéder à `Pattern Mode`.
 
 En mode motif :
 
-- L'écran affiche une liste des modèles disponibles
+- L'écran affiche une liste des motifs disponibles
 - Utilisez l'encodeur droit pour faire défiler les motifs
 - Appuyez sur le bouton droit pour sélectionner un motif
 - Appuyez sur le bouton gauche pour annuler et revenir
 
-Voir [Stroke Patterns](/radr/guides/user-guide/stroke-patterns) pour plus de détails sur chaque modèle.
+Voir [Motifs de course](/radr/guides/user-guide/stroke-patterns) pour plus de détails sur chaque motif.
 
 ## Graphique de rail linéaire
 
-Le graphique de rail linéaire au centre de l'écran fournit une représentation visuelle du mouvement du OSSM :
+Le graphique de rail linéaire au centre de l'écran fournit une représentation visuelle du mouvement de l'OSSM :
 
-- Le graphique montre la plage de course et la position en profondeur
-- Au fur et à mesure que vous ajustez la course et la profondeur, la visualisation se met à jour en temps réel
+- Le graphique montre la plage de `Stroke` et la position de `Depth`
+- Au fur et à mesure que vous ajustez `Stroke` et `Depth`, la visualisation se met à jour en temps réel
 - Cela vous aide à comprendre le mouvement physique sans regarder la machine
 
 ## Bouton Menu
 
-Le **bouton gauche (Menu)** est réservé aux futurs paramètres de l'appareil OSSM.
+Le **bouton gauche (`Menu`)** est réservé aux futurs paramètres de l'appareil OSSM.
 
 <Callout type="info">
 
-Le bouton Menu est actuellement désactivé et n’a aucune fonction. Le style du bouton change en cas de pause (apparaissant activé), mais appuyer dessus n'a aucun effet. Les futures mises à jour du micrologiciel permettront les paramètres spécifiques à l'appareil via ce bouton.
+Le bouton `Menu` est actuellement désactivé et n’a aucune fonction. Le style du bouton change en cas de pause (il semble alors activé), mais appuyer dessus n'a aucun effet. Les futures mises à jour du micrologiciel permettront de configurer des paramètres spécifiques à l'appareil via ce bouton.
 
 </Callout>
 ## Indicateurs LED pendant le contrôle
 
 | LED | Couleur | Signification |
 | ------------ | --------- | -------------------------- |
-| Gauche (Vitesse) | Violet | Mode vitesse (toujours actif) |
-| Milieu | Blanc | Actif et joueur |
+| Gauche (`Speed`) | Violet | Mode vitesse (toujours actif) |
+| Milieu | Blanc | Actif et en mouvement |
 | Milieu | Rouge | En pause ou arrêté |
-| Droite (Mode) | Corail/Red | Mode profondeur actif |
-| Droite (Mode) | Bleu | Mode sensation actif |
-| Droite (Mode) | Vert | Mode course actif |
+| Droite (`Mode`) | Corail/Rouge | Mode profondeur actif |
+| Droite (`Mode`) | Bleu | Mode Sensation actif |
+| Droite (`Mode`) | Vert | Mode Stroke actif |
 
 ## Référence rapide
 
-| Contrôle | Actions |
+| Commande | Action |
 | ------------- | ------------------------------------------ |
-| Encodeur gauche | Ajuster la vitesse (0 à 100 %) |
-| Encodeur droit | Ajuster le mode actif (0–100%) |
-| Pare-chocs gauche | Mode précédent (Profondeur ← Sensation ← Course) |
-| Pare-chocs droit | Mode suivant (Profondeur → Sensation → Course) |
-| Bouton gauche | Menu (désactivé) |
-| Bouton du milieu | Simple : Pause / Double : Arrêt complet |
-| Bouton droit | Mode modèle ouvert |
+| Encodeur gauche | Régler la vitesse (0–100%) |
+| Encodeur droit | Régler le mode actif (0–100%) |
+| Bouton d'épaule gauche | Mode précédent (`Depth` ← `Sensation` ← `Stroke`) |
+| Bouton d'épaule droit | Mode suivant (`Depth` → `Sensation` → `Stroke`) |
+| Bouton gauche | `Menu` (désactivé) |
+| Bouton du milieu | Une pression : `Pause` / deux pressions : `Full Stop` |
+| Bouton droit | Ouvrir `Pattern Mode` |
 
 ## Conseils
 
@@ -210,7 +218,7 @@ Commencez à basse vitesse et augmentez progressivement pour trouver votre inten
 </Callout>
 <Callout type="idea">
 
-Utilisez les pare-chocs pour changer de mode au toucher : vous n'avez pas besoin de regarder l'écran.
+Utilisez les boutons d'épaule pour changer de mode au toucher : vous n'avez pas besoin de regarder l'écran.
 
 </Callout>
 <Callout type="idea">

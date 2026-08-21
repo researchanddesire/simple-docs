@@ -1,80 +1,97 @@
 ---
-title: "Référence du modèle de trait RADR"
-description: "Comparez les modèles OSSM disponibles via RADR, leur comportement de mouvement, leur dépendance au micrologiciel et leur méthode de démarrage sécurisée."
+title: "Référence des motifs de course RADR"
+description: "Comparez les motifs OSSM disponibles via RADR, leur comportement de mouvement, leur dépendance au micrologiciel et leur méthode de démarrage sécurisée."
 ---
 
-RADR donne accès aux modèles de traits intégrés du OSSM. Les modèles sont chargés directement depuis votre OSSM lorsque vous vous connectez, les modèles disponibles dépendent donc de la version du micrologiciel de votre OSSM.
+RADR donne accès aux motifs de course intégrés de l'OSSM. Les motifs sont
+chargés directement depuis votre OSSM lorsque vous vous connectez ; les motifs
+disponibles dépendent donc de la version du micrologiciel de votre OSSM.
 
-![RADR pattern-selection screen with the highlighted pattern, its motion description, and select and back actions](<../../img/image (3).webp>)
+![Écran de sélection des motifs de RADR affichant le motif sélectionné, sa description du mouvement et les actions de sélection et de retour](<../../img/image (3).webp>)
 
-<Callout type="warn" title="Changer de modèle à vitesse nulle">
+<Callout type="warn" title="Changer de motif à vitesse nulle">
 
-Remettez la vitesse à zéro avant de sélectionner un modèle différent. Confirmez le nom en surbrillance et recommencez à basse vitesse ; les noms de modèles et le comportement peuvent changer avec le micrologiciel OSSM connecté.
+Remettez la vitesse à zéro avant de sélectionner un motif différent. Confirmez
+le nom en surbrillance et recommencez à basse vitesse. Les noms des motifs et
+leur comportement peuvent changer avec le micrologiciel de l'OSSM connecté.
 
 </Callout>
 
-## Accéder aux modèles
+## Accéder aux motifs
 
-Pour accéder au mode Modèle :
+Pour accéder au `Pattern Mode` :
 
 1. Connectez-vous à votre OSSM
-2. Depuis l'écran de contrôle, appuyez sur le **bouton droit (Motifs)**
-3. Utilisez le **encodeur droit** pour faire défiler les modèles disponibles
+2. Depuis l'écran de contrôle, appuyez sur le **bouton droit (`Patterns`)**
+3. Utilisez l'**encodeur droit** pour faire défiler les motifs disponibles
 4. Appuyez sur le **bouton droit** pour sélectionner un motif
 5. Appuyez sur le **bouton gauche** pour annuler sans modifier
 
 <Callout type="info">
 
-Les modèles sont chargés depuis votre OSSM lorsque vous vous connectez. La liste des modèles peut varier en fonction de la version de votre micrologiciel OSSM.
+Les motifs sont chargés depuis votre OSSM lorsque vous vous connectez. La liste
+des motifs peut varier en fonction de la version du micrologiciel de votre OSSM.
 
 </Callout>
-## Contrôles en mode Modèle
+## Contrôles en `Pattern Mode`
 
-| Contrôle | Actions |
+| Commande | Action |
 | ------------- | ----------------------------------- |
-| Encodeur droit | Faites défiler les modèles |
-| Encodeur gauche | Ajuster la vitesse (fonctionne toujours) |
-| Bouton droit | Sélectionnez le motif en surbrillance |
+| Encodeur droit | Faire défiler les motifs |
+| Encodeur gauche | Régler la vitesse (fonctionne toujours) |
+| Bouton droit | Sélectionner le motif en surbrillance |
 | Bouton gauche | Annuler et revenir à l'écran de contrôle |
-| Bouton du milieu | Pause et retour à l'écran de contrôle |
+| Bouton du milieu | Mettre en pause et revenir à l’écran de contrôle |
 
 <Callout type="idea">
 
-Le contrôle de vitesse (encodeur gauche) continue de fonctionner en mode Pattern, vous permettant d'ajuster l'intensité tout en parcourant les modèles.
+Le réglage de vitesse (encodeur gauche) continue de fonctionner dans le
+`Pattern Mode`, ce qui vous permet d'ajuster l'intensité tout en parcourant les
+motifs.
 
 </Callout>
-## Modèles disponibles
+## Motifs disponibles
 
-RADR affiche tous les modèles disponibles sur votre OSSM connecté. Le comportement du motif dépend de la version de votre micrologiciel OSSM, et la description à l'écran explique comment le paramètre de sensation affecte chaque motif.
+RADR affiche tous les motifs disponibles sur votre OSSM connecté. Le
+comportement des motifs dépend de la version du micrologiciel de votre OSSM, et
+la description à l'écran explique comment le paramètre `Sensation` affecte
+chaque motif.
 
-Cette page résume comment accéder et utiliser des modèles tels que Simple Stroke, Teasing or Pounding, Robo Stroke, Half'n'Half, Deeper, Stop'n'Go, Insist, et plus encore.
+Cette page résume comment accéder à des motifs tels que Simple Stroke, Teasing or Pounding, Robo Stroke, Half'n'Half, Deeper, Stop'n'Go et Insist, entre autres, et comment les utiliser.
 
 | Famille de motifs présentée par RADR | Caractéristique générale du mouvement | Que vérifier avant d'augmenter la vitesse |
 | ---------------------------- | --------------------------------------------------------- | -------------------------------------------------------------------- |
-| Course simple | Course de va-et-vient régulière | La plage de course et la profondeur correspondent à l'affichage |
-| Taquiner / Battre | Le caractère du mouvement change avec le contrôle des sensations | Le réglage bas se comporte comme prévu avant d'essayer un réglage plus fort |
-| Coup de robot | Variation mécaniquement régulière | Les transitions ne dépassent pas la plage prévue |
-| Moitié-moitié | Alterne entre deux sections de mouvement | Les deux sections restent dans la plage sélectionnée |
-| Plus profond | Biais le mouvement vers l'extrémité la plus profonde de la plage sélectionnée | Le point le plus profond reste clair et confortable |
+| Simple Stroke | Mouvement régulier de va-et-vient | La plage de `Stroke` et la profondeur correspondent à l'affichage |
+| Teasing / Pounding | Le caractère du mouvement change avec le réglage de `Sensation` | Le réglage bas se comporte comme prévu avant d'essayer un réglage plus fort |
+| Robo Stroke | Variation mécaniquement régulière | Les transitions ne dépassent pas la plage prévue |
+| Half'n'Half | Alterne entre deux sections de mouvement | Les deux sections restent dans la plage sélectionnée |
+| Deeper | Oriente le mouvement vers l'extrémité la plus profonde de la plage sélectionnée | Le point le plus profond reste clair et confortable |
 | Stop'n'Go | Comprend des pauses intentionnelles | Une pause programmée n'est pas confondue avec un contrôleur déconnecté |
-| Insister | Répète ou souligne une partie du trait | La répétition reste dans la position et la plage prévues |
+| Insist | Répète ou accentue une partie de la course | La répétition reste dans la position et la plage prévues |
 
-Il s'agit de descriptions d'orientation et non de spécifications de mouvement fixes. Le OSSM connecté fournit l'implémentation du modèle faisant autorité. Si son comportement à l'écran diffère de ce tableau, arrêtez, notez les deux versions du micrologiciel et [contact support](mailto:support@researchanddesire.com).
+Il s'agit de descriptions indicatives et non de spécifications de mouvement
+fixes. L'OSSM connecté fournit l'implémentation de référence des motifs. Si son
+comportement à l'écran diffère de ce tableau, arrêtez l’OSSM, notez les deux versions du micrologiciel et [contactez le support](mailto:support@researchanddesire.com).
 
 ## Conseils
 
 <Callout type="idea">
 
-Les modèles fonctionnent en combinaison avec votre réglage de vitesse. Un motif à une vitesse de 20 % est très différent du même motif à une vitesse de 80 %. Expérimentez avec différentes combinaisons.
+Les motifs fonctionnent en combinaison avec votre réglage de vitesse. Un motif
+à une vitesse de 20 % est très différent du même motif à une vitesse de 80 %.
+Expérimentez avec différentes combinaisons.
 
 </Callout>
 <Callout type="idea">
 
-Commencez par **Simple Stroke** pour vous familiariser avec les commandes, puis expérimentez d'autres modèles.
+Commencez par **Simple Stroke** pour vous familiariser avec les commandes, puis
+expérimentez avec d'autres motifs.
 
 </Callout>
 <Callout type="idea">
 
-De nouveaux modèles peuvent être ajoutés via les mises à jour du micrologiciel OSSM. Recherchez les mises à jour du micrologiciel pour accéder aux dernières bibliothèques de modèles.
+De nouveaux motifs peuvent être ajoutés via les mises à jour du micrologiciel
+OSSM. Recherchez les mises à jour du micrologiciel pour accéder aux dernières
+bibliothèques de motifs.
 
 </Callout>
