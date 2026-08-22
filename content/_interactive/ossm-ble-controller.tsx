@@ -31,7 +31,7 @@ import { Tabs, TabsContent, TabsList, TabsTrigger } from "@repo/ui/tabs";
 import { cn } from "@repo/ui/utils";
 import { captureDocsEvent } from "@repo/docs-kit/instrumentation-client";
 import { AlertCircle, Gauge } from "lucide-react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { useDebouncedCallback } from "use-debounce";
 
 export const OssmBleControllerCard = () => {
@@ -369,7 +369,11 @@ const checkBrowserSupport = (): boolean => {
 };
 
 export function OssmBleController() {
-  const [isSupported] = useState<boolean>(() => checkBrowserSupport());
+  const [isSupported, setIsSupported] = useState(false);
+
+  useEffect(() => {
+    setIsSupported(checkBrowserSupport());
+  }, []);
 
   if (!isSupported) {
     return (
