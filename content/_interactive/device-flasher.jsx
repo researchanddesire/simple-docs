@@ -4,7 +4,10 @@ import { useEffect, useMemo, useState } from "react";
 
 import { useEspWebToolsDialogCustomization } from "@repo/device-tools/esp-dialog-customization";
 import { loadEspWebTools } from "@repo/device-tools/esp-web-tools-loader";
-import { captureDocsEvent } from "@repo/docs-kit/instrumentation-client";
+import {
+  captureDocsEvent,
+  captureFirmwareFlashResult,
+} from "@repo/docs-kit/instrumentation-client";
 
 const DEVICE_CONFIGS = {
   dtt: {
@@ -45,6 +48,54 @@ const CHANNEL_LABELS = {
   alpha: "Alpha",
 };
 
+const FLASH_PHASES = new Set([
+  "initializing",
+  "preparing",
+  "erasing",
+  "writing",
+  "finished",
+  "error",
+  "totalMs",
+]);
+
+const readFlashResult = (value, expectedDevice) => {
+  if (!value || typeof value !== "object") return null;
+  if (
+    value.deviceType !== expectedDevice ||
+    typeof value.hardwareVariant !== "string" ||
+    !["production", "beta", "alpha"].includes(value.channel) ||
+    !Number.isFinite(value.payloadBytes) ||
+    !Number.isFinite(value.requestedBaudRate) ||
+    !Number.isFinite(value.effectiveBaudRate) ||
+    typeof value.fallbackUsed !== "boolean" ||
+    !["success", "failure"].includes(value.outcome) ||
+    !value.phaseTimings ||
+    typeof value.phaseTimings !== "object"
+  ) {
+    return null;
+  }
+  const phaseTimings = Object.fromEntries(
+    Object.entries(value.phaseTimings).filter(
+      ([phase, duration]) =>
+        FLASH_PHASES.has(phase) && Number.isFinite(duration),
+    ),
+  );
+  return {
+    device_type: value.deviceType,
+    hardware_variant: value.hardwareVariant,
+    channel: value.channel,
+    payload_bytes: value.payloadBytes,
+    requested_baud: value.requestedBaudRate,
+    effective_baud: value.effectiveBaudRate,
+    fallback_used: value.fallbackUsed,
+    phase_timings: phaseTimings,
+    outcome: value.outcome,
+    ...(typeof value.errorCategory === "string"
+      ? { error_category: value.errorCategory }
+      : {}),
+  };
+};
+
 const isCatalog = (value) =>
   value &&
   typeof value === "object" &&
@@ -75,9 +126,9 @@ const catalogUrl = (device, hardwareVariant) => {
 };
 
 /**
- * @param {{ device?: "dtt" | "lkbx" | "ossm" | "radr" }} props
+ * @param {{ device?: "dtt" | "lkbx" | "ossm" | "radr", onFlashResult?: (result: ReturnType<typeof readFlashResult>) => void }} props
  */
-export const DeviceFlasher = ({ device = "ossm" }) => {
+export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
   const config = DEVICE_CONFIGS[device] || DEVICE_CONFIGS.ossm;
   const normalizedDevice = DEVICE_CONFIGS[device] ? device : "ossm";
   const [catalogs, setCatalogs] = useState({});
@@ -98,6 +149,18 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
       console.error("Failed to load ESP Web Tools", error);
     });
   }, []);
+
+  useEffect(() => {
+    const recordFlashResult = (event) => {
+      const result = readFlashResult(event.detail, normalizedDevice);
+      if (!result) return;
+      if (onFlashResult) onFlashResult(result);
+      else captureFirmwareFlashResult(result);
+    };
+    window.addEventListener("rad-web-flash-event", recordFlashResult);
+    return () =>
+      window.removeEventListener("rad-web-flash-event", recordFlashResult);
+  }, [normalizedDevice, onFlashResult]);
 
   useEffect(() => {
     const controller = new AbortController();
