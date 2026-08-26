@@ -265,7 +265,8 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
         )}
         {!isLoading && !catalogError && targets.length === 0 && (
           <div className="rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900 dark:border-amber-700 dark:bg-amber-900/20 dark:text-amber-200">
-            No approved firmware is available for this hardware.
+            No approved firmware with a verified web installer is available for
+            this hardware.
           </div>
         )}
         {webSerialSupported === false && (
