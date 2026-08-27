@@ -31,7 +31,7 @@ const DEVICE_CONFIGS = {
     description:
       "Flash your Open Source Sex Machine with an approved firmware release.",
     connectInstructions: "Connect your OSSM to your computer via USB-C",
-    hardwareVariants: ["default"],
+    hardwareVariants: ["v1", "v2"],
   },
   radr: {
     name: "RADR",
@@ -261,7 +261,11 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
             onChange={(event) => selectHardwareVariant(event.target.value)}
             className="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-100"
           >
-            <option value="v1">V1 — Universal (4 MB)</option>
+            <option value="v1">
+              {normalizedDevice === "ossm"
+                ? "V1 — Universal (4 MB, Bluetooth disabled)"
+                : "V1 — Universal (4 MB)"}
+            </option>
             <option value="v2" disabled={!catalogs.v2?.targets?.length}>
               V2 — 16 MB hardware
               {!isLoading && !catalogs.v2?.targets?.length
@@ -272,12 +276,16 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
         </div>
       )}
 
-      {normalizedDevice === "dtt" && selectedHardwareVariant === "v2" && (
-        <div className="mb-4 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900 dark:border-amber-700 dark:bg-amber-900/20 dark:text-amber-200">
-          V2 requires confirmed 16 MB DTT hardware. If you are unsure, use the
-          universal V1 image.
-        </div>
-      )}
+      {(normalizedDevice === "dtt" || normalizedDevice === "ossm") &&
+        selectedHardwareVariant === "v2" && (
+          <div className="mb-4 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900 dark:border-amber-700 dark:bg-amber-900/20 dark:text-amber-200">
+            V2 requires confirmed 16 MB {config.name} hardware. If you are
+            unsure, use the 4 MB V1 image.
+            {normalizedDevice === "ossm"
+              ? " OSSM V1 omits Bluetooth to fit safely."
+              : ""}
+          </div>
+        )}
 
       <div className="mb-4 flex flex-col gap-1.5">
         <label
