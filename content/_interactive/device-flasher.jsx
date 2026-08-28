@@ -43,7 +43,17 @@ const CHANNEL_LABELS = {
   production: "Production (Stable)",
   beta: "Beta",
   alpha: "Alpha",
+  dev: "Dev (Latest)",
 };
+
+const QUERY_TRACKS = new Set(["beta", "alpha", "dev"]);
+
+const queryTrack = () => {
+  const track = new URLSearchParams(window.location.search).get("track");
+  return QUERY_TRACKS.has(track) ? track : null;
+};
+
+const requestedTrack = () => queryTrack() || "production";
 
 const isCatalog = (value) =>
   value &&
@@ -67,10 +77,13 @@ const catalogUrl = (device, hardwareVariant) => {
     "/api/firmware/v1/web-flasher/catalog",
     configuredOrigin || window.location.origin,
   );
-  url.search = new URLSearchParams({
+  const searchParams = new URLSearchParams({
     deviceType: device,
     hardwareVariant,
-  }).toString();
+  });
+  const track = queryTrack();
+  if (track) searchParams.set("track", track);
+  url.search = searchParams.toString();
   return url.toString();
 };
 
@@ -105,6 +118,7 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
     setCatalogError(null);
     setCatalogs({});
     setSelectedHardwareVariant(config.hardwareVariants[0]);
+    setSelectedChannel(requestedTrack());
 
     const loadCatalogs = async () => {
       try {
@@ -162,9 +176,10 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
   const selectHardwareVariant = (hardwareVariant) => {
     setSelectedHardwareVariant(hardwareVariant);
     const nextTargets = catalogs[hardwareVariant]?.targets ?? [];
+    const preferredTrack = requestedTrack();
     setSelectedChannel(
-      nextTargets.some(({ channel }) => channel === "production")
-        ? "production"
+      nextTargets.some(({ channel }) => channel === preferredTrack)
+        ? preferredTrack
         : nextTargets[0]?.channel || "production",
     );
   };
