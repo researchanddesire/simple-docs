@@ -272,8 +272,7 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
         )}
         {!isLoading && !catalogError && targets.length === 0 && (
           <div className="rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900 dark:border-amber-700 dark:bg-amber-900/20 dark:text-amber-200">
-            No approved firmware with a verified web installer is available for
-            this hardware.
+            No approved firmware is available for this hardware.
           </div>
         )}
         {!isLoading &&
@@ -282,9 +281,8 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
           !selectedTarget && (
             <div className="rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900 dark:border-amber-700 dark:bg-amber-900/20 dark:text-amber-200">
               No approved {CHANNEL_LABELS[selectedChannel] || selectedChannel}{" "}
-              firmware with a verified web installer is available for this
-              hardware. Choose an available channel or specify an approved track
-              in the URL.
+              firmware is available for this hardware. Choose an available
+              channel or specify an approved track in the URL.
             </div>
           )}
         {webSerialSupported === false && (
