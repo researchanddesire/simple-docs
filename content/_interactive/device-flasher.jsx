@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import { useEffect, useState } from "react";
 
 import { useEspWebToolsDialogCustomization } from "@repo/device-tools/esp-dialog-customization";
 import { loadEspWebTools } from "@repo/device-tools/esp-web-tools-loader";
@@ -162,26 +162,13 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
   }, [catalogLoadAttempt, config, normalizedDevice]);
 
   const targets = catalogs[selectedHardwareVariant]?.targets ?? [];
-  const selectedTarget = useMemo(
-    () =>
-      targets.find(({ channel }) => channel === selectedChannel) ?? targets[0],
-    [selectedChannel, targets],
+  const selectedTarget = targets.find(
+    ({ channel }) => channel === selectedChannel,
   );
-
-  useEffect(() => {
-    if (!selectedTarget) return;
-    setSelectedChannel(selectedTarget.channel);
-  }, [selectedTarget]);
 
   const selectHardwareVariant = (hardwareVariant) => {
     setSelectedHardwareVariant(hardwareVariant);
-    const nextTargets = catalogs[hardwareVariant]?.targets ?? [];
-    const preferredTrack = requestedTrack();
-    setSelectedChannel(
-      nextTargets.some(({ channel }) => channel === preferredTrack)
-        ? preferredTrack
-        : nextTargets[0]?.channel || "production",
-    );
+    setSelectedChannel(requestedTrack());
   };
 
   return (
@@ -241,11 +228,16 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
         <select
           id={`${normalizedDevice}-channel`}
           aria-label="Approved channel"
-          value={selectedTarget?.channel ?? ""}
+          value={selectedChannel}
           onChange={(event) => setSelectedChannel(event.target.value)}
           disabled={isLoading || targets.length === 0}
           className="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 disabled:cursor-not-allowed disabled:bg-zinc-100 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-100 dark:disabled:bg-zinc-950"
         >
+          {!selectedTarget && (
+            <option value={selectedChannel} disabled>
+              {CHANNEL_LABELS[selectedChannel] || selectedChannel} — unavailable
+            </option>
+          )}
           {targets.map((target) => (
             <option key={target.channel} value={target.channel}>
               {CHANNEL_LABELS[target.channel] || target.channel} — v
@@ -284,6 +276,17 @@ export const DeviceFlasher = ({ device = "ossm" }) => {
             this hardware.
           </div>
         )}
+        {!isLoading &&
+          !catalogError &&
+          targets.length > 0 &&
+          !selectedTarget && (
+            <div className="rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900 dark:border-amber-700 dark:bg-amber-900/20 dark:text-amber-200">
+              No approved {CHANNEL_LABELS[selectedChannel] || selectedChannel}{" "}
+              firmware with a verified web installer is available for this
+              hardware. Choose an available channel or specify an approved track
+              in the URL.
+            </div>
+          )}
         {webSerialSupported === false && (
           <div className="rounded-lg border border-red-300 bg-red-50 p-3 text-sm text-red-800 dark:border-red-700 dark:bg-red-900/20 dark:text-red-300">
             This browser cannot connect over USB. Open this page in Chrome or
