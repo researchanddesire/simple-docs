@@ -41,4 +41,4 @@ Wanneer dringend sleuteltoegang nodig is, ga dan direct naar [Safety and Emergen
 - [Restart the Lockbox](/lockbox/device-states/restarting)
 - [Flash or Recover Firmware](/lockbox/support/flashing)
 
-Als het fysieke apparaat en het dashboard het niet eens zijn, vertrouw dan geen van beide schermen totdat u de daadwerkelijke vergrendelingsstatus bevestigt. Houd het sleuteltoegangspad beschikbaar en neem contact op met [support@researchanddesire.com](mailto:support@researchanddesire.com).
+Als het fysieke apparaat en het dashboard het niet eens zijn, vertrouw dan geen van beide schermen totdat u de daadwerkelijke vergrendelingsstatus bevestigt. Houd het sleuteltoegangspad beschikbaar en neem contact op met [support@researchanddesire.com](https://www.researchanddesire.com/pages/contact-us).
