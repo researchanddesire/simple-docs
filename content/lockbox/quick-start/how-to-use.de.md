@@ -41,4 +41,4 @@ Wenn dringender Schlüsselzugriff erforderlich ist, gehen Sie direkt zu [Safety 
 - [Restart the Lockbox](/lockbox/device-states/restarting)
 - [Flash or Recover Firmware](/lockbox/support/flashing)
 
-Wenn das physische Gerät und das Dashboard nicht übereinstimmen, vertrauen Sie keiner Anzeige, bis Sie den tatsächlichen Sperrstatus bestätigt haben. Halten Sie den Schlüsselzugriffspfad bereit und wenden Sie sich an [support@researchanddesire.com](mailto:support@researchanddesire.com).
+Wenn das physische Gerät und das Dashboard nicht übereinstimmen, vertrauen Sie keiner Anzeige, bis Sie den tatsächlichen Sperrstatus bestätigt haben. Halten Sie den Schlüsselzugriffspfad bereit und wenden Sie sich an [support@researchanddesire.com](https://www.researchanddesire.com/pages/contact-us).

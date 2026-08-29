@@ -41,4 +41,4 @@ When urgent key access is needed, go directly to [Safety and Emergency Access](/
 - [Restart the Lockbox](/lockbox/device-states/restarting)
 - [Flash or Recover Firmware](/lockbox/support/flashing)
 
-If the physical device and dashboard disagree, trust neither display until you confirm the actual lock state. Keep the key-access path available and contact [support@researchanddesire.com](mailto:support@researchanddesire.com).
+If the physical device and dashboard disagree, trust neither display until you confirm the actual lock state. Keep the key-access path available and contact [support@researchanddesire.com](https://www.researchanddesire.com/pages/contact-us).

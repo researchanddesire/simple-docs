@@ -41,4 +41,4 @@ Lorsqu’un accès urgent à la clé est nécessaire, accédez directement à [S
 -[Restart the Lockbox](/lockbox/device-states/restarting)
 -[Flash or Recover Firmware](/lockbox/support/flashing)
 
-Si l'appareil physique et le tableau de bord ne sont pas d'accord, ne faites confiance à aucun des deux affichages jusqu'à ce que vous ayez confirmé l'état de verrouillage réel. Gardez le chemin d'accès à la clé disponible et contactez [support@researchanddesire.com](mailto:support@researchanddesire.com).
+Si l'appareil physique et le tableau de bord ne sont pas d'accord, ne faites confiance à aucun des deux affichages jusqu'à ce que vous ayez confirmé l'état de verrouillage réel. Gardez le chemin d'accès à la clé disponible et contactez [support@researchanddesire.com](https://www.researchanddesire.com/pages/contact-us).

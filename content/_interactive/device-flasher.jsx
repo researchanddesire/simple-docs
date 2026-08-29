@@ -47,6 +47,7 @@ const CHANNEL_LABELS = {
   production: "Production (Stable)",
   beta: "Beta",
   alpha: "Alpha",
+  dev: "Dev (Latest)",
 };
 
 const LKBX_HARDWARE_IDENTITIES = {
@@ -236,7 +237,7 @@ const readFlashResult = (value, expectedDevice) => {
   if (
     value.deviceType !== expectedDevice ||
     typeof value.hardwareVariant !== "string" ||
-    !["production", "beta", "alpha"].includes(value.channel) ||
+    !["production", "beta", "alpha", "dev"].includes(value.channel) ||
     !Number.isFinite(value.payloadBytes) ||
     !Number.isFinite(value.requestedBaudRate) ||
     !Number.isFinite(value.effectiveBaudRate) ||
@@ -269,6 +270,15 @@ const readFlashResult = (value, expectedDevice) => {
   };
 };
 
+const QUERY_TRACKS = new Set(["beta", "alpha", "dev"]);
+
+const queryTrack = () => {
+  const track = new URLSearchParams(window.location.search).get("track");
+  return QUERY_TRACKS.has(track) ? track : null;
+};
+
+const requestedTrack = () => queryTrack() || "production";
+
 const isCatalog = (value) =>
   value &&
   typeof value === "object" &&
@@ -291,10 +301,13 @@ const catalogUrl = (device, hardwareVariant) => {
     "/api/firmware/v1/web-flasher/catalog",
     configuredOrigin || window.location.origin,
   );
-  url.search = new URLSearchParams({
+  const searchParams = new URLSearchParams({
     deviceType: device,
     hardwareVariant,
-  }).toString();
+  });
+  const track = queryTrack();
+  if (track) searchParams.set("track", track);
+  url.search = searchParams.toString();
   return url.toString();
 };
 
@@ -309,6 +322,7 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
     config.hardwareVariants[0],
   );
   const [selectedTargetKey, setSelectedTargetKey] = useState("");
+  const [selectedChannel, setSelectedChannel] = useState(requestedTrack);
   const [catalogLoadAttempt, setCatalogLoadAttempt] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [catalogError, setCatalogError] = useState(null);
@@ -364,6 +378,7 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
     setCatalogs({});
     setSelectedHardwareVariant(config.hardwareVariants[0]);
     setSelectedTargetKey("");
+    setSelectedChannel(requestedTrack());
 
     const loadCatalogs = async () => {
       try {
@@ -419,22 +434,22 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
         : (catalogs[selectedHardwareVariant]?.targets ?? []),
     [catalogs, config, selectedHardwareVariant],
   );
-  const selectedTarget = useMemo(
-    () =>
-      targets.find(
-        (target) => targetSelectionKey(target) === selectedTargetKey,
-      ) ?? targets[0],
-    [selectedTargetKey, targets],
-  );
+  const selectedTarget = useMemo(() => {
+    if (selectedTargetKey) {
+      return (
+        targets.find(
+          (target) => targetSelectionKey(target) === selectedTargetKey,
+        ) ?? null
+      );
+    }
+    return targets.find(({ channel }) => channel === selectedChannel) ?? null;
+  }, [selectedChannel, selectedTargetKey, targets]);
   const activeTargetKey = selectedTarget
     ? targetSelectionKey(selectedTarget)
     : "";
-
-  useEffect(() => {
-    if (selectedTargetKey !== activeTargetKey) {
-      setSelectedTargetKey(activeTargetKey);
-    }
-  }, [activeTargetKey, selectedTargetKey]);
+  const selectedChannelValue = selectedTarget
+    ? activeTargetKey
+    : `unavailable:${selectedChannel}`;
 
   useEffect(() => {
     setPreparedAutomaticManifest(null);
@@ -485,11 +500,16 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
 
   const selectHardwareVariant = (hardwareVariant) => {
     setSelectedHardwareVariant(hardwareVariant);
-    const nextTargets = catalogs[hardwareVariant]?.targets ?? [];
-    const nextTarget =
-      nextTargets.find(({ channel }) => channel === "production") ??
-      nextTargets[0];
-    setSelectedTargetKey(nextTarget ? targetSelectionKey(nextTarget) : "");
+    setSelectedTargetKey("");
+    setSelectedChannel(requestedTrack());
+  };
+
+  const selectTarget = (targetKey) => {
+    const target = targets.find(
+      (candidate) => targetSelectionKey(candidate) === targetKey,
+    );
+    setSelectedTargetKey(targetKey);
+    if (target) setSelectedChannel(target.channel);
   };
 
   return (
@@ -602,11 +622,16 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
         <select
           id={`${normalizedDevice}-channel`}
           aria-label="Approved channel"
-          value={activeTargetKey}
-          onChange={(event) => setSelectedTargetKey(event.target.value)}
+          value={selectedChannelValue}
+          onChange={(event) => selectTarget(event.target.value)}
           disabled={isLoading || targets.length === 0}
           className="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 disabled:cursor-not-allowed disabled:bg-zinc-100 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-100 dark:disabled:bg-zinc-950"
         >
+          {!selectedTarget && (
+            <option value={selectedChannelValue} disabled>
+              {CHANNEL_LABELS[selectedChannel] || selectedChannel} — unavailable
+            </option>
+          )}
           {targets.map((target) => (
             <option
               key={targetSelectionKey(target)}
@@ -644,10 +669,19 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
         )}
         {!isLoading && !catalogError && targets.length === 0 && (
           <div className="rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900 dark:border-amber-700 dark:bg-amber-900/20 dark:text-amber-200">
-            No approved firmware with a verified web installer is available for
-            this hardware.
+            No approved firmware is available for this hardware.
           </div>
         )}
+        {!isLoading &&
+          !catalogError &&
+          targets.length > 0 &&
+          !selectedTarget && (
+            <div className="rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900 dark:border-amber-700 dark:bg-amber-900/20 dark:text-amber-200">
+              No approved {CHANNEL_LABELS[selectedChannel] || selectedChannel}{" "}
+              firmware is available for this hardware. Choose an available
+              channel or specify an approved track in the URL.
+            </div>
+          )}
         {webSerialSupported === false && (
           <div className="rounded-lg border border-red-300 bg-red-50 p-3 text-sm text-red-800 dark:border-red-700 dark:bg-red-900/20 dark:text-red-300">
             This browser cannot connect over USB. Open this page in Chrome or
