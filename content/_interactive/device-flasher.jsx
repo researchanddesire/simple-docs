@@ -322,7 +322,9 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
     config.hardwareVariants[0],
   );
   const [selectedTargetKey, setSelectedTargetKey] = useState("");
-  const [selectedChannel, setSelectedChannel] = useState(requestedTrack);
+  // Keep SSR and the first hydrated render identical; the effect below applies
+  // any browser-only track override once window is available.
+  const [selectedChannel, setSelectedChannel] = useState("production");
   const [catalogLoadAttempt, setCatalogLoadAttempt] = useState(0);
   const [isLoading, setIsLoading] = useState(true);
   const [catalogError, setCatalogError] = useState(null);
