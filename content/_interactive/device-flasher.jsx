@@ -52,13 +52,14 @@ const CHANNEL_LABELS = {
 
 const LKBX_HARDWARE_IDENTITIES = {
   r2: {
-    psramCapacityCode: 2,
-    pinPowerSelection: 0,
+    efuseTuples: [
+      { psramCapacityCode: 1, pinPowerSelection: 0 },
+      { psramCapacityCode: 2, pinPowerSelection: 0 },
+    ],
     label: "R2 — 2 MB Quad PSRAM",
   },
   r8: {
-    psramCapacityCode: 1,
-    pinPowerSelection: 1,
+    efuseTuples: [{ psramCapacityCode: 1, pinPowerSelection: 1 }],
     label: "R8 — 8 MB Octal PSRAM",
   },
 };
@@ -126,13 +127,16 @@ const automaticLkbxTargets = (catalogs) => {
         target.buildSha.toLowerCase() === r2?.buildSha.toLowerCase(),
     );
     const channelTargets = [];
-    const pairSupersedesLegacy =
+    const pairIsSelectable =
       r2 &&
       r8 &&
       (channel !== "production" ||
         !legacyUniversal ||
         isLaterFirmwareVersion(r2.version, legacyUniversal.version));
-    if (pairSupersedesLegacy) {
+    if (channel === "production" && legacyUniversalTarget) {
+      channelTargets.push(legacyUniversalTarget);
+    }
+    if (pairIsSelectable) {
       channelTargets.push({
         channel,
         version: r2.version,
@@ -140,9 +144,6 @@ const automaticLkbxTargets = (catalogs) => {
         selectionKey: `automatic:${channel}:${r2.version}:${r2.buildSha.toLowerCase()}`,
         automaticVariants: { r2, r8 },
       });
-    }
-    if (channel === "production" && legacyUniversalTarget) {
-      channelTargets.push(legacyUniversalTarget);
     }
     return channelTargets;
   });
@@ -173,12 +174,27 @@ const automaticLkbxManifest = async (target, signal) => {
   const manifests = Object.fromEntries(entries);
   const builds = entries.flatMap(([variant, manifest]) => {
     const identity = LKBX_HARDWARE_IDENTITIES[variant];
-    return manifest.builds.map((build) => ({
-      ...build,
-      rad_hardware_variant: variant,
-      rad_psram_cap: identity.psramCapacityCode,
-      rad_pin_power_selection: identity.pinPowerSelection,
-    }));
+    const identityFreeBuilds = manifest.builds.map(
+      ({
+        rad_hardware_variant: _hardwareVariant,
+        rad_psram_cap: _psramCapacityCode,
+        rad_pin_power_selection: _pinPowerSelection,
+        ...build
+      }) => build,
+    );
+    const uniqueBuilds = [
+      ...new Map(
+        identityFreeBuilds.map((build) => [JSON.stringify(build), build]),
+      ).values(),
+    ];
+    return uniqueBuilds.flatMap((build) =>
+      identity.efuseTuples.map(({ psramCapacityCode, pinPowerSelection }) => ({
+        ...build,
+        rad_hardware_variant: variant,
+        rad_psram_cap: psramCapacityCode,
+        rad_pin_power_selection: pinPowerSelection,
+      })),
+    );
   });
   const version =
     manifests.r2.version === manifests.r8.version
