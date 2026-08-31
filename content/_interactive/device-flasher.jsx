@@ -17,6 +17,7 @@ const DEVICE_CONFIGS = {
     connectInstructions:
       "Connect your Deepthroat Trainer to your computer via USB-C",
     hardwareVariants: ["v1", "v2"],
+    autoDetectHardware: true,
   },
   lkbx: {
     name: "LKBX",
@@ -33,6 +34,7 @@ const DEVICE_CONFIGS = {
       "Flash your Open Source Sex Machine with an approved firmware release.",
     connectInstructions: "Connect your OSSM to your computer via USB-C",
     hardwareVariants: ["v1", "v2"],
+    autoDetectHardware: true,
   },
   radr: {
     name: "RADR",
@@ -64,6 +66,11 @@ const LKBX_HARDWARE_IDENTITIES = {
   },
 };
 
+const FLASH_HARDWARE_IDENTITIES = {
+  v1: { flashSizeBytes: 4 * 1024 * 1024, label: "V1 — 4 MB flash" },
+  v2: { flashSizeBytes: 16 * 1024 * 1024, label: "V2 — 16 MB flash" },
+};
+
 const LKBX_LEGACY_UNIVERSAL_RELEASE = {
   channel: "production",
   version: "1.21.18",
@@ -83,6 +90,63 @@ const isLaterFirmwareVersion = (candidate, baseline) => {
   return false;
 };
 
+const hasSeparateFlashParts = (build) => {
+  if (
+    !["ESP32", "ESP32-S3"].includes(build?.chipFamily) ||
+    !Array.isArray(build.parts)
+  ) {
+    return false;
+  }
+  const parts = build.parts.map((part) => {
+    if (
+      !part ||
+      typeof part.path !== "string" ||
+      !Number.isSafeInteger(part.offset) ||
+      part.offset < 0
+    ) {
+      return null;
+    }
+    if (part.path.startsWith("data:")) {
+      return part.offset === 0xe000 &&
+        /^data:application\/octet-stream;base64,[A-Za-z0-9+/]+={0,2}$/.test(
+          part.path,
+        )
+        ? { ...part, filename: "boot_app0.bin" }
+        : null;
+    }
+    try {
+      const url = new URL(part.path, "https://firmware.invalid");
+      const filename = decodeURIComponent(url.pathname.split("/").at(-1));
+      if (
+        !["https:", "http:"].includes(url.protocol) ||
+        !filename ||
+        /(?:web[-_]?(?:flasher|installer)|merged).*\.bin$/i.test(filename)
+      ) {
+        return null;
+      }
+      return { ...part, filename };
+    } catch {
+      return null;
+    }
+  });
+  if (
+    parts.some((part) => !part) ||
+    new Set(parts.map((part) => part.offset)).size !== parts.length ||
+    new Set(parts.map((part) => part.filename)).size !== parts.length
+  ) {
+    return false;
+  }
+  // Core parts stay separate so a merged image can never overwrite the NVS gap.
+  return [
+    ["bootloader.bin", build.chipFamily === "ESP32" ? 0x1000 : 0],
+    ["partitions.bin", 0x8000],
+    ["boot_app0.bin", 0xe000],
+    ["firmware.bin", 0x10000],
+  ].every(([filename, offset]) =>
+    parts.some((part) => part.filename === filename && part.offset === offset),
+  );
+};
+
 const isInstallManifest = (value) =>
   value &&
   typeof value === "object" &&
@@ -90,13 +154,7 @@ const isInstallManifest = (value) =>
   typeof value.version === "string" &&
   Array.isArray(value.builds) &&
   value.builds.length > 0 &&
-  value.builds.every(
-    (build) =>
-      build &&
-      typeof build.chipFamily === "string" &&
-      Array.isArray(build.parts) &&
-      build.parts.length > 0,
-  );
+  value.builds.every(hasSeparateFlashParts);
 
 const automaticLkbxTargets = (catalogs) => {
   const defaultTargets = catalogs.default?.targets ?? [];
@@ -152,6 +210,104 @@ const automaticLkbxTargets = (catalogs) => {
 const targetSelectionKey = (target) =>
   target.selectionKey ??
   `release:${target.channel}:${target.releaseId}:${target.buildSha.toLowerCase()}`;
+
+const automaticFlashTargets = (catalogs, device) =>
+  Object.keys(CHANNEL_LABELS).flatMap((channel) => {
+    const entries = Object.keys(FLASH_HARDWARE_IDENTITIES).flatMap(
+      (variant) => {
+        const release = catalogs[variant]?.targets.find(
+          (target) => target.channel === channel,
+        );
+        return release ? [[variant, release]] : [];
+      },
+    );
+    if (entries.length === 0) return [];
+
+    // V1 and V2 have independent approved releases, unlike Lockbox R2/R8.
+    const versions = entries.map(
+      ([variant, release]) =>
+        `${FLASH_HARDWARE_IDENTITIES[variant].flashSizeBytes / (1024 * 1024)} MB v${release.version}`,
+    );
+    return [
+      {
+        channel,
+        version: versions.join(" / "),
+        displayVersion: versions.join(" / "),
+        selectionKey: `automatic:${device}:${channel}:${entries
+          .map(
+            ([variant, release]) => `${variant}:${targetSelectionKey(release)}`,
+          )
+          .join(":")}`,
+        automaticVariants: Object.fromEntries(entries),
+      },
+    ];
+  });
+
+const automaticFlashManifest = async (device, target, signal) => {
+  const builds = await Promise.all(
+    Object.entries(target.automaticVariants).map(async ([variant, release]) => {
+      const response = await fetch(release.manifestUrl, { signal });
+      if (response.status === 404) {
+        const unavailable = await response.json();
+        if (unavailable.code === "WEB_FLASH_PARTS_UNAVAILABLE") return [];
+      }
+      if (!response.ok) throw new Error(`${variant} manifest request failed`);
+      const manifest = await response.json();
+      const { flashSizeBytes } = FLASH_HARDWARE_IDENTITIES[variant];
+      if (
+        !isInstallManifest(manifest) ||
+        manifest.version !== release.version ||
+        manifest.rad_flash_context?.device_type !== device ||
+        manifest.rad_flash_context?.hardware_variant !== variant ||
+        manifest.rad_flash_context?.channel !== target.channel ||
+        manifest.builds.some(
+          (build) =>
+            build.chipFamily !== "ESP32" ||
+            (build.rad_hardware_variant !== undefined &&
+              build.rad_hardware_variant !== variant) ||
+            (build.rad_flash_size_bytes !== undefined &&
+              build.rad_flash_size_bytes !== flashSizeBytes) ||
+            // Cached V2 manifests from before detection used static 4 MB parts.
+            (variant === "v2" &&
+              (build.rad_hardware_variant !== variant ||
+                build.rad_flash_size_bytes !== flashSizeBytes ||
+                build.parts.some(
+                  (part) =>
+                    typeof part.md5 !== "string" ||
+                    !/^[0-9a-f]{32}$/i.test(part.md5),
+                ))),
+        )
+      ) {
+        throw new Error(`${variant} manifest identity is invalid`);
+      }
+      return manifest.builds.map((build) => ({
+        ...build,
+        rad_hardware_variant: variant,
+        rad_flash_size_bytes: flashSizeBytes,
+      }));
+    }),
+  );
+  const availableBuilds = builds.flat();
+  if (availableBuilds.length === 0) {
+    throw new Error("No approved installers are available for this channel");
+  }
+  const manifest = {
+    name: `${DEVICE_CONFIGS[device].name} ${target.channel} — automatic flash detection`,
+    version: target.version,
+    improv: false,
+    new_install_prompt_erase: true,
+    rad_flash_baud_rate: target.channel === "alpha" ? 460800 : 115200,
+    rad_flash_context: {
+      device_type: device,
+      hardware_variant: "auto",
+      channel: target.channel,
+    },
+    builds: availableBuilds,
+  };
+  return `data:application/json;charset=utf-8,${encodeURIComponent(
+    JSON.stringify(manifest),
+  )}`;
+};
 
 const automaticLkbxManifest = async (target, signal) => {
   const entries = await Promise.all(
@@ -218,12 +374,32 @@ const automaticLkbxManifest = async (target, signal) => {
   )}`;
 };
 
-const readHardwareDetection = (value) => {
+const readHardwareDetection = (value, expectedDevice) => {
   if (
     !value ||
     typeof value !== "object" ||
-    value.deviceType !== "lkbx" ||
-    typeof value.supported !== "boolean" ||
+    value.deviceType !== expectedDevice ||
+    typeof value.supported !== "boolean"
+  ) {
+    return null;
+  }
+  if (expectedDevice === "dtt" || expectedDevice === "ossm") {
+    if (
+      value.flashSizeBytes !== undefined &&
+      (!Number.isInteger(value.flashSizeBytes) || value.flashSizeBytes <= 0)
+    )
+      return null;
+    if (
+      value.supported &&
+      (!Object.hasOwn(FLASH_HARDWARE_IDENTITIES, value.hardwareVariant) ||
+        FLASH_HARDWARE_IDENTITIES[value.hardwareVariant].flashSizeBytes !==
+          value.flashSizeBytes)
+    )
+      return null;
+    return value;
+  }
+  if (
+    expectedDevice !== "lkbx" ||
     !Number.isInteger(value.psramCapacityCode) ||
     !Number.isInteger(value.pinPowerSelection)
   ) {
@@ -321,7 +497,11 @@ const catalogUrl = (device, hardwareVariant) => {
     deviceType: device,
     hardwareVariant,
   });
-  const track = queryTrack();
+  // Keep channel aliases in both capacity catalogs: deduplicating each lane
+  // separately can hide an approved counterpart for the selected channel.
+  const track =
+    queryTrack() ||
+    (device === "dtt" || device === "ossm" ? "production" : null);
   if (track) searchParams.set("track", track);
   url.search = searchParams.toString();
   return url.toString();
@@ -333,10 +513,7 @@ const catalogUrl = (device, hardwareVariant) => {
 export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
   const config = DEVICE_CONFIGS[device] || DEVICE_CONFIGS.ossm;
   const normalizedDevice = DEVICE_CONFIGS[device] ? device : "ossm";
-  const [catalogs, setCatalogs] = useState({});
-  const [selectedHardwareVariant, setSelectedHardwareVariant] = useState(
-    config.hardwareVariants[0],
-  );
+  const [catalogs, setCatalogs] = useState(null);
   const [selectedTargetKey, setSelectedTargetKey] = useState("");
   // Keep SSR and the first hydrated render identical; the effect below applies
   // any browser-only track override once window is available.
@@ -375,7 +552,7 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
   useEffect(() => {
     setHardwareDetection(null);
     const recordHardwareDetection = (event) => {
-      const detection = readHardwareDetection(event.detail);
+      const detection = readHardwareDetection(event.detail, normalizedDevice);
       if (detection) setHardwareDetection(detection);
     };
     window.addEventListener(
@@ -393,8 +570,7 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
     const controller = new AbortController();
     setIsLoading(true);
     setCatalogError(null);
-    setCatalogs({});
-    setSelectedHardwareVariant(config.hardwareVariants[0]);
+    setCatalogs(null);
     setSelectedTargetKey("");
     setSelectedChannel(requestedTrack());
 
@@ -420,8 +596,11 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
         if (entries.length === 0) {
           throw new Error("No firmware catalog request succeeded");
         }
-        const nextCatalogs = Object.fromEntries(entries);
-        setCatalogs(nextCatalogs);
+        if (controller.signal.aborted) return;
+        setCatalogs({
+          device: normalizedDevice,
+          variants: Object.fromEntries(entries),
+        });
         captureDocsEvent("docs_tool_used", {
           action: "completed",
           tool_key: "firmware-flasher-catalog",
@@ -445,13 +624,15 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
     return () => controller.abort();
   }, [catalogLoadAttempt, config, normalizedDevice]);
 
-  const targets = useMemo(
-    () =>
-      config.autoDetectHardware
-        ? automaticLkbxTargets(catalogs)
-        : (catalogs[selectedHardwareVariant]?.targets ?? []),
-    [catalogs, config, selectedHardwareVariant],
-  );
+  const targets = useMemo(() => {
+    if (catalogs?.device !== normalizedDevice) return [];
+    if (config.autoDetectHardware) {
+      return normalizedDevice === "lkbx"
+        ? automaticLkbxTargets(catalogs.variants)
+        : automaticFlashTargets(catalogs.variants, normalizedDevice);
+    }
+    return catalogs.variants[config.hardwareVariants[0]]?.targets ?? [];
+  }, [catalogs, config, normalizedDevice]);
   const selectedTarget = useMemo(() => {
     if (selectedTargetKey) {
       return (
@@ -478,10 +659,14 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
     const controller = new AbortController();
     const prepareManifest = async () => {
       try {
-        const manifestUrl = await automaticLkbxManifest(
-          selectedTarget,
-          controller.signal,
-        );
+        const manifestUrl =
+          normalizedDevice === "lkbx"
+            ? await automaticLkbxManifest(selectedTarget, controller.signal)
+            : await automaticFlashManifest(
+                normalizedDevice,
+                selectedTarget,
+                controller.signal,
+              );
         if (controller.signal.aborted) return;
         setPreparedAutomaticManifest({
           targetKey: activeTargetKey,
@@ -489,17 +674,19 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
         });
       } catch (error) {
         if (controller.signal.aborted) return;
-        console.error("Failed to prepare automatic LKBX manifest", error);
+        console.error("Failed to prepare automatic firmware manifest", error);
         setPreparedAutomaticManifestError({
           targetKey: activeTargetKey,
           message:
-            "Matching R2 and R8 installers could not be prepared. No firmware will be written.",
+            normalizedDevice === "lkbx"
+              ? "Matching R2 and R8 installers could not be prepared. No firmware will be written."
+              : "Matching 4 MB and 16 MB installers could not be prepared. No firmware will be written.",
         });
       }
     };
     void prepareManifest();
     return () => controller.abort();
-  }, [activeTargetKey, config, selectedTarget]);
+  }, [activeTargetKey, config, normalizedDevice, selectedTarget]);
 
   const automaticManifestUrl =
     preparedAutomaticManifest?.targetKey === activeTargetKey
@@ -516,11 +703,15 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
       ? automaticManifestUrl
       : selectedTarget?.manifestUrl;
 
-  const selectHardwareVariant = (hardwareVariant) => {
-    setSelectedHardwareVariant(hardwareVariant);
-    setSelectedTargetKey("");
-    setSelectedChannel(requestedTrack());
-  };
+  // Hardware status updates must not replace the connected custom element.
+  const installerMarkup = useMemo(
+    () => ({
+      __html: `<esp-web-install-button manifest="${installerManifestUrl}">
+                  <button slot="activate" style="background-color: #8b5cf6; color: white; padding: 10px 24px; border-radius: 9999px; font-weight: 500; border: none; cursor: pointer;">Connect &amp; Flash</button>
+                </esp-web-install-button>`,
+    }),
+    [installerManifestUrl],
+  );
 
   const selectTarget = (targetKey) => {
     const target = targets.find(
@@ -544,47 +735,6 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
         </p>
       </div>
 
-      {config.hardwareVariants.length > 1 && !config.autoDetectHardware && (
-        <div className="mb-4 flex flex-col gap-1.5">
-          <label
-            htmlFor={`${normalizedDevice}-hardware`}
-            className="text-sm font-medium text-zinc-500 dark:text-zinc-400"
-          >
-            Hardware
-          </label>
-          <select
-            id={`${normalizedDevice}-hardware`}
-            aria-label="Hardware"
-            value={selectedHardwareVariant}
-            onChange={(event) => selectHardwareVariant(event.target.value)}
-            className="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-100"
-          >
-            <option value="v1">
-              {normalizedDevice === "ossm"
-                ? "V1 — Universal (4 MB, Bluetooth disabled)"
-                : "V1 — Universal (4 MB)"}
-            </option>
-            <option value="v2" disabled={!catalogs.v2?.targets?.length}>
-              V2 — 16 MB hardware
-              {!isLoading && !catalogs.v2?.targets?.length
-                ? " (Unavailable)"
-                : ""}
-            </option>
-          </select>
-        </div>
-      )}
-
-      {(normalizedDevice === "dtt" || normalizedDevice === "ossm") &&
-        selectedHardwareVariant === "v2" && (
-          <div className="mb-4 rounded-lg border border-amber-300 bg-amber-50 p-3 text-sm text-amber-900 dark:border-amber-700 dark:bg-amber-900/20 dark:text-amber-200">
-            V2 requires confirmed 16 MB {config.name} hardware. If you are
-            unsure, use the 4 MB V1 image.
-            {normalizedDevice === "ossm"
-              ? " OSSM V1 omits Bluetooth to fit safely."
-              : ""}
-          </div>
-        )}
-
       {config.autoDetectHardware && selectedTarget?.legacyUniversal && (
         <div className="mb-4 rounded-lg border border-sky-300 bg-sky-50 p-3 text-sm text-sky-900 dark:border-sky-700 dark:bg-sky-900/20 dark:text-sky-200">
           LKBX production v1.21.18 is universal for R2 and R8 hardware. It
@@ -607,8 +757,11 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
             <>
               Detected{" "}
               {
-                LKBX_HARDWARE_IDENTITIES[hardwareDetection.hardwareVariant]
-                  .label
+                (normalizedDevice === "lkbx"
+                  ? LKBX_HARDWARE_IDENTITIES
+                  : FLASH_HARDWARE_IDENTITIES)[
+                  hardwareDetection.hardwareVariant
+                ].label
               }
               {hardwareDetection.macAddress
                 ? ` (${hardwareDetection.macAddress})`
@@ -616,15 +769,36 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
               . The matching installer was selected automatically.
             </>
           ) : hardwareDetection?.supported === false ? (
-            <>
-              Unsupported PSRAM identity: capacity code{" "}
-              {hardwareDetection.psramCapacityCode}, power selection{" "}
-              {hardwareDetection.pinPowerSelection}. Nothing was written.
-            </>
-          ) : (
+            normalizedDevice === "lkbx" ? (
+              <>
+                Unsupported PSRAM identity: capacity code{" "}
+                {hardwareDetection.psramCapacityCode}, power selection{" "}
+                {hardwareDetection.pinPowerSelection}. Nothing was written.
+              </>
+            ) : (
+              <>
+                No matching installer is available for the detected flash
+                capacity
+                {hardwareDetection.flashSizeBytes
+                  ? ` (${hardwareDetection.flashSizeBytes / (1024 * 1024)} MB)`
+                  : " (unknown)"}
+                . Nothing was written.
+              </>
+            )
+          ) : normalizedDevice === "lkbx" ? (
             <>
               R2/R8 selection is automatic. After you choose the USB device, the
               flasher reads its factory PSRAM identity before writing.
+            </>
+          ) : (
+            <>
+              4 MB / 16 MB selection is automatic. After you choose the USB
+              device, the flasher reads its physical flash capacity and selects
+              the approved V1 or V2 installer before writing. If a matching
+              build is unavailable, nothing will be written.
+              {normalizedDevice === "ossm"
+                ? " OSSM V1 omits Bluetooth to fit in 4 MB."
+                : ""}
             </>
           )}
         </div>
@@ -713,7 +887,9 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
           !installerManifestUrl &&
           !automaticManifestError && (
             <p className="text-sm text-zinc-500 dark:text-zinc-400">
-              Preparing automatic R2/R8 detection...
+              Preparing automatic{" "}
+              {normalizedDevice === "lkbx" ? "R2/R8" : "4 MB / 16 MB"}{" "}
+              detection...
             </p>
           )}
         {automaticManifestError && (
@@ -732,11 +908,7 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
                   tool_key: "firmware-flasher",
                 })
               }
-              dangerouslySetInnerHTML={{
-                __html: `<esp-web-install-button manifest="${installerManifestUrl}">
-                  <button slot="activate" style="background-color: #8b5cf6; color: white; padding: 10px 24px; border-radius: 9999px; font-weight: 500; border: none; cursor: pointer;">Connect &amp; Flash</button>
-                </esp-web-install-button>`,
-              }}
+              dangerouslySetInnerHTML={installerMarkup}
             />
           )}
       </div>
