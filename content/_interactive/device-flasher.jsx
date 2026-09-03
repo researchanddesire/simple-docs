@@ -294,7 +294,7 @@ const automaticFlashManifest = async (device, target, signal) => {
   const manifest = {
     name: `${DEVICE_CONFIGS[device].name} ${target.channel} — automatic flash detection`,
     version: target.version,
-    improv: false,
+    new_install_improv_wait_time: 0,
     new_install_prompt_erase: true,
     rad_flash_baud_rate: target.channel === "alpha" ? 460800 : 115200,
     rad_flash_context: {
@@ -359,7 +359,7 @@ const automaticLkbxManifest = async (target, signal) => {
   const manifest = {
     name: `LKBX ${target.channel} — automatic R2/R8 detection`,
     version,
-    improv: false,
+    new_install_improv_wait_time: 0,
     new_install_prompt_erase: true,
     rad_flash_baud_rate: 115200,
     rad_flash_context: {
