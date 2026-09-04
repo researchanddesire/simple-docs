@@ -156,6 +156,34 @@ const isInstallManifest = (value) =>
   value.builds.length > 0 &&
   value.builds.every(hasSeparateFlashParts);
 
+const manifestWithPreferredBaudRate = async (
+  manifestUrl,
+  preferredBaudRate,
+  signal,
+  expectedIdentity,
+) => {
+  if (!preferredBaudRate) return manifestUrl;
+  const response = await fetch(manifestUrl, { signal });
+  if (!response.ok) throw new Error("Firmware manifest request failed");
+  const manifest = await response.json();
+  if (
+    !isInstallManifest(manifest) ||
+    manifest.version !== expectedIdentity.version ||
+    manifest.rad_flash_context?.device_type !== expectedIdentity.device ||
+    manifest.rad_flash_context?.hardware_variant !==
+      expectedIdentity.hardwareVariant ||
+    manifest.rad_flash_context?.channel !== expectedIdentity.channel
+  ) {
+    throw new Error("Firmware manifest is invalid");
+  }
+  return `data:application/json;charset=utf-8,${encodeURIComponent(
+    JSON.stringify({
+      ...manifest,
+      rad_flash_baud_rate: preferredBaudRate,
+    }),
+  )}`;
+};
+
 const automaticLkbxTargets = (catalogs) => {
   const defaultTargets = catalogs.default?.targets ?? [];
   const r2Targets = catalogs.r2?.targets ?? [];
@@ -243,7 +271,12 @@ const automaticFlashTargets = (catalogs, device) =>
     ];
   });
 
-const automaticFlashManifest = async (device, target, signal) => {
+const automaticFlashManifest = async (
+  device,
+  target,
+  signal,
+  preferredBaudRate,
+) => {
   const builds = await Promise.all(
     Object.entries(target.automaticVariants).map(async ([variant, release]) => {
       const response = await fetch(release.manifestUrl, { signal });
@@ -296,7 +329,8 @@ const automaticFlashManifest = async (device, target, signal) => {
     version: target.version,
     improv: false,
     new_install_prompt_erase: true,
-    rad_flash_baud_rate: target.channel === "alpha" ? 460800 : 115200,
+    rad_flash_baud_rate:
+      preferredBaudRate ?? (target.channel === "alpha" ? 460800 : 115200),
     rad_flash_context: {
       device_type: device,
       hardware_variant: "auto",
@@ -309,7 +343,7 @@ const automaticFlashManifest = async (device, target, signal) => {
   )}`;
 };
 
-const automaticLkbxManifest = async (target, signal) => {
+const automaticLkbxManifest = async (target, signal, preferredBaudRate) => {
   const entries = await Promise.all(
     Object.entries(target.automaticVariants).map(async ([variant, release]) => {
       const response = await fetch(release.manifestUrl, { signal });
@@ -361,7 +395,7 @@ const automaticLkbxManifest = async (target, signal) => {
     version,
     improv: false,
     new_install_prompt_erase: true,
-    rad_flash_baud_rate: 115200,
+    rad_flash_baud_rate: preferredBaudRate ?? 115200,
     rad_flash_context: {
       device_type: "lkbx",
       hardware_variant: "auto",
@@ -469,7 +503,8 @@ const queryTrack = () => {
   return QUERY_TRACKS.has(track) ? track : null;
 };
 
-const requestedTrack = () => queryTrack() || "production";
+const requestedTrack = (productionOnly) =>
+  productionOnly ? "production" : queryTrack() || "production";
 
 const isCatalog = (value) =>
   value &&
@@ -486,8 +521,32 @@ const isCatalog = (value) =>
       typeof target.manifestUrl === "string",
   );
 
-const catalogUrl = (device, hardwareVariant) => {
+const hasExpectedManifestOrigin = (
+  catalog,
+  controlPlaneOrigin,
+  productionOnly,
+) => {
+  if (!controlPlaneOrigin) return true;
+  try {
+    const expectedOrigin = new URL(controlPlaneOrigin).origin;
+    return catalog.targets
+      .filter(({ channel }) => !productionOnly || channel === "production")
+      .every(
+        ({ manifestUrl }) => new URL(manifestUrl).origin === expectedOrigin,
+      );
+  } catch {
+    return false;
+  }
+};
+
+const catalogUrl = (
+  device,
+  hardwareVariant,
+  controlPlaneOrigin,
+  productionOnly,
+) => {
   const configuredOrigin =
+    controlPlaneOrigin?.trim() ||
     process.env.NEXT_PUBLIC_FIRMWARE_CONTROL_PLANE_ORIGIN?.trim();
   const url = new URL(
     "/api/firmware/v1/web-flasher/catalog",
@@ -500,7 +559,7 @@ const catalogUrl = (device, hardwareVariant) => {
   // Keep channel aliases in both capacity catalogs: deduplicating each lane
   // separately can hide an approved counterpart for the selected channel.
   const track =
-    queryTrack() ||
+    (productionOnly ? "production" : queryTrack()) ||
     (device === "dtt" || device === "ossm" ? "production" : null);
   if (track) searchParams.set("track", track);
   url.search = searchParams.toString();
@@ -508,9 +567,17 @@ const catalogUrl = (device, hardwareVariant) => {
 };
 
 /**
- * @param {{ device?: "dtt" | "lkbx" | "ossm" | "radr", onFlashResult?: (result: ReturnType<typeof readFlashResult>) => void }} props
+ * @param {{ device?: "dtt" | "lkbx" | "ossm" | "radr", onFlashResult?: (result: ReturnType<typeof readFlashResult>) => void, controlPlaneOrigin?: string, productionOnly?: boolean, preferredBaudRate?: 115200 | 460800, title?: string, description?: string }} props
  */
-export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
+export const DeviceFlasher = ({
+  device = "ossm",
+  onFlashResult,
+  controlPlaneOrigin,
+  productionOnly = false,
+  preferredBaudRate,
+  title,
+  description,
+}) => {
   const config = DEVICE_CONFIGS[device] || DEVICE_CONFIGS.ossm;
   const normalizedDevice = DEVICE_CONFIGS[device] ? device : "ossm";
   const [catalogs, setCatalogs] = useState(null);
@@ -525,6 +592,10 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
   const [preparedAutomaticManifest, setPreparedAutomaticManifest] =
     useState(null);
   const [preparedAutomaticManifestError, setPreparedAutomaticManifestError] =
+    useState(null);
+  const [preparedPreferredManifest, setPreparedPreferredManifest] =
+    useState(null);
+  const [preparedPreferredManifestError, setPreparedPreferredManifestError] =
     useState(null);
   const [hardwareDetection, setHardwareDetection] = useState(null);
 
@@ -572,18 +643,32 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
     setCatalogError(null);
     setCatalogs(null);
     setSelectedTargetKey("");
-    setSelectedChannel(requestedTrack());
+    setSelectedChannel(requestedTrack(productionOnly));
 
     const loadCatalogs = async () => {
       try {
         const loadCatalog = async (hardwareVariant) => {
           const response = await fetch(
-            catalogUrl(normalizedDevice, hardwareVariant),
+            catalogUrl(
+              normalizedDevice,
+              hardwareVariant,
+              controlPlaneOrigin,
+              productionOnly,
+            ),
             { signal: controller.signal },
           );
           if (!response.ok) throw new Error("Firmware catalog request failed");
           const catalog = await response.json();
-          if (!isCatalog(catalog)) throw new Error("Invalid firmware catalog");
+          if (
+            !isCatalog(catalog) ||
+            !hasExpectedManifestOrigin(
+              catalog,
+              controlPlaneOrigin,
+              productionOnly,
+            )
+          ) {
+            throw new Error("Invalid firmware catalog");
+          }
           return [hardwareVariant, catalog];
         };
         const entries = config.autoDetectHardware
@@ -622,17 +707,32 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
 
     void loadCatalogs();
     return () => controller.abort();
-  }, [catalogLoadAttempt, config, normalizedDevice]);
+  }, [
+    catalogLoadAttempt,
+    config,
+    controlPlaneOrigin,
+    normalizedDevice,
+    productionOnly,
+  ]);
 
   const targets = useMemo(() => {
     if (catalogs?.device !== normalizedDevice) return [];
-    if (config.autoDetectHardware) {
-      return normalizedDevice === "lkbx"
+    const availableTargets = config.autoDetectHardware
+      ? normalizedDevice === "lkbx"
         ? automaticLkbxTargets(catalogs.variants)
-        : automaticFlashTargets(catalogs.variants, normalizedDevice);
-    }
-    return catalogs.variants[config.hardwareVariants[0]]?.targets ?? [];
-  }, [catalogs, config, normalizedDevice]);
+        : automaticFlashTargets(catalogs.variants, normalizedDevice)
+      : (catalogs.variants[config.hardwareVariants[0]]?.targets ?? []);
+    if (!productionOnly) return availableTargets;
+    const productionTargets = availableTargets.filter(
+      ({ channel }) => channel === "production",
+    );
+    const hardwareSpecificTarget = productionTargets.find(
+      ({ legacyUniversal }) => !legacyUniversal,
+    );
+    return hardwareSpecificTarget
+      ? [hardwareSpecificTarget]
+      : productionTargets.slice(0, 1);
+  }, [catalogs, config, normalizedDevice, productionOnly]);
   const selectedTarget = useMemo(() => {
     if (selectedTargetKey) {
       return (
@@ -661,11 +761,16 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
       try {
         const manifestUrl =
           normalizedDevice === "lkbx"
-            ? await automaticLkbxManifest(selectedTarget, controller.signal)
+            ? await automaticLkbxManifest(
+                selectedTarget,
+                controller.signal,
+                preferredBaudRate,
+              )
             : await automaticFlashManifest(
                 normalizedDevice,
                 selectedTarget,
                 controller.signal,
+                preferredBaudRate,
               );
         if (controller.signal.aborted) return;
         setPreparedAutomaticManifest({
@@ -686,7 +791,65 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
     };
     void prepareManifest();
     return () => controller.abort();
-  }, [activeTargetKey, config, normalizedDevice, selectedTarget]);
+  }, [
+    activeTargetKey,
+    config,
+    normalizedDevice,
+    preferredBaudRate,
+    selectedTarget,
+  ]);
+
+  useEffect(() => {
+    setPreparedPreferredManifest(null);
+    setPreparedPreferredManifestError(null);
+    if (
+      !selectedTarget ||
+      selectedTarget.automaticVariants ||
+      !preferredBaudRate
+    ) {
+      return;
+    }
+    const controller = new AbortController();
+    const prepareManifest = async () => {
+      try {
+        const manifestUrl = await manifestWithPreferredBaudRate(
+          selectedTarget.manifestUrl,
+          preferredBaudRate,
+          controller.signal,
+          {
+            device: normalizedDevice,
+            hardwareVariant: selectedTarget.legacyUniversal
+              ? "default"
+              : config.hardwareVariants[0],
+            channel: selectedTarget.channel,
+            version: selectedTarget.version,
+          },
+        );
+        if (!controller.signal.aborted) {
+          setPreparedPreferredManifest({
+            targetKey: activeTargetKey,
+            manifestUrl,
+          });
+        }
+      } catch (error) {
+        if (controller.signal.aborted) return;
+        console.error("Failed to prepare preferred-speed manifest", error);
+        setPreparedPreferredManifestError({
+          targetKey: activeTargetKey,
+          message:
+            "The production installer could not be prepared. No firmware will be written.",
+        });
+      }
+    };
+    void prepareManifest();
+    return () => controller.abort();
+  }, [
+    activeTargetKey,
+    config,
+    normalizedDevice,
+    preferredBaudRate,
+    selectedTarget,
+  ]);
 
   const automaticManifestUrl =
     preparedAutomaticManifest?.targetKey === activeTargetKey
@@ -696,11 +859,19 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
     preparedAutomaticManifestError?.targetKey === activeTargetKey
       ? preparedAutomaticManifestError.message
       : null;
+  const preferredManifestUrl =
+    preparedPreferredManifest?.targetKey === activeTargetKey
+      ? preparedPreferredManifest.manifestUrl
+      : null;
+  const preferredManifestError =
+    preparedPreferredManifestError?.targetKey === activeTargetKey
+      ? preparedPreferredManifestError.message
+      : null;
 
-  const installerManifestUrl = selectedTarget?.legacyUniversal
-    ? selectedTarget.manifestUrl
-    : config.autoDetectHardware
-      ? automaticManifestUrl
+  const installerManifestUrl = selectedTarget?.automaticVariants
+    ? automaticManifestUrl
+    : preferredBaudRate
+      ? preferredManifestUrl
       : selectedTarget?.manifestUrl;
 
   // Hardware status updates must not replace the connected custom element.
@@ -728,10 +899,10 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
     >
       <div className="mb-4">
         <h2 className="text-xl font-semibold text-zinc-900 dark:text-zinc-100">
-          {config.name} Web Flasher
+          {title ?? `${config.name} Web Flasher`}
         </h2>
         <p className="mt-1 text-sm text-zinc-500 dark:text-zinc-400">
-          {config.description}
+          {description ?? config.description}
         </p>
       </div>
 
@@ -804,37 +975,51 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
         </div>
       )}
 
-      <div className="mb-4 flex flex-col gap-1.5">
-        <label
-          htmlFor={`${normalizedDevice}-channel`}
-          className="text-sm font-medium text-zinc-500 dark:text-zinc-400"
-        >
-          Approved channel
-        </label>
-        <select
-          id={`${normalizedDevice}-channel`}
-          aria-label="Approved channel"
-          value={selectedChannelValue}
-          onChange={(event) => selectTarget(event.target.value)}
-          disabled={isLoading || targets.length === 0}
-          className="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 disabled:cursor-not-allowed disabled:bg-zinc-100 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-100 dark:disabled:bg-zinc-950"
-        >
-          {!selectedTarget && (
-            <option value={selectedChannelValue} disabled>
-              {CHANNEL_LABELS[selectedChannel] || selectedChannel} — unavailable
-            </option>
-          )}
-          {targets.map((target) => (
-            <option
-              key={targetSelectionKey(target)}
-              value={targetSelectionKey(target)}
-            >
-              {CHANNEL_LABELS[target.channel] || target.channel} —{" "}
-              {target.displayVersion || `v${target.version}`}
-            </option>
-          ))}
-        </select>
-      </div>
+      {productionOnly ? (
+        <div className="mb-4 flex items-center justify-between rounded-lg border border-emerald-200 bg-emerald-50 px-3 py-2.5 text-sm dark:border-emerald-800 dark:bg-emerald-950/30">
+          <span className="font-medium text-emerald-900 dark:text-emerald-200">
+            Production firmware
+          </span>
+          <span className="font-mono text-emerald-700 dark:text-emerald-300">
+            {selectedTarget
+              ? selectedTarget.displayVersion || `v${selectedTarget.version}`
+              : "Checking…"}
+          </span>
+        </div>
+      ) : (
+        <div className="mb-4 flex flex-col gap-1.5">
+          <label
+            htmlFor={`${normalizedDevice}-channel`}
+            className="text-sm font-medium text-zinc-500 dark:text-zinc-400"
+          >
+            Approved channel
+          </label>
+          <select
+            id={`${normalizedDevice}-channel`}
+            aria-label="Approved channel"
+            value={selectedChannelValue}
+            onChange={(event) => selectTarget(event.target.value)}
+            disabled={isLoading || targets.length === 0}
+            className="w-full rounded-lg border border-zinc-300 bg-white px-3 py-2 text-sm text-zinc-900 disabled:cursor-not-allowed disabled:bg-zinc-100 dark:border-zinc-600 dark:bg-zinc-800 dark:text-zinc-100 dark:disabled:bg-zinc-950"
+          >
+            {!selectedTarget && (
+              <option value={selectedChannelValue} disabled>
+                {CHANNEL_LABELS[selectedChannel] || selectedChannel} —
+                unavailable
+              </option>
+            )}
+            {targets.map((target) => (
+              <option
+                key={targetSelectionKey(target)}
+                value={targetSelectionKey(target)}
+              >
+                {CHANNEL_LABELS[target.channel] || target.channel} —{" "}
+                {target.displayVersion || `v${target.version}`}
+              </option>
+            ))}
+          </select>
+        </div>
+      )}
 
       <div className="mb-4 pt-2">
         {isLoading && (
@@ -897,6 +1082,22 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
             {automaticManifestError}
           </div>
         )}
+        {preferredManifestError && (
+          <div className="rounded-lg border border-red-300 bg-red-50 p-3 text-sm text-red-800 dark:border-red-700 dark:bg-red-900/20 dark:text-red-300">
+            {preferredManifestError}
+          </div>
+        )}
+        {!isLoading &&
+          !catalogError &&
+          selectedTarget &&
+          !selectedTarget.automaticVariants &&
+          preferredBaudRate &&
+          !installerManifestUrl &&
+          !preferredManifestError && (
+            <p className="text-sm text-zinc-500 dark:text-zinc-400">
+              Preparing the high-speed production installer…
+            </p>
+          )}
         {!isLoading &&
           !catalogError &&
           webSerialSupported !== false &&
@@ -919,7 +1120,11 @@ export const DeviceFlasher = ({ device = "ossm", onFlashResult }) => {
         </p>
         <ol className="mt-2 list-inside list-decimal space-y-1 text-zinc-600 dark:text-zinc-400">
           <li>{config.connectInstructions}</li>
-          <li>Select an available approved channel</li>
+          <li>
+            {productionOnly
+              ? "Confirm the production version shown above"
+              : "Select an available approved channel"}
+          </li>
           <li>Click the "Connect & Flash" button</li>
           <li>Select your {config.name} from the device list</li>
           <li>Wait for the flash to complete</li>
