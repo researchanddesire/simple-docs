@@ -219,9 +219,6 @@ const automaticLkbxTargets = (catalogs) => {
       (channel !== "production" ||
         !legacyUniversal ||
         isLaterFirmwareVersion(r2.version, legacyUniversal.version));
-    if (channel === "production" && legacyUniversalTarget) {
-      channelTargets.push(legacyUniversalTarget);
-    }
     if (pairIsSelectable) {
       channelTargets.push({
         channel,
@@ -230,6 +227,8 @@ const automaticLkbxTargets = (catalogs) => {
         selectionKey: `automatic:${channel}:${r2.version}:${r2.buildSha.toLowerCase()}`,
         automaticVariants: { r2, r8 },
       });
+    } else if (channel === "production" && legacyUniversalTarget) {
+      channelTargets.push(legacyUniversalTarget);
     }
     return channelTargets;
   });
@@ -327,7 +326,7 @@ const automaticFlashManifest = async (
   const manifest = {
     name: `${DEVICE_CONFIGS[device].name} ${target.channel} — automatic flash detection`,
     version: target.version,
-    improv: false,
+    new_install_improv_wait_time: 0,
     new_install_prompt_erase: true,
     rad_flash_baud_rate:
       preferredBaudRate ?? (target.channel === "alpha" ? 460800 : 115200),
@@ -393,7 +392,7 @@ const automaticLkbxManifest = async (target, signal, preferredBaudRate) => {
   const manifest = {
     name: `LKBX ${target.channel} — automatic R2/R8 detection`,
     version,
-    improv: false,
+    new_install_improv_wait_time: 0,
     new_install_prompt_erase: true,
     rad_flash_baud_rate: preferredBaudRate ?? 115200,
     rad_flash_context: {
