@@ -191,9 +191,6 @@ const automaticLkbxTargets = (catalogs) => {
       (channel !== "production" ||
         !legacyUniversal ||
         isLaterFirmwareVersion(r2.version, legacyUniversal.version));
-    if (channel === "production" && legacyUniversalTarget) {
-      channelTargets.push(legacyUniversalTarget);
-    }
     if (pairIsSelectable) {
       channelTargets.push({
         channel,
@@ -202,6 +199,8 @@ const automaticLkbxTargets = (catalogs) => {
         selectionKey: `automatic:${channel}:${r2.version}:${r2.buildSha.toLowerCase()}`,
         automaticVariants: { r2, r8 },
       });
+    } else if (channel === "production" && legacyUniversalTarget) {
+      channelTargets.push(legacyUniversalTarget);
     }
     return channelTargets;
   });
