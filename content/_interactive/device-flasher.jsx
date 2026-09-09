@@ -923,54 +923,59 @@ export const DeviceFlasher = ({
           }`}
           aria-live="polite"
         >
-          {hardwareDetection?.supported === true ? (
-            <>
-              Detected{" "}
-              {
-                (normalizedDevice === "lkbx"
-                  ? LKBX_HARDWARE_IDENTITIES
-                  : FLASH_HARDWARE_IDENTITIES)[
-                  hardwareDetection.hardwareVariant
-                ].label
-              }
-              {hardwareDetection.macAddress
-                ? ` (${hardwareDetection.macAddress})`
-                : ""}
-              . The matching installer was selected automatically.
-            </>
-          ) : hardwareDetection?.supported === false ? (
-            normalizedDevice === "lkbx" ? (
+          {/* Replace the status element, rather than its individual text nodes.
+              Browser translation can replace those nodes while USB detection
+              is in progress; React must still be able to commit the result. */}
+          <span key={String(hardwareDetection?.supported)}>
+            {hardwareDetection?.supported === true ? (
               <>
-                Unsupported PSRAM identity: capacity code{" "}
-                {hardwareDetection.psramCapacityCode}, power selection{" "}
-                {hardwareDetection.pinPowerSelection}. Nothing was written.
+                Detected{" "}
+                {
+                  (normalizedDevice === "lkbx"
+                    ? LKBX_HARDWARE_IDENTITIES
+                    : FLASH_HARDWARE_IDENTITIES)[
+                    hardwareDetection.hardwareVariant
+                  ].label
+                }
+                {hardwareDetection.macAddress
+                  ? ` (${hardwareDetection.macAddress})`
+                  : ""}
+                . The matching installer was selected automatically.
+              </>
+            ) : hardwareDetection?.supported === false ? (
+              normalizedDevice === "lkbx" ? (
+                <>
+                  Unsupported PSRAM identity: capacity code{" "}
+                  {hardwareDetection.psramCapacityCode}, power selection{" "}
+                  {hardwareDetection.pinPowerSelection}. Nothing was written.
+                </>
+              ) : (
+                <>
+                  No matching installer is available for the detected flash
+                  capacity
+                  {hardwareDetection.flashSizeBytes
+                    ? ` (${hardwareDetection.flashSizeBytes / (1024 * 1024)} MB)`
+                    : " (unknown)"}
+                  . Nothing was written.
+                </>
+              )
+            ) : normalizedDevice === "lkbx" ? (
+              <>
+                R2/R8 selection is automatic. After you choose the USB device,
+                the flasher reads its factory PSRAM identity before writing.
               </>
             ) : (
               <>
-                No matching installer is available for the detected flash
-                capacity
-                {hardwareDetection.flashSizeBytes
-                  ? ` (${hardwareDetection.flashSizeBytes / (1024 * 1024)} MB)`
-                  : " (unknown)"}
-                . Nothing was written.
+                4 MB / 16 MB selection is automatic. After you choose the USB
+                device, the flasher reads its physical flash capacity and
+                selects the approved V1 or V2 installer before writing. If a
+                matching build is unavailable, nothing will be written.
+                {normalizedDevice === "ossm"
+                  ? " OSSM V1 omits Bluetooth to fit in 4 MB."
+                  : ""}
               </>
-            )
-          ) : normalizedDevice === "lkbx" ? (
-            <>
-              R2/R8 selection is automatic. After you choose the USB device, the
-              flasher reads its factory PSRAM identity before writing.
-            </>
-          ) : (
-            <>
-              4 MB / 16 MB selection is automatic. After you choose the USB
-              device, the flasher reads its physical flash capacity and selects
-              the approved V1 or V2 installer before writing. If a matching
-              build is unavailable, nothing will be written.
-              {normalizedDevice === "ossm"
-                ? " OSSM V1 omits Bluetooth to fit in 4 MB."
-                : ""}
-            </>
-          )}
+            )}
+          </span>
         </div>
       )}
 
