@@ -1,0 +1,11 @@
+{
+  "title": "Errors",
+  "pages": [
+    "[Overview](/lockbox/errors)",
+    "[E-LOCK-1: Could Not Lock](/lockbox/errors/e-lock-1)",
+    "[E-LOCK-2: Could Not Unlock](/lockbox/errors/e-lock-2)",
+    "[E-LOCK-3: No Backplate](/lockbox/errors/e-lock-3)",
+    "[E-LOCK-10: Could Not Connect to Wi-Fi](/lockbox/errors/e-lock-10)",
+    "[E-LOCK-20: Emergency Unlock Used](/lockbox/errors/e-lock-20)"
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "title": "RADR",
+  "pages": [
+    "[Quick Start](/radr)",
+    "guides/user-guide",
+    "guides",
+    "[FAQs](/radr/faqs)",
+    "guides/changelog"
+  ]
+}

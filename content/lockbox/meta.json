@@ -1,0 +1,26 @@
+{
+  "title": "Chastity Lockbox",
+  "pages": [
+    "---Quick Start---",
+    "[Quick Start](/lockbox)",
+    "[Connect to Wi-Fi](/lockbox/quick-start/wifi-setup)",
+    "[Pairing](/lockbox/quick-start/pairing)",
+    "[Bluetooth Pairing](/lockbox/quick-start/ble-pairing)",
+    "[Start a Lock](/lockbox/quick-start/start-a-lock)",
+    "[Keyholder Guide](/lockbox/quick-start/keyholder-guide)",
+    "using",
+    "---Get Help---",
+    "[FAQs](/lockbox/faqs)",
+    "[Help Center](/lockbox/support)",
+    "[Check Online Status](/lockbox/support/online-status)",
+    "[Connectivity Troubleshooting](/lockbox/support/connectivity-troubleshooting)",
+    "[Firmware Flashing](/lockbox/support/flashing)",
+    "[Alpha Updates](/lockbox/support/alpha-updates)",
+    "[Emergency Backplate](/lockbox/support/emergency-backplate)",
+    "---Reference---",
+    "device-states",
+    "errors",
+    "technical",
+    "changelog"
+  ]
+}

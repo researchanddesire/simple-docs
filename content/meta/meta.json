@@ -1,0 +1,8 @@
+{
+  "title": "Documentation Guide",
+  "pages": [
+    "[Getting Started](/meta/getting-started)",
+    "[Writing Guide](/meta/writing-guide)",
+    "[Contributing](/meta/contributing)"
+  ]
+}
