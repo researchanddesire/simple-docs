@@ -1,0 +1,47 @@
+# E-Lock 2: Could Not Unlock
+
+## What's happening?
+
+Your Chastity Lockbox is attempting to unlock but cannot confirm that the lock has fully disengaged. This error can occur when you:
+
+- End a lock session
+- Complete a timed lock session
+- Request an unlock from the web dashboard
+- Attempt to unlock the device manually
+
+## Understanding the issue
+
+The device uses three sensors (called TMRs) to verify the locking paddle's position. When all three sensors detect the paddle in the unlocked position, the device confirms it's open and accessible. 
+
+This error means one or more sensors isn't detecting the unlocked position correctly.
+
+## How to fix this
+
+### Step 1: Check the locking paddle
+
+  Inspect the locking paddle for any obstructions. Gently move the paddle back and forth to ensure it moves freely and isn't stuck.
+
+### Step 2: Reseat the lid
+
+  The device uses two sensors to detect lid placement. Remove the lid completely, then place it back on the device, ensuring it's properly seated and aligned.
+
+### Step 3: Verify power levels
+
+  Ensure your device has sufficient battery power or is properly connected to a power source. Low power can affect the unlocking mechanism's performance.
+
+### Step 4: Attempt to unlock again
+
+  After completing the steps above, try unlocking the device once more.
+
+### Step 5: Contact support if the issue persists
+
+  If the problem continues after troubleshooting, there may be an issue with the unlocking mechanism or sensors. Contact our support team for further assistance.
+
+!!! warning
+    **Can't access your belongings?**
+
+Your items remain safe inside the locked device. In an emergency, you may be able to open the back panel to retrieve your keys. If you need to do this, contact our support team immediately for emergency access instructions.
+
+## Need more help?
+
+If you're still experiencing issues, please reach out to our support team. We're here to help you resolve this as quickly as possible.
