@@ -18,7 +18,7 @@ Connectez le formateur avec un câble USB compatible données. Web Serial n'est 
 - Utilisez Chrome ou Edge sur un ordinateur de bureau.
 - Utilisez un câble USB-C reconnu et compatible avec les données ; un câble de charge uniquement ne peut pas clignoter.
 - Sélectionnez **Production (Stable)** à moins que le support ne vous fournisse une branche de développement et un engagement exacts.
-- Laissez toute option **Effacer l'appareil** décochée. Le clignotant actuel du tableau de bord force délibérément les installations DTT à conserver le couplage sur l'appareil, Wi-Fi, l'étalonnage et les paramètres enregistrés.
+- Laissez toute option **Effacer l'appareil** décochée. Le clignotant actuel du tableau de bord force délibérément les installations DTT à conserver le couplage sur l'appareil, Wi-Fi, l'étalonnage et les paramètres enregistrés.
 - Gardez l'ordinateur éveillé et le câble connecté jusqu'à la fin.
 
 ## Vérifier et récupérer
@@ -26,5 +26,7 @@ Connectez le formateur avec un câble USB compatible données. Web Serial n'est 
 Après une installation réussie, déconnectez USB, redémarrez le formateur et laissez le contrôle en amont se terminer. Confirmez l'appairage, Wi-Fi, le jouet, l'étalonnage et le modèle actif avant une session physique.
 
 Si le navigateur ne trouve pas le périphérique série, essayez un autre câble de données ou un autre port USB. Si l'installation échoue à plusieurs reprises ou si le Trainer ne démarre plus, arrêtez-vous et envoyez un e-mail à [support@researchanddesire.com](https://www.researchanddesire.com/pages/contact-us) avec la date d'achat du matériel, le navigateur, le système d'exploitation, le canal sélectionné et le message de l'installateur.
+
+Après la sélection du périphérique USB, l’outil mesure sa capacité de mémoire flash et sélectionne automatiquement le micrologiciel approuvé **4 Mo (V1)** ou **16 Mo (V2)** pour le canal choisi. Si la capacité ne peut pas être détectée ou si aucun programme d’installation compatible n’est disponible, l’opération s’arrête avant toute écriture du micrologiciel.
 
 <DeviceFlasher device="dtt" />

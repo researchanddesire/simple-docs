@@ -26,8 +26,8 @@ export const OssmFunscriptPlayer = () => {
   const [isSupported, setIsSupported] = useState(true);
 
   // File state
-  const [videoFile, setVideoFile] = useState(null);
-  const [videoUrl, setVideoUrl] = useState(null);
+  const [mediaFile, setMediaFile] = useState(null);
+  const [mediaUrl, setMediaUrl] = useState(null);
   const [funscriptFile, setFunscriptFile] = useState(null);
   const [funscriptActions, setFunscriptActions] = useState([]);
   const [funscriptSimpleActions, setFunscriptSimpleActions] = useState([]);
@@ -57,7 +57,7 @@ export const OssmFunscriptPlayer = () => {
   const speedKnobCharacteristicRef = useRef(null);
   const latencyCompensationCharacteristicRef = useRef(null);
   const serverRef = useRef(null);
-  const videoRef = useRef(null);
+  const mediaRef = useRef(null);
   const logsContainerRef = useRef(null);
   const currentActionIndexRef = useRef(0);
   const lastSentTimeRef = useRef(0);
@@ -85,18 +85,18 @@ export const OssmFunscriptPlayer = () => {
     };
   }, []);
 
-  // Create and cleanup video object URL
+  // Create and cleanup media object URL
   useEffect(() => {
-    if (videoFile) {
-      const url = URL.createObjectURL(videoFile);
-      setVideoUrl(url);
+    if (mediaFile) {
+      const url = URL.createObjectURL(mediaFile);
+      setMediaUrl(url);
       return () => {
         URL.revokeObjectURL(url);
       };
     } else {
-      setVideoUrl(null);
+      setMediaUrl(null);
     }
-  }, [videoFile]);
+  }, [mediaFile]);
 
   // Helper to add log entries
   const addLog = useCallback((direction, data) => {
@@ -218,16 +218,16 @@ export const OssmFunscriptPlayer = () => {
 
   const handleSimpleToggle = useCallback(async () => {
     setIsSimple(!isSimple);
-    if (videoRef.current) {
-      videoRef.current.pause();
+    if (mediaRef.current) {
+      mediaRef.current.pause();
     }
     stopSync();
   }, [isSimple]);
 
   const handleReverseToggle = useCallback(async () => {
     setIsReverse(!isReverse);
-    if (videoRef.current) {
-      videoRef.current.pause();
+    if (mediaRef.current) {
+      mediaRef.current.pause();
     }
     stopSync();
   }, [isReverse]);
@@ -337,8 +337,8 @@ export const OssmFunscriptPlayer = () => {
 
   // Disconnect from OSSM
   const handleDisconnectClick = async () => {
-    if (videoRef.current) {
-      videoRef.current.pause();
+    if (mediaRef.current) {
+      mediaRef.current.pause();
     }
     stopSync();
 
@@ -416,18 +416,18 @@ export const OssmFunscriptPlayer = () => {
     return `${mins}:${secs.toString().padStart(2, "0")}`;
   };
 
-  // Sync funscript with video
+  // Sync funscript with media
   const syncFunscript = useCallback(() => {
     var actions = funscriptActions;
     if (isSimple) {
       actions = funscriptSimpleActions;
     }
 
-    if (!videoRef.current || actions.length === 0) return;
+    if (!mediaRef.current || actions.length === 0) return;
 
     const currentTimeMs =
-      videoRef.current.currentTime * 1000 + timeOffset + buffer;
-    setCurrentTime(videoRef.current.currentTime);
+      mediaRef.current.currentTime * 1000 + timeOffset + buffer;
+    setCurrentTime(mediaRef.current.currentTime);
 
     while (currentActionIndexRef.current < actions.length) {
       const action = actions[currentActionIndexRef.current];
@@ -489,12 +489,12 @@ export const OssmFunscriptPlayer = () => {
     stopSync();
   }, [stopSync]);
 
-  // Handle video file selection
-  const handleVideoSelect = (e) => {
+  // Handle video or MP3 file selection
+  const handleMediaSelect = (e) => {
     const file = e.target.files[0];
     if (file) {
-      setVideoFile(file);
-      addLog("INFO", `Loaded video: ${file.name}`);
+      setMediaFile(file);
+      addLog("INFO", `Loaded media: ${file.name}`);
     }
   };
 
@@ -513,20 +513,20 @@ export const OssmFunscriptPlayer = () => {
     }
   };
 
-  // Video event handlers
-  const handleVideoPlay = () => {
-    addLog("INFO", "Video playing");
+  // Media event handlers
+  const handleMediaPlay = () => {
+    addLog("INFO", "Media playing");
     startSync();
   };
 
-  const handleVideoPause = () => {
-    addLog("INFO", "Video paused");
+  const handleMediaPause = () => {
+    addLog("INFO", "Media paused");
     stopSync();
   };
 
-  const handleVideoSeeked = () => {
-    if (!videoRef.current) return;
-    const currentTimeMs = videoRef.current.currentTime * 1000;
+  const handleMediaSeeked = () => {
+    if (!mediaRef.current) return;
+    const currentTimeMs = mediaRef.current.currentTime * 1000;
     var actions = funscriptActions;
     if (isSimple) {
       actions = funscriptSimpleActions;
@@ -537,11 +537,11 @@ export const OssmFunscriptPlayer = () => {
     if (currentActionIndexRef.current === -1)
       currentActionIndexRef.current = actions.length;
     lastSentTimeRef.current = currentTimeMs - 1;
-    addLog("INFO", `Seeked to ${formatTime(videoRef.current.currentTime)}`);
+    addLog("INFO", `Seeked to ${formatTime(mediaRef.current.currentTime)}`);
   };
 
-  const handleVideoEnded = () => {
-    addLog("INFO", "Video ended");
+  const handleMediaEnded = () => {
+    addLog("INFO", "Media ended");
     stopSync();
   };
 
@@ -562,6 +562,9 @@ export const OssmFunscriptPlayer = () => {
 
   const isConnected = connectionStatus === "connected";
   const isConnecting = connectionStatus === "connecting";
+  const isAudio =
+    mediaFile?.type.startsWith("audio/") ||
+    mediaFile?.name.toLowerCase().endsWith(".mp3");
 
   return (
     <div
@@ -654,34 +657,34 @@ export const OssmFunscriptPlayer = () => {
         </div>
       </div>
 
-      {/* Video & Funscript Card */}
+      {/* Media & Funscript Card */}
 
       <div className="rounded-xl border border-zinc-200 bg-white p-6 dark:border-zinc-700 dark:bg-zinc-900">
         <h3 className="mb-4 text-lg font-semibold text-zinc-900 dark:text-zinc-100">
-          Video & Funscript
+          Media & Funscript
         </h3>
 
         {/* File inputs */}
         <div className="mb-4 grid grid-cols-1 gap-4 sm:grid-cols-2">
           <div>
             <label className="mb-2 block text-sm font-medium text-zinc-700 dark:text-zinc-300">
-              Video File
+              Video or MP3 File
             </label>
             <label className="block cursor-pointer">
               <input
                 type="file"
-                accept="video/*"
-                onChange={handleVideoSelect}
+                accept="video/*,audio/mpeg,.mp3"
+                onChange={handleMediaSelect}
                 className="hidden"
               />
               <div
                 className={`rounded-lg border-2 border-dashed px-4 py-3 text-center text-sm transition-colors ${
-                  videoFile
+                  mediaFile
                     ? "border-green-500 text-green-600 dark:text-green-400"
                     : "border-zinc-300 text-zinc-500 hover:border-violet-500 hover:text-violet-600 dark:border-zinc-600 dark:hover:border-violet-500"
                 }`}
               >
-                {videoFile ? videoFile.name : "Click to select video"}
+                {mediaFile ? mediaFile.name : "Click to select video or MP3"}
               </div>
             </label>
           </div>
@@ -712,20 +715,34 @@ export const OssmFunscriptPlayer = () => {
           </div>
         </div>
 
-        {/* Video player */}
+        {/* Media player */}
         <div className="mb-4 overflow-hidden rounded-lg bg-black">
-          {videoUrl ? (
-            <video
-              loop
-              ref={videoRef}
-              src={videoUrl}
-              controls
-              className="max-h-96 w-full"
-              onPlay={handleVideoPlay}
-              onPause={handleVideoPause}
-              onSeeked={handleVideoSeeked}
-              onEnded={handleVideoEnded}
-            />
+          {mediaUrl ? (
+            isAudio ? (
+              <audio
+                loop
+                ref={mediaRef}
+                src={mediaUrl}
+                controls
+                className="w-full"
+                onPlay={handleMediaPlay}
+                onPause={handleMediaPause}
+                onSeeked={handleMediaSeeked}
+                onEnded={handleMediaEnded}
+              />
+            ) : (
+              <video
+                loop
+                ref={mediaRef}
+                src={mediaUrl}
+                controls
+                className="max-h-96 w-full"
+                onPlay={handleMediaPlay}
+                onPause={handleMediaPause}
+                onSeeked={handleMediaSeeked}
+                onEnded={handleMediaEnded}
+              />
+            )
           ) : (
             <div className="flex h-48 flex-col items-center justify-center text-zinc-500">
               <svg
@@ -741,7 +758,7 @@ export const OssmFunscriptPlayer = () => {
                   d="M15.75 10.5l4.72-4.72a.75.75 0 011.28.53v11.38a.75.75 0 01-1.28.53l-4.72-4.72M4.5 18.75h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25h-9A2.25 2.25 0 002.25 7.5v9a2.25 2.25 0 002.25 2.25z"
                 />
               </svg>
-              <span className="text-sm">Load a video file to begin</span>
+              <span className="text-sm">Load a video or MP3 file to begin</span>
             </div>
           )}
         </div>
