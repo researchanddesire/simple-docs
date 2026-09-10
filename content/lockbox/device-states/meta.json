@@ -1,12 +1,12 @@
 {
-  "title": "Device states",
+  "title": "Device States",
   "pages": [
-    "index",
-    "emergency-unlock",
-    "calibration",
-    "permalock",
-    "restarting",
-    "sleep-mode",
-    "take-a-break"
+    "[Overview](/lockbox/device-states)",
+    "[Calibration](/lockbox/device-states/calibration)",
+    "[Sleep Mode](/lockbox/device-states/sleep-mode)",
+    "[Take a Break](/lockbox/device-states/take-a-break)",
+    "[Permalock](/lockbox/device-states/permalock)",
+    "[Emergency Unlock](/lockbox/device-states/emergency-unlock)",
+    "[Restarting](/lockbox/device-states/restarting)"
   ]
 }

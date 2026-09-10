@@ -1,24 +1,18 @@
 ---
-title: "RADR Navigation and Controls"
-description: "Identify every RADR knob, bumper, button, menu, indicator, screen state, and context-dependent action."
+title: "Navigation and Controls"
+description: "This guide covers how to navigate RADR's menus and screens using the physical controls."
 ---
 
-This guide covers how to navigate RADR's menus and screens using the physical controls.
-
-![RADR remote with the display, top bumpers, three face buttons, and two rotary encoders visible](<../../img/image (1).webp>)
-
-## Physical control layout
+## Physical Control Layout
 
 RADR has the following physical controls:
 
 ### Top Edge
-
 - **Left Bumper** — Located on the top-left edge, used for switching to the previous mode
 - **Power Switch** — Above the screen, to the left of the USB-C port
 - **Right Bumper** — Located on the top-right edge, used for switching to the next mode
 
 ### Front Face
-
 - **320x240 Full-Color LCD** — Centered on the device
 - **Three Under-Screen Buttons:**
   - **Left Button** — Home / Back
@@ -26,7 +20,6 @@ RADR has the following physical controls:
   - **Right Button** — Menu / OK / Select
 
 ### Sides
-
 - **Left Encoder (Knob)** — Always controls speed or primary parameter
 - **Right Encoder (Knob)** — Controls secondary parameters or selection
 
@@ -34,14 +27,13 @@ RADR has the following physical controls:
 
 The main menu is your starting point after powering on RADR. It offers three options:
 
-| Option        | Icon  | Description                               |
-| ------------- | ----- | ----------------------------------------- |
-| Device Search | Waves | Scan for nearby Bluetooth devices         |
-| Settings      | Gear  | Access Wi-Fi and device settings          |
-| Sleep         | Moon  | Enter deep sleep mode to conserve battery |
+| Option | Icon | Description |
+|--------|------|-------------|
+| Device Search | Waves | Scan for nearby Bluetooth devices |
+| Settings | Gear | Access WiFi and device settings |
+| Sleep | Moon | Enter deep sleep mode to conserve battery |
 
 ### Navigation
-
 - **Right Encoder** — Scroll through menu options
 - **Right Button** — Select the highlighted option
 - **Left Button** — No action (already at top level)
@@ -50,15 +42,14 @@ The main menu is your starting point after powering on RADR. It offers three opt
 
 Access the settings menu from the main menu by selecting **Settings**.
 
-| Option         | Description                            |
-| -------------- | -------------------------------------- |
-| Go Back        | Return to the main menu                |
-| Wi-Fi Settings | Configure Wi-Fi for OTA updates        |
-| Update Device  | Check for and install firmware updates |
-| Restart Device | Reboot the RADR                        |
+| Option | Description |
+|--------|-------------|
+| Go Back | Return to the main menu |
+| WiFi Settings | Configure WiFi for OTA updates |
+| Update Device | Check for and install firmware updates |
+| Restart Device | Reboot the RADR |
 
 ### Navigation
-
 - **Right Encoder** — Scroll through options
 - **Right Button** — Select the highlighted option
 - **Left Button** — Return to main menu
@@ -73,25 +64,25 @@ flowchart TD
     MainMenu --> DeviceSearch[Device Search]
     MainMenu --> Settings[Settings Menu]
     MainMenu --> Sleep[Deep Sleep]
-
+    
     DeviceSearch --> DeviceList[Device List]
     DeviceList --> Connecting[Connecting]
     DeviceList --> MainMenu
-
+    
     Connecting --> Control[Device Control]
     Connecting --> DeviceList
-
+    
     Control --> DeviceMenu[Device Menu]
     Control --> DeviceStop[Device Stopped]
     DeviceMenu --> Control
     DeviceStop --> Control
     DeviceStop --> MainMenu
-
-    Settings --> Wi-FiSetup[Wi-Fi Setup]
+    
+    Settings --> WiFiSetup[WiFi Setup]
     Settings --> MainMenu
-    Wi-FiSetup --> Wi-FiConnected[Wi-Fi Connected]
-    Wi-FiConnected --> MainMenu
-
+    WiFiSetup --> WiFiConnected[WiFi Connected]
+    WiFiConnected --> MainMenu
+    
     Sleep --> Boot
 ```
 
@@ -112,11 +103,12 @@ After scanning, you'll see a list of discovered devices:
 - **Right Button** — Connect to the selected device
 - **Left Button** — Cancel and return to main menu
 
-<Callout type="info">
+<Callout type="info" title={"Info"}>
 
 Devices are shown by their advertised name. If a device has no name, it appears as "Unknown Device".
 
 </Callout>
+
 ### Device Connecting Screen
 
 During connection, you'll see status messages:
@@ -128,24 +120,23 @@ During connection, you'll see status messages:
 5. "Discovering device capabilities..."
 6. "Device ready!"
 
-<Callout type="warn">
+<Callout type="warning" title={"Warning"}>
 
 If connection fails, you'll see "Connection failed, please try again." Power-cycle both devices and retry.
 
 </Callout>
+
 ### Device Control Screen
 
 Once connected, you enter the device control screen. The layout varies by device type:
 
 **For OSSM:**
-
 - Tab interface at top showing Depth, Sensation, Stroke modes
 - Left encoder dial for Speed
 - Right encoder dial for the active mode
 - Bottom buttons: Menu (disabled), Pause, Patterns
 
 **For Lovense:**
-
 - Single encoder dial for vibration intensity
 - STOP button in the center
 
@@ -169,40 +160,43 @@ After a double-press stop, this confirmation screen appears:
 
 ## Button Behavior by Screen
 
-| Screen         | Left Button       | Middle Button | Right Button   |
-| -------------- | ----------------- | ------------- | -------------- |
-| Main Menu      | —                 | —             | Select option  |
-| Settings Menu  | Back to main      | —             | Select option  |
-| Device Search  | Cancel            | —             | —              |
-| Device List    | Cancel            | —             | Connect        |
-| Device Control | Menu (if enabled) | Pause/Stop    | Patterns/Menu  |
-| Device Menu    | Back to control   | Pause         | Select pattern |
-| Wi-Fi Setup    | Cancel            | —             | —              |
+| Screen | Left Button | Middle Button | Right Button |
+|--------|------------|---------------|--------------|
+| Main Menu | — | — | Select option |
+| Settings Menu | Back to main | — | Select option |
+| Device Search | Cancel | — | — |
+| Device List | Cancel | — | Connect |
+| Device Control | Menu (if enabled) | Pause/Stop | Patterns/Menu |
+| Device Menu | Back to control | Pause | Select pattern |
+| WiFi Setup | Cancel | — | — |
 
 ## Encoder Behavior by Screen
 
-| Screen         | Left Encoder   | Right Encoder        |
-| -------------- | -------------- | -------------------- |
-| Main Menu      | —              | Scroll options       |
-| Settings Menu  | —              | Scroll options       |
-| Device List    | —              | Scroll devices       |
+| Screen | Left Encoder | Right Encoder |
+|--------|-------------|---------------|
+| Main Menu | — | Scroll options |
+| Settings Menu | — | Scroll options |
+| Device List | — | Scroll devices |
 | Device Control | Speed (0-100%) | Active mode (0-100%) |
-| Device Menu    | Speed (0-100%) | Scroll patterns      |
+| Device Menu | Speed (0-100%) | Scroll patterns |
 
 ## Tips for Navigation
 
-<Callout type="idea">
+<Callout type="idea" title={"Tip"}>
 
 You can access the main menu from most screens by pressing the left button repeatedly to go back.
 
 </Callout>
-<Callout type="idea">
+
+<Callout type="idea" title={"Tip"}>
 
 The bumper buttons (top edge) switch between Depth, Sensation, and Stroke modes without looking at the screen. The active mode is shown in the tab interface.
 
 </Callout>
-<Callout type="warn">
+
+<Callout type="warning" title={"Warning"}>
 
 RADR can only connect to one device at a time. To switch devices, disconnect the current device first by returning to the main menu.
 
 </Callout>
+

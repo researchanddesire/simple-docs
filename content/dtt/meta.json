@@ -1,19 +1,16 @@
 {
-  "title": "DTT",
-  "description": "Deep Throat Trainer guides and support",
-  "root": true,
+  "title": "Deep Throat Trainer",
   "pages": [
-    "index",
-    "safety",
+    "[Quick Start](/dtt)",
     "quick-start",
     "training-modes",
-    "faqs",
-    "care",
-    "errors",
-    "technical",
+    "---Get Help---",
+    "[FAQs](/dtt/faqs)",
+    "[E-DTT-1: No Internet](/dtt/errors/e-dtt-1)",
+    "---Reference---",
     "specs",
-    "software-2.0-preview",
-    "tools",
+    "technical",
+    "[Software 2.0 Preview](/dtt/software-2.0-preview)",
     "changelog"
   ]
 }

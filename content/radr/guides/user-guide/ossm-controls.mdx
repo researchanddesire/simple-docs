@@ -1,17 +1,7 @@
 ---
-title: "Control OSSM with RADR"
-description: "Control OSSM speed, depth, sensation, stroke, pause, full Stop, and patterns from RADR."
+title: "OSSM Controls"
+description: "This guide covers how to control the OSSM (Open Source Sex Machine) using your RADR wireless remote."
 ---
-
-This guide covers how to control the OSSM (Open Source Sex Machine) using your RADR wireless remote.
-
-<Callout type="warn" title="Verify Stop before use">
-
-Keep the OSSM unloaded, set speed to zero, and test both a single-press pause and a double-press full Stop before attaching an accessory or beginning a session. Pause preserves the current adjustments; full Stop resets them. If either action does not stop physical motion, power down the OSSM and use [troubleshooting](/ossm/troubleshooting).
-
-</Callout>
-
-![RADR OSSM control screen showing speed on the left, motion range in the centre, the active adjustment on the right, and pause and pattern actions below](<../../img/image (2).webp>)
 
 ## Control Screen Overview
 
@@ -29,19 +19,20 @@ When connected to an OSSM, the control screen displays:
 
 The **left encoder** always controls speed, regardless of which mode is active.
 
-| Parameter | Range  | Default |
-| --------- | ------ | ------- |
-| Speed     | 0–100% | 0%      |
+| Parameter | Range | Default |
+|-----------|-------|---------|
+| Speed | 0–100% | 0% |
 
 - Turn clockwise to increase speed
 - Turn counter-clockwise to decrease speed
 - The encoder has acceleration: faster turns make bigger changes
 
-<Callout type="info">
+<Callout type="info" title={"Info"}>
 
 Speed must be above 0% for the OSSM to move. When paused, increase speed to resume automatically.
 
 </Callout>
+
 ## Adjustment Modes
 
 The **right encoder** controls one of three parameters, depending on which mode is active. Use the shoulder bumpers to switch modes.
@@ -50,9 +41,9 @@ The **right encoder** controls one of three parameters, depending on which mode 
 
 Controls how deep the penetration reaches.
 
-| Parameter | Range  | Default |
-| --------- | ------ | ------- |
-| Depth     | 0–100% | 10%     |
+| Parameter | Range | Default |
+|-----------|-------|---------|
+| Depth | 0–100% | 10% |
 
 - Higher values = deeper penetration
 - The depth is visualized on the linear rail graph
@@ -61,9 +52,9 @@ Controls how deep the penetration reaches.
 
 Controls the intensity or "feel" of the motion.
 
-| Parameter | Range  | Default |
-| --------- | ------ | ------- |
-| Sensation | 0–100% | 50%     |
+| Parameter | Range | Default |
+|-----------|-------|---------|
+| Sensation | 0–100% | 50% |
 
 - Lower values = gentler, smoother motion
 - Higher values = more intense, aggressive motion
@@ -72,9 +63,9 @@ Controls the intensity or "feel" of the motion.
 
 Controls the length of each stroke.
 
-| Parameter | Range  | Default |
-| --------- | ------ | ------- |
-| Stroke    | 0–100% | 50%     |
+| Parameter | Range | Default |
+|-----------|-------|---------|
+| Stroke | 0–100% | 50% |
 
 - Lower values = shorter strokes
 - Higher values = longer strokes
@@ -85,16 +76,13 @@ Controls the length of each stroke.
 You have two ways to switch between Depth, Sensation, and Stroke:
 
 ### Using Bumpers (Recommended)
-
 - **Left Bumper (`<<`)** — Switch to the previous mode
 - **Right Bumper (`>>`)** — Switch to the next mode
 
 The mode order is: Depth → Sensation → Stroke → Depth...
 
 ### Visual Feedback
-
 When you switch modes:
-
 - The corresponding tab at the top becomes highlighted
 - The right encoder LED color changes:
   - **Coral/Red** — Depth mode
@@ -109,17 +97,17 @@ The **middle button** controls pausing and stopping.
 ### Single Press: Pause
 
 A single press pauses the OSSM:
-
 - Speed is set to 0%
 - The pattern name changes to "Paused" in red
 - The middle LED turns red
 - The Pause button changes to "STOP" (red)
 
-<Callout type="info">
+<Callout type="info" title={"Info"}>
 
 To resume from pause, simply increase the speed with the left encoder. The OSSM will resume automatically.
 
 </Callout>
+
 ### Safety Feature: Persistent Speed Monitoring
 
 When you enter Pattern Mode or other menus, RADR continues to monitor the left encoder (speed) for safety. This means:
@@ -128,32 +116,32 @@ When you enter Pattern Mode or other menus, RADR continues to monitor the left e
 - If you turn the speed to 0, the OSSM stops immediately
 - This ensures you always have instant stop capability
 
-<Callout type="idea">
+<Callout type="idea" title={"Tip"}>
 
 Even while selecting patterns, the left encoder controls speed. This is a safety feature, not a bug.
 
 </Callout>
+
 ### Double Press: Full Stop
 
 A quick double press performs a full stop with reset:
-
 - Speed is set to 0%
 - Depth is reset to 0%
 - Stroke is reset to 10%
 - Sensation is reset to 50%
 - The "Device Stopped" confirmation screen appears
 
-<Callout type="warn">
+<Callout type="warning" title={"Warning"}>
 
 Full stop resets your adjustment settings. If you want to pause without losing your settings, use a single press.
 
 </Callout>
+
 ## Pattern Mode
 
 Press the **right button (Patterns)** to enter Pattern Mode.
 
 In Pattern Mode:
-
 - The screen shows a list of available patterns
 - Use the right encoder to scroll through patterns
 - Press the right button to select a pattern
@@ -173,48 +161,52 @@ The linear rail graph in the center of the screen provides a visual representati
 
 The **left button (Menu)** is reserved for future OSSM device settings.
 
-<Callout type="info">
+<Callout type="info" title={"Note"}>
 
 The Menu button is currently disabled and has no function. The button styling changes when paused (appearing enabled), but pressing it has no effect. Future firmware updates will enable device-specific settings through this button.
 
 </Callout>
+
 ## LED Indicators During Control
 
-| LED          | Color     | Meaning                    |
-| ------------ | --------- | -------------------------- |
-| Left (Speed) | Purple    | Speed mode (always active) |
-| Middle       | White     | Active and playing         |
-| Middle       | Red       | Paused or stopped          |
-| Right (Mode) | Coral/Red | Depth mode active          |
-| Right (Mode) | Blue      | Sensation mode active      |
-| Right (Mode) | Green     | Stroke mode active         |
+| LED | Color | Meaning |
+|-----|-------|---------|
+| Left (Speed) | Purple | Speed mode (always active) |
+| Middle | White | Active and playing |
+| Middle | Red | Paused or stopped |
+| Right (Mode) | Coral/Red | Depth mode active |
+| Right (Mode) | Blue | Sensation mode active |
+| Right (Mode) | Green | Stroke mode active |
 
 ## Quick Reference
 
-| Control       | Action                                     |
-| ------------- | ------------------------------------------ |
-| Left Encoder  | Adjust speed (0–100%)                      |
-| Right Encoder | Adjust active mode (0–100%)                |
-| Left Bumper   | Previous mode (Depth ← Sensation ← Stroke) |
-| Right Bumper  | Next mode (Depth → Sensation → Stroke)     |
-| Left Button   | Menu (disabled)                            |
-| Middle Button | Single: Pause / Double: Full Stop          |
-| Right Button  | Open Pattern Mode                          |
+| Control | Action |
+|---------|--------|
+| Left Encoder | Adjust speed (0–100%) |
+| Right Encoder | Adjust active mode (0–100%) |
+| Left Bumper | Previous mode (Depth ← Sensation ← Stroke) |
+| Right Bumper | Next mode (Depth → Sensation → Stroke) |
+| Left Button | Menu (disabled) |
+| Middle Button | Single: Pause / Double: Full Stop |
+| Right Button | Open Pattern Mode |
 
 ## Tips
 
-<Callout type="idea">
+<Callout type="idea" title={"Tip"}>
 
 Start with low speed and gradually increase to find your preferred intensity.
 
 </Callout>
-<Callout type="idea">
+
+<Callout type="idea" title={"Tip"}>
 
 Use the bumpers to switch modes by feel—you don't need to look at the screen.
 
 </Callout>
-<Callout type="idea">
+
+<Callout type="idea" title={"Tip"}>
 
 If you accidentally perform a full stop, don't worry—just re-adjust your settings and increase speed to resume.
 
 </Callout>
+

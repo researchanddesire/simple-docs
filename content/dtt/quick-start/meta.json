@@ -1,13 +1,10 @@
 {
-  "title": "Quick start",
-  "description": "A linear first-session setup",
+  "title": "Setup Guides",
   "pages": [
-    "index",
-    "getting-started",
-    "pairing",
-    "using-toys",
-    "first-session",
-    "checking-results",
-    "templates"
+    "[Getting Started](/dtt/quick-start/getting-started)",
+    "[Assign Your Default Toy](/dtt/quick-start/using-toys)",
+    "[Checking Your Results](/dtt/quick-start/checking-results)",
+    "[Shareable Templates](/dtt/quick-start/templates)",
+    "pairing"
   ]
 }
