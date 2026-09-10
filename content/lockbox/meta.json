@@ -21,6 +21,9 @@
     "device-states",
     "errors",
     "technical",
-    "changelog"
+    "changelog",
+    "---Tools---",
+    "[Tools Overview](/lockbox/tools)",
+    "tools"
   ]
 }

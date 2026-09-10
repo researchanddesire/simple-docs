@@ -1,0 +1,20 @@
+---
+title: "OSSM Web Flasher"
+description: "Install the current stable OSSM firmware over USB or recover a control board that support has asked you to reflash."
+---
+
+import { DeviceFlasher } from "@repo/device-tools/device-flasher";
+
+Use this tool to install or recover OSSM firmware directly from a desktop browser over USB.
+
+<Callout type="warn" title="Flash only when instructed by support">
+
+Use Chrome or Edge, a data-capable USB cable, and stable power. Stop the OSSM and disconnect its motor power before connecting USB.
+
+</Callout>
+
+Flashing replaces the installed firmware and may require Wi-Fi or device settings to be entered again. Read [Flash or recover OSSM firmware](/ossm/tools) for preparation, success checks, and failure recovery before continuing.
+
+After you choose the USB device, the flasher measures its flash capacity and automatically selects the approved **4 MB (V1)** or **16 MB (V2)** firmware for your chosen channel. V1 omits Bluetooth to fit in 4 MB. If the capacity cannot be detected or a matching installer is unavailable, flashing stops before any firmware is written.
+
+<DeviceFlasher device="ossm" />
