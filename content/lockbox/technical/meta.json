@@ -1,4 +1,11 @@
 {
   "title": "Technical",
-  "pages": ["index", "offline-mode"]
+  "pages": [
+    "[Overview](/lockbox/technical)",
+    "[Button Controls](/lockbox/technical/button-controls)",
+    "[Menu Structure](/lockbox/technical/menu-structure)",
+    "[Timer Duration Limits](/lockbox/technical/timer-duration-limits)",
+    "[Idle and Power States](/lockbox/technical/idle-and-power-states)",
+    "[Offline Mode](/lockbox/technical/offline-mode)"
+  ]
 }

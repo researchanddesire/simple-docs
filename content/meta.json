@@ -1,13 +1,11 @@
 {
-  "title": "Research and Desire",
+  "title": "Research and Desire Product Documentation",
   "pages": [
-    "index",
-    "safety",
-    "shop",
+    "[Home](/)",
     "ossm",
     "lockbox",
     "dtt",
     "radr",
-    "tools"
+    "meta"
   ]
 }

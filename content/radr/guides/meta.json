@@ -1,4 +1,7 @@
 {
-  "title": "RADR",
-  "pages": ["getting-started", "user-guide", "reference", "housekeeping"]
+  "title": "Reference",
+  "pages": [
+    "[Device Support](/radr/guides/reference/device-support)",
+    "housekeeping/open-source"
+  ]
 }

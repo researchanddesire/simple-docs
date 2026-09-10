@@ -1,14 +1,13 @@
 {
   "title": "Technical",
-  "description": "Device behavior, errors, calibration, and firmware",
   "pages": [
-    "index",
-    "button-controls",
-    "calibration",
-    "device-states",
-    "error-codes",
-    "firmware-updates",
-    "led-feedback",
-    "offline-mode"
+    "[Overview](/dtt/technical)",
+    "[Button Controls](/dtt/technical/button-controls)",
+    "[Calibration](/dtt/technical/calibration)",
+    "[Device States](/dtt/technical/device-states)",
+    "[Error Codes](/dtt/technical/error-codes)",
+    "[Firmware Updates](/dtt/technical/firmware-updates)",
+    "[LED Feedback](/dtt/technical/led-feedback)",
+    "[Offline Mode](/dtt/technical/offline-mode)"
   ]
 }

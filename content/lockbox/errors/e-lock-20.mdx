@@ -1,34 +1,73 @@
 ---
-title: "E-Lock 20: Emergency Unlock Recorded"
-description: "Understand the Lockbox safety state and cooldown after Emergency Unlock is used."
+title: "E-Lock 20: Emergency Unlock Used"
+description: "E-Lock 20: Emergency Unlock Used"
 ---
 
-E-Lock 20 records that software Emergency Unlock ended an active session. It is a safety event, not a device failure and not evidence that using emergency access was wrong.
+## What is E-Lock-20?
 
-## First: confirm safety
+E-Lock-20 is an error code that appears when a Lockee uses the emergency unlock feature during an active lock session. This error indicates the device has entered a temporary penalty state and cannot be locked again for 24 hours—or until a Keyholder intervenes.
 
-1. Confirm the Lockbox is physically unlocked and the key is accessible.
-2. Attend to the reason Emergency Unlock was needed.
-3. Seek appropriate medical or emergency help for any concerning symptom.
-4. Do not start another lock until everyone understands what happened and the device is ready.
+## Why does this happen?
 
-## Documented device behavior
+The emergency unlock feature exists for situations where immediate release is necessary but normal unlock procedures aren't possible. While this feature ensures your safety, it includes a built-in consequence to discourage unnecessary use.
 
-The current documentation describes a 24-hour cooldown after Emergency Unlock. The dashboard may ask for a reason, show the event to connected partners, or offer a Keyholder action that clears the state. Dashboard wording and available controls can change.
+<Callout type="info" title={"Info"}>
 
-<Callout type="info">
-
-Keep the Lockbox powered and online if you expect a dashboard state change. Confirm the result on the physical device; a dashboard update alone does not prove the mechanism changed state.
+The 24-hour lockout period helps maintain the integrity of the locking experience while still ensuring emergency access is always available.
 
 </Callout>
 
-## If the state does not clear
+## What happens when E-Lock-20 is triggered?
 
-- Wait for the documented cooldown to finish.
-- Wake the device and confirm it reconnects to Wi-Fi.
-- Check [Online Status](/lockbox/support/online-status).
-- Contact [support@researchanddesire.com](https://www.researchanddesire.com/pages/contact-us) if E-Lock 20 remains after the expected period or the device is not physically unlocked.
+When you see the E-Lock-20 error, your Lockbox becomes temporarily unusable for new lock sessions. This is an intentional design feature—not a malfunction.
 
-## Before another session
+## How to resolve E-Lock-20
 
-Review [Lockbox Safety](/lockbox/safety), communication, break settings, session duration, and emergency access. Change the plan that made emergency access necessary; do not disable emergency access as a response to using it.
+Your Lockbox isn't permanently disabled. You have three options to restore normal functionality:
+
+### Step 1: Dashboard resolution (recommended for paired devices)
+
+  1. Visit [dashboard.researchanddesire.com](https://dashboard.researchanddesire.com/)
+  2. Log into your account
+  3. Submit a reason for your emergency unlock
+  
+  <Callout type="success" title={"Success"} />
+
+If your device is connected to WiFi and paired, it will restore to normal use within 5 minutes.
+  
+
+### Step 2: Automatic timeout
+
+  Keep your Lockbox plugged in and powered on for 24 hours. After this period, your device will automatically return to normal operation.
+  
+  <Callout type="info" title={"Note"} />
+
+No action required—just wait for the timeout period to complete.
+  
+
+### Step 3: Keyholder intervention
+
+  Your Keyholder can clear the emergency unlock state immediately by sending either a **Lock** or **Unlock** command from the dashboard.
+  
+  <Callout type="idea" title={"Tip"} />
+
+This is the fastest resolution method if your Keyholder is available.
+  
+
+## Preventing future occurrences
+
+To avoid triggering E-Lock-20:
+
+- Always communicate with your Keyholder for unlocks when possible
+- Reserve the emergency unlock feature for true emergencies only
+- Familiarize yourself with our [Emergency Unlock Guide](/lockbox/device-states/emergency-unlock) so you understand when and how to use this feature appropriately
+
+<Callout type="warning" title={"Warning"}>
+
+Emergency unlocks are logged and visible to your Keyholder. Using this feature unnecessarily may affect your dynamic with them.
+
+</Callout>
+
+## Need more help?
+
+If you're still experiencing issues or have questions about your device, please [contact our support team](mailto:support@researchanddesire.com) for assistance.
