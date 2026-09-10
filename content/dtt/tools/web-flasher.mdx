@@ -1,0 +1,32 @@
+---
+title: "DTT Web Flasher"
+description: "Install or recover stable Deep Throat Trainer firmware over USB with a supported desktop browser."
+---
+
+import { DeviceFlasher } from "@repo/device-tools/device-flasher";
+
+Use this tool to install or recover Deep Throat Trainer firmware directly from a desktop browser over USB. Finish the physical session and remove the toy from use before connecting the Trainer.
+
+<Callout type="info" title="Use Chrome or Edge on a desktop computer">
+
+Connect the Trainer with a data-capable USB cable. Web Serial is not available in Safari, Firefox, or mobile browsers. Trainers purchased before July 1, 2025 do not support USB flashing.
+
+</Callout>
+
+## Before flashing
+
+- Use Chrome or Edge on a desktop computer.
+- Use a known-good data-capable USB-C cable; a charge-only cable cannot flash.
+- Select **Production (Stable)** unless support gives you an exact development branch and commit.
+- Leave any **Erase device** option unchecked. The current dashboard flasher deliberately forces DTT installs to preserve on-device pairing, Wi-Fi, calibration, and saved settings.
+- Keep the computer awake and the cable connected until completion.
+
+## Verify and recover
+
+After a successful install, disconnect USB, restart the Trainer, and let preflight finish. Confirm pairing, Wi-Fi, toy, calibration, and active template before a physical session.
+
+If the browser cannot find the serial device, try a different data cable or USB port. If installation fails repeatedly or the Trainer no longer boots, stop and email [support@researchanddesire.com](https://www.researchanddesire.com/pages/contact-us) with the hardware purchase date, browser, operating system, selected channel, and installer message.
+
+After you choose the USB device, the flasher measures its flash capacity and automatically selects the approved **4 MB (V1)** or **16 MB (V2)** firmware for your chosen channel. If the capacity cannot be detected or a matching installer is unavailable, flashing stops before any firmware is written.
+
+<DeviceFlasher device="dtt" />

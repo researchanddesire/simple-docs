@@ -5,6 +5,9 @@
     "guides/user-guide",
     "guides",
     "[FAQs](/radr/faqs)",
-    "guides/changelog"
+    "guides/changelog",
+    "---Tools---",
+    "[Tools Overview](/radr/tools)",
+    "tools"
   ]
 }
