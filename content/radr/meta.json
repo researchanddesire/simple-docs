@@ -1,4 +1,5 @@
 {
+  "root": true,
   "title": "RADR",
   "pages": [
     "[Quick Start](/radr)",
