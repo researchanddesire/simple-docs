@@ -1,4 +1,5 @@
 {
+  "root": true,
   "title": "Deep Throat Trainer",
   "pages": [
     "[Quick Start](/dtt)",
