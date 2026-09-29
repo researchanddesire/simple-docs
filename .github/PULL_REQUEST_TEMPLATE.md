@@ -1,11 +1,7 @@
-## What changed
+Describe the reader-facing change and how you verified the instructions.
 
-Describe the reader-facing correction or addition.
+- [ ] Targets `staging`.
+- [ ] Uses English `.mdx` pages with working asset references.
+- [ ] Preserves attribution and the repository's licenses.
 
-## Verification
-
-- [ ] I targeted `main`.
-- [ ] I checked the rendered or local preview.
-- [ ] Images and local links resolve.
-- [ ] I did not include credentials, private information, or generated output.
-- [ ] I have the right to contribute this material under the repository's stated licenses.
+rad-app handles image processing, localization and content validation.

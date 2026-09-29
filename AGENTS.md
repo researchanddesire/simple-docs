@@ -1,4 +1,4 @@
-# User Guides
+# Content repository instructions
 
 Edit English pages under `content/` using plain `.mdx` filenames. Keep navigation
 in `meta.json` and images beside the pages. Open content PRs into `staging`.
