@@ -1,0 +1,82 @@
+---
+title: "Chaster Setup"
+description: "Connect Chaster to your R+D Lockbox, link your accounts, and test your first session before storing keys."
+---
+
+Connect your Chaster and Research & Desire accounts, then choose the R+D Lockbox as your Chaster locking method. This guide walks you through linking the accounts and starting your first session.
+
+## Before you start
+
+You will need a Chaster account, a Research & Desire dashboard account, and an R+D Lockbox connected to Wi-Fi and paired to your R+D account. If your Lockbox is new, follow the [Lockbox Quick Start](/lockbox) first. The Lockbox uses 2.4 GHz Wi-Fi.
+
+Run your first session with an empty Lockbox. Check that it locks, stays in sync, and releases at the end before using it to hold your keys. Keep an independent emergency access method available. Read the [Lockbox safety and emergency access guide](/lockbox/safety). [Chaster’s unlock guide](https://docs.chaster.app/unlock-your-lock/) explains its unlock conditions and emergency access precautions.
+
+## Choose the R+D Lockbox in Chaster
+
+Create or join a lock in [Chaster](https://chaster.app/) and review its settings. When you reach **Locking method**, select **Research And Desire Lockbox** under **Smart lockbox**.
+
+![Chaster locking methods with Research And Desire Lockbox under Smart lockbox](./img/01-choose-locking-method.png)
+
+The setup panel shows two checks: **Link your Account** and **Pair a Lockbox**. Select **Link Account** to sign in to your Research & Desire account.
+
+![R+D Lockbox setup panel showing Link Account and the pairing check](./img/02-link-account.png)
+
+## Connect your Chaster account
+
+On the R+D dashboard’s **Integrations** page, find **Chaster** and select **Connect Chaster**.
+
+![R+D Integrations page showing Chaster as Not connected and the Connect Chaster button](./img/03-connect-chaster.png)
+
+Sign in to Chaster if prompted. Review the permissions requested by **Research And Desire**, then select **Allow** to connect the accounts.
+
+The permission screen includes access to your profile, locks, shared locks, keyholder features, and messaging. Review the full list before allowing access.
+
+![Chaster permission screen with the requested account access and Allow button](./img/04-authorize-account.png)
+
+Back on the R+D dashboard, confirm that Chaster shows **Connected** and that **Linked Account** is the Chaster account you intended to use.
+
+
+## Confirm your Lockbox is ready
+
+Return to the Chaster setup tab. Both **Link your Account** and **Pair a Lockbox** should have green check marks, followed by **You’re all set!**
+
+If the pairing check is incomplete, pair your Lockbox to the same R+D account using the [Lockbox Quick Start](/lockbox/quick-start/pairing), then return to Chaster.
+
+Once both checks are complete, select **Continue**.
+
+If the checks do not update after account linking, reload or reopen the **Locking method** panel. **You’re all set!** confirms the account association and pairing record; check the device’s online status separately.
+
+
+## Review and start your lock
+
+On **Summary**, check the duration, timer visibility, and locking method. The locking method should read **Research And Desire Lockbox**, with **Configured and ready to use** underneath.
+
+<Callout type="warning" title={"Check the maximum lock time"}>
+
+If Chaster shows **No maximum lock time**, your lock could run indefinitely if misconfigured. For your first test, go back and enable **Limit lock time**. This sets an outer limit for unlocking in Chaster, including when extensions or freezes are active. See [Chaster’s explanation of Limit lock time](https://docs.chaster.app/unlock-your-lock/#limit-lock-time).
+
+</Callout>
+
+When you are ready to begin the empty-box test, close the drawer and select **Start the lock**. This locks the Lockbox immediately. If the device asks for confirmation, follow the prompts on its screen.
+
+For a session with keys, put the keys inside and close the drawer before selecting **Start the lock**.
+
+If several Lockboxes are paired to your account, run an empty-box test and confirm which physical box received the session before storing keys. The Chaster setup panel has no device selector.
+
+![Chaster Summary showing the R+D Lockbox, duration, maximum-time warning, and Start the lock button](./img/07-review-and-start.png)
+
+*This example shows the no-maximum warning. Set a finite maximum before your first test.*
+
+## Check the active session
+
+Your session appears under **My locks**. Under **Actions**, you should see **Research And Desire Lockbox**. Open this action to access the integration during your session.
+
+![An active Chaster session with the Research And Desire Lockbox action](./img/08-active-lock.png)
+
+Check the R+D dashboard and the physical Lockbox as well. Confirm that the device has received the session and that the drawer is locked. A running timer in Chaster alone does not confirm that the physical box has locked.
+
+The Chaster Lockbox action opens a status view. Select **Open lockbox page** to open the R+D dashboard for its controls. The status view refreshes periodically and respects Chaster’s timer visibility rules.
+
+Before moving on to a session with keys, finish the empty-box test and confirm that you can open the drawer. A timer reaching zero makes the session eligible to unlock; it does not itself complete the session. Chaster’s normal unlock conditions include an elapsed timer, no freeze, no blocking extensions, and any minimum duration being met. Follow the [Chaster unlock guide](https://docs.chaster.app/unlock-your-lock/) for the Chaster part of ending a session, follow the device’s prompts, and check that both platforms show the session has ended.
+
+For breaks, account disconnection, and sync troubleshooting, see the [Chaster FAQ](/lockbox/chaster/faq).
