@@ -1,0 +1,114 @@
+---
+title: "Chaster FAQ"
+description: "Answers about Chaster account linking, Lockbox sessions, time changes, temporary openings, and sync troubleshooting."
+---
+
+Use this FAQ alongside the [setup guide](/lockbox/chaster/setup) to understand account linking, session controls, and common sync problems.
+
+## Do I need to connect my accounts every time?
+
+No. The account connection is saved, and the integration refreshes its authorization when needed. If the connection can no longer be refreshed or authorization has been revoked, use **Connect Chaster** again. Check **Linked Account** before starting a session.
+
+## What access does Connect Chaster request?
+
+The permission screen requests access to your profile, locks, shared locks, keyholder features, and messaging. Review the full list before selecting **Allow**.
+
+## Why is the account check green in Chaster but the dashboard says Not connected?
+
+The Chaster setup check recognizes an association with your R+D account. The dashboard’s **Connected** status also checks account authorization. Complete **Connect Chaster** if the dashboard still shows **Not connected**.
+
+If the Chaster setup checks do not update after linking, reload or reopen the **Locking method** panel.
+
+## Does the ready confirmation mean my Lockbox is physically locked?
+
+It confirms that the setup found a linked account and a paired Lockbox. It does not verify that the device is online, that the drawer is closed, or that it has physically locked. Check the Lockbox and its device status after starting the session.
+
+## Why does Chaster say no Lockbox is linked?
+
+Confirm that the Lockbox is paired to the R+D account you linked to Chaster. Follow the [pairing guide](/lockbox/quick-start/pairing) if pairing is incomplete, then return to the Chaster setup.
+
+## Which Lockbox is used if I own more than one?
+
+The Chaster setup panel has no device selector. If several Lockboxes are paired to your account, run an empty-box test and confirm which physical box received the session before storing keys. This is separate from choosing a Chaster lock in **Pull from Chaster**.
+
+## When does the Lockbox lock?
+
+Selecting **Start the lock** locks it immediately, with a device confirmation if needed. Put the keys inside and close the drawer before starting a real session.
+
+If the dashboard says the session is waiting for acceptance or device confirmation, follow the Lockbox’s prompts. Verify the physical lock rather than relying on the timer alone.
+
+## Where can I see my Lockbox during the session?
+
+In Chaster, open **Research And Desire Lockbox** under **Actions**. The integration displays a status card with the linked session and reported device state. This view refreshes periodically and when the tab regains focus, so it can lag behind a recent change.
+
+The embedded card is a status view. Select **Open lockbox page** to open the R+D dashboard for its controls. Chaster’s existing timer visibility rules still apply.
+
+## Do time changes stay in sync?
+
+The integration handles time changes from Chaster and sends supported R+D time changes back to Chaster. A sync error can leave the two sides temporarily different. Check the current session on both platforms if an operation reports an error; do not assume a failed change was applied everywhere.
+
+## Why is my timer frozen?
+
+A freeze pauses the session countdown. It may come from Chaster, your keyholder, or an extension. The integration can also freeze a new session while it waits for acceptance on the Lockbox.
+
+Accepting that session releases the integration’s own approval freeze when applicable. It does not remove an existing freeze placed by someone else. Check Chaster if the timer remains frozen.
+
+## Why will the Lockbox not open when the timer reaches zero?
+
+Zero means the session may be eligible to unlock. It does not, by itself, complete the session or prove that the physical box has opened. Chaster can still prevent unlocking because the lock is frozen, an extension has unmet requirements, or another unlock condition is not satisfied.
+
+Check the lock’s status in Chaster and follow the available unlock controls and device prompts. Confirm that the drawer opens and that both platforms show the session has ended.
+
+## How do I take a temporary opening or hygiene break?
+
+Configure Chaster’s **Temporary opening** extension, then start an opening in Chaster. Use the Lockbox while that opening is active. The device’s permission check requires an active opening with time remaining; pressing a device control alone does not establish a Chaster opening.
+
+If openings are restricted to the keyholder, the keyholder must start them. Follow the device’s prompts while the opening is active.
+
+## Why is the Lockbox waiting after I end a break in Chaster?
+
+Return the key, close the drawer, and follow the Lockbox’s confirmation prompts. Ending the opening in Chaster can leave the paired Lockbox waiting for confirmation that the keys have been returned and the device has relocked.
+
+Ending a break does not clear a separate Chaster freeze. If the timer remains paused afterward, check Chaster’s freeze status.
+
+## What does Pull from Chaster do?
+
+It loads the current Chaster state and previews the changes to the R+D session. Depending on what is running, the proposed action may start, update, replace, or end that session.
+
+Opening the preview does not apply session changes. Review the selected Chaster lock, the current R+D session, and the proposed action before confirming.
+
+## Who can apply changes through Pull?
+
+The R+D account owner or a keyholder assigned to the current R+D session can use Pull. **Give Up Control** prevents the owner from applying changes through it. Connecting the owner’s Chaster account is an owner action.
+
+## Why does Pull offer to override or end my current session?
+
+**Override current session** means the selected Chaster lock differs from the session running in R+D. Confirming replaces the R+D session with one based on that Chaster lock.
+
+An offer to **end** the R+D session means Chaster reports no active locked session while R+D still has one. Review both platforms before confirming. If the state changes after you load the preview, refresh it and review the new changes.
+
+If several Chaster locks are available, Pull uses the one already linked to the R+D session when possible. Otherwise, it asks you to choose.
+
+## Why can Pull not use my Chaster lock?
+
+The lock must use the **Research And Desire Lockbox** integration, and its integration session must be available. Check the locking method and integration on Chaster. The preview may also need timing information before it can create or replace an R+D session.
+
+If authorization has expired, reconnect through **Connect Chaster**. If a connection attempt says its state token expired, return to **Integrations** and start a fresh connection attempt.
+
+## Can I disconnect Chaster during a session?
+
+The dashboard disables **Disconnect** while a Chaster-controlled session is active, including when it is on a break or waiting for device confirmation. Finish the session before disconnecting.
+
+Disconnect clears R+D’s stored Chaster authorization credentials while retaining mirrored history. It does not issue an unlock command or end a Chaster lock.
+
+## What if Wi-Fi or Chaster is unavailable?
+
+The dashboard can display a session before the physical device has caught up, and sync operations can fail. Restore connectivity, wake the Lockbox, follow any device prompts, and check both platforms again.
+
+Do not rely on an outage to release your keys. Keep an independent emergency access method available and read the [emergency unlock guide](/lockbox/using/emergency-unlock) and [emergency backplate guide](/lockbox/support/emergency-backplate).
+
+## What happens to Chaster after a software emergency unlock?
+
+After the R+D server receives the device’s emergency-unlock event, it marks the R+D session abandoned and attempts to archive the Chaster lock. A hardware emergency opening is not reported automatically; check both platforms separately.
+
+Check Chaster afterward, because a sync failure can leave its lock running. Review the [emergency unlock guide](/lockbox/using/emergency-unlock) and [emergency backplate guide](/lockbox/support/emergency-backplate) before starting a session with keys.
