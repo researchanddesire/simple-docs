@@ -1,0 +1,145 @@
+---
+title: "Chaster FAQ"
+description: "Answers about Chaster account linking, Lockbox sessions, time changes, temporary openings, and sync troubleshooting."
+---
+
+Find an answer: [Locking and openings](#locking-and-openings) · [Sync and Pull](#sync-and-pull) · [Voting](#voting) · [Accounts](#accounts) · [Connection loss and emergency access](#connection-loss-and-emergency-access).
+
+For first-time instructions, follow [Chaster Setup](/lockbox/chaster/setup). See [Integration limitations](/lockbox/chaster/limitations) for a quick list of boundaries.
+
+<Callout type="warning" title="Check the physical box">
+
+A ready message or running timer does not prove that the drawer has locked or opened. Check the intended Lockbox's screen and drawer.
+
+</Callout>
+
+## Locking and openings
+
+### When does the Lockbox lock?
+
+**Start the lock** sends the session to the box. Follow any device prompts and confirm that the intended drawer has locked. A delay is possible; no fixed response time is verified. Follow [Setup](/lockbox/chaster/setup) before using keys.
+
+### Does the ready confirmation mean my Lockbox is physically locked?
+
+No. It confirms a linked account and paired box, not connectivity, drawer closure, or physical locking.
+
+### Why will the Lockbox not open when the timer reaches zero?
+
+Check Chaster for a freeze, unmet extension requirements, or a minimum duration. Zero alone does not complete the session. Use Chaster's available unlock controls, follow device prompts, and confirm that the drawer opens and both sessions have ended.
+
+### Why is my timer frozen?
+
+Check Chaster's freeze status. A keyholder or extension can pause the countdown. The integration may also freeze a new session while it waits for device acceptance; acceptance releases only that approval freeze, when applicable.
+
+### How do I take a temporary opening or hygiene break?
+
+Configure **Temporary opening** in Chaster, then start an opening there. If it is keyholder-only, ask your keyholder to start it. Follow the device prompts while the opening has time remaining.
+
+The cooldown can block the first opening too. A device control alone does not start a Chaster opening.
+
+### Why is the Lockbox waiting after I end a break in Chaster?
+
+Return the key, close the drawer, and follow the Lockbox's confirmation prompts. It may be waiting to confirm key return and relocking. If the timer stays paused, check Chaster for a separate freeze.
+
+### Where can I see my Lockbox during the session?
+
+Open **Actions → Research And Desire Lockbox** in Chaster. Its card shows reported status and may lag behind changes. Select **Open lockbox page** for Dashboard controls. Chaster's timer visibility rules still apply.
+
+## Sync and Pull
+
+### Do time changes stay in sync?
+
+Supported time changes sync in both directions. After an error, check both deadlines before retrying: Dashboard may have changed even if Chaster rejected the adjustment.
+
+### What does Pull from Chaster do?
+
+It previews the Chaster changes before applying them. Check the selected lock, current Dashboard session, and proposed action; Pull can start, update, replace, or end a session. Opening the preview applies nothing.
+
+### Why does Pull offer to override or end my current session?
+
+- **Override current session** replaces the Dashboard session with the selected Chaster lock.
+- **End** means Chaster reports no active locked session while Dashboard still has one.
+
+Check both platforms before confirming. If anything changes, refresh the preview. With several Chaster locks, Pull uses the linked lock when possible or asks you to choose.
+
+### Who can apply changes through Pull?
+
+The R+D account owner or a keyholder assigned to the current R+D session. **Give Up Control** blocks the owner from applying changes. Only the owner can connect their Chaster account.
+
+### Why can Pull not use my Chaster lock?
+
+Check that the lock uses **Research And Desire Lockbox** and has an available integration session. Creating or replacing a session may also require timing information.
+
+Reconnect with **Connect Chaster** if authorization expired. For an expired state token, return to **Integrations** and start a fresh connection attempt.
+
+### Why does Pull say already in sync when timers differ?
+
+Pull checks only supported session state and settings. Refresh both pages and compare matching time values and time zones. Chaster's maximum deadline may differ from its current countdown. See [Integration limitations](/lockbox/chaster/limitations).
+
+## Voting
+
+Follow [Voting with Chaster](/lockbox/chaster/voting) for setup and link-sharing steps.
+
+### Does Chaster voting enable Dashboard voting?
+
+No. New Chaster sessions start with Dashboard voting **off**; existing sessions keep their settings. Pull does not copy the voting switch or vote sizes. Users with **Modify session** access can configure Dashboard voting separately.
+
+### Do Dashboard votes count toward Chaster's required visits?
+
+No. Use Chaster's **Share links** link for required visits. Dashboard sends time adjustments, and each platform keeps its own vote records.
+
+### What if a Dashboard vote reports an error?
+
+Check both deadlines before retrying. The vote and Dashboard deadline change may remain recorded even if Chaster rejects the adjustment.
+
+### Does hiding the public listing stop voting?
+
+No. **Show in Public Links** hides the directory entry. To restrict ordinary public access, turn off **Enable public voting on lock duration** in the current session and save. Chaster Share links remain separate.
+
+## Accounts
+
+### Why is the account check green in Chaster but the dashboard says Not connected?
+
+Complete **Connect Chaster** in Dashboard and check **Linked Account**. Chaster's account check recognizes the account association; Dashboard also checks authorization. Reload Chaster's **Locking method** panel if its checks have not updated.
+
+### Why does Chaster say no Lockbox is linked?
+
+Pair the box to the R+D account linked to Chaster. Follow the [pairing guide](/lockbox/quick-start/pairing), then return to Chaster setup.
+
+### Which Lockbox is used if I own more than one?
+
+Chaster setup has no box picker. Run an empty-box test to identify which box receives the session before storing keys. Choosing a Chaster lock in Pull does not select a physical box.
+
+### Why can I not create another Chaster lock after unlocking?
+
+An unlocked lock may still use a lock slot. If you reach Chaster's limit, review and archive a completed lock you no longer need. Archiving is separate from physical unlocking.
+
+### Can I disconnect Chaster during a session?
+
+Finish the session first. **Disconnect** is blocked while the linked session is active, on a break, or waiting for device confirmation. It clears stored authorization and retains history; it does not unlock the box or end the Chaster lock.
+
+## Connection loss and emergency access
+
+<Callout type="warning" title="Keep an independent way to access your keys">
+
+Do not rely on an outage to release them. Read the [emergency unlock guide](/lockbox/using/emergency-unlock) and [emergency backplate guide](/lockbox/support/emergency-backplate) before a session with keys.
+
+</Callout>
+
+### What if Wi-Fi or Chaster is unavailable?
+
+Restore connectivity, wake the Lockbox, follow its prompts, and check both platforms and the drawer. Dashboard may show a session before the device catches up.
+
+### What happens to Chaster after a software emergency unlock?
+
+Once the server receives the device event, it marks the Dashboard session abandoned and attempts to archive the Chaster lock. Check Chaster afterward: failed sync can leave it running. A hardware emergency opening is not reported automatically.
+
+## Optional account permissions
+
+### Do I need to connect my accounts every time?
+
+No. Authorization refreshes automatically when possible. Use **Connect Chaster** again if it cannot refresh or access has been revoked.
+
+### What access does Connect Chaster request?
+
+Profile, locks, shared locks, keyholder features, and messaging. Review the full permission screen before selecting **Allow**.

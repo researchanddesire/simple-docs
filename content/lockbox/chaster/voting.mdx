@@ -1,0 +1,96 @@
+---
+title: "Voting with Chaster"
+description: "Choose a voting link and set up Dashboard voting for a Chaster-linked session."
+---
+
+## Choose your voting link
+
+<Mermaid chart={`
+flowchart TD
+    A["Which voting rules do you need?"] --> B["Chaster rules or required visits"]
+    A --> C["Dashboard vote sizes and duration limits"]
+    B --> D["Set up Share links in Chaster<br/>and share the Chaster link"]
+    C --> E["Enable Dashboard voting below<br/>and share the Dashboard link"]
+`} />
+
+For required visits, visitor sign-in, or random time changes, use [Chaster Share links](https://docs.chaster.app/features/shared-links/).
+
+<Callout type="warning" title="Dashboard votes do not count as Chaster visits">
+
+A Dashboard vote can change Chaster's time, but it does not count toward required Share links visits.
+
+</Callout>
+
+## Enable Dashboard voting
+
+<Callout type="info" title="Check the current session">
+
+As of October 7, 2026, new sessions created from Chaster start with Dashboard voting **off**. Existing sessions keep their setting. A saved template's voting switch does not enable voting on an imported session.
+
+</Callout>
+
+1. On the Lockbox page, open the current session's actions menu and select **Modify session**.
+2. Turn on **Enable public voting on lock duration** and select the settings button beside it.
+3. Set the **Increase Time Unit** and **Decrease Time Unit**. The form's minimum is **15 minutes** per unit. Review the minimum and maximum voting duration.
+4. Choose whether to turn on **Show in Public Links** for a public directory listing.
+5. Save. Return to the session's actions menu, select **Copy public voting link**, and share it.
+
+<Callout type="info" title="No Modify session option?">
+
+Full editing is available to an R+D session keyholder, or for a test or pending session. A normal active-session wearer may only have add-time controls.
+
+</Callout>
+
+<Callout type="warning" title="An unlisted link can still be shared">
+
+Leaving **Show in Public Links** off hides the directory listing. Anyone with the direct link can still vote while Dashboard public voting is on.
+
+</Callout>
+
+## Turn voting off
+
+In **Modify session**, turn off **Enable public voting on lock duration** and save. This restricts ordinary public access. Hiding the directory listing alone does not stop direct-link voting.
+
+To change Chaster voting, edit its **Share links** extension separately.
+
+## If a vote does not work
+
+| Problem | What to do |
+| --- | --- |
+| Voting is unavailable | Check that the session is active and has an end time. Pending and ended sessions cannot receive votes. |
+| You are voting on your own session | The signed-in owner cannot vote on their own lock. |
+| You already voted | Wait until the voting page allows another vote. |
+| A duration limit is reached | Review the minimum and maximum voting duration. |
+| A downvote fails during an opening | A vote cannot move the deadline before that opening ends. |
+| Native-app downvotes are unavailable | The reviewed native app disables downvotes for Chaster-linked sessions. Website controls differ; Chaster may still reject a time change. |
+| A sync error appears | Check both deadlines before retrying. Dashboard may already have recorded the vote and changed its deadline. |
+
+<Callout type="warning" title="Zero does not confirm the drawer is open">
+
+Chaster's other unlock conditions still apply. Finish through the available Chaster controls and confirm that the drawer opens.
+
+</Callout>
+
+## Optional how votes sync
+
+<Mermaid chart={`
+sequenceDiagram
+    participant V as Visitor
+    participant D as Dashboard
+    participant C as Chaster
+    V->>D: Vote with the Dashboard link
+    D->>D: Record vote and change deadline
+    D->>C: Request time adjustment
+    alt Chaster accepts
+        C-->>D: Time changed
+    else Sync fails
+        D-->>V: Show error
+        Note over D,C: Dashboard changes can remain<br/>Check both deadlines before retrying
+    end
+`} />
+
+Dashboard sends a time adjustment to Chaster, not a Share links vote. Chaster Share links votes can also change the Dashboard deadline, but appear there as session edits. Each system keeps its own voting totals.
+
+**Pull from Chaster** does not copy the voting switch or vote sizes. Configure each system separately.
+
+For setup, see [Chaster Setup](/lockbox/chaster/setup). For timer and control differences, see [Integration limitations](/lockbox/chaster/limitations).
