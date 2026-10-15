@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="700" viewBox="0 0 1200 700" role="img" aria-labelledby="title desc">
+  <title id="title">Gold motor programming with four female jumper wires</title>
+  <desc id="desc">Looking into the motor header with its latch up, the top row is pins 6, 7, 8, 9, 10 and the bottom row is pins 1, 2, 3, 4, 5. Connect adapter 5V to pin 10, GND to pin 6, A+ to pin 2, and B minus to pin 3. Female jumper sockets fit directly onto those four pins. Leave other pins unconnected. Supply motor power separately; never apply 24 volts to these pins.</desc>
+  <rect width="1200" height="700" rx="16" fill="#ffffff"/>
+  <g font-family="Arial, Helvetica, sans-serif" fill="#192934">
+    <text x="40" y="58" font-size="34" font-weight="700">Gold motor programming</text>
+    <text x="40" y="96" font-size="22" fill="#566978">4 individual female jumpers. No 10-pin plug.</text>
+    <path d="M40 122H1160" stroke="#ccd7de"/>
+    <text x="48" y="164" font-size="24" font-weight="700">USB–RS485 adapter</text>
+    <text x="495" y="164" font-size="24" font-weight="700">Motor pins · front view, latch up</text>
+    <rect x="45" y="200" width="170" height="338" rx="12" fill="#f2f5f7" stroke="#c4d1da" stroke-width="2"/>
+    <g font-size="28" font-weight="700">
+      <text x="66" y="252">5V</text><text x="66" y="336">GND</text>
+      <text x="66" y="420">A+</text><text x="66" y="504">B−</text>
+    </g>
+    <text x="48" y="566" font-size="18" fill="#566978">Follow printed labels.</text>
+    <text x="48" y="592" font-size="18" fill="#566978">Strip ends; clamp in</text>
+    <text x="48" y="617" font-size="18" fill="#566978">screw terminals.</text>
+    <path d="M742 282V260H816V282" fill="none" stroke="#879eac" stroke-width="2"/>
+    <rect x="485" y="282" width="610" height="256" rx="4" fill="#f8fafc" stroke="#879eac" stroke-width="2"/>
+    <g fill="none" stroke-width="6" stroke-linejoin="round" stroke-linecap="round">
+      <path d="M190 243H290V224H1040V334" stroke="#d52342"/>
+      <path d="M190 327H355V344H550" stroke="#27323d"/>
+      <path d="M190 411H325V594H675V480" stroke="#066bdb"/>
+      <path d="M190 495H270V630H800V480" stroke="#b18700"/>
+    </g>
+    <g fill="#ffffff" stroke-width="3">
+      <circle cx="190" cy="243" r="9" stroke="#d52342"/>
+      <circle cx="190" cy="327" r="9" stroke="#27323d"/>
+      <circle cx="190" cy="411" r="9" stroke="#066bdb"/>
+      <circle cx="190" cy="495" r="9" stroke="#b18700"/>
+    </g>
+    <g fill="#edf2f6" stroke="#abbecb" stroke-width="2">
+      <circle cx="675" cy="344" r="21"/><circle cx="800" cy="344" r="21"/><circle cx="925" cy="344" r="21"/>
+      <circle cx="550" cy="480" r="21"/><circle cx="925" cy="480" r="21"/><circle cx="1040" cy="480" r="21"/>
+    </g>
+    <g text-anchor="middle" font-size="23" font-weight="700" fill="#657887">
+      <text x="675" y="352">7</text><text x="800" y="352">8</text><text x="925" y="352">9</text>
+      <text x="550" y="488">1</text><text x="925" y="488">4</text><text x="1040" y="488">5</text>
+    </g>
+    <g fill="#222c37" stroke-width="3">
+      <rect x="526" y="318" width="48" height="52" rx="3" stroke="#27323d"/>
+      <rect x="1016" y="318" width="48" height="52" rx="3" stroke="#d52342"/>
+      <rect x="651" y="454" width="48" height="52" rx="3" stroke="#066bdb"/>
+      <rect x="776" y="454" width="48" height="52" rx="3" stroke="#b18700"/>
+    </g>
+    <g text-anchor="middle" font-size="25" font-weight="700" fill="#ffffff">
+      <text x="550" y="353">6</text><text x="1040" y="353">10</text>
+      <text x="675" y="489">2</text><text x="800" y="489">3</text>
+    </g>
+    <g text-anchor="middle" font-size="21" font-weight="700">
+      <text x="550" y="404" fill="#27323d">COM</text>
+      <text x="1040" y="404" fill="#d52342">485_5V</text>
+      <text x="675" y="443" fill="#066bdb">485A</text>
+      <text x="800" y="443" fill="#b18700">485B</text>
+    </g>
+    <text x="855" y="577" font-size="18">Push female ends onto</text>
+    <text x="855" y="603" font-size="18">pins 2, 3, 6, 10.</text>
+    <rect x="40" y="653" width="1120" height="34" rx="7" fill="#fff4f0"/>
+    <text x="55" y="676" font-size="18">Power off to wire. Motor power: separate 24 V supply. No 24 V on these pins.</text>
+  </g>
+</svg>
