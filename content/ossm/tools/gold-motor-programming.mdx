@@ -1,22 +1,46 @@
 ---
 title: "Gold Motor Programming Tool"
-description: "Program an OSSM Gold Motor using Web Serial and Modbus RTU."
+description: "Connect four female jumper wires and program your OSSM Gold Motor."
 ---
 
 import { GoldMotorControl } from "@repo/device-tools/gold-motor-control";
 
-Configure or restore the OSSM defaults on a Gold Motor (57AIM series) directly from a supported desktop browser.
+Restore the standard OSSM settings on a Gold Motor (57AIM series). This changes motor settings, not firmware.
 
-<Callout type="info" title="This is a motor programmer, not a firmware flasher">
+## What you need
 
-This tool reads and writes motor configuration registers over Modbus RTU. It does not download firmware and therefore does not use the Supabase firmware-manifest pathway.
+A Gold Motor, [CERRXIAN USB–RS485 adapter (B09JMT9D59)](https://www.amazon.com/dp/B09JMT9D59), four female Arduino jumper wires, wire cutters/strippers, a small screwdriver, the motor's 24 V power supply, and a desktop computer running Chrome or Edge.
+
+## Connect the wires
+
+<Callout type="warn" title="Power off before wiring">
+
+Unplug USB and motor power. Keep all other motor signal connections disconnected.
 
 </Callout>
 
-<Callout type="warn" title="Disconnect the OSSM signal cable first">
+1. Cut one end off each jumper and strip the wire. Clamp the stripped ends in the adapter's labelled screw terminals.
+2. Push the female ends directly onto the motor's header pins as shown below. **Do not use a 10-pin plug.**
 
-Remove the OSSM Reference Board four-pin signal plug before programming. Power the motor with 20–36 V DC and connect it through an RS485 USB adapter. Use Chrome or Edge on a desktop computer.
+![Four female jumpers connect adapter 5V to motor pin 10, GND to pin 6, A+ to pin 2, and B− to pin 3. Looking into the motor header with the latch up, the top row is 6–10 and the bottom row is 1–5.](./img/gold-motor-female-jumper-wiring.svg)
 
-</Callout>
+| Adapter terminal | Motor pin | Motor signal |
+| --- | --- | --- |
+| 5V | 10 | 485_5V |
+| GND | 6 | COM |
+| A+ | 2 | 485A |
+| B− | 3 | 485B |
+
+Leave the other pins unconnected. Check the four connections before applying power.
+
+**Motor power is separate:** connect the motor's 24 V supply to its power terminals. Never connect 24 V to the adapter or these header pins.
+
+## Program the motor
+
+1. Keep the motor shaft clear. Plug the adapter into the computer and switch on motor power.
+2. In the tool below, click **Connect to Motor** and select the adapter's serial port. Click **Read Registers** and confirm numeric values appear without errors.
+3. Click **Reset fields to OSSM Standard**. Leave Advanced Settings closed, then click **Write Settings** once. Wait for all three write passes and the readback to finish.
+4. Check the standard values: **0x0B = 800**, **0x18 = 600**, **0x05 = 3000**, **0x07 = 3000**, and **0x09 = 1**.
+5. Click **Disconnect**, unplug USB, and switch off motor power. Reconnect both, connect in the tool, and click **Read Registers** to confirm the settings saved. Disconnect both power sources before removing the jumpers.
 
 <GoldMotorControl />
