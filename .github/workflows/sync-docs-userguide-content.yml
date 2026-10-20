@@ -1,29 +1,20 @@
+# Documentation syncs run main to main only; staging receives docs from the hub.
 name: Request RadApp User Guide Import
 
 on:
   push:
     branches:
       - main
-      - staging
     paths:
       - "content/**"
       - ".github/workflows/sync-docs-userguide-content.yml"
   workflow_dispatch:
-    inputs:
-      branch:
-        description: Branch to synchronize
-        required: true
-        default: staging
-        type: choice
-        options:
-          - staging
-          - main
 
 permissions:
   contents: read
 
 concurrency:
-  group: request-rad-app-userguide-import-${{ github.event_name == 'push' && github.ref_name || inputs.branch }}
+  group: request-rad-app-userguide-import-main
   cancel-in-progress: false
 
 jobs:
@@ -31,8 +22,6 @@ jobs:
     if: ${{ github.event_name == 'workflow_dispatch' || !contains(github.event.head_commit.message, '[docs-sync]') }}
     runs-on: ubuntu-latest
     timeout-minutes: 5
-    env:
-      SYNC_BRANCH: ${{ github.event_name == 'push' && github.ref_name || inputs.branch }}
     steps:
       - name: Create documentation sync token
         id: app-token
@@ -43,12 +32,11 @@ jobs:
           owner: researchanddesire
           repositories: rad-app
 
-      - name: Request matching RadApp import
+      - name: Request RadApp main import
         env:
           GH_TOKEN: ${{ steps.app-token.outputs.token }}
         run: |
           gh workflow run import-docs-content.yml \
             --repo researchanddesire/rad-app \
-            --ref "$SYNC_BRANCH" \
-            --field site=userguide \
-            --field branch="$SYNC_BRANCH"
+            --ref main \
+            --field site=userguide
