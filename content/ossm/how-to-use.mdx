@@ -101,7 +101,7 @@ The Wireless Remote has a Bluetooth connectivity indicator, a WiFi connectivity 
 
 ### Web Controller
 
-The Web Controller allows you to control your OSSM without a physical remote. This remote method requires that your OSSM is connected to WiFi. For instructions on connecting your OSSM to WiFi using the Web Controller, [click this link.](#wifi-setup-option-1) The interface for the Web Controller looks like this:
+The [Web Controller](/ossm/tools/web-controller) allows you to control your OSSM without a physical remote. It connects to your OSSM over Bluetooth from your browser, so your OSSM does not need WiFi to use it. The Web Controller cannot change your OSSM's WiFi settings; to connect your OSSM to WiFi, see [Connecting Your Device to WiFi](#connecting-your-device-to-wifi). The interface for the Web Controller looks like this:
 
   ![](../img/web-controller-play-interface.png)
 
@@ -135,31 +135,63 @@ Connecting your OSSM to WiFi enables it to receive firmware updates as they are 
 
 <Callout type="warning" title={"The OSSM is compatible only with a 2.4GHz network."} />
 
-### WiFi Setup Option #1
+The Web Controller does not have WiFi settings. Use one of the options below instead.
+
+### WiFi Setup Option #1 (Wired Remote)
+
+While the **Wi-Fi Setup** screen is open on the Wired Remote, the OSSM broadcasts its own temporary setup network called **OSSM Setup**.
 
 1. Connect your OSSM to power and let it home
-2. Navigate to the [Web Controller URL](https://docs.researchanddesire.com/ossm/tools/web-controller)
-3. Click "Connect" and select your OSSM, then click "Pair" ![](../img/web-controller-connect-annotated.png)
-4. Select your OSSM and click "Pair" ![](../img/web-controller-pair-annotated.png)
-5. Once paired, click on the "WiFi Settings" tab at the top of the Web Controller interface ![](../img/web-controller-wifisettings-annotated.png)
-6. Enter your WiFi network's name and password ![](../img/web-controller-wifisettings2-annotated.png)
-7. Click "Save & Connect"
+2. On the Wired Remote, turn the right knob to highlight "Wi-Fi Setup" in the menu, then press the right knob to select it
+3. Keep the Wi-Fi Setup screen open until you finish. Pressing the right knob closes the screen and turns off the setup network
+4. Using your phone camera, scan the QR code that appears on the remote screen, or open the WiFi settings on your phone or computer and connect to the open network named "OSSM Setup" (no password)
+5. When the setup page opens, select "Configure WiFi". If the page does not open by itself, go to `http://192.168.4.1` in your browser
+6. Select your WiFi network (this will auto-fill the SSID info), enter your WiFi password, and click save ![](../img/RADR-WiFi-network-selection-annotated.png)
+7. Wait for the OSSM to connect. Once connected, the remote returns to the menu, and opening "Wi-Fi Setup" again shows "You are now connected to WiFi!"
 
 <Callout type="success" title={"Yay! Your OSSM is connected to WiFi."} />
+
+<Callout type="info" title={"Changing networks"}>
+
+To connect to a different network, open **Wi-Fi Setup** while the OSSM is connected and press and hold the right knob. The OSSM forgets the saved network and restarts. Then repeat the steps above.
+
+If you select **Pairing** or **Update** while the OSSM is not connected to WiFi, the OSSM opens the Wi-Fi Setup screen first. After it connects, Pairing continues automatically. For updates, select **Update** again.
+
+</Callout>
 
 ### WiFi Setup Option #2 (Wireless Remote)
 
+The Wireless Remote's own "WiFi Settings" menu and its "RADR Setup" network connect the remote itself to WiFi, not the OSSM. Once the remote is connected to WiFi, it shares that network with your OSSM over Bluetooth whenever they connect and the OSSM is not already on WiFi.
+
 1. Connect your OSSM to power and let it home
-2. Connect your Wireless Remote to your OSSM
-3. Navigate to the Wireless Remote menu using the left button
-4. Select "Settings" ![](../img/wireless_remote_wifi_connectivity_settings_unannotated.png)
-5. Select "Wifi Settings" ![](../img/wireless-remote-wifi-connectivity-wifi-settings-unannotated.png)
-6. Using your phone camera, scan the QR code that appears on the device screen ![](../img/wireless_remote_wifi_connectivity_wifi_QR_code_unannotated.png)
-7. On your phone or computer, connect to the WiFi network named "OSSM Setup" ![](../img/RADR-wifi-setup-annotated.png)
-8. Select "Configure WiFi" ![](../img/WiFi-manager-annotated.png)
-9. Select your WiFi network (this will auto-fill the SSID info), enter your WiFi password, and click save ![](../img/RADR-WiFi-network-selection-annotated.png)
+2. Connect your Wireless Remote to your WiFi network (see [Connecting to WiFi](/radr/guides/user-guide/connecting-to-wifi) for the full guide):
+   1. From the Wireless Remote's main menu, select "Settings" ![](../img/wireless_remote_wifi_connectivity_settings_unannotated.png)
+   2. Select "WiFi Settings" ![](../img/wireless-remote-wifi-connectivity-wifi-settings-unannotated.png)
+   3. Using your phone camera, scan the QR code that appears on the remote screen ![](../img/wireless_remote_wifi_connectivity_wifi_QR_code_unannotated.png)
+   4. On your phone or computer, connect to the WiFi network named "RADR Setup" ![](../img/RADR-wifi-setup-annotated.png)
+   5. Select "Configure WiFi" ![](../img/WiFi-manager-annotated.png)
+   6. Select your WiFi network (this will auto-fill the SSID info), enter your WiFi password, and click save ![](../img/RADR-WiFi-network-selection-annotated.png)
+3. [Connect your Wireless Remote to your OSSM](#connecting-your-wireless-remote-to-the-ossm). The remote sends its WiFi network name and password to the OSSM when they connect
+4. Wait about 30 seconds for the OSSM to join your network
 
 <Callout type="success" title={"Yay! Your OSSM is connected to WiFi."} />
+
+<Callout type="info" title={"WiFi Required"}>
+
+If you select **Pairing** or **Update OSSM** from the Wireless Remote's OSSM menu while the OSSM is not on WiFi, the remote shows **WiFi Required**. Press **Share Wi-Fi**, wait about 30 seconds, then try again. If the OSSM still does not connect, use Option #1.
+
+</Callout>
+
+### WiFi Setup Option #3 (R+D Dashboard)
+
+If you are pairing your OSSM with your R+D Dashboard account using Chrome or Edge, the Dashboard can send your WiFi details to the OSSM over Bluetooth:
+
+1. Connect your OSSM to power and let it home
+2. In the R+D Dashboard, select "Pair an OSSM", then open the "Auto (Bluetooth)" tab
+3. Select "Scan for OSSM" and choose your OSSM in the browser's device list
+4. Choose your WiFi network or enter it manually, then select "Pair & Send WiFi"
+
+If your OSSM does not appear in the Bluetooth device list, use Option #1.
 
 # Pre-play Safety Checklist
 

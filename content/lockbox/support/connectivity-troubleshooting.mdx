@@ -64,6 +64,24 @@ Step-by-step firmware flashing instructions.
 
 ---
 
+## E-LOCK-11 or E-LOCK-12 on the device screen
+
+Both codes mean your Lockbox joined your Wi-Fi network but could not reach the R+D servers:
+
+- **E-LOCK-11: Server Connection Failed** — "Could not connect to the messaging server within 30 seconds. You can retry or skip for now." The Lockbox could not connect to the messaging server that keeps it in sync with the dashboard.
+- **E-LOCK-12: Server Unreachable** — "Wi-Fi is connected, but the dashboard health check failed. Check your internet connection or try again later." The Lockbox could not reach the dashboard.
+
+**Try these steps in order:**
+
+1. **Select Retry** on the device. Brief router or server interruptions often clear on a second attempt.
+2. **Check your internet connection** — Make sure another device on the same Wi-Fi network can load websites. Restart your router if it cannot.
+3. **Test with a phone hotspot** — Some work, school, hotel, and VPN networks block the secure connection the Lockbox uses (for E-LOCK-11, MQTT over TLS on port 8883). [Connect the Lockbox to a hotspot](/lockbox/quick-start/wifi-setup). If it connects, your usual network is blocking the Lockbox; ask the network administrator to allow outbound port 8883, or use a different network.
+4. **Try again later** — If the R+D servers are temporarily unavailable, the error clears once they are reachable again.
+
+For Wi-Fi errors such as "E-LOCK-10: Wi-Fi Login Failed", see [E-LOCK-10: Could Not Connect to Wi-Fi](/lockbox/errors/e-lock-10).
+
+---
+
 ## When to contact support
 
 Contact [support@researchanddesire.com](mailto:support@researchanddesire.com) if:
