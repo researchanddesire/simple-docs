@@ -1,0 +1,115 @@
+---
+title: "Screen Messages"
+description: "Every message your OSSM's Wired Remote can show, what it means and what to do next."
+---
+
+Your OSSM shows messages on the Wired Remote's screen. Find the message below to see what it means and what to do.
+
+## Start-up
+
+| On screen | What it means | What to do |
+| --- | --- | --- |
+| The letters **OSSM**, then the **Research & Desire** and **Kinky Makers** logos, with a version number at the bottom left | Your OSSM is starting up. The number is your firmware version. | Keep clear of the rail: homing has already started. |
+| **Measuring Stroke** | Your OSSM is homing: the carriage moves to each end of the rail to measure it. The light on the control board breathes purple. | Wait. Within about 80 seconds you'll see the menu or an error. If this screen stays for minutes, see [Stuck on "Measuring Stroke"](/ossm/troubleshooting/homing#stuck-on-measuring-stroke). |
+
+## Errors
+
+| On screen | What it means | What to do |
+| --- | --- | --- |
+| **Error** and **Homing took too long. Please check your wiring and try again.** | The OSSM didn't find the end of the rail within 40 seconds in one direction, so it stopped the motor. | See [Homing problems](/ossm/troubleshooting/homing). |
+| **Error** and **Stroke too short. Please check you drive belt.** | While homing, the OSSM measured 50 mm of travel or less. Something stopped the carriage early. | See [Belt, rail and noise](/ossm/troubleshooting/belt-rail-noise#stroke-too-short). |
+
+On either error screen, press the right knob once to see **Get Help**, then press it again. Your OSSM restarts and homes again.
+
+## Get Help
+
+| On screen | What it means | What to do |
+| --- | --- | --- |
+| **Get Help**, **On Discord, or GitHub**, a QR code and **Click to exit** | The QR code opens the OSSM pages of this guide. | Scan the code with your phone. If you opened Get Help from the menu, press the right knob to go back. If it appeared after an error, pressing the right knob restarts your OSSM. |
+
+## The menu
+
+Turn the right knob to move through the menu (three clicks per line) and press it to choose.
+
+| Menu item | What it does |
+| --- | --- |
+| **Simple Penetration** | Starts simple back-and-forth play. The right knob sets Stroke. |
+| **Stroke Engine** | Starts pattern play. The right knob sets Depth, Sensation and Stroke; press twice quickly for patterns. |
+| **Streaming (beta)** | Plays motion sent from a compatible app over Bluetooth. |
+| **Pairing** | Links your OSSM to your R+D Dashboard account. Needs Wi-Fi. |
+| **Update** | Checks for and installs firmware updates. Needs Wi-Fi. |
+| **Wi-Fi Setup** | Connects your OSSM to Wi-Fi, or shows that it's connected. |
+| **Get Help** | Shows a QR code to this guide. |
+| **Restart** | Restarts your OSSM. It homes again. |
+
+## Starting and playing
+
+| On screen | What it means | What to do |
+| --- | --- | --- |
+| The mode name, **Speed: N%** and **Decrease the speed to begin playing.** | The left knob was turned up when the mode started. Your OSSM won't start until the speed reads below 1%. | Turn the left knob all the way down. The mode starts by itself. To go back instead, press and hold the right knob. See [Wired Remote](/ossm/troubleshooting/wired-remote#stuck-on-decrease-the-speed-to-begin-playing). |
+| The mode or pattern name at the top, a **Speed** bar on the left, and a labelled bar on the right | You're playing. The labelled bar on the right is the setting the right knob changes. | Turn the right knob to change it. In Stroke Engine, press once to switch between **Depth**, **Sensation** and **Stroke**. |
+| **# N**, a distance and a time (Simple Penetration) | The number of strokes, the distance travelled, and how long the session has run. | Nothing. |
+| **Max** on the left, and a right-hand bar that cycles through **Depth**, **Max Accel**, **Buffer** and **Stroke** (Streaming) | The **Max** bar is the top speed for the motion the app sends. It follows the left knob unless the app sets the speed itself. | Press the right knob to switch settings. |
+| A pattern name and a one-line description | You're in the pattern list (Stroke Engine). | Turn the right knob to choose. Press once to go back to the controls. |
+
+## Wi-Fi Setup
+
+| On screen | What it means | What to do |
+| --- | --- | --- |
+| **Wi-Fi Setup**, **Connect to 'Ossm Setup'**, a QR code and **Restart** | Your OSSM isn't on Wi-Fi. While this screen is open, it broadcasts an open setup network called **OSSM Setup**. | Scan the QR code, or join **OSSM Setup** on your phone, then follow [Connecting Your Device to WiFi](/ossm/how-to-use#connecting-your-device-to-wifi). Keep this screen open until you finish. Pressing the right knob takes you back to the menu (it doesn't restart) and turns the setup network off. |
+| **Wi-Fi Setup**, **You are now connected to WiFi!** and **Long press to reset WiFi** | Your OSSM is on Wi-Fi. | Press the right knob to go back. To use a different network, press and hold: your OSSM forgets the saved network and restarts. |
+
+If you choose **Pairing** or **Update** while your OSSM isn't on Wi-Fi, it shows the Wi-Fi Setup screen instead. Connect your OSSM using **Wi-Fi Setup** in the menu, then choose **Pairing** or **Update** again. When the screen comes from **Pairing**, the **OSSM Setup** network doesn't start, so go back to the menu and choose **Wi-Fi Setup**.
+
+## Pairing
+
+| On screen | What it means | What to do |
+| --- | --- | --- |
+| **Pairing** and **Connecting...** | Your OSSM is contacting the R+D Dashboard. | Wait. |
+| **Pair OSSM**, a code, **Enter code or scan QR** and a QR code | Your OSSM isn't linked to an account yet. | Scan the QR code to open the R+D Dashboard, or open **My Devices** in the Dashboard, select **Pair an OSSM** (it says **Review OSSM tutorial** if your account already has an OSSM) and enter the code. Keep this screen open: your OSSM checks about every 10 seconds and changes to **Paired!** by itself. Pressing the right knob closes the screen. |
+| **Paired!** and **Your OSSM is now linked to your account.** | Your OSSM is linked to your account. You also see this straight away if it was already linked. | Press the right knob to go back. |
+| **Pairing Failed** and a reason | See [Update and pairing problems](#update-and-pairing-problems). | Press the right knob to go back. |
+
+## Update
+
+| On screen | What it means | What to do |
+| --- | --- | --- |
+| **Checking for update...** | Your OSSM is asking R+D for an update. | Wait. |
+| **No Update Available** and **Click to exit** | R+D didn't offer an update for your OSSM. Either you're already up to date, or no update is available for your OSSM yet. | Press the right knob to go back. If you expected an update, contact support with your firmware version. |
+| **Update Available**, a version number and **Click to install** | An update is ready. The number is the version it will install. | Press the right knob to install, or press and hold to go back. Some updates install in steps: when your OSSM has restarted, choose **Update** again until you see **No Update Available**. |
+| **Updating OSSM...** and **Update is in progress. This may take up to 60s.** | Your OSSM is downloading and installing the update. | Don't unplug it. When it's done, it restarts and homes, so keep clear of the rail. |
+| **Update Failed** and a reason | See [Update and pairing problems](#update-and-pairing-problems). | Press the right knob to go back. |
+
+## Update and pairing problems
+
+**Update Failed** and **Pairing Failed** show one of these reasons:
+
+| Reason on screen | What it means | What to do |
+| --- | --- | --- |
+| **Connect to Wi-Fi first** | Your OSSM isn't on Wi-Fi. You'll also see this if a Wireless Remote or an app asks your OSSM to update or pair while it's offline. | Connect with [Wi-Fi Setup](#wi-fi-setup), then try again. |
+| **Not enough memory** | Your OSSM couldn't free enough memory for a secure connection. | Choose **Restart** from the menu. Then try again before you connect the Web Controller, a Wireless Remote or another Bluetooth app. |
+| **Could not reach server** | Your OSSM couldn't reach R+D's server, or the server returned an error. | Check your Wi-Fi network has internet access. Try again later. If it keeps happening, contact support. |
+| **Install failed** | The update didn't download or install completely. | Move your OSSM closer to your router if you can, and try again. If it fails again, contact support. |
+| **Unknown error** | Something unexpected went wrong. | Contact support with your firmware version. |
+
+### 4 MB (V1) boards
+
+The [web flasher](/ossm/tools/web-flasher) calls boards with 4 MB of flash memory "V1". On these boards, updating and pairing look different in three ways:
+
+- **Update** starts installing straight after the check, without an **Update Available** screen.
+- If an update fails for any reason, the screen shows **No Update Available**.
+- If pairing fails, your OSSM goes back to the menu without a message.
+
+## Icons and the status light
+
+| What you see | What it means |
+| --- | --- |
+| Wi-Fi icon, top right of the screen | Shows whether your OSSM is connected to Wi-Fi, connecting, or not connected. |
+| Bluetooth symbol, top right | A Bluetooth app or remote is connected. |
+| Bluetooth symbol with three dots | Your OSSM is waiting for a Bluetooth connection. |
+| Small circle where the Bluetooth symbol would be | Bluetooth isn't ready yet, or isn't accepting connections. |
+| Control board light breathing purple | Your OSSM is homing. |
+| Control board light: a short rainbow, then fast blue pulsing | Your OSSM is waiting for a Bluetooth connection. After 30 seconds the light dims to a gentle pulse. |
+| Control board light: a short rainbow, then a fade to dim steady blue | A Bluetooth app or remote is connected. The light pulses slightly brighter when they communicate. |
+
+The status light has no error colour. If something is wrong, check the remote screen.

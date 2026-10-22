@@ -1,0 +1,106 @@
+---
+title: "Power and Power Supply"
+description: "Check your OSSM's power supply, USB-C adapter and connections when nothing lights up, the motor has no power, or the OSSM restarts by itself."
+---
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+The safety callout below is proposed wording. It isn't in firmware or on a published OSSM page yet (DR-018, DR-019). Keep it in step with the OSSM safety page draft.
+
+</Callout>
+
+<Callout type="error" title="Stop if you see sparks or smell burning">
+
+If you can do it safely, unplug the power supply from the wall. Stop using your OSSM if you see sparks or smoke, smell burning, or the plug, the socket on the board or the power supply is scorched, melted or too hot to touch. Don't keep testing it. Email support with photos of the plug, the socket and the power supply label.
+
+</Callout>
+
+## What your OSSM needs
+
+- **24 V DC** into the barrel jack on the OSSM control board. The jack takes a 2.1 mm × 5.5 mm plug.
+- **The power supply that came with your OSSM.** The R+D 24 V power supply is rated for 5 A continuous output.
+- **Or the R+D USB-C adapter** with a USB-C PD charger that can supply 19 V at 65 W or more, and a USB-C cable. A lower-power charger may not run your OSSM at full performance.
+
+<Callout type="warning" title="Other power supplies">
+
+Third-party power supplies can damage the OSSM board or fail to give it enough power. Many supplies can't deliver their rated current continuously. Use a 24 V supply only: supplies of 30 V or more have destroyed parts on some OSSM boards.
+
+</Callout>
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+These need a Hardware answer before they go on the page (DR-018):
+
+1. **Minimum rating.** The How to Use page says the OSSM comes with a "24V 4A" supply; the product page and bill of materials say 5 A. What minimum should we publish for other supplies?
+2. **Maximum voltage.** Is "24 V only, never more" the rule for every board revision?
+3. **Plug-in order.** Proposed: "Plug the barrel connector into the OSSM first, then plug the power supply into the wall. Unplug in the reverse order." The How to Use page currently says wall first.
+4. **Loose plug.** Proposed: "Route the power cable through the strain-relief loop on the side of the board housing." (Hardware advice in a support ticket; not verified against current housings.)
+5. **Plug type.** Proposed: "Outside North America, a standard plug adapter for North American plugs works with the power supply." (Support practice.)
+
+</Callout>
+
+## Check the power, step by step
+
+1. Unplug the power supply from the wall.
+2. Read the label on the power supply. The output should say **24 V** DC.
+3. Check that the barrel plug is pushed all the way into the barrel jack on the control board.
+4. Keep clear of the rail and plug the power supply back in. The OSSM starts homing straight away. The remote should show the start-up animation, and the light on the control board should breathe purple while the OSSM homes.
+5. Check that the status light on the motor shows it has power.
+
+## Nothing lights up
+
+The remote screen stays blank and the light on the board stays off.
+
+1. Try a different wall outlet.
+2. Check both ends of the power supply: the cord into the supply and the barrel plug into the board.
+3. Using the USB-C adapter? Check your charger can supply 19 V at 65 W or more, and try the 24 V power supply if you have it.
+4. If the board light comes on but the remote screen stays blank, the remote or its cable is the likely cause. See [Wired Remote](/ossm/troubleshooting/wired-remote#the-screen-stays-blank).
+5. Still nothing? [Contact support](#contact-support).
+
+## The remote works, but the motor doesn't move
+
+You see the start-up screens, the carriage doesn't move, and after about 40 seconds the screen shows **Homing took too long. Please check your wiring and try again.**
+
+This usually means the control board has power but the motor doesn't. Check:
+
+- **USB only.** A USB cable to a computer powers the board and remote, but not the motor. Plug in the 24 V power supply.
+- **USB-C adapter.** A charger that can't supply 19 V at 65 W may not power the motor properly. Try the 24 V power supply.
+- **Motor power wires.** With the power supply unplugged, check that the red 24V and black GND wires of the motor harness are fully seated, with no loose strands. Use the [wiring guide](https://ohai.researchanddesire.com/ossm/cable-harnesses).
+
+If the motor's status light is on but the carriage still doesn't move, check the signal plugs: see [Check motor power and wiring](/ossm/troubleshooting/homing#check-motor-power-and-wiring). If the motor's status light stays off after these checks, [contact support](#contact-support).
+
+## The OSSM restarts by itself
+
+You can tell your OSSM has restarted when the remote shows the start-up animation again and the carriage measures the rail again, without you unplugging anything.
+
+This can happen when the power supply can't keep up while the motor works hard, for example during play or when the carriage reaches the end of the rail while homing. A plug that loses contact can cause it too.
+
+1. Use the R+D 24 V power supply, or a USB-C PD charger of 65 W or more with the adapter.
+2. Check the barrel plug is pushed all the way in and doesn't move.
+3. If it still restarts with the R+D power supply, [contact support](#contact-support) and say when it happens.
+
+## Power cuts in and out when the plug moves
+
+1. Unplug the power supply from the wall.
+2. Look at the barrel plug and the socket on the board. If either is scorched, melted or bent, stop using the OSSM and [contact support](#contact-support).
+3. Otherwise, push the plug in firmly and keep the cable from pulling on it.
+4. If power still drops when the cable moves, [contact support](#contact-support). A short video of the plug moving and the power dropping helps.
+
+## A pop or spark when you plug in
+
+Stop and read the safety callout at the top of this page. Don't keep plugging and unplugging to test it.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Proposed text once Hardware confirms the plug-in order (DR-018): "Always plug the barrel connector into the OSSM before you plug the power supply into the wall. If you saw a spark but nothing is marked or damaged, follow that order from now on. If the plug or socket has marks, stop using the OSSM and contact support."
+
+</Callout>
+
+## Contact support
+
+Email [support@researchanddesire.com](mailto:support@researchanddesire.com) with:
+
+- a photo of the label on your power supply, or the wattage of your USB-C charger
+- photos of the barrel plug and the socket on the board, if anything looks damaged
+- what happens, and when: at power-on, while homing, or during play
+- your firmware version (bottom left of the start-up screen)
