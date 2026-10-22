@@ -1,0 +1,18 @@
+{
+  "root": true,
+  "title": "Orders and Shipping",
+  "pages": [
+    "[Overview](/shop)",
+    "---Before You Order---",
+    "order-processing-and-ship-times",
+    "shipping-countries-and-carriers",
+    "customs-duties-and-taxes",
+    "discreet-packaging-and-billing",
+    "---After You Order---",
+    "cancel-or-change-an-order",
+    "damaged-missing-or-lost",
+    "returns-and-refunds",
+    "warranty-and-defects",
+    "device-ownership"
+  ]
+}

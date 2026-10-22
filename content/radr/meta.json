@@ -3,6 +3,7 @@
   "title": "RADR",
   "pages": [
     "[Quick Start](/radr)",
+    "safety",
     "guides/user-guide",
     "guides",
     "[FAQs](/radr/faqs)",

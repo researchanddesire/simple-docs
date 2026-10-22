@@ -1,0 +1,117 @@
+---
+title: "Pair Your OSSM with the Dashboard"
+description: "Link your OSSM to your R+D Dashboard account with the code on your remote, or automatically over Bluetooth in Chrome or Edge."
+---
+
+Pairing links your OSSM to your account on the [R+D Dashboard](https://dashboard.researchanddesire.com). Once your OSSM is paired, the Dashboard can record your sessions while you play in **Stroke Engine** mode. Sessions in Simple Penetration and Streaming are not recorded.
+
+<Callout type="info" title={"You don't need to pair to play"}>
+
+Your remotes and the browser tools work without pairing and without Wi-Fi. Only pairing, firmware updates over Wi-Fi and session recording need your OSSM to be online.
+
+</Callout>
+
+## Before you begin
+
+1. Power on your OSSM and let it finish measuring the rail. If you use the wired remote, connect it before you plug in the power.
+2. Connect your OSSM to a 2.4 GHz Wi-Fi network. See [Connecting Your Device to WiFi](/ossm/how-to-use#connecting-your-device-to-wifi). If you use [Option 2](#option-2-pair-automatically-over-bluetooth), you can skip this step: the Dashboard sends your Wi-Fi details for you.
+3. Sign in to the [R+D Dashboard](https://dashboard.researchanddesire.com), or create an account.
+
+## Option 1: Pair with a code
+
+This works in any browser. You need the wired remote to see the code. With the Wireless Remote, see [Pair from the Wireless Remote](#pair-from-the-wireless-remote).
+
+1. On the wired remote, turn the right knob to highlight **Pairing**, then press the right knob.
+2. The screen shows **Connecting...**, then **Pair OSSM** with a six-character code and a QR code.
+3. In the Dashboard, open **My Devices** in the sidebar. Under **Pairing & tutorials**, select **Pair an OSSM**. If an OSSM is already paired to your account, this card says **Review OSSM tutorial** instead.
+4. If you see the **Auto (Bluetooth)** and **Enter Code** tabs, select **Enter Code**.
+5. Type the code into **OSSM Pairing Code** exactly as it appears, with no spaces or dashes, and select **Pair device**.
+6. Leave the **Pair OSSM** screen open. Within about 10 seconds it changes to **Paired!**. Press the right knob to return to the menu.
+
+<Callout type="success" title={"Your OSSM is paired!"} />
+
+Enter the code straight away. Your OSSM gets a new code each time you open **Pairing**, and the code can also change while the screen is open. If the Dashboard says the device was not found, press the right knob to leave the **Pair OSSM** screen, select **Pairing** again and enter the new code.
+
+### Scan the QR code instead
+
+You can also scan the QR code on the **Pair OSSM** screen with your phone's camera. It opens the Dashboard with your code. If you're asked to sign in, sign in with your password and the Dashboard pairs your OSSM.
+
+If you sign in with an email link or a one-time code, the pairing code isn't carried over. Type the code in as described in Option 1.
+
+## Option 2: Pair automatically over Bluetooth
+
+The Dashboard can find your OSSM over Bluetooth, send it your Wi-Fi details and pair it in one step. This needs Chrome or Edge on a device with Bluetooth. If you don't see the **Auto (Bluetooth)** tab, your browser doesn't support it: use Option 1.
+
+1. Power on your OSSM and let it finish measuring the rail.
+2. Disconnect the Wireless Remote and close any other browser tool that is connected to your OSSM. Your OSSM may not appear in the list while another controller is connected.
+3. In the Dashboard, open **My Devices**, select **Pair an OSSM**, then open the **Auto (Bluetooth)** tab.
+4. Select **Scan for OSSM**. Choose your OSSM in your browser's list and select **Pair**.
+5. If your OSSM is already on Wi-Fi, the Dashboard pairs it straight away and says it paired successfully. Select **Continue**.
+6. If it isn't, choose a saved network under **WiFi network**, or choose **Enter manually** and type your network name and password. Select **Pair & Send WiFi**.
+7. The Dashboard shows **WiFi credentials sent to OSSM. Your device will connect shortly.** Select **Continue**.
+
+To check the Wi-Fi connection, open **Wi-Fi Setup** on the wired remote. It shows **You are now connected to WiFi!** Press the right knob to return to the menu.
+
+<Callout type="info" title={"Wi-Fi tips"}>
+
+- Your OSSM can only join 2.4 GHz networks.
+- The Dashboard can't send a network name that contains a semicolon (;). Use **Wi-Fi Setup** on the wired remote instead.
+
+</Callout>
+
+## Check that your OSSM is paired
+
+- In the Dashboard, open **My Devices**. Your OSSM's MAC address appears under **Paired devices**.
+- On the wired remote, select **Pairing**. **Paired!** means your OSSM is already paired to a Dashboard account. If your OSSM isn't listed under **Paired devices** in your account, it's paired to a different account. See [Your OSSM is paired to someone else](#your-ossm-is-paired-to-someone-else).
+
+## If pairing doesn't work
+
+| What you see | What to do |
+| --- | --- |
+| The OSSM shows **Wi-Fi Setup** instead of a code | Your OSSM isn't on Wi-Fi. Follow [Connecting Your Device to WiFi](/ossm/how-to-use#connecting-your-device-to-wifi), then select **Pairing** again. |
+| **Pairing Failed** with **Connect to Wi-Fi first** | Connect your OSSM to Wi-Fi, then try again. |
+| **Pairing Failed** with **Not enough memory** | Disconnect the Wireless Remote and any browser tools. Select **Restart** in the menu (keep the rail clear: your OSSM measures it again), then select **Pairing** before you connect a controller again. |
+| **Pairing Failed** with **Could not reach server** | Check that your Wi-Fi network has internet access, then try again in a few minutes. |
+| The OSSM goes back to the menu without a code | This happens on V1 (4 MB) boards when pairing fails. Check your Wi-Fi connection and try again. See [Know your board](/ossm/firmware-updates#know-your-board-v1-4-mb-or-v2-16-mb). |
+| The Dashboard says **Must be alphanumeric, ex: ABC12** or **Please check the device ID and try again.** | Type only the letters and numbers from the screen, with no spaces or dashes. |
+| The Dashboard says **Device not found, please contact support if you believe this is an error.** | The code was mistyped or has changed. Leave the **Pair OSSM** screen, select **Pairing** again and enter the new code straight away. |
+| The Dashboard says **Device already paired, please contact support if you believe this is an error.** | Your OSSM is already paired. If it isn't listed under **Paired devices** in **My Devices**, it's paired to another account: see [Your OSSM is paired to someone else](#your-ossm-is-paired-to-someone-else). |
+| Your OSSM doesn't appear in the Bluetooth list | Disconnect other controllers, move closer and scan again. If you gave your OSSM a custom name, it only appears if the name starts with "OSSM". Otherwise use Option 1. |
+
+## Pair from the Wireless Remote
+
+If you have the Wireless Remote, you can also start pairing from its OSSM menu: select **Pairing**. The remote shows a pairing code and a QR code. Enter the code in the Dashboard as in Option 1. If the remote shows **WiFi Required**, connect your OSSM to Wi-Fi first: see [Connecting Your Device to WiFi](/ossm/how-to-use#connecting-your-device-to-wifi).
+
+## Unpair your OSSM
+
+1. In the Dashboard, open **My Devices**.
+2. Under **Paired devices**, select **Unpair** next to your OSSM.
+3. Restart your OSSM: select **Restart** in the menu, or unplug it and plug it back in. Keep the rail clear: your OSSM measures the rail each time it starts. Your OSSM checks whether it's paired when it starts up and each time you select **Pairing**.
+
+## Your OSSM is paired to someone else
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Ownership transfer is a policy, and no public device ownership policy exists yet (DR-024, owner decision). Proposed text, based on current support practice and the published Lockbox FAQ wording for second-hand devices:
+
+If you bought your OSSM second-hand, ask the previous owner to unpair it from their Dashboard account. If they can't, email [support@researchanddesire.com](mailto:support@researchanddesire.com) with proof of purchase. Once support has unpaired it, restart your OSSM and pair it again.
+
+Decide: (1) the proof required for a second-hand OSSM, and how the buyer identifies the OSSM to support. Unlike the Lockbox, the OSSM's wired remote doesn't show its MAC address, and it shows no code while the OSSM is paired: **Pairing** shows **Paired!**. The MAC address appears only in the owner's Dashboard. The web flasher shows the MAC address when it detects the board. (2) Whether the page should mention that Auto (Bluetooth) pairing currently moves an OSSM to whoever pairs it, without checking the previous owner (rad-app OSSM Bluetooth claim; the internal playbook says it's fine for a verified owner but must not be used to settle ownership disputes).
+
+</Callout>
+
+## Need more help?
+
+<Cards>
+  <Card title="Connecting your OSSM to Wi-Fi" href="/ossm/how-to-use#connecting-your-device-to-wifi">
+    Set up Wi-Fi from the wired remote, the Wireless Remote or the Dashboard.
+  </Card>
+  <Card title="Update your OSSM firmware" href="/ossm/firmware-updates">
+    Check your version and update over Wi-Fi or USB.
+  </Card>
+  <Card title="OSSM FAQs" href="/ossm/faqs">
+    Answers to common questions about choosing, setting up and using your OSSM.
+  </Card>
+</Cards>
+
+Still stuck? Email [support@researchanddesire.com](mailto:support@researchanddesire.com) with your firmware version (shown at the bottom left of the start-up screen) and a photo of what the remote and the Dashboard show, or ask the community on [Discord](https://discord.gg/DHTuY2AZYJ).

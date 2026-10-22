@@ -3,7 +3,13 @@
   "title": "OSSM",
   "pages": [
     "[Overview](/ossm)",
+    "safety",
     "[How to Use](/ossm/how-to-use)",
+    "[Pair with the Dashboard](/ossm/pairing)",
+    "[Firmware Updates](/ossm/firmware-updates)",
+    "[Care & Maintenance](/ossm/care-and-maintenance)",
+    "[FAQs](/ossm/faqs)",
+    "troubleshooting",
     "[Open Source Info](/ossm/open-source-info)",
     "---Tools---",
     "[Tools Overview](/ossm/tools)",
