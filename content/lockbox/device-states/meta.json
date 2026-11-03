@@ -7,6 +7,7 @@
     "[Take a Break](/lockbox/device-states/take-a-break)",
     "[Permalock](/lockbox/device-states/permalock)",
     "[Emergency Unlock](/lockbox/device-states/emergency-unlock)",
+    "emergency-unlock-offline",
     "[Restarting](/lockbox/device-states/restarting)"
   ]
 }

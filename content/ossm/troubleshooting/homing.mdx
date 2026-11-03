@@ -1,0 +1,112 @@
+---
+title: "Homing Problems"
+description: "What to do when your OSSM shows \"Homing took too long\", crawls while it measures the rail, doesn't move at all, or stays on \"Measuring Stroke\"."
+---
+
+Every time your OSSM powers on, it measures the length of its rail before you can play. This is called homing.
+
+## What normal homing looks like
+
+1. Homing starts as soon as the OSSM powers on, while the remote is still showing the start-up animation. The **Measuring Stroke** screen follows a few seconds later. Your firmware version is at the bottom left.
+2. The light on the control board breathes purple.
+3. The carriage moves slowly to one end of the rail and backs off a little. It moves back to about where it started, then moves slowly to the other end and backs off again.
+4. The remote shows the menu.
+
+The OSSM has no end-stop switches. It finds each end of the rail by sensing when the motor has to work harder. While homing, the carriage moves at 25 mm per second, so on the standard 350 mm rail each direction normally takes less than 15 seconds.
+
+<Callout type="warning" title="Keep clear while it homes">
+
+Homing starts by itself every time you connect power. Keep hands, cables and anything else out of the rail's path. You can't stop homing with the remote's knob: to stop it, unplug the power supply.
+
+</Callout>
+
+Your OSSM also homes again when you start a mode after a press and hold of the right knob, whether you used it to stop play or to leave the Stroke Engine **Decrease the speed to begin playing.** screen. This time the screen doesn't change: it keeps showing the menu while the carriage moves to each end of the rail, then the mode starts.
+
+## "Homing took too long"
+
+The screen shows **Error** and **Homing took too long. Please check your wiring and try again.**
+
+This means the OSSM didn't find the end of the rail within 40 seconds in one direction, so it stopped the motor.
+
+To try again, press the right knob once to see the **Get Help** screen, then press it again. The OSSM restarts and homes again.
+
+### Match what you saw
+
+Unplug the power supply, plug it back in, and watch the carriage from a safe distance.
+
+| What the carriage did | Most likely cause | What to do |
+| --- | --- | --- |
+| Crawled very slowly, or the motor hissed | The motor's settings are missing or wrong | [Check the motor settings](#check-the-motor-settings) |
+| Didn't move at all | The motor isn't getting power or signals from the board | [Check motor power and wiring](#check-motor-power-and-wiring) |
+| Moved at a normal speed and reached the end of the rail, but homing didn't finish | The belt is loose or slipping | [Belt, rail and noise](/ossm/troubleshooting/belt-rail-noise#homing-never-finishes) |
+| Moved, then the screen stayed on **Measuring Stroke** for minutes | A known problem in some firmware versions before 1.0.60 | [Stuck on "Measuring Stroke"](#stuck-on-measuring-stroke) |
+| Moved a short way, then showed **Stroke too short** | Something stopped the carriage early | [Belt, rail and noise](/ossm/troubleshooting/belt-rail-noise#stroke-too-short) |
+
+## Check the motor settings
+
+This applies to the R+D Gold Motor (57AIM series), including the black version.
+
+The OSSM firmware expects the motor to make one full turn for every 800 steps it sends. A Gold Motor without its OSSM settings can move much more slowly than the firmware expects, so the carriage can't reach the end of the rail in time.
+
+Gold Motors from R+D come pre-tuned for the OSSM. Reflashing the OSSM firmware won't change the motor's settings: they're stored in the motor and changed with the Gold Motor Programming Tool.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Proposed text: "Some Gold Motors shipped between September and October 2026 left us without their OSSM settings. That's our mistake. If your OSSM is new and crawls while homing, email support before you buy anything: we'll send you a USB–RS485 adapter, or refund one you've already bought."
+
+Decide: (1) whether to name the September–October 2026 batch publicly; (2) whether the adapter offer is policy (today it is observed practice, kb/policies.md "Unprogrammed gold motors"); (3) whether customers should contact support first or go straight to the tool.
+
+</Callout>
+
+To restore the settings, use the [Gold Motor Programming Tool](/ossm/tools/gold-motor-programming). You need:
+
+- a USB–RS485 adapter (the tool page lists the one we use)
+- four female jumper wires
+- wire cutters or strippers, and a small screwdriver
+- the motor's 24 V power supply
+- a desktop computer with Chrome or Edge
+
+1. Follow the steps on the tool page. Connect only the four jumper wires it shows, and leave the OSSM's own motor signal plug disconnected while you program.
+2. When you click **Read Registers** at the end, check these values: **0x0B = 800**, **0x18 = 600**, **0x05 = 3000**, **0x07 = 3000** and **0x09 = 1**.
+3. Unplug the motor power and USB, remove the jumpers, and reconnect the motor to the OSSM as before.
+4. Plug in the OSSM's power supply and let it home.
+
+If the values are right and the carriage still crawls, [contact support](#still-not-homing).
+
+**Built your OSSM with a different motor or driver?** Set it to 800 steps per revolution. The [developer configuration guide](https://dev.researchanddesire.com/ossm/software/getting-started/configuration) explains the firmware settings.
+
+## Check motor power and wiring
+
+If the carriage doesn't move at all:
+
+1. Make sure the OSSM is plugged into its 24 V power supply, or into the USB-C adapter with a suitable charger. A USB cable to a computer alone powers the control board and remote, but not the motor.
+2. Check that the status light on the motor shows it has power. If it doesn't, see [Power and power supply](/ossm/troubleshooting/power#the-remote-works-but-the-motor-doesnt-move).
+3. Unplug the power supply. Check every connection on the motor control harness against the [wiring guide](https://ohai.researchanddesire.com/ossm/cable-harnesses): the green 6-pin terminal block (TB1), the 4-pin plug (J12), and the red 24V and black GND wires. Each one should be fully seated, with no loose strands.
+4. Plug the power supply back in and watch homing again.
+
+## Stuck on "Measuring Stroke"
+
+If the carriage has stopped but the screen stays on **Measuring Stroke** for minutes and the board light keeps breathing purple, your OSSM didn't finish homing.
+
+On current firmware, homing either finishes or shows an error within about 80 seconds (40 seconds in each direction). Some firmware versions before 1.0.60 can stop here and wait forever instead. Check the version at the bottom left of the screen.
+
+1. Unplug the power supply, wait a few seconds, and plug it back in.
+2. If it happens again and your version is below 1.0.60, your firmware needs updating (see the note below). Otherwise, [contact support](#still-not-homing).
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Proposed text for 16 MB (V2) boards: "Update your OSSM with the [web flasher](/ossm/tools/web-flasher) and choose the **[channel]** channel." 4 MB (V1) boards: "Contact support."
+
+Decide: (1) which channel to name. On 2026-10-21 the flasher's Production channel served 1.0.51 for 16 MB boards, which doesn't have the fix; the fix (1.0.60) was on Beta. (2) What to tell 4 MB owners. Every 4 MB release is built from the frozen 1.0.39 source, whatever version number it shows (1.0.60 on Production, the only 4 MB channel listed, on 2026-10-21). That source starts Wi-Fi only after boot homing, so the cause fixed in 1.0.60 doesn't apply at power-on, but it also lacks the 1.0.60 safeguard that turns a homing task that can't start into an error.
+
+</Callout>
+
+## Still not homing?
+
+Email [support@researchanddesire.com](mailto:support@researchanddesire.com) with:
+
+- your firmware version (bottom left of the start-up screen)
+- a 20–30 second video with sound, starting when you plug in the power, showing the rail and the remote screen
+- a photo of the label on your power supply
+- which motor you have and roughly when you bought it
+- what you've already tried, including the **Read Registers** values if you used the Gold Motor Programming Tool

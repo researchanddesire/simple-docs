@@ -1,0 +1,192 @@
+---
+title: "Points, Levels and Leaderboards"
+description: "How the dashboard turns your training into XP points, levels, weekly leagues and a global rank."
+---
+
+Every time your Trainer uploads a finished segment, the dashboard turns it into **points**. Points raise your **level**, put you on a **weekly leaderboard**, and move you between **leagues**.
+
+<Callout type="info" title="Points and XP are the same thing">
+
+The dashboard says "points" in some places and "XP" in others. Both mean the same number.
+
+</Callout>
+
+## How a training segment earns points
+
+The dashboard scores each segment as soon as it receives the result. Your **grade** is the percentage your Trainer shows after each segment: the share of the segment's time when the light was green. The dashboard shows grades as letters unless you turn on **Format grades as numbers** in Advanced settings.
+
+| Mode | Points for one segment | Example |
+| --- | --- | --- |
+| Repetition and Bounce | 2 points for each rep, multiplied by your grade | 20 reps at a 75% grade earn 30 points |
+| Endurance and Freeform | 1 point for every 2 seconds the light was green | 60 seconds of green light earn 30 points |
+
+- Points are rounded up to a whole number.
+- A rep is two strokes, in and out, as the Trainer measured them. It is not the target you set in the template.
+- Every attempt earns points, including attempts that fail a pass/fail segment.
+
+### Bigger toys earn more
+
+If the toy you trained with has a size in your Toybox, the dashboard multiplies the segment's points:
+
+| Toy size in your Toybox | Multiplier |
+| --- | --- |
+| 5 inches or less, or no size set | ×1 |
+| 7.5 inches | ×1.25 |
+| 10 inches or more | ×1.5, the maximum |
+
+Between 5 and 10 inches the multiplier rises evenly. For example, 30 points with a 7.5-inch toy become 38 points, because the result is rounded up.
+
+### When points appear
+
+- Points are added when the dashboard receives the result, and they count for the week in which they arrive.
+- If your Trainer was offline, current firmware keeps up to 50 results and uploads them the next time it starts up with Wi-Fi. If more than 50 are waiting, the oldest are dropped.
+- Training done before your Trainer was paired to your account never earns points, even after you pair it.
+
+You can see the points for each session in your Trainer's **Activity Log** on the dashboard, and your total on the dashboard home page under **Level & XP Points**.
+
+## Other ways to earn points
+
+| Activity | Points |
+| --- | --- |
+| Voting on someone's public lock while signed in | 100 points divided by the number of votes you have cast that day, and never less than 10. Your first vote of the day earns 100, your second 50. |
+| Receiving votes on your own public lock | The same rule, counted per lock: 100 points divided by the number of votes your lock has received that day, at least 10. |
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Two more point sources exist only for some accounts. Decide whether to document them here:
+
+- **Lockbox lock time.** Some accounts earn 5 points for every hour a Lockbox lock is active. This is a limited experiment, but the Trainer's Community Event page in the dashboard tells every Trainer owner who opens it that lock sessions earn XP. Decide whether to document it here, change that page, or leave both as they are.
+- **Storylines.** Finishing a Storyline for the first time awards the XP shown on its completion screen. Storylines is an experimental page that is off unless both its server setting and its feature flag are on, so most customers can't see it.
+
+</Callout>
+
+## Spending points
+
+- **Rally with your DTT XP.** If someone's lock is set up to count Trainer points, its public page lets you spend your own points to shorten it while you're signed in. This lowers your total, so your level can go down. It doesn't change your points for the week.
+- **Locks linked to your training.** If your lock is set up to count Trainer points, the points you earn from training also take time off your own lock. The lock's settings show how many points remove how much time. These points are not spent.
+
+## Levels
+
+Your level depends only on your total points. You start at level 1. Each new level needs about 10% more points than the one before, up to level 120.
+
+| Level | Total points needed |
+| --- | --- |
+| 2 | 83 |
+| 3 | 174 |
+| 4 | 276 |
+| 5 | 388 |
+| 10 | 1,154 |
+| 20 | 4,470 |
+| 30 | 13,363 |
+| 50 | 101,333 |
+| 99 | 13,034,431 |
+| 120 (the highest) | 104,273,167 |
+
+When you reach a new level, the dashboard sends you a "You leveled up!" notification, and partners who share your devices get one too. Each person also gets it by email if their own Leaderboard events emails are on.
+
+## Weekly leaderboard
+
+Open **Leaderboards** in the dashboard's sidebar. Depending on your dashboard layout, it's in the main menu or under your Trainer, Lockbox and OSSM.
+
+- Each week runs from Monday 00:00 UTC to the next Monday 00:00 UTC. The leaderboard counts down with "Match ends in …".
+- You join this week's leaderboard when you complete a session or earn points that week. Until then it says "Complete a session to join this week's leaderboard."
+- You compete in a group of up to 10 players. Only points earned this week count, and the group is sorted by them.
+
+## Leagues
+
+There are 13 leagues. Everyone starts in Bronze:
+
+Bronze, Silver, Gold, Sapphire, Ruby, Emerald, Amethyst, Pearl, Obsidian, Diamond, Diamond I, Diamond II and Diamond III.
+
+Leagues above yours show as locked on the leaderboard.
+
+When the week ends:
+
+- **Move up one league** if you finish in your league's promotion zone with at least 1 point that week. The leaderboard tells you the position to reach: "Get position 5 or higher to promote to the next league."
+- **Move down one league** if you finish 9th or 10th in your group. You can't drop below Bronze.
+- **Stay** in your league otherwise.
+
+Then everyone's weekly points go back to 0. If you earned points, you start the new week in a new group with players from similar leagues. If you didn't, you join a group the next time you complete a session or earn points.
+
+| Your league | Finish at this position or higher to move up |
+| --- | --- |
+| Bronze | 7 |
+| Silver, Gold | 5 |
+| Sapphire, Ruby, Emerald | 3 |
+| Amethyst, Pearl, Obsidian | 2 |
+| Diamond, Diamond I, Diamond II | 1 |
+| Diamond III | This is the top league |
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+The code doesn't match the numbers above exactly. At the weekly reset the dashboard promotes **one more place** than the leaderboard says (for example the top 8 in Bronze, top 6 in Silver), and the green highlight on your own row covers that extra place too. It demotes only 9th and 10th place, while the code's own tests expect 8th to 10th. The "You're in the demotion zone!" email goes to three group members picked without sorting by points. Fix the code first, or publish the numbers the code uses today.
+
+</Callout>
+
+## Global rank
+
+Your **Leaderboard Rank** on the dashboard home page, and **RANK** on your profile, is your position among everyone who has at least 1 point. It's ordered by a skill rating, not by total points. Your rating changes each week based on where you finish in your weekly group compared with the other players in it. Ranks update once a week, when the weekly leaderboard resets.
+
+## Who can see your results
+
+- Other players in your group see your username, your profile picture or device avatar, and your points for the week.
+- Selecting a row opens that player's profile, which shows their league, level, total points and rank.
+- **Discreet mode** in Advanced settings blurs images and anonymizes user data only in your own view of the dashboard. It doesn't hide you from other players.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+There is no setting to leave the leaderboards or hide your profile from them. The current Checking Your Results page tells customers they can opt out in Settings. Decide whether to build an opt-out or remove that promise, then replace this callout with the answer. Also note that the first bullet above understates who can see a group: the leaderboard page loads any group named in its `?matchId=` link for any signed-in user, without checking membership. Decide whether that is intended before publishing "Who can see your results".
+
+</Callout>
+
+## Emails about your rank
+
+You can turn leaderboard emails on or off in [Advanced settings](https://dashboard.researchanddesire.com/app/settings/advanced) under **Email settings** → **Notification categories** → **Leaderboard events**. The dashboard describes it as "Notifications about your position changes in the leaderboard, including demotion warnings and when you lose a ranking position." Level-up emails are in this category too.
+
+## Troubleshooting
+
+<Callout type="info" title="My points didn't go up">
+
+- Check that the session appears in your Trainer's **Activity Log**. If it isn't there, the result hasn't reached the dashboard yet.
+- If you trained offline, turn the Trainer on with Wi-Fi so it can upload the results it saved.
+- Make sure your Trainer is paired to your account. Training done before pairing doesn't count.
+- A segment where the light was never green earns 0 points.
+
+</Callout>
+
+<Callout type="info" title="I finished near the top but didn't move up">
+
+- You need at least 1 point that week to move up.
+- Check the position your league needs in the table above.
+- League changes happen once a week, at Monday 00:00 UTC.
+
+</Callout>
+
+<Callout type="info" title="My level went down">
+
+Spending points with **Rally with your DTT XP** lowers your total, and your level follows your total.
+
+</Callout>
+
+<Callout type="info" title="I'm not on this week's leaderboard">
+
+You join this week's leaderboard when your first training result of the week reaches the dashboard, even one that earns 0 points, or when you earn points another way. Complete a session with your Trainer online, then check again.
+
+</Callout>
+
+## Related guides
+
+<Cards>
+  <Card title="Checking Your Results" href="/dtt/quick-start/checking-results">
+    Find your sessions, grades and points on the dashboard.
+  </Card>
+  <Card title="Training Modes" href="/dtt/training-modes">
+    How Repetition, Endurance, Freeform and Bounce work.
+  </Card>
+  <Card title="Assign Your Default Toy" href="/dtt/quick-start/using-toys">
+    Set up the toy, and its size, that you train with.
+  </Card>
+  <Card title="Trainer FAQs" href="/dtt/faqs">
+    Connectivity, training and account questions.
+  </Card>
+</Cards>
