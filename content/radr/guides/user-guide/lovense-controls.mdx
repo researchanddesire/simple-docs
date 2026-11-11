@@ -3,6 +3,12 @@ title: "Lovense Controls"
 description: "RADR supports Lovense Bluetooth devices with a simplified vibration-only control interface. This guide covers how to control Lovense devices."
 ---
 
+<Callout type="warning" title={"Experimental"}>
+
+Lovense support is experimental. No Lovense device is confirmed on current RADR firmware, and some firmware versions fail to connect to Lovense toys. See [Device Support](/radr/guides/reference/device-support) for the status of each device and how to tell us what works.
+
+</Callout>
+
 <Callout type="info" title={"Note"}>
 
 RADR provides **vibration-only** control for Lovense devices. Advanced features like heating, rotation, or device-specific patterns are not currently supported.
@@ -11,15 +17,9 @@ RADR provides **vibration-only** control for Lovense devices. Advanced features 
 
 ## Supported Lovense Devices
 
-RADR has been tested with the following Lovense devices:
+Every Lovense device is listed as **Experimental**. See [Device Support](/radr/guides/reference/device-support) for the list.
 
-| Device | Status |
-|--------|--------|
-| Lovense Domi | Tested |
-| Lovense Hyphy | Tested |
-| Lovense Ferri | Tested |
-
-Many other Lovense devices are supported but untested. See [Device Support](/radr/guides/reference/device-support) for the complete list.
+If your Lovense device works with RADR, email support@researchanddesire.com with the device model and, if you can, a short video. That evidence lets us remove the Experimental label.
 
 ## Control Screen Overview
 
@@ -43,7 +43,7 @@ The **left encoder** controls vibration intensity.
 
 <Callout type="info" title={"Info"}>
 
-Lovense devices use a 0–16 intensity scale, not percentage. Level 16 is maximum intensity.
+RADR uses levels 0–16, not a percentage. Lovense toys accept levels 0–20, so RADR's level 16 is 80% of the toy's maximum.
 
 </Callout>
 
@@ -64,16 +64,7 @@ For reliability, RADR sends the stop command twice with a brief delay. This ensu
 
 ## Battery Level
 
-For Lovense Domi (and Domi 2), RADR can query the device's battery level via its direct integration:
-
-- Battery percentage is shown on screen
-- Check battery status before sessions to avoid interruptions
-
-<Callout type="info" title={"Note"}>
-
-Battery level is available for Domi devices via direct Bluetooth integration. Other Lovense devices may or may not support battery level reporting depending on their Buttplug.io implementation.
-
-</Callout>
+RADR does not read the battery level of Lovense devices. Check the charge in the Lovense app before a session.
 
 ## Connecting to Lovense Devices
 
@@ -105,7 +96,8 @@ RADR provides basic vibration control. The following features are **not** availa
 
 | Feature | RADR | Lovense App |
 |---------|------|-------------|
-| Basic vibration | Yes | Yes |
+| Basic vibration | Yes (experimental) | Yes |
+| Battery level | No | Yes |
 | Vibration patterns | No | Yes |
 | Remote partner control | No | Yes |
 | Sound-reactive modes | No | Yes |

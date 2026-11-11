@@ -17,6 +17,7 @@ Want us to prioritize a device or add a new one? Email support@researchanddesire
 
 - Supported: RADR can connect and control the device.
 - Tested: Verified by R+D in-house for reliability with RADR.
+- Experimental: RADR is built to control the device, but R+D has not confirmed that it works on current firmware. It may not connect, or may not behave as expected.
 - Vibration Only: Only the vibration motor is controllable; advanced features (heating, thrusting, suction, rotation, lighting) are not yet supported.
 - Oscillation Only: Only oscillation/thrusting control is available; vibration features are not supported.
 - Pending: Not yet implemented; on the roadmap.
@@ -35,7 +36,7 @@ Device support is continuously expanding. RADR uses a dynamic device registry th
 
 <Callout type="warning" title={"Warning"}>
 
-Untested devices show a warning before first use. When connecting to an untested device for the first time, RADR displays a confirmation dialog. You must acknowledge you understand the risks before proceeding. Start at the lowest intensity and verify basic controls before a session.
+Experimental devices can behave unexpectedly. Start at the lowest intensity, and check that **STOP** works before a session.
 
 </Callout>
 
@@ -87,51 +88,58 @@ Deepthroat Trainer integrations focus on cross‑device experiences and are roll
 
 ## Buttplug.io devices
 
-Through our partnership with Buttplug.io, RADR supports Bluetooth devices that speak the Buttplug protocol. Check their public compatibility list for the most current coverage. Feature availability varies by model; in many cases RADR provides vibration control only.
+Through our partnership with Buttplug.io, RADR supports Bluetooth devices that speak the Buttplug protocol. Check their public compatibility list for the most current coverage. Feature availability varies by model; in many cases RADR provides vibration control only. Every device in this section is **Experimental** until we have evidence that it works with RADR.
 
-### Lovense (tested)
+### Lovense (experimental)
 
-| Device | Supported | Tested |
-| --- | --- | --- |
-| Lovense Domi | Vibration Only | Yes |
-| Lovense Hyphy | Vibration Only | Yes |
-| Lovense Ferri | Vibration Only | Yes |
+<Callout type="warning" title={"Experimental"}>
 
-<Callout type="info" title={"Info"}>
+All Lovense support is experimental. No Lovense device is confirmed on current RADR firmware, and some firmware versions fail to connect to Lovense toys at all. We are testing a fix.
 
-Lovense Domi (and Domi 2) has direct integration—not via Buttplug.io—that includes battery level reading and power control commands. Other Lovense devices use the generic Buttplug.io implementation with vibration-only control.
+RADR sends one vibration level (0–16) to every Lovense model. Rotation, air pumps, thrusting, battery level and other features are not controlled.
 
 </Callout>
 
-### Lovense (untested)
-
-| Device | Supported | Tested |
+| Device | Status | What RADR controls |
 | --- | --- | --- |
-| Lovense Max | Vibration Only | - |
-| Lovense Edge | Vibration Only | - |
-| Lovense Nora | Vibration Only | - |
-| Lovense Ambi | Vibration Only | - |
-| Lovense Lush | Vibration Only | - |
-| Lovense Hush | Vibration Only | - |
-| Lovense Osci | Vibration Only | - |
-| Lovense Mission | Vibration Only | - |
-| Lovense Mission 2 | Vibration Only | - |
-| Lovense Diamo | Vibration Only | - |
-| Loveai Dolp | Vibration Only | - |
-| Lovense Dolce | Vibration Only | - |
-| Lovense Osci 3 | Vibration Only | - |
-| Lovense Gush | Vibration Only | - |
-| Lovense Gush 2 | Vibration Only | - |
-| Lovense Calor | Vibration Only | - |
-| Lovense Flexer | Vibration Only | - |
-| Lovense Gemini | Vibration Only | - |
-| Lovense Gravity | Vibration Only | - |
-| Lovense Tenera | Vibration Only | - |
-| Lovense Ridge | Vibration Only | - |
-| Lovense Lapis | Vibration Only | - |
-| Lovense Vulse | Vibration Only | - |
-| Lovense Solace | Oscillation Only | - |
-| Lovense Solace Pro | Oscillation Only | - |
+| Lovense Domi | Experimental | Vibration level |
+| Lovense Hyphy | Experimental | Vibration level |
+| Lovense Ferri | Experimental | Vibration level |
+| Lovense Max | Experimental | Vibration level |
+| Lovense Edge | Experimental | Vibration level |
+| Lovense Nora | Experimental | Vibration level |
+| Lovense Ambi | Experimental | Vibration level |
+| Lovense Lush | Experimental | Vibration level |
+| Lovense Hush | Experimental | Vibration level |
+| Lovense Osci | Experimental | Vibration level |
+| Lovense Mission | Experimental | Vibration level |
+| Lovense Mission 2 | Experimental | Vibration level |
+| Lovense Diamo | Experimental | Vibration level |
+| Lovense Dolce | Experimental | Vibration level |
+| Lovense Osci 3 | Experimental | Vibration level |
+| Lovense Gush | Experimental | Vibration level |
+| Lovense Gush 2 | Experimental | Vibration level |
+| Lovense Calor | Experimental | Vibration level |
+| Lovense Flexer | Experimental | Vibration level |
+| Lovense Gemini | Experimental | Vibration level |
+| Lovense Gravity | Experimental | Vibration level |
+| Lovense Tenera | Experimental | Vibration level |
+| Lovense Ridge | Experimental | Vibration level |
+| Lovense Lapis | Experimental | Vibration level |
+| Lovense Vulse | Experimental | Vibration level |
+| Loveai Dolp | Experimental | Vibration level |
+| Lovense Solace | Experimental | Vibration level only; thrusting is not controlled |
+| Lovense Solace Pro | Experimental | Vibration level only; thrusting is not controlled |
+
+### Tell us it works
+
+<Callout type="idea" title={"Help us confirm a device"}>
+
+Does your device work with RADR? Email support@researchanddesire.com with the device model and, if you can, a short video of RADR controlling it. When we have evidence that a device works, we remove its Experimental label.
+
+Tell us when a device does not work, too. Include the device model, your RADR firmware version, and what you saw on the RADR screen.
+
+</Callout>
 
 ### Other brands (pending support)
 
