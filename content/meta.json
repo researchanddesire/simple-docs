@@ -2,10 +2,13 @@
   "title": "Research and Desire Product Documentation",
   "pages": [
     "[Home](/)",
+    "safety",
     "ossm",
     "lockbox",
     "dtt",
     "radr",
+    "dashboard",
+    "shop",
     "tools",
     "meta"
   ]

@@ -1,0 +1,103 @@
+---
+title: "Find Your Firmware Version"
+description: "Your RADR doesn't show its firmware version on screen. Here's how to find out which version it runs."
+---
+
+When you contact support about your RADR, we'll usually ask which firmware version it runs. The remote doesn't show its version anywhere on its screen: not when it starts up, not in **Settings**, and not on the update screens. Use one of the options below instead.
+
+<Callout type="info" title="Your RADR isn't listed in the dashboard">
+
+The RADR isn't added to your dashboard account, so the dashboard can't show its version either.
+
+</Callout>
+
+## Option 1: Check what you installed with the Web Flasher
+
+If you installed firmware with the Web Flasher, your RADR runs the version the flasher showed when you flashed.
+
+### Step 1: Open the Web Flasher
+
+Open the [RADR Web Flasher](/radr/tools/web-flasher) in Chrome or Edge on a desktop computer. You don't need to connect your RADR for this step.
+
+### Step 2: Find the version in the channel list
+
+Under **Approved channel**, each entry shows a channel and its version, for example **Production (Stable) — v1.0.56**. If you flashed recently and remember the channel you picked, that's very likely your version.
+
+The list always shows today's versions. If a new release came out after you flashed, your remote is on an older version than the one listed. If you're not sure, use Option 2.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+The example above names the current Production version (1.0.56 on 21 October 2026). The Web Flasher page deliberately avoids hard-coding a version. Keep the example and update it with each release, or replace it with "v1.0.x".
+
+</Callout>
+
+<Callout type="idea" title="Tip">
+
+Write the version down when you flash. If you later run **Settings → Update Device**, it may install a newer version, and then the one you wrote down is out of date.
+
+</Callout>
+
+## Option 2: Reinstall a known version
+
+If you don't know what you installed, reinstall the Production firmware. Afterwards you know exactly which version your RADR runs.
+
+<Callout type="warning" title="Stop your devices first">
+
+Before you flash, stop and disconnect any device your RADR controls. After flashing, follow **Verify or recover** on the [RADR Web Flasher](/radr/tools/web-flasher) page before you connect a device again.
+
+</Callout>
+
+### Step 1: Connect your RADR
+
+Turn your RADR on and connect it to your computer with a USB-C cable that carries data, not a charge-only cable.
+
+### Step 2: Choose Production and note the version
+
+Open the [RADR Web Flasher](/radr/tools/web-flasher). Under **Approved channel**, choose **Production (Stable)** and write down the version shown next to it.
+
+### Step 3: Flash
+
+Click **Connect & Flash**, select your RADR from the device list, and wait for the flash to complete.
+
+<Callout type="warning" title="Leave erase unchecked">
+
+The flasher asks "Erase the entire device first?" Leave it unchecked unless support asked you to erase. Erasing wipes your Wi-Fi details and saved settings, so you'd need to set up Wi-Fi again before you can use **Update Device**.
+
+</Callout>
+
+## What the update screens tell you
+
+After **Settings → Update Device**, none of the update screens show a version number. What you see depends on your firmware:
+
+- **Today's Production and Beta firmware** shows **Update Complete** whenever it didn't install anything: when our update server offered nothing newer, and also when the remote couldn't check. When it tries to install an update, the remote restarts by itself instead, and it does this even if the install fails.
+- **Newer firmware (1.0.68 and later)** shows **Up to Date** when our update server didn't offer your remote anything newer, and **Update Failed** if the check or the install went wrong. Both screens restart the remote after about 10 seconds.
+
+So neither "Update Complete" nor a restart tells you which version your remote runs.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+**Coming in newer firmware.** RADR firmware 1.0.65 and later prints its version over USB. Connect the RADR to a computer, open a serial terminal at 115200 baud, then restart the RADR or type `info` and press Enter. The first line shows the model and version, for example `RADR-N16R8 1.0.72`. On 21 October 2026 neither Production (1.0.56) nor Beta (1.0.62) includes this, so customers can't use it yet. Publish this option once 1.0.65 or later reaches Production, and decide whether to name a serial terminal we're happy to recommend. When it ships, add "Stop and disconnect any device your RADR controls first", as on the Web Flasher page.
+
+</Callout>
+
+## When you contact support
+
+Tell us:
+
+- the version from Option 1 or Option 2, or that you don't know it;
+- whether you ran **Update Device** since then;
+- a photo of the RADR screen showing the problem.
+
+## Related guides
+
+<Cards>
+  <Card title="Updating Your Device" href="/radr/guides/user-guide/updating-your-device">
+    Update your RADR over Wi-Fi from the Settings menu.
+  </Card>
+  <Card title="RADR Web Flasher" href="/radr/tools/web-flasher">
+    Install or recover RADR firmware over USB.
+  </Card>
+  <Card title="Settings and Wi-Fi" href="/radr/guides/user-guide/settings-and-wifi">
+    Everything in the RADR Settings menu.
+  </Card>
+</Cards>

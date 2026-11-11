@@ -1,0 +1,11 @@
+{
+  "title": "Troubleshooting",
+  "pages": [
+    "[Overview](/ossm/troubleshooting)",
+    "[Homing Problems](/ossm/troubleshooting/homing)",
+    "[Power and Power Supply](/ossm/troubleshooting/power)",
+    "[Belt, Rail and Noise](/ossm/troubleshooting/belt-rail-noise)",
+    "[Wired Remote Problems](/ossm/troubleshooting/wired-remote)",
+    "[Screen Messages](/ossm/troubleshooting/screen-messages)"
+  ]
+}

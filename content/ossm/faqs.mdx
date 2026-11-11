@@ -1,0 +1,218 @@
+---
+title: "OSSM FAQs"
+description: "Short answers to common questions about choosing, setting up and using your OSSM."
+---
+
+Quick answers to the questions we hear most. For step-by-step help, see [How to Use](/ossm/how-to-use).
+
+## Choosing an OSSM
+
+### What's the difference between the Ready-to-Play OSSM and the Complete DIY Kit?
+
+The **Ready-to-Play** OSSM arrives assembled. We make each one to order in Toronto. It comes with an adjustable stand, the wired remote (you can upgrade to the Wireless Remote), a 24 V power supply, Vac-U-Lock and harness-style clamp mounts, and an empty sandbag that you fill to keep the stand steady.
+
+The **Complete DIY Kit** has everything to build your own OSSM: the actuator kit (control board, remote, hardware, 350 mm rail and optional 3D-printed parts), the extrusion stand kit, the motor with wiring harness, a 24 V power supply, a USB-C power adapter and the PitClamp Mini. To build it you need a few hours, metric Allen keys and a small flat-head screwdriver. Threadlocker is optional.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Prices and lead times are deliberately left out; decide whether to link the two store listings here. The Ready-to-Play listing says "currently shipping within 3 weeks", while the shipping policy says "within 2 business weeks".
+
+</Callout>
+
+### Should I get the wired remote or the Wireless Remote?
+
+Both control speed, stroke and depth, and give you the Stroke Engine patterns.
+
+- The **wired remote** plugs into the OSSM with an Ethernet cable. It has a screen and two knobs.
+- The **Wireless Remote** connects over Bluetooth. It has a 2-inch colour screen, two knobs, buttons including a dedicated stop button, and a rechargeable battery that you charge over USB-C.
+
+### Which toys can I use?
+
+The OSSM has two ways to mount a toy: Vac-U-Lock and a harness-style clamp. The maximum toy weight is 1.1 kg.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Decide whether to state that a toy is not included (the listings don't list one, and internal practice says a toy is never included), and whether to mention community adapters for other mounts.
+
+</Callout>
+
+### How long is the stroke?
+
+The standard OSSM uses a 350 mm rail. Each time it powers on, your OSSM measures how far the carriage can travel on your rail, and your stroke and depth settings work within that distance. You set the stroke length from the remote; there's nothing to adjust by hand.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Decide what to say about longer rails. Support has sold a 500 mm rail upgrade by invoice, and the firmware accepts up to 500 mm of measured travel (Config.h#L59), but custom orders were scaled back in September 2026. Also decide whether to publish a spec sheet (usable stroke, speed, size, weight).
+
+</Callout>
+
+### What power does the OSSM need?
+
+Your OSSM comes with a 24 V power supply.
+
+You can also run it from a USB-C laptop charger with the OSSM 24V USB-C Adapter. The charger must support 19 V at 65 W or more, and you need your own USB-C cable. A less powerful charger may work but limits your OSSM's performance.
+
+We don't recommend third-party power supplies: they can damage the control board or not give it enough power.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+DR-018: Hardware to confirm (1) the rating to publish (How to Use says "24V 4A", the supply listing and BOM say 5 A); (2) the maximum input voltage (boards have failed on 36 V supplies); (3) the safe plug-in order; (4) what to tell buyers outside North America about the wall plug; and (5) the USB-C charger size: the adapter listing says 19 V and 65 W or more, while the power supply listing says "If you already have a 100W USB-C Charger".
+
+</Callout>
+
+### Can I control the OSSM from my phone or computer?
+
+From a computer, yes, with our browser tools. The [Web Controller](/ossm/tools/web-controller) and the [Funscript Player](/ossm/tools/funscript-player) connect to your OSSM over Bluetooth from Chrome or Edge on a desktop or laptop computer with Bluetooth. They don't work on iPhone or iPad, or in Firefox or Safari. The Funscript Player is an experimental tool.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Decide what to say about third-party apps (for example XToys) and community firmware. Internal practice treats them as community-supported only (kb/playbooks/ossm/SET.firmware.md section 4 F).
+
+</Callout>
+
+### Do I need Wi-Fi or a Dashboard account?
+
+No. You can play with the wired remote, the Wireless Remote or the browser tools without Wi-Fi or an account. Wi-Fi is only needed to [update your firmware over Wi-Fi](/ossm/firmware-updates), to [pair your OSSM with the Dashboard](/ossm/pairing) and for the Dashboard to record your sessions.
+
+### Is the OSSM open source?
+
+Yes. The OSSM's hardware and firmware are open source. See [Open Source Info](/ossm/open-source-info) and the [OSSM repository on GitHub](https://github.com/researchanddesire/OSSM).
+
+## Ordering and delivery
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+These answers are store policy, so none is published here yet (DR-077). Proposed short answers, quoting the published store policies where they exist:
+
+- **When will my order ship?** The shipping policy says "We process and ship orders within 2 business weeks". Listings say 3 weeks for the Ready-to-Play OSSM and the Wireless Remote. Pick one promise, or link the listing.
+- **Will I pay import fees?** The shipping policy says orders to Canada and the USA don't incur import fees on delivery; elsewhere duties and taxes may be due on arrival.
+- **Is the packaging discreet?** Current practice: a plain brown box with no R+D branding and "R+D Labs" on the return label. The public "Discreet Shipping" page no longer exists (DR-023).
+- **Can I return my OSSM?** The refund policy says returns aren't accepted because of the nature of the products, and asks customers to contact support.
+- **What if something breaks?** There is no written warranty (the Terms of Service supply products "as is"); current practice is to replace parts that arrive broken or fail in normal use. Internal guidance says not to tell customers "there is no warranty" as a final answer. Decide what to publish.
+
+Links: [shipping policy](https://www.researchanddesire.com/policies/shipping-policy), [refund policy](https://www.researchanddesire.com/policies/refund-policy).
+
+</Callout>
+
+## Setting up
+
+### My kit doesn't match the assembly video. Is something missing?
+
+The Complete DIY Kit now comes with the PitClamp Mini.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Proposed text: "Some older assembly videos show an earlier middle pivot body that the PitClamp Mini replaces, so you won't find that part in your kit. If something else seems to be missing, take a photo of everything you received and email it to support with your order number." Source: 2026 tickets (false "missing part" reports caused by outdated videos; DR-021) and current practice (kb/policies.md section 3.12). Decide whether to name the videos, and confirm the photo request.
+
+</Callout>
+
+### Where do I find the pairing code?
+
+On the wired remote, open the menu and select **Pairing**. The screen shows **Pair OSSM** with a six-character code. Your OSSM must be on Wi-Fi first. See [Pair Your OSSM with the Dashboard](/ossm/pairing).
+
+### Which firmware version do I have?
+
+Power on your OSSM and look at the bottom-left corner of the start-up screens on the wired remote. The small number there, for example 1.0.60, is your firmware version. See [Update Your OSSM Firmware](/ossm/firmware-updates).
+
+### The wired remote's screen is blank
+
+Connect the wired remote before you plug in the power supply. The remote's screen is only set up when your OSSM powers on, so a remote connected later stays blank. Unplug the power supply, check the remote's cable at both ends, then plug the power back in.
+
+If the screen stays blank, email support with a photo of your remote and its cable connections.
+
+### I can't find the "OSSM Setup" Wi-Fi network
+
+Your OSSM only creates the **OSSM Setup** network while the **Wi-Fi Setup** screen is open on the wired remote, and only if it isn't already connected to Wi-Fi. If the screen says **You are now connected to WiFi!**, your OSSM is already connected. To switch networks, press and hold the right knob on that screen: your OSSM forgets the network and restarts. Keep the rail clear, because it measures the rail again when it restarts.
+
+Your OSSM can only join 2.4 GHz networks. For the full steps, see [Connecting Your Device to WiFi](/ossm/how-to-use#connecting-your-device-to-wifi).
+
+## Using your OSSM
+
+### The screen says "Decrease the speed to begin playing."
+
+Turn the left (speed) knob on the wired remote all the way down. The mode starts on its own as soon as the speed reads zero. This check also applies when you start a mode from the Wireless Remote or a browser tool.
+
+### I turned up the speed in Simple Penetration but nothing moves
+
+Simple Penetration starts with the stroke set to zero. Turn the right knob to lengthen the stroke.
+
+### Can I change Sensation with the wired remote?
+
+Yes, in Stroke Engine. Press the right knob to switch between **Depth**, **Sensation** and **Stroke**, then turn it to change the setting you picked. Double-click the right knob to choose a pattern.
+
+### Why do my settings reset?
+
+Each time you start Simple Penetration or Stroke Engine, speed, stroke, depth and sensation go back to their starting values. Your OSSM doesn't save them between sessions.
+
+### Why does my OSSM measure the rail again?
+
+Your OSSM measures the rail every time it powers on or restarts. It also measures again before the next mode after you stop it by pressing and holding the right knob. Keep the rail clear while it measures.
+
+### Why did my OSSM stop when my phone or Wireless Remote disconnected?
+
+When the last Bluetooth controller disconnects, your OSSM stops straight away and returns to the menu. This is a safety stop. Reconnect your controller, then start again.
+
+### Is it normal for the motor to hiss or feel warm when I'm not playing?
+
+After your OSSM measures the rail, the motor stays powered and holds the carriage in place, even in the menu. Unplug your OSSM when you're not using it. See [Care & Maintenance](/ossm/care-and-maintenance#unplug-your-ossm-when-youre-not-using-it).
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Hardware to confirm the proposed wording: "A soft hiss and some warmth are normal while it's plugged in. A loud hiss while the carriage crawls slowly is not: see Homing took too long."
+
+</Callout>
+
+### Does the Dashboard record my sessions?
+
+Only when your OSSM is [paired](/ossm/pairing), connected to Wi-Fi, and playing in **Stroke Engine** mode. Simple Penetration and Streaming sessions aren't recorded.
+
+## Problems
+
+### The screen says "Homing took too long"
+
+The full message is **Homing took too long. Please check your wiring and try again.** Your OSSM couldn't find the end of the rail within 40 seconds.
+
+1. Check that the 24 V power supply is plugged in. Then unplug it and check that the motor's wiring is firmly connected before you plug it back in.
+2. If the motor hisses and the carriage crawls slowly or doesn't move, your motor may need programming. Use the [Gold Motor Programming Tool](/ossm/tools/gold-motor-programming).
+3. On the error screen, press the right knob to see **Get Help**, then press it again to restart. Keep the rail clear: your OSSM measures the rail again.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+1. Link the OSSM troubleshooting page from DR-020 part 1 here once it exists.
+2. Decide what to tell owners whose OSSM stays on **Measuring Stroke** for minutes with a purple light. The fix is in firmware 1.0.60, but on 21 October 2026 the web flasher's Production channel for 16 MB boards still served 1.0.51 (Beta served 1.0.60), and V1 boards build from older source.
+
+</Callout>
+
+### The screen says "Stroke too short"
+
+Your OSSM measured 50 mm of travel or less, so something stopped the carriage early. Unplug the power supply. Check that nothing is pressing on the carriage or blocking the rail, then check the belt. See [Check the belt](/ossm/care-and-maintenance#check-the-belt).
+
+### Why can't my Wireless Remote find my OSSM?
+
+Power on your OSSM and let it finish measuring the rail before you search from the Wireless Remote. Close any browser tool that's connected to your OSSM: it may not show up while another controller is connected. For more, see the [Wireless Remote FAQs](/radr/faqs).
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+DR-026: the Wireless Remote pages ask for "OSSM firmware 2.0.0 or later", but OSSM releases are 1.0.x. Firmware owner to state the real minimum version before this answer names one.
+
+</Callout>
+
+### Does my OSSM update itself?
+
+No. Updates only install when you start one. See [Update Your OSSM Firmware](/ossm/firmware-updates).
+
+## Still need help?
+
+<Cards>
+  <Card title="How to use your OSSM" href="/ossm/how-to-use">
+    Power, remotes, patterns, Wi-Fi and the pre-play safety checklist.
+  </Card>
+  <Card title="Care & Maintenance" href="/ossm/care-and-maintenance">
+    Cleaning, rail grease, belt checks and storage.
+  </Card>
+  <Card title="OSSM tools" href="/ossm/tools">
+    Web flasher, Web Controller, Funscript Player and the Gold Motor Programming Tool.
+  </Card>
+</Cards>
+
+Email [support@researchanddesire.com](mailto:support@researchanddesire.com) with your firmware version (shown at the bottom left of the start-up screen), a photo of your power supply label and a short video of the problem, or ask the community on [Discord](https://discord.gg/DHTuY2AZYJ).
