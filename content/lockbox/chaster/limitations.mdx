@@ -1,6 +1,6 @@
 ---
 title: "Chaster Integration Limitations"
-description: "Understand account checks, Lockbox response delays, session synchronization, and the differences between Chaster and Dashboard voting."
+description: "Understand account checks, Lockbox response delays, unlock and break rules, keyholder boundaries, and the differences between Chaster and Dashboard voting."
 ---
 
 Use this checklist when Chaster, Dashboard, and the Lockbox disagree. For instructions, open [Setup](/lockbox/chaster/setup), [Voting](/lockbox/chaster/voting), or the [FAQ](/lockbox/chaster/faq).
@@ -17,6 +17,8 @@ A ready message or timer does not prove that the drawer has locked or opened. Ch
 | --- | --- |
 | Account checks differ; setup readiness does not confirm connectivity. | Check Dashboard's **Linked Account**, connectivity, and the physical box. Follow [Setup](/lockbox/chaster/setup). |
 | Chaster has no box picker. | With several boxes, use an [empty-box test](/lockbox/chaster/setup) to identify the one receiving the session. |
+| Every new lock waits until the wearer accepts it on the Lockbox. | Put the key in, close the drawer, and press **Accept** on the box. |
+| A new Chaster lock waits while the box holds another session. | End the running session; the waiting lock is then offered on the box. [FAQ](/lockbox/chaster/faq#what-happens-if-my-lockbox-is-already-running-a-lock) |
 | Unlocked Chaster locks may still use lock slots. | Review and archive completed locks you no longer need. [FAQ](/lockbox/chaster/faq#why-can-i-not-create-another-chaster-lock-after-unlocking) |
 
 ## Status and timers
@@ -26,7 +28,7 @@ flowchart TD
     A["Refresh both platforms"] --> B["Check the physical box"]
     B --> C{"What still differs?"}
     C -->|"Time"| D["Compare matching values and time zones"]
-    C -->|"Release"| E["Check Chaster's unlock conditions"]
+    C -->|"Release"| E["Check what Chaster is waiting for"]
     C -->|"Session"| F["Review the Pull preview"]
 `} />
 
@@ -34,8 +36,9 @@ flowchart TD
 | --- | --- |
 | Device and page updates can be delayed; no fixed response time is verified. | Follow device prompts and check the drawer. |
 | Countdown, end time, maximum deadline, and time zones can differ. | Compare matching values. [Timer FAQ](/lockbox/chaster/faq#why-does-pull-say-already-in-sync-when-timers-differ) |
-| Zero alone does not release every lock. | Check freezes, minimum duration, and extension requirements. [Unlock FAQ](/lockbox/chaster/faq#why-will-the-lockbox-not-open-when-the-timer-reaches-zero) |
-| Dashboard **Completed** and Chaster **Deserted** labels have differed in a trial. | Verify that both sessions ended and the drawer opens. |
+| Chaster decides when the lock ends. The box stays locked and shows **Waiting for Chaster** while Chaster blocks unlocking. | Finish what Chaster is waiting for, such as tasks, votes, or a freeze. [Unlock FAQ](/lockbox/chaster/faq#why-will-the-lockbox-not-open-when-the-timer-reaches-zero) |
+| A box that is offline when its timer ends, or runs firmware older than 1.21.50, can still open on its own timer. The Chaster lock then keeps running. | Keep the box online and up to date. If it opens early, finish the lock on Chaster when Chaster allows. |
+| With a hidden timer, **Waiting for Chaster** can appear up to three minutes before the hidden timer ends. | Expect this hint near the end of a hidden timer. |
 
 <Callout type="warning" title="Check both deadlines after an error">
 
@@ -48,11 +51,14 @@ A vote or time change can remain in Dashboard even if Chaster rejects it. Check 
 | Boundary | Next step |
 | --- | --- |
 | Chaster's Lockbox card shows status; timer visibility rules still apply. | Select **Open lockbox page** for controls. |
-| Temporary openings require an active Chaster opening; cooldowns can block the first one. | Follow the [opening FAQ](/lockbox/chaster/faq#how-do-i-take-a-temporary-opening-or-hygiene-break). |
-| Ending an opening may require key-return and relocking confirmation. | Return keys, close the drawer, and follow device prompts. |
+| Chaster's **Hygiene opening** rules decide every break: keyholder-only, openings left, cooldown, and verification picture. | Follow the [opening FAQ](/lockbox/chaster/faq#how-do-i-take-a-temporary-opening-or-hygiene-break). |
+| For **no openings left** or **verification picture required**, current firmware opens the box first, then asks you to end the break. | Return the key, close the drawer, and press **Accept**. [Refusal FAQ](/lockbox/chaster/faq#what-happens-if-chaster-refuses-my-break) |
+| After a temporary opening, only the wearer can relock, on the Lockbox. Chaster has no remote relock. | Return keys, close the drawer, and press **End Break**. |
 | Acceptance or break return does not clear every freeze. | Check Chaster's freeze status. |
 | Pull has permission limits and can replace or end a session. It cannot fix every mismatch. | Review the preview and [Pull FAQ](/lockbox/chaster/faq#sync-and-pull) before applying. |
+| A lock started on Chaster cannot gain an R+D keyholder. | Start the lock from Dashboard to use an R+D keyholder. [Keyholder FAQ](/lockbox/chaster/faq#keyholders) |
 | Disconnect is blocked during active sessions and does not unlock the box. | Finish the session first. [Disconnect FAQ](/lockbox/chaster/faq#can-i-disconnect-chaster-during-a-session) |
+| Unpairing is blocked while the box holds an active session. | End or abandon the session first. [Unpair FAQ](/lockbox/chaster/faq#can-i-unpair-my-lockbox-during-a-lock) |
 
 ## Voting
 
@@ -66,5 +72,7 @@ Use [Voting with Chaster](/lockbox/chaster/voting) to choose and configure your 
 ## Connection loss and emergency access
 
 Do not rely on an outage to release keys; Chaster-controlled offline release has not been confirmed in a device test. Keep independent emergency access available.
+
+The emergency unlock setting is copied when the lock starts. A change during a running lock is not sent automatically. See the [emergency unlock FAQ](/lockbox/chaster/faq#can-i-turn-off-software-emergency-unlock-for-a-chaster-lock).
 
 Read the [emergency unlock guide](/lockbox/using/emergency-unlock) and [emergency backplate guide](/lockbox/support/emergency-backplate) before using keys. After emergency access, check both platforms: software cleanup can fail, and a hardware opening is not reported automatically. See the [recovery FAQ](/lockbox/chaster/faq#connection-loss-and-emergency-access).

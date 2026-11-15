@@ -5,11 +5,13 @@ description: "Connect your accounts and test an empty Lockbox before using Chast
 
 ## Before you start
 
-Have these ready:
+The person who will be locked (the wearer) needs:
 
 - A Chaster account and an R+D Dashboard account.
 - A Lockbox connected to **2.4 GHz Wi-Fi** and paired to your R+D account. New box? Follow the [Lockbox Quick Start](/lockbox) first.
 - An empty Lockbox for your first test.
+
+A Chaster keyholder needs only a Chaster account. See [Who does what](#who-does-what).
 
 <Callout type="warning" title="Keep independent emergency access">
 
@@ -20,6 +22,12 @@ Before storing keys, read the [emergency unlock guide](/lockbox/using/emergency-
 ## 1 Choose the R+D Lockbox in Chaster
 
 Create or join a lock in [Chaster](https://chaster.app/). Under **Locking method → Smart lockbox**, choose **Research And Desire Lockbox**.
+
+<Callout type="info" title="A locking method, not an extension">
+
+**Research And Desire Lockbox** is a locking method. You will not find it in Chaster's list of extensions. Choose it in **Locking method** when you create or join the lock.
+
+</Callout>
 
 ![Chaster locking methods with Research And Desire Lockbox under Smart lockbox](./img/01-choose-locking-method.png)
 
@@ -54,11 +62,13 @@ Set a short duration and enable **Limit lock time** for the test. **No maximum l
 
 </Callout>
 
-1. Close the empty drawer and select **Start the lock**.
-2. Allow time for the box to respond. Follow any acceptance or confirmation prompts.
+1. Select **Start the lock**. The Lockbox shows the lock as an offer. The lock waits on Chaster until you accept it.
+2. Leave the drawer empty for this test, close it, and press **Accept** on the Lockbox. The timer starts.
 3. Confirm that the intended drawer has physically locked.
 
 **You’re all set!** and a running timer do not confirm physical locking. Chaster has no Lockbox picker; if you own several boxes, check which one received the test.
+
+If the Lockbox is already holding a lock, the new Chaster lock waits. Nothing is unlocked. The new lock is offered on the box when the running one ends.
 
 ![Chaster Summary showing the R+D Lockbox and the maximum-time warning](./img/07-review-and-start.png)
 
@@ -66,17 +76,26 @@ Set a short duration and enable **Limit lock time** for the test. **No maximum l
 
 ## 5 Finish the test
 
-1. When Chaster allows unlocking, use its available unlock controls.
+1. When Chaster allows unlocking, unlock on Chaster, or use **Unlock** on the Dashboard or the Lockbox.
 2. Follow any device prompts.
 3. Confirm that the drawer opens, the screen says unlocked, and both Chaster and Dashboard show the session has ended.
 
-<Callout type="warning" title="Zero does not confirm release">
+<Callout type="warning" title="Chaster decides when the lock ends">
 
-A freeze, extension requirement, or minimum duration can still block unlocking. Follow [Chaster's unlock guide](https://docs.chaster.app/unlock-your-lock/) if release is unavailable.
+While a Chaster task or extension, a minimum duration, or a freeze still blocks unlocking, or Chaster's own timer is still running, the box stays locked. Dashboard and the Lockbox show **Waiting for Chaster** with the reason. The R+D timer reaching zero does not open the box on its own. See the [unlock FAQ](/lockbox/chaster/faq#why-will-the-lockbox-not-open-when-the-timer-reaches-zero).
 
 </Callout>
 
-For a later session with keys, put them inside and close the drawer before selecting **Start the lock**.
+For a later session with keys, put them inside and close the drawer before you press **Accept** on the Lockbox.
+
+## Who does what
+
+| Person | Needs | Does |
+| --- | --- | --- |
+| Wearer | An R+D account connected to Chaster and a paired Lockbox | Accepts each new lock on the Lockbox. Returns the keys and relocks on the Lockbox after a temporary opening. |
+| Chaster keyholder | A Chaster account only | Runs the lock from Chaster: time changes, freezes, hiding or showing the timer, temporary openings, and unlocking all reach the Lockbox. |
+
+If a keyholder creates the lock for you, you still connect your own R+D account and pair your own Lockbox, then accept the lock on the box. See the [keyholder FAQ](/lockbox/chaster/faq#keyholders).
 
 ## Optional session overview
 
@@ -84,9 +103,10 @@ For a later session with keys, put them inside and close the drawer before selec
 flowchart TD
     A["Prepare the paired Lockbox"] --> B["Choose the R+D locking method in Chaster"]
     B --> C["Connect and check both accounts"]
-    C --> D["Start an empty-box test"]
-    D --> E["Confirm the physical drawer locks"]
-    E --> F["Unlock in Chaster and confirm release"]
+    C --> D["Start the lock on Chaster"]
+    D --> E["Accept the lock on the Lockbox"]
+    E --> F["Confirm the physical drawer locks"]
+    F --> G["Unlock once Chaster allows and confirm release"]
 `} />
 
 To view the linked session, open **My locks → Actions → Research And Desire Lockbox** in Chaster. Select **Open lockbox page** for Dashboard controls. The Chaster card shows status, can lag behind changes, and respects hidden-timer settings.
@@ -96,5 +116,5 @@ To view the linked session, open **My locks → Actions → Research And Desire 
 ## Need help
 
 - [Voting with Chaster](/lockbox/chaster/voting): choose a voting link.
-- [Chaster FAQ](/lockbox/chaster/faq): account checks, breaks, and Pull.
+- [Chaster FAQ](/lockbox/chaster/faq): unlocking, breaks, keyholders, moving locks, and Pull.
 - [Integration limitations](/lockbox/chaster/limitations): delays and differences between platforms.

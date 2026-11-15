@@ -1,9 +1,9 @@
 ---
 title: "Chaster FAQ"
-description: "Answers about Chaster account linking, Lockbox sessions, time changes, temporary openings, and sync troubleshooting."
+description: "Answers about finding the R+D Lockbox in Chaster, starting and moving locks, unlocking, breaks, keyholders, Pull, accounts, and emergency access."
 ---
 
-Find an answer: [Locking and openings](#locking-and-openings) · [Sync and Pull](#sync-and-pull) · [Voting](#voting) · [Accounts](#accounts) · [Connection loss and emergency access](#connection-loss-and-emergency-access).
+Find an answer: [Starting a lock](#starting-a-lock) · [Unlocking](#unlocking) · [Breaks and hygiene openings](#breaks-and-hygiene-openings) · [Keyholders](#keyholders) · [Sync and Pull](#sync-and-pull) · [Voting](#voting) · [Accounts](#accounts) · [Connection loss and emergency access](#connection-loss-and-emergency-access).
 
 For first-time instructions, follow [Chaster Setup](/lockbox/chaster/setup). See [Integration limitations](/lockbox/chaster/limitations) for a quick list of boundaries.
 
@@ -13,37 +13,105 @@ A ready message or running timer does not prove that the drawer has locked or op
 
 </Callout>
 
-## Locking and openings
+## Starting a lock
+
+### Where do I find Research And Desire in Chaster?
+
+It is a **locking method**, not an extension, so it is not in Chaster's extension list. When you create or join a lock, open **Locking method → Smart lockbox** and choose **Research And Desire Lockbox**. See [Setup](/lockbox/chaster/setup).
 
 ### When does the Lockbox lock?
 
-**Start the lock** sends the session to the box. Follow any device prompts and confirm that the intended drawer has locked. A delay is possible; no fixed response time is verified. Follow [Setup](/lockbox/chaster/setup) before using keys.
+**Start the lock** sends the lock to the box as an offer, and the lock waits on Chaster. Put the key in, close the drawer, and press **Accept** on the Lockbox. The timer starts once you accept. Confirm that the intended drawer has locked. A delay is possible; no fixed response time is verified.
 
 ### Does the ready confirmation mean my Lockbox is physically locked?
 
 No. It confirms a linked account and paired box, not connectivity, drawer closure, or physical locking.
 
-### Why will the Lockbox not open when the timer reaches zero?
-
-Check Chaster for a freeze, unmet extension requirements, or a minimum duration. Zero alone does not complete the session. Use Chaster's available unlock controls, follow device prompts, and confirm that the drawer opens and both sessions have ended.
-
-### Why is my timer frozen?
-
-Check Chaster's freeze status. A keyholder or extension can pause the countdown. The integration may also freeze a new session while it waits for device acceptance; acceptance releases only that approval freeze, when applicable.
-
-### How do I take a temporary opening or hygiene break?
-
-Configure **Temporary opening** in Chaster, then start an opening there. If it is keyholder-only, ask your keyholder to start it. Follow the device prompts while the opening has time remaining.
-
-The cooldown can block the first opening too. A device control alone does not start a Chaster opening.
-
-### Why is the Lockbox waiting after I end a break in Chaster?
-
-Return the key, close the drawer, and follow the Lockbox's confirmation prompts. It may be waiting to confirm key return and relocking. If the timer stays paused, check Chaster for a separate freeze.
-
 ### Where can I see my Lockbox during the session?
 
 Open **Actions → Research And Desire Lockbox** in Chaster. Its card shows reported status and may lag behind changes. Select **Open lockbox page** for Dashboard controls. Chaster's timer visibility rules still apply.
+
+### What happens if my Lockbox is already running a lock?
+
+A new Chaster lock does not replace a running R+D session. It waits on Chaster, and its Chaster history says it is waiting for the Lockbox. Nothing is unlocked. When the running session ends, the waiting lock is offered on the box. Only an offer you have not accepted yet is replaced by a newer lock.
+
+### Can I move a running Chaster lock to my Lockbox?
+
+Yes, if the lock uses **Research And Desire Lockbox**. Connect your R+D account and pair your Lockbox, then open **Integrations** in Dashboard and choose **Pull from Chaster**. The box receives the time Chaster has left, not the lock's full original duration. A hidden timer stays hidden and a frozen lock stays frozen. Accept the lock on the box to start it.
+
+### My keyholder created the lock for me. What do I need?
+
+Your own R+D account connected to Chaster, and your own paired Lockbox. Then accept the lock on the box. Your keyholder needs neither. The **Research And Desire Lockbox** page on the Chaster lock tells each of you what is still missing.
+
+## Unlocking
+
+### Why will the Lockbox not open when the timer reaches zero?
+
+Chaster decides when the lock ends. While a Chaster task or extension, a minimum duration, or a freeze still blocks unlocking, or Chaster's own timer is still running, the box and Dashboard stay locked. Dashboard shows **Waiting for Chaster** with the reason, for example *Tasks pending*. The Lockbox shows its **Frozen by Chaster** screen with the same reason.
+
+The R+D timer reaching zero does not open the box or end the Chaster lock. As soon as Chaster allows unlocking, the wait ends. Unlock on Chaster, Dashboard, or the box, then confirm that the drawer opens and both sessions have ended.
+
+Software emergency unlock works as usual. A box that is offline when its timer ends, or runs old firmware, may still open on its own timer. See [Integration limitations](/lockbox/chaster/limitations#status-and-timers).
+
+### What does Unlock on the Dashboard do for a Chaster lock?
+
+It asks Chaster to unlock. If Chaster agrees, both sessions end and the Lockbox opens. If Chaster refuses, nothing changes: the box stays locked and Dashboard says what Chaster is waiting for. On a lock with a Chaster keyholder, the wearer can use **Unlock** only once the lock is ready to unlock; until then, the keyholder unlocks from Chaster.
+
+### Why is my timer frozen?
+
+Check Chaster's freeze status. A keyholder or extension can pause the countdown. R+D also freezes a new lock while it waits for you to accept it on the box, and accepting releases that freeze. If the lock ends before you accept it (declined, timed out, abandoned, or replaced), R+D removes its own freeze from the Chaster lock. Freezes placed by a keyholder or another extension stay.
+
+If the reason starts with **Waiting for Chaster**, see [the unlock answer above](#why-will-the-lockbox-not-open-when-the-timer-reaches-zero).
+
+### Does hiding the timer on Chaster reach the Lockbox?
+
+Yes. Hiding or showing the timer on Chaster updates Dashboard and the box within moments, without **Sync** or a restart. A box that was offline catches up when it reconnects.
+
+## Breaks and hygiene openings
+
+### How do I take a temporary opening or hygiene break?
+
+The lock needs Chaster's **Hygiene opening** extension. Then start an opening on Chaster, choose **Take a Break** on the Lockbox, or choose **Break** in Dashboard. R+D asks Chaster first, and Chaster's rules decide: keyholder-only openings, openings left, cooldown, and verification picture. The cooldown can block the first opening too.
+
+When the opening starts, the box opens. Return the key, close the drawer, and press **End Break** on the Lockbox before the opening runs out. Ending the break on the box resumes the Chaster lock.
+
+### What happens if Chaster refuses my break?
+
+- **From Dashboard:** nothing is recorded, the box stays locked, and Dashboard shows Chaster's reason.
+- **Keyholder-only openings:** the Lockbox refuses on its own screen.
+- **No openings left, or a verification picture required:** current firmware opens first. The box then shows *Chaster is asking you to end your break now*, and Dashboard shows **Break refused by Chaster** with the reason. Return the key, close the drawer, and press **Accept**. The lock continues.
+
+### What happens if I return late from a break?
+
+Chaster's **Hygiene opening** extension applies its own late-return penalty. The Lockbox does not add a second one. If Chaster never granted that opening, for example because it refused it, the Lockbox's own break penalty applies once.
+
+### Why is the Lockbox waiting after I end a break in Chaster?
+
+If the opening ends on Chaster while the drawer is open, the box asks you to close it. Return the key, close the drawer, and follow the Lockbox's prompts. If the box was already locked, the break simply finishes. If the timer stays paused, check Chaster for a separate freeze.
+
+## Keyholders
+
+### Does my Chaster keyholder need an R+D account?
+
+No. Everything a keyholder does on Chaster reaches the Lockbox: adding or removing time, freezing and unfreezing, hiding or showing the timer, temporary openings, and unlocking. Linking an R+D account is optional.
+
+### What does the wearer still have to do?
+
+- Have an R+D account connected to Chaster, and a paired Lockbox.
+- Accept each new lock on the Lockbox.
+- After a temporary opening, return the keys and relock on the Lockbox. Chaster has no remote relock.
+
+### What is only available in Dashboard?
+
+R+D voting links, lock history and statistics, Lockbox settings and firmware updates, emergency unlock settings, and **Pull from Chaster**.
+
+### Can a keyholder open the box just once?
+
+Yes. Add **Hygiene opening** to the running lock on Chaster (you can allow only the keyholder to open it), start the opening, then remove the extension again. Each step reaches the Lockbox. The wearer returns the keys and relocks on the box as usual.
+
+### Can a lock started on Chaster get an R+D keyholder?
+
+No. A lock started on Chaster takes its keyholder from Chaster. To use an R+D keyholder, have them start the lock from Dashboard instead; that creates the Chaster lock too.
 
 ## Sync and Pull
 
@@ -82,7 +150,7 @@ Follow [Voting with Chaster](/lockbox/chaster/voting) for setup and link-sharing
 
 ### Does Chaster voting enable Dashboard voting?
 
-No. New Chaster sessions start with Dashboard voting **off**; existing sessions keep their settings. Pull does not copy the voting switch or vote sizes. Users with **Modify session** access can configure Dashboard voting separately.
+No. Dashboard voting starts **off** for locks created from Chaster, so share Chaster's **Share links** page instead. Pull does not copy the voting switch or vote sizes. Users with **Modify session** access can configure Dashboard voting separately.
 
 ### Do Dashboard votes count toward Chaster's required visits?
 
@@ -110,6 +178,10 @@ Pair the box to the R+D account linked to Chaster. Follow the [pairing guide](/l
 
 Chaster setup has no box picker. Run an empty-box test to identify which box receives the session before storing keys. Choosing a Chaster lock in Pull does not select a physical box.
 
+### Can I unpair my Lockbox during a lock?
+
+No. Unpairing is blocked while the box holds an active session, including an offer or a break. Dashboard shows *This Lockbox has an active lock session. End or abandon the session before you unpair it.* End or abandon the session first.
+
 ### Why can I not create another Chaster lock after unlocking?
 
 An unlocked lock may still use a lock slot. If you reach Chaster's limit, review and archive a completed lock you no longer need. Archiving is separate from physical unlocking.
@@ -117,6 +189,14 @@ An unlocked lock may still use a lock slot. If you reach Chaster's limit, review
 ### Can I disconnect Chaster during a session?
 
 Finish the session first. **Disconnect** is blocked while the linked session is active, on a break, or waiting for device confirmation. It clears stored authorization and retains history; it does not unlock the box or end the Chaster lock.
+
+### Can I use the Lockbox pages in Chaster in my language?
+
+Yes. The **Research And Desire Lockbox** pages inside Chaster follow your browser's language: English, German, Dutch, or French. Switching language keeps the page connected to your lock.
+
+### How do I get my Chaster Plus coupon?
+
+Every Lockbox purchase includes a coupon for 2 months of Chaster Plus. The code is emailed to you within 3 days of your purchase. For help applying it, contact Chaster's support. If the code never arrived, contact [support@researchanddesire.com](mailto:support@researchanddesire.com).
 
 ## Connection loss and emergency access
 
@@ -130,9 +210,24 @@ Do not rely on an outage to release them. Read the [emergency unlock guide](/loc
 
 Restore connectivity, wake the Lockbox, follow its prompts, and check both platforms and the drawer. Dashboard may show a session before the device catches up.
 
+### Can I turn off software emergency unlock for a Chaster lock?
+
+Yes, before the lock starts:
+
+- **Lock created on Chaster:** turn off emergency unlock in the lock's settings on Chaster. The Lockbox menu then has no **Emergency Unlock** for that session.
+- **Lock started from Dashboard:** turn off **Emergency unlock** in the template. The Chaster lock gets the same setting.
+
+A change during a running lock is not sent automatically; **Pull from Chaster** can apply Chaster's current setting. Dashboard's lock settings say *Emergency unlock is disabled for this session* when it is off. The [hardware emergency unlock](/lockbox/support/emergency-backplate) always remains available.
+
 ### What happens to Chaster after a software emergency unlock?
 
 Once the server receives the device event, it marks the Dashboard session abandoned and attempts to archive the Chaster lock. Check Chaster afterward: failed sync can leave it running. A hardware emergency opening is not reported automatically.
+
+For 24 hours afterward, no new lock can start on the box. A Chaster lock created during that time stays on Chaster and does not reach the Lockbox.
+
+### What if I use Chaster's own emergency unlock?
+
+The R+D session ends, and the Lockbox opens once it receives the change. The Lockbox's 24-hour cooldown does not apply.
 
 ## Optional account permissions
 
