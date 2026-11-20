@@ -1,0 +1,17 @@
+{
+  "root": true,
+  "title": "Dashboard",
+  "pages": [
+    "[Dashboard Guide](/dashboard)",
+    "---Your Account---",
+    "sign-in",
+    "profile",
+    "delete-account",
+    "your-data",
+    "---Partners and Devices---",
+    "partners",
+    "give-up-control",
+    "devices",
+    "subscriptions"
+  ]
+}

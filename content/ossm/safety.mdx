@@ -1,0 +1,153 @@
+---
+title: "OSSM Safety and Emergency Stop"
+description: "How to stop your OSSM right away, set it up and power it safely, and know when to stop using it."
+---
+
+The OSSM moves fast and with real force. At full speed the carriage can travel up to 1 metre per second. Read this page before your first session, and keep a way to stop the machine within reach every time you use it.
+
+## Stop the OSSM now
+
+| What you're using | Do this | What happens |
+| --- | --- | --- |
+| Wired Remote | Press and hold the right knob for about 1 second | The motor stops and switches off, and the remote returns to the main menu |
+| Wireless Remote (RADR) | On the control screen, press the middle button once | The speed drops to zero and the RADR shows **Paused**. The motor stays powered |
+| Web Controller | Select **STOP** | The OSSM stops, switches the motor off and returns to its menu |
+| Nothing responds, or you're not sure | Unplug the OSSM's power supply from the wall | The motor loses power and can't drive the machine |
+
+<Callout type="error" title="Pause is not off">
+
+The RADR's **Pause** sets the speed to zero, but the motor stays powered and holding. Turning the speed back up starts the machine again. Before you reach near the rail, or if anything seems wrong, unplug the power supply.
+
+</Callout>
+
+<Callout type="warning" title="Remotes can't stop homing">
+
+While the OSSM is homing, holding the right knob does nothing, and the RADR and the Web Controller can't stop it either. At power-on the screen shows **Measuring Stroke** while it homes. When it homes again after a stop, the menu stays on the screen. If you need to stop it during homing, unplug the power supply.
+
+</Callout>
+
+## Before every session
+
+1. Stand your OSSM up in a position that will be comfortable for you during play.
+2. Place a filled sandbag over the base of the stand for stability.
+3. If you use the Wired Remote, connect it to the OSSM with its Ethernet cable. It gives you the hold-to-stop control.
+4. Attach your suction-cup or Vac-u-Lock toy.
+5. Clear the rail's whole path. Then connect power with nobody in that path. Every time it powers on, the OSSM homes by itself: it drives the carriage slowly to each end of the rail until it meets the end stop.
+6. Wait until homing finishes and the menu appears.
+7. Turn every setting to zero, including **Speed**. Every mode starts at zero speed, and a mode won't start while the Wired Remote's speed knob is up: the screen shows **Decrease the speed to begin playing.** until you turn it down.
+8. Test your stop before anyone is in position. Start a mode, raise the speed a little, then stop the machine with the control you'll use (see [Stop the OSSM now](#stop-the-ossm-now)).
+9. Get comfortable, then raise the settings slowly.
+
+<Callout type="info" title="The OSSM homes again after a stop">
+
+After you stop the machine by holding the right knob, the OSSM measures its stroke again the next time you choose a mode. The carriage travels to both ends of the rail before play starts. Stay out of its path while it does this.
+
+</Callout>
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Proposed setup text. None of this comes from firmware or a published page:
+
+- Inspect the stand, clamps, belt, rail, toy mount, cables and power supply before each session. Don't use the OSSM if anything is cracked, loose, frayed or unusually noisy.
+- Check that the stand stays put when the machine runs at the speed you plan to use.
+- Use toys up to 1.1 kg. (This figure is from the Ready-to-Play store listing, "1.1kg max toy weight", checked 2026-10-21. It is not on a docs page or in the firmware.)
+- Keep pets and other people away from the machine while it has power.
+
+</Callout>
+
+## While you play
+
+- Keep a way to stop the machine within reach of the person using it.
+- If a Bluetooth controller disconnects during play (the RADR, the Web Controller or another app), the OSSM stops, switches its motor off and goes back to its menu. This happens if the controller goes out of range, runs out of battery or is switched off.
+- While a RADR is connected, the Wired Remote's speed knob no longer limits the speed. The Wired Remote's hold-to-stop still works.
+- If an error screen appears (for example **Homing took too long. Please check your wiring and try again.** or **Stroke too short. Please check you drive belt.**), the motor stops. Press the right knob to see the help screen, and press it again to restart.
+- After homing, the motor stays powered and holds the carriage, even in the menu. Unplug the power supply when you've finished.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Proposed play text. None of this comes from firmware or a published page:
+
+- Keep hair, fingers, clothing and cables away from the rail, belt and carriage whenever the OSSM has power, including when it's paused.
+- Change one setting at a time.
+- Don't leave the OSSM running unattended, and don't use it if you can't move away from it easily, for example when restrained, very tired, or affected by alcohol or drugs.
+
+</Callout>
+
+## Power and electrical safety
+
+- Use the 24 V DC power supply that came with your OSSM. The OSSM controller board is built for 24 V input.
+- We caution against third-party power supplies. They can damage the OSSM board or fail to give it enough power.
+- Unplug the power supply before you clean the OSSM, change the toy, or adjust the stand or belt.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+DR-018 is still open, so this text is a proposal for Hardware to confirm:
+
+- **Plug-in order.** Plug the barrel connector into the OSSM first, then plug the power supply into the wall. Unplug in the reverse order. (Hardware-team advice in the support playbook. The published How to Use page currently says wall first.)
+- **Supply rating.** The How to Use page says 24 V 4 A, but the bill of materials lists 24 V 5 A, and the 24 V power supply store listing says it is "rated to 5A continuous". Which figure do we publish as the minimum?
+- **Never use more than 24 V.** Support records show 36 V supplies have damaged boards. Do we state a maximum on this page?
+- **USB-C adapter.** The store listings disagree. The USB-C adapter listing says the USB-C PD charger "must be capable of 19V, 65W or more", while the 24 V power supply listing refers to "a 100W USB-C Charger". Which requirement, if any, do we publish here?
+
+</Callout>
+
+## Stop using your OSSM if
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Proposed list, based on the support team's safety triggers (kb/routing.md R-01). It is not from firmware or a published page. Unplug the power supply, stop using the OSSM, and contact us if:
+
+- you smell burning, or see smoke, sparks or arcing at the plug or board
+- the motor, board or power supply is too hot to touch
+- a cable, plug or the power supply is damaged
+- the stand, clamp or toy mount is cracked or loose, or the belt skips
+- the machine moves when nobody asked it to, or doesn't stop when you use a stop control
+- anyone is hurt
+
+</Callout>
+
+## Cleaning
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+No OSSM cleaning instructions are published today. Proposed text, adapted from the removed August 2026 care page:
+
+1. Unplug the power supply and remove the toy.
+2. Wipe the outside with a soft cloth dampened with warm water and a little mild soap.
+3. Keep liquid out of the motor, the board enclosure, the connectors, the belt and the rail.
+4. Dry everything completely before you plug the OSSM back in.
+5. Clean your toy according to its maker's instructions.
+
+Don't spray cleaner onto the OSSM or put it in water.
+
+</Callout>
+
+## Report a safety problem
+
+If something went wrong, unplug the power supply first. Then email [support@researchanddesire.com](mailto:support@researchanddesire.com) with:
+
+- what happened, and when
+- your firmware version, shown at the bottom left of the start-up screen
+- a photo of your power supply label
+- a short video of the problem, if it's safe to take one. Please show only the device.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Proposed additions:
+
+- "If you were hurt, get medical advice first." (House wording from kb/reply-style.md section 8.)
+- A response-time promise for safety reports. The internal target is a first reply within 4 business hours, but kb/routing.md marks it as proposed.
+- Whether to name a dedicated safety channel. The EU GPSR expects a public channel for accident reports.
+
+</Callout>
+
+<Cards>
+  <Card title="How to use your OSSM" href="/ossm/how-to-use">
+    Power, homing, remotes, patterns, Wi-Fi and the pre-play checklist.
+  </Card>
+  <Card title="RADR safety, pause and stop" href="/radr/safety">
+    What the wireless remote's Pause and Stop do, and what happens if it disconnects.
+  </Card>
+  <Card title="All product safety guides" href="/safety">
+    OSSM, Lockbox, Deep Throat Trainer and RADR.
+  </Card>
+</Cards>

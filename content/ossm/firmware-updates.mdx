@@ -1,0 +1,156 @@
+---
+title: "Update Your OSSM Firmware"
+description: "Check which firmware your OSSM runs, then update it over Wi-Fi from the OSSM menu or over USB with the web flasher."
+---
+
+Firmware is the software that runs on your OSSM's control board. You can update it in two ways:
+
+<Cards>
+  <Card title="Over Wi-Fi, from the OSSM menu" href="#update-over-wi-fi">
+    Select **Update** on the wired remote. No computer needed.
+  </Card>
+  <Card title="Over USB, with the web flasher" href="#update-over-usb">
+    Connect the control board to a computer and use Chrome or Edge.
+  </Card>
+</Cards>
+
+<Callout type="info" title={"Your OSSM never updates on its own"}>
+
+An update only installs when you start one, for example from **Update** in the OSSM menu, from **Update OSSM** on the Wireless Remote, or with the web flasher.
+
+</Callout>
+
+## Check your firmware version
+
+Each time you power on your OSSM, the wired remote shows a few start-up screens, ending with **Measuring Stroke**. The firmware version, for example 1.0.60, is shown in small text in the bottom-left corner of each of these screens. Take a photo if you need to send it to support.
+
+## Know your board: V1 (4 MB) or V2 (16 MB)
+
+OSSM control boards come with one of two memory sizes. The web flasher calls them **V1 — 4 MB flash** and **V2 — 16 MB flash**. This is not the board revision in the product name, such as Electronics Board V2.3.
+
+You don't need to know which one you have before you update. While it flashes, the web flasher detects the board, shows **Detected V1 — 4 MB flash** or **Detected V2 — 16 MB flash**, and installs the matching firmware. If no matching firmware is available, it stops before writing anything.
+
+Some screens are different on V1 (4 MB) boards:
+
+- After **Checking for update...**, an update installs straight away. There is no **Update Available** screen to confirm it.
+- Any problem shows **No Update Available** instead of an **Update Failed** reason.
+- If pairing fails, the OSSM returns to the menu without a message.
+- **Pairing** and **Update OSSM** started from the Wireless Remote may not work.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+1. **Why V1 differs.** Every main-branch release builds V1 (4 MB) firmware from older 1.0.39 source code and gives it the new version number, so V1 boards don't get newer fixes such as the Measuring Stroke fix in 1.0.60. Decide whether to say this publicly, and whether V1 owners should be told how to get a V2 board.
+2. **Bluetooth on V1 (DR-027).** The published web flasher page says "V1 omits Bluetooth to fit in 4 MB", while the RADR FAQ says RADR works with all OSSM board versions once the firmware is updated, and the release workflow builds V1 with Bluetooth. Choose one statement before this page or the flasher page is published.
+
+</Callout>
+
+## Update over Wi-Fi
+
+### Before you start
+
+- Connect your OSSM to Wi-Fi. See [Connecting Your Device to WiFi](/ossm/how-to-use#connecting-your-device-to-wifi).
+- Finish your session. **Update** is in the main menu, and the carriage doesn't move while the update runs.
+- Keep the rail clear. Your OSSM restarts after the update and measures the rail again.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Since rad-app hotfix #2187 (committed 21 October 2026, 00:45 +07:00), updates over Wi-Fi are paused on the server. Until they resume, every OSSM shows **No Update Available** when it checks, even when a newer version exists. The production deployment of that hotfix was not checked. Decide whether to publish a temporary notice ("Updates over Wi-Fi are paused. To update now, use the web flasher.") or to hold this section until updates resume.
+
+</Callout>
+
+### Steps
+
+1. In the menu, turn the right knob to highlight **Update**, then press the right knob.
+2. The screen shows **Checking for update...**.
+3. If **Update Available** appears with a version number, press the right knob to install it (**Click to install**). To cancel instead, press and hold the right knob.
+4. The screen shows **Updating OSSM...** and **Update is in progress. This may take up to 60s.** Keep your OSSM plugged in.
+5. Your OSSM restarts and measures the rail. Check the new version on the start-up screen.
+6. Select **Update** again. The version offered can be a step on the way to the newest one, so you may need to update more than once. You're done when the screen says **No Update Available**.
+
+<Callout type="success" title={"Your OSSM is up to date!"} />
+
+If **No Update Available** appears, the server has no update for your OSSM right now. Press the right knob to return to the menu. On V1 (4 MB) boards, this screen can also mean the check failed: make sure your OSSM is on Wi-Fi and try again, or update over USB.
+
+If your OSSM isn't connected to Wi-Fi, selecting **Update** opens **Wi-Fi Setup** instead. Connect to Wi-Fi, wait for the menu to come back, then select **Update** again.
+
+### If the update fails
+
+On V2 (16 MB) boards, **Update Failed** shows one of these reasons. Press the right knob to return to the menu.
+
+| Reason | What to do |
+| --- | --- |
+| **Connect to Wi-Fi first** | Your OSSM lost its Wi-Fi connection. Reconnect it, then try again. |
+| **Not enough memory** | Disconnect the Wireless Remote and any browser tools. Select **Restart** in the menu (keep the rail clear: your OSSM measures it again), then select **Update** before you connect a controller again. |
+| **Could not reach server** | Check that your network has internet access and try again in a few minutes. If it keeps failing, update over USB. |
+| **Install failed** | Try again. If it fails a second time, update over USB. |
+| **Unknown error** | Try again. If it keeps failing, update over USB. |
+
+### From the Wireless Remote
+
+If you have the Wireless Remote, open its OSSM menu and select **Update OSSM**. The remote shows the progress and asks you to confirm before it installs. If the remote shows **WiFi Required**, connect your OSSM to Wi-Fi first: see [Connecting Your Device to WiFi](/ossm/how-to-use#connecting-your-device-to-wifi). If the update doesn't start from the remote, use **Update** on the wired remote instead.
+
+## Update over USB
+
+Use the [OSSM Web Flasher](/ossm/tools/web-flasher) when an update over Wi-Fi isn't possible, or when support asks you to.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+The published web flasher page says "Flash only when instructed by support". With updates over Wi-Fi paused, USB is the only way to update. Decide whether customers may update over USB on their own, and keep this sentence and the flasher page consistent.
+
+</Callout>
+
+You'll need:
+
+- Chrome or Edge on a desktop or laptop computer
+- A USB cable that can transfer data (some cables only charge)
+- A USB port on the computer itself, if you can. Avoid unpowered hubs.
+
+1. Stop your OSSM and unplug its power supply.
+2. Connect the OSSM control board to your computer with the USB cable.
+3. Open the [OSSM Web Flasher](/ossm/tools/web-flasher). Leave **Approved channel** on **Production (Stable)** unless support has told you otherwise.
+4. Select **Connect & Flash**, choose the serial port that appears when the board is connected, and confirm. Don't unplug the cable, close the tab or let the computer sleep.
+5. Wait until the flasher says it has finished. Unplug the USB cable. Connect the wired remote if you use one, clear the rail, then plug in the power supply. Your OSSM measures the rail as soon as it has power. Check the version on the start-up screen. Before you play, check that you can stop the machine, as in the [Pre-play Safety Checklist](/ossm/how-to-use#pre-play-safety-checklist).
+
+After flashing, you may need to [set up Wi-Fi](/ossm/how-to-use#connecting-your-device-to-wifi) again. Your Dashboard pairing is kept: select **Pairing** and the screen shows **Paired!**.
+
+For preparation, checks and what to do if flashing fails, see [Flash or Recover OSSM Firmware](/ossm/tools).
+
+## Choose how early you get updates
+
+After you [pair your OSSM](/ossm/pairing), the Dashboard's **Settings** page has a **Firmware updates** section: "Choose how early each paired device receives new firmware. Production is the default."
+
+| Channel | What the Dashboard says |
+| --- | --- |
+| **Production** | Stable releases intended for everyone. |
+| **Beta** | Earlier access after internal testing. |
+| **Alpha** | Newest public test builds; expect rough edges. |
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Decide whether to publish the channel choice to customers at all, and what support should recommend. For example, Production for 16 MB boards served 1.0.51 on 21 October 2026, while Beta served 1.0.60 with the Measuring Stroke fix. The channel affects updates over Wi-Fi; the web flasher has its own **Approved channel** list.
+
+</Callout>
+
+## Release notes
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+There is no public OSSM changelog. Decide whether to publish one (for example from the version history in the internal code map) and link it here.
+
+</Callout>
+
+## Need more help?
+
+<Cards>
+  <Card title="Flash or Recover OSSM Firmware" href="/ossm/tools">
+    Full USB flashing guide with checks and recovery steps.
+  </Card>
+  <Card title="Pair your OSSM with the Dashboard" href="/ossm/pairing">
+    Link your OSSM to your account.
+  </Card>
+  <Card title="OSSM FAQs" href="/ossm/faqs">
+    Answers to common questions.
+  </Card>
+</Cards>
+
+Still stuck? Email [support@researchanddesire.com](mailto:support@researchanddesire.com) with your firmware version, a photo of the screen and, if you used the web flasher, the message it showed. You can also ask the community on [Discord](https://discord.gg/DHTuY2AZYJ).

@@ -1,0 +1,79 @@
+---
+title: "Emergency Unlock Without Wi-Fi"
+description: "What you and your Keyholder see if you use Emergency Unlock while your Lockbox is offline, and how to make sure the session ends."
+---
+
+<Callout type="info" title="Emergency Unlock works without Wi-Fi">
+
+If you need your key and Emergency Unlock is turned on for your lock, use it now. Your Lockbox opens straight away, with or without Wi-Fi. Follow the steps in [Emergency Unlock](/lockbox/device-states/emergency-unlock), which also explains what to do if the option isn't in the menu.
+
+</Callout>
+
+This page explains what happens next if your Lockbox wasn't connected when you used Emergency Unlock.
+
+## Why the dashboard may not hear about it
+
+Your Lockbox tells the dashboard about an emergency unlock only once, at the moment you confirm it. If the box can't reach our server then, or within about 30 seconds, that message is lost. The box doesn't send it again when it reconnects.
+
+So the dashboard still thinks you're locked. Here's what each of you sees until the session is ended:
+
+| | What you see | What your Keyholder sees |
+| --- | --- | --- |
+| On the Lockbox | The box is open. The screen shows **E-LOCK-20: Emergency Unlocked** and a **Wi-Fi Setup** button. It usually also shows the time left in the 24-hour block. If your lock hides its timer, you see "Time Hidden" instead, and if your lock shows elapsed time, you see the time since the lock started. | — |
+| In the dashboard | Your lock session still shows as active. | The lock session still shows as active. |
+| Alerts | No "Emergency Unlock Activated" email or notification. | No "Emergency Unlock Activated" email or notification. |
+| Lockbox status | No green Online dot while the box is offline. After it reconnects, the status under the picture of the box can read "Unlocked & open" or "Unlocked & closed", even though the session is still active. | The same. |
+| Chaster, if your lock is linked | The lock stays active in Chaster too. | The same. |
+
+<Callout type="warning" title="Keep your key out of the box">
+
+While the dashboard still shows the session as active, your Lockbox can lock itself again once it's back online. This can happen the next time it starts up with Wi-Fi, for example after a restart, a flat battery or waking from sleep. On older firmware it can also happen while the box is connected, as soon as anything changes the session, such as your Keyholder adding time. Don't put your key back in the box until the session has ended.
+
+</Callout>
+
+## What to do after an offline emergency unlock
+
+### Step 1: Take your key out
+
+Take your key out of the box and keep it out until Step 4 is done.
+
+### Step 2: Tell your Keyholder
+
+Your Keyholder won't get an alert, so tell them yourself that you used Emergency Unlock.
+
+### Step 3: Reconnect your Lockbox
+
+On the E-LOCK-20 screen, press **Lock/Enter** to choose **Wi-Fi Setup** and connect the box to Wi-Fi. If the screen is dark, the first press only wakes it. See [Wi-Fi Setup](/lockbox/quick-start/wifi-setup) if you need help.
+
+### Step 4: Make sure the session has ended
+
+Open the [dashboard](https://dashboard.researchanddesire.com) and check your Lockbox. If the lock session still shows as active, your Keyholder can end it: open **More actions** (the arrow next to the main button on the Lockbox card), select **End session**, then select **Yes, end session**.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+If you locked yourself without a Keyholder, or your Keyholder can't end the session, contact [support](https://www.researchanddesire.com/pages/contact-us) and we'll end it for you after confirming the lock is yours. Also decide what to tell Chaster-linked lockees: on the dashboard, a Chaster lock that has a Chaster keyholder can be ended only by a dashboard Keyholder of that session, or by the wearer once the timer is up.
+
+</Callout>
+
+<Callout type="success" title="Success">
+
+The lock session no longer shows as active in the dashboard. If your Lockbox is online when the session ends, it also leaves the E-LOCK-20 screen. Otherwise it may stay on E-LOCK-20 until the 24-hour countdown ends.
+
+</Callout>
+
+## Related guides
+
+<Cards>
+  <Card title="Emergency Unlock" href="/lockbox/device-states/emergency-unlock">
+    Open your Lockbox from its menu when you need your key.
+  </Card>
+  <Card title="E-Lock 20: Emergency Unlock Used" href="/lockbox/errors/e-lock-20">
+    What the 24-hour block means and how it ends.
+  </Card>
+  <Card title="Safety & Emergency Access" href="/lockbox/safety">
+    Software and hardware ways to get your key.
+  </Card>
+  <Card title="Offline Mode" href="/lockbox/technical/offline-mode">
+    What your Lockbox does without Wi-Fi.
+  </Card>
+</Cards>

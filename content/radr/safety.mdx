@@ -1,0 +1,133 @@
+---
+title: "RADR Safety, Pause and Stop"
+description: "How to pause and stop with your RADR, what happens if the connection drops, and how to look after its battery."
+---
+
+RADR is a wireless remote. It controls an OSSM or a supported Bluetooth toy, so the device it controls can move or vibrate as soon as you turn a knob. Read this page together with the [OSSM safety guide](/ossm/safety) or your toy maker's safety instructions.
+
+## Pause or stop now
+
+| Do this | Where | What happens |
+| --- | --- | --- |
+| Press the middle button once | Any control screen | OSSM: the speed drops to zero, **Paused** shows in red, the middle light turns red and RADR beeps. Toy: vibration drops to zero |
+| Press and hold the middle button for about 1 second | The OSSM control screen you see after connecting (Stroke Engine), or a toy's control screen | RADR shows **Device Stopped** and sets the speed (or vibration) to zero |
+| Switch RADR off | Anywhere | During play, a connected OSSM stops by itself within about 1.5 seconds and returns to its own menu. This doesn't stop homing |
+| Unplug the OSSM's power supply | At the OSSM | The motor loses power and can't drive the machine |
+
+<Callout type="error" title="Pause and Stop don't switch the OSSM off">
+
+Both set the speed to zero. The OSSM's motor stays powered, and turning the speed knob up starts it again. Before you touch the machine, or if anything seems wrong, unplug the OSSM's power supply.
+
+</Callout>
+
+<Callout type="warning" title="Screens where the middle button works differently">
+
+- **Simple Penetration screen:** holding the middle button does nothing. Press it once to pause.
+- **Patterns list:** the middle button does nothing. The left knob still sets the speed here, so turn it down to zero, or press the left button to go back to the controls and then press the middle button to pause.
+- **OSSM settings** (opened with **Menu** while paused or at zero speed): the middle button doesn't pause. The left knob still sets the speed here, and turning it up starts the OSSM. Leave it at zero, or turn it back to zero to stop.
+- **Streaming Active screen:** the middle button and the knobs do nothing. Press **Menu** (the left button): RADR opens its main menu, and the OSSM stops and returns to its own menu.
+
+There is no double-press action on any screen. On the OSSM screens, a second press only clears the pause, and the speed stays at zero.
+
+</Callout>
+
+## Starting again after a pause or stop
+
+- After a pause, the OSSM stays at zero speed until you turn the left knob up. Pressing **Resume** on its own doesn't start the machine.
+- On the **Device Stopped** screen, **Back** or the middle button takes you back to the controls, still at zero speed. **Home** disconnects RADR from the OSSM, and the OSSM stops and returns to its own menu.
+- **Device Stopped** only sets the speed to zero. Your depth, stroke, sensation and pattern stay as they were, even though the screen says the device was reset to default play settings.
+
+## Before you connect
+
+1. Power on the OSSM and let it finish homing.
+2. Close any phone apps that may already be connected to your OSSM or toy. A Bluetooth device can usually only have one active controller at a time.
+3. Select your device by name. If you have two OSSMs, switch the one you're not using off, because RADR can't tell two devices with the same name apart.
+4. Keep clear of the OSSM's rail while RADR connects. If the OSSM is at its menu, connecting starts Stroke Engine, and if the OSSM was stopped with a hold of its right knob, it measures its stroke again first.
+5. Raise the left knob slowly. Every OSSM mode starts at zero speed.
+
+<Callout type="info" title="If the OSSM says &quot;Decrease the speed to begin playing.&quot;">
+
+The OSSM won't start a mode while its Wired Remote's speed knob is up. Turn that knob to zero and the mode starts.
+
+</Callout>
+
+While RADR is connected, the Wired Remote's speed knob no longer limits the OSSM's speed. The Wired Remote's hold-to-stop still works.
+
+## If the connection drops
+
+- RADR plays three falling notes and goes back to its main menu. The OSSM stops by itself and returns to its own menu.
+- RADR doesn't reconnect by itself. Select the OSSM again from **Device Search**.
+- Opening RADR's main menu, choosing **Sleep**, or updating RADR also stops the OSSM.
+- While the OSSM is homing, a dropped connection doesn't stop it, and neither does the main menu, **Sleep** or an update. To stop homing, unplug the OSSM's power supply.
+
+## The screen goes dark, but the device keeps going
+
+RADR dims its screen after 30 seconds without input and turns it off after 10 minutes. The OSSM or toy keeps running at the same settings. On a control screen, pressing the middle button wakes the screen and pauses at the same time.
+
+## Toys other than OSSM
+
+- On a toy's control screen, the left knob sets the vibration. The middle button (**STOP**) sets the vibration to zero, but the dial keeps its last level. The next turn of the left knob, in either direction, starts the vibration again at about that level.
+- To leave a toy's control screen, hold the middle button, then choose **Home**.
+- Use only toys listed in [Device Support](/radr/guides/reference/device-support), and follow the toy maker's safety instructions.
+
+## Battery and charging
+
+- RADR has a built-in 3.7 V 800 mAh lithium-polymer (LiPo) battery.
+- Charge it with a USB-C cable in the port on the top edge. You can use RADR while it charges.
+- The battery icon turns red below 20 %. RADR gives no other low-battery warning and doesn't switch itself off. If the battery runs flat during a session, the connection drops and the OSSM stops.
+- The screen doesn't show when RADR is charging.
+- When you put RADR away, switch it off with the power switch. **Sleep** disconnects RADR and turns the screen and lights off, but RADR stays on.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Proposed LiPo battery text. None of this comes from firmware or a published page:
+
+- Don't charge or use RADR if it's swollen, cracked, leaking, hot or smells unusual. Move it away from anything that can burn and contact us.
+- Charge on a hard surface, away from bedding, and don't leave it charging unattended or overnight.
+- Don't open the case to reach the battery unless our support team guides you. (Support currently guides some customers through a battery-connector reseat. The bill of materials lists a separate printed battery flap, RADR:hardware/bom.csv:8, so "open the case" may need to read "open the battery flap"; Hardware to confirm.)
+- Recycle RADR and its battery at a battery or electronics drop-off. Don't put them in household waste.
+
+</Callout>
+
+## Stop using RADR if
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Proposed list, based on the support team's safety triggers (kb/products/radr.md section 10, kb/routing.md R-01). It is not from firmware or a published page. Switch RADR off, unplug the OSSM or switch off the toy, and contact us if:
+
+- the battery is swollen, hot, leaking or smells unusual
+- a knob or button stops responding, or responds erratically
+- the OSSM or toy doesn't stop when you pause, or keeps running after RADR disconnects
+- the OSSM or toy moves or vibrates when nobody asked it to
+- anyone is hurt
+
+</Callout>
+
+## Report a safety problem
+
+Switch RADR off and unplug the OSSM first. Then email [support@researchanddesire.com](mailto:support@researchanddesire.com) with:
+
+- what happened, what RADR was controlling, and which button or knob you used last
+- a photo or short video of the RADR screen and the OSSM screen. Please show only the devices.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Proposed additions, as on the other safety pages:
+
+- "If you were hurt, get medical advice first."
+- A response-time promise for safety reports.
+- Whether to name a dedicated safety channel.
+
+</Callout>
+
+<Cards>
+  <Card title="OSSM safety and emergency stop" href="/ossm/safety">
+    How to stop the OSSM from each controller, and how to set it up safely.
+  </Card>
+  <Card title="RADR Quick Start" href="/radr">
+    Controls, power, and connecting to your OSSM or toy.
+  </Card>
+  <Card title="All product safety guides" href="/safety">
+    OSSM, Lockbox, Deep Throat Trainer and RADR.
+  </Card>
+</Cards>

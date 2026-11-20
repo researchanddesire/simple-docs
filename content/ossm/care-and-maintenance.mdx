@@ -1,0 +1,139 @@
+---
+title: "Care & Maintenance"
+description: "Keep your OSSM clean, smooth and safe: when to unplug it, cleaning, rail grease, belt checks, storage and when to stop using it."
+---
+
+A few minutes of care keeps your OSSM running smoothly. Before every session, also follow the [Pre-play Safety Checklist](/ossm/how-to-use#pre-play-safety-checklist).
+
+## Unplug your OSSM when you're not using it
+
+After your OSSM measures the rail, its motor stays powered and holds the carriage in place, even while the menu is on screen. When you finish playing, unplug the power supply.
+
+Pressing and holding the right knob during play stops the machine and lets the motor go limp. The next time you start a mode, your OSSM measures the rail again before it moves.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+1. **What's normal at rest.** Proposed text: "While your OSSM is plugged in, you may hear a soft hiss from the motor and it may feel warm. This is normal. A loud hiss while the carriage crawls slowly is not: see [Homing took too long](/ossm/faqs#the-screen-says-homing-took-too-long)." Source: internal hardware advice (kb/playbooks/ossm/HW.ossm_mechanical.md section 4 F), not code. Hardware to confirm.
+2. **Unplug order (DR-018).** Internal hardware advice is to connect the barrel plug to the OSSM before plugging the supply into the wall, and to unplug in the reverse order. The published How to Use page currently says the opposite. Hardware to confirm before this page gives an order.
+
+</Callout>
+
+## Clean your OSSM
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Cleaning steps are not in firmware or on a current page. They come from the July 2026 care page written by CS (removed on 2026-09-10) and the removed August rewrite. Confirm the cleaner and what must stay dry.
+
+</Callout>
+
+1. Unplug the power supply and any USB cable, and remove your toy.
+2. Wipe dirty areas with a microfiber or other soft cloth dampened with warm water and a little mild dish soap. This removes lube and other residue.
+3. Keep liquid out of the motor, the control board enclosure, the connectors, the belt and the rail bearings. Don't put your OSSM in water or spray cleaner onto it, and don't use solvents or abrasive cleaners.
+4. Wipe again with a clean, lightly damp cloth, then let everything dry before you plug it back in.
+
+Clean your toy as its maker recommends.
+
+## Grease the linear rail
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Confirm the grease to recommend. The July 2026 page said "any food-grade grease"; the August rewrite said to use the lubricant supplied with the machine, or a food-grade grease marked safe for linear bearings and plastics. Also confirm how the rail ships: the July 2026 page said rails "come pre-greased", but the current Electronics Board V2.3 listing says "Rails come with a thick packing oil on them. For complete silence we recommend lubricating with grease!" Also confirm how often to grease.
+
+</Callout>
+
+Debris can build up in the rail's inner channel over time and make the carriage move less smoothly.
+
+1. Unplug the power supply.
+2. Slide the carriage along the rail by hand. Stop if it catches; don't force it.
+3. Wipe debris out of the rail's inner channel with a clean microfiber cloth.
+4. Put a small amount of grease on a clean finger and run it along the inner channel of the rail.
+5. Slide the carriage back and forth by hand to spread the grease.
+6. Wipe off any extra grease with the cloth. For stubborn grease, use a cloth dampened with warm water and mild dish soap.
+7. Plug in the power supply with the rail clear, and let your OSSM measure the rail. Before you play, check that you can stop the machine, as in the [Pre-play Safety Checklist](/ossm/how-to-use#pre-play-safety-checklist).
+
+{/* IMAGE TO RESTORE before publishing: linear-rail-inner-channel-annotated-1.webp from df41af6^:content/ossm/images/, alt text "The inner channel of the OSSM linear rail, where the grease goes". Add it here as a Markdown image once the file is in content/ossm/images/. */}
+
+## Check the belt
+
+Each time it powers on, your OSSM slowly moves the carriage to each end of the rail to measure how far it can travel. Problems with the belt show up here:
+
+- If it measures 50 mm of travel or less, the screen shows **Stroke too short. Please check you drive belt.** Something stopped the carriage early, such as a belt that is too tight or skipping, a part rubbing, or something pressing on the carriage.
+- If it can't find an end within 40 seconds, the screen shows **Homing took too long. Please check your wiring and try again.** A slipping belt is one possible cause. See [the FAQ](/ossm/faqs#the-screen-says-homing-took-too-long) for others.
+
+On the error screen, press the right knob to see **Get Help**, then press it again to restart your OSSM. It measures the rail again, so keep the rail clear.
+
+To check the belt, unplug the power supply and slide the carriage by hand from one end of the rail to the other. It should move freely, and the belt should be snug without slack.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+The belt-tension steps below come from an internal hardware note (Linear RADOPS-419) that is marked "confirm with Hardware". Hardware to confirm the steps, add photos of the front belt clamp and the end tensioner, and say whether a tension check belongs in regular maintenance.
+
+1. Unplug the power supply. Slide the carriage back and forth by hand to check that the belt runs freely.
+2. Check that the bolt on the front belt clamp is tight and that the end tensioner piece is pushed fully onto the rail.
+3. Turn the M5 tensioner screw slowly until you just feel resistance. Don't screw it in all the way.
+4. Plug in the power supply with the rail clear, and let your OSSM measure the rail.
+
+If the belt teeth are damaged, or the belt clamp or tensioner is cracked, stop using your OSSM and contact support.
+
+</Callout>
+
+## Store or travel with your OSSM
+
+The Ready-to-Play OSSM is designed to come apart easily for storage and travel.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Storage steps are not in firmware or on a current page. Hardware to confirm which parts customers should take apart, and how to pack them.
+
+1. Unplug the power supply and remove your toy.
+2. Clean and dry your OSSM as described above.
+3. Unplug the wired remote's cable from the OSSM.
+4. Store everything somewhere dry.
+
+</Callout>
+
+When you set up again, connect the wired remote before you plug in the power supply. The remote's screen only starts when your OSSM powers on. Keep the rail clear: your OSSM measures the rail as soon as it has power.
+
+## Stop using your OSSM and contact support
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Stop-use advice is not in firmware or on a current OSSM page (DR-018 and DR-019 track the missing OSSM safety content). Proposed text, from internal safety practice (kb/playbooks/ossm/HW.ossm_power.md section 4 step 0, kb/reply-style.md section 8) and the removed August 2026 care page:
+
+**If you see sparks or smoke, smell burning, find a melted or scorched plug or socket, or the power supply gets very hot, unplug the power supply from the wall and unplug any USB cable straight away. Don't use your OSSM again until support has checked it. If anyone was hurt, get medical advice first.**
+
+Also stop using your OSSM and contact support if:
+
+- a printed part, clamp or mount is cracked or broken
+- your toy won't stay securely mounted
+- the belt is frayed, has damaged teeth or skips
+- the carriage wobbles, grinds or still catches after you grease the rail
+- the machine doesn't stop when you press and hold the right knob on the wired remote, or press the middle button on the Wireless Remote to pause it. If it keeps moving, unplug the power supply.
+
+Also decide whether the bold sentence should say "if you can do so safely" before "unplug". Common electrical-safety advice includes it; the internal safety script (kb/reply-style.md section 8) does not.
+
+</Callout>
+
+When you contact support, include a photo of your power supply label. For other problems, also include your firmware version (shown at the bottom left of the start-up screen) and a short video of the problem. After sparks, smoke, a burning smell or overheating, send photos only: don't power your OSSM on again.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Replacement parts and who pays for them are policy. Decide whether this page should say anything about replacements beyond "contact support" (current practice: kb/products/ossm.md section 10).
+
+</Callout>
+
+## Need more help?
+
+<Cards>
+  <Card title="How to use your OSSM" href="/ossm/how-to-use">
+    Power, remotes, patterns, Wi-Fi and the pre-play safety checklist.
+  </Card>
+  <Card title="OSSM FAQs" href="/ossm/faqs">
+    Answers to common questions about choosing, setting up and using your OSSM.
+  </Card>
+  <Card title="Assembly and wiring" href="https://ohai.researchanddesire.com/ossm/cable-harnesses">
+    Motor control harness pinout and the OSSM bill of materials.
+  </Card>
+</Cards>
+
+Email [support@researchanddesire.com](mailto:support@researchanddesire.com), or ask the community on [Discord](https://discord.gg/DHTuY2AZYJ).

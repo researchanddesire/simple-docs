@@ -1,0 +1,104 @@
+---
+title: "Wired Remote Problems"
+description: "Fix a Wired Remote whose knobs or button don't respond, whose screen stays blank, or that stays on \"Decrease the speed to begin playing.\""
+---
+
+## Know your Wired Remote
+
+The Wired Remote connects to your OSSM with an Ethernet cable.
+
+- **Left knob:** speed.
+- **Right knob:** turn it to move through the menu or change a setting. Press it to select. Press and hold it to stop the machine and go back to the menu.
+- **Screen:** shows the menu, the settings you're changing, and any messages.
+
+| To do this | Do this with the right knob |
+| --- | --- |
+| Select a menu item, or switch to the next setting in Stroke Engine and Streaming | Press once |
+| Open the pattern list in Stroke Engine | Press twice quickly |
+| Stop the machine and go back to the menu | Press and hold for about a second |
+
+On the **Wi-Fi Setup** screen you open from the menu, press and hold does something different: your OSSM forgets its Wi-Fi network and restarts.
+
+A single press takes effect a moment after you let go. The OSSM waits briefly to check you aren't pressing twice.
+
+## The screen stays blank
+
+1. Unplug the power supply.
+2. Check the Ethernet cable is clicked in at both ends: the remote and the OSSM.
+3. Plug the power supply back in. The remote must be connected **before** the OSSM powers on: the OSSM sets up the screen only when it starts.
+4. If the screen is still blank, check the light on the control board. If it's off too, see [Power and power supply](/ossm/troubleshooting/power#nothing-lights-up).
+5. Still blank? [Contact support](#contact-support).
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Proposed extra step: "If you have another Ethernet cable, try it. A standard straight-through patch cable works."
+
+Decide: confirm any standard straight-through patch cable is compatible (support practice; not in the OSSM repository).
+
+</Callout>
+
+## The menu skips or seems slow
+
+- Turn the right knob **three clicks** to move one line in the menu. The menu wraps around from the last item to the first.
+- If the highlight jumps backwards, skips several lines at once, or doesn't move at all when you turn the knob, the right knob may be faulty. [Test your knobs](#test-your-knobs).
+
+## Stuck on "Decrease the speed to begin playing."
+
+The screen shows the mode name, **Speed: N%** and **Decrease the speed to begin playing.**
+
+Your OSSM won't start a mode until the left knob reads below 1%. Turn the left knob all the way down (counterclockwise). The mode starts by itself as soon as the reading drops below 1%.
+
+To go back to the menu without starting, press and hold the right knob. In Stroke Engine this counts as a stop: your OSSM homes again the next time you start a mode.
+
+This screen also appears when a Wireless Remote or an app starts a mode while the left knob is turned up.
+
+If the number on screen never drops below 1 with the knob all the way down, or it changes while you aren't touching the knob, the speed knob isn't reading correctly. [Contact support](#contact-support).
+
+## Speed is up, but nothing moves
+
+In **Simple Penetration**, the right knob sets Stroke, and Stroke starts at zero every time you start the mode. Turn the right knob to raise Stroke.
+
+Each time you start a mode, Speed, Stroke, Depth and Sensation go back to their starting values.
+
+## The right knob changes a different setting
+
+In **Stroke Engine**, the right knob starts on **Depth**. Press once to switch to **Sensation**, again for **Stroke**, and again to return to **Depth**. The large bar on the right of the screen shows which setting you're changing.
+
+To change the pattern, press the right knob twice quickly. Turn it to choose a pattern (three clicks per pattern; the pattern changes as you turn), then press once to go back to the controls.
+
+## The left knob seems to do nothing while an app or Wireless Remote is connected
+
+**Web Controller.** By default, the left knob sets the top speed for Bluetooth control. The speed you choose in the Web Controller is scaled by the knob's position, so with the left knob at zero it can't move your OSSM. Start the mode with the left knob at zero, then turn it up to set the maximum.
+
+**Wireless Remote and Funscript Player.** When they connect, they turn this limit off and set the speed themselves. While they're in control, the left knob doesn't change the speed, with one exception: if you move it quickly to a point below the current speed, the Wired Remote takes speed control back until the next speed change from the remote or app. The limit comes back on when the OSSM restarts.
+
+## Test your knobs
+
+You can test both knobs and the button without starting play.
+
+1. Keep everyone and everything clear of the rail.
+2. **Right knob:** in the menu, turn the right knob slowly one way, then the other. The highlight should move one line for every three clicks, without jumping or skipping.
+3. **Button:** select **Get Help**. The Get Help screen should open. Press the right knob again to go back to the menu.
+4. **Left knob:** turn the left knob about halfway up, then select **Simple Penetration**. If you stopped play earlier, your OSSM homes first: the carriage moves to each end of the rail while the screen still shows the menu. Then the screen shows **Decrease the speed to begin playing.** and **Speed: N%**.
+5. Slowly turn the left knob all the way up, then back down to about a quarter. The number should follow smoothly. Don't turn it all the way down: below 1%, the mode starts.
+6. Press and hold the right knob to go back to the menu.
+
+If the mode starts by mistake, press and hold the right knob straight away. The knob can't stop homing: if something is wrong while the OSSM homes, unplug the power supply.
+
+If the highlight or the number jumps, sticks, or only moves when you press or wiggle the knob, record a short video of the test with the screen in view and [contact support](#contact-support).
+
+## Contact support
+
+Email [support@researchanddesire.com](mailto:support@researchanddesire.com) with:
+
+- a short video turning each knob slowly from one end to the other, with the screen in view (for example from the knob test above)
+- whether the problem started out of the box or after something happened, such as fitting a knob, a drop or a firmware update
+- your firmware version (bottom left of the start-up screen)
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Proposed text: "If a knob or button on a Wired Remote from us is faulty, we'll send you a replacement remote. You don't need to return the old one."
+
+Decide the public policy: today a faulty remote is replaced free (no return); a part damaged while fitting a knob gets a part link or a paid remote board; a second faulty remote has its own goodwill offers (kb/playbooks/ossm/HW.ossm_remote.md section 5; kb/policies.md).
+
+</Callout>

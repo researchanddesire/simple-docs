@@ -1,0 +1,120 @@
+---
+title: "Belt, Rail and Noise"
+description: "Fix \"Stroke too short\", a slipping belt, homing that never finishes, a rough rail, and sounds you didn't expect from your OSSM."
+---
+
+<Callout type="warning" title="Unplug before you touch the belt or rail">
+
+Pressing and holding the right knob stops the machine, but the carriage can move again as soon as the OSSM homes or a mode starts. That includes a mode started from an app, and a Wireless Remote starts one as soon as it connects. Unplug the power supply before you check or adjust the belt, rail or carriage.
+
+</Callout>
+
+## "Stroke too short"
+
+The screen shows **Error** and **Stroke too short. Please check you drive belt.**
+
+While homing, your OSSM measured 50 mm of travel or less. Something made the motor work harder before the carriage reached the real end of the rail, so the OSSM thought it had arrived.
+
+1. Unplug the power supply.
+2. Make sure nothing blocks the carriage or the attached toy anywhere along the rail, such as the stand, bedding or a cable.
+3. Slide the carriage by hand from one end of the rail to the other. It should move smoothly without catching.
+4. Check the belt. It should sit on the pulley, with no slack, fraying or missing teeth.
+5. Plug the power supply back in and let the OSSM home.
+
+From the error screen, you can also press the right knob once to see the **Get Help** screen, then press it again to restart and home.
+
+## Homing never finishes
+
+If the carriage moves at a normal speed and reaches the end of the rail, but homing doesn't finish and you see **Homing took too long**, check the belt.
+
+The OSSM only knows it has reached the end of the rail when the motor has to work harder. If the belt is loose or slipping, the motor can keep turning after the carriage stops, so the OSSM never senses the end.
+
+## The belt slips or skips
+
+- **Toy weight.** The maximum toy weight is 1.1 kg. Check your toy is lighter than that.
+- **Loose belt.** See the tension draft below.
+- **Broken belt clamp or tensioner.** These are printed parts. If one has cracked, stop using the OSSM and [contact support](#contact-support) with a photo.
+- **Worn belt.** The OSSM uses a 10 mm wide GT2 belt. If teeth are missing or the edges are frayed, [contact support](#contact-support).
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Proposed belt-tension steps. They come from an internal hardware note and need Hardware review before they're published:
+
+1. Unplug the power supply.
+2. Slide the carriage by hand to check the belt runs freely.
+3. Check the bolt on the front belt clamp is tight.
+4. Check the tensioner end clamp is pushed fully onto the rail.
+5. Turn the M5 tensioner screw slowly until you just feel resistance. Don't screw it all the way in.
+6. Plug the power supply back in and let the OSSM home.
+
+Decide: publish these steps, link an assembly video instead, or ask customers to contact support. Then update the **Loose belt** bullet above to match: it points at this draft.
+
+</Callout>
+
+## The rail feels rough or sounds noisy
+
+New rails come with a thick packing oil. For quiet running, we recommend greasing the rail.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Proposed steps (from the OSSM care page removed on 2026-09-10; not re-verified):
+
+1. Unplug the OSSM and slide the carriage to expose the rail.
+2. Put a small amount of food-grade grease on a clean finger.
+3. Run it along the rail's inner channel.
+4. Wipe away the excess with a microfiber cloth.
+
+Decide: which grease to name (the product page only says "grease"), and whether this belongs on a separate care page (DR-006, DR-020 part 2).
+
+</Callout>
+
+If the carriage still catches, wobbles, or feels gritty after greasing, stop using the OSSM and [contact support](#contact-support).
+
+## Sounds that are expected
+
+- **Movement at power-on.** The carriage travels slowly to each end of the rail while the OSSM homes.
+
+After homing, the motor stays on and holds the carriage in place, even while the menu is showing. Unplug the OSSM when you're not using it.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Proposed bullet: "**A soft hum or hiss while the menu is showing.** This is the motor holding the carriage." Decide whether to call this sound expected (README Q13). It is the support team's position, not something the firmware or a published page states, and the safety page draft leaves it out so it doesn't blur the "too hot to touch" stop rule.
+
+</Callout>
+
+## Sounds to check
+
+| What you hear | What to do |
+| --- | --- |
+| A loud hiss or whine while the carriage crawls at power-on | The motor's settings may be missing. See [Homing problems](/ossm/troubleshooting/homing#check-the-motor-settings). |
+| Clicking or snapping as the carriage moves, or the belt jumping | The belt may be slipping. See [The belt slips or skips](#the-belt-slips-or-skips). |
+| Grinding or scraping from the rail | See [The rail feels rough or sounds noisy](#the-rail-feels-rough-or-sounds-noisy). |
+| A knock when the carriage hits the end of the rail during play | Press and hold the right knob to stop, then [contact support](#contact-support) with a video. |
+| Any burning smell, or a motor too hot to touch | Unplug the power supply and stop using the OSSM. [Contact support](#contact-support). |
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+The last row ("Any burning smell, or a motor too hot to touch") is proposed stop-use wording, not from firmware or a published page (README Q6). Keep it in step with the power page's safety callout and the OSSM safety page draft before publishing.
+
+</Callout>
+
+## Broken printed parts
+
+If a printed part cracks or breaks, such as the PitClamp, a belt clamp, the tensioner or the motor ring, stop using the OSSM and [contact support](#contact-support) with photos of the part and the whole actuator.
+
+<Callout type="warn" title="Draft — needs AJ decision">
+
+Proposed text: "If a part from us arrived broken or broke in normal use, we'll send a replacement."
+
+Decide the public replacement policy for printed and mechanical parts (today: free when broken on arrival or during setup; after long use the customer may pay shipping; kb/playbooks/ossm/HW.ossm_mechanical.md section 5).
+
+</Callout>
+
+## Contact support
+
+Email [support@researchanddesire.com](mailto:support@researchanddesire.com) with:
+
+- a short video with sound showing the problem, with the rail in view
+- photos of any broken or worn part, and of the whole actuator
+- your firmware version (bottom left of the start-up screen)
+- the toy you use, if the belt slips
